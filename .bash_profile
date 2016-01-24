@@ -1,5 +1,5 @@
 # [[file:bash.org::*Login][2EF3117A-BB20-475A-9970-14C361F3687F]]
-PS1='\u@\h:\w> '
+PS1="\u@\h:\w> "
 # 2EF3117A-BB20-475A-9970-14C361F3687F ends here
 
 # [[file:bash.org::*Login][07689AC5-8AC7-4B3E-88ED-BC7CA747BB35]]

@@ -33,7 +33,7 @@ up the terminal.
 
 #+NAME: 2EF3117A-BB20-475A-9970-14C361F3687F
 #+BEGIN_SRC shell bash
-PS1='\u@\h:\w> '
+PS1="\u@\h:\w> "
 #+END_SRC
 
 Make the continued prompt obvious.
