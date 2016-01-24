@@ -1,0 +1,60 @@
+* Dictionary
+:PROPERTIES:
+:ID:       2404985D-12A6-4C98-9C02-C7CFEE7EAF4E
+:END:
+
+- Read and Execute (RAE) :: Bash reads and executes commands from a file
+
+* Configuring
+:PROPERTIES:
+:ID:       A1DF7D9E-5B52-46D6-90CB-FC43C50D5E41
+:END:
+
+- Bash Startup Behavior [fn:49d34ab293ff88f:https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html#Bash-Startup-Files]
+
+** Interactive Login Shell
+:PROPERTIES:
+:ID:       2476DE76-A6CB-4834-9DEA-6A644BED0F54
+:END:
+
+- Configuration unique to this login shell
+
+*** Login
+:PROPERTIES:
+:header-args: :tangle ./.bash_profile
+:ID:       B281581F-2E1B-4E02-9787-BE9E23DD8907
+:END:
+
+- RAE on login
+
+#+NAME: 5487397C-D5F5-4C24-919C-66BFAF9B9312
+#+BEGIN_SRC shell bash
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+#+END_SRC
+
+*** Logout
+:PROPERTIES:
+:header-args: :tangle ./.bash_logout
+:ID:       D0503846-C5ED-4CBC-99F3-2B3DE5449FC3
+:END:
+
+- RAE on logout
+
+#+NAME: E9CF786F-6DBB-4494-AD59-D52E39C40A58
+#+BEGIN_SRC shell bash
+
+#+END_SRC
+
+** Interactive Non-Login Shell
+:PROPERTIES:
+:header-args: :tangle ./.bashrc
+:ID:       30F7B093-5CC8-4545-A30E-C9D025AC7265
+:END:
+
+- Configuration common to every non-login shell
+- RAE on start
+
+#+NAME: 09B2AC53-C30E-427E-84A3-565EEAA8939B
+#+BEGIN_SRC shell bash
+
+#+END_SRC
