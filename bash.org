@@ -36,6 +36,13 @@ up the terminal.
 PS1='\u@\h:\w> '
 #+END_SRC
 
+Make the continued prompt obvious.
+
+#+NAME: 07689AC5-8AC7-4B3E-88ED-BC7CA747BB35
+#+BEGIN_SRC shell bash
+PS2="\u21AA "
+#+END_SRC
+
 #+NAME: 5487397C-D5F5-4C24-919C-66BFAF9B9312
 #+BEGIN_SRC shell bash
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
