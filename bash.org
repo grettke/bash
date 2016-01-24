@@ -58,3 +58,22 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 #+BEGIN_SRC shell bash
 
 #+END_SRC
+
+* Deploy
+:PROPERTIES:
+:header-args: :tangle ./deploy :tangle-mode (identity #o755)
+:ID:       0F3EA345-BB8F-4300-BF94-CD5FCBA7B43F
+:END:
+
+- Deploy using symbolic link clobbering
+
+#+NAME: 6B840488-783C-4290-9133-7E4209247FB3
+#+BEGIN_SRC shell bash
+function bash_deploy() {
+    ln -s -f ${PWD}/.bash_profile ~/.bash_profile
+    ln -s -f ${PWD}/.bash_logout ~/.bash_logout
+    ln -s -f ${PWD}/.bashrc ~/.bashrc
+}
+
+bash_deploy
+#+END_SRC
