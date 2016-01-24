@@ -11,6 +11,7 @@
 :END:
 
 - Bash Startup Behavior [fn:49d34ab293ff88f:https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html#Bash-Startup-Files]
+- Bourne Variables [fn:105ae6c2bd4f43c8:https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Variables.html#Bourne-Shell-Variables]
 
 ** Interactive Login Shell
 :PROPERTIES:
@@ -26,6 +27,14 @@
 :END:
 
 - RAE on login
+
+Provide just enough information at the prompt to be useful without cluttering
+up the terminal.
+
+#+NAME: 2EF3117A-BB20-475A-9970-14C361F3687F
+#+BEGIN_SRC shell bash
+PS1='\u@\h:\w> '
+#+END_SRC
 
 #+NAME: 5487397C-D5F5-4C24-919C-66BFAF9B9312
 #+BEGIN_SRC shell bash
