@@ -30,7 +30,7 @@
 - RAE on login
 
 Provide just enough information at the prompt to be useful without cluttering
-up the terminal.
+up the terminal. Escaping not required.
 
 #+NAME: 2EF3117A-BB20-475A-9970-14C361F3687F
 #+BEGIN_SRC shell bash
