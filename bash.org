@@ -35,6 +35,15 @@
   - When you haven't got experience, document your intent and obtain experience
   - Both the things that you do with Bash and the thing that you /want to/ do with
     Bash are your personal cognitive landscape that guide the configuration
+- Things that I want to do with Bash, and how I want to do them
+  - Understand the computer and its operating system
+    - Explore the contents of the disk drive and memory
+  - Automated tedious and error prone tasks as quickly as possible
+    - Develop shell scripts to do so
+    - Leverage multi-tasking
+  - Maximize expressivity and predictability doing so
+    - Maximize predictability; minimize surprise
+    - Fail fast
 
 * Dictionary
 :PROPERTIES:
