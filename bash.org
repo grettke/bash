@@ -8,6 +8,18 @@
 :ID:       C1CA8CCE-D299-4034-8ACA-432622B38640
 :END:
 
+- Things that I want to do with Bash, and how I want to do them
+  - Understand the computer and its operating system
+    - Explore the contents of the disk drive and memory
+  - Automated tedious and error prone tasks as quickly as possible
+    - Develop shell scripts to do so
+    - Leverage multi-tasking
+  - Maximize expressivity and predictability doing so
+    - Maximize predictability; minimize surprise
+    - Fail fast
+
+** Approach to Learning and Configuring Bash
+
 - Bash provides a rich and complicated configuration facility
 - Successfully solving problems with Bash requires that you (goal)
   - Understand what it can do
@@ -48,15 +60,6 @@
   - When you haven't got experience, document your intent and obtain experience
   - Both the things that you do with Bash and the thing that you /want to/ do with
     Bash are your personal cognitive landscape that guide the configuration
-- Things that I want to do with Bash, and how I want to do them
-  - Understand the computer and its operating system
-    - Explore the contents of the disk drive and memory
-  - Automated tedious and error prone tasks as quickly as possible
-    - Develop shell scripts to do so
-    - Leverage multi-tasking
-  - Maximize expressivity and predictability doing so
-    - Maximize predictability; minimize surprise
-    - Fail fast
 - Roles of Doers
   - My goal is to classify configuration options by roles that have different
     goals. Some of the roles have overlap in the goals, some don't. I don't
@@ -151,9 +154,17 @@
 
 *** Version 3
 
-- This document configures Bash for login shells and nothing more
-- Any further scope has not desires or experience to guide it
-  - That is the key, it would be endless spinning
+- Desires read like
+  - Things that you would do as a software engineer
+  - Things that you would do as a devops engineer
+- Desire don't read like
+  - Things that you would do as scheduled task
+  - Things that you would do as a remotely executed task
+- This looks like a Bash system that
+  - Configures Bash for login shells and nothing more
+- Because
+  - Any further scope has no desires or experience to guide it
+    - Attempting to do anything more would result in aimless fruitless wandering
 
 * Configuration
 :PROPERTIES:
