@@ -20,6 +20,9 @@
     - Fail fast
 
 ** Approach to Learning and Configuring Bash
+:PROPERTIES:
+:ID:       9C4ED82B-B909-4546-9AA4-EC1877223C8D
+:END:
 
 - Bash provides a rich and complicated configuration facility
 - Successfully solving problems with Bash requires that you (goal)
@@ -32,6 +35,9 @@
 - The purpose of this document is to capture both the means and the goal
 
 ** The Purpose of Bash
+:PROPERTIES:
+:ID:       20275946-BE34-4DC6-B9B1-A5944F23B899
+:END:
 
 - The ~set~ builtin
   [fn:1c25a9a2ecf21a00:https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html]
@@ -101,8 +107,14 @@
       Desires to make sense of what I value
 
 ** Observations & Questions & Decisions
+:PROPERTIES:
+:ID:       3D8CB422-87BC-47A8-BA42-8D4A0AFEF99E
+:END:
 
 *** Version 1
+:PROPERTIES:
+:ID:       F1878DC4-317A-4743-90D0-DFF6971E58FB
+:END:
 
 - The login interactive shell is for things that you will only do at the
   start and finish of a logical session
@@ -130,6 +142,9 @@
       course you are!
 
 *** Version 2
+:PROPERTIES:
+:ID:       E1339F20-FAF2-4E46-AFF1-DCB5811F80BE
+:END:
 
 - Configure Bash for every user?
   - Login Interactive and Non-Login Interactive are easy and obvious
@@ -162,6 +177,9 @@
 - You don't need Readline in non-interactive mode
 
 *** Version 3
+:PROPERTIES:
+:ID:       DDB77782-98C3-4F45-9CCA-3D17CBAC327F
+:END:
 
 - Desires read like
   - Things that you would do as a software engineer
