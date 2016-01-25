@@ -1,6 +1,12 @@
 * Making Sense of this Script
+:PROPERTIES:
+:ID:       886036D5-3715-492B-9ABF-825F4058A995
+:END:
 
 ** Desires
+:PROPERTIES:
+:ID:       C1CA8CCE-D299-4034-8ACA-432622B38640
+:END:
 
 - Bash provides a rich and complicated configuration facility
 - Successfully solving problems with Bash requires that you (goal)
@@ -12,6 +18,9 @@
 - The purpose of this document is to capture both the means and the goal
 
 ** Understanding Your Cognitive Landscape
+:PROPERTIES:
+:ID:       435374DD-FDEA-4D0A-B5C2-5E205B30B04F
+:END:
 
 - The ~set~ builtin
   [fn:1c25a9a2ecf21a00:https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html]
@@ -77,10 +86,30 @@
 - Configuration common to every non-login interactive shell
 - RAE on start
 
-#+NAME: 09B2AC53-C30E-427E-84A3-565EEAA8939B
-#+BEGIN_SRC shell bash
+**** Options
+:PROPERTIES:
+:ID:       353A8149-9AE8-41A8-878D-22D5141C1AA9
+:END:
 
-#+END_SRC
+***** Set
+:PROPERTIES:
+:ID:       304CD69B-9D22-4E27-8566-2223E340AF37
+:END:
+
+***** Shopt
+:PROPERTIES:
+:ID:       A6298426-7595-4D20-8214-FF28A0534F9F
+:END:
+
+**** Variables
+:PROPERTIES:
+:ID:       3773C1C1-F98E-4B95-8067-715796A83686
+:END:
+
+**** Functions
+:PROPERTIES:
+:ID:       C61DCCE0-1782-4511-BA40-E84B8A12C566
+:END:
 
 ** Interactive Login Shell
 :PROPERTIES:
@@ -97,6 +126,26 @@
 
 - RAE on login
 
+**** Options
+:PROPERTIES:
+:ID:       4254A0E7-5687-4D94-BF71-E6571200353E
+:END:
+
+***** Set
+:PROPERTIES:
+:ID:       63FF9401-02AD-47C2-8F18-E5EDAEEAC11D
+:END:
+
+***** Shopt
+:PROPERTIES:
+:ID:       C270EC13-3176-4BFE-83BC-37AE2A856657
+:END:
+
+**** Variables
+:PROPERTIES:
+:ID:       A9DFBEDD-B699-4059-9D1C-9E8C28A064E0
+:END:
+
 Provide just enough information at the prompt to be useful without cluttering
 up the terminal. Escaping not required.
 
@@ -112,6 +161,16 @@ Make the continued prompt obvious. Escaping not required.
 PS2='↪> '
 #+END_SRC
 
+**** Functions
+:PROPERTIES:
+:ID:       4FEC2380-849B-45CC-A5BC-31174945EA3D
+:END:
+
+**** Extend the interactive non-login shell
+:PROPERTIES:
+:ID:       909C8280-9451-4000-A149-6BB4FC0FF182
+:END:
+
 #+NAME: 5487397C-D5F5-4C24-919C-66BFAF9B9312
 #+BEGIN_SRC shell bash
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
@@ -125,10 +184,30 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 
 - RAE on logout
 
-#+NAME: E9CF786F-6DBB-4494-AD59-D52E39C40A58
-#+BEGIN_SRC shell bash
+**** Options
+:PROPERTIES:
+:ID:       AB4C09AA-9EBF-4400-994B-6EA0CC62C2CD
+:END:
 
-#+END_SRC
+***** Set
+:PROPERTIES:
+:ID:       016C9062-8C9C-4096-8009-52465B8A5EBD
+:END:
+
+***** Shopt
+:PROPERTIES:
+:ID:       13347065-EA95-42F2-901C-7305FE8DAA88
+:END:
+
+**** Variables
+:PROPERTIES:
+:ID:       0479B4CC-05CA-4083-9B31-4B3F7263A242
+:END:
+
+**** Functions
+:PROPERTIES:
+:ID:       82E44109-CF46-4AC4-90B0-4F92862AFF73
+:END:
 
 * Deploy
 :PROPERTIES:
