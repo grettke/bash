@@ -18,10 +18,7 @@
   - Configuring requires experience and personal-preference (experience)
 - The purpose of this document is to capture both the means and the goal
 
-** Understanding Your Cognitive Landscape
-:PROPERTIES:
-:ID:       435374DD-FDEA-4D0A-B5C2-5E205B30B04F
-:END:
+** The Purpose of Bash
 
 - The ~set~ builtin
   [fn:1c25a9a2ecf21a00:https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html]
@@ -38,6 +35,12 @@
   operator, and deftly managing the work of any number of processes.
   Forgive my anthropomorphization; we may ever know someone like Bash in our own
   lives for that is truly a rare and kind soul.
+
+** Understanding Your Cognitive Landscape
+:PROPERTIES:
+:ID:       435374DD-FDEA-4D0A-B5C2-5E205B30B04F
+:END:
+
 - Doing things with Bash
   - It is difficult to make sense of all of the configuration options for doing
     things with Bash
