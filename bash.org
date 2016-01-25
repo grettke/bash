@@ -11,6 +11,8 @@
   - Configuring requires experience and personal-preference (experience)
 - The purpose of this document is to capture both the means and the goal
 
+** Understanding Your Cognitive Landscape
+
 * Dictionary
 :PROPERTIES:
 :ID:       2404985D-12A6-4C98-9C02-C7CFEE7EAF4E
