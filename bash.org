@@ -241,6 +241,10 @@ PS2='↪> '
 :ID:       82E44109-CF46-4AC4-90B0-4F92862AFF73
 :END:
 
+** Non-Interactive Non-Login Shell
+
+This is a shell script executed by a non-interactive user like ~cron~ for example.
+
 * Deploy
 :PROPERTIES:
 :header-args: :tangle ./deploy :tangle-mode (identity #o755)
