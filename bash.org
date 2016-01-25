@@ -118,6 +118,7 @@
     - That was a mistake. After developing a powerful Bash environment you are
       likely to want to use that same environment for non-login shells. Of
       course you are!
+
 ** Version 2
 
 - Configure Bash for every user?
