@@ -68,6 +68,20 @@
 - Bourne Variables [fn:105ae6c2bd4f43c8:https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Variables.html#Bourne-Shell-Variables]
 - Bash Variables [fn:7b4f219d43d6ef2:https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html#Bash-Variables]
 
+** Interactive Non-Login Shell
+:PROPERTIES:
+:header-args: :tangle ./.bashrc
+:ID:       30F7B093-5CC8-4545-A30E-C9D025AC7265
+:END:
+
+- Configuration common to every non-login shell
+- RAE on start
+
+#+NAME: 09B2AC53-C30E-427E-84A3-565EEAA8939B
+#+BEGIN_SRC shell bash
+
+#+END_SRC
+
 ** Interactive Login Shell
 :PROPERTIES:
 :ID:       2476DE76-A6CB-4834-9DEA-6A644BED0F54
@@ -112,20 +126,6 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 - RAE on logout
 
 #+NAME: E9CF786F-6DBB-4494-AD59-D52E39C40A58
-#+BEGIN_SRC shell bash
-
-#+END_SRC
-
-** Interactive Non-Login Shell
-:PROPERTIES:
-:header-args: :tangle ./.bashrc
-:ID:       30F7B093-5CC8-4545-A30E-C9D025AC7265
-:END:
-
-- Configuration common to every non-login shell
-- RAE on start
-
-#+NAME: 09B2AC53-C30E-427E-84A3-565EEAA8939B
 #+BEGIN_SRC shell bash
 
 #+END_SRC
