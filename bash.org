@@ -145,6 +145,21 @@ set -o braceexpand
 :ID:       3773C1C1-F98E-4B95-8067-715796A83686
 :END:
 
+Provide just enough information at the prompt to be useful without cluttering
+up the terminal. Escaping not required.
+
+#+NAME: 2EF3117A-BB20-475A-9970-14C361F3687F
+#+BEGIN_SRC shell bash
+PS1='\u@\h:\w> '
+#+END_SRC
+
+Make the continued prompt obvious. Escaping not required.
+
+#+NAME: 07689AC5-8AC7-4B3E-88ED-BC7CA747BB35
+#+BEGIN_SRC shell bash
+PS2='↪> '
+#+END_SRC
+
 **** Functions
 :PROPERTIES:
 :ID:       C61DCCE0-1782-4511-BA40-E84B8A12C566
@@ -192,21 +207,6 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 :PROPERTIES:
 :ID:       A9DFBEDD-B699-4059-9D1C-9E8C28A064E0
 :END:
-
-Provide just enough information at the prompt to be useful without cluttering
-up the terminal. Escaping not required.
-
-#+NAME: 2EF3117A-BB20-475A-9970-14C361F3687F
-#+BEGIN_SRC shell bash
-PS1='\u@\h:\w> '
-#+END_SRC
-
-Make the continued prompt obvious. Escaping not required.
-
-#+NAME: 07689AC5-8AC7-4B3E-88ED-BC7CA747BB35
-#+BEGIN_SRC shell bash
-PS2='↪> '
-#+END_SRC
 
 **** Functions
 :PROPERTIES:
