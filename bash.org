@@ -67,7 +67,6 @@
     find out and document it here. /Doers/ is the name of someone or something
     executing things with an intent. My goal is to reveal intent and use that
     for classification and role definition.
-    - Not using tags to classify because they won't reflect document structure
   - Broad Doer definitions
     - Interactive vs Non-Interactive Shell
       - Interactive: requires input from the user
@@ -92,6 +91,10 @@
         - You choose to use the system; executing things via a Login shell
         - You schedule things for the system to do; executing things via a
           Non-Login shell
+- Classifying things Bash can do
+  - Not using tags to classify because they won't reflect document structure and
+    I'm not sure where to begin
+  - Tried using multiple tags and that confused the whole effort
 
 ** Observations & Questions & Decisions
 
