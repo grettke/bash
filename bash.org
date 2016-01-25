@@ -154,8 +154,8 @@
 - This document configures Bash for login shells and nothing more
 - Any further scope has not desires or experience to guide it
   - That is the key, it would be endless spinning
-          
-* Configuring Shells
+
+* Configuration
 :PROPERTIES:
 :ID:       A1DF7D9E-5B52-46D6-90CB-FC43C50D5E41
 :END:
