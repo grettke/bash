@@ -60,6 +60,7 @@
     find out and document it here. /Doers/ is the name of someone or something
     executing things with an intent. My goal is to reveal intent and use that
     for classification and role definition.
+    - Not using tags to classify because they won't reflect document structure
 
 * Dictionary
 :PROPERTIES:
