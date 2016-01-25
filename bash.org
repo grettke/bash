@@ -93,7 +93,7 @@
 
 - Read and Execute (RAE) :: Bash reads and executes commands from a file
 
-* Configuring
+* Configuring Shells
 :PROPERTIES:
 :ID:       A1DF7D9E-5B52-46D6-90CB-FC43C50D5E41
 :END:
@@ -102,7 +102,7 @@
 - Bourne Variables [fn:105ae6c2bd4f43c8:https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Variables.html#Bourne-Shell-Variables]
 - Bash Variables [fn:7b4f219d43d6ef2:https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html#Bash-Variables]
 
-** Interactive Non-Login Shell
+** Interactive Non-Login
 :PROPERTIES:
 :header-args: :tangle ./.bashrc
 :ID:       30F7B093-5CC8-4545-A30E-C9D025AC7265
@@ -150,7 +150,7 @@ set -o braceexpand
 :ID:       C61DCCE0-1782-4511-BA40-E84B8A12C566
 :END:
 
-** Interactive Login Shell
+** Interactive Login
 :PROPERTIES:
 :ID:       2476DE76-A6CB-4834-9DEA-6A644BED0F54
 :END:
@@ -248,9 +248,7 @@ PS2='↪> '
 :ID:       82E44109-CF46-4AC4-90B0-4F92862AFF73
 :END:
 
-** Non-Interactive Non-Login Shell
-
-This is a shell script executed by a non-interactive user like ~cron~ for example.
+** Non-Interactive Non-Login
 
 * Deploy
 :PROPERTIES:
