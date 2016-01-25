@@ -13,6 +13,22 @@
 
 ** Understanding Your Cognitive Landscape
 
+- The ~set~ builtin
+  [fn:1c25a9a2ecf21a00:https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html]
+  onerously states that "This builtin is so complicated that it deserves its own
+  section". That can be off-putting for the new-operator (or programmer). The
+  word /complicated/ is more like a code-word here though; it is really a short
+  hand for /expressivity/. ~set~ lets you configure the system (Bash) any way you
+  choose; it fully enables you to express your personal definition of
+  expressivity when it comes to system management. This is no small feat. Doing
+  so belies the complexity, magnitude, and power lurking behind the thin veneer
+  that most only know as "the powerful command line interface" that most only
+  use to start graphical user interface applications. Bash is the most humble
+  servant; expertly negotiation with the kernel, humbly taking orders from the
+  operator, and deftly managing the work of any number of processes.
+  Forgive my anthropomorphization; we may ever know someone like Bash in our own
+  lives for that is truly a rare and kind soul.
+
 * Dictionary
 :PROPERTIES:
 :ID:       2404985D-12A6-4C98-9C02-C7CFEE7EAF4E
@@ -109,3 +125,5 @@ function bash_deploy() {
 
 bash_deploy
 #+END_SRC
+
+#  LocalWords:  expressivity
