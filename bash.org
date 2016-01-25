@@ -185,6 +185,13 @@ Execute the same configuration as every non-login interactive shell.
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 #+END_SRC
 
+Have fun.
+
+#+NAME: 04A53A3A-B30D-4122-8736-6F411639FE61
+#+BEGIN_SRC shell bash
+fortune
+#+END_SRC
+
 *** Logout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout
