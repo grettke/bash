@@ -123,8 +123,6 @@
 :ID:       30F7B093-5CC8-4545-A30E-C9D025AC7265
 :END:
 
-- Configuration common to every non-login interactive shell
-
 **** Options
 :PROPERTIES:
 :ID:       353A8149-9AE8-41A8-878D-22D5141C1AA9
