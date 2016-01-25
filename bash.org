@@ -85,7 +85,7 @@
         - You choose to use the system; executing things via a Login shell
         - You schedule things for the system to do; executing things via a
           Non-Login shell
-- Decisions
+- Decisions v1
   - The login interactive shell is for things that you will only do at the
     start and finish of a logical session
     - Attached to your ID and a ~tty~ owned by you
@@ -107,6 +107,9 @@
       - If you develop your scripts in a richly configured Bash environment, you
         will have to configure non-login shells to use the same environment. I am
         avoiding this topic because I need to see where this experiment goes.
+      - That was a mistake. After developing a powerful Bash environment you are
+        likely to want to use that same environment for non-login shells. Of
+        course you are!
 
 * Configuring Shells
 :PROPERTIES:
