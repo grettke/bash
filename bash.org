@@ -219,6 +219,11 @@ PS2='↪> '
 :ID:       D0503846-C5ED-4CBC-99F3-2B3DE5449FC3
 :END:
 
+#+NAME: E55BD1DC-42CF-4394-B2C1-5D8CCCDD673D
+#+BEGIN_SRC shell bash
+
+#+END_SRC
+
 * Deploy
 :PROPERTIES:
 :header-args: :tangle ./deploy :tangle-mode (identity #o755)
