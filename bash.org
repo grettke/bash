@@ -61,6 +61,23 @@
     executing things with an intent. My goal is to reveal intent and use that
     for classification and role definition.
     - Not using tags to classify because they won't reflect document structure
+  - Broad Doer definitions
+    - Interactive vs Non-Interactive
+      - Interactive: requires input from the user
+      - Non-Interactive: doesn't
+      - Unsure how to use this to classify configuration because most scripts
+        are in a =tty= and you /can/ accept input. Should you? Is that the question?
+        What does it mean to configure Bash, and for what? Here is an attempt:
+        - Interactive is for configuring things that you only ever want to do
+          or care about as a human sitting at a terminal. These are things that
+          I will pretend/decide that I will never every do when running a
+          non-interactive script. This whole plan relies on strictly separating
+          implementation of both kinds of scripts
+        - Non-interactive is for things that I as a human will never see. Or
+          perhaps things that I don't care to see immediately because I didn't
+          run them. The overlap is so close here. Perhaps "things that I want
+          to see" and "things that I want to do interactively" is the correct
+          classifier.
 
 * Dictionary
 :PROPERTIES:
