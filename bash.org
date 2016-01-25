@@ -97,7 +97,7 @@
 :ID:       304CD69B-9D22-4E27-8566-2223E340AF37
 :END:
 
-- EvaluationAndEnvironment
+- Environment, Evaluation, LawOfLeaseSurprise
   - Child shells inherit *every* function and variable created or modified
     #+NAME: ACD7221D-802A-4999-AF10-E0E43E98DB17
     #+BEGIN_SRC shell bash
