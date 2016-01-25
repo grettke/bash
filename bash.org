@@ -230,6 +230,7 @@ set -o allexport
     #+BEGIN_SRC shell bash
 set -o braceexpand
     #+END_SRC
+- Interaction
 
 ***** Shopt
 :PROPERTIES:
