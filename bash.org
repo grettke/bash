@@ -119,7 +119,7 @@
       likely to want to use that same environment for non-login shells. Of
       course you are!
 
-** Version 2
+*** Version 2
 
 - Configure Bash for every user?
   - Login Interactive and Non-Login Interactive are easy and obvious
