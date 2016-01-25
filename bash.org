@@ -87,6 +87,12 @@
           Non-Login shell
 - Decisions
   - This document won't address non-login shells
+    - If you develop your scripts in a richly configured Bash environment, you
+      will have to configure non-login shells to use the same environment. I am
+      avoiding this topic because I need to see where this experiment goes.
+  - The interactive login and logout is for things that you will do once per
+    logical session
+  - The interactive non-login configuration is for everything else
 
 * Dictionary
 :PROPERTIES:
