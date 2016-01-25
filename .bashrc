@@ -1,3 +1,3 @@
-# [[file:bash.org::*Interactive%20Non-Login%20Shell][09B2AC53-C30E-427E-84A3-565EEAA8939B]]
-
-# 09B2AC53-C30E-427E-84A3-565EEAA8939B ends here
+# [[file:bash.org::*Set][ACD7221D-802A-4999-AF10-E0E43E98DB17]]
+set -o allexport
+# ACD7221D-802A-4999-AF10-E0E43E98DB17 ends here
