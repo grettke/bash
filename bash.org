@@ -94,13 +94,6 @@
     logical session
   - The interactive non-login configuration is for everything else
 
-* Dictionary
-:PROPERTIES:
-:ID:       2404985D-12A6-4C98-9C02-C7CFEE7EAF4E
-:END:
-
-- Read and Execute (RAE) :: Bash reads and executes commands from a file
-
 * Configuring Shells
 :PROPERTIES:
 :ID:       A1DF7D9E-5B52-46D6-90CB-FC43C50D5E41
@@ -117,7 +110,6 @@
 :END:
 
 - Configuration common to every non-login interactive shell
-- RAE on start
 
 **** Options
 :PROPERTIES:
@@ -170,8 +162,6 @@ set -o braceexpand
 :header-args: :tangle ./.bash_profile
 :ID:       B281581F-2E1B-4E02-9787-BE9E23DD8907
 :END:
-
-- RAE on login
 
 **** Extend the interactive non-login shell
 :PROPERTIES:
@@ -228,8 +218,6 @@ PS2='↪> '
 :header-args: :tangle ./.bash_logout
 :ID:       D0503846-C5ED-4CBC-99F3-2B3DE5449FC3
 :END:
-
-- RAE on logout
 
 * Deploy
 :PROPERTIES:
