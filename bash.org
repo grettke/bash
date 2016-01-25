@@ -89,68 +89,72 @@
         - You choose to use the system; executing things via a Login shell
         - You schedule things for the system to do; executing things via a
           Non-Login shell
-- Decisions v1
-  - The login interactive shell is for things that you will only do at the
-    start and finish of a logical session
-    - Attached to your ID and a ~tty~ owned by you
-    - Not much work to do here
-  - The login non-interactive shell is for things that you will do every time
-    that you begin another shell during a logical session
-    - This includes the login interactive shell, execute this as suggested by
-      the Bash reference manual
-  - The non-login non-interactive shell
-    - Is non-interactive because you have no way of interacting with it unless
-      you hack some way to do so
-    - Non-Interactive is somewhat a misnomer here because you can choose to
-      implement non-interactive scripts when a ~tty~ is attached but when you
-      haven't got a ~tty~ attached there is no possibility of running interactive
-      scripts
-    - Is non-login because it is not associated with your ID and at the same
-      time not attached to a ~tty~ attached to you
-    - This document won't address non-login shells
-      - If you develop your scripts in a richly configured Bash environment, you
-        will have to configure non-login shells to use the same environment. I am
-        avoiding this topic because I need to see where this experiment goes.
-      - That was a mistake. After developing a powerful Bash environment you are
-        likely to want to use that same environment for non-login shells. Of
-        course you are!
-- Questions & Decisions v2
-  - Configure Bash for every user?
-    - Login Interactive and Non-Login Interactive are easy and obvious
-    - Non-Login Non-Interactive seems valuable but is less obvious
-  - Bash vs Dash
-    - Performance reasons?
-    - [[https://www.wikivs.com/wiki/Bash_vs_dash][Via]]
-      #+BEGIN_QUOTE
-      Dash (Debian Almquist SHell) is a shell that has poor usability by modern standards when used as an interactive log-in shell, but is faster in executing POSIX-compliant scripts than Bash.
 
-      Bash (Bourne Again SHell) has many more features and is especially preferable when used interactively (although it does contain more programming features too).
+** Questions & Decisions
 
-      Bash is typically provided as the default interactive shell, while Debian and Debian-derivatives like Ubuntu provide Dash as the /bin/sh implementation, thereby causing scripts with #!/bin/sh shebangs to be interpreted by Dash rather than Bash by default. For scripts that require Bash for execution, Bash will still be used as the interpreter if the shebang is #!/bin/bash.
+*** Version 1
 
-      Bash is designed for human beings and provides a superset of POSIX functionality
+- The login interactive shell is for things that you will only do at the
+  start and finish of a logical session
+  - Attached to your ID and a ~tty~ owned by you
+  - Not much work to do here
+- The login non-interactive shell is for things that you will do every time
+  that you begin another shell during a logical session
+  - This includes the login interactive shell, execute this as suggested by
+    the Bash reference manual
+- The non-login non-interactive shell
+  - Is non-interactive because you have no way of interacting with it unless
+    you hack some way to do so
+  - Non-Interactive is somewhat a misnomer here because you can choose to
+    implement non-interactive scripts when a ~tty~ is attached but when you
+    haven't got a ~tty~ attached there is no possibility of running interactive
+    scripts
+  - Is non-login because it is not associated with your ID and at the same
+    time not attached to a ~tty~ attached to you
+  - This document won't address non-login shells
+    - If you develop your scripts in a richly configured Bash environment, you
+      will have to configure non-login shells to use the same environment. I am
+      avoiding this topic because I need to see where this experiment goes.
+    - That was a mistake. After developing a powerful Bash environment you are
+      likely to want to use that same environment for non-login shells. Of
+      course you are!
+** Version 2
 
-      Supports the same scripting commands as Dash as well as its own additional commands (sometimes called "Bashisms")
-      Supports tab completion
-      Supports a command history
-      Dash is for non-interactive script execution
-
-      Only supports POSIX compliant features
-      Small binary size (Dash is only 100K compared to Bash's 900K)
-      Faster start-up and script execution
-      #+END_QUOTE
+- Configure Bash for every user?
+  - Login Interactive and Non-Login Interactive are easy and obvious
+  - Non-Login Non-Interactive seems valuable but is less obvious
+- Bash vs Dash
+  - Performance reasons?
+  - [[https://www.wikivs.com/wiki/Bash_vs_dash][Via]]
+    #+BEGIN_QUOTE
+     Dash (Debian Almquist SHell) is a shell that has poor usability by modern standards when used as an interactive log-in shell, but is faster in executing POSIX-compliant scripts than Bash.
+     Bash (Bourne Again SHell) has many more features and is especially preferable when used interactively (although it does contain more programming features too).
+     Bash is typically provided as the default interactive shell, while Debian and Debian-derivatives like Ubuntu provide Dash as the /bin/sh implementation, thereby causing scripts with #!/bin/sh shebangs to be interpreted by Dash rather than Bash by default. For scripts that require Bash for execution, Bash will still be used as the interpreter if the shebang is #!/bin/bash.
+     Bash is designed for human beings and provides a superset of POSIX functionality
+     Supports the same scripting commands as Dash as well as its own additional commands (sometimes called "Bashisms")
+     Supports tab completion
+     Supports a command history
+     Dash is for non-interactive script execution
+     Only supports POSIX compliant features
+     Small binary size (Dash is only 100K compared to Bash's 900K)
+     Faster start-up and script execution
+     #+END_QUOTE
     - This provokes more questions
       - Why have programming expressivity for DevOps and System Administration
         if you can't or shouldn't use it for startup scripts?
-  - [[http://lkhill.com/binsh-checking-for-bash-vs-dash-incompatibilities/][Just call Bash explicitly; it is not an issue]]
-  - [[http://shebang.brandonmintern.com/bourne-is-not-bash-or-read-echo-and-backslash/][Important differences between Bourne and POSIX compliant shells]]
-    - POSIX for speed
-    - Bash better for scripting
-    - Call it for the user with =#!/usr/bin/env bash=
-  - [[http://mywiki.wooledge.org/BashSheet][Bash Overview]] (for later)
-- Questions & Decisions v3
-  - This document configures Bash for login shells and nothing more
+- [[http://lkhill.com/binsh-checking-for-bash-vs-dash-incompatibilities/][Just call Bash explicitly; it is not an issue]]
+- [[http://shebang.brandonmintern.com/bourne-is-not-bash-or-read-echo-and-backslash/][Important differences between Bourne and POSIX compliant shells]]
+  - POSIX for speed
+  - Bash better for scripting
+  - Call it for the user with =#!/usr/bin/env bash=
+- [[http://mywiki.wooledge.org/BashSheet][Bash Overview]] (for later)
 
+*** Version 3
+
+- This document configures Bash for login shells and nothing more
+- Any further scope has not desires or experience to guide it
+  - That is the key, it would be endless spinning
+          
 * Configuring Shells
 :PROPERTIES:
 :ID:       A1DF7D9E-5B52-46D6-90CB-FC43C50D5E41
