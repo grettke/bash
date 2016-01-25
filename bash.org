@@ -1,4 +1,5 @@
 * Making Sense of this Script
+
 ** Desires
 
 - Bash provides a rich and complicated configuration facility
