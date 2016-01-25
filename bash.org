@@ -184,8 +184,6 @@ PS2='↪> '
 :ID:       2476DE76-A6CB-4834-9DEA-6A644BED0F54
 :END:
 
-- Configuration unique to this interactive login shell
-
 *** Login
 :PROPERTIES:
 :header-args: :tangle ./.bash_profile
