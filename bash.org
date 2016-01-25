@@ -148,7 +148,6 @@
   - POSIX for speed
   - Bash better for scripting
   - Call it for the user with =#!/usr/bin/env bash=
-- [[http://mywiki.wooledge.org/BashSheet][Bash Overview]] (for later)
 
 *** Version 3
 
