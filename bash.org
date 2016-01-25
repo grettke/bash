@@ -93,7 +93,7 @@
         - You schedule things for the system to do; executing things via a
           Non-Login shell
 
-** Questions & Decisions
+** Observations & Questions & Decisions
 
 *** Version 1
 
