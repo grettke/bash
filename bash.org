@@ -115,6 +115,8 @@
   - Configure Bash for every user?
     - Login Interactive and Non-Login Interactive are easy and obvious
     - Non-Login Non-Interactive seems valuable but is less obvious
+  - Bash vs Dash
+    - Performance reasons?
 
 * Configuring Shells
 :PROPERTIES:
