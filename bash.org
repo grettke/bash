@@ -62,7 +62,7 @@
     for classification and role definition.
     - Not using tags to classify because they won't reflect document structure
   - Broad Doer definitions
-    - Interactive vs Non-Interactive
+    - Interactive vs Non-Interactive Shell
       - Interactive: requires input from the user
       - Non-Interactive: doesn't
       - Unsure how to use this to classify configuration because most scripts
@@ -78,6 +78,13 @@
           run them. The overlap is so close here. Perhaps "things that I want
           to see" and "things that I want to do interactively" is the correct
           classifier.
+        - This is a design choice
+    - Login and Non-Login Shell
+      - Are you initiating things or is a ~cron~?
+      - This is a system/user choice
+        - You choose to use the system; executing things via a Login shell
+        - You schedule things for the system to do; executing things via a
+          Non-Login shell
 
 * Dictionary
 :PROPERTIES:
