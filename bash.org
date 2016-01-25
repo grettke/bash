@@ -152,7 +152,7 @@
   - Bash better for scripting
   - Call it for the user with =#!/usr/bin/env bash=
 - Bash is for interactive tasks; Dash is for non-interactive tasks
-- You don't need Readline in non-interactive mode  
+- You don't need Readline in non-interactive mode
 
 *** Version 3
 
@@ -193,14 +193,13 @@
 :ID:       304CD69B-9D22-4E27-8566-2223E340AF37
 :END:
 
-- Environment, Evaluation, PrincipleOfLeastAstonishment
+- Environment
   - Child shells inherit *every* function and variable created or modified
     #+NAME: ACD7221D-802A-4999-AF10-E0E43E98DB17
     #+BEGIN_SRC shell bash
 set -o allexport
     #+END_SRC
-
-- Evaluation, Expressivity
+- Evaluation
   - Perform brace expansion
     #+NAME: 159E2F76-E2E4-4D77-869C-9B1173E10036
     #+BEGIN_SRC shell bash
