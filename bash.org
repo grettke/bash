@@ -144,7 +144,9 @@
     - POSIX for speed
     - Bash better for scripting
     - Call it for the user with =#!/usr/bin/env bash=
-  - [[http://mywiki.wooledge.org/BashSheet][Bash Overview]] (for later)    
+  - [[http://mywiki.wooledge.org/BashSheet][Bash Overview]] (for later)
+- Questions & Decisions v3
+  - This document configures Bash for login shells and nothing more
 
 * Configuring Shells
 :PROPERTIES:
