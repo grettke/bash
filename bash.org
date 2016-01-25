@@ -139,6 +139,7 @@
     - This provokes more questions
       - Why have programming expressivity for DevOps and System Administration
         if you can't or shouldn't use it for startup scripts?
+  - [[http://lkhill.com/binsh-checking-for-bash-vs-dash-incompatibilities/][Just call Bash explicitly; it is not an issue]]
 
 * Configuring Shells
 :PROPERTIES:
