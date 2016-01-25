@@ -28,6 +28,13 @@
   operator, and deftly managing the work of any number of processes.
   Forgive my anthropomorphization; we may ever know someone like Bash in our own
   lives for that is truly a rare and kind soul.
+- Doing things with Bash
+  - It is difficult to make sense of all of the configuration options for doing
+    things with Bash
+  - When you've got experience, rely on that
+  - When you haven't got experience, document your intent and obtain experience
+  - Both the things that you do with Bash and the thing that you /want to/ do with
+    Bash are your personal cognitive landscape that guide the configuration
 
 * Dictionary
 :PROPERTIES:
