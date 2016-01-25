@@ -97,11 +97,18 @@
 :ID:       304CD69B-9D22-4E27-8566-2223E340AF37
 :END:
 
-- Environment, Evaluation, LawOfLeaseSurprise
+- Environment, Evaluation, LawOfLeastSurprise
   - Child shells inherit *every* function and variable created or modified
     #+NAME: ACD7221D-802A-4999-AF10-E0E43E98DB17
     #+BEGIN_SRC shell bash
 set -o allexport
+    #+END_SRC
+
+- Evaluation, Expressivity
+  - Perform brace expansion
+    #+NAME: 159E2F76-E2E4-4D77-869C-9B1173E10036
+    #+BEGIN_SRC shell bash
+set -o braceexpand
     #+END_SRC
 
 ***** Shopt
