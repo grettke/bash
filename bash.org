@@ -14,8 +14,9 @@
   - Automated tedious and error prone tasks as quickly as possible
     - Develop shell scripts to do so
     - Leverage multi-tasking
-  - Maximize expressivity and predictability doing so
-    - Maximize predictability; minimize surprise
+  - Maximize expressivity and predictability
+    - Maximize predictability
+    - Minimize surprise
     - Fail fast
 
 ** Approach to Learning and Configuring Bash
