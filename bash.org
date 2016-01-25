@@ -95,6 +95,9 @@
   - Not using tags to classify because they won't reflect document structure and
     I'm not sure where to begin
   - Tried using multiple tags and that confused the whole effort
+  - Switched to one tag
+    - Every time I feel like using multiple tags, I will try to update the
+      Desires to make sense of what I value
 
 ** Observations & Questions & Decisions
 
