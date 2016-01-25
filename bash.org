@@ -225,31 +225,6 @@ PS2='↪> '
 
 - RAE on logout
 
-**** Options
-:PROPERTIES:
-:ID:       AB4C09AA-9EBF-4400-994B-6EA0CC62C2CD
-:END:
-
-***** Set
-:PROPERTIES:
-:ID:       016C9062-8C9C-4096-8009-52465B8A5EBD
-:END:
-
-***** Shopt
-:PROPERTIES:
-:ID:       13347065-EA95-42F2-901C-7305FE8DAA88
-:END:
-
-**** Variables
-:PROPERTIES:
-:ID:       0479B4CC-05CA-4083-9B31-4B3F7263A242
-:END:
-
-**** Functions
-:PROPERTIES:
-:ID:       82E44109-CF46-4AC4-90B0-4F92862AFF73
-:END:
-
 * Deploy
 :PROPERTIES:
 :header-args: :tangle ./deploy :tangle-mode (identity #o755)
