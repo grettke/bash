@@ -217,7 +217,7 @@ Have fun.
 
 #+NAME: E55BD1DC-42CF-4394-B2C1-5D8CCCDD673D
 #+BEGIN_SRC shell bash
-printf "Sayonara!\n"
+printf "Sayonara!\n" && sleep 1
 #+END_SRC
 
 * Deploy
