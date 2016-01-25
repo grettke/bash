@@ -180,10 +180,6 @@ PS2='↪> '
 
 Execute same configuration as every non-login interactive shell.
 
-:PROPERTIES:
-:ID:       909C8280-9451-4000-A149-6BB4FC0FF182
-:END:
-
 #+NAME: 5487397C-D5F5-4C24-919C-66BFAF9B9312
 #+BEGIN_SRC shell bash
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
