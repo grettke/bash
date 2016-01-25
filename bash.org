@@ -85,6 +85,8 @@
         - You choose to use the system; executing things via a Login shell
         - You schedule things for the system to do; executing things via a
           Non-Login shell
+- Decisions
+  - This document won't address non-login shells
 
 * Dictionary
 :PROPERTIES:
@@ -247,8 +249,6 @@ PS2='↪> '
 :PROPERTIES:
 :ID:       82E44109-CF46-4AC4-90B0-4F92862AFF73
 :END:
-
-** Non-Interactive Non-Login
 
 * Deploy
 :PROPERTIES:
