@@ -178,7 +178,8 @@ PS2='↪> '
 :ID:       B281581F-2E1B-4E02-9787-BE9E23DD8907
 :END:
 
-**** Extend the interactive non-login shell
+Execute same configuration as every non-login interactive shell.
+
 :PROPERTIES:
 :ID:       909C8280-9451-4000-A149-6BB4FC0FF182
 :END:
