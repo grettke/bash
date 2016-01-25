@@ -152,6 +152,7 @@
   - Bash better for scripting
   - Call it for the user with =#!/usr/bin/env bash=
 - Bash is for interactive tasks; Dash is for non-interactive tasks
+- You don't need Readline in non-interactive mode  
 
 *** Version 3
 
