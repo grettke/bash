@@ -74,7 +74,7 @@
 :ID:       30F7B093-5CC8-4545-A30E-C9D025AC7265
 :END:
 
-- Configuration common to every non-login shell
+- Configuration common to every non-login interactive shell
 - RAE on start
 
 #+NAME: 09B2AC53-C30E-427E-84A3-565EEAA8939B
@@ -87,7 +87,7 @@
 :ID:       2476DE76-A6CB-4834-9DEA-6A644BED0F54
 :END:
 
-- Configuration unique to this login shell
+- Configuration unique to this interactive login shell
 
 *** Login
 :PROPERTIES:
