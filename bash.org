@@ -86,13 +86,27 @@
         - You schedule things for the system to do; executing things via a
           Non-Login shell
 - Decisions
-  - This document won't address non-login shells
-    - If you develop your scripts in a richly configured Bash environment, you
-      will have to configure non-login shells to use the same environment. I am
-      avoiding this topic because I need to see where this experiment goes.
-  - The interactive login and logout is for things that you will do once per
-    logical session
-  - The interactive non-login configuration is for everything else
+  - The login interactive shell is for things that you will only do at the
+    start and finish of a logical session
+    - Attached to your ID and a ~tty~ owned by you
+    - Not much work to do here
+  - The login non-interactive shell is for things that you will do every time
+    that you begin another shell during a logical session
+    - This includes the login interactive shell, execute this as suggested by
+      the Bash reference manual
+  - The non-login non-interactive shell
+    - Is non-interactive because you have no way of interacting with it unless
+      you hack some way to do so
+    - Non-Interactive is somewhat a misnomer here because you can choose to
+      implement non-interactive scripts when a ~tty~ is attached but when you
+      haven't got a ~tty~ attached there is no possibility of running interactive
+      scripts
+    - Is non-login because it is not associated with your ID and at the same
+      time not attached to a ~tty~ attached to you
+    - This document won't address non-login shells
+      - If you develop your scripts in a richly configured Bash environment, you
+        will have to configure non-login shells to use the same environment. I am
+        avoiding this topic because I need to see where this experiment goes.
 
 * Configuring Shells
 :PROPERTIES:
