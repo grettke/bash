@@ -117,6 +117,28 @@
     - Non-Login Non-Interactive seems valuable but is less obvious
   - Bash vs Dash
     - Performance reasons?
+    - [[https://www.wikivs.com/wiki/Bash_vs_dash][Via]]
+      #+BEGIN_QUOTE
+      Dash (Debian Almquist SHell) is a shell that has poor usability by modern standards when used as an interactive log-in shell, but is faster in executing POSIX-compliant scripts than Bash.
+
+      Bash (Bourne Again SHell) has many more features and is especially preferable when used interactively (although it does contain more programming features too).
+
+      Bash is typically provided as the default interactive shell, while Debian and Debian-derivatives like Ubuntu provide Dash as the /bin/sh implementation, thereby causing scripts with #!/bin/sh shebangs to be interpreted by Dash rather than Bash by default. For scripts that require Bash for execution, Bash will still be used as the interpreter if the shebang is #!/bin/bash.
+
+      Bash is designed for human beings and provides a superset of POSIX functionality
+
+      Supports the same scripting commands as Dash as well as its own additional commands (sometimes called "Bashisms")
+      Supports tab completion
+      Supports a command history
+      Dash is for non-interactive script execution
+
+      Only supports POSIX compliant features
+      Small binary size (Dash is only 100K compared to Bash's 900K)
+      Faster start-up and script execution
+      #+END_QUOTE
+    - This provokes more questions
+      - Why have programming expressivity for DevOps and System Administration
+        if you can't or shouldn't use it for startup scripts?
 
 * Configuring Shells
 :PROPERTIES:
