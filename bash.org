@@ -178,7 +178,7 @@ PS2='↪> '
 :ID:       B281581F-2E1B-4E02-9787-BE9E23DD8907
 :END:
 
-Execute same configuration as every non-login interactive shell.
+Execute the same configuration as every non-login interactive shell.
 
 #+NAME: 5487397C-D5F5-4C24-919C-66BFAF9B9312
 #+BEGIN_SRC shell bash
