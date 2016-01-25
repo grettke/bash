@@ -208,9 +208,11 @@ fortune
 :ID:       D0503846-C5ED-4CBC-99F3-2B3DE5449FC3
 :END:
 
+Have fun.
+
 #+NAME: E55BD1DC-42CF-4394-B2C1-5D8CCCDD673D
 #+BEGIN_SRC shell bash
-
+printf "Sayonara!\n"
 #+END_SRC
 
 * Deploy
