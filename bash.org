@@ -12,7 +12,8 @@
 - Successfully solving problems with Bash requires that you (goal)
   - Understand what it can do
   - Configure it to do so in a way that you prefer
-- Working with Bash provides the results by recognizing that (means)
+- Working with Bash provides the results by recognizing that you attain practice
+  and experience (means)
   - Understanding possibilities requires study and practice (practice)
   - Configuring requires experience and personal-preference (experience)
 - The purpose of this document is to capture both the means and the goal
