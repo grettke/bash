@@ -12,7 +12,7 @@
 - Successfully solving problems with Bash requires that you (goal)
   - Understand what it can do
   - Configure it to do so in a way that you prefer
-- Working with Base provides the results by recognizing that (means)
+- Working with Bash provides the results by recognizing that (means)
   - Understanding possibilities requires study and practice (practice)
   - Configuring requires experience and personal-preference (experience)
 - The purpose of this document is to capture both the means and the goal
@@ -110,6 +110,7 @@
       - That was a mistake. After developing a powerful Bash environment you are
         likely to want to use that same environment for non-login shells. Of
         course you are!
+- Decisions v2
 
 * Configuring Shells
 :PROPERTIES:
