@@ -189,31 +189,6 @@ Execute same configuration as every non-login interactive shell.
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 #+END_SRC
 
-**** Options
-:PROPERTIES:
-:ID:       4254A0E7-5687-4D94-BF71-E6571200353E
-:END:
-
-***** Set
-:PROPERTIES:
-:ID:       63FF9401-02AD-47C2-8F18-E5EDAEEAC11D
-:END:
-
-***** Shopt
-:PROPERTIES:
-:ID:       C270EC13-3176-4BFE-83BC-37AE2A856657
-:END:
-
-**** Variables
-:PROPERTIES:
-:ID:       A9DFBEDD-B699-4059-9D1C-9E8C28A064E0
-:END:
-
-**** Functions
-:PROPERTIES:
-:ID:       4FEC2380-849B-45CC-A5BC-31174945EA3D
-:END:
-
 *** Logout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout
