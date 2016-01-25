@@ -141,6 +141,9 @@
         if you can't or shouldn't use it for startup scripts?
   - [[http://lkhill.com/binsh-checking-for-bash-vs-dash-incompatibilities/][Just call Bash explicitly; it is not an issue]]
   - [[http://shebang.brandonmintern.com/bourne-is-not-bash-or-read-echo-and-backslash/][Important differences between Bourne and POSIX compliant shells]]
+    - POSIX for speed
+    - Bash better for scripting
+    - Call it for the user with =#!/usr/bin/env bash=
 
 * Configuring Shells
 :PROPERTIES:
