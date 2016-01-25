@@ -44,6 +44,13 @@
   - Maximize expressivity and predictability doing so
     - Maximize predictability; minimize surprise
     - Fail fast
+- Roles of Doers
+  - My goal is to classify configuration options by roles that have different
+    goals. Some of the roles have overlap in the goals, some don't. I don't
+    know yet what are the best role definitions or how options overlap. I will
+    find out and document it here. /Doers/ is the name of someone or something
+    executing things with an intent. My goal is to reveal intent and use that
+    for classification and role definition.
 
 * Dictionary
 :PROPERTIES:
