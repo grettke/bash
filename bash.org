@@ -2454,7 +2454,8 @@ digraph version5 {
   }
 
   BashCore -> BashInteractiveCore [arrowhead=none];
-  BashProfile -> BashRc -> BashLogout;
+  BashProfile -> BashRc [arrowhead=none]
+  BashRc -> BashLogout [arrowhead=none];
   BashEnv -> BashGlobalNonInteractive;
   BashRc -> BashGlobalInteractive;
 }
