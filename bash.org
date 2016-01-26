@@ -120,7 +120,7 @@
 :ID:       036298FF-E47B-463B-8BD0-4E17E84BE525
 :END:
 
-** Bash Wikipedia
+** DONE Bash Wikipedia
 :PROPERTIES:
 :ID:       5A1D538D-D8FA-4ACE-8019-231C37D5BA62
 :END:
@@ -137,7 +137,7 @@
 - Lists startup file load sequence
 - Job control explained
 
-** Bash Home Page
+** DONE Bash Home Page
 :PROPERTIES:
 :ID:       60856D79-FCB0-4E9C-BBF4-5110161F3C09
 :END:
@@ -146,7 +146,7 @@
 - Light overview
 - Joined the mailing list
 
-** Bash Reference Manual
+** DONE Bash Reference Manual
 :PROPERTIES:
 :ID:       068EFDB6-4A97-4502-AE60-2DD3A8F687EC
 :END:
@@ -2111,7 +2111,7 @@ initializations.
 
 - Everything in this heading is for use by reference so no notes to follow
 
-** Bash Debugger
+** TODO Bash Debugger
 :PROPERTIES:
 :ID:       4DF379DD-3A65-4802-9725-B184A64787DB
 :END:
@@ -2125,7 +2125,7 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 '
 #+END_SRC
 
-** Bash FAQ
+** TODO Bash FAQ
 :PROPERTIES:
 :ID:       42D2E376-FD07-41EF-91F7-673072BC412A
 :END:
@@ -2169,7 +2169,7 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 *** What are some concise Bash articles?
 
 - [[http://www.catonmat.net/blog/bash-one-liners-explained-part-four/][Bash One-Liners Explained, Part IV: Working with history]]
-- [[http://mywiki.wooledge.org/BashSheet][Bash Reference Sheet]]  
+- [[http://mywiki.wooledge.org/BashSheet][Bash Reference Sheet]]
 
 *** What are some Bash best practices?
 
