@@ -2452,9 +2452,9 @@ digraph version5 {
   }
   subgraph cluster_C {
     label = "Interactive [Non-]Login Shell\n\nLogin Shell Configuration Files\n\n(~/)";
-    BashProfile[shape = "note" label = ".bash_profile\n\nSession start commands, once"];
-    BashRc[shape = "note" label = ".bashrc\n\nsource #BASH_GLOBAL_INTERACTIVE_ENV\nOnce for every\nshell created"];
-    BashLogout[shape = "note" label = ".bash_logout\n\nSession end commands, once"];
+    BashProfile[shape = "note" label = ".bash_profile\n\nYour session start commands, once"];
+    BashRc[shape = "note" label = ".bashrc\n\nsource #BASH_GLOBAL_INTERACTIVE_ENV\nYour once for every\nshell created commands"];
+    BashLogout[shape = "note" label = ".bash_logout\n\nYour session end commands, once"];
     BashGlobalInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_INTERACTIVE_ENV"];
   }
   subgraph cluster_D {
