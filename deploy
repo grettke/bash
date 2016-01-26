@@ -1,4 +1,4 @@
-# [[file:bash.org::*Deploy][6B840488-783C-4290-9133-7E4209247FB3]]
+# [[file:bash.org::*Deployment][6B840488-783C-4290-9133-7E4209247FB3]]
 function bash_deploy() {
     ln -s -f ${PWD}/.bash_profile ~/.bash_profile
     ln -s -f ${PWD}/.bash_logout ~/.bash_logout
