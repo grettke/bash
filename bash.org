@@ -2442,11 +2442,12 @@ digraph version5 {
   subgraph cluster_A {
     label = "Literate Programming\nEntities\n\n(configuration of Bash)";
     BashCore[label = "{BashCore|Standard language features\l|For human & computer execution\l}"];
+    BashNonInteractiveCore[label = "{BashNonInteractiveCore|\n- If interactive, die\n- Unset interactive functions|Only for computer execution\l}"];
     BashInteractiveCore[label = "{BashInteractiveCore|Interface\lDebugging\lHistory\lReadline\lPrompts\l|Only for human execution\l}"];
   }
   subgraph cluster_B {
     label = "Global Configuration\nFiles\n\n(/usr/local/etc)";
-    BashGlobalNonInteractiveFile[shape = "note" label = ".bash_global_non_interactive\n\n- «BashCore»\n- If interactive, die\n- Unset interactive functions"];
+    BashGlobalNonInteractiveFile[shape = "note" label = ".bash_global_non_interactive\n\n- «BashCore»\n- «BashNonInteractiveCore»"];
     BashGlobalInteractiveFile[shape = "note" label = ".bash_global_interactive\n\n- «BashCore»\n- «BashInteractiveCore»"];
   }
   subgraph cluster_C {
@@ -2471,6 +2472,7 @@ digraph version5 {
   BashGlobalInteractiveFile -> BashCore [arrowhead=diamond];
   BashGlobalInteractiveFile -> BashInteractiveCore [arrowhead=diamond];
   BashGlobalNonInteractiveFile -> BashCore [arrowhead=diamond];
+  BashGlobalNonInteractiveFile -> BashNonInteractiveCore [arrowhead=diamond];
 }
 #+END_SRC
 
