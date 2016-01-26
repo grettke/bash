@@ -2133,23 +2133,38 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 - [[ftp://ftp.cwru.edu/pub/bash/FAQ][Here]]
 - Seems like a good document to skim
 ** Questions answered with web search results
+:PROPERTIES:
+:ID:       E640A774-E706-4903-88F0-3808FED40580
+:END:
 
 *** Can you prompt the user from a non-interactive script?
+:PROPERTIES:
+:ID:       53564093-9C8B-4C6D-9943-D4250F5F7BD6
+:END:
 
 - [[https://stackoverflow.com/questions/226703/how-do-i-prompt-for-input-in-a-linux-shell-script][How do I prompt for input in a Linux shell script?]]
   - List of every way to prompt the user
 
 *** What is the difference between login-shell-interactive and non-login-shell-interactive and non-login-shell non-interactive?
+:PROPERTIES:
+:ID:       07A853B3-C5A8-4C1B-AA70-6BCD691647ED
+:END:
 
 - Is the choice up to the user or the operating system?
 - Can non-login shells interact with the user?
 - Is it entirely a user choice; you act from a =tty=, or you don't?
 
 *** How is Bash initialized?
+:PROPERTIES:
+:ID:       FFA3E8B1-EDF9-4309-823E-2DD7C5D9423B
+:END:
 
 - [[http://bencane.com/2013/09/16/understanding-a-little-more-about-etcprofile-and-etcbashrc/][Understanding a little more about /etc/profile and /etc/bashrc]]
 
 *** Bash vs Dash
+:PROPERTIES:
+:ID:       470A6250-A768-4244-8457-786AA332039E
+:END:
 
 - [[https://wiki.ubuntu.com/DashAsBinSh][DashAsBinSh]]
 - Make Bash the default on Ubuntu
@@ -2167,29 +2182,47 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
   - Great Bash site
 
 *** What are some concise Bash articles?
+:PROPERTIES:
+:ID:       39883C0F-B62D-4C82-889D-EFE6E93E67E0
+:END:
 
 - [[http://www.catonmat.net/blog/bash-one-liners-explained-part-four/][Bash One-Liners Explained, Part IV: Working with history]]
 - [[http://mywiki.wooledge.org/BashSheet][Bash Reference Sheet]]
 
 *** What are some Bash best practices?
+:PROPERTIES:
+:ID:       B16CD75F-BBA6-4291-AE59-6141D3829E37
+:END:
 
 - [[http://kvz.io/blog/2013/11/21/bash-best-practices/][Best Practices for Writing Bash Scripts]]
   - Good test of how well you read the configuration options and revealing
     of how you might break up configuration scripts
 
 *** Everything related to configuring Bash on OS X
+:PROPERTIES:
+:ID:       0132E8EF-84B4-40DD-9DB8-1750E5AC0EA8
+:END:
 
 - [[http://www.dowdandassociates.com/blog/content/howto-set-an-environment-variable-in-mac-os-x/][HowTo: Set an Environment Variable in Mac OS X]]
 
 *** How to other people's Bash configurations look?
+:PROPERTIES:
+:ID:       2A62E003-3068-4CF7-8AB2-6ED23118102A
+:END:
 
 - [[https://github.com/LoveIsGrief/bash_env][LoveIsGrief/bash_env]]
 
 *** How to configure =BASH_ENV=?
+:PROPERTIES:
+:ID:       C8B23409-D006-4C0A-88FD-B6A8825FA043
+:END:
 
 - [[https://serverfault.com/questions/593472/where-is-bash-env-usually-set][Where is $BASH_ENV usually set?]]
 
 *** What is the POSIX shell standard?
+:PROPERTIES:
+:ID:       D3746650-253F-445B-B84D-160497D9F7D6
+:END:
 
 - http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html
 
@@ -2306,7 +2339,7 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 :ID:       3D8CB422-87BC-47A8-BA42-8D4A0AFEF99E
 :END:
 
-*** Version 1
+*** Version 01
 :PROPERTIES:
 :ID:       F1878DC4-317A-4743-90D0-DFF6971E58FB
 :END:
@@ -2336,7 +2369,7 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
       likely to want to use that same environment for non-login shells. Of
       course you are!
 
-*** Version 2
+*** Version 02
 :PROPERTIES:
 :ID:       E1339F20-FAF2-4E46-AFF1-DCB5811F80BE
 :END:
@@ -2371,7 +2404,7 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 - Bash is for interactive tasks; Dash is for non-interactive tasks
 - You don't need Readline in non-interactive mode
 
-*** Version 3
+*** Version 03
 :PROPERTIES:
 :ID:       DDB77782-98C3-4F45-9CCA-3D17CBAC327F
 :END:
@@ -2387,6 +2420,16 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 - Because
   - Any further scope has no desires or experience to guide it
     - Attempting to do anything more would result in aimless fruitless wandering
+
+*** Version 04
+:PROPERTIES:
+:ID:       F12494B4-C1D7-40D1-81CC-D19632D0E7B9
+:END:
+
+#+NAME: F8503035-BB08-4E0A-9B72-4A473C1C4038
+#+BEGIN_SRC dot :file "./image/version04.png"
+
+#+END_SRC
 
 * Configuration
 :PROPERTIES:
