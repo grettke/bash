@@ -1,4 +1,108 @@
-* Research
+* Research, Goals, & Beginnings
+** Desire
+
+- High-quality box provisioning
+- Advanced =bash= knowledge
+  - Have less than basic knowledge
+- Recognition of =bash= as a first-class programming language
+
+** Satisfaction
+
+- Search for learning resources
+  - Googled "advanced bash", went through first two pages of results and
+    selected "interesting" resources
+    - [[http://www.tldp.org/LDP/abs/html/][Advanced Bash-Scripting Guide]] <2014-03-14 Fri>
+      - Comprehensive nice looking contents
+    - [[https://www.gnu.org/software/bash/manual/][Bourne-Again SHell manual <2015-01-19 Mon> ]]
+      - The user manual
+    - [[http://wiki.bash-hackers.org/scripting/tutoriallist][List of Bash online-tutorials]]
+      - Ranked index of online resources
+    - [[http://www.amazon.com/s/ref=sr_nr_p_n_feature_browse-b_1?fst=as%253Aoff&rh=n%253A283155%252Ck%253ABash+Scripting%252Cp_n_feature_browse-bin%253A618073011&keywords=Bash+Scripting&ie=UTF8&qid=1452906677&rnid=618072011][Amazon Kindle Results for "Bash Scripting"]], 29 results, only chose ones
+      that were novel or 2015+
+    - Days later revised my search results to: Kindle, 4=stars+ on them and
+       this one won with 5/5 stars of 20 reviews. I was looking for 2015
+       or newest possible because I wanted Bash 4.2 covered; it added arrays.
+       All years of books are probably valuable; I'm trying to save time by
+       getting everything in one. Might be possible, might not; and I will try.
+       The search results seem to include more than the criteria should have
+       excluded.
+      - 19 search results
+      - Looked for: high ratings, 4 ratings, interesting title and cover
+      - Interesting and pursuing
+      - Interesting stuff, pursuing
+        - A. [[http://smile.amazon.com/Mastering-Unix-Shell-Scripting-Administrators-ebook/dp/B004S82Q2K/ref=sr_1_12?s=books&ie=UTF8&qid=1453549654&sr=1-12&keywords=bash+scripting&refinements=p_72%253A1250221011%252Cp_n_feature_nine_browse-bin%253A3291437011%252Cp_n_feature_browse-bin%253A618073011][Mastering Unix Shell Scripting: Bash, Bourne, and Korn Shell Scripting for Programmers, System Administrators, and UNIX Gurus]]
+          - Totally wowed by the reviews
+          - Pragmatic case studies, no theory, all practice; wow
+        - B. [[http://smile.amazon.com/Linux-Command-Shell-Scripting-Bible-ebook/dp/B00RZDNL5Q/ref=sr_1_4?s=books&ie=UTF8&qid=1453549654&sr=1-4&keywords=bash+scripting&refinements=p_72%253A1250221011%252Cp_n_feature_nine_browse-bin%253A3291437011%252Cp_n_feature_browse-bin%253A618073011][Linux Command Line and Shell Scripting Bible]]
+          - Gut feeling is great
+          - The perennial reference
+          - Well loved
+        - C. [[http://smile.amazon.com/Linux-Command-Line-Complete-Introduction-ebook/dp/B006X2QEQS/ref=sr_1_5?s=books&ie=UTF8&qid=1453549654&sr=1-5&keywords=bash+scripting&refinements=p_72%253A1250221011%252Cp_n_feature_nine_browse-bin%253A3291437011%252Cp_n_feature_browse-bin%253A618073011][The Linux Command Line: A Complete Introduction]]
+          - 230/4.5. Looks great.
+          - Good for beginners; I'm kind of a beginner wouldn't hurt to cover
+            the stuff
+        - D. [[http://www.amazon.com/Unix-Power-Tools-Shelley-Powers-ebook/dp/B0043EWUT8/ref=sr_1_fkmr1_1?s=books&ie=UTF8&qid=1453570490&sr=8-1-fkmr1&keywords=unix+scripting+pro+100][Unix Power Tools]]
+          - Addictive, almanac, desert island, holy grail
+          - Primarily for advanced users
+        - E. [[http://www.amazon.com/Unix-Linux-System-Administration-Handbook-ebook/dp/B003YMNVCA/ref=pd_sim_351_2?ie=UTF8&dpID=61Wji3cvETL&dpSrc=sims&preST=_AC_UL160_SR123%252C160_&refRID=1MCP0FZHMWM62X5A02T7][Unix and Linux System Administration Handbook]]
+          - Classic, wow
+      - That got me thinking about asking the question
+        - Do I want to learn Bash well? Do I want to learn scripting and system
+          administration well? First, I want to learn Bash well, so I will focus
+          on a Bash scripting book. This is for system admnistration in the form
+          of DevOps, so I will pursue it in that order.
+        - Is this realistic or possible? Starting to narrow it down. Thus far
+          I've only read review and the title/cover. Reading the blurbs now.
+          - +A :: real world, perfect.
+          - +D :: mentions zsh, security, and more, didn't want a reference now,
+               and this seems to have everything
+          - +E :: Doesn't bloviate, all aspects, wow
+          - -B :: seems like a great reference/introduction (refintroduction?)
+               and not something I want given I want Bash stuff this also seems
+               too introductory
+          - -C :: mention Vi and deleting files, too basic
+        - Down to 3: A, D, E
+          - Only want one. Need to scope this somehow.
+          - Never conidered how much I suck at sysadmin'ing, yikes I mean I can
+            make it happen, not too badly, but I never read a single document
+            on "being a sysadmin. Maybe it doesn't matter?
+          - E is out, for the future, scope just too big
+        - Down to 2: A, E
+          - Review again
+            - D :: Sysadmin stuff. Same as devops.
+            - A :: says all the right things, develop a GUI with bash, but doesn't
+                 get to Shell scripting until part 2 in chapter *11*, signal
+                 handling is nice never touched that, advanced scipting doesn't
+                 seem that advanced. Book has tone of sysadmin stuff, or if you
+                 never used UNIX before. 3 chapters of example scripts that is
+                 cool. First half of the book might skip.
+          - Thoughts
+            - Both are great books for different reasons
+            - Perhaps I should get both?
+            - Reviewed the TOCs again remembering the goal
+              - A - Ch 1: overview. Everything else examples. Expect, can I use
+                expect to answer prompts for stuff? I should learn Expect. Might
+                not even need something like Monit if it is this simple. Sweet,
+                sweet stuff.
+              - B - Lookg introductory, but not, all useful stuff, might upt
+                documentation together in mind
+              - C - basics
+              - D - shouldl ike it, but don't
+                E - awesome, too much
+            - Thoughts
+              - Screwed up lettering, that was a bad idea
+              - Both A and B look good, B leans more towards an overview thing,
+                which is what I wanted in addition to the reference manual.
+                I'll start there, bought it.
+
+** Decision
+
+- Read the user manual
+  - It exists for a reason
+- Read one other resource
+  - Provides another perspective, and voice
+  - Balance speed with detail
+
 * Making Sense of this Script
 :PROPERTIES:
 :ID:       886036D5-3715-492B-9ABF-825F4058A995
