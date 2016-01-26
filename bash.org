@@ -2464,8 +2464,8 @@ digraph version5 {
     BashNonInteractiveLoginInit [shape = "rarrow" label="--login"];
   }
   BashCore -> BashInteractiveCore [arrowhead=none];
-  BashProfile -> BashRc [arrowhead=none];
-  BashRc -> BashLogout [arrowhead=none];
+  BashProfile -> BashRc;
+  BashRc -> BashLogout;
   BashEnv -> BashGlobalNonInteractiveProp -> BashGlobalNonInteractiveFile;
   BashGlobalInteractiveProp -> BashGlobalInteractiveFile;
   BashNonInteractiveLoginInit -> BashRc [lhead=cluster_C];
