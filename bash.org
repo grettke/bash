@@ -2429,37 +2429,40 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 #+NAME: F8503035-BB08-4E0A-9B72-4A473C1C4038
 #+BEGIN_SRC dot :file "./image/version04.png" :wrap "RESULTS"
 digraph version5 {
-  fontname = "DejaVu Sans Mono"
-  fontsize = 12
-  node [shape = "record" fontname = "DejaVu Sans Mono" fontsize = 12]
+  fontname = "DejaVu Sans Mono";
+  fontsize = 12;
+  node [shape = "record" fontname = "DejaVu Sans Mono" fontsize = 12];
+  compound = true;
   subgraph cluster_0 {
     label = "Literate Programming\nEntities\n\n(configuration of Bash)";
-    BashCore[label = "{BashCore|Standard language features\l|For human & computer execution\l}"]
-    BashInteractiveCore[label = "{BashInteractiveCore|Interface\lDebugging\lHistory\lReadline\lPrompts\l|Only for human execution\l}"]
+    BashCore[label = "{BashCore|Standard language features\l|For human & computer execution\l}"];
+    BashInteractiveCore[label = "{BashInteractiveCore|Interface\lDebugging\lHistory\lReadline\lPrompts\l|Only for human execution\l}"];
   }
   subgraph cluster_1 {
     label = "Global Configuration\nFiles\n\n(/usr/local/etc)";
-    BashGlobalNonInteractiveFile[shape = "note" label = ".bash_global_non_interactive\n\n- «BashCore»\n- Unset interactive functions"]
-    BashGlobalInteractiveFile[shape = "note" label = ".bash_global_interactive\n\n- «BashCore»\n- «BashInteractiveCore»"]
+    BashGlobalNonInteractiveFile[shape = "note" label = ".bash_global_non_interactive\n\n- «BashCore»\n- Unset interactive functions"];
+    BashGlobalInteractiveFile[shape = "note" label = ".bash_global_interactive\n\n- «BashCore»\n- «BashInteractiveCore»"];
   }
   subgraph cluster_2 {
     label = "Interactive [Non-]Login Shell\n\n(unique user\nconfiguration files)";
-    BashProfile[shape = "note" label = ".bash_profile\n\n- Session start commands, once"]
-    BashRc[shape = "note" label = ".bashrc\n\n- source #BASH_GLOBAL_INTERACTIVE_ENV\n- Once for every\nshell created"]
-    BashLogout[shape = "note" label = ".bash_logout\n\n- Session end commands, once"]
-    BashGlobalInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_INTERACTIVE_ENV"]
+    BashProfile[shape = "note" label = ".bash_profile\n\n- Session start commands, once"];
+    BashRc[shape = "note" label = ".bashrc\n\n- source #BASH_GLOBAL_INTERACTIVE_ENV\n- Once for every\nshell created"];
+    BashLogout[shape = "note" label = ".bash_logout\n\n- Session end commands, once"];
+    BashGlobalInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_INTERACTIVE_ENV"];
   }
   subgraph cluster_3 {
-    label = "Non-Interactive Shell";
-    BashEnv [shape = "rarrow" label = "BASH_ENV"]
-    BashGlobalNonInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_NON_INTERACTIVE_ENV"]
+    label = "Non-Interactive [Non-]Login";
+    BashEnv [shape = "rarrow" label = "BASH_ENV"];
+    BashGlobalNonInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_NON_INTERACTIVE_ENV"];
+    BashNonInteractiveLoginInit [shape = "rarrow" label="--login"];
   }
 
   BashCore -> BashInteractiveCore [arrowhead=none];
-  BashProfile -> BashRc [arrowhead=none]
+  BashProfile -> BashRc [arrowhead=none];
   BashRc -> BashLogout [arrowhead=none];
   BashEnv -> BashGlobalNonInteractiveProp -> BashGlobalNonInteractiveFile;
   BashGlobalInteractiveProp -> BashGlobalInteractiveFile;
+  BashNonInteractiveLoginInit -> BashRc [ltail=cluster_0];
   BashGlobalInteractiveFile -> BashCore [arrowhead=diamond];
   BashGlobalInteractiveFile -> BashInteractiveCore [arrowhead=diamond];
   BashGlobalNonInteractiveFile -> BashCore [arrowhead=diamond];
