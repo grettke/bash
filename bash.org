@@ -2433,23 +2433,23 @@ digraph version5 {
   fontsize = 12
   node [shape = "record" fontname = "DejaVu Sans Mono" fontsize = 12]
   subgraph cluster_0 {
-    label = "Literate Programming\nEntities";
-    BashCore[label = "{BashCore|+ \l|+ \l}"]
-    BashInteractiveCore[label = "{BashInteractiveCore|+ \l|+ \l}"]
+    label = "Literate Programming\nEntities\n\n(configuration of Bash)";
+    BashCore[label = "{BashCore|Standard language features\l|For human & computer execution\l}"]
+    BashInteractiveCore[label = "{BashInteractiveCore|Interface\lDebugging\lHistory\lReadline\lPrompts\l|Only for human execution\l}"]
   }
   subgraph cluster_1 {
-    label = "Global Configuration\nFiles";
+    label = "Global Configuration\nFiles\n\n(/usr/local/etc)";
     BashGlobalNonInteractive[shape = "note" label = ".bash_global_non_interactive\n- «BashCore»\n- Unset interactive functions"]
     BashGlobalInteractive[shape = "note" label = ".bash_global_interactive\n- «BashCore»\n- «BashInteractiveCore»"]
   }
   subgraph cluster_2 {
-    label = "Login Environment\n\n(user configuration\nfiles)";
+    label = "Interactive [Non-]Login Shell\n\n(unique user\nconfiguration files)";
     BashProfile[shape = "note" label = ".bash_profile\n- Session start commands, once"]
-    BashRc[shape = "note" label = ".bashrc\n- . #BASH_GLOBAL_INTERACTIVE\n- Everything unique\nto the user once\nfor every shell\ncreated"]
+    BashRc[shape = "note" label = ".bashrc\n- source #BASH_GLOBAL_INTERACTIVE\n- Once for every\nshell created"]
     BashLogout[shape = "note" label = ".bash_logout\n- Session end commands, once"]
   }
   subgraph cluster_3 {
-    label = "Non-Login Environment";
+    label = "Non-Interactive Shell";
     BashEnv [shape = "rarrow" label = "BASH_ENV"]
   }
 
