@@ -2453,6 +2453,7 @@ digraph version5 {
     BashEnv [shape = "rarrow" label = "BASH_ENV"]
   }
 
+  BashCore -> BashInteractiveCore [arrowhead=none];
   BashProfile -> BashRc -> BashLogout;
   BashEnv -> BashGlobalNonInteractive;
   BashRc -> BashGlobalInteractive;
