@@ -2427,9 +2427,42 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 :END:
 
 #+NAME: F8503035-BB08-4E0A-9B72-4A473C1C4038
-#+BEGIN_SRC dot :file "./image/version04.png"
+#+BEGIN_SRC dot :file "./image/version04.png" :wrap "RESULTS"
+digraph version5 {
+  fontname = "DejaVu Sans Mono"
+  fontsize = 12
+  node [shape = "record" fontname = "DejaVu Sans Mono" fontsize = 12]
+  subgraph cluster_0 {
+    label = "Literate Programming\nEntities";
+    BashCore[label = "{BashCore|+ \l|+ \l}"]
+    BashInteractiveCore[label = "{BashInteractiveCore|+ \l|+ \l}"]
+  }
+  subgraph cluster_1 {
+    label = "Global Configuration\nFiles";
+    BashGlobalNonInteractive[shape = "note" label = ".bash_global_non_interactive\n- «BashCore»\n- Unset interactive functions"]
+    BashGlobalInteractive[shape = "note" label = ".bash_global_interactive\n- «BashCore»\n- «BashInteractiveCore»"]
+  }
+  subgraph cluster_2 {
+    label = "Login Environment\n\n(user configuration\nfiles)";
+    BashProfile[shape = "note" label = ".bash_profile\n- Session start commands, once"]
+    BashRc[shape = "note" label = ".bashrc\n- . #BASH_GLOBAL_INTERACTIVE\n- Everything unique\nto the user once\nfor every shell\ncreated"]
+    BashLogout[shape = "note" label = ".bash_logout\n- Session end commands, once"]
+  }
+  subgraph cluster_3 {
+    label = "Non-Login Environment";
+    BashEnv [shape = "rarrow" label = "BASH_ENV"]
+  }
 
+  BashProfile -> BashRc -> BashLogout;
+  BashEnv -> BashGlobalNonInteractive;
+  BashRc -> BashGlobalInteractive;
+}
 #+END_SRC
+
+#+RESULTS: F8503035-BB08-4E0A-9B72-4A473C1C4038
+#+BEGIN_RESULTS
+[[file:./image/version04.png]]
+#+END_RESULTS
 
 * Configuration
 :PROPERTIES:
