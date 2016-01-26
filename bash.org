@@ -2132,6 +2132,67 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 
 - [[ftp://ftp.cwru.edu/pub/bash/FAQ][Here]]
 - Seems like a good document to skim
+** Questions answered with web search results
+
+*** Can you prompt the user from a non-interactive script?
+
+- [[https://stackoverflow.com/questions/226703/how-do-i-prompt-for-input-in-a-linux-shell-script][How do I prompt for input in a Linux shell script?]]
+  - List of every way to prompt the user
+
+*** What is the difference between login-shell-interactive and non-login-shell-interactive and non-login-shell non-interactive?
+
+- Is the choice up to the user or the operating system?
+- Can non-login shells interact with the user?
+- Is it entirely a user choice; you act from a =tty=, or you don't?
+
+*** How is Bash initialized?
+
+- [[http://bencane.com/2013/09/16/understanding-a-little-more-about-etcprofile-and-etcbashrc/][Understanding a little more about /etc/profile and /etc/bashrc]]
+
+*** Bash vs Dash
+
+- [[https://wiki.ubuntu.com/DashAsBinSh][DashAsBinSh]]
+- Make Bash the default on Ubuntu
+  - [[http://www.humbug.in/2012/configure-ubuntu-to-use-bash-as-default-shell-instead-of-dash/][Configure Ubuntu to use Bash as default shell instead of Dash]]
+  - [[http://anandmpandit.blogspot.com/2011/09/how-to-change-default-shell-from-dash.html][How to change default shell from dash to bash in ubuntu]]
+  - [[https://superuser.com/questions/715722/how-to-do-dpkg-reconfigure-dash-as-bash-automatically][How to do *dpkg-reconfigure dash* as bash automatically]]
+  - [[https://justinconover.wordpress.com/2012/05/14/ubuntu-changing-dash-to-bash/][UBUNTU CHANGING DASH TO BASH]]
+- [[https://www.wikivs.com/wiki/Bash_vs_dash][Bash vs dash]]
+  - Bash is 900K and feature rich non-POSIX
+  - Dash is 100K and feature poor POSIX
+- [[http://lkhill.com/binsh-checking-for-bash-vs-dash-incompatibilities/][/bin/sh – checking for bash vs dash incompatibilities]]
+  - Check for /bashisms/ sneaking into POSIX scripts
+- [[http://shebang.brandonmintern.com/bourne-is-not-bash-or-read-echo-and-backslash/][Bourne is not bash (or: read, echo, and backslash)]]
+- [[http://mywiki.wooledge.org/Bashism][How to make bash scripts work in dash]]
+  - Great Bash site
+
+*** What are some concise Bash articles?
+
+- [[http://www.catonmat.net/blog/bash-one-liners-explained-part-four/][Bash One-Liners Explained, Part IV: Working with history]]
+- [[http://mywiki.wooledge.org/BashSheet][Bash Reference Sheet]]  
+
+*** What are some Bash best practices?
+
+- [[http://kvz.io/blog/2013/11/21/bash-best-practices/][Best Practices for Writing Bash Scripts]]
+  - Good test of how well you read the configuration options and revealing
+    of how you might break up configuration scripts
+
+*** Everything related to configuring Bash on OS X
+
+- [[http://www.dowdandassociates.com/blog/content/howto-set-an-environment-variable-in-mac-os-x/][HowTo: Set an Environment Variable in Mac OS X]]
+
+*** How to other people's Bash configurations look?
+
+- [[https://github.com/LoveIsGrief/bash_env][LoveIsGrief/bash_env]]
+
+*** How to configure =BASH_ENV=?
+
+- [[https://serverfault.com/questions/593472/where-is-bash-env-usually-set][Where is $BASH_ENV usually set?]]
+
+*** What is the POSIX shell standard?
+
+- http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html
+
 * Making Sense of this Script
 :PROPERTIES:
 :ID:       886036D5-3715-492B-9ABF-825F4058A995
