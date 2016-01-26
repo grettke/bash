@@ -1,5 +1,11 @@
 * Research, Goals, & Beginnings
+:PROPERTIES:
+:ID:       7F7F7135-45DD-4AC7-AECA-A69DE6F8F9E2
+:END:
 ** Desire
+:PROPERTIES:
+:ID:       D309B944-A435-4A26-A23B-9E3B0AA12B70
+:END:
 
 - High-quality box provisioning
 - Advanced =bash= knowledge
@@ -7,6 +13,9 @@
 - Recognition of =bash= as a first-class programming language
 
 ** Satisfaction
+:PROPERTIES:
+:ID:       B1ECAA5F-07DA-4FE1-9974-86B5FA66124B
+:END:
 
 - Search for learning resources
   - Googled "advanced bash", went through first two pages of results and
@@ -96,6 +105,9 @@
                 I'll start there, bought it.
 
 ** Decision
+:PROPERTIES:
+:ID:       B1375392-9E85-4844-B891-E1E4532E6EEA
+:END:
 
 - Read the user manual
   - It exists for a reason
@@ -103,6 +115,2023 @@
   - Provides another perspective, and voice
   - Balance speed with detail
 
+* Notes
+:PROPERTIES:
+:ID:       036298FF-E47B-463B-8BD0-4E17E84BE525
+:END:
+
+** Bash Wikipedia
+:PROPERTIES:
+:ID:       5A1D538D-D8FA-4ACE-8019-231C37D5BA62
+:END:
+
+- [[https://en.wikipedia.org/wiki/Bash_(Unix_shell)][Here]]
+- Bash is a Unix shell *and* a command language
+  - Programming language and more?
+- It's name
+  - An acronym, pun, and description
+    - Bourne-again
+    - Born-again
+    - Bashed together features of =sh=, =csh=, and =ksh=
+- Great feature overview
+- Lists startup file load sequence
+- Job control explained
+
+** Bash Home Page
+:PROPERTIES:
+:ID:       60856D79-FCB0-4E9C-BBF4-5110161F3C09
+:END:
+
+- [[https://www.gnu.org/software/bash/][Here]]
+- Light overview
+- Joined the mailing list
+
+** Bash Reference Manual
+:PROPERTIES:
+:ID:       068EFDB6-4A97-4502-AE60-2DD3A8F687EC
+:END:
+
+*** Index
+:PROPERTIES:
+:ID:       004E3AAD-6755-4A8C-8B0D-D304E139368B
+:END:
+
+- Started [[https://www.gnu.org/software/bash/manual/html_node/index.html][here]]
+- TOC looks great: basics, quoting and commands, parms, expansion, redirection,
+  bultins, variables, features of the language, job control
+- Written version 4.3
+- Each section notes other shells that inspired =bash= features and those unique
+  to =bash=
+
+*** 1 Introduction
+:PROPERTIES:
+:ID:       C770AAA4-9CFE-4963-9580-A7833D98B18D
+:END:
+
+**** 1.1 What is Bash?
+:PROPERTIES:
+:ID:       319AC703-D580-408D-B601-DF6096C86F2C
+:END:
+
+- "Command language interpreter" is not synomymous with "shell", but it is
+  critical to it's function
+- =bash= is the first programming language that I "learned"
+- =bash= is the default shell for GNU
+
+**** 1.2 What is a shell?
+:PROPERTIES:
+:ID:       32D5F6A7-54AB-49BA-8EE9-8646FEA4E0F3
+:END:
+
+- A shell is a macro processor that executes commands
+- A macro processor expands text and symbols to create new expressions
+- Is both a command interpreter and programming language
+- Key point is that newly-creates scripts that use existing commands become
+  first-class commands as far as the OS is concerned. Make me think of Scheme
+  where language *didn't* let you do so!
+- Interactive, or not
+- Synchronous, or asynchrnous command execution
+- Easily control environment in which commands execute
+  - Already feeling excited about learning =bash=
+- Programming features: Variables, flow control, quoting, and functions; great
+- Interactive features: job control, command line editing, command history,
+  and aliases
+
+*** 2 Definitions
+:PROPERTIES:
+:ID:       8F95FFED-E20E-40F6-BBFB-223432F853C3
+:END:
+
+- =POSIX=, does it have a place any more?
+- =control operator= is an important concept (definition)
+- =exit status= is 8 bits (255 values)
+- =field= is a unit of text that is the result of a shell expansion
+- =job= is a pipline any of it's child processes
+- =job control= is a way to start, suspend, resume or stop processes
+- =name= is synonymous with =identifier=
+- =signal= is a notification from the kernel of a system level event
+
+*** 3 Basic Shell Features
+:PROPERTIES:
+:ID:       8AF90632-57CB-473C-B8B5-9F874CAB3147
+:END:
+
+- Evaluation and quoting are taken from the standard
+
+**** 3.1 Shell Syntax
+:PROPERTIES:
+:ID:       A016192D-76B2-4B9B-88FC-F8614047564E
+:END:
+
+- No comment
+
+**** 3.1.1 Shell Operation
+:PROPERTIES:
+:ID:       3B1DE1E8-C252-4A4C-8C38-1FCCAD757F88
+:END:
+
+- =-c= runs code as an argument
+- Explains program flow in 7 steps
+
+**** 3.1.2 Quoting
+:PROPERTIES:
+:ID:       683EC56D-694E-41FC-8236-CEBAE6573370
+:END:
+
+- It's appearance so early in the documentation reveals it's importance!
+
+**** 3.1.2.1 Escape Character
+:PROPERTIES:
+:ID:       8E13D789-047D-46A4-9F6D-D17B825F49E4
+:END:
+
+- =\= is the Bash escape character
+  - escapes the next single character
+    - Exception being =\newline=
+
+**** 3.1.2.2 Single Quotes
+:PROPERTIES:
+:ID:       098BBAB6-68F9-447A-840F-79006F77DE91
+:END:
+
+- Preserve the literal value of each character
+- A single quote can't appear here; even when escaped!
+
+**** 3.1.2.3 Double Quotes
+:PROPERTIES:
+:ID:       FEE888CD-AFD9-4612-BABF-1E361CDFC434
+:END:
+
+- Preserve the literal value of everything but special characters
+  - So, expansion can be disabled
+- =$=, =`=, =\= are the special expansion characters
+  - =!= when history expansion is enabled
+
+**** 3.1.2.4 ANSI-C Quoting
+:PROPERTIES:
+:ID:       DD23D5B8-E671-43C1-BD33-01FCC5303783
+:END:
+
+- Good to know
+- Is Unicode supported by Bash?
+
+**** 3.1.2.5 Locale-Specific Translation
+:PROPERTIES:
+:ID:       71103096-FF29-40E7-88B0-06146763AA24
+:END:
+
+- =$= expansions are locale-specific
+  - They aren't covered yet this far in the manual
+
+**** 3.1.3 Comments
+:PROPERTIES:
+:ID:       BEF1FC63-328C-4824-BF93-9DF7C9BB6170
+:END:
+
+- =Shopt= builtin lets you disable comments entirely
+- =#= comments out a line
+
+**** 3.2 Shell Commands
+:PROPERTIES:
+:ID:       8A2313AF-A79B-4557-95AE-609504A805DE
+:END:
+
+- Covers how the command shells processes commands
+  - Should have read this in 1995
+
+**** 3.2.1 Simple Commands
+:PROPERTIES:
+:ID:       7812D66C-8EA5-4D77-AC4F-C0D09949580A
+:END:
+
+- A command is a program and it's arguments
+
+**** 3.2.2 Pipelines
+:PROPERTIES:
+:ID:       572EC419-1357-44DB-B6C4-F8ABAF799923
+:END:
+
+- =Pipelining= means taking the result of one command and passing it to another as
+  input via a pipe
+- Can redirect the standard error output as additional input to the next
+  command
+  - Shorthand is =2>&1= which enables it for any following commands
+- Explains why =time= is a builtin; difficult to do with an external
+- Each command is executed in a subshell
+- Enable short-circuit pipline evaluation with =pipefail=
+
+**** 3.2.3 Lists of Commands
+:PROPERTIES:
+:ID:       AA9E82E2-2095-4672-8BB2-3377B86556A7
+:END:
+
+- =&= makes commands run asynchronously
+- =;= makes commands run synchronously
+- =&&= and =||= are =AND= and =OR= for commands
+
+**** 3.2.4 Compound Commands
+:PROPERTIES:
+:ID:       1E11088A-1E48-4736-94B2-D3AAE6D6CF86
+:END:
+
+- Mentions that you don't have to end grouped commands with =;=, but it might be
+  helpful
+
+**** 3.2.4.1 Looping Constructs
+:PROPERTIES:
+:ID:       E4AC652C-F353-45E7-9C74-91028470E272
+:END:
+
+- until
+  - until test; do stuff; done
+- while
+  - while test; do stuff; done
+- for name [ [ in [words ...] ] ; do stuff; done
+  - Expand words, and execute stuff for each member of the resulting list, with
+    value bound to name
+  - Can also do
+    - for (( expr1 ; expr2 ; expr1 ) ; do commands : done
+    - Way to do stuff to the results of different things, interesting
+
+**** 3.2.4.2 Conditional Constructs
+:PROPERTIES:
+:ID:       5789B914-E9C5-49C2-998B-86956C3E47CF
+:END:
+
+- if
+  - looks like
+    - if test ; then
+      - do stuff
+    - elif test ; then
+      - do more stuff
+    - else more stuff;
+    - fi
+- case
+  - looks like
+    - case word in [ [(] pattern [" pattern]...) command-list ;;]... esac
+  - Can ignore case with a flag
+  - A clause is a list of patterns and commands for them
+  - Clause words undergo expansion before execution
+  - Idiom is to use =*= as the final pattern so something runs
+  - Nice example to get into the mindset
+    #+NAME: F9F27B00-4C07-4161-B8BE-7416652FA9A9
+    #+BEGIN_SRC shell
+echo -n "Enter the name of an animal: "
+read ANIMAL
+echo -n "The $ANIMAL has "
+case $ANIMAL in
+    horse | dog | cat) echo -n "four";;
+    man | kangaroo ) echo -n "two";;
+    ,*) echo -n "an unknown number of";;
+esac
+echo " legs."
+    #+END_SRC
+  - =;;= short-circuits
+  - =;&= continues execution after a clause match
+  - =;;&= test the next clause
+- select
+  - Generate menus and commands to do stuff with them, wow
+  - Example to choose files from a directory
+    #+NAME: 73F8B881-45AD-45FA-B64E-C39BA5ED6998
+    #+BEGIN_SRC shell
+select fname in *;
+do
+    echo you picked $fname \($REPLY\)
+    break;
+done
+    #+END_SRC
+- ((...))
+  - Evaluate an expression
+  - Braces
+- Two left brackets ... two right brackets
+  - Bash conditional expression construct
+  - Word splittin and filename expansion not performed
+  - Every other expansion is performed
+  - In string equality checks, the contents in double quotes are expanded
+  - Can also match strings on regexen using =~
+  - This section will be re-read many times it contains critical aspects of how
+    pattern matching works here
+  - Tip: declare regex patterns as a variable to easily use them in a check
+
+**** 3.2.4.3 Grouping Commands
+:PROPERTIES:
+:ID:       1F960005-D906-432E-AA27-C82221EBAFD0
+:END:
+
+- Group commands for execution as a unit
+- Redirections are performed for the unit
+- ()
+  - Execute commands in a subshell
+- {}
+  - Execute commands in the current shell
+  - Ends with a semi-colon
+
+**** 3.2.5 Coprocesses
+:PROPERTIES:
+:ID:       5261575C-D67E-4072-BB03-09F9F32993F8
+:END:
+
+- *WOW* had no clue
+- Details for usage listed
+
+**** 3.2.6 GNU Parallel
+:PROPERTIES:
+:ID:       89F81750-EE3C-4442-A2F0-2B8FA1C4A41A
+:END:
+
+- Great to know
+- Helpful examples
+- Provisioner should be multi-tasking
+  - Install non-conflicting installations simultaneously
+  - Start MacTeX installation at the beginning join it later
+
+**** 3.3 Shell Functions
+:PROPERTIES:
+:ID:       2BE4DE12-5908-45F5-AE10-95053B5B2B78
+:END:
+
+- They are functions
+- Executed within the current shell
+- Don't have to declare with 'function'
+- Lot of optional syntax
+  - () optional if you use function
+  - {} optional in the declaration
+- Posix mode forbids renaming builtin functions; reason enough to always run in
+  posix mode
+- Your command list either has to end with a newline before the bracket or if
+  the bracket is on the same line then end with a semicolon
+- =#= is the number of parms
+- =FUNCNAME= is the function executing
+- Otherwise everything else is the same being in the same shell
+- =local= declares function local variables
+  - Kind of a big deal to know
+- Great debugging support, function name and file location
+- Recursive functions allowed
+
+**** 3.4 Shell Parameters
+:PROPERTIES:
+:ID:       8F10CEAB-C476-4B82-AC0C-A5F522547564
+:END:
+
+- Supports pass-by-reference (nameref), great to know
+
+**** 3.4.1 Positional Parameters
+:PROPERTIES:
+:ID:       71A54B72-8203-461B-8E6D-6602468A66E4
+:END:
+
+- Referenced by =${N}=
+- =set= and =shift= them in the array
+
+**** 3.4.2 Special Parameters
+:PROPERTIES:
+:ID:       5C9C140D-006F-4E87-B68F-F7F8D30557AE
+:END:
+
+- Read-only
+- =*= :: All parms as one value, can expand, or not
+- =@= :: All parms as multiple values
+- =#= :: Number of parms in decimal
+- =?= :: Exit status of late executed statement
+- =-= :: Current option flags
+- =$= :: Process ID of current shell
+- =!= :: Process ID of most recent job placed in background
+- =0= :: Name of the shell or shell script
+- =_= :: Sets the absolute pathname of the script
+- Probably a key section for utilizing job control
+
+**** 3.5 Shell Expansions
+:PROPERTIES:
+:ID:       52CE0107-E6A5-4A95-9D2C-058C8770FCF3
+:END:
+
+- These sections might be key to a lot of "simple" Bash stuff
+- Order-of-expansion provided
+- Some systems also have /process substitution/
+- Expansion is first-class macro expansion, some generating more words, some
+  generating one word
+
+**** 3.5.1 Brace Expansion
+:PROPERTIES:
+:ID:       46F26A26-779A-4BCA-BF4B-145D2BC1E0E4
+:END:
+
+- Purpose :: generate arbitrary strings
+- *A brace is a squiggly-paren*
+- Haven't read a document like this since the Scheme days
+  - Precise, details, dense
+  - Full range of expressivity, included with GNU and everything else, why don't
+    we learn this instead of using Python? Perhaps because of a higher barrier
+    to entry?
+- Can perform on sequences; results replacing orginal expression
+- Is *strictly textual*
+- Specify things to expand either as ranges, or individaul values separated by
+  commas
+- Examples
+  - Make multiple subdirectories
+  - Change ownership of multiple files, matched by regex
+    - Need to internalize this idea, of what to do, to what... the "to what"
+      part... expansion
+
+**** 3.5.2 Tilde Expansion
+:PROPERTIES:
+:ID:       D2705ABB-4D66-4EB4-969C-4F96CE3F0155
+:END:
+
+- =~= :: the value of =HOME=, and other stuff
+- =~+= :: value of =PWD=
+- =~-= :: Value of =OLDPWD=
+- Can access the directory stack by increment or decrement
+- Used this since forever had no clue what this once, sheesh
+
+**** 3.5.3 Shell Parameter Expansion
+:PROPERTIES:
+:ID:       CEE95439-FB52-4E1F-8833-C393C796B4D9
+:END:
+
+- Introuces parm expansion, command subst, or arith expansion
+- Optionally enclosed by braches (squiggly paren)
+- Form: ${parm}
+  - Parm is
+    - Substituted
+    - Can be a shell parm
+    - Can be an array references
+- =!= as first arg used for /indirect expansion/ which lets you expand to create
+  variable references that are then de-referenced to get the value
+  - Lispy
+- Lots of conditional logic operators to help manage the usage and setting of
+  parameters in conditions of null-ness, or not, and how to handle it
+  - Ruby has that idiom: val = this || do something guaranteed not null and
+    it is that kind of stuff here
+- Trying to internalize this stuff with the examples, same ideas everywhere
+  - Get a substring from a variable, in any direction, via any regex
+- Can use a regex to get variables named with a name like
+- Can get the length of values
+- Powerful constructs abound; nearly overwhelmed
+  - Kind skimmed the last examples, wonder if I should have dug deep
+  - Would be nice to have a guide of only scenarios, or more examples, of when
+    you sould use stuff like this
+  - Will revisit again, this seems important
+
+**** 3.5.4 Command Substitution
+:PROPERTIES:
+:ID:       E07A9AAC-9D8F-475A-9416-FF94A7746871
+:END:
+
+- Where the output of a command replaces itself
+- $(cmd)
+- `cmd`
+- Used a million times, now know why
+- Can appear in double quotes, without word splitting and filename expansion
+- Not aliasing
+
+**** 3.5.5 Arithmetic Expansion
+:PROPERTIES:
+:ID:       636157D8-9322-4D6F-B0C5-E96790117F17
+:END:
+
+- Does math: $(( expr ))
+- Expansions apply to expr like everywhere else
+
+**** 3.5.6 Process Substitution
+:PROPERTIES:
+:ID:       8D09E360-51BA-4400-974E-FD70F01A6F2A
+:END:
+
+- Seems like you capture the outout of a process into a variable or a list to be
+  used elsehwere
+
+**** 3.5.7 Word Splitting
+:PROPERTIES:
+:ID:       5E5DB551-9359-41C3-83EE-258AFB2A1537
+:END:
+
+- How words are split by the expander
+- Totally configurable
+- Defaults are obvious: space, tab, and newline
+
+**** 3.5.8 Filename Expansion
+:PROPERTIES:
+:ID:       7FF4407B-1432-43E0-A065-445781D44E85
+:END:
+
+- Anytime Bash sees =*=, =?=, and =[= it does matching on the filename
+- Been using this forever, never knew
+
+**** 3.5.8.1 Pattern Matching
+:PROPERTIES:
+:ID:       4960E2E8-13CB-4AC6-9EB8-FAC3F299E025
+:END:
+
+- Every character matches itself but for the following
+- =*= :: Match anything including NULL
+  -- ** means something if =globstar= is set, match all files and zero or more
+     directories and subdirectories
+- =?= :: single char
+- =[...]= :: Any one of he enclosed chars.
+  - Can match range expressions
+  - Posix class values also work eg =alpha= or =digit=
+- You can match on list of patterns, with the typical matching: zoer or one,
+  zero or more, one or more, one, and any of them
+
+**** 3.5.9 Quote Removal
+:PROPERTIES:
+:ID:       74CF60B8-C5DF-451D-BE0E-2D8C5BA0F486
+:END:
+
+- Unquoted, expanded =\=, ='= and ="= are removed
+
+**** 3.6 Redirections
+:PROPERTIES:
+:ID:       7D1F0575-5DD1-4FAC-8C4B-2A8AB7A486BA
+:END:
+
+- You can redirect streams to anywhere, and in any command
+- Valuable info
+- Small explanation of redirecting stdout and stderr to the same file
+
+**** 3.6.1 Redirecting Input
+:PROPERTIES:
+:ID:       44E790E9-7E80-43F1-B020-7A888B32A4D7
+:END:
+
+- =<= does it
+
+**** 3.6.2 Redirecting Output
+:PROPERTIES:
+:ID:       54C3B01E-A205-48DA-B6AE-454C726F3C74
+:END:
+
+- =>= does it
+- =noclobber= disabllows overwriting a file
+  - =>|= lets you stomp on it anyway
+    - Maybe always use this if that is the goal
+
+**** 3.6.3 Appending Redirected Output
+:PROPERTIES:
+:ID:       F21030A8-3B6E-448A-9975-AD6B9ABEA9F8
+:END:
+
+- =>>= does it
+
+**** 3.6.4 Redirecting Standard Output and Standard Error
+:PROPERTIES:
+:ID:       13A1B3B2-72FB-44CB-B9A2-913B9F5CAFF8
+:END:
+
+- Here is the syntax for what was demo'd up above
+- Redirects it to the same file
+- =>&word=
+
+**** 3.6.5 Appending Standard Output and Standard Error
+:PROPERTIES:
+:ID:       746F0972-A0C7-46D3-B662-3E7B8D679D7E
+:END:
+
+- =&>>word= does it
+  - Same as =>>word 2>&1=
+
+**** 3.6.6 Here Documents
+:PROPERTIES:
+:ID:       56194F98-E2FC-456F-B203-1E82775971B4
+:END:
+
+- Finally see the defs after using for years
+- <<[-]word
+  - body
+  - word
+- Word is expanded unless quoted
+- =<<-= strips leadings tabs from input and delim line, allowing you to indent the
+  script nicely
+
+**** 3.6.7 Here Strings
+:PROPERTIES:
+:ID:       C3612AF8-863F-4532-89F4-FF3D2332C1E5
+:END:
+
+- =<<< word=
+- Result is a string used for a command
+
+**** 3.6.8 Duplicating File Descriptors
+:PROPERTIES:
+:ID:       1D6AA086-7045-4C16-B3E3-380EAEF8AC28
+:END:
+
+- [n]<&word
+  - What do you do with this?
+
+**** 3.6.9 Moving File Descriptors
+:PROPERTIES:
+:ID:       73DF267C-BBEB-4CC1-BBA0-BD8F30449CB9
+:END:
+
+- [n]<&digit-
+  - What do you do with this?
+
+**** 3.6.10 Opening File Descriptors for Reading and Writing
+:PROPERTIES:
+:ID:       FC9B5BC8-5C00-444C-97AC-759154F5FAE1
+:END:
+
+- [n]<>word
+  - What do you do with this?
+
+**** 3.7 Executing Commands
+:PROPERTIES:
+:ID:       8134E7E9-1AB2-42F8-A570-0C94BB6B084A
+:END:
+
+- No comment
+
+**** 3.7.1 Simple Command Expansion
+:PROPERTIES:
+:ID:       C7C6C532-10BE-4435-BC5F-27D754FA1D2B
+:END:
+
+- Expansion flow is explained
+  - Variables and redirections are processed later
+  - Everything else is expanded
+  - Redirections are performed
+  - Text after ~=~ in assigments is expanded
+- If no command name results, assignments affect current environment
+  - Otherwise variables are added to environment of the executed command and
+    don't affect the current environment
+  - What?!
+- The flow described here seems important
+  - Think it is saying that lines with only a set affect current environment,
+    and that you can set a var on lines with a command so that the var is set
+    in the environment where the command is run
+    - Is this the dynamic extent of the call or does it have to do with
+      subshells?
+- Wonder if I should read the next section on search and execution before
+  posing questions here?
+
+**** 3.7.2 Command Search and Execution
+:PROPERTIES:
+:ID:       2051F393-57FB-46AC-B7CE-AAA7CDE98214
+:END:
+
+- Commands without slashes are searched for and if there is a shell function it
+  is run
+- If it doesn't match a function then it is searched for in the builtins
+- If those both fail it searches the =PATH= for an executable file with that name
+  - There is a variable, a cache of executable files used previously, and this
+    =PATH= search only happens if the command isn't found in the cache
+  - There is a handler function if nothing is found
+- "If the search is successful, or if the command name contains one or more
+  slashes, the shell executes the named program in a separate execution
+  environment."
+  - What does it mean to run in a separate execution environment? Is that a new
+    shell or not? Is that just the dynamic extent?
+- Otherwise it is a shell script that it can run
+- Whatever /it/ is, is run
+
+**** 3.7.3 Command Execution Environment
+:PROPERTIES:
+:ID:       702C1B14-4D7F-400A-B7F9-377F0EB5DC59
+:END:
+
+- The execution environment is
+  - Open files
+  - Current working directory
+  - File creation mode
+  - Traps
+  - Shell parms set by assignment or inherited
+  - Shell functions too
+  - Invoatin options
+  - =shopt= options
+  - aliases too
+  - process IDs, $$, and $PPID
+- The execution environment of a simple command other than bultins or shell
+  functions (like what?) inherits
+  - Just about all the same stuff
+- Commands invoked in that separate environment cannot affect the shell's
+  environment
+- Commands subsititution occurs in a subshell environment
+  - By design, can't affect the calling shell's environment, good
+- =&='ing a command when JC is off makes its output go to /dev/null
+  - Random tidbit or best place to note this?
+
+**** 3.7.4 Environment
+:PROPERTIES:
+:ID:       8FB6D4F2-AB6A-4E66-AC35-67BA11FD66E6
+:END:
+
+- Represented by name-value pairs
+- Managed with =export= and =declare -x=
+- Can also =unset=
+
+**** 3.7.5 Exit Status
+:PROPERTIES:
+:ID:       A93E2F33-3C7A-4E40-9649-0BDDF34C63E8
+:END:
+
+- Rationale for error codes
+- Some examples
+  - 2 :: incorrect usage
+
+**** 3.7.6 Signals
+:PROPERTIES:
+:ID:       ADE7A273-D93B-47A9-8D37-8102722580F4
+:END:
+
+- Details overview of what signals Bash ignores and when
+- Should configure my Bash system with =shopt=
+- Should study well known signals listed here
+  - =man signal= has a nice list on the 2nd page already
+- Important coverage of how async calls are handled when signals are generated
+  - Because I don't understand it
+
+**** 3.8 Shell Scripts
+:PROPERTIES:
+:ID:       A28DFB40-F0A6-4745-AD92-C3F574890AE9
+:END:
+
+- Calling a shell script invokes a non-interactive shell
+- Calling a shell script occurs in a subshell
+  - bash filename args
+  - filename args
+    - For executable bit files
+
+*** 4 Shell Builtin Commands
+:PROPERTIES:
+:ID:       30C8E257-D36C-4E32-A8BB-04266C8B34B5
+:END:
+
+- No comment
+
+**** 4.1 Bourne Shell Builtins
+:PROPERTIES:
+:ID:       2A27B2CA-2409-4B2B-9BA3-778F14C4F96D
+:END:
+
+- The following commands came from the Boune Shell
+- =:= :: Do nothing but expand arguments and do redirects
+  - Why?
+- =.= :: Read and execute commands from the file within the *current* shell context
+  - Should have been using this during provisioning tasks!
+- =break= :: Break from iteration, perhaps at =nth= iteration
+- =cd= :: Change directory
+- =continue= :: Continue in iteration, perhaps at =nth= iteration
+- =eval= :: plan old eval
+- =exec= :: Replace teh shell without creating a new process
+- =exit= :: Exit
+- =export= :: Mark names to be passed to child processes
+  - Probably been using this wrong always
+- =getopts= :: Parses optional parms
+- =hash= :: Manges the command hash
+- =pwd= :: Current working directory
+- =readonly= :: Make names (variables) read only
+  - Great to know
+  - Flags for working also on shell functions, indexed array vars, associative
+    array vars.
+  - Cause output to be formatted as parsable input
+- =return= :: Return
+- =shift= :: Shifts positional parms by one
+- =test= :: Evaluate a conditional expression
+- =times= :: Prints user and sys times
+- =trap= :: Define trap handlers
+- =umask= :: Set shell process file creation mode
+- =unset= :: Remove the thing (a variable or function)
+  - Typo: remvoved
+
+**** 4.2 Bash Builtin Commands
+:PROPERTIES:
+:ID:       3CDA99BD-094D-4D47-A5A1-F0651CC0A748
+:END:
+
+- =alias= :: Define string substitutions for first word of a command
+- =bind= :: Readline stuff
+- =builtin= :: Call a builtin with args, helps avoid shadowing
+- =caller= :: Get info on dynamic extent context of any subrouting call
+- =command= :: Call only shell builtin's or commands in =PATH= with that name,
+  and never shell functions
+- =declare= :: Declare variables and their attributes
+  - =declare -p=, woaaa, learned this stuff far too late!
+  - Can "query" variable definitions by type: function, array, ...
+  - Enable tracing for that name, like functions
+  - Automaticlaly change case of strings on assignment
+  - In functions, =declare= makes things local, like with =local=
+  - Great to know, big deal
+- =echo= :: Parms you wish you had known and would never have though to even check
+  if they existed before provisioning anything
+  - =-n=, suppress newline printing
+  - Listing of all the escape sequences: bell, backspace, formfeed, tabs
+- =enable= :: Enable and disable bultin commands
+  - Lets you tweak existing behavior by disabling and replacing things
+    - Not monkey patching
+  - Obvious how powerful and valuable this is?
+- =help= :: Show help on commands
+  - =-d=, describe each pattern
+  - =-m=, describe each pattern in manpage format
+  - =-s=, describe short synopsis for each pattern
+- =let= :: Evalute arithmatic
+  - Does it also bind?
+- =local= :: Create local variables
+  - Same options as =declare=
+  - Only usable in functions
+  - Scope is the function and its children. What children?
+- =logout= :: Excit the shell and return to its parent
+- =mapffile= :: Map over lines of a file
+  - Lots of nice options: throw away first line (often col names), toss
+    newlines, callback every =N= lines
+- =printf= :: Print formatted
+  - Can output to a var
+  - Uses standard =printf= formatting
+    - See `man printf'
+  - %(datefmt)T
+    - Print the result from using =datefmt= with =strftime(3)=
+      - -1, the current time
+      - -2, time the shell was invoked
+  - Bash is scripting language on top of the core OS APIs?!?!!?
+    - References a lot of functions that you can =man= and the are built in C
+      libs... interesting
+- =read= :: Read a value, or multiple, from somewhere
+  - Should care about this considering you use it for asking questions
+  - Easily prompt
+  - Easily timeout
+- =readarray= :: Synonym for =mapfile=
+- =source= :: Synonym for =.=
+- =type= :: Get type of a name (object)
+- =typeset= :: Synonym for =declare=
+- =ulimit= :: Resource control for shell processes
+  - Great functionality for everything
+- =unlaias= :: Remove the name from aliases
+
+**** 4.3 Modifying Shell Behavior
+:PROPERTIES:
+:ID:       C9C79DBE-BBB3-4F96-9DA2-BD5AEC61A793
+:END:
+
+- No comment
+
+**** 4.3.1 The Set Builtin
+:PROPERTIES:
+:ID:       9F2E52B6-DBAC-49A3-99B5-3758F96BFF03
+:END:
+
+- Documentations states that this command is complicated
+- Display names in a format so you can re-set them
+- Disable and enable filename globbing
+- Read commands but don't execute them; validates syntax
+- Set all of the available options by name
+- Treat unset variables and parms as errors: nice!
+- Maybe set =PS4= so it is obvious what is happening when =set -x=
+
+***** Options
+:PROPERTIES:
+:ID:       27F1F7E4-E1BB-4E5F-B905-A8A60101678F
+:END:
+
+- ~allexport~
+  - Same as -a.
+  - -a
+    Mark variables and function which are modified or created for export to the environment of subsequent commands.
+- ~braceexpand~
+  - Same as -B.
+  - -B
+    The shell will perform brace expansion (see Brace Expansion). This option is on by default.
+- ~emacs~
+  - Use an emacs-style line editing interface (see Command Line Editing). This also affects the editing interface used for read -e.
+- ~errexit~
+  - Same as -e.
+  - -e
+    Exit immediately if a pipeline (see Pipelines), which may consist of a single simple command (see Simple Commands), a list (see Lists), or a compound command (see Compound Commands) returns a non-zero status. The shell does not exit if the command that fails is part of the command list immediately following a while or until keyword, part of the test in an if statement, part of any command executed in a && or || list except the command following the final && or ||, any command in a pipeline but the last, or if the command’s return status is being inverted with !. If a compound command other than a subshell returns a non-zero status because a command failed while -e was being ignored, the shell does not exit. A trap on ERR, if set, is executed before the shell exits.
+    This option applies to the shell environment and each subshell environment separately (see Command Execution Environment), and may cause subshells to exit before executing all the commands in the subshell.
+    If a compound command or shell function executes in a context where -e is being ignored, none of the commands executed within the compound command or function body will be affected by the -e setting, even if -e is set and a command returns a failure status. If a compound command or shell function sets -e while executing in a context where -e is ignored, that setting will not have any effect until the compound command or the command containing the function call completes.
+- ~errtrace~
+  - Same as -E.
+  - -E
+    If set, any trap on ERR is inherited by shell functions, command substitutions, and commands executed in a subshell environment. The ERR trap is normally not inherited in such cases.
+- ~functrace~
+  - Same as -T.
+  - -T
+  - If set, any trap on DEBUG and RETURN are inherited by shell functions, command substitutions, and commands executed in a subshell environment. The DEBUG and RETURN traps are normally not inherited in such cases.
+- ~hashall~
+  - Same as -h.
+  - -h
+  - Locate and remember (hash) commands as they are looked up for execution. This option is enabled by default.
+- ~histexpand~
+  - Same as -H.
+  - -H
+  - Enable ‘!’ style history substitution (see History Interaction). This option is on by default for interactive shells.
+- ~history~
+  - Enable command history, as described in Bash History Facilities. This option is on by default in interactive shells.
+- ~ignoreeof~
+  - An interactive shell will not exit upon reading EOF.
+- ~keyword~
+  - Same as -k.
+  - -k
+  - All arguments in the form of assignment statements are placed in the environment for a command, not just those that precede the command name.
+- ~monitor~
+  - Same as -m.
+  - -m
+  - Job control is enabled (see Job Control). All processes run in a separate process group. When a background job completes, the shell prints a line containing its exit status.
+- ~noclobber~
+  - Same as -C.
+  - -C
+  - Prevent output redirection using ‘>’, ‘>&’, and ‘<>’ from overwriting existing files.
+- ~noexec~
+  - Same as -n.
+  - -n
+  - Read commands but do not execute them; this may be used to check a script for syntax errors. This option is ignored by interactive shells.
+- ~noglob~
+  - Same as -f.
+  - -f
+  - Disable filename expansion (globbing).
+- ~nolog~
+  - Currently ignored.
+- ~notify~
+  - Same as -b.
+  - -b
+  - Cause the status of terminated background jobs to be reported immediately, rather than before printing the next primary prompt.
+- ~nounset~
+  - Same as -u.
+  - -u
+  - Treat unset variables and parameters other than the special parameters ‘@’ or ‘*’ as an error when performing parameter expansion. An error message will be written to the standard error, and a non-interactive shell will exit.
+- ~onecmd~
+  - Same as -t.
+  - -t
+  - Exit after reading and executing one command.
+- ~physical~
+  - Same as -P.
+  - -P
+  - If set, do not resolve symbolic links when performing commands such as cd which change the current directory. The physical directory is used instead. By default, Bash follows the logical chain of directories when performing commands which change the current directory.
+    For example, if /usr/sys is a symbolic link to /usr/local/sys then:
+    #+NAME: EA96E160-4F62-43F1-9509-8CFD531211BA
+    #+BEGIN_SRC shell bash
+    $ cd /usr/sys; echo $PWD
+    /usr/sys
+    $ cd ..; pwd
+    /usr
+    #+END_SRC
+    If set -P is on, then:
+    #+NAME: 7758E11B-58D1-494A-B2A8-6D8496FE51FF
+    #+BEGIN_SRC shell bash
+    $ cd /usr/sys; echo $PWD
+    /usr/local/sys
+    $ cd ..; pwd
+    /usr/local
+    #+END_SRC
+- ~pipefail~
+  - If set, the return value of a pipeline is the value of the last (rightmost) command to exit with a non-zero status, or zero if all commands in the pipeline exit successfully. This option is disabled by default.
+- ~posix~
+  - Change the behavior of Bash where the default operation differs from the POSIX standard to match the standard (see Bash POSIX Mode). This is intended to make Bash behave as a strict superset of that standard.
+- ~privileged~
+  - Same as -p.
+  - -p
+  - Turn on privileged mode. In this mode, the $BASH_ENV and $ENV files are not processed, shell functions are not inherited from the environment, and the SHELLOPTS, BASHOPTS, CDPATH and GLOBIGNORE variables, if they appear in the environment, are ignored. If the shell is started with the effective user (group) id not equal to the real user (group) id, and the -p option is not supplied, these actions are taken and the effective user id is set to the real user id. If the -p option is supplied at startup, the effective user id is not reset. Turning this option off causes the effective user and group ids to be set to the real user and group ids.
+- ~verbose~
+  - Same as -v.
+  - -v
+  - Print shell input lines as they are read.
+- ~vi~
+  - Use a vi-style line editing interface. This also affects the editing interface used for read -e.
+- ~xtrace~
+  - Same as -x.
+  - -x
+  - Print a trace of simple commands, for commands, case commands, select commands, and arithmetic for commands and their arguments or associated word lists after they are expanded and before they are executed. The value of the PS4 variable is expanded and the resultant value is printed before the command and its expanded arguments.
+
+**** 4.3.2 The Shopt Builtin
+:PROPERTIES:
+:ID:       C48D4C30-AA29-4122-B878-2D2D19D1CB0E
+:END:
+
+- Change more shell behavior
+- Going to have lots of good stuff set; so powerful
+  - Case in point: =autocd=, sheesh yes!!!
+- Others: handling directory name spelling, bash version compatibility, =dotglob=,
+  =extdbug= (what debuggers?), =gnu_errfmt=, =no_empty_cmd_completion=
+- Why did it take so long to learn Bash?
+
+*****  Options
+:PROPERTIES:
+:ID:       98784542-1E2F-421F-AC9C-4DB8E2AC0A45
+:END:
+
+- ~autocd~
+  - If set, a command name that is the name of a directory is executed as if it were the argument to the cd command. This option is only used by interactive shells.
+- ~cdable_vars~
+  - If this is set, an argument to the cd builtin command that is not a directory is assumed to be the name of a variable whose value is the directory to change to.
+- ~cdspell~
+  - If set, minor errors in the spelling of a directory component in a cd command will be corrected. The errors checked for are transposed characters, a missing character, and a character too many. If a correction is found, the corrected path is printed, and the command proceeds. This option is only used by interactive shells.
+- ~checkhash~
+  - If this is set, Bash checks that a command found in the hash table exists before trying to execute it. If a hashed command no longer exists, a normal path search is performed.
+- ~checkjobs~
+  - If set, Bash lists the status of any stopped and running jobs before exiting an interactive shell. If any jobs are running, this causes the exit to be deferred until a second exit is attempted without an intervening command (see Job Control). The shell always postpones exiting if any jobs are stopped.
+- ~checkwinsize~
+  - If set, Bash checks the window size after each command and, if necessary, updates the values of LINES and COLUMNS.
+- ~cmdhist~
+  - If set, Bash attempts to save all lines of a multiple-line command in the same history entry. This allows easy re-editing of multi-line commands.
+- ~compat31~
+  - If set, Bash changes its behavior to that of version 3.1 with respect to quoted arguments to the conditional command’s ‘=~’ operator and with respect to locale-specific string comparison when using the [[ conditional command’s ‘<’ and ‘>’ operators. Bash versions prior to bash-4.1 use ASCII collation and strcmp(3); bash-4.1 and later use the current locale’s collation sequence and strcoll(3).
+- ~compat32~
+  - If set, Bash changes its behavior to that of version 3.2 with respect to locale-specific string comparison when using the [[ conditional command’s ‘<’ and ‘>’ operators (see previous item).
+- ~compat40~
+  - If set, Bash changes its behavior to that of version 4.0 with respect to locale-specific string comparison when using the [[ conditional command’s ‘<’ and ‘>’ operators (see description of compat31) and the effect of interrupting a command list. Bash versions 4.0 and later interrupt the list as if the shell received the interrupt; previous versions continue with the next command in the list.
+- ~compat41~
+  - If set, Bash, when in POSIX mode, treats a single quote in a double-quoted parameter expansion as a special character. The single quotes must match (an even number) and the characters between the single quotes are considered quoted. This is the behavior of POSIX mode through version 4.1. The default Bash behavior remains as in previous versions.
+- ~compat42~
+  - If set, Bash does not process the replacement string in the pattern substitution word expansion using quote removal.
+- ~complete_fullquote~
+  - If set, Bash quotes all shell metacharacters in filenames and directory names when performing completion. If not set, Bash removes metacharacters such as the dollar sign from the set of characters that will be quoted in completed filenames when these metacharacters appear in shell variable references in words to be completed. This means that dollar signs in variable names that expand to directories will not be quoted; however, any dollar signs appearing in filenames will not be quoted, either. This is active only when bash is using backslashes to quote completed filenames. This variable is set by default, which is the default Bash behavior in versions through 4.2.
+- ~direxpand~
+  - If set, Bash replaces directory names with the results of word expansion when performing filename completion. This changes the contents of the readline editing buffer. If not set, Bash attempts to preserve what the user typed.
+- ~dirspell~
+  - If set, Bash attempts spelling correction on directory names during word completion if the directory name initially supplied does not exist.
+- ~dotglob~
+  - If set, Bash includes filenames beginning with a ‘.’ in the results of filename expansion.
+- ~execfail~
+  - If this is set, a non-interactive shell will not exit if it cannot execute the file specified as an argument to the exec builtin command. An interactive shell does not exit if exec fails.
+- ~expand_aliases~
+  - If set, aliases are expanded as described below under Aliases, Aliases. This option is enabled by default for interactive shells.
+- ~extdebug~
+  - If set, behavior intended for use by debuggers is enabled:
+    - The -F option to the declare builtin (see Bash Builtins) displays the source file name and line number corresponding to each function name supplied as an argument.
+    - If the command run by the DEBUG trap returns a non-zero value, the next command is skipped and not executed.
+    - If the command run by the DEBUG trap returns a value of 2, and the shell is executing in a subroutine (a shell function or a shell script executed by the . or source builtins), a call to return is simulated.
+    - BASH_ARGC and BASH_ARGV are updated as described in their descriptions (see Bash Variables).
+    - Function tracing is enabled: command substitution, shell functions, and subshells invoked with ( command ) inherit the DEBUG and RETURN traps.
+    - Error tracing is enabled: command substitution, shell functions, and subshells invoked with ( command ) inherit the ERR trap.
+- ~extglob~
+  - If set, the extended pattern matching features described above (see Pattern Matching) are enabled.
+- ~extquote~
+  - If set, $'string' and $"string" quoting is performed within ${parameter} expansions enclosed in double quotes. This option is enabled by default.
+- ~failglob~
+  - If set, patterns which fail to match filenames during filename expansion result in an expansion error.
+- ~force_fignore~
+  - If set, the suffixes specified by the FIGNORE shell variable cause words to be ignored when performing word completion even if the ignored words are the only possible completions. See Bash Variables, for a description of FIGNORE. This option is enabled by default.
+- ~globasciiranges~
+  - If set, range expressions used in pattern matching bracket expressions (see Pattern Matching) behave as if in the traditional C locale when performing comparisons. That is, the current locale’s collating sequence is not taken into account, so ‘b’ will not collate between ‘A’ and ‘B’, and upper-case and lower-case ASCII characters will collate together.
+- ~globstar~
+  - If set, the pattern ‘**’ used in a filename expansion context will match all files and zero or more directories and subdirectories. If the pattern is followed by a ‘/’, only directories and subdirectories match.
+- ~gnu_errfmt~
+  - If set, shell error messages are written in the standard GNU error message format.
+- ~histappend~
+  - If set, the history list is appended to the file named by the value of the HISTFILE variable when the shell exits, rather than overwriting the file.
+- ~histreedit~
+  - If set, and Readline is being used, a user is given the opportunity to re-edit a failed history substitution.
+- ~histverify~
+  - If set, and Readline is being used, the results of history substitution are not immediately passed to the shell parser. Instead, the resulting line is loaded into the Readline editing buffer, allowing further modification.
+- ~hostcomplete~
+  - If set, and Readline is being used, Bash will attempt to perform hostname completion when a word containing a ‘@’ is being completed (see Commands For Completion). This option is enabled by default.
+- ~huponexit~
+  - If set, Bash will send SIGHUP to all jobs when an interactive login shell exits (see Signals).
+- ~interactive_comments~
+  - Allow a word beginning with ‘#’ to cause that word and all remaining characters on that line to be ignored in an interactive shell. This option is enabled by default.
+- ~lastpipe~
+  - If set, and job control is not active, the shell runs the last command of a pipeline not executed in the background in the current shell environment.
+- ~lithist~
+  - If enabled, and the cmdhist option is enabled, multi-line commands are saved to the history with embedded newlines rather than using semicolon separators where possible.
+- ~login_shell~
+  - The shell sets this option if it is started as a login shell (see Invoking Bash). The value may not be changed.
+- ~mailwarn~
+  - If set, and a file that Bash is checking for mail has been accessed since the last time it was checked, the message "The mail in mailfile has been read" is displayed.
+- ~no_empty_cmd_completion~
+  - If set, and Readline is being used, Bash will not attempt to search the PATH for possible completions when completion is attempted on an empty line.
+- ~nocaseglob~
+  - If set, Bash matches filenames in a case-insensitive fashion when performing filename expansion.
+- ~nocasematch~
+  - If set, Bash matches patterns in a case-insensitive fashion when performing matching while executing case or [[ conditional commands.
+- ~nullglob~
+  - If set, Bash allows filename patterns which match no files to expand to a null string, rather than themselves.
+- ~progcomp~
+  - If set, the programmable completion facilities (see Programmable Completion) are enabled. This option is enabled by default.
+- ~promptvars~
+  - If set, prompt strings undergo parameter expansion, command substitution, arithmetic expansion, and quote removal after being expanded as described below (see Controlling the Prompt). This option is enabled by default.
+- ~restricted_shell~
+  - The shell sets this option if it is started in restricted mode (see The Restricted Shell). The value may not be changed. This is not reset when the startup files are executed, allowing the startup files to discover whether or not a shell is restricted.
+- ~shift_verbose~
+  - If this is set, the shift builtin prints an error message when the shift count exceeds the number of positional parameters.
+- ~sourcepath~
+  - If set, the source builtin uses the value of PATH to find the directory containing the file supplied as an argument. This option is enabled by default.
+- ~xpg_echo~
+  - If set, the echo builtin expands backslash-escape sequences by default.
+
+**** 4.4 Special Builtins
+:PROPERTIES:
+:ID:       2A73626A-01CF-44C9-8C0D-BE362346C00D
+:END:
+
+- Some builtins work differently in Posix mode
+
+*** 5 Shell Variables
+:PROPERTIES:
+:ID:       89E085C3-F33B-4288-97C6-84F724EDFAB1
+:END:
+
+- No comment
+
+**** 5.1 Bourne Shell Variables
+:PROPERTIES:
+:ID:       D841AA57-2367-4D65-9EF1-A11F94C02922
+:END:
+
+- CDPATH :: =cd= search path
+- HOME :: home dir
+- IFS :: characters that separate things
+- MAIL :: mailfile
+- MAILPATH :: mailfiles
+- OPTARG :: last option processed by =getopts=
+- OPTIND :: index of last option argument by =getopts=
+- PATH :: command search path
+- PS1 :: primary prompt
+- PS2 :: secondary prompt
+
+**** 5.2 Bash Variables
+:PROPERTIES:
+:ID:       139DAC5E-6CB0-4398-B694-7A5C1ABF14A5
+:END:
+
+- BASH :: full path used to start current instance
+- BASHOPTS :: enabled shell options
+- BASHPID :: process ID of current Bash process
+- =BASH_ALIASES= :: array of aliases
+- =BASH_ARGC= :: argument stack in each frame
+- =BASSH_ARGV= :: argument stack in current frame
+- =BASH_CMDS= :: hash of cached command locations
+- =BASH_COMMAND= :: running or about to run cmd
+- =BASH_COMPAT= :: chosen compatiblity version
+- =BASH_ENV= :: if exists when executing a shell script, initialize env using it
+  before running that script
+- =BASH_EXECUTION_STRING= ::  For Bash one-liners, this is the string to eval
+- =BASH_LINENO= ::  array of locations where a command was invoked
+- =BASH_REMATCH= :: destructure-bind of parts of regex
+- =BASH_SOURCE= :: locations of where functions are defined
+- =BASH_SUBSHELL= :: Subshell ID, each subshells increments it by 1
+- =BASH_VERSINFO= :: Version info parts in an array
+  - =BASH_VERSINFO[0]= :: The major version number (the release).
+  - =BASH_VERSINFO[1]= :: The minor version number (the version).
+  - =BASH_VERSINFO[2]= ::  The patch level.
+  - =BASH_VERSINFO[3]= ::  The build version.
+  - =BASH_VERSINFO[4]= ::  The release status (e.g., beta1).
+  - =BASH_VERSINFO[5]= ::  The value of MACHTYPE.
+  - =BASH_VERSION= :: The version number of the current instance of Bash.
+- =BASH_XTRACEFD= :: Trace output to this file
+- =CHILD_MAX= :: How many exited child procs to remember
+- COLUMNS :: Terminal width
+- =COMP_CWORD= :: Compltion comp word
+- =COMP_LINE= :: Completion current word
+- =COMP_POINT= :: Completion current point
+- =COMP_TYPE= :: Completion type
+- =COMP_KEY= :: Completion key
+- =COMP_WORDBREAKS= :: Completion word separators
+- =COMP_WORDS= :: array of words in the current commandline
+- COMPREPLY :: possible completions
+- COPROC :: file descriptors used to talk to unnamed corpoc
+- DIRSTACK :: as named, =push and =pop=, to change just assign
+- EMACS :: if =t=, is inside Emacs, so disable line editing
+- ENV :: like =BASH_ENV=, but for Posix
+- EUID :: effective user ID
+- FCEDIT :: editor for =fc=
+- FIGNORE :: filenames to ignore when completing
+- FUNCNAME :: array of function names executing
+  - Use with =BASH_LINENO= and =BASH_SOURCE=
+- FUNCNEST :: max func nesting level
+- GLOBIGNORE :: files names to ignore during expansion
+- GROUPS :: current user is a member of these listed
+- histchars :: Configures
+  - 1 :: history expansion
+  - 2 :: quick substitution
+  - 3 :: line comment indicator
+- HISTCMD :: Current line in history
+- HISTCONTROL :: configure how commands are saved
+- HISTFILE :: history file name, default =~/.bash_history=.
+- HISTFILESIZE :: max line count
+- HISTIGNORE :: pattern for which lines should be saved
+- HISTIGNORE :: takes over work for =HISTCONTROL=
+- HISTSIZE :: number of commands to remember
+- HISTTIMEFORMAT :: set =strftime= format for history entries
+- HOSTFILE :: entries to complete hostnames
+- HOSTNAME :: it is
+- HOSTTYPE :: platform ino
+- IGNOREEOF :: how to handle end of file
+- INPUTRC ::Readline init file; stomps on default ~/.inputrc.
+- LANG :: Set locale
+- =LC_ALL= :: Overrisde all locale vars
+- =LC_COLLATE= :: Collation order when sorting stuff
+- =LC_CTYPE= :: Character class expanstion and matching behavior config
+- =LC_MESSAGES= :: Config for expanding double-quoted strings
+- =LC_NUMERIC= :: Config for number formatting
+- LINENO :: Current executing line
+- LINES :: visible lines in terminal
+- MACHTYPE :: cpu desc in the standard GNU cpu-company-system format.
+- MAILCHECK :: how often in second to check for mail
+- MAPFILE :: array var to store read values
+- OLDPWD :: previous wd
+- OPTERR :: if 1, shoe =getopt= errors
+- OSTYPE :: os type
+- PIPESTATUS :: list of pipeline exit values
+- =POSIXLY_CORRECT= :: If exists before startup, start in Posix mode
+- PPID :: Parent process id
+- =PROMPT_COMMAND= :: Command to execute before rendering =PS1=
+- =PROMPT_DIRTRIM= :: How many dirs to include when compelting
+- PS3 :: select prompt
+- PS4 :: =set -x= debugging prompt
+- PWD :: cwd
+- RANDOM :: rng, can seed it
+- =READLINE_LINE= :: contents of readline buf
+- =READLINE_POINT= :: insertion point in readline buf
+- REPLY :: =read= default var
+- SECONDS :: seconds since shell was started
+- SHELL :: pathname to shell, set after shell starts
+- SHELLOPTS :: list of shell options
+- SHLVL :: show how deeply nested your shells are
+- TIMEFORMAT :: how timing info is formatted
+- TMOUT :: read timeout in seconds
+- TMPDIR :: place to create tmp files
+- UID :: real UID
+
+*** 6 Bash Features
+:PROPERTIES:
+:ID:       F921F61C-183E-4C87-91A2-210130B18B2B
+:END:
+
+- No comment
+
+**** 6.1 Invoking Bash
+:PROPERTIES:
+:ID:       FF94CBB8-569C-41E2-B031-CD16730C45CD
+:END:
+
+- Lots of interactive startup config commands
+- Some you can't do with =getopts=
+- =--noprofile= good for debugging, =--norc= too
+
+**** 6.2 Bash Startup Files
+:PROPERTIES:
+:ID:       931D2B7D-2568-4217-9B12-2809E1FCCD99
+:END:
+
+- Invoked as an interactive login shell, or with --login
+  - Read =/etc/profile= and execute
+  - Read and execute first one that exists and is readable
+      - =~/.bash_profile=
+      - =~/.bash_login=
+      - =~/.profile=
+  - On exit, read and run =~/.bash_logout= if it exists.
+- Invoked as an interactive non-login shell
+  - Read and execute =~/.bashrc=, if that file exists
+    - "So, typically, your ~/.bash_profile contains the line"
+      #+NAME: E1AC5166-83AC-41DC-8F96-26A18400E670
+      #+BEGIN_SRC shell
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi after (or before) any login-specific
+initializations.
+      #+END_SRC
+  - Seems like separating interactive and non-interactive features goes in those
+    places
+- Invoked non-interactively
+  - Uses =BASH_ENV= to execute the file
+
+- Invoked with name sh
+  - Mimic =sh= startup behavior
+  - Auto-enter Posix mode
+  - Never use this
+- Invoked in POSIX mode
+  - Follow Posix standard for startup files
+- Invoked by remote shell daemon
+  - Use ~/.bashrc
+- Invoked with unequal effective and real UID/GIDs
+  - Don't read anything
+
+**** 6.3 Interactive Shells
+:PROPERTIES:
+:ID:       B0F7B1AF-5E43-4D11-9950-55CFDC3817DA
+:END:
+
+- No comment
+
+**** 6.3.1 What is an Interactive Shell?
+:PROPERTIES:
+:ID:       81E4FAFF-64DA-4455-B038-2F6BED8AFB32
+:END:
+
+- One started with stdin and stdout and stderr attached to terminals
+  - There is more to this, not worth mentioning right now
+
+**** 6.3.2 Is this Shell Interactive?
+:PROPERTIES:
+:ID:       38920E91-6BD3-4D4A-A53E-710289870FDD
+:END:
+
+- Show how to check, 2 ways
+
+**** 6.3.3 Interactive Shell Behavior
+:PROPERTIES:
+:ID:       BB0E956F-46D2-4227-B5AF-CA56D7994405
+:END:
+
+- Startup files loaded
+- Job control is on
+- PS1 and PS2 used
+- prompt command run
+- Readline turned on
+- EOF handling on
+- Command history on
+- Alias expansion on
+  - Good to know that this is just interactive!
+- sigterm ignored without traps
+- sigint ignored without traps
+- sighup sent if configured
+- Ignore -n
+- Check for mail periodically
+- Expansion errors won't cause the shell to exit
+  - Biggie!
+- Neither will redirection errors
+- Neither will Posix errors
+- Neither will a failed exec
+- cdspell is great
+- read and TMOUT
+
+**** 6.4 Bash Conditional Expressions
+:PROPERTIES:
+:ID:       0A460C36-83AA-4B7D-AB18-F314DB7FBE53
+:END:
+
+- Conditional expressions used by
+  - [[
+  - test
+  - [
+- Important used *all over the place*
+- Note: [[, <, and > sort lexographically; test uses ASCII!
+- So rich and expressive, says so much
+- Subexpressions are evaluated first
+- They follow in order, copy pasted
+- -a file
+  - True if file exists.
+- -b file
+  - True if file exists and is a block special file.
+- -c file
+  - True if file exists and is a character special file.
+- -d file
+  - True if file exists and is a directory.
+- -e file
+  - True if file exists.
+- -f file
+  - True if file exists and is a regular file.
+- -g file
+  - True if file exists and its set-group-id bit is set.
+- -h file
+  - True if file exists and is a symbolic link.
+- -k file
+  - True if file exists and its "sticky" bit is set.
+- -p file
+  - True if file exists and is a named pipe (FIFO).
+- -r file
+  - True if file exists and is readable.
+- -s file
+  - True if file exists and has a size greater than zero.
+- -t fd
+  - True if file descriptor fd is open and refers to a terminal.
+- -u file
+  - True if file exists and its set-user-id bit is set.
+- -w file
+  - True if file exists and is writable.
+- -x file
+  - True if file exists and is executable.
+- -G file
+  - True if file exists and is owned by the effective group id.
+- -L file
+  - True if file exists and is a symbolic link.
+- -N file
+  - True if file exists and has been modified since it was last read.
+- -O file
+  - True if file exists and is owned by the effective user id.
+- -S file
+  - True if file exists and is a socket.
+- file1 -ef file2
+  - True if file1 and file2 refer to the same device and inode numbers.
+- file1 -nt file2
+  - True if file1 is newer (according to modification date) than file2, or if file1 exists and file2 does not.
+- file1 -ot file2
+  - True if file1 is older than file2, or if file2 exists and file1 does not.
+- -o optname
+  - True if the shell option optname is enabled. The list of options appears in the description of the -o option to the set builtin (see The Set Builtin).
+- -v varname
+  - True if the shell variable varname is set (has been assigned a value).
+- -R varname
+  - True if the shell variable varname is set and is a name reference.
+- -z string
+  - True if the length of string is zero.
+- -n string
+- string
+-   - True if the length of string is non-zero.
+- string1 == string2
+- - string1 = string2
+  - True if the strings are equal. When used with the [[ command, this performs pattern matching as described above (see Conditional Constructs).
+-   - ‘=’ should be used with the test command for POSIX conformance.
+- string1 != string2
+-   - True if the strings are not equal.
+- string1 < string2
+-   - True if string1 sorts before string2 lexicographically.
+- string1 > string2
+-   - True if string1 sorts after string2 lexicographically.
+- arg1 OP arg2
+  - OP is one of ‘-eq’, ‘-ne’, ‘-lt’, ‘-le’, ‘-gt’, or ‘-ge’. These arithmetic binary operators return true if arg1 is equal to, not equal to, less than, less than or equal to, greater than, or greater than or equal to arg2, respectively. Arg1 and arg2 may be positive or negative integers.
+
+**** 6.5 Shell Arithmetic
+:PROPERTIES:
+:ID:       77D9A4A9-730F-41CE-9F4F-1117CB47BE96
+:END:
+
+- Operator behavior same as in C
+- Following identifiers copied and pasted
+- id++ id--
+  - variable post-increment and post-decrement
+- ++id --id
+  - variable pre-increment and pre-decrement
+- - +
+  - unary minus and plus
+- ! ~
+  - logical and bitwise negation
+- **
+  - exponentiation
+- * / %
+  - multiplication, division, remainder
+- + -
+  - addition, subtraction
+- << >>
+  - left and right bitwise shifts
+- <= >= < >
+  - comparison
+- == !=
+  - equality and inequality
+- &
+  - bitwise AND
+- ^
+  - bitwise exclusive OR
+- |
+  - bitwise OR
+- &&
+  - logical AND
+- ||
+  - logical OR
+- expr ? expr : expr
+  - conditional operator
+- = *= /= %= += -= <<= >>= &= ^= |=
+  - assignment
+- expr1 , expr2
+  - comma
+
+**** 6.6 Aliases
+:PROPERTIES:
+:ID:       D418A98E-DD17-453A-A752-6949795831BA
+:END:
+
+- String substitution of aliases when used as first word of simple command
+- Recursive alias expansion is not allowed; so ls/ls -al works without an
+  infinite loop
+- Only expanded in inteactive mode!
+  - Unless shopt =expand_aliases=
+  - Should do this, more predictable
+- "To be safe
+  - always put alias definitions on a separate line
+  - and do not use alias in compound command"
+- "For almost every purpose, shell functions are preferred over aliases."
+  - Obvious good purpose is command defs
+
+**** 6.7 Arrays
+:PROPERTIES:
+:ID:       56022EBD-6457-46E7-B6FB-AC0651744F81
+:END:
+
+- Are
+  - One-dimensional
+    - Zero-based
+  - Associative
+    - Using strings
+- Declaring is better, can declare by using too
+- Compound assignment: name=(val1 val2 val3)
+  - val is: 0=foo
+- Array reference: ${name[subscript]}
+  - When subscript is @ or *, expand to all members
+    - Behavior diffs in
+      - Double quotes, *: single word with all values
+      - Double quotes, @: separate words
+- " ${!name[@]} and ${!name[*]} expand to the indices assigned in array
+  variable name. "
+- =unset= destroys arrays and their contents, individually
+- =read= right into an array
+
+**** 6.8 The Directory Stack
+:PROPERTIES:
+:ID:       B39ED8E8-AFC0-4CEA-BECA-6BEC89703ACE
+:END:
+
+- pushd, popd, dirs, DIRSTACK
+
+**** 6.8.1 Directory Stack Builtins
+:PROPERTIES:
+:ID:       C8C7B9F7-3E56-47C0-8341-F543372B0276
+:END:
+
+- dirs
+  - Look forward to see how this is utilized
+- popd
+  - Easy on
+  - alias "pod"?
+- pushd
+  - Alias "pd" and use all the time? Might be nice to have that breadcrumb
+    trail all the time.
+
+**** 6.9 Controlling the Prompt
+:PROPERTIES:
+:ID:       605699B1-C40A-4D11-B644-5B147FF56468
+:END:
+
+- The following are copied and pasted
+- Commands have a number for the current session, and a number for the overall
+  history
+- \a
+  - A bell character.
+- \d
+  - The date, in "Weekday Month Date" format (e.g., "Tue May 26").
+- \D{format}
+  - The format is passed to strftime(3) and the result is inserted into the
+    prompt string; an empty format results in a locale-specific time
+    representation. The braces are required.
+- \e
+  - An escape character.
+- \h
+  - The hostname, up to the first ‘.’.
+- \H
+  - The hostname.
+- \j
+  - The number of jobs currently managed by the shell.
+- \l
+  - The basename of the shell’s terminal device name.
+- \n
+  - A newline.
+- \r
+  - A carriage return.
+- \s
+  - The name of the shell, the basename of $0 (the portion following the final
+    slash).
+- \t
+  - The time, in 24-hour HH:MM:SS format.
+- \T
+  - The time, in 12-hour HH:MM:SS format.
+- \@
+  - The time, in 12-hour am/pm format.
+- \A
+  - The time, in 24-hour HH:MM format.
+- \u
+  - The username of the current user.
+- \v
+  - The version of Bash (e.g., 2.00)
+- \V
+  - The release of Bash, version + patchlevel (e.g., 2.00.0)
+- \w
+  - The current working directory, with $HOME abbreviated with a tilde (uses the
+    $PROMPT_DIRTRIM variable).
+- \W
+  - The basename of $PWD, with $HOME abbreviated with a tilde.
+- \!
+  - The history number of this command.
+- \#
+  - The command number of this command.
+- \$
+  - If the effective uid is 0, #, otherwise $.
+- \nnn
+  - The character whose ASCII code is the octal value nnn.
+- \\
+  - A backslash.
+- \[
+  - Begin a sequence of non-printing characters. This could be used to embed a
+    terminal control sequence into the prompt.
+- \]
+  - End a sequence of non-printing characters.
+
+**** 6.10 The Restricted Shell
+:PROPERTIES:
+:ID:       511240EC-EB9C-4821-B615-3A4811247FA7
+:END:
+
+- Nice!
+  - Should have set ulimits for every deployed Linux server app ever
+
+**** 6.11 Bash POSIX Mode
+:PROPERTIES:
+:ID:       95F1D555-851C-454A-ABC1-9ED5CDEEB199
+:END:
+
+- Explains everything different from normal Bash mode
+
+*** 7 Job Control
+:PROPERTIES:
+:ID:       2B4E490F-8BA0-4D27-8E31-180F338FFA6C
+:END:
+
+- No comment
+
+**** 7.1 Job Control Basics
+:PROPERTIES:
+:ID:       5ED07909-35A4-495C-851B-279626854356
+:END:
+
+- Get the easy part; look forward to digging into details to allow async
+  provisioning
+
+**** 7.2 Job Control Builtins
+:PROPERTIES:
+:ID:       CAD99231-CCEC-4EB7-B494-438612CC4767
+:END:
+
+- Awesome. Everything is there. Should have read this 21 years ago. Now is great.
+  Usable for provisioning; speed up downloads.
+
+**** 7.3 Job Control Variables
+:PROPERTIES:
+:ID:       A0AF0CFF-E683-40DF-8961-E33E2766C79E
+:END:
+
+- OK
+
+*** 8 Command Line Editing
+:PROPERTIES:
+:ID:       7496C9A0-8C2F-4C82-978B-E84E822AB2B6
+:END:
+
+- Emacs bindings by default
+
+**** 8.1 Introduction to Line Editing
+:PROPERTIES:
+:ID:       F99ADED0-7452-4A55-AF59-5DABF691021D
+:END:
+
+- Emacs keybinding terminology
+
+**** 8.2 Readline Interaction
+:PROPERTIES:
+:ID:       FB43CD4F-D138-46F3-9450-685237A03F37
+:END:
+
+- =RET= works anywhere on the current line since you can easily move around
+- Readline is great
+
+**** 8.2.1 Readline Bare Essentials
+:PROPERTIES:
+:ID:       D2C78045-8898-4C01-92CB-EFAE0129DF29
+:END:
+
+- Emacs bindings
+
+**** 8.2.2 Readline Movement Commands
+:PROPERTIES:
+:ID:       F3F59F89-42EE-41D0-B630-658A7C388DB7
+:END:
+
+- Emacs bindings
+
+**** 8.2.3 Readline Killing Commands
+:PROPERTIES:
+:ID:       1773DBEB-88A5-412A-AB13-B769D7412423
+:END:
+
+- Emacs bindings
+
+**** 8.2.4 Readline Arguments
+:PROPERTIES:
+:ID:       E9BB713D-03AC-4B0A-82AA-335F9A07D42F
+:END:
+
+- Not C-u
+
+**** 8.2.5 Searching for Commands in the History
+:PROPERTIES:
+:ID:       F860CFE1-2559-4932-9727-10B9286AC6C7
+:END:
+
+- Want to use it and can't make it work
+
+**** 8.3 Readline Init File
+:PROPERTIES:
+:ID:       07D5F7A1-0BFF-444C-8EFD-7F281EEEC4CB
+:END:
+
+- =INPUTRC= configures Readline
+
+**** 8.3.1 Readline Init File Syntax
+:PROPERTIES:
+:ID:       2ED02D68-1F0C-4543-8EFC-EEBB52A376AF
+:END:
+
+- Should read through and configure all these
+  - Interesting: visible bell, colored status, eiditng-mode,
+    - This is all different from plain old Bash shell stuff?
+
+**** 8.3.2 Conditional Init Constructs
+:PROPERTIES:
+:ID:       CDE0082F-24B2-4FD3-AE17-7D52DCEC3DE4
+:END:
+
+- OK
+
+**** 8.3.3 Sample Init File
+:PROPERTIES:
+:ID:       69177446-F6E2-4650-A5CC-BB01C711434F
+:END:
+
+- OK
+
+**** 8.4 Bindable Readline Commands
+:PROPERTIES:
+:ID:       B3FCF3F4-C4EB-4EEE-BEEA-061A3CC018CD
+:END:
+
+- OK
+
+**** 8.4.1 Commands For Moving
+:PROPERTIES:
+:ID:       1D97E346-02FE-48C0-ACC5-1692E0A19B3B
+:END:
+
+- Emacs bindings
+
+**** 8.4.2 Commands For Manipulating The History
+:PROPERTIES:
+:ID:       AD00F828-4F66-4859-91D2-1067814094D8
+:END:
+
+- Emacs bindings
+
+**** 8.4.3 Commands For Changing Text
+:PROPERTIES:
+:ID:       F1E984E1-5108-4DF0-A27B-B094F61C8DD9
+:END:
+
+- Emacs bindings
+
+**** 8.4.4 Killing And Yanking
+:PROPERTIES:
+:ID:       B840F64B-6717-4288-821F-D76E02876B9C
+:END:
+
+- Emacs bindings
+
+**** 8.4.5 Specifying Numeric Arguments
+:PROPERTIES:
+:ID:       AA19B747-C6ED-4F3E-AAF5-C8A787D8B259
+:END:
+
+- Not like Emacs, note this
+
+**** 8.4.6 Letting Readline Type For You
+:PROPERTIES:
+:ID:       872516EC-DFE9-4419-B584-A8081755A14F
+:END:
+
+- Everybody has been using this forever
+  - Probably most important feature nobody ever read about
+
+**** 8.4.7 Keyboard Macros
+:PROPERTIES:
+:ID:       70672FF8-43D0-4432-8DFB-727F4772CB42
+:END:
+
+- Readline lets you record and replay keyboard macros?!!??!
+  - *YES*
+
+**** 8.4.8 Some Miscellaneous Commands
+:PROPERTIES:
+:ID:       7B8BFF47-ADB7-4AC5-8EF0-02E63F61F365
+:END:
+
+- Reload init file, undo, set mark... miscellaneous and valuable!
+
+**** 8.5 Readline vi Mode
+:PROPERTIES:
+:ID:       A9BB0032-2976-4815-9677-9C5CAEC7FC16
+:END:
+
+- OK
+
+**** 8.6 Programmable Completion
+:PROPERTIES:
+:ID:       2B95C0E4-D443-4D7D-B9AD-D0C3FA42FA64
+:END:
+
+- Know what it is, skimmed it until I need it
+
+**** 8.7 Programmable Completion Builtins
+:PROPERTIES:
+:ID:       815D2DCB-8585-4D5E-B27E-DCCB52AFD887
+:END:
+
+- Cool!
+
+**** 8.8 A Programmable Completion Example
+:PROPERTIES:
+:ID:       64EE7C39-2133-45F8-ADC0-AD312B5C7338
+:END:
+
+- Nice to read some non-trivial code finally
+  - Finally readable after reading the manual!
+
+*** 9 Using History Interactively
+:PROPERTIES:
+:ID:       00866989-F35A-4112-AA89-DFE1E7AF261C
+:END:
+
+- Nice
+
+**** 9.1 Bash History Facilities
+:PROPERTIES:
+:ID:       E07E9595-14EB-4619-890E-B50E9690531C
+:END:
+
+- Set timestamp to ISO8601
+
+**** 9.2 Bash History Builtins
+:PROPERTIES:
+:ID:       40E06598-BAF6-47D1-A773-D3CB03C19ACD
+:END:
+
+- Never knew about =fc=; knew about =history=
+
+**** 9.3 History Expansion
+:PROPERTIES:
+:ID:       B71765C5-FD10-4EFB-A9BB-9B58CF245CE1
+:END:
+
+- OK
+
+**** 9.3.1 Event Designators
+:PROPERTIES:
+:ID:       B260B2F2-5AF9-4604-846B-B1179C49B492
+:END:
+
+- OK
+
+**** 9.3.2 Word Designators
+:PROPERTIES:
+:ID:       9E19BEE0-421D-4881-A685-96B0A4725BBE
+:END:
+
+- OK
+
+**** 9.3.3 Modifiers
+:PROPERTIES:
+:ID:       17FB78A6-E448-440D-ACBD-F4D3A63D4286
+:END:
+
+- OK
+
+*** 10 Installing Bash
+:PROPERTIES:
+:ID:       3DF2BED9-4C92-4F91-A305-49F7B6280A99
+:END:
+
+- Skipping this headline until I need to do it
+  - Brew does it
+
+**** 10.1 Basic Installation
+:PROPERTIES:
+:ID:       792C765A-9A86-4F65-B198-D2F9CF88F842
+:END:
+
+- Skipping this headline until I need to do it
+
+**** 10.2 Compilers and Options
+:PROPERTIES:
+:ID:       08A34A00-342D-45D6-85B9-009582146AA8
+:END:
+
+- Skipping this headline until I need to do it
+
+**** 10.3 Compiling For Multiple Architectures
+:PROPERTIES:
+:ID:       AD398BF1-6B36-49DC-8774-ECFC0CC8A03F
+:END:
+
+- Skipping this headline until I need to do it
+
+**** 10.4 Installation Names
+:PROPERTIES:
+:ID:       F502FF3F-3937-4D03-BBC8-F613B2EF97BC
+:END:
+
+- Skipping this headline until I need to do it
+
+**** 10.5 Specifying the System Type
+:PROPERTIES:
+:ID:       1180CAC6-674F-4335-91D2-C18C39D26435
+:END:
+
+- Skipping this headline until I need to do it
+
+**** 10.6 Sharing Defaults
+:PROPERTIES:
+:ID:       22958C04-DA00-4ECF-BE65-AFC05A3CAFE9
+:END:
+
+- Skipping this headline until I need to do it
+
+**** 10.7 Operation Controls
+:PROPERTIES:
+:ID:       3394F331-897D-47D5-AE4B-3A923E154511
+:END:
+
+- Skipping this headline until I need to do it
+
+**** 10.8 Optional Features
+:PROPERTIES:
+:ID:       D812B51C-A080-4A4A-9074-E2254CFEF980
+:END:
+
+- Skipping this headline until I need to do it
+
+*** Appendix A Reporting Bugs
+:PROPERTIES:
+:ID:       1BD98809-C864-440F-A119-8DE89DFE2702
+:END:
+
+- OK
+
+*** Appendix B Major Differences From The Bourne Shell
+:PROPERTIES:
+:ID:       6F691295-508B-415D-80CA-AB04EC9EA8F0
+:END:
+
+- OK, skimmed it
+
+**** B.1 Implementation Differences From The SVR4.2 Shell
+:PROPERTIES:
+:ID:       671631BF-F111-44F9-8FE3-4065EA64652F
+:END:
+
+- OK, skimmed it
+
+*** Appendix C GNU Free Documentation License
+:PROPERTIES:
+:ID:       DA3E41E5-E909-442A-AAFA-835BE0BE0504
+:END:
+
+- OK, skimmed it
+
+*** Appendix D Indexes
+:PROPERTIES:
+:ID:       B5B3AB49-1060-43A7-BB82-FD99C97D7512
+:END:
+
+- Everything in this heading is for use by reference so no notes to follow
+
+**** D.1 Index of Shell Builtin Commands
+:PROPERTIES:
+:ID:       4BE4B254-1B1E-4326-A090-3F15D226EB0B
+:END:
+
+- Everything in this heading is for use by reference so no notes to follow
+
+**** D.2 Index of Shell Reserved Words
+:PROPERTIES:
+:ID:       684FF389-DFD2-4EAF-A55E-B0193038D82B
+:END:
+
+- Everything in this heading is for use by reference so no notes to follow
+
+**** D.3 Parameter and Variable Index
+:PROPERTIES:
+:ID:       2021AF7F-A7C1-4580-B96D-141E2B986EE7
+:END:
+
+- Everything in this heading is for use by reference so no notes to follow
+
+**** D.4 Function Index
+:PROPERTIES:
+:ID:       F0F1570C-EE87-4C19-87CC-2583735F56C2
+:END:
+
+- Everything in this heading is for use by reference so no notes to follow
+
+**** D.5 Concept Index
+:PROPERTIES:
+:ID:       008EB361-5070-4E9D-A187-483FAB853083
+:END:
+
+- Everything in this heading is for use by reference so no notes to follow
+
+** Bash Debugger
+:PROPERTIES:
+:ID:       4DF379DD-3A65-4802-9725-B184A64787DB
+:END:
+
+- [[http://bashdb.sourceforge.net/bashdb.html][Here]]
+- Just skimmed it for now
+- Picked up this valuable add
+#+NAME: 8F5F0F31-0DF0-482C-8D6B-B608D3637A41
+#+BEGIN_SRC sh
+PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?]
+'
+#+END_SRC
+
+** Bash FAQ
+:PROPERTIES:
+:ID:       42D2E376-FD07-41EF-91F7-673072BC412A
+:END:
+
+- [[ftp://ftp.cwru.edu/pub/bash/FAQ][Here]]
+- Seems like a good document to skim
 * Making Sense of this Script
 :PROPERTIES:
 :ID:       886036D5-3715-492B-9ABF-825F4058A995
