@@ -151,6 +151,12 @@
 :ID:       068EFDB6-4A97-4502-AE60-2DD3A8F687EC
 :END:
 
+*** Key Headings
+
+- Bash Startup Behavior [fn:49d34ab293ff88f:https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html#Bash-Startup-Files]
+- Bourne Variables [fn:105ae6c2bd4f43c8:https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Variables.html#Bourne-Shell-Variables]
+- Bash Variables [fn:7b4f219d43d6ef2:https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html#Bash-Variables]
+
 *** Index
 :PROPERTIES:
 :ID:       004E3AAD-6755-4A8C-8B0D-D304E139368B
@@ -2478,9 +2484,6 @@ digraph version5 {
 :ID:       A1DF7D9E-5B52-46D6-90CB-FC43C50D5E41
 :END:
 
-- Bash Startup Behavior [fn:49d34ab293ff88f:https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html#Bash-Startup-Files]
-- Bourne Variables [fn:105ae6c2bd4f43c8:https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Variables.html#Bourne-Shell-Variables]
-- Bash Variables [fn:7b4f219d43d6ef2:https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html#Bash-Variables]
 
 ** Interactive Non-Login
 :PROPERTIES:
