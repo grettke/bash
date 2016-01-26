@@ -2463,7 +2463,6 @@ digraph version5 {
     BashGlobalNonInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_NON_INTERACTIVE_ENV"];
     BashNonInteractiveLoginInit [shape = "rarrow" label="--login"];
   }
-  BashCore -> BashInteractiveCore [arrowhead=none];
   BashProfile -> BashRc;
   BashRc -> BashLogout;
   BashEnv -> BashGlobalNonInteractiveProp -> BashGlobalNonInteractiveFile;
