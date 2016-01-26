@@ -2447,12 +2447,12 @@ digraph version5 {
     BashProfile[shape = "note" label = ".bash_profile\n- Session start commands, once"]
     BashRc[shape = "note" label = ".bashrc\n- source #BASH_GLOBAL_INTERACTIVE\n- Once for every\nshell created"]
     BashLogout[shape = "note" label = ".bash_logout\n- Session end commands, once"]
-    BashGlobalInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_INTERACTIVE"]
+    BashGlobalInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_INTERACTIVE_ENV"]
   }
   subgraph cluster_3 {
     label = "Non-Interactive Shell";
     BashEnv [shape = "rarrow" label = "BASH_ENV"]
-    BashGlobalNonInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_NON_INTERACTIVE"]
+    BashGlobalNonInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_NON_INTERACTIVE_ENV"]
   }
 
   BashCore -> BashInteractiveCore [arrowhead=none];
