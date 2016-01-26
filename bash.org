@@ -2446,12 +2446,12 @@ digraph version5 {
     BashInteractiveCore[label = "{BashInteractiveCore|Interface\lDebugging\lHistory\lReadline\lPrompts\l|Only for human execution\l}"];
   }
   subgraph cluster_B {
-    label = "Global Configuration\nFiles\n\n(/usr/local/etc)";
+    label = "Global Shell Configuration Files\n\n(/usr/local/etc)";
     BashGlobalNonInteractiveFile[shape = "note" label = ".bash_global_non_interactive\n\n«BashCore»\n«BashNonInteractiveCore»"];
     BashGlobalInteractiveFile[shape = "note" label = ".bash_global_interactive\n\n«BashCore»\n«BashInteractiveCore»"];
   }
   subgraph cluster_C {
-    label = "Interactive [Non-]Login Shell\n\n(unique user\nconfiguration files)";
+    label = "Interactive [Non-]Login Shell\n\nLogin Shell Configuration Files\n\n(~/)";
     BashProfile[shape = "note" label = ".bash_profile\n\nSession start commands, once"];
     BashRc[shape = "note" label = ".bashrc\n\nsource #BASH_GLOBAL_INTERACTIVE_ENV\nOnce for every\nshell created"];
     BashLogout[shape = "note" label = ".bash_logout\n\nSession end commands, once"];
