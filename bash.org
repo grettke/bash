@@ -2578,6 +2578,13 @@ When there are no file matches found report an error.
 shopt -s failglob
 #+END_SRC
 
+Report an error when you ~shift~ more parameters than you received.
+
+#+NAME: B6228402-AF52-48C9-8B65-493DAC37E850
+#+BEGIN_SRC sh
+shopt -s shift_verbose
+#+END_SRC
+
 **** Inheritance
 :PROPERTIES:
 :ID:       A8018763-74CF-414F-BB18-BC772A92EB77
