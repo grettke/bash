@@ -2561,6 +2561,13 @@ Execute the same configuration as every non-login interactive shell.
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 #+END_SRC
 
+Have fun.
+
+#+NAME: 0DE550E8-DABB-45E0-A8CC-11CDC0A2279A
+#+BEGIN_SRC shell bash
+fortune
+#+END_SRC
+
 *** BashRc
 :PROPERTIES:
 :ID:       6EC5CFD7-9EF9-42DC-B695-3202F2A303C0
