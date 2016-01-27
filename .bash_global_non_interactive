@@ -2,6 +2,9 @@
 # [[file:~/git/github/bash/bash.org::*Expressivity][57652CC2-A592-4EDB-AB4F-5668BDE2A9AB]]
 set -o braceexpand
 # 57652CC2-A592-4EDB-AB4F-5668BDE2A9AB ends here
+# [[file:~/git/github/bash/bash.org::*Expressivity][2CB26DFF-1F5A-4781-A460-7B6975FBBCC8]]
+set -o keyword
+# 2CB26DFF-1F5A-4781-A460-7B6975FBBCC8 ends here
 # [[file:~/git/github/bash/bash.org::*Fail%20Fast][1A58BFA3-F5E2-421B-8D68-BFAFAC165D82]]
 set -o errexit
 # 1A58BFA3-F5E2-421B-8D68-BFAFAC165D82 ends here

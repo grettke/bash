@@ -2514,6 +2514,14 @@ Programatically generate expressions (Brace Expansion) using
 set -o braceexpand
 #+END_SRC
 
+Make key=pair arguments to a function appear as variables during it's dynamic
+extent. This could go either way.
+
+#+NAME: 2CB26DFF-1F5A-4781-A460-7B6975FBBCC8
+#+BEGIN_SRC sh
+set -o keyword
+#+END_SRC
+
 **** Fail Fast
 :PROPERTIES:
 :ID:       8B249641-2851-4AC0-BEE0-F720ED92AB4B
