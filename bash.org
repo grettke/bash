@@ -2528,9 +2528,9 @@ Programatically generate expressions (Brace Expansion) using
 set -o braceexpand
 #+END_SRC
 
-**** Principle of Least Astonishment, Visibility
+**** No Surprises
 :PROPERTIES:
-:ID:       E64C092E-B293-47AD-BCF8-2E9CBC8DB4B6
+:ID:       226DA083-4784-4899-BC5F-4B36C8366C41
 :END:
 
 Log files are often identified as important only after accidentally clobbering
@@ -2546,11 +2546,6 @@ files.
 #+BEGIN_SRC sh
 set -o noclobber
 #+END_SRC
-
-**** No Surprises
-:PROPERTIES:
-:ID:       226DA083-4784-4899-BC5F-4B36C8366C41
-:END:
 
 Referencing an undefined variable or parameter should generate an error because
 the program can not run as intended. The system should fail-fast.
