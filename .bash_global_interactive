@@ -26,13 +26,13 @@ set -o nounset
 # [[file:~/git/github/bash/bash.org::*Performance][DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9]]
 set -o hashall
 # DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9 ends here
-# [[file:~/git/github/bash/bash.org::*Interface][6016B0DA-855B-4DE0-9416-D043C1180246]]
-set -o emacs
-# 6016B0DA-855B-4DE0-9416-D043C1180246 ends here
 # [[file:~/git/github/bash/bash.org::*History][53C74C4A-D580-4DC3-8053-7D0268A63A5F]]
 set -o history
 # 53C74C4A-D580-4DC3-8053-7D0268A63A5F ends here
 # [[file:~/git/github/bash/bash.org::*History][9BE45C01-2156-4A19-83CB-9759A66E5749]]
 set -o histexpand
 # 9BE45C01-2156-4A19-83CB-9759A66E5749 ends here
+# [[file:~/git/github/bash/bash.org::*Interface][6016B0DA-855B-4DE0-9416-D043C1180246]]
+set -o emacs
+# 6016B0DA-855B-4DE0-9416-D043C1180246 ends here
 # 861890CF-0E4B-48FF-83C6-514C3CC395DC ends here
