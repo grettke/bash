@@ -2747,6 +2747,13 @@ Automatically complete directory-names and replace the original name value.
 shopt -s complete_fullquote
 #+END_SRC
 
+Enable comments.
+
+#+NAME: B881A6A3-C116-45DD-87E7-D0EE788DE07D
+#+BEGIN_SRC sh
+shopt -s interactive_comments
+#+END_SRC
+
 **** Job Control
 :PROPERTIES:
 :ID:       31ED5B89-34FC-4C9B-A5F9-3F9E3D4DD907

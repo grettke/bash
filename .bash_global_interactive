@@ -66,6 +66,9 @@ shopt -s checkwinsize
 # [[file:~/git/github/bash/bash.org::*Interface][25EA0545-D4A1-4809-B69A-8FAB2FE52E70]]
 shopt -s complete_fullquote
 # 25EA0545-D4A1-4809-B69A-8FAB2FE52E70 ends here
+# [[file:~/git/github/bash/bash.org::*Interface][B881A6A3-C116-45DD-87E7-D0EE788DE07D]]
+shopt -s interactive_comments
+# B881A6A3-C116-45DD-87E7-D0EE788DE07D ends here
 # [[file:~/git/github/bash/bash.org::*Job%20Control][BDAB873F-BCAD-4B60-8C22-C67E6094229E]]
 shopt -s checkjobs
 # BDAB873F-BCAD-4B60-8C22-C67E6094229E ends here
