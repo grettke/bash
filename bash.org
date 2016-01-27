@@ -2724,6 +2724,13 @@ Refresh ~LINES~ and ~COLUMNS~ after every command.
 shopt -s checkwinsize
 #+END_SRC
 
+Automatically complete directory-names and replace the original name value.
+
+#+NAME: 25EA0545-D4A1-4809-B69A-8FAB2FE52E70
+#+BEGIN_SRC sh
+shopt -s complete_fullquote
+#+END_SRC
+
 **** Job Control
 :PROPERTIES:
 :ID:       31ED5B89-34FC-4C9B-A5F9-3F9E3D4DD907
@@ -2757,7 +2764,9 @@ names can *at best* cause *complete disaster* for a distracted operator.
 shopt -u cdspell
 #+END_SRC
 
-* Tangling
+Never *
+
+automatically Tangling
 :PROPERTIES:
 :ID:       10850BD7-EB7F-4F2A-B349-1A2300FED2EE
 :END:
