@@ -53,4 +53,7 @@ shopt -s autocd
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][D1E49BDB-3D0B-4DFD-9817-0322C560B378]]
 set -o ignoreeof
 # D1E49BDB-3D0B-4DFD-9817-0322C560B378 ends here
+# [[file:~/git/github/bash/bash.org::*No%20Surprises][69CDCB52-A45C-4D5C-97C1-6754620B922A]]
+shopt -u cdspell
+# 69CDCB52-A45C-4D5C-97C1-6754620B922A ends here
 # 861890CF-0E4B-48FF-83C6-514C3CC395DC ends here

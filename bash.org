@@ -2721,6 +2721,15 @@ It is too easy to accidentally leave a shell by typing Control-D. Prevent it.
 set -o ignoreeof
 #+END_SRC
 
+Assume that the user (computer or human) provided the correct directory-name
+arguments to a command and do not modify them. Auto-correction of directory
+names can *at best* cause *complete disaster* for a distracted operator.
+
+#+NAME: 69CDCB52-A45C-4D5C-97C1-6754620B922A
+#+BEGIN_SRC sh
+shopt -u cdspell
+#+END_SRC
+
 * Tangling
 :PROPERTIES:
 :ID:       10850BD7-EB7F-4F2A-B349-1A2300FED2EE
