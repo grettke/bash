@@ -57,4 +57,7 @@ set -o ignoreeof
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][69CDCB52-A45C-4D5C-97C1-6754620B922A]]
 shopt -u cdspell
 # 69CDCB52-A45C-4D5C-97C1-6754620B922A ends here
+# [[file:~/git/github/bash/bash.org::*No%20Surprises][BDAB873F-BCAD-4B60-8C22-C67E6094229E]]
+shopt -s checkjobs
+# BDAB873F-BCAD-4B60-8C22-C67E6094229E ends here
 # 861890CF-0E4B-48FF-83C6-514C3CC395DC ends here

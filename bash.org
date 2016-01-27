@@ -2731,6 +2731,13 @@ names can *at best* cause *complete disaster* for a distracted operator.
 shopt -u cdspell
 #+END_SRC
 
+Never exit a shell when there are still running or stopped jobs.
+
+#+NAME: BDAB873F-BCAD-4B60-8C22-C67E6094229E
+#+BEGIN_SRC sh
+shopt -s checkjobs
+#+END_SRC
+
 * Tangling
 :PROPERTIES:
 :ID:       10850BD7-EB7F-4F2A-B349-1A2300FED2EE
