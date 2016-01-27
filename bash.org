@@ -2553,9 +2553,11 @@ digraph version5 {
 :ID:       71EDEF3E-56E7-43FE-A483-19419629472D
 :END:
 
+Execute the same configuration as every non-login interactive shell.
+
 #+NAME: D8D66A14-3B1C-4537-963E-45DBC3D286B2
 #+BEGIN_SRC shell bash :tangle ./.bash_profile
-
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 #+END_SRC
 
 *** BashRc
