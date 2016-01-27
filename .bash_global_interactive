@@ -14,6 +14,9 @@ set -o allexport
 # [[file:~/git/github/bash/bash.org::*Inheritance][AF6CF6F6-29EB-4A4D-8C56-BB4239DCB50C]]
 set -o errtrace
 # AF6CF6F6-29EB-4A4D-8C56-BB4239DCB50C ends here
+# [[file:~/git/github/bash/bash.org::*Inheritance][0A61B3AC-32CB-4189-852F-0D9956BB1D1F]]
+set -o functrace
+# 0A61B3AC-32CB-4189-852F-0D9956BB1D1F ends here
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][9086FA3B-EC85-486F-87AB-35F72D57602B]]
 set -o noclobber
 # 9086FA3B-EC85-486F-87AB-35F72D57602B ends here

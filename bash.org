@@ -2576,6 +2576,13 @@ Do the same thing for the ~ERR~ trap.
 set -o errtrace
 #+END_SRC
 
+Do the same thing for the ~DEBUG~ and ~RETURN~ traps.
+
+#+NAME: 0A61B3AC-32CB-4189-852F-0D9956BB1D1F
+#+BEGIN_SRC sh
+set -o functrace
+#+END_SRC
+
 **** No Surprises
 :PROPERTIES:
 :ID:       226DA083-4784-4899-BC5F-4B36C8366C41
