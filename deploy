@@ -1,9 +1,11 @@
-# [[file:bash.org::*Deployment][6B840488-783C-4290-9133-7E4209247FB3]]
+# [[file:bash.org::*Deployment][F7D52399-F20C-466D-B59B-93F89D4CF985]]
 function bash_deploy() {
     ln -s -f ${PWD}/.bash_profile ~/.bash_profile
     ln -s -f ${PWD}/.bash_logout ~/.bash_logout
     ln -s -f ${PWD}/.bashrc ~/.bashrc
+    ln -s -f ${PWD}/.bash_global_non_interactive ~/.bash_global_non_interactive
+    ln -s -f ${PWD}/.bash_global_interactive ~/.bash_global_interactive
 }
 
 bash_deploy
-# 6B840488-783C-4290-9133-7E4209247FB3 ends here
+# F7D52399-F20C-466D-B59B-93F89D4CF985 ends here
