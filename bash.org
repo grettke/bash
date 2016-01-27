@@ -2499,7 +2499,7 @@ digraph version5 {
 :ID:       742113EF-114F-4FF9-B543-06C748E9153C
 :END:
 
-**** Environment
+**** Visibility
 :PROPERTIES:
 :ID:       A8018763-74CF-414F-BB18-BC772A92EB77
 :END:
@@ -2528,7 +2528,7 @@ Programatically generate expressions (Brace Expansion) using
 set -o braceexpand
 #+END_SRC
 
-**** Principle of Least Astonishment
+**** Principle of Least Astonishment, Visibility
 :PROPERTIES:
 :ID:       E64C092E-B293-47AD-BCF8-2E9CBC8DB4B6
 :END:
