@@ -5,4 +5,7 @@ set -o allexport
 # [[file:~/git/github/bash/bash.org::*Expressivity][57652CC2-A592-4EDB-AB4F-5668BDE2A9AB]]
 set -o braceexpand
 # 57652CC2-A592-4EDB-AB4F-5668BDE2A9AB ends here
+# [[file:~/git/github/bash/bash.org::*Principle%20of%20Least%20Astonishment][9086FA3B-EC85-486F-87AB-35F72D57602B]]
+set -o noclobber
+# 9086FA3B-EC85-486F-87AB-35F72D57602B ends here
 # AB646FCB-6048-4B21-B231-71DB5F64E465 ends here
