@@ -5,6 +5,9 @@ set -o braceexpand
 # [[file:~/git/github/bash/bash.org::*Fail%20Fast][1A58BFA3-F5E2-421B-8D68-BFAFAC165D82]]
 set -o errexit
 # 1A58BFA3-F5E2-421B-8D68-BFAFAC165D82 ends here
+# [[file:~/git/github/bash/bash.org::*Fail%20Fast][8E509A55-4F09-49DF-9402-3FBAF130CBD1]]
+set -o pipefail
+# 8E509A55-4F09-49DF-9402-3FBAF130CBD1 ends here
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][9086FA3B-EC85-486F-87AB-35F72D57602B]]
 set -o noclobber
 # 9086FA3B-EC85-486F-87AB-35F72D57602B ends here

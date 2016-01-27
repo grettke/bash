@@ -2546,6 +2546,15 @@ and still fail fast most of the time.
 set -o errexit
 #+END_SRC
 
+The result of a pipeline is the result of the last expression to exit on error
+or zero if they all completed successfully. This reads like "short circuit"
+evaluation but I'm not sure it is. Perform research on this.
+
+#+NAME: 8E509A55-4F09-49DF-9402-3FBAF130CBD1
+#+BEGIN_SRC sh
+set -o pipefail
+#+END_SRC
+
 **** No Surprises
 :PROPERTIES:
 :ID:       226DA083-4784-4899-BC5F-4B36C8366C41
