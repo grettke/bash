@@ -2759,6 +2759,13 @@ Never exit a shell when there are still running or stopped jobs.
 shopt -s checkjobs
 #+END_SRC
 
+Send =HUP= to all child processes when the interactive parent shell exits.
+
+#+NAME: 0A829512-17A5-4C99-AEB8-C56610E319DC
+#+BEGIN_SRC sh
+shopt -s huponexit
+#+END_SRC
+
 **** No Surprises
 :PROPERTIES:
 :ID:       1A962AE3-6CFA-47F0-B56C-029C03D5B10B

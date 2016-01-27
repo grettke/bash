@@ -69,6 +69,9 @@ shopt -s complete_fullquote
 # [[file:~/git/github/bash/bash.org::*Job%20Control][BDAB873F-BCAD-4B60-8C22-C67E6094229E]]
 shopt -s checkjobs
 # BDAB873F-BCAD-4B60-8C22-C67E6094229E ends here
+# [[file:~/git/github/bash/bash.org::*Job%20Control][0A829512-17A5-4C99-AEB8-C56610E319DC]]
+shopt -s huponexit
+# 0A829512-17A5-4C99-AEB8-C56610E319DC ends here
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][D1E49BDB-3D0B-4DFD-9817-0322C560B378]]
 set -o ignoreeof
 # D1E49BDB-3D0B-4DFD-9817-0322C560B378 ends here
