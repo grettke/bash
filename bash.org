@@ -2710,6 +2710,13 @@ When the command name is a directory in the =$PWD= pass it to =cd=.
 shopt -s autocd
 #+END_SRC
 
+Refresh ~LINES~ and ~COLUMNS~ after every command.
+
+#+NAME: D52A5F44-E7ED-4C61-A786-701EA73DBFF1
+#+BEGIN_SRC sh
+shopt -s checkwinsize
+#+END_SRC
+
 **** Job Control
 :PROPERTIES:
 :ID:       31ED5B89-34FC-4C9B-A5F9-3F9E3D4DD907

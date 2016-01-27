@@ -51,6 +51,9 @@ set -o emacs
 # [[file:~/git/github/bash/bash.org::*Interface][9118B957-42C5-401B-9ED0-939D54BC549A]]
 shopt -s autocd
 # 9118B957-42C5-401B-9ED0-939D54BC549A ends here
+# [[file:~/git/github/bash/bash.org::*Interface][D52A5F44-E7ED-4C61-A786-701EA73DBFF1]]
+shopt -s checkwinsize
+# D52A5F44-E7ED-4C61-A786-701EA73DBFF1 ends here
 # [[file:~/git/github/bash/bash.org::*Job%20Control][BDAB873F-BCAD-4B60-8C22-C67E6094229E]]
 shopt -s checkjobs
 # BDAB873F-BCAD-4B60-8C22-C67E6094229E ends here
