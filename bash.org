@@ -2522,6 +2522,13 @@ extent. This could go either way.
 set -o keyword
 #+END_SRC
 
+Pass a non-directory arguments to =cd= and change to the value of that variable.
+
+#+NAME: 26B4365A-1F13-4ECD-99EB-964C276533EE
+#+BEGIN_SRC sh
+shopt -s cdable_vars
+#+END_SRC
+
 **** Fail Fast
 :PROPERTIES:
 :ID:       8B249641-2851-4AC0-BEE0-F720ED92AB4B

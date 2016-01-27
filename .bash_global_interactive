@@ -5,6 +5,9 @@ set -o braceexpand
 # [[file:~/git/github/bash/bash.org::*Expressivity][2CB26DFF-1F5A-4781-A460-7B6975FBBCC8]]
 set -o keyword
 # 2CB26DFF-1F5A-4781-A460-7B6975FBBCC8 ends here
+# [[file:~/git/github/bash/bash.org::*Expressivity][26B4365A-1F13-4ECD-99EB-964C276533EE]]
+shopt -s cdable_vars
+# 26B4365A-1F13-4ECD-99EB-964C276533EE ends here
 # [[file:~/git/github/bash/bash.org::*Fail%20Fast][1A58BFA3-F5E2-421B-8D68-BFAFAC165D82]]
 set -o errexit
 # 1A58BFA3-F5E2-421B-8D68-BFAFAC165D82 ends here
