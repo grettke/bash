@@ -2499,6 +2499,11 @@ digraph version5 {
 :ID:       742113EF-114F-4FF9-B543-06C748E9153C
 :END:
 
+**** Environment
+:PROPERTIES:
+:ID:       A8018763-74CF-414F-BB18-BC772A92EB77
+:END:
+
 Every change (creation and modification) made to the parent shell
 environment (functions and variables) should be automatically exported to every
 child shell environment.
