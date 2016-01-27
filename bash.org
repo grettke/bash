@@ -2565,7 +2565,7 @@ digraph version5 {
 
 #+NAME: A4502549-BA36-4C40-A12A-E42A72B6384C
 #+BEGIN_SRC shell bash :tangle ./.bashrc
-
+source ~/.bash_global_interactive
 #+END_SRC
 
 *** BashLogout
