@@ -2499,20 +2499,6 @@ digraph version5 {
 :ID:       742113EF-114F-4FF9-B543-06C748E9153C
 :END:
 
-**** Visibility
-:PROPERTIES:
-:ID:       A8018763-74CF-414F-BB18-BC772A92EB77
-:END:
-
-Every change (creation and modification) made to the parent shell
-environment (functions and variables) should be automatically exported to every
-child shell environment.
-
-#+NAME: CFACD6C3-617A-42E7-A672-DE55C1F6C9E9
-#+BEGIN_SRC sh
-set -o allexport
-#+END_SRC
-
 **** Expressivity
 :PROPERTIES:
 :ID:       DAA8B5AA-D4F0-4D48-BDF7-91D82C750A7A
@@ -2553,6 +2539,20 @@ the program can not run as intended. The system should fail-fast.
 #+NAME: A83FCBAD-BD08-46EF-B8DC-08F834CD0774
 #+BEGIN_SRC sh
 set -o nounset
+#+END_SRC
+
+**** Visibility
+:PROPERTIES:
+:ID:       A8018763-74CF-414F-BB18-BC772A92EB77
+:END:
+
+Every change (creation and modification) made to the parent shell
+environment (functions and variables) should be automatically exported to every
+child shell environment.
+
+#+NAME: CFACD6C3-617A-42E7-A672-DE55C1F6C9E9
+#+BEGIN_SRC sh
+set -o allexport
 #+END_SRC
 
 *** BashNonInteractiveCore
