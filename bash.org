@@ -2540,6 +2540,18 @@ set -o braceexpand
 :ID:       1AB9EF9D-8F1D-43C6-B557-7800B7A4AA2F
 :END:
 
+**** Interface
+:PROPERTIES:
+:ID:       ADA57C58-C529-4C1C-9C90-EB641215A4FA
+:END:
+
+Use EMACS keybindings for ~Readline~ and ~read~.
+
+#+NAME: 6016B0DA-855B-4DE0-9416-D043C1180246
+#+BEGIN_SRC sh
+set -o emacs
+#+END_SRC
+
 * Tangling
 :PROPERTIES:
 :ID:       10850BD7-EB7F-4F2A-B349-1A2300FED2EE
