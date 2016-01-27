@@ -2542,6 +2542,11 @@ Prevent output redirection using ‘>’, ‘>&’, and ‘<>’ from overwritin
 files.
 #+END_QUOTE
 
+**** No Surprises
+:PROPERTIES:
+:ID:       226DA083-4784-4899-BC5F-4B36C8366C41
+:END:
+
 #+NAME: 9086FA3B-EC85-486F-87AB-35F72D57602B
 #+BEGIN_SRC sh
 set -o noclobber

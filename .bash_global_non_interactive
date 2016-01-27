@@ -1,14 +1,14 @@
 # [[file:bash.org::*Non-Interactive][AB646FCB-6048-4B21-B231-71DB5F64E465]]
-# [[file:~/git/github/bash/bash.org::*Environment][CFACD6C3-617A-42E7-A672-DE55C1F6C9E9]]
+# [[file:~/git/github/bash/bash.org::*Visibility][CFACD6C3-617A-42E7-A672-DE55C1F6C9E9]]
 set -o allexport
 # CFACD6C3-617A-42E7-A672-DE55C1F6C9E9 ends here
 # [[file:~/git/github/bash/bash.org::*Expressivity][57652CC2-A592-4EDB-AB4F-5668BDE2A9AB]]
 set -o braceexpand
 # 57652CC2-A592-4EDB-AB4F-5668BDE2A9AB ends here
-# [[file:~/git/github/bash/bash.org::*Principle%20of%20Least%20Astonishment][9086FA3B-EC85-486F-87AB-35F72D57602B]]
+# [[file:~/git/github/bash/bash.org::*No%20Surprises][9086FA3B-EC85-486F-87AB-35F72D57602B]]
 set -o noclobber
 # 9086FA3B-EC85-486F-87AB-35F72D57602B ends here
-# [[file:~/git/github/bash/bash.org::*Principle%20of%20Least%20Astonishment][A83FCBAD-BD08-46EF-B8DC-08F834CD0774]]
+# [[file:~/git/github/bash/bash.org::*No%20Surprises][A83FCBAD-BD08-46EF-B8DC-08F834CD0774]]
 set -o nounset
 # A83FCBAD-BD08-46EF-B8DC-08F834CD0774 ends here
 # AB646FCB-6048-4B21-B231-71DB5F64E465 ends here
