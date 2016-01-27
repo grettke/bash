@@ -2513,6 +2513,21 @@ child shell environment.
 set -o allexport
 #+END_SRC
 
+**** Expressivity
+:PROPERTIES:
+:ID:       DAA8B5AA-D4F0-4D48-BDF7-91D82C750A7A
+:END:
+
+Programatically generate expressions (Brace Expansion) using
+- Sequence of comma separated names
+- Pattern matching to create a list of names of files
+- Sequence expression
+
+#+NAME: 57652CC2-A592-4EDB-AB4F-5668BDE2A9AB
+#+BEGIN_SRC sh
+set -o braceexpand
+#+END_SRC
+
 *** BashNonInteractiveCore
 :PROPERTIES:
 :header-args: :noweb-ref BashNonInteractiveCore

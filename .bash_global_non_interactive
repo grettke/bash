@@ -2,4 +2,7 @@
 # [[file:~/git/github/bash/bash.org::*Environment][CFACD6C3-617A-42E7-A672-DE55C1F6C9E9]]
 set -o allexport
 # CFACD6C3-617A-42E7-A672-DE55C1F6C9E9 ends here
+# [[file:~/git/github/bash/bash.org::*Expressivity][57652CC2-A592-4EDB-AB4F-5668BDE2A9AB]]
+set -o braceexpand
+# 57652CC2-A592-4EDB-AB4F-5668BDE2A9AB ends here
 # AB646FCB-6048-4B21-B231-71DB5F64E465 ends here
