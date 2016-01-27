@@ -2538,6 +2538,29 @@ digraph version5 {
 
 #+END_SRC
 
+** Login Shell Configuration Files
+
+*** BashProfile
+
+#+NAME: D8D66A14-3B1C-4537-963E-45DBC3D286B2
+#+BEGIN_SRC shell bash :tangle ./.bash_profile
+
+#+END_SRC
+
+*** BashRc
+
+#+NAME: A4502549-BA36-4C40-A12A-E42A72B6384C
+#+BEGIN_SRC shell bash :tangle ./.bashrc
+
+#+END_SRC
+
+*** BashLogout
+
+#+NAME: 891ED468-F802-4378-BA5C-0BF874CAB4F1
+#+BEGIN_SRC shell bash :tangle ./.bash_logout
+
+#+END_SRC
+
 * Deployment
 :PROPERTIES:
 :header-args: :tangle ./deploy :tangle-mode (identity #o755)
