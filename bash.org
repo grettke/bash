@@ -2522,13 +2522,6 @@ extent. This could go either way.
 set -o keyword
 #+END_SRC
 
-Pass a non-directory arguments to =cd= and change to the value of that variable.
-
-#+NAME: 26B4365A-1F13-4ECD-99EB-964C276533EE
-#+BEGIN_SRC sh
-shopt -s cdable_vars
-#+END_SRC
-
 **** Fail Fast
 :PROPERTIES:
 :ID:       8B249641-2851-4AC0-BEE0-F720ED92AB4B
@@ -2596,6 +2589,13 @@ Do the same thing for the ~DEBUG~ and ~RETURN~ traps.
 #+NAME: 0A61B3AC-32CB-4189-852F-0D9956BB1D1F
 #+BEGIN_SRC sh
 set -o functrace
+#+END_SRC
+
+Pass a non-directory arguments to =cd= and change to the value of that variable.
+
+#+NAME: 26B4365A-1F13-4ECD-99EB-964C276533EE
+#+BEGIN_SRC sh
+shopt -s cdable_vars
 #+END_SRC
 
 **** Job Control
@@ -2710,6 +2710,18 @@ When the command name is a directory in the =$PWD= pass it to =cd=.
 shopt -s autocd
 #+END_SRC
 
+**** Job Control
+:PROPERTIES:
+:ID:       31ED5B89-34FC-4C9B-A5F9-3F9E3D4DD907
+:END:
+
+Never exit a shell when there are still running or stopped jobs.
+
+#+NAME: BDAB873F-BCAD-4B60-8C22-C67E6094229E
+#+BEGIN_SRC sh
+shopt -s checkjobs
+#+END_SRC
+
 **** No Surprises
 :PROPERTIES:
 :ID:       1A962AE3-6CFA-47F0-B56C-029C03D5B10B
@@ -2729,13 +2741,6 @@ names can *at best* cause *complete disaster* for a distracted operator.
 #+NAME: 69CDCB52-A45C-4D5C-97C1-6754620B922A
 #+BEGIN_SRC sh
 shopt -u cdspell
-#+END_SRC
-
-Never exit a shell when there are still running or stopped jobs.
-
-#+NAME: BDAB873F-BCAD-4B60-8C22-C67E6094229E
-#+BEGIN_SRC sh
-shopt -s checkjobs
 #+END_SRC
 
 * Tangling
