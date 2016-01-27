@@ -2691,6 +2691,13 @@ Enable ~!~ substitution.
 set -o histexpand
 #+END_SRC
 
+Easily re-edit historical multi-line commands.
+
+#+NAME: 3E938C0F-6DEF-4458-9D30-8986ADB49F92
+#+BEGIN_SRC sh
+shopt -s cmdhist
+#+END_SRC
+
 **** Interface
 :PROPERTIES:
 :ID:       ADA57C58-C529-4C1C-9C90-EB641215A4FA
