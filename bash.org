@@ -2571,6 +2571,13 @@ evaluation but I'm not sure it is. Perform research on this.
 set -o pipefail
 #+END_SRC
 
+When there are no file matches found report an error.
+
+#+NAME: 55B5A68B-59AF-4CED-B159-7E72D87C8B04
+#+BEGIN_SRC sh
+shopt -s failglob
+#+END_SRC
+
 **** Inheritance
 :PROPERTIES:
 :ID:       A8018763-74CF-414F-BB18-BC772A92EB77

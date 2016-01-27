@@ -14,6 +14,9 @@ set -o errexit
 # [[file:~/git/github/bash/bash.org::*Fail%20Fast][8E509A55-4F09-49DF-9402-3FBAF130CBD1]]
 set -o pipefail
 # 8E509A55-4F09-49DF-9402-3FBAF130CBD1 ends here
+# [[file:~/git/github/bash/bash.org::*Fail%20Fast][55B5A68B-59AF-4CED-B159-7E72D87C8B04]]
+shopt -s failglob
+# 55B5A68B-59AF-4CED-B159-7E72D87C8B04 ends here
 # [[file:~/git/github/bash/bash.org::*Inheritance][CFACD6C3-617A-42E7-A672-DE55C1F6C9E9]]
 set -o allexport
 # CFACD6C3-617A-42E7-A672-DE55C1F6C9E9 ends here
