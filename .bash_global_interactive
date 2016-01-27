@@ -63,6 +63,9 @@ set -o histexpand
 # [[file:~/git/github/bash/bash.org::*History][3E938C0F-6DEF-4458-9D30-8986ADB49F92]]
 shopt -s cmdhist
 # 3E938C0F-6DEF-4458-9D30-8986ADB49F92 ends here
+# [[file:~/git/github/bash/bash.org::*History][C8EF2109-AFD6-4D45-9C6E-484BD3617CD3]]
+shopt -s lithist
+# C8EF2109-AFD6-4D45-9C6E-484BD3617CD3 ends here
 # [[file:~/git/github/bash/bash.org::*Interface][6016B0DA-855B-4DE0-9416-D043C1180246]]
 set -o emacs
 # 6016B0DA-855B-4DE0-9416-D043C1180246 ends here

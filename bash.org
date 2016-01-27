@@ -2736,6 +2736,13 @@ Easily re-edit historical multi-line commands.
 shopt -s cmdhist
 #+END_SRC
 
+Separate lines with newline characters
+
+#+NAME: C8EF2109-AFD6-4D45-9C6E-484BD3617CD3
+#+BEGIN_SRC sh
+shopt -s lithist
+#+END_SRC
+
 **** Interface
 :PROPERTIES:
 :ID:       ADA57C58-C529-4C1C-9C90-EB641215A4FA
