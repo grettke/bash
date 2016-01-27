@@ -2646,6 +2646,22 @@ the program can not run as intended. The system should fail-fast.
 set -o nounset
 #+END_SRC
 
+Assume that the user (computer or human) provided the correct directory-name
+arguments to a command and do not modify them. Auto-correction of directory
+names can *at best* cause *complete disaster* for a distracted operator.
+
+#+NAME: 69CDCB52-A45C-4D5C-97C1-6754620B922A
+#+BEGIN_SRC sh
+shopt -u cdspell
+#+END_SRC
+
+For directories, too.
+
+#+NAME: 3332E975-30FF-4B12-B7FB-3904DEA0312B
+#+BEGIN_SRC sh
+shopt -u dirspell
+#+END_SRC
+
 **** Performance
 :PROPERTIES:
 :ID:       43064DA1-6F0A-4C53-91DE-0F0526492FAB
@@ -2753,15 +2769,6 @@ It is too easy to accidentally leave a shell by typing Control-D. Prevent it.
 #+NAME: D1E49BDB-3D0B-4DFD-9817-0322C560B378
 #+BEGIN_SRC sh
 set -o ignoreeof
-#+END_SRC
-
-Assume that the user (computer or human) provided the correct directory-name
-arguments to a command and do not modify them. Auto-correction of directory
-names can *at best* cause *complete disaster* for a distracted operator.
-
-#+NAME: 69CDCB52-A45C-4D5C-97C1-6754620B922A
-#+BEGIN_SRC sh
-shopt -u cdspell
 #+END_SRC
 
 ** Global Shell Configuration Files
