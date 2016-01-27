@@ -2489,6 +2489,7 @@ digraph version5 {
 :END:
 
 ** Global
+
 *** BashCore
 :PROPERTIES:
 :header-args: :noweb-ref BashCore
