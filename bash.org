@@ -2657,6 +2657,7 @@ that before searching the lookup path to find a command.
 #+NAME: DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9
 #+BEGIN_SRC sh
 set -o hashall
+shopt -s checkhash
 #+END_SRC
 
 *** BashNonInteractiveCore

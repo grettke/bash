@@ -37,6 +37,7 @@ set -o nounset
 # A83FCBAD-BD08-46EF-B8DC-08F834CD0774 ends here
 # [[file:~/git/github/bash/bash.org::*Performance][DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9]]
 set -o hashall
+shopt -s checkhash
 # DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9 ends here
 # [[file:~/git/github/bash/bash.org::*History][53C74C4A-D580-4DC3-8053-7D0268A63A5F]]
 set -o history
