@@ -1,3 +1,5 @@
 # [[file:bash.org::*Interactive][861890CF-0E4B-48FF-83C6-514C3CC395DC]]
-
+# [[file:~/git/github/bash/bash.org::*BashCore][CFACD6C3-617A-42E7-A672-DE55C1F6C9E9]]
+set -o allexport
+# CFACD6C3-617A-42E7-A672-DE55C1F6C9E9 ends here
 # 861890CF-0E4B-48FF-83C6-514C3CC395DC ends here

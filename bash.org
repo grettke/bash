@@ -2499,6 +2499,15 @@ digraph version5 {
 :ID:       742113EF-114F-4FF9-B543-06C748E9153C
 :END:
 
+Every change (creation and modification) made to the parent shell
+environment (functions and variables) should be automatically exported to every
+child shell environment.
+
+#+NAME: CFACD6C3-617A-42E7-A672-DE55C1F6C9E9
+#+BEGIN_SRC sh
+set -o allexport
+#+END_SRC
+
 *** BashNonInteractiveCore
 :PROPERTIES:
 :header-args: :noweb-ref BashNonInteractiveCore
@@ -2527,7 +2536,7 @@ digraph version5 {
 :END:
 
 #+NAME: AB646FCB-6048-4B21-B231-71DB5F64E465
-#+BEGIN_SRC shell bash :tangle ./.bash_global_non_interactive
+#+BEGIN_SRC sh :tangle ./.bash_global_non_interactive
 <<BashCore>>
 <<BashNonInteractiveCore>>
 #+END_SRC
@@ -2538,7 +2547,7 @@ digraph version5 {
 :END:
 
 #+NAME: 861890CF-0E4B-48FF-83C6-514C3CC395DC
-#+BEGIN_SRC shell bash :tangle ./.bash_global_interactive
+#+BEGIN_SRC sh :tangle ./.bash_global_interactive
 <<BashCore>>
 <<BashInteractiveCore>>
 #+END_SRC
@@ -2557,14 +2566,14 @@ digraph version5 {
 Execute the same configuration as every non-login interactive shell.
 
 #+NAME: D8D66A14-3B1C-4537-963E-45DBC3D286B2
-#+BEGIN_SRC shell bash
+#+BEGIN_SRC sh
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 #+END_SRC
 
 Have fun.
 
 #+NAME: 0DE550E8-DABB-45E0-A8CC-11CDC0A2279A
-#+BEGIN_SRC shell bash
+#+BEGIN_SRC sh
 fortune
 #+END_SRC
 
@@ -2575,7 +2584,7 @@ fortune
 :END:
 
 #+NAME: A4502549-BA36-4C40-A12A-E42A72B6384C
-#+BEGIN_SRC shell bash
+#+BEGIN_SRC sh
 source ~/.bash_global_interactive
 #+END_SRC
 
@@ -2588,7 +2597,7 @@ source ~/.bash_global_interactive
 Have fun.
 
 #+NAME: 891ED468-F802-4378-BA5C-0BF874CAB4F1
-#+BEGIN_SRC shell bash
+#+BEGIN_SRC sh
 printf 'Sayonara!\n' && sleep 1
 #+END_SRC
 
@@ -2599,7 +2608,7 @@ printf 'Sayonara!\n' && sleep 1
 :END:
 
 #+NAME: F7D52399-F20C-466D-B59B-93F89D4CF985
-#+BEGIN_SRC shell bash
+#+BEGIN_SRC sh
 function bash_deploy() {
     ln -s -f ${PWD}/.bash_profile ~/.bash_profile
     ln -s -f ${PWD}/.bash_logout ~/.bash_logout
