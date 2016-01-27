@@ -44,6 +44,9 @@ set -o histexpand
 # [[file:~/git/github/bash/bash.org::*Interface][6016B0DA-855B-4DE0-9416-D043C1180246]]
 set -o emacs
 # 6016B0DA-855B-4DE0-9416-D043C1180246 ends here
+# [[file:~/git/github/bash/bash.org::*Interface][9118B957-42C5-401B-9ED0-939D54BC549A]]
+shopt -s autocd
+# 9118B957-42C5-401B-9ED0-939D54BC549A ends here
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][D1E49BDB-3D0B-4DFD-9817-0322C560B378]]
 set -o ignoreeof
 # D1E49BDB-3D0B-4DFD-9817-0322C560B378 ends here

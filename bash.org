@@ -2695,6 +2695,13 @@ Use EMACS keybindings for ~Readline~ and ~read~.
 set -o emacs
 #+END_SRC
 
+When the command name is a directory in the =$PWD= pass it to =cd=.
+
+#+NAME: 9118B957-42C5-401B-9ED0-939D54BC549A
+#+BEGIN_SRC sh
+shopt -s autocd
+#+END_SRC
+
 **** No Surprises
 :PROPERTIES:
 :ID:       1A962AE3-6CFA-47F0-B56C-029C03D5B10B
