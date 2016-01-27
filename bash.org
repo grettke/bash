@@ -2522,6 +2522,14 @@ extent. This could go either way.
 set -o keyword
 #+END_SRC
 
+Provide aliases no matter how limited they may seem they are useful even in
+their basic form.
+
+#+NAME: CABCFC8A-89AB-41AE-9A46-514F1D6C8240
+#+BEGIN_SRC sh
+shopt -s expand_aliases
+#+END_SRC
+
 **** Fail Fast
 :PROPERTIES:
 :ID:       8B249641-2851-4AC0-BEE0-F720ED92AB4B
