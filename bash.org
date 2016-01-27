@@ -2523,7 +2523,6 @@ set -o keyword
 #+END_SRC
 
 Pass a non-directory arguments to =cd= and change to the value of that variable.
-Strings are manifest in Bash so typing a directory name enters that directory.
 
 #+NAME: 26B4365A-1F13-4ECD-99EB-964C276533EE
 #+BEGIN_SRC sh
