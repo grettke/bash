@@ -8,6 +8,9 @@ set -o braceexpand
 # [[file:~/git/github/bash/bash.org::*Principle%20of%20Least%20Astonishment][9086FA3B-EC85-486F-87AB-35F72D57602B]]
 set -o noclobber
 # 9086FA3B-EC85-486F-87AB-35F72D57602B ends here
+# [[file:~/git/github/bash/bash.org::*Principle%20of%20Least%20Astonishment][A83FCBAD-BD08-46EF-B8DC-08F834CD0774]]
+set -o nounset
+# A83FCBAD-BD08-46EF-B8DC-08F834CD0774 ends here
 # [[file:~/git/github/bash/bash.org::*Interface][6016B0DA-855B-4DE0-9416-D043C1180246]]
 set -o emacs
 # 6016B0DA-855B-4DE0-9416-D043C1180246 ends here
