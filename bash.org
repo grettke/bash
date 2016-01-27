@@ -2120,7 +2120,7 @@ initializations.
 
 - Everything in this heading is for use by reference so no notes to follow
 
-** TODO Bash Debugger
+** HELD-BLOCKED Bash Debugger
 :PROPERTIES:
 :ID:       4DF379DD-3A65-4802-9725-B184A64787DB
 :END:
@@ -2134,7 +2134,7 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 '
 #+END_SRC
 
-** TODO Bash FAQ
+** HELD-BLOCKED Bash FAQ
 :PROPERTIES:
 :ID:       42D2E376-FD07-41EF-91F7-673072BC412A
 :END:
@@ -2934,9 +2934,5 @@ function bash_deploy() {
 
 bash_deploy
 #+END_SRC
-
-#+RESULTS: F7D52399-F20C-466D-B59B-93F89D4CF985
-#+BEGIN_EXAMPLE
-#+END_EXAMPLE
 
 #  LocalWords:  expressivity
