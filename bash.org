@@ -2585,9 +2585,11 @@ source ~/.bash_global_interactive
 :header-args: :tangle ./.bash_logout
 :END:
 
+Have fun.
+
 #+NAME: 891ED468-F802-4378-BA5C-0BF874CAB4F1
 #+BEGIN_SRC shell bash
-
+printf 'Sayonara!\n' && sleep 1
 #+END_SRC
 
 * Deployment
