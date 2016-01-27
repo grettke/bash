@@ -2647,6 +2647,25 @@ Use EMACS keybindings for ~Readline~ and ~read~.
 set -o emacs
 #+END_SRC
 
+**** History
+:PROPERTIES:
+:ID:       C084E7AC-39D8-4FD9-BCFA-44B9BA34BFDC
+:END:
+
+Enable command history.
+
+#+NAME: 53C74C4A-D580-4DC3-8053-7D0268A63A5F
+#+BEGIN_SRC sh
+set -o history
+#+END_SRC
+
+Enable ~!~ substitution.
+
+#+NAME: 9BE45C01-2156-4A19-83CB-9759A66E5749
+#+BEGIN_SRC sh
+set -o histexpand
+#+END_SRC
+
 * Tangling
 :PROPERTIES:
 :ID:       10850BD7-EB7F-4F2A-B349-1A2300FED2EE
