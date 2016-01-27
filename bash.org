@@ -2539,8 +2539,14 @@ digraph version5 {
 #+END_SRC
 
 ** Login Shell Configuration Files
+:PROPERTIES:
+:ID:       B6560BA2-9AF6-42DA-BF9C-1B31D2157DE2
+:END:
 
 *** BashProfile
+:PROPERTIES:
+:ID:       71EDEF3E-56E7-43FE-A483-19419629472D
+:END:
 
 #+NAME: D8D66A14-3B1C-4537-963E-45DBC3D286B2
 #+BEGIN_SRC shell bash :tangle ./.bash_profile
