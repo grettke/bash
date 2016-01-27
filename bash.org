@@ -2528,7 +2528,8 @@ digraph version5 {
 
 #+NAME: AB646FCB-6048-4B21-B231-71DB5F64E465
 #+BEGIN_SRC shell bash :tangle ./.bash_global_non_interactive
-
+<<BashCore>>
+<<BashNonInteractiveCore>>
 #+END_SRC
 
 *** Interactive
@@ -2538,7 +2539,8 @@ digraph version5 {
 
 #+NAME: 861890CF-0E4B-48FF-83C6-514C3CC395DC
 #+BEGIN_SRC shell bash :tangle ./.bash_global_interactive
-
+<<BashCore>>
+<<BashInteractiveCore>>
 #+END_SRC
 
 ** Login Shell Configuration Files
