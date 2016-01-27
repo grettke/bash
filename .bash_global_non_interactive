@@ -23,6 +23,9 @@ set -o functrace
 # [[file:~/git/github/bash/bash.org::*Job%20Control][58D8B849-7FD3-430A-9914-49DEF15EB886]]
 set -o monitor
 # 58D8B849-7FD3-430A-9914-49DEF15EB886 ends here
+# [[file:~/git/github/bash/bash.org::*Job%20Control][F0055BD6-96CF-4B81-B11C-F9B99F5085F8]]
+set -o notify
+# F0055BD6-96CF-4B81-B11C-F9B99F5085F8 ends here
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][9086FA3B-EC85-486F-87AB-35F72D57602B]]
 set -o noclobber
 # 9086FA3B-EC85-486F-87AB-35F72D57602B ends here

@@ -2603,6 +2603,15 @@ Enable it.
 set -o monitor
 #+END_SRC
 
+Immediately report terminated job status. This might appear to be a Interactive
+feature, but it isn't. It appears hear reporting errors in the log file
+immediately realizing this Bash configurations "Fail Fast" goal.
+
+#+NAME: F0055BD6-96CF-4B81-B11C-F9B99F5085F8
+#+BEGIN_SRC sh
+set -o notify
+#+END_SRC
+
 **** No Surprises
 :PROPERTIES:
 :ID:       226DA083-4784-4899-BC5F-4B36C8366C41
