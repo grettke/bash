@@ -2500,6 +2500,24 @@ digraph version5 {
 :header-args: :noweb-ref BashInteractiveCore
 :END:
 
+* Tangling
+
+** Global Shell Configuration Files
+
+*** Non-Interactive
+
+#+NAME: AB646FCB-6048-4B21-B231-71DB5F64E465
+#+BEGIN_SRC shell bash :tangle ./.bash_global_non_interactive
+
+#+END_SRC
+
+*** Interactive
+
+#+NAME: 861890CF-0E4B-48FF-83C6-514C3CC395DC
+#+BEGIN_SRC shell bash :tangle ./.bash_global_interactive
+
+#+END_SRC
+
 * Deployment
 :PROPERTIES:
 :header-args: :tangle ./deploy :tangle-mode (identity #o755)
