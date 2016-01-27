@@ -2709,6 +2709,17 @@ shopt -s checkhash
 :header-args: :noweb-ref BashInteractiveCore
 :ID:       1AB9EF9D-8F1D-43C6-B557-7800B7A4AA2F
 :END:
+**** Expressivity
+:PROPERTIES:
+:ID:       61322BCD-6B87-43C1-8BB2-A27C18519AF3
+:END:
+
+Programatically complete command options.
+
+#+NAME: ABCE11CE-B9DB-4060-BA30-F65C48353321
+#+BEGIN_SRC sh
+shopt -s progcomp
+#+END_SRC
 
 **** History
 :PROPERTIES:

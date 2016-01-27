@@ -54,6 +54,9 @@ shopt -u dirspell
 set -o hashall
 shopt -s checkhash
 # DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9 ends here
+# [[file:~/git/github/bash/bash.org::*Expressivity][ABCE11CE-B9DB-4060-BA30-F65C48353321]]
+shopt -s progcomp
+# ABCE11CE-B9DB-4060-BA30-F65C48353321 ends here
 # [[file:~/git/github/bash/bash.org::*History][53C74C4A-D580-4DC3-8053-7D0268A63A5F]]
 set -o history
 # 53C74C4A-D580-4DC3-8053-7D0268A63A5F ends here
