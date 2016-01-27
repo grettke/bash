@@ -2485,6 +2485,21 @@ digraph version5 {
 :ID:       A1DF7D9E-5B52-46D6-90CB-FC43C50D5E41
 :END:
 
+** BashCore
+:PROPERTIES:
+:header-args: :noweb-ref BashCore
+:END:
+
+** BashNonInteractiveCore
+:PROPERTIES:
+:header-args: :noweb-ref BashNonInteractiveCore
+:END:
+
+** BashInteractiveCore
+:PROPERTIES:
+:header-args: :noweb-ref BashInteractiveCore
+:END:
+
 * Deployment
 :PROPERTIES:
 :header-args: :tangle ./deploy :tangle-mode (identity #o755)
