@@ -2821,6 +2821,14 @@ Enable debuggers.
 shopt -s extdebug
 #+END_SRC
 
+Never attempt to complete a command in the contents of =PATH= when nothing is
+typed in.
+
+#+NAME: 9C862A09-726B-47E0-B2CD-E376146405AA
+#+BEGIN_SRC sh
+shopt -s no_empty_cmd_completion
+#+END_SRC
+
 ** Global Shell Configuration Files
 :PROPERTIES:
 :ID:       7D227BB5-1E04-40A3-B8EE-4F5913C0264C
