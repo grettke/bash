@@ -20,6 +20,9 @@ set -o errtrace
 # [[file:~/git/github/bash/bash.org::*Inheritance][0A61B3AC-32CB-4189-852F-0D9956BB1D1F]]
 set -o functrace
 # 0A61B3AC-32CB-4189-852F-0D9956BB1D1F ends here
+# [[file:~/git/github/bash/bash.org::*Job%20Control][58D8B849-7FD3-430A-9914-49DEF15EB886]]
+set -o monitor
+# 58D8B849-7FD3-430A-9914-49DEF15EB886 ends here
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][9086FA3B-EC85-486F-87AB-35F72D57602B]]
 set -o noclobber
 # 9086FA3B-EC85-486F-87AB-35F72D57602B ends here

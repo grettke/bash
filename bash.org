@@ -2591,6 +2591,18 @@ Do the same thing for the ~DEBUG~ and ~RETURN~ traps.
 set -o functrace
 #+END_SRC
 
+**** Job Control
+:PROPERTIES:
+:ID:       84F714C4-0A65-4FBD-8465-762D336FC366
+:END:
+
+Enable it.
+
+#+NAME: 58D8B849-7FD3-430A-9914-49DEF15EB886
+#+BEGIN_SRC sh
+set -o monitor
+#+END_SRC
+
 **** No Surprises
 :PROPERTIES:
 :ID:       226DA083-4784-4899-BC5F-4B36C8366C41
