@@ -2489,6 +2489,9 @@ digraph version5 {
 :END:
 
 ** Global
+:PROPERTIES:
+:ID:       E5068275-CDEC-4A3F-B33E-875B505133D9
+:END:
 
 *** BashCore
 :PROPERTIES:
@@ -2554,6 +2557,9 @@ digraph version5 {
 #+END_SRC
 
 *** BashRc
+:PROPERTIES:
+:ID:       6EC5CFD7-9EF9-42DC-B695-3202F2A303C0
+:END:
 
 #+NAME: A4502549-BA36-4C40-A12A-E42A72B6384C
 #+BEGIN_SRC shell bash :tangle ./.bashrc
@@ -2561,6 +2567,9 @@ digraph version5 {
 #+END_SRC
 
 *** BashLogout
+:PROPERTIES:
+:ID:       05FCD6B3-FF57-4C10-9552-8F41686F1019
+:END:
 
 #+NAME: 891ED468-F802-4378-BA5C-0BF874CAB4F1
 #+BEGIN_SRC shell bash :tangle ./.bash_logout
