@@ -87,4 +87,7 @@ shopt -s huponexit
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][D1E49BDB-3D0B-4DFD-9817-0322C560B378]]
 set -o ignoreeof
 # D1E49BDB-3D0B-4DFD-9817-0322C560B378 ends here
+# [[file:~/git/github/bash/bash.org::*No%20Surprises][FAB2F5D9-E5D3-4252-A0F9-853375344CFF]]
+shopt -s extdebug
+# FAB2F5D9-E5D3-4252-A0F9-853375344CFF ends here
 # 861890CF-0E4B-48FF-83C6-514C3CC395DC ends here

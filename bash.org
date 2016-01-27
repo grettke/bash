@@ -2807,6 +2807,13 @@ It is too easy to accidentally leave a shell by typing Control-D. Prevent it.
 set -o ignoreeof
 #+END_SRC
 
+Enable debuggers.
+
+#+NAME: FAB2F5D9-E5D3-4252-A0F9-853375344CFF
+#+BEGIN_SRC sh
+shopt -s extdebug
+#+END_SRC
+
 ** Global Shell Configuration Files
 :PROPERTIES:
 :ID:       7D227BB5-1E04-40A3-B8EE-4F5913C0264C
