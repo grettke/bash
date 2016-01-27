@@ -2523,16 +2523,20 @@ Exit immediately when a command in a pipeline fails. Assume the worst. If the
 result of calling the failed command is not an emergency, then find the
 parameter for that command which prevents it from reporting a failure. This
 looks like an extreme configuration decision, but it isn't. The behavior is
-disabled for a situations where the command is
+disabled for the following expected situations where the command is
 
-- in ~while~ or ~until~ block
-- is part of an ~if~ test
-- short-circuit evaluation
-  - surprised at this behavior!
-  - but for the last command
-- any command in a pipeline but the last
-  - surprised at this behavior!
-- having it's return status inverted by ~!~
+- Exceptions
+  - in ~while~ or ~until~ block
+  - is part of an ~if~ test
+  - short-circuit evaluation
+    - surprised at this behavior!
+    - but for the last command
+  - any command in a pipeline but the last
+    - surprised at this behavior!
+  - having it's return status inverted by ~!~
+- This seems strange; I read this as we won't get the desired behavior during a
+  sequence of express and that is the exact place where we want that behavior.
+  Perform research on this.
 
 This allows for expressions like ~false || printf "Hey, that failed" && sleep 10~;
 and still fail fast most of the time.
