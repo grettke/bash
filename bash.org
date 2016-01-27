@@ -2764,13 +2764,6 @@ names can *at best* cause *complete disaster* for a distracted operator.
 shopt -u cdspell
 #+END_SRC
 
-Never *
-
-automatically Tangling
-:PROPERTIES:
-:ID:       10850BD7-EB7F-4F2A-B349-1A2300FED2EE
-:END:
-
 ** Global Shell Configuration Files
 :PROPERTIES:
 :ID:       7D227BB5-1E04-40A3-B8EE-4F5913C0264C
