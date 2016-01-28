@@ -2142,8 +2142,6 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 - [[ftp://ftp.cwru.edu/pub/bash/FAQ][Here]]
 - Seems like a good document to skim
 
-** TODO [[http://www.davidpashley.com/articles/writing-robust-shell-scripts/][Writing Robust Bash Shell Scripts]]
-
 ** Questions answered with web search results
 :PROPERTIES:
 :ID:       E640A774-E706-4903-88F0-3808FED40580
@@ -2246,6 +2244,10 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 - [[http://perlgeek.de/en/article/set-up-a-clean-utf8-environment][How to set up a clean UTF-8 environment in Linux]]
 - [[http://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/][OS X Terminal: -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory]]
 - [[https://unix.stackexchange.com/questions/87745/what-does-lc-all-c-do][What does “LC_ALL=C” do?]]
+
+** TODO [[http://www.davidpashley.com/articles/writing-robust-shell-scripts/][Writing Robust Bash Shell Scripts]]
+
+** TODO [[http://redsymbol.net/articles/unofficial-bash-strict-mode/][Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)]]
 
 * Making Sense of this Script
 :PROPERTIES:
