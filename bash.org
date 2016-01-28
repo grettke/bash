@@ -2822,6 +2822,36 @@ Enable comments.
 shopt -s interactive_comments
 #+END_SRC
 
+Provide just enough information at the prompt to be useful without cluttering
+up the terminal.
+
+#+NAME: F81D2132-6006-439F-B281-F031B2C931E1
+#+BEGIN_SRC sh
+PS1='\u@\h:\w> '
+#+END_SRC
+
+Make the continued prompt obvious. It is easily forgotten.
+
+#+NAME: EC1C20AF-9756-48CB-AE10-4262D8AE53BD
+#+BEGIN_SRC sh
+PS2='↪> '
+#+END_SRC
+
+Obviously prompt you to make a selection.
+
+#+NAME: 50C0C13E-59FB-4A03-8AF6-8FF694C264B5
+#+BEGIN_SRC sh
+PS3='�> '
+#+END_SRC
+
+Enable the Bash Debugger.
+
+#+NAME: 6CAA9DCC-D799-469E-BFF6-1D2064AE4305
+#+BEGIN_SRC sh
+PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?]
+'
+#+END_SRC
+
 ***** Job Control
 :PROPERTIES:
 :ID:       31ED5B89-34FC-4C9B-A5F9-3F9E3D4DD907
