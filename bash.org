@@ -2236,6 +2236,9 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 - http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html
 
 *** UTF-8
+:PROPERTIES:
+:ID:       F01462B2-76AC-4164-9E8E-59D18FD41A92
+:END:
 
 - [[http://perlgeek.de/en/article/set-up-a-clean-utf8-environment][How to set up a clean UTF-8 environment in Linux]]
 - [[http://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/][OS X Terminal: -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory]]
@@ -2505,7 +2508,11 @@ digraph version5 {
 :ID:       742113EF-114F-4FF9-B543-06C748E9153C
 :END:
 
-**** Expressivity
+**** Options
+:PROPERTIES:
+:ID:       D2F74D27-DADE-4396-B332-64FA0C9EEE52
+:END:
+***** Expressivity
 :PROPERTIES:
 :ID:       DAA8B5AA-D4F0-4D48-BDF7-91D82C750A7A
 :END:
@@ -2536,7 +2543,7 @@ their basic form.
 shopt -s expand_aliases
 #+END_SRC
 
-**** Fail Fast
+***** Fail Fast
 :PROPERTIES:
 :ID:       8B249641-2851-4AC0-BEE0-F720ED92AB4B
 :END:
@@ -2591,7 +2598,7 @@ Report an error when you ~shift~ more parameters than you received.
 shopt -s shift_verbose
 #+END_SRC
 
-**** Inheritance
+***** Inheritance
 :PROPERTIES:
 :ID:       A8018763-74CF-414F-BB18-BC772A92EB77
 :END:
@@ -2626,7 +2633,7 @@ Pass a non-directory arguments to =cd= and change to the value of that variable.
 shopt -s cdable_vars
 #+END_SRC
 
-**** Job Control
+***** Job Control
 :PROPERTIES:
 :ID:       84F714C4-0A65-4FBD-8465-762D336FC366
 :END:
@@ -2647,7 +2654,7 @@ immediately realizing this Bash configurations "Fail Fast" goal.
 set -o notify
 #+END_SRC
 
-**** No Surprises
+***** No Surprises
 :PROPERTIES:
 :ID:       226DA083-4784-4899-BC5F-4B36C8366C41
 :END:
@@ -2690,7 +2697,7 @@ For directories, too.
 shopt -u dirspell
 #+END_SRC
 
-**** Performance
+***** Performance
 :PROPERTIES:
 :ID:       43064DA1-6F0A-4C53-91DE-0F0526492FAB
 :END:
@@ -2715,7 +2722,11 @@ shopt -s checkhash
 :header-args: :noweb-ref BashInteractiveCore
 :ID:       1AB9EF9D-8F1D-43C6-B557-7800B7A4AA2F
 :END:
-**** Expressivity
+**** Options
+:PROPERTIES:
+:ID:       F9663A3E-2D84-4A5C-82AB-7A2C4C92B2A5
+:END:
+***** Expressivity
 :PROPERTIES:
 :ID:       61322BCD-6B87-43C1-8BB2-A27C18519AF3
 :END:
@@ -2727,7 +2738,7 @@ Programatically complete command options.
 shopt -s progcomp
 #+END_SRC
 
-**** History
+***** History
 :PROPERTIES:
 :ID:       C084E7AC-39D8-4FD9-BCFA-44B9BA34BFDC
 :END:
@@ -2760,7 +2771,7 @@ Separate lines with newline characters
 shopt -s lithist
 #+END_SRC
 
-**** Interface
+***** Interface
 :PROPERTIES:
 :ID:       ADA57C58-C529-4C1C-9C90-EB641215A4FA
 :END:
@@ -2800,7 +2811,7 @@ Enable comments.
 shopt -s interactive_comments
 #+END_SRC
 
-**** Job Control
+***** Job Control
 :PROPERTIES:
 :ID:       31ED5B89-34FC-4C9B-A5F9-3F9E3D4DD907
 :END:
@@ -2819,7 +2830,7 @@ Send =HUP= to all child processes when the interactive parent shell exits.
 shopt -s huponexit
 #+END_SRC
 
-**** No Surprises
+***** No Surprises
 :PROPERTIES:
 :ID:       1A962AE3-6CFA-47F0-B56C-029C03D5B10B
 :END:
