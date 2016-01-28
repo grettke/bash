@@ -2235,6 +2235,12 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 
 - http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html
 
+*** UTF-8
+
+- [[http://perlgeek.de/en/article/set-up-a-clean-utf8-environment][How to set up a clean UTF-8 environment in Linux]]
+- [[http://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/][OS X Terminal: -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory]]
+- [[https://unix.stackexchange.com/questions/87745/what-does-lc-all-c-do][What does “LC_ALL=C” do?]]
+
 * Making Sense of this Script
 :PROPERTIES:
 :ID:       886036D5-3715-492B-9ABF-825F4058A995
