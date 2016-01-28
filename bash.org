@@ -2439,7 +2439,7 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
   - Any further scope has no desires or experience to guide it
     - Attempting to do anything more would result in aimless fruitless wandering
 
-*** TODO Version 04
+*** Version 04
 :PROPERTIES:
 :ID:       F12494B4-C1D7-40D1-81CC-D19632D0E7B9
 :END:
@@ -2467,7 +2467,6 @@ digraph version5 {
     BashProfile[shape = "note" label = ".bash_profile\n\nYour session start commands, once"];
     BashRc[shape = "note" label = ".bashrc\n\nsource #BASH_GLOBAL_INTERACTIVE_ENV\nYour once for every\nshell created commands"];
     BashLogout[shape = "note" label = ".bash_logout\n\nYour session end commands, once"];
-    BashInteractiveEnvProp [shape = "rarrow" label = "BASH_ENV"];
     BashGlobalInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_INTERACTIVE_ENV"];
   }
   subgraph cluster_D {
@@ -2476,7 +2475,6 @@ digraph version5 {
     BashGlobalNonInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_NON_INTERACTIVE_ENV"];
     BashNonInteractiveLoginInit [shape = "rarrow" label="--login"];
   }
-  BashInteractiveEnvProp -> BashGlobalInteractiveProp;
   BashProfile -> BashRc;
   BashRc -> BashLogout;
   BashEnv -> BashGlobalNonInteractiveProp -> BashGlobalNonInteractiveFile;
