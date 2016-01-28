@@ -53,6 +53,9 @@ shopt -u cdspell
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][3332E975-30FF-4B12-B7FB-3904DEA0312B]]
 shopt -u dirspell
 # 3332E975-30FF-4B12-B7FB-3904DEA0312B ends here
+# [[file:~/git/github/bash/bash.org::*No%20Surprises][68DC48E0-D643-46CF-8C84-DE3AC3B8C2EF]]
+TMPDIR='/tmp'
+# 68DC48E0-D643-46CF-8C84-DE3AC3B8C2EF ends here
 # [[file:~/git/github/bash/bash.org::*Performance][DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9]]
 set -o hashall
 shopt -s checkhash

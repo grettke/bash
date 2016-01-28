@@ -2708,6 +2708,13 @@ For directories, too.
 shopt -u dirspell
 #+END_SRC
 
+Put temporary files in one place.
+
+#+NAME: 68DC48E0-D643-46CF-8C84-DE3AC3B8C2EF
+#+BEGIN_SRC sh
+TMPDIR='/tmp'
+#+END_SRC
+
 ***** Performance
 :PROPERTIES:
 :ID:       43064DA1-6F0A-4C53-91DE-0F0526492FAB
