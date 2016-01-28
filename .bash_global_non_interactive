@@ -38,6 +38,9 @@ set -o monitor
 # [[file:~/git/github/bash/bash.org::*Job%20Control][F0055BD6-96CF-4B81-B11C-F9B99F5085F8]]
 set -o notify
 # F0055BD6-96CF-4B81-B11C-F9B99F5085F8 ends here
+# [[file:~/git/github/bash/bash.org::*No%20Surprises][FAB2F5D9-E5D3-4252-A0F9-853375344CFF]]
+shopt -s extdebug
+# FAB2F5D9-E5D3-4252-A0F9-853375344CFF ends here
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][9086FA3B-EC85-486F-87AB-35F72D57602B]]
 set -o noclobber
 # 9086FA3B-EC85-486F-87AB-35F72D57602B ends here

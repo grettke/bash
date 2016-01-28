@@ -2659,6 +2659,14 @@ set -o notify
 :ID:       226DA083-4784-4899-BC5F-4B36C8366C41
 :END:
 
+Enable debugging information used both in non-interactive runs and interactive
+debugging.
+
+#+NAME: FAB2F5D9-E5D3-4252-A0F9-853375344CFF
+#+BEGIN_SRC sh
+shopt -s extdebug
+#+END_SRC
+
 Log files are often identified as important only after accidentally clobbering
 them. Make stomping visible  by first deleting them and then writing them
 out again. Doing so is easy to automate and searchable.
@@ -2840,13 +2848,6 @@ It is too easy to accidentally leave a shell by typing Control-D. Prevent it.
 #+NAME: D1E49BDB-3D0B-4DFD-9817-0322C560B378
 #+BEGIN_SRC sh
 set -o ignoreeof
-#+END_SRC
-
-Enable debuggers.
-
-#+NAME: FAB2F5D9-E5D3-4252-A0F9-853375344CFF
-#+BEGIN_SRC sh
-shopt -s extdebug
 #+END_SRC
 
 Never attempt to complete a command in the contents of =PATH= when nothing is
