@@ -2897,6 +2897,18 @@ Track history with basically a ISO-8601 timestamp.
 HISTTIMEFORMAT='+%Y_%m_%d_%H_%M_%S'
 #+END_SRC
 
+***** Interface
+:PROPERTIES:
+:ID:       2F959536-B5F9-42F4-91B3-FB5497622E61
+:END:
+
+Only list the last 3 directories in the path; for everything deeper run ~pwd~.
+
+#+NAME: 2CDAF29A-605C-4D5D-AF0C-5DE7B5164C53
+#+BEGIN_SRC sh
+PROMPT_DIRTRIM=3
+#+END_SRC
+
 ** Global Shell Configuration Files
 :PROPERTIES:
 :ID:       7D227BB5-1E04-40A3-B8EE-4F5913C0264C
