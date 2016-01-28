@@ -2685,7 +2685,7 @@ Referencing an undefined variable or parameter should generate an error because
 the program can not run as intended. The system should fail-fast. Only use this
 in individual shell scripts; not the global configuration because doing so
 prevents Bash system initialization by preventing you to define any new
-variables!
+variables and dying!
 
 #+NAME: A83FCBAD-BD08-46EF-B8DC-08F834CD0774
 #+BEGIN_SRC sh
