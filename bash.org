@@ -2880,6 +2880,13 @@ Ignore every command that
 HISTIGNORE='[ \t]*'
 #+END_SRC
 
+Keep a rich and expansive history.
+
+#+NAME: 0674188D-A8F8-48D5-ABC9-2264772956B6
+#+BEGIN_SRC sh
+HISTSIZE=31102
+#+END_SRC
+
 ** Global Shell Configuration Files
 :PROPERTIES:
 :ID:       7D227BB5-1E04-40A3-B8EE-4F5913C0264C

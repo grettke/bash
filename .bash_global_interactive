@@ -102,4 +102,7 @@ shopt -s no_empty_cmd_completion
 # [[file:~/git/github/bash/bash.org::*History][FD3B6FDA-BC63-4DA0-B730-68CE46C04B9C]]
 HISTIGNORE='[ \t]*'
 # FD3B6FDA-BC63-4DA0-B730-68CE46C04B9C ends here
+# [[file:~/git/github/bash/bash.org::*History][0674188D-A8F8-48D5-ABC9-2264772956B6]]
+HISTSIZE=31102
+# 0674188D-A8F8-48D5-ABC9-2264772956B6 ends here
 # 861890CF-0E4B-48FF-83C6-514C3CC395DC ends here
