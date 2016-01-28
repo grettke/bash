@@ -2682,11 +2682,14 @@ set -o noclobber
 #+END_SRC
 
 Referencing an undefined variable or parameter should generate an error because
-the program can not run as intended. The system should fail-fast.
+the program can not run as intended. The system should fail-fast. Only use this
+in individual shell scripts; not the global configuration because doing so
+prevents Bash system initialization by preventing you to define any new
+variables!
 
 #+NAME: A83FCBAD-BD08-46EF-B8DC-08F834CD0774
 #+BEGIN_SRC sh
-set -o nounset
+# set -o nounset
 #+END_SRC
 
 Assume that the user (computer or human) provided the correct directory-name
