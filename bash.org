@@ -2236,7 +2236,7 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 
 - http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html
 
-*** UTF-8
+*** TODO UTF-8
 :PROPERTIES:
 :ID:       F01462B2-76AC-4164-9E8E-59D18FD41A92
 :END:
@@ -2245,13 +2245,18 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 - [[http://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/][OS X Terminal: -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory]]
 - [[https://unix.stackexchange.com/questions/87745/what-does-lc-all-c-do][What does “LC_ALL=C” do?]]
 
-** TODO [[http://www.davidpashley.com/articles/writing-robust-shell-scripts/][Writing Robust Bash Shell Scripts]]
+*** TODO Style & Supportability
 
-** TODO [[http://redsymbol.net/articles/unofficial-bash-strict-mode/][Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)]]
+**** TODO [[http://www.davidpashley.com/articles/writing-robust-shell-scripts/][Writing Robust Bash Shell Scripts]]
 
-** TODO [[https://news.ycombinator.com/item?id=8054440][Comment discussion]]
+**** TODO [[http://redsymbol.net/articles/unofficial-bash-strict-mode/][Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)]]
 
-** TODO [[http://mywiki.wooledge.org/BashSheet][BashSheet]]
+**** TODO [[https://news.ycombinator.com/item?id=8054440][Comment discussion]]
+
+*** TODO Good Summaries
+
+**** TODO [[http://mywiki.wooledge.org/BashSheet][BashSheet]]
+
 
 * Making Sense of this Script
 :PROPERTIES:
