@@ -2890,6 +2890,13 @@ Keep a rich and expansive history.
 HISTSIZE=31102
 #+END_SRC
 
+Track history with basically a ISO-8601 timestamp.
+
+#+NAME: D510B310-1DA6-4D72-837A-54D8DB28C789
+#+BEGIN_SRC sh
+HISTTIMEFORMAT='+%Y_%m_%d_%H_%M_%S'
+#+END_SRC
+
 ** Global Shell Configuration Files
 :PROPERTIES:
 :ID:       7D227BB5-1E04-40A3-B8EE-4F5913C0264C
