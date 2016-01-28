@@ -2858,6 +2858,24 @@ typed in.
 shopt -s no_empty_cmd_completion
 #+END_SRC
 
+**** Variables
+:PROPERTIES:
+:ID:       66E5F9F5-A58A-41A2-B86C-DCC645AC847E
+:END:
+
+***** History
+:PROPERTIES:
+:ID:       74AD211B-7575-43A7-B2F4-F6250EC6883B
+:END:
+
+Exclude history of commands starting with a space. Commands entered multiple
+times are important; keep their history (don't erase them).
+
+#+NAME: FD3B6FDA-BC63-4DA0-B730-68CE46C04B9C
+#+BEGIN_SRC sh
+HISTCONTROL=ignorespace
+#+END_SRC
+
 ** Global Shell Configuration Files
 :PROPERTIES:
 :ID:       7D227BB5-1E04-40A3-B8EE-4F5913C0264C

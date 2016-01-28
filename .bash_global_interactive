@@ -99,4 +99,7 @@ set -o ignoreeof
 # [[file:~/git/github/bash/bash.org::*No%20Surprises][9C862A09-726B-47E0-B2CD-E376146405AA]]
 shopt -s no_empty_cmd_completion
 # 9C862A09-726B-47E0-B2CD-E376146405AA ends here
+# [[file:~/git/github/bash/bash.org::*History][FD3B6FDA-BC63-4DA0-B730-68CE46C04B9C]]
+HISTCONTROL=ignorespace
+# FD3B6FDA-BC63-4DA0-B730-68CE46C04B9C ends here
 # 861890CF-0E4B-48FF-83C6-514C3CC395DC ends here
