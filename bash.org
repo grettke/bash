@@ -2871,9 +2871,13 @@ shopt -s no_empty_cmd_completion
 Exclude history of commands starting with a space. Commands entered multiple
 times are important; keep their history (don't erase them).
 
+Ignore every command that
+- Starts with any number of spaces
+- Starts with any number of tabs
+
 #+NAME: FD3B6FDA-BC63-4DA0-B730-68CE46C04B9C
 #+BEGIN_SRC sh
-HISTCONTROL=ignorespace
+HISTIGNORE='[ \t]*'
 #+END_SRC
 
 ** Global Shell Configuration Files
