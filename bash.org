@@ -3064,9 +3064,15 @@ fortune
 source ~/.bash_global_interactive
 #+END_SRC
 
+VIM is the best system editor.
+
 #+NAME: 08792628-161D-4530-B789-7CE1CE308189
 #+BEGIN_SRC sh
 export VISUAL=vim
+#+END_SRC
+
+#+NAME: AD54A868-318C-4033-A593-93ED0184A1B4
+#+BEGIN_SRC sh
 export EDITOR='$VISUAL'
 export HOMEBREW_NO_EMOJI=1
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home"
