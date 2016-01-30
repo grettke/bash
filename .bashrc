@@ -40,9 +40,9 @@ PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$PATH"
 
 # [[file:bash.org::*BashRc][10224F22-A50D-4B6F-9D25-604E423128FA]]
 function e {
-    emacs --debug-init
+    emacs --debug-init &
 }
 function ec {
-    emacs -nw --debug-init
+    emacs -nw --debug-init &
 }
 # 10224F22-A50D-4B6F-9D25-604E423128FA ends here
