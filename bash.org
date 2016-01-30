@@ -2246,18 +2246,39 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 - [[https://unix.stackexchange.com/questions/87745/what-does-lc-all-c-do][What does “LC_ALL=C” do?]]
 
 *** TODO Style & Supportability
+:PROPERTIES:
+:ID:       10E0F5E9-AB88-4538-A9AA-321BC1556952
+:END:
 
 **** TODO [[http://www.davidpashley.com/articles/writing-robust-shell-scripts/][Writing Robust Bash Shell Scripts]]
+:PROPERTIES:
+:ID:       26CA0E5C-444C-45CB-90AF-99CD70CACBDB
+:END:
 
 **** TODO [[http://redsymbol.net/articles/unofficial-bash-strict-mode/][Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)]]
+:PROPERTIES:
+:ID:       34C67647-B78F-4723-BCF5-3C554FE9414E
+:END:
 
 **** TODO [[https://news.ycombinator.com/item?id=8054440][Comment discussion]]
+:PROPERTIES:
+:ID:       6630115A-2503-4897-8D29-36D885345F09
+:END:
 
 *** TODO Good Summaries
+:PROPERTIES:
+:ID:       3DC2210D-D4F7-40C7-A549-3594698CBA62
+:END:
 
 **** TODO [[http://mywiki.wooledge.org/BashSheet][BashSheet]]
+:PROPERTIES:
+:ID:       E7CD49E0-432E-4848-BF22-6CAD0CBAED90
+:END:
 
 *** TODO Tips, Tricks, 1-Liners
+:PROPERTIES:
+:ID:       49C13032-0D47-4C88-81F2-0CB680D73A7A
+:END:
 
 * Making Sense of this Script
 :PROPERTIES:
@@ -2969,10 +2990,11 @@ PROMPT_DIRTRIM=3
 *** Non-Interactive
 :PROPERTIES:
 :ID:       39DE0571-4D9F-473B-9D23-A02CD0950DBE
+::header-args: :tangle ./.bash_global_non_interactive
 :END:
 
 #+NAME: AB646FCB-6048-4B21-B231-71DB5F64E465
-#+BEGIN_SRC sh :tangle ./.bash_global_non_interactive
+#+BEGIN_SRC sh
 <<BashCore>>
 <<BashNonInteractiveCore>>
 #+END_SRC
@@ -2980,10 +3002,11 @@ PROMPT_DIRTRIM=3
 *** Interactive
 :PROPERTIES:
 :ID:       5D6FBE76-E349-43B2-9EC2-C18189139B53
+:header-args: :tangle ./.bash_global_interactive
 :END:
 
 #+NAME: 861890CF-0E4B-48FF-83C6-514C3CC395DC
-#+BEGIN_SRC sh :tangle ./.bash_global_interactive
+#+BEGIN_SRC sh
 <<BashCore>>
 <<BashInteractiveCore>>
 #+END_SRC
