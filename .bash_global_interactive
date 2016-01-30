@@ -75,6 +75,7 @@ LANGUAGE=en_US.UTF-8
 if [ -z "$PS1" ]; then
     printf "\e[31mExpected an interactive shell.\e[0m]\n" 1>&2
     sleep 5
+    exit 1
 fi
 # D029A4D7-6890-4196-850A-AAA07B96337F ends here
 # [[file:~/git/github/bash/bash.org::*Expressivity][ABCE11CE-B9DB-4060-BA30-F65C48353321]]

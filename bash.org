@@ -2492,9 +2492,9 @@ digraph version5 {
   compound = true;
   subgraph cluster_A {
     label = "Literate Programming\nEntities\n\n(configuration of Bash)";
-    BashCore[label = "{BashCore|Standard language features\lWarn if unexpected version\l|For human & computer execution\l}"];
-    BashNonInteractiveCore[label = "{BashNonInteractiveCore|Warn if interactive\nUnset interactive functions|Only for computer execution\l}"];
-    BashInteractiveCore[label = "{BashInteractiveCore|Warn if non-interactive\nInterface\lDebugging\lHistory\lReadline\lPrompts\l|Only for human execution\l}"];
+    BashCore[label = "{BashCore|Warn if inadequate version\lStandard language features\l|For human & computer execution\l}"];
+    BashNonInteractiveCore[label = "{BashNonInteractiveCore|Exit if interactive\nUnset interactive functions|Only for computer execution\l}"];
+    BashInteractiveCore[label = "{BashInteractiveCore|Exit if non-interactive\nInterface\lDebugging\lHistory\lReadline\lPrompts\l|Only for human execution\l}"];
   }
   subgraph cluster_B {
     label = "Global Shell Configuration Files\n\n(/usr/local/etc)";
@@ -2810,7 +2810,16 @@ Only use this functionality in a non-interactive session.
 if [ "$PS1" ]; then
     printf "\e[31mExpected a non-interactive shell.\e[0m]\n" 1>&2
     sleep 5
+    exit 1
 fi
+#+END_SRC
+
+Never take input from the user interactively and disable the use of those
+commands.
+
+#+NAME: E03E703D-809F-4536-996D-B96AE3DCD8C7
+#+BEGIN_SRC sh
+unset -f read select
 #+END_SRC
 
 *** BashInteractiveCore
@@ -2826,6 +2835,7 @@ Only use this functionality in an interactive session.
 if [ -z "$PS1" ]; then
     printf "\e[31mExpected an interactive shell.\e[0m]\n" 1>&2
     sleep 5
+    exit 1
 fi
 #+END_SRC
 

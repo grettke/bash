@@ -75,6 +75,10 @@ LANGUAGE=en_US.UTF-8
 if [ "$PS1" ]; then
     printf "\e[31mExpected a non-interactive shell.\e[0m]\n" 1>&2
     sleep 5
+    exit 1
 fi
 # 2A2108E3-231A-4491-81F0-58B93BF2EA2C ends here
+# [[file:~/git/github/bash/bash.org::*BashNonInteractiveCore][E03E703D-809F-4536-996D-B96AE3DCD8C7]]
+unset -f read select
+# E03E703D-809F-4536-996D-B96AE3DCD8C7 ends here
 # 0B3FC004-95FC-45D0-B5C6-D38641391FC4 ends here
