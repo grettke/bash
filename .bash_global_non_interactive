@@ -61,3 +61,7 @@ set -o hashall
 shopt -s checkhash
 # DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9 ends here
 # AB646FCB-6048-4B21-B231-71DB5F64E465 ends here
+
+# [[file:bash.org::*Non-Interactive][0B3FC004-95FC-45D0-B5C6-D38641391FC4]]
+
+# 0B3FC004-95FC-45D0-B5C6-D38641391FC4 ends here

@@ -2990,12 +2990,20 @@ PROMPT_DIRTRIM=3
 *** Non-Interactive
 :PROPERTIES:
 :ID:       39DE0571-4D9F-473B-9D23-A02CD0950DBE
-::header-args: :tangle ./.bash_global_non_interactive
+:header-args: :tangle ./.bash_global_non_interactive
 :END:
+
+Every Bash session requires the same configuration.
 
 #+NAME: AB646FCB-6048-4B21-B231-71DB5F64E465
 #+BEGIN_SRC sh
 <<BashCore>>
+#+END_SRC
+
+Only non-interactive sessions requires this configuration.
+
+#+NAME: 0B3FC004-95FC-45D0-B5C6-D38641391FC4
+#+BEGIN_SRC sh
 <<BashNonInteractiveCore>>
 #+END_SRC
 
@@ -3005,9 +3013,17 @@ PROMPT_DIRTRIM=3
 :header-args: :tangle ./.bash_global_interactive
 :END:
 
+Every Bash session requires the same configuration.
+
 #+NAME: 861890CF-0E4B-48FF-83C6-514C3CC395DC
 #+BEGIN_SRC sh
 <<BashCore>>
+#+END_SRC
+
+Only interactive sessions requires this configuration.
+
+#+NAME: 8E91E17C-6139-4A27-846B-E863D29CFDC0
+#+BEGIN_SRC sh
 <<BashInteractiveCore>>
 #+END_SRC
 
