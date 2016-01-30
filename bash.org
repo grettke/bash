@@ -2803,11 +2803,32 @@ LANGUAGE=en_US.UTF-8
 :ID:       BAB8CE45-5D95-47E9-903B-79856C3BA8B8
 :END:
 
+Only use this functionality in a non-interactive session.
+
+#+NAME: 2A2108E3-231A-4491-81F0-58B93BF2EA2C
+#+BEGIN_SRC sh
+if [ "$PS1" ]; then
+    printf "\e[31mExpected a non-interactive shell.\e[0m]\n" 1>&2
+    sleep 5
+fi
+#+END_SRC
+
 *** BashInteractiveCore
 :PROPERTIES:
 :header-args: :noweb-ref BashInteractiveCore
 :ID:       1AB9EF9D-8F1D-43C6-B557-7800B7A4AA2F
 :END:
+
+Only use this functionality in an interactive session.
+
+#+NAME: D029A4D7-6890-4196-850A-AAA07B96337F
+#+BEGIN_SRC sh
+if [ -z "$PS1" ]; then
+    printf "\e[31mExpected an interactive shell.\e[0m]\n" 1>&2
+    sleep 5
+fi
+#+END_SRC
+
 **** Options
 :PROPERTIES:
 :ID:       F9663A3E-2D84-4A5C-82AB-7A2C4C92B2A5

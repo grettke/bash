@@ -71,6 +71,12 @@ LANGUAGE=en_US.UTF-8
 # 861890CF-0E4B-48FF-83C6-514C3CC395DC ends here
 
 # [[file:bash.org::*Interactive][8E91E17C-6139-4A27-846B-E863D29CFDC0]]
+# [[file:~/git/github/bash/bash.org::*BashInteractiveCore][D029A4D7-6890-4196-850A-AAA07B96337F]]
+if [ -z "$PS1" ]; then
+    printf "\e[31mExpected an interactive shell.\e[0m]\n" 1>&2
+    sleep 5
+fi
+# D029A4D7-6890-4196-850A-AAA07B96337F ends here
 # [[file:~/git/github/bash/bash.org::*Expressivity][ABCE11CE-B9DB-4060-BA30-F65C48353321]]
 shopt -s progcomp
 # ABCE11CE-B9DB-4060-BA30-F65C48353321 ends here
