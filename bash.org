@@ -2603,12 +2603,13 @@ disabled for the following expected situations where the command is
   sequence of express and that is the exact place where we want that behavior.
   Perform research on this.
 
-This allows for expressions like ~false || printf "Hey, that failed" && sleep 10~;
-and still fail fast most of the time.
+When an error occurs remain in the shell so that the system operator can
+research wha happened in that context. Don't exit the shell because there was
+an error. Enabling this causes the shell to exit immediately.
 
 #+NAME: 1A58BFA3-F5E2-421B-8D68-BFAFAC165D82
 #+BEGIN_SRC sh
-set -o errexit
+set +o errexit
 #+END_SRC
 
 The result of a pipeline is the result of the last expression to exit on error
