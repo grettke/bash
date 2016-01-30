@@ -3146,7 +3146,7 @@ Easily access everything.
 
 #+NAME: 305DB52D-DB00-40D8-BA3C-19C16A44D6B4
 #+BEGIN_SRC sh
-PATH=/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$PATH
+PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$PATH"
 #+END_SRC
 
 Easily start EMACS.
