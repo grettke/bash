@@ -2257,6 +2257,7 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 
 **** TODO [[http://mywiki.wooledge.org/BashSheet][BashSheet]]
 
+*** TODO Tips, Tricks, 1-Liners
 
 * Making Sense of this Script
 :PROPERTIES:
