@@ -3097,7 +3097,7 @@ Use VIM for visual non-EMACS environments.
 
 #+NAME: AD54A868-318C-4033-A593-93ED0184A1B4
 #+BEGIN_SRC sh
-EDITOR='$VISUAL'
+EDITOR="$VISUAL"
 #+END_SRC
 
 Keep the system provisioning professional.
