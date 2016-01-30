@@ -2893,21 +2893,21 @@ up the terminal.
 
 #+NAME: F81D2132-6006-439F-B281-F031B2C931E1
 #+BEGIN_SRC sh
-PS1='\u@\h:\w> '
+PS1='\u@\h:\w⮞ '
 #+END_SRC
 
 Make the continued prompt obvious. It is easily forgotten.
 
 #+NAME: EC1C20AF-9756-48CB-AE10-4262D8AE53BD
 #+BEGIN_SRC sh
-PS2='↪> '
+PS2='⏎⮞ '
 #+END_SRC
 
 Obviously prompt you to make a selection.
 
 #+NAME: 50C0C13E-59FB-4A03-8AF6-8FF694C264B5
 #+BEGIN_SRC sh
-PS3='�> '
+PS3='�⮞ '
 #+END_SRC
 
 Enable the Bash Debugger.

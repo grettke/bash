@@ -99,13 +99,13 @@ shopt -s complete_fullquote
 shopt -s interactive_comments
 # B881A6A3-C116-45DD-87E7-D0EE788DE07D ends here
 # [[file:~/git/github/bash/bash.org::*Interface][F81D2132-6006-439F-B281-F031B2C931E1]]
-PS1='\u@\h:\w> '
+PS1='\u@\h:\w⮞ '
 # F81D2132-6006-439F-B281-F031B2C931E1 ends here
 # [[file:~/git/github/bash/bash.org::*Interface][EC1C20AF-9756-48CB-AE10-4262D8AE53BD]]
-PS2='↪> '
+PS2='⏎⮞ '
 # EC1C20AF-9756-48CB-AE10-4262D8AE53BD ends here
 # [[file:~/git/github/bash/bash.org::*Interface][50C0C13E-59FB-4A03-8AF6-8FF694C264B5]]
-PS3='�> '
+PS3='�⮞ '
 # 50C0C13E-59FB-4A03-8AF6-8FF694C264B5 ends here
 # [[file:~/git/github/bash/bash.org::*Interface][6CAA9DCC-D799-469E-BFF6-1D2064AE4305]]
 PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?]
