@@ -2551,7 +2551,7 @@ Write this system using Bash 4.3.* features.
 
 #+NAME: 86B3EC22-B47D-4E40-AFDD-B68AC6F77110
 #+BEGIN_SRC sh
-echo "$BASH_VERSION" | grep -q "^4\.3\." || { printf "Inadequate version of Bash found. Expected '4.3.*'; found '$BASH_VERSION'.\n" 1>&2 ; sleep 5; }
+echo "$BASH_VERSION" | grep -q "^4\.3\." || { printf "\e[31mInadequate version of Bash found. Expected '4.3.*'; found '$BASH_VERSION'.\e[0m\n" 1>&2 ; sleep 5; }
 #+END_SRC
 
 **** Options
