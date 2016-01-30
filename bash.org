@@ -3071,9 +3071,15 @@ VIM is the best system editor.
 export VISUAL=vim
 #+END_SRC
 
+Use VIM for visual non-EMACS environments.
+
 #+NAME: AD54A868-318C-4033-A593-93ED0184A1B4
 #+BEGIN_SRC sh
 export EDITOR='$VISUAL'
+#+END_SRC
+
+#+NAME: 5A8DA41A-6F75-410A-9DD4-21A348CAC9BD
+#+BEGIN_SRC sh
 export HOMEBREW_NO_EMOJI=1
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home"
 export INFOPATH='/usr/local/share/info:/usr/share/info'
