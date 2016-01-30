@@ -2574,12 +2574,14 @@ extent. This could go either way.
 set -o keyword
 #+END_SRC
 
-Provide aliases no matter how limited they may seem they are useful even in
-their basic form.
+My original plan was to provide aliases no matter how limited they may seem they
+are useful even in their basic form. That worked well until I broke it on my
+box using my Bash configuration (I think). The solution was to use functions
+instead and explicitly disable aliases here.
 
 #+NAME: CABCFC8A-89AB-41AE-9A46-514F1D6C8240
 #+BEGIN_SRC sh
-shopt -s expand_aliases
+shopt -u expand_aliases
 #+END_SRC
 
 ***** Fail Fast
@@ -3153,8 +3155,12 @@ Easily start EMACS.
 
 #+NAME: 10224F22-A50D-4B6F-9D25-604E423128FA
 #+BEGIN_SRC sh
-alias e='open /Applications/Emacs.app --args --debug-init'
-alias ec='/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw --debug-init'
+function e {
+    emacs --debug-init
+}
+function ec {
+    emacs -nw --debug-init
+}
 #+END_SRC
 
 *** BashLogout

@@ -6,7 +6,7 @@ set -o braceexpand
 set -o keyword
 # 2CB26DFF-1F5A-4781-A460-7B6975FBBCC8 ends here
 # [[file:~/git/github/bash/bash.org::*Expressivity][CABCFC8A-89AB-41AE-9A46-514F1D6C8240]]
-shopt -s expand_aliases
+shopt -u expand_aliases
 # CABCFC8A-89AB-41AE-9A46-514F1D6C8240 ends here
 # [[file:~/git/github/bash/bash.org::*Fail%20Fast][1A58BFA3-F5E2-421B-8D68-BFAFAC165D82]]
 set +o errexit
