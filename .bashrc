@@ -46,9 +46,3 @@ function ec {
     emacs -nw --debug-init &
 }
 # 10224F22-A50D-4B6F-9D25-604E423128FA ends here
-
-# [[file:bash.org::*BashRc][D1C373A5-018D-41E4-B8A2-6CB7A19D1584]]
-function ls {
-    ls -alf
-}
-# D1C373A5-018D-41E4-B8A2-6CB7A19D1584 ends here

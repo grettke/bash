@@ -3201,15 +3201,6 @@ function ec {
 }
 #+END_SRC
 
-Good defaults.
-
-#+NAME: D1C373A5-018D-41E4-B8A2-6CB7A19D1584
-#+BEGIN_SRC sh
-function ls {
-    ls -alf
-}
-#+END_SRC
-
 *** BashLogout
 :PROPERTIES:
 :ID:       05FCD6B3-FF57-4C10-9552-8F41686F1019
