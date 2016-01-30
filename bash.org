@@ -2236,13 +2236,16 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 
 - http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html
 
-*** TODO UTF-8
+*** PROGRESS UTF-8
 :PROPERTIES:
 :ID:       F01462B2-76AC-4164-9E8E-59D18FD41A92
 :END:
 
-- [[http://perlgeek.de/en/article/set-up-a-clean-utf8-environment][How to set up a clean UTF-8 environment in Linux]]
+- [X] [[http://perlgeek.de/en/article/set-up-a-clean-utf8-environment][How to set up a clean UTF-8 environment in Linux]]
+  - Helpful for Linux, maybe OS X
 - [[http://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/][OS X Terminal: -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory]]
+  - Current
+  -
 - [[https://unix.stackexchange.com/questions/87745/what-does-lc-all-c-do][What does “LC_ALL=C” do?]]
 
 *** TODO Style & Supportability
@@ -2764,6 +2767,25 @@ that before searching the lookup path to find a command.
 #+BEGIN_SRC sh
 set -o hashall
 shopt -s checkhash
+#+END_SRC
+
+**** Variables
+:PROPERTIES:
+:ID:       509E97BE-28FB-4BA4-B448-B8A6C3E3E914
+:END:
+
+***** Encoding
+:PROPERTIES:
+:ID:       DB5B6660-BC3D-4E08-AF4C-7AD1E9FD1452
+:END:
+
+Use UTF-8 for everything. EMACS already does.
+
+#+NAME: 994AE13B-C9B5-47FE-AB65-DF38706F81AA
+#+BEGIN_SRC sh
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
 #+END_SRC
 
 *** BashNonInteractiveCore

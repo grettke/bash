@@ -60,6 +60,11 @@ TMPDIR='/tmp'
 set -o hashall
 shopt -s checkhash
 # DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9 ends here
+# [[file:~/git/github/bash/bash.org::*Encoding][994AE13B-C9B5-47FE-AB65-DF38706F81AA]]
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
+# 994AE13B-C9B5-47FE-AB65-DF38706F81AA ends here
 # 861890CF-0E4B-48FF-83C6-514C3CC395DC ends here
 
 # [[file:bash.org::*Interactive][8E91E17C-6139-4A27-846B-E863D29CFDC0]]
