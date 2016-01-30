@@ -2492,7 +2492,7 @@ digraph version5 {
   compound = true;
   subgraph cluster_A {
     label = "Literate Programming\nEntities\n\n(configuration of Bash)";
-    BashCore[label = "{BashCore|Standard language features\l|For human & computer execution\l}"];
+    BashCore[label = "{BashCore|Standard language features\lExpected version\l|For human & computer execution\l}"];
     BashNonInteractiveCore[label = "{BashNonInteractiveCore|If interactive, die\nUnset interactive functions|Only for computer execution\l}"];
     BashInteractiveCore[label = "{BashInteractiveCore|Interface\lDebugging\lHistory\lReadline\lPrompts\l|Only for human execution\l}"];
   }
