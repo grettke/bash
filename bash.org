@@ -2236,17 +2236,17 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 
 - http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html
 
-*** PROGRESS UTF-8
+*** UTF-8
 :PROPERTIES:
 :ID:       F01462B2-76AC-4164-9E8E-59D18FD41A92
 :END:
 
 - [X] [[http://perlgeek.de/en/article/set-up-a-clean-utf8-environment][How to set up a clean UTF-8 environment in Linux]]
   - Helpful for Linux, maybe OS X
-- [[http://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/][OS X Terminal: -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory]]
-  - Current
-  -
-- [[https://unix.stackexchange.com/questions/87745/what-does-lc-all-c-do][What does “LC_ALL=C” do?]]
+- [X] [[http://www.cyberciti.biz/faq/os-x-terminal-bash-warning-setlocale-lc_ctype-cannot-change-locale/][OS X Terminal: -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory]]
+  - Current, great to know
+- [X] [[https://unix.stackexchange.com/questions/87745/what-does-lc-all-c-do][What does “LC_ALL=C” do?]]
+- [X] [[https://mkaz.github.io/2014/04/17/the-bash-prompt/][The ★ Bash Prompt]]
 
 *** TODO Style & Supportability
 :PROPERTIES:
