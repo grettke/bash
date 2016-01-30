@@ -2547,6 +2547,13 @@ digraph version5 {
 :ID:       742113EF-114F-4FF9-B543-06C748E9153C
 :END:
 
+Write this system using Bash 4.3.* features.
+
+#+NAME: 86B3EC22-B47D-4E40-AFDD-B68AC6F77110
+#+BEGIN_SRC sh
+echo "$BASH_VERSION" | grep -q "^4\.3\." || { printf "Inadequate version of Bash found. Expected '4.3.*'; found '$BASH_VERSION'.\n" 1>&2 ; sleep 5; }
+#+END_SRC
+
 **** Options
 :PROPERTIES:
 :ID:       D2F74D27-DADE-4396-B332-64FA0C9EEE52

@@ -1,4 +1,7 @@
 # [[file:bash.org::*Non-Interactive][AB646FCB-6048-4B21-B231-71DB5F64E465]]
+# [[file:~/git/github/bash/bash.org::*BashCore][86B3EC22-B47D-4E40-AFDD-B68AC6F77110]]
+echo "$BASH_VERSION" | grep -q "^4\.3\." || { printf "Inadequate version of Bash found. Expected '4.3.*'; found '$BASH_VERSION'.\n" 1>&2 ; sleep 5; }
+# 86B3EC22-B47D-4E40-AFDD-B68AC6F77110 ends here
 # [[file:~/git/github/bash/bash.org::*Expressivity][57652CC2-A592-4EDB-AB4F-5668BDE2A9AB]]
 set -o braceexpand
 # 57652CC2-A592-4EDB-AB4F-5668BDE2A9AB ends here
