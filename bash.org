@@ -3078,9 +3078,15 @@ Use VIM for visual non-EMACS environments.
 export EDITOR='$VISUAL'
 #+END_SRC
 
+Keep the system provisioning professional.
+
 #+NAME: 5A8DA41A-6F75-410A-9DD4-21A348CAC9BD
 #+BEGIN_SRC sh
 export HOMEBREW_NO_EMOJI=1
+#+END_SRC
+
+#+NAME: 6697345C-43E6-4EC0-8171-1FA226253803
+#+BEGIN_SRC sh
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home"
 export INFOPATH='/usr/local/share/info:/usr/share/info'
 export CCRYPT="/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp"
