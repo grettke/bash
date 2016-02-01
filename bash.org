@@ -2584,11 +2584,12 @@ set -o keyword
 My original plan was to provide aliases no matter how limited they may seem they
 are useful even in their basic form. That worked well until I broke it on my
 box using my Bash configuration (I think). The solution was to use functions
-instead and explicitly disable aliases here.
+instead and explicitly disable aliases here. That was a bad idea; they are still
+broken and I want to make them work again.
 
 #+NAME: CABCFC8A-89AB-41AE-9A46-514F1D6C8240
 #+BEGIN_SRC sh
-shopt -u expand_aliases
+shopt -s expand_aliases
 #+END_SRC
 
 ***** Fail Fast
