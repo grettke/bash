@@ -3031,7 +3031,7 @@ Track history with basically a ISO-8601 timestamp.
 
 #+NAME: D510B310-1DA6-4D72-837A-54D8DB28C789
 #+BEGIN_SRC sh
-HISTTIMEFORMAT='+%Y_%m_%d_%H_%M_%S'
+HISTTIMEFORMAT='%Y-%m-%d_%H-%M-%S '
 #+END_SRC
 
 ***** Interface

@@ -140,7 +140,7 @@ HISTIGNORE='[ \t]*'
 HISTSIZE=31102
 # 0674188D-A8F8-48D5-ABC9-2264772956B6 ends here
 # [[file:~/git/github/bash/bash.org::*History][D510B310-1DA6-4D72-837A-54D8DB28C789]]
-HISTTIMEFORMAT='+%Y_%m_%d_%H_%M_%S'
+HISTTIMEFORMAT='%Y-%m-%d_%H-%M-%S '
 # D510B310-1DA6-4D72-837A-54D8DB28C789 ends here
 # [[file:~/git/github/bash/bash.org::*Interface][2CDAF29A-605C-4D5D-AF0C-5DE7B5164C53]]
 PROMPT_DIRTRIM=3
