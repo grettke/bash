@@ -3169,13 +3169,6 @@ Easily use =ccrypt= from EMACS.
 CCRYPT='/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp'
 #+END_SRC
 
-Easily use Java libraries.
-
-#+NAME: FF5DCDD4-B856-4EDB-A9A1-BBE8D6A601CE
-#+BEGIN_SRC sh
-EELIB="/Users/$(whoami)/EELIB"
-#+END_SRC
-
 Easily use TeX.
 
 #+NAME: E81EDC5A-549B-47FF-AD9C-41C73F40740A
@@ -3198,6 +3191,9 @@ VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 #+END_SRC
 
 **** Make aliases
+:PROPERTIES:
+:ID:       2B765276-2BEE-45F3-8AFE-6D81160D6035
+:END:
 
 Easily start EMACS.
 

@@ -26,10 +26,6 @@ INFOPATH='/usr/local/share/info:/usr/share/info'
 CCRYPT='/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp'
 # 96DF1A6D-FDEE-41D2-B8B0-17F7A9E98B16 ends here
 
-# [[file:bash.org::*BashRc][FF5DCDD4-B856-4EDB-A9A1-BBE8D6A601CE]]
-EELIB="/Users/$(whoami)/EELIB"
-# FF5DCDD4-B856-4EDB-A9A1-BBE8D6A601CE ends here
-
 # [[file:bash.org::*BashRc][E81EDC5A-549B-47FF-AD9C-41C73F40740A]]
 MACTEX_BIN='/usr/local/texlive/2015/bin/x86_64-darwin'
 # E81EDC5A-549B-47FF-AD9C-41C73F40740A ends here
@@ -38,7 +34,11 @@ MACTEX_BIN='/usr/local/texlive/2015/bin/x86_64-darwin'
 PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$PATH"
 # 305DB52D-DB00-40D8-BA3C-19C16A44D6B4 ends here
 
-# [[file:bash.org::*BashRc][10224F22-A50D-4B6F-9D25-604E423128FA]]
+# [[file:bash.org::*BashRc][F1278DB7-509B-4BDD-93FD-96461BD6EC8B]]
+VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+# F1278DB7-509B-4BDD-93FD-96461BD6EC8B ends here
+
+# [[file:bash.org::*Make%20aliases][10224F22-A50D-4B6F-9D25-604E423128FA]]
 function e {
     emacs --debug-init &
 }
@@ -46,3 +46,8 @@ function ec {
     emacs -nw --debug-init &
 }
 # 10224F22-A50D-4B6F-9D25-604E423128FA ends here
+
+# [[file:bash.org::*Make%20aliases][1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E]]
+# alias r='r --no-save'
+# alias R='r --no-save'
+# 1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E ends here
