@@ -1,6 +1,6 @@
 * Research, Goals, & Beginnings
 :PROPERTIES:
-:ID:       7F7F7135-45DD-4AC7-AECA-A69DE6F8F9E2
+:ID: 7F7F7135-45DD-4AC7-AECA-A69DE6F8F9E2
 :END:
 ** Desire
 :PROPERTIES:
@@ -3152,7 +3152,7 @@ Easily use Java.
 
 #+NAME: 6697345C-43E6-4EC0-8171-1FA226253803
 #+BEGIN_SRC sh
-JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home'
+JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home'
 #+END_SRC
 
 Easily use EMACS info files.

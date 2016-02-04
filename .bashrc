@@ -15,7 +15,7 @@ HOMEBREW_NO_EMOJI=1
 # 5A8DA41A-6F75-410A-9DD4-21A348CAC9BD ends here
 
 # [[file:bash.org::*BashRc][6697345C-43E6-4EC0-8171-1FA226253803]]
-JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home'
+JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home'
 # 6697345C-43E6-4EC0-8171-1FA226253803 ends here
 
 # [[file:bash.org::*BashRc][2A2C25BE-DF7E-46A2-8378-0163D0A5DB17]]
