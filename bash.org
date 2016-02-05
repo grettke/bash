@@ -2581,17 +2581,6 @@ extent. This could go either way.
 set -o keyword
 #+END_SRC
 
-My original plan was to provide aliases no matter how limited they may seem they
-are useful even in their basic form. That worked well until I broke it on my
-box using my Bash configuration (I think). The solution was to use functions
-instead and explicitly disable aliases here. That was a bad idea; they are still
-broken and I want to make them work again.
-
-#+NAME: CABCFC8A-89AB-41AE-9A46-514F1D6C8240
-#+BEGIN_SRC sh
-shopt -s expand_aliases
-#+END_SRC
-
 ***** Fail Fast
 :PROPERTIES:
 :ID:       8B249641-2851-4AC0-BEE0-F720ED92AB4B
@@ -2823,6 +2812,13 @@ commands.
 unset -f read select
 #+END_SRC
 
+Aliases are only for interactive users.
+
+#+NAME: CABCFC8A-89AB-41AE-9A46-514F1D6C8240
+#+BEGIN_SRC sh
+shopt -u expand_aliases
+#+END_SRC
+
 *** BashInteractiveCore
 :PROPERTIES:
 :header-args: :noweb-ref BashInteractiveCore
@@ -2854,6 +2850,13 @@ Programatically complete command options.
 #+NAME: ABCE11CE-B9DB-4060-BA30-F65C48353321
 #+BEGIN_SRC sh
 shopt -s progcomp
+#+END_SRC
+
+Aliases are only for interactive users.
+
+#+NAME: 72630356-4AFB-4ACA-9B80-07B9F0D3E17D
+#+BEGIN_SRC sh
+shopt -s expand_aliases
 #+END_SRC
 
 ***** History

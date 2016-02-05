@@ -8,9 +8,6 @@ set -o braceexpand
 # [[file:~/git/github/bash/bash.org::*Expressivity][2CB26DFF-1F5A-4781-A460-7B6975FBBCC8]]
 set -o keyword
 # 2CB26DFF-1F5A-4781-A460-7B6975FBBCC8 ends here
-# [[file:~/git/github/bash/bash.org::*Expressivity][CABCFC8A-89AB-41AE-9A46-514F1D6C8240]]
-shopt -s expand_aliases
-# CABCFC8A-89AB-41AE-9A46-514F1D6C8240 ends here
 # [[file:~/git/github/bash/bash.org::*Fail%20Fast][1A58BFA3-F5E2-421B-8D68-BFAFAC165D82]]
 set +o errexit
 # 1A58BFA3-F5E2-421B-8D68-BFAFAC165D82 ends here
@@ -81,6 +78,9 @@ fi
 # [[file:~/git/github/bash/bash.org::*Expressivity][ABCE11CE-B9DB-4060-BA30-F65C48353321]]
 shopt -s progcomp
 # ABCE11CE-B9DB-4060-BA30-F65C48353321 ends here
+# [[file:~/git/github/bash/bash.org::*Expressivity][72630356-4AFB-4ACA-9B80-07B9F0D3E17D]]
+shopt -s expand_aliases
+# 72630356-4AFB-4ACA-9B80-07B9F0D3E17D ends here
 # [[file:~/git/github/bash/bash.org::*History][53C74C4A-D580-4DC3-8053-7D0268A63A5F]]
 set -o history
 # 53C74C4A-D580-4DC3-8053-7D0268A63A5F ends here
