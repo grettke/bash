@@ -3060,6 +3060,11 @@ PROMPT_DIRTRIM=3
 :header-args: :tangle ./.bash_global_non_interactive
 :END:
 
+#+NAME: C59D63FC-0C8F-4740-B021-40D8BEB849E9
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
+
 Every Bash session requires the same configuration.
 
 #+NAME: AB646FCB-6048-4B21-B231-71DB5F64E465
@@ -3079,6 +3084,11 @@ Only non-interactive sessions requires this configuration.
 :ID:       5D6FBE76-E349-43B2-9EC2-C18189139B53
 :header-args: :tangle ./.bash_global_interactive
 :END:
+
+#+NAME: 2933302D-687F-4A9E-881E-091F3AD5FED3
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
 
 Every Bash session requires the same configuration.
 
@@ -3105,6 +3115,11 @@ Only interactive sessions requires this configuration.
 :header-args: :tangle ./.bash_profile
 :END:
 
+#+NAME: 7A00F7A1-68EF-4D2B-83B3-465F76F10226
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
+
 Execute the same configuration as every non-login interactive shell.
 
 #+NAME: D8D66A14-3B1C-4537-963E-45DBC3D286B2
@@ -3124,6 +3139,11 @@ fortune
 :ID:       6EC5CFD7-9EF9-42DC-B695-3202F2A303C0
 :header-args: :tangle ./.bashrc
 :END:
+
+#+NAME: 51728B92-235E-4CE8-98D7-AB9E4783CB64
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
 
 #+NAME: A4502549-BA36-4C40-A12A-E42A72B6384C
 #+BEGIN_SRC sh
@@ -3224,6 +3244,11 @@ Easily start =r=.
 :header-args: :tangle ./.bash_logout
 :END:
 
+#+NAME: 5890E216-F5C8-4F03-981C-71A91AE0890A
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
+
 Have fun.
 
 #+NAME: 891ED468-F802-4378-BA5C-0BF874CAB4F1
@@ -3236,6 +3261,11 @@ printf 'Sayonara!\n' && sleep 1
 :header-args: :tangle ./deploy :tangle-mode (identity #o755)
 :ID:       0F3EA345-BB8F-4300-BF94-CD5FCBA7B43F
 :END:
+
+#+NAME: 5B7D85CF-404B-4B9C-BACA-5390B5E340F8
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
 
 #+NAME: F7D52399-F20C-466D-B59B-93F89D4CF985
 #+BEGIN_SRC sh
