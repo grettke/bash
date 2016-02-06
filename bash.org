@@ -2573,12 +2573,13 @@ Programatically generate expressions (Brace Expansion) using
 set -o braceexpand
 #+END_SRC
 
-Make key=pair arguments to a function appear as variables during it's dynamic
-extent. This could go either way.
+
+Define key-pair values for command's dynamic extent before calling the command
+and nowhere else. Doing otherwise breaks ~alias~ for example in a surprising way.
 
 #+NAME: 2CB26DFF-1F5A-4781-A460-7B6975FBBCC8
 #+BEGIN_SRC sh
-set -o keyword
+set +o keyword
 #+END_SRC
 
 ***** Fail Fast
