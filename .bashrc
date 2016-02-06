@@ -41,8 +41,8 @@ VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 # F1278DB7-509B-4BDD-93FD-96461BD6EC8B ends here
 
 # [[file:bash.org::*Make%20aliases%20%5Bfn:1c2164efcde0346e:http:/www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html%5D%20%5Bfn:17380446290dfdc9:https:/www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions%5D][10224F22-A50D-4B6F-9D25-604E423128FA]]
-alias e='emacs --debug-init'
-alias ec='emacs -nw --debug-init'
+alias e='emacs --debug-init&'
+alias ec='emacs -nw --debug-init&'
 # 10224F22-A50D-4B6F-9D25-604E423128FA ends here
 
 # [[file:bash.org::*Make%20aliases%20%5Bfn:1c2164efcde0346e:http:/www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html%5D%20%5Bfn:17380446290dfdc9:https:/www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions%5D][1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E]]

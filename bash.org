@@ -3223,8 +3223,8 @@ Easily start EMACS.
 
 #+NAME: 10224F22-A50D-4B6F-9D25-604E423128FA
 #+BEGIN_SRC sh
-alias e='emacs --debug-init'
-alias ec='emacs -nw --debug-init'
+alias e='emacs --debug-init&'
+alias ec='emacs -nw --debug-init&'
 #+END_SRC
 
 Easily start =r=.
