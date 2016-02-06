@@ -40,16 +40,29 @@ PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$PATH"
 VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 # F1278DB7-509B-4BDD-93FD-96461BD6EC8B ends here
 
-# [[file:bash.org::*Make%20aliases][10224F22-A50D-4B6F-9D25-604E423128FA]]
-function e {
-    emacs --debug-init &
-}
-function ec {
-    emacs -nw --debug-init &
-}
+# [[file:bash.org::*Make%20aliases%20%5Bfn:1c2164efcde0346e:http:/www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html%5D%20%5Bfn:17380446290dfdc9:https:/www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions%5D][10224F22-A50D-4B6F-9D25-604E423128FA]]
+alias e='emacs --debug-init'
+alias ec='emacs -nw --debug-init'
 # 10224F22-A50D-4B6F-9D25-604E423128FA ends here
 
-# [[file:bash.org::*Make%20aliases][1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E]]
-# alias r='r --no-save'
-# alias R='r --no-save'
+# [[file:bash.org::*Make%20aliases%20%5Bfn:1c2164efcde0346e:http:/www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html%5D%20%5Bfn:17380446290dfdc9:https:/www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions%5D][1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E]]
+alias r='r --no-save'
+alias R='r --no-save'
 # 1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E ends here
+
+# [[file:bash.org::*Make%20aliases%20%5Bfn:1c2164efcde0346e:http:/www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html%5D%20%5Bfn:17380446290dfdc9:https:/www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions%5D][20B20120-4482-4572-B3D3-3A1DD1DAE792]]
+alias ls='ls -alf | more'
+alias mkdir='mkdir -pv'
+alias mount='mount | column -t'
+alias df='df -h'
+alias du="du -ach"
+# 20B20120-4482-4572-B3D3-3A1DD1DAE792 ends here
+
+# [[file:bash.org::*Make%20aliases%20%5Bfn:1c2164efcde0346e:http:/www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html%5D%20%5Bfn:17380446290dfdc9:https:/www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions%5D][A74F8DFE-A2A5-41E3-9D12-319766E42A30]]
+alias h='history'
+alias j='jobs -l'
+# A74F8DFE-A2A5-41E3-9D12-319766E42A30 ends here
+
+# [[file:bash.org::*Make%20aliases%20%5Bfn:1c2164efcde0346e:http:/www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html%5D%20%5Bfn:17380446290dfdc9:https:/www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions%5D][A25A3E8F-4674-474A-BD45-1553C6EF0B3A]]
+alias cd..='cd ..'
+# A25A3E8F-4674-474A-BD45-1553C6EF0B3A ends here

@@ -3214,7 +3214,7 @@ Use VMWare with Vagrant.
 VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 #+END_SRC
 
-**** Make aliases
+**** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
 :PROPERTIES:
 :ID:       2B765276-2BEE-45F3-8AFE-6D81160D6035
 :END:
@@ -3223,20 +3223,42 @@ Easily start EMACS.
 
 #+NAME: 10224F22-A50D-4B6F-9D25-604E423128FA
 #+BEGIN_SRC sh
-function e {
-    emacs --debug-init &
-}
-function ec {
-    emacs -nw --debug-init &
-}
+alias e='emacs --debug-init'
+alias ec='emacs -nw --debug-init'
 #+END_SRC
 
 Easily start =r=.
 
 #+NAME: 1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E
 #+BEGIN_SRC sh
-# alias r='r --no-save'
-# alias R='r --no-save'
+alias r='r --no-save'
+alias R='r --no-save'
+#+END_SRC
+
+Good defaults.
+
+#+NAME: 20B20120-4482-4572-B3D3-3A1DD1DAE792
+#+BEGIN_SRC sh
+alias ls='ls -alf | more'
+alias mkdir='mkdir -pv'
+alias mount='mount | column -t'
+alias df='df -h'
+alias du="du -ach"
+#+END_SRC
+
+Shortcuts.
+
+#+NAME: A74F8DFE-A2A5-41E3-9D12-319766E42A30
+#+BEGIN_SRC sh
+alias h='history'
+alias j='jobs -l'
+#+END_SRC
+
+No surprises.
+
+#+NAME: A25A3E8F-4674-474A-BD45-1553C6EF0B3A
+#+BEGIN_SRC sh
+alias cd..='cd ..'
 #+END_SRC
 
 *** BashLogout
