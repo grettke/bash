@@ -3261,6 +3261,13 @@ No surprises.
 alias cd..='cd ..'
 #+END_SRC
 
+Get download speed [fn:167e637e4fea0629:https://www.gulshansingh.com/posts/useful-bash-aliases/].
+
+#+NAME: D579A295-6383-4E18-B033-5EF0057085C0
+#+BEGIN_SRC sh
+alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
+#+END_SRC
+
 *** BashLogout
 :PROPERTIES:
 :ID:       05FCD6B3-FF57-4C10-9552-8F41686F1019

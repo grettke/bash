@@ -66,3 +66,7 @@ alias j='jobs -l'
 # [[file:bash.org::*Make%20aliases%20%5Bfn:1c2164efcde0346e:http:/www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html%5D%20%5Bfn:17380446290dfdc9:https:/www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions%5D][A25A3E8F-4674-474A-BD45-1553C6EF0B3A]]
 alias cd..='cd ..'
 # A25A3E8F-4674-474A-BD45-1553C6EF0B3A ends here
+
+# [[file:bash.org::*Make%20aliases%20%5Bfn:1c2164efcde0346e:http:/www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html%5D%20%5Bfn:17380446290dfdc9:https:/www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions%5D][D579A295-6383-4E18-B033-5EF0057085C0]]
+alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
+# D579A295-6383-4E18-B033-5EF0057085C0 ends here
