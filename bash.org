@@ -2788,6 +2788,18 @@ LANG=en_US.UTF-8
 LANGUAGE=en_US.UTF-8
 #+END_SRC
 
+***** Fontconfig
+:PROPERTIES:
+:ID:       53C6E25A-2AA7-48E7-AB66-D6BB51892EAA
+:END:
+
+[[https://www.freedesktop.org/software/fontconfig/fontconfig-devel/fcconfigfilename.html][Configure Fontconfig]].
+
+#+NAME: 48AEFF38-FFD3-4BB9-ABEF-3F5B1BADDFE2
+#+BEGIN_SRC sh
+FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+#+END_SRC
+
 *** BashNonInteractiveCore
 :PROPERTIES:
 :header-args: :noweb-ref BashNonInteractiveCore
