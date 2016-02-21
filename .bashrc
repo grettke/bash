@@ -51,7 +51,6 @@ alias R='r --no-save'
 # 1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E ends here
 
 # [[file:bash.org::*Make%20aliases%20%5Bfn:1c2164efcde0346e:http:/www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html%5D%20%5Bfn:17380446290dfdc9:https:/www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions%5D][20B20120-4482-4572-B3D3-3A1DD1DAE792]]
-alias ls='ls -alf | more'
 alias mkdir='mkdir -pv'
 alias mount='mount | column -t'
 alias df='df -h'

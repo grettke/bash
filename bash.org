@@ -3251,7 +3251,6 @@ Good defaults.
 
 #+NAME: 20B20120-4482-4572-B3D3-3A1DD1DAE792
 #+BEGIN_SRC sh
-alias ls='ls -alf | more'
 alias mkdir='mkdir -pv'
 alias mount='mount | column -t'
 alias df='df -h'
