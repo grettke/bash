@@ -2781,11 +2781,22 @@ shopt -s checkhash
 
 Use UTF-8 for everything. EMACS already does.
 
+Read more about how locale variables work in its man page. Only =LC_ALL= is
+required if all of your settings are the same.
+
+Set anything un-set.
+
 #+NAME: 994AE13B-C9B5-47FE-AB65-DF38706F81AA
 #+BEGIN_SRC sh
-LC_ALL=en_US.UTF-8
-LANG=en_US.UTF-8
-LANGUAGE=en_US.UTF-8
+LANG='en_US.UTF-8'
+#+END_SRC
+
+
+Override everything
+
+#+NAME: 8F44EAF1-D966-4D57-97A2-3A7014C76276
+#+BEGIN_SRC sh
+LC_ALL='en_US.UTF-8'
 #+END_SRC
 
 ***** Fontconfig
