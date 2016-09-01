@@ -3265,6 +3265,13 @@ alias r='r --no-save'
 alias R='r --no-save'
 #+END_SRC
 
+Easily activate =virtualenv=.
+
+#+NAME: orgmode:gcr:vela:D69007EA-0CEE-43F2-AAEA-E55ABDA9DE3E
+#+BEGIN_SRC sh
+alias venv='source ./env/bin/activate'
+#+END_SRC
+
 Good defaults.
 
 #+NAME: 20B20120-4482-4572-B3D3-3A1DD1DAE792
