@@ -3216,6 +3216,13 @@ Easily use =ccrypt= from EMACS.
 CCRYPT='/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp'
 #+END_SRC
 
+Easily use =proselint= from EMACS.
+
+#+NAME: orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2
+#+BEGIN_SRC sh
+PROSELINT='/Users/gcr/util/proselint/env/bin/proselint'
+#+END_SRC
+
 Easily use TeX.
 
 #+NAME: E81EDC5A-549B-47FF-AD9C-41C73F40740A
