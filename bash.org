@@ -2798,6 +2798,13 @@ Override everything
 LC_ALL='en_US.UTF-8'
 #+END_SRC
 
+Sor how you expect it.
+
+#+NAME: orgmode:gcr:vela:37AF37AD-8F9B-4124-90A5-66125566748B
+#+BEGIN_SRC sh
+LC_COLLATE='POSIX'
+#+END_SRC
+
 ***** Fontconfig
 :PROPERTIES:
 :ID:       53C6E25A-2AA7-48E7-AB66-D6BB51892EAA
