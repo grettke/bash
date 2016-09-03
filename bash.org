@@ -2805,6 +2805,17 @@ Sor how you expect it.
 LC_COLLATE='POSIX'
 #+END_SRC
 
+Verify encoding.
+
+#+NAME: orgmode:gcr:vela:AC6175F5-5146-4C44-A8FA-67915D9CFB53
+#+BEGIN_SRC sh
+if [ "$(locale charmap)" == "UTF-8" ]; then
+    echo "Encoding configured correctly."
+else
+    echo "Encoding configured INCORRECTLY!"
+fi
+#+END_SRC
+
 ***** Fontconfig
 :PROPERTIES:
 :ID:       53C6E25A-2AA7-48E7-AB66-D6BB51892EAA
