@@ -28,6 +28,10 @@ INFOPATH='/usr/local/share/info:/usr/share/info'
 CCRYPT='/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp'
 # 96DF1A6D-FDEE-41D2-B8B0-17F7A9E98B16 ends here
 
+# [[file:bash.org::orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B][orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B]]
+LANGTOOL='/usr/local/Cellar/languagetool/3.2/libexec/languagetool-commandline.jar'
+# orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B ends here
+
 # [[file:bash.org::orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2][orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2]]
 PROSELINT='/Users/gcr/util/proselint/env/bin/proselint'
 # orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2 ends here

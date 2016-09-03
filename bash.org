@@ -3093,14 +3093,14 @@ Every Bash session requires the same configuration.
 
 #+NAME: AB646FCB-6048-4B21-B231-71DB5F64E465
 #+BEGIN_SRC sh
-<<BashCore>>
+«BashCore»
 #+END_SRC
 
 Only non-interactive sessions requires this configuration.
 
 #+NAME: 0B3FC004-95FC-45D0-B5C6-D38641391FC4
 #+BEGIN_SRC sh
-<<BashNonInteractiveCore>>
+«BashNonInteractiveCore»
 #+END_SRC
 
 *** Interactive
@@ -3118,14 +3118,14 @@ Every Bash session requires the same configuration.
 
 #+NAME: 861890CF-0E4B-48FF-83C6-514C3CC395DC
 #+BEGIN_SRC sh
-<<BashCore>>
+«BashCore»
 #+END_SRC
 
 Only interactive sessions requires this configuration.
 
 #+NAME: 8E91E17C-6139-4A27-846B-E863D29CFDC0
 #+BEGIN_SRC sh
-<<BashInteractiveCore>>
+«BashInteractiveCore»
 #+END_SRC
 
 ** Login Shell Configuration Files

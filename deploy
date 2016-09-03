@@ -1,6 +1,6 @@
 # -*- mode: sh; -*-
 
-# [[file:bash.org::*Deployment][F7D52399-F20C-466D-B59B-93F89D4CF985]]
+# [[file:bash.org::F7D52399-F20C-466D-B59B-93F89D4CF985][F7D52399-F20C-466D-B59B-93F89D4CF985]]
 function bash_deploy() {
     ln -s -f ${PWD}/.bash_profile ~/.bash_profile
     ln -s -f ${PWD}/.bash_logout ~/.bash_logout
