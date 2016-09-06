@@ -2810,9 +2810,9 @@ Verify encoding.
 #+NAME: orgmode:gcr:vela:AC6175F5-5146-4C44-A8FA-67915D9CFB53
 #+BEGIN_SRC sh
 if [ "$(locale charmap)" == "UTF-8" ]; then
-    echo "Encoding configured correctly."
+    echo "Character encoding configured: CORRECTLY."
 else
-    echo "Encoding configured INCORRECTLY!"
+    echo "Character encoding configured: INCORRECTLY!"
 fi
 #+END_SRC
 

@@ -73,9 +73,9 @@ LC_COLLATE='POSIX'
 # orgmode:gcr:vela:37AF37AD-8F9B-4124-90A5-66125566748B ends here
 # [[file:~/git/github/bash/bash.org::orgmode:gcr:vela:AC6175F5-5146-4C44-A8FA-67915D9CFB53][orgmode:gcr:vela:AC6175F5-5146-4C44-A8FA-67915D9CFB53]]
 if [ "$(locale charmap)" == "UTF-8" ]; then
-    echo "Encoding configured correctly."
+    echo "Character encoding configured: CORRECTLY."
 else
-    echo "Encoding configured INCORRECTLY!"
+    echo "Character encoding configured: INCORRECTLY!"
 fi
 # orgmode:gcr:vela:AC6175F5-5146-4C44-A8FA-67915D9CFB53 ends here
 # [[file:~/git/github/bash/bash.org::48AEFF38-FFD3-4BB9-ABEF-3F5B1BADDFE2][48AEFF38-FFD3-4BB9-ABEF-3F5B1BADDFE2]]
