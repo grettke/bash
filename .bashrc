@@ -81,3 +81,7 @@ alias cd..='cd ..'
 # [[file:bash.org::D579A295-6383-4E18-B033-5EF0057085C0][D579A295-6383-4E18-B033-5EF0057085C0]]
 alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 # D579A295-6383-4E18-B033-5EF0057085C0 ends here
+
+# [[file:bash.org::orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683][orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683]]
+alias bk="cd $OLDPWD"
+# orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683 ends here

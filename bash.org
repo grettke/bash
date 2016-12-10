@@ -3328,6 +3328,16 @@ Get download speed [fn:167e637e4fea0629:https://www.gulshansingh.com/posts/usefu
 alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 #+END_SRC
 
+I accidentally type =cd= instead of =cd ..=. I want to return to my original
+working directory and I'm irritated because I'm lazy and I don't want to type
+=cd $OLDPWD=. Don't get rid of =cd= though because I do use it and it is faster
+than =cd ~/=.
+
+#+NAME: orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683
+#+BEGIN_SRC sh
+alias bk="cd $OLDPWD"
+#+END_SRC
+
 *** BashLogout
 :PROPERTIES:
 :ID:       05FCD6B3-FF57-4C10-9552-8F41686F1019
