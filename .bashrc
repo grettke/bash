@@ -37,7 +37,7 @@ PROSELINT='/Users/gcr/util/proselint/env/bin/proselint'
 # orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2 ends here
 
 # [[file:bash.org::E81EDC5A-549B-47FF-AD9C-41C73F40740A][E81EDC5A-549B-47FF-AD9C-41C73F40740A]]
-MACTEX_BIN='/usr/local/texlive/2015/bin/x86_64-darwin'
+MACTEX_BIN='/usr/local/texlive/2016/bin/x86_64-darwin'
 # E81EDC5A-549B-47FF-AD9C-41C73F40740A ends here
 
 # [[file:bash.org::305DB52D-DB00-40D8-BA3C-19C16A44D6B4][305DB52D-DB00-40D8-BA3C-19C16A44D6B4]]

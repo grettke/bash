@@ -3271,7 +3271,7 @@ Easily use TeX.
 
 #+NAME: E81EDC5A-549B-47FF-AD9C-41C73F40740A
 #+BEGIN_SRC sh
-MACTEX_BIN='/usr/local/texlive/2015/bin/x86_64-darwin'
+MACTEX_BIN='/usr/local/texlive/2016/bin/x86_64-darwin'
 #+END_SRC
 
 Easily access everything.
