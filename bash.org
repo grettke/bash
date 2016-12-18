@@ -3253,11 +3253,13 @@ Easily use =ccrypt= from EMACS.
 CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp"
 #+END_SRC
 
-Easily use Langtool.
+Easily load Emacs libraries.
 
 #+NAME: orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B
 #+BEGIN_SRC sh
 LANGTOOL="$(brew --prefix languagetool)/libexec/languagetool-commandline.jar"
+DITAA="$(brew --prefix ditaa)/libexec/ditaa0_10.jar"
+PLANTUML="$(brew --prefix plantuml)/libexec/plantuml.jar"
 #+END_SRC
 
 Easily use =proselint= from EMACS.

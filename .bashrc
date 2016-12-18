@@ -30,6 +30,8 @@ CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp"
 
 # [[file:bash.org::orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B][orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B]]
 LANGTOOL="$(brew --prefix languagetool)/libexec/languagetool-commandline.jar"
+DITAA="$(brew --prefix ditaa)/libexec/ditaa0_10.jar"
+PLANTUML="$(brew --prefix plantuml)/libexec/plantuml.jar"
 # orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B ends here
 
 # [[file:bash.org::orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2][orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2]]
