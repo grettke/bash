@@ -2717,12 +2717,14 @@ set -o notify
 :ID:       226DA083-4784-4899-BC5F-4B36C8366C41
 :END:
 
-Enable debugging information used both in non-interactive runs and interactive
-debugging.
+Provide but disable interactive debugging by default.
+
+Instead force children to change their configuration script,
+run with ~bash --debugger~ or set ~shopt -s extdebug~.
 
 #+NAME: FAB2F5D9-E5D3-4252-A0F9-853375344CFF
 #+BEGIN_SRC sh
-shopt -s extdebug
+shopt -u extdebug
 #+END_SRC
 
 Log files are often identified as important only after accidentally clobbering

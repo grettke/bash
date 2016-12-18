@@ -51,7 +51,7 @@ set -o monitor
 set -o notify
 # F0055BD6-96CF-4B81-B11C-F9B99F5085F8 ends here
 # [[file:~/git/github/bash/bash.org::FAB2F5D9-E5D3-4252-A0F9-853375344CFF][FAB2F5D9-E5D3-4252-A0F9-853375344CFF]]
-shopt -s extdebug
+shopt -u extdebug
 # FAB2F5D9-E5D3-4252-A0F9-853375344CFF ends here
 # [[file:~/git/github/bash/bash.org::9086FA3B-EC85-486F-87AB-35F72D57602B][9086FA3B-EC85-486F-87AB-35F72D57602B]]
 set -o noclobber
