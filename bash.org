@@ -2551,7 +2551,17 @@ Define this system using Bash 4.3.* features. Warn if not at least.
 
 #+NAME: 86B3EC22-B47D-4E40-AFDD-B68AC6F77110
 #+BEGIN_SRC sh
-echo "$BASH_VERSION" | grep -q "^4\.3\." || { printf "\e[31mInadequate version of Bash found. Expected '4.3.*'; found '$BASH_VERSION'.\e[0m\n" 1>&2 ; sleep 5; }
+emaj=4
+emin=3
+amaj=${BASH_VERSINFO[0]}
+amin=${BASH_VERSINFO[1]}
+if [[ $amaj -lt $emaj || $amin -lt $emin ]]; then
+    printf "\e[31mFYI: Using Bash v$amaj.$amin.x but expecting Bash >= v$emaj.$emin.x\e[0m\n"
+fi
+unset emaj
+unset emin
+unset amaj
+unset amin
 #+END_SRC
 
 **** Options

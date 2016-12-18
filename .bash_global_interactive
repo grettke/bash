@@ -2,7 +2,17 @@
 
 # [[file:bash.org::861890CF-0E4B-48FF-83C6-514C3CC395DC][861890CF-0E4B-48FF-83C6-514C3CC395DC]]
 # [[file:~/git/github/bash/bash.org::86B3EC22-B47D-4E40-AFDD-B68AC6F77110][86B3EC22-B47D-4E40-AFDD-B68AC6F77110]]
-echo "$BASH_VERSION" | grep -q "^4\.3\." || { printf "\e[31mInadequate version of Bash found. Expected '4.3.*'; found '$BASH_VERSION'.\e[0m\n" 1>&2 ; sleep 5; }
+emaj=4
+emin=3
+amaj=${BASH_VERSINFO[0]}
+amin=${BASH_VERSINFO[1]}
+if [[ $amaj -lt $emaj || $amin -lt $emin ]]; then
+    printf "\e[31mFYI: Using Bash v$amaj.$amin.x but expecting Bash >= v$emaj.$emin.x\e[0m\n"
+fi
+unset emaj
+unset emin
+unset amaj
+unset amin
 # 86B3EC22-B47D-4E40-AFDD-B68AC6F77110 ends here
 # [[file:~/git/github/bash/bash.org::57652CC2-A592-4EDB-AB4F-5668BDE2A9AB][57652CC2-A592-4EDB-AB4F-5668BDE2A9AB]]
 set -o braceexpand
