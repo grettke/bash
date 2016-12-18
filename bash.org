@@ -2556,7 +2556,7 @@ emin=3
 amaj=${BASH_VERSINFO[0]}
 amin=${BASH_VERSINFO[1]}
 if [[ $amaj -lt $emaj || $amin -lt $emin ]]; then
-    printf "\e[31mFYI: Using Bash v$amaj.$amin.x but expecting Bash >= v$emaj.$emin.x\e[0m\n"
+    printf "\e[31mFYI: Using Bash v$amaj.$amin.x but expecting Bash >= v$emaj.$emin.x\e[0m\n" 1>&2
 fi
 unset emaj
 unset emin
