@@ -3297,8 +3297,10 @@ Easily start EMACS.
 
 #+NAME: 10224F22-A50D-4B6F-9D25-604E423128FA
 #+BEGIN_SRC sh
-alias e='emacs --debug-init&'
-alias ec='emacs -nw --debug-init&'
+alias e="$(brew --prefix emacs)/bin/emacs --debug-init&"
+alias enodbg="$(brew --prefix emacs)/bin/emacs&"
+alias eninit="$(brew --prefix emacs)/bin/emacs --no-init-file&"
+alias econs="$(brew --prefix emacs)/bin/emacs -nw --debug-init"
 #+END_SRC
 
 Easily start =r=.

@@ -49,8 +49,10 @@ VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 # F1278DB7-509B-4BDD-93FD-96461BD6EC8B ends here
 
 # [[file:bash.org::10224F22-A50D-4B6F-9D25-604E423128FA][10224F22-A50D-4B6F-9D25-604E423128FA]]
-alias e='emacs --debug-init&'
-alias ec='emacs -nw --debug-init&'
+alias e="$(brew --prefix emacs)/bin/emacs --debug-init&"
+alias enodbg="$(brew --prefix emacs)/bin/emacs&"
+alias eninit="$(brew --prefix emacs)/bin/emacs --no-init-file&"
+alias econs="$(brew --prefix emacs)/bin/emacs -nw --debug-init"
 # 10224F22-A50D-4B6F-9D25-604E423128FA ends here
 
 # [[file:bash.org::1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E][1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E]]
