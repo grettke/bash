@@ -2547,7 +2547,7 @@ digraph version5 {
 :ID:       742113EF-114F-4FF9-B543-06C748E9153C
 :END:
 
-Write this system using Bash 4.3.* features.
+Define this system using Bash 4.3.* features. Warn if not at least.
 
 #+NAME: 86B3EC22-B47D-4E40-AFDD-B68AC6F77110
 #+BEGIN_SRC sh
