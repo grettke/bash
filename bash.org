@@ -3236,7 +3236,7 @@ Easily use Java.
 
 #+NAME: 6697345C-43E6-4EC0-8171-1FA226253803
 #+BEGIN_SRC sh
-JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home'
+JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home'
 #+END_SRC
 
 Easily use EMACS info files.
@@ -3366,7 +3366,7 @@ Always use ~Bash~ *never* use the default shell.
 
 #+NAME: orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603
 #+BEGIN_SRC sh
-alias sh='bash'
+alias sh='/usr/local/bin/bash'
 #+END_SRC
 
 *** BashLogout

@@ -17,7 +17,7 @@ HOMEBREW_NO_EMOJI=1
 # 5A8DA41A-6F75-410A-9DD4-21A348CAC9BD ends here
 
 # [[file:~/git/github/bash/bash.org::6697345C-43E6-4EC0-8171-1FA226253803][6697345C-43E6-4EC0-8171-1FA226253803]]
-JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home'
+JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home'
 # 6697345C-43E6-4EC0-8171-1FA226253803 ends here
 
 # [[file:~/git/github/bash/bash.org::2A2C25BE-DF7E-46A2-8378-0163D0A5DB17][2A2C25BE-DF7E-46A2-8378-0163D0A5DB17]]
@@ -91,5 +91,5 @@ alias bk="cd $OLDPWD"
 # orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683 ends here
 
 # [[file:~/git/github/bash/bash.org::orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603][orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603]]
-alias sh='bash'
+alias sh='/usr/local/bin/bash'
 # orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603 ends here
