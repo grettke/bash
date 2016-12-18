@@ -1156,12 +1156,20 @@ done
   - If set, aliases are expanded as described below under Aliases, Aliases. This option is enabled by default for interactive shells.
 - ~extdebug~
   - If set, behavior intended for use by debuggers is enabled:
-    - The -F option to the declare builtin (see Bash Builtins) displays the source file name and line number corresponding to each function name supplied as an argument.
-    - If the command run by the DEBUG trap returns a non-zero value, the next command is skipped and not executed.
-    - If the command run by the DEBUG trap returns a value of 2, and the shell is executing in a subroutine (a shell function or a shell script executed by the . or source builtins), a call to return is simulated.
-    - BASH_ARGC and BASH_ARGV are updated as described in their descriptions (see Bash Variables).
-    - Function tracing is enabled: command substitution, shell functions, and subshells invoked with ( command ) inherit the DEBUG and RETURN traps.
-    - Error tracing is enabled: command substitution, shell functions, and subshells invoked with ( command ) inherit the ERR trap.
+    - The -F option to the declare builtin (see Bash Builtins) displays the
+      source file name and line number corresponding to each function name
+      supplied as an argument.
+    - If the command run by the DEBUG trap returns a non-zero value, the next
+      command is skipped and not executed.
+    - If the command run by the DEBUG trap returns a value of 2, and the shell
+      is executing in a subroutine (a shell function or a shell script
+      executed by the . or source builtins), a call to return is simulated.
+    - BASH_ARGC and BASH_ARGV are updated as described in their descriptions
+      (see Bash Variables).
+    - Function tracing is enabled: command substitution, shell functions, and
+      subshells invoked with ( command ) inherit the DEBUG and RETURN traps.
+    - Error tracing is enabled: command substitution, shell functions, and
+      subshells invoked with ( command ) inherit the ERR trap.
 - ~extglob~
   - If set, the extended pattern matching features described above (see Pattern Matching) are enabled.
 - ~extquote~
