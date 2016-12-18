@@ -3360,6 +3360,13 @@ than =cd ~/=.
 alias bk="cd $OLDPWD"
 #+END_SRC
 
+Always use ~Bash~ *never* use the default shell.
+
+#+NAME: orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603
+#+BEGIN_SRC sh
+alias sh='bash'
+#+END_SRC
+
 *** BashLogout
 :PROPERTIES:
 :ID:       05FCD6B3-FF57-4C10-9552-8F41686F1019

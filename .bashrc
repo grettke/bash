@@ -87,3 +87,7 @@ alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 # [[file:bash.org::orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683][orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683]]
 alias bk="cd $OLDPWD"
 # orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683 ends here
+
+# [[file:bash.org::orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603][orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603]]
+alias sh='bash'
+# orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603 ends here
