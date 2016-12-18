@@ -25,7 +25,7 @@ INFOPATH='/usr/local/share/info:/usr/share/info'
 # 2A2C25BE-DF7E-46A2-8378-0163D0A5DB17 ends here
 
 # [[file:bash.org::96DF1A6D-FDEE-41D2-B8B0-17F7A9E98B16][96DF1A6D-FDEE-41D2-B8B0-17F7A9E98B16]]
-CCRYPT='/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp'
+CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp"
 # 96DF1A6D-FDEE-41D2-B8B0-17F7A9E98B16 ends here
 
 # [[file:bash.org::orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B][orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B]]

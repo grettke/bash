@@ -3250,7 +3250,7 @@ Easily use =ccrypt= from EMACS.
 
 #+NAME: 96DF1A6D-FDEE-41D2-B8B0-17F7A9E98B16
 #+BEGIN_SRC sh
-CCRYPT='/usr/local/Cellar/ccrypt/1.10/share/emacs/site-lisp'
+CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp"
 #+END_SRC
 
 Easily use Langtool.
