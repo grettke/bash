@@ -3257,7 +3257,7 @@ Easily use Langtool.
 
 #+NAME: orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B
 #+BEGIN_SRC sh
-LANGTOOL='/usr/local/Cellar/languagetool/3.2/libexec/languagetool-commandline.jar'
+LANGTOOL="$(brew --prefix languagetool)/libexec/languagetool-commandline.jar"
 #+END_SRC
 
 Easily use =proselint= from EMACS.
