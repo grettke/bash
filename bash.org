@@ -3306,6 +3306,13 @@ globalpip() {
 }
 #+END_SRC
 
+Cache ~pip~ packages for re-use.
+
+#+NAME: orgmode:gcr:vela:03DFF3D2-2F83-456E-B82A-8BF7FD1D0817
+#+BEGIN_SRC sh
+PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+#+END_SRC
+
 **** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
 :PROPERTIES:
 :ID:       2B765276-2BEE-45F3-8AFE-6D81160D6035

@@ -60,6 +60,10 @@ globalpip() {
 }
 # orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2 ends here
 
+# [[file:~/git/github/bash/bash.org::orgmode:gcr:vela:03DFF3D2-2F83-456E-B82A-8BF7FD1D0817][orgmode:gcr:vela:03DFF3D2-2F83-456E-B82A-8BF7FD1D0817]]
+PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+# orgmode:gcr:vela:03DFF3D2-2F83-456E-B82A-8BF7FD1D0817 ends here
+
 # [[file:~/git/github/bash/bash.org::10224F22-A50D-4B6F-9D25-604E423128FA][10224F22-A50D-4B6F-9D25-604E423128FA]]
 alias e="$(brew --prefix emacs)/bin/emacs --debug-init&"
 alias enodbg="$(brew --prefix emacs)/bin/emacs&"
