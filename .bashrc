@@ -77,6 +77,7 @@ alias R='r --no-save'
 # 1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E ends here
 
 # [[file:~/git/github/bash/bash.org::orgmode:gcr:vela:D69007EA-0CEE-43F2-AAEA-E55ABDA9DE3E][orgmode:gcr:vela:D69007EA-0CEE-43F2-AAEA-E55ABDA9DE3E]]
+alias vens='virtualenv env'
 alias veon='source ./env/bin/activate'
 alias veof='deactivate'
 # orgmode:gcr:vela:D69007EA-0CEE-43F2-AAEA-E55ABDA9DE3E ends here

@@ -3340,6 +3340,7 @@ Easily activate and deactivate =virtualenv=.
 
 #+NAME: orgmode:gcr:vela:D69007EA-0CEE-43F2-AAEA-E55ABDA9DE3E
 #+BEGIN_SRC sh
+alias vens='virtualenv env'
 alias veon='source ./env/bin/activate'
 alias veof='deactivate'
 #+END_SRC
