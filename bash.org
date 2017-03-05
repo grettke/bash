@@ -3321,6 +3321,13 @@ alias veon='source ./env/bin/activate'
 alias veof='deactivate'
 #+END_SRC
 
+Only allow ~pip~ to install packages with a ~venv~.
+
+#+NAME: orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9
+#+BEGIN_SRC sh
+PIP_REQUIRE_VIRTUALENV=true
+#+END_SRC
+
 Good defaults.
 
 #+NAME: 20B20120-4482-4572-B3D3-3A1DD1DAE792
