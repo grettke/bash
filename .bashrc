@@ -71,6 +71,12 @@ alias veof='deactivate'
 PIP_REQUIRE_VIRTUALENV=true
 # orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9 ends here
 
+# [[file:~/git/github/bash/bash.org::orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2][orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2]]
+globalpip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+# orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2 ends here
+
 # [[file:~/git/github/bash/bash.org::20B20120-4482-4572-B3D3-3A1DD1DAE792][20B20120-4482-4572-B3D3-3A1DD1DAE792]]
 alias mkdir='mkdir -pv'
 alias mount='mount | column -t'

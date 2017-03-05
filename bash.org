@@ -3328,6 +3328,15 @@ Only allow ~pip~ to install packages with a ~venv~.
 PIP_REQUIRE_VIRTUALENV=true
 #+END_SRC
 
+~gpip~ can instally globally though.
+
+#+NAME: orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2
+#+BEGIN_SRC sh
+globalpip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+#+END_SRC
+
 Good defaults.
 
 #+NAME: 20B20120-4482-4572-B3D3-3A1DD1DAE792
