@@ -50,6 +50,16 @@ PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$PATH"
 VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 # F1278DB7-509B-4BDD-93FD-96461BD6EC8B ends here
 
+# [[file:~/git/github/bash/bash.org::orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9][orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9]]
+PIP_REQUIRE_VIRTUALENV=true
+# orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9 ends here
+
+# [[file:~/git/github/bash/bash.org::orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2][orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2]]
+globalpip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+# orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2 ends here
+
 # [[file:~/git/github/bash/bash.org::10224F22-A50D-4B6F-9D25-604E423128FA][10224F22-A50D-4B6F-9D25-604E423128FA]]
 alias e="$(brew --prefix emacs)/bin/emacs --debug-init&"
 alias enodbg="$(brew --prefix emacs)/bin/emacs&"
@@ -66,16 +76,6 @@ alias R='r --no-save'
 alias veon='source ./env/bin/activate'
 alias veof='deactivate'
 # orgmode:gcr:vela:D69007EA-0CEE-43F2-AAEA-E55ABDA9DE3E ends here
-
-# [[file:~/git/github/bash/bash.org::orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9][orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9]]
-PIP_REQUIRE_VIRTUALENV=true
-# orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9 ends here
-
-# [[file:~/git/github/bash/bash.org::orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2][orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2]]
-globalpip() {
-    PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
-# orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2 ends here
 
 # [[file:~/git/github/bash/bash.org::20B20120-4482-4572-B3D3-3A1DD1DAE792][20B20120-4482-4572-B3D3-3A1DD1DAE792]]
 alias mkdir='mkdir -pv'

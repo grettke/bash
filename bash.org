@@ -3290,6 +3290,22 @@ Use VMWare with Vagrant.
 VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 #+END_SRC
 
+Only allow ~pip~ to install packages with a ~venv~.
+
+#+NAME: orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9
+#+BEGIN_SRC sh
+PIP_REQUIRE_VIRTUALENV=true
+#+END_SRC
+
+~gpip~ can instally globally though.
+
+#+NAME: orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2
+#+BEGIN_SRC sh
+globalpip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+#+END_SRC
+
 **** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
 :PROPERTIES:
 :ID:       2B765276-2BEE-45F3-8AFE-6D81160D6035
@@ -3319,22 +3335,6 @@ Easily activate and deactivate =virtualenv=.
 #+BEGIN_SRC sh
 alias veon='source ./env/bin/activate'
 alias veof='deactivate'
-#+END_SRC
-
-Only allow ~pip~ to install packages with a ~venv~.
-
-#+NAME: orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9
-#+BEGIN_SRC sh
-PIP_REQUIRE_VIRTUALENV=true
-#+END_SRC
-
-~gpip~ can instally globally though.
-
-#+NAME: orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2
-#+BEGIN_SRC sh
-globalpip() {
-    PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
 #+END_SRC
 
 Good defaults.
