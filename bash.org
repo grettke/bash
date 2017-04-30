@@ -3400,7 +3400,7 @@ Have fun.
 printf 'Sayonara!\n' && sleep 1
 #+END_SRC
 
-* Deployment
+* Deploy
 :PROPERTIES:
 :header-args: :tangle ./deploy :tangle-mode (identity #o755)
 :ID:       0F3EA345-BB8F-4300-BF94-CD5FCBA7B43F
