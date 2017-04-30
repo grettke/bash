@@ -1,0 +1,252 @@
+* Design
+:PROPERTIES:
+:ID:       886036D5-3715-492B-9ABF-825F4058A995
+:END:
+:LOGBOOK:
+- Refiled on [2017-04-30 Sun 18:46] \\
+  Refactored.
+:END:
+
+** Desires
+:PROPERTIES:
+:ID:       C1CA8CCE-D299-4034-8ACA-432622B38640
+:END:
+
+- Things that I want to do with Bash, and how I want to do them
+  - Understand the computer and its operating system
+    - Explore the contents of the disk drive and memory
+  - Automated tedious and error prone tasks as quickly as possible
+    - Develop shell scripts to do so
+    - Leverage multi-tasking
+  - Maximize expressivity and predictability
+    - Maximize predictability
+    - Minimize surprise
+    - Fail fast
+
+** Approach to Learning and Configuring Bash
+:PROPERTIES:
+:ID:       9C4ED82B-B909-4546-9AA4-EC1877223C8D
+:END:
+
+- Bash provides a rich and complicated configuration facility
+- Successfully solving problems with Bash requires that you (goal)
+  - Understand what it can do
+  - Configure it to do so in a way that you prefer
+- Working with Bash provides the results by recognizing that you attain practice
+  and experience (means)
+  - Understanding possibilities requires study and practice (practice)
+  - Configuring requires experience and personal-preference (experience)
+- The purpose of this document is to capture both the means and the goal
+
+** The Purpose of Bash
+:PROPERTIES:
+:ID:       20275946-BE34-4DC6-B9B1-A5944F23B899
+:END:
+
+- The ~set~ builtin
+  [fn:1c25a9a2ecf21a00:https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html]
+  onerously states that "This builtin is so complicated that it deserves its own
+  section". That can be off-putting for the new-operator (or programmer). The
+  word /complicated/ is more like a code-word here though; it is really a short
+  hand for /expressivity/. ~set~ lets you configure the system (Bash) any way you
+  choose; it fully enables you to express your personal definition of
+  expressivity when it comes to system management. This is no small feat. Doing
+  so belies the complexity, magnitude, and power lurking behind the thin veneer
+  that most only know as "the powerful command line interface" that most only
+  use to start graphical user interface applications. Bash is the most humble
+  servant; expertly negotiation with the kernel, humbly taking orders from the
+  operator, and deftly managing the work of any number of processes.
+  Forgive my anthropomorphization; we may ever know someone like Bash in our own
+  lives for that is truly a rare and kind soul.
+
+** Understanding Your Cognitive Landscape
+:PROPERTIES:
+:ID:       435374DD-FDEA-4D0A-B5C2-5E205B30B04F
+:END:
+
+- Doing things with Bash
+  - It is difficult to make sense of all of the configuration options for doing
+    things with Bash
+  - When you've got experience, rely on that
+  - When you haven't got experience, document your intent and obtain experience
+  - Both the things that you do with Bash and the thing that you /want to/ do with
+    Bash are your personal cognitive landscape that guide the configuration
+- Roles of Doers
+  - My goal is to classify configuration options by roles that have different
+    goals. Some of the roles have overlap in the goals, some don't. I don't
+    know yet what are the best role definitions or how options overlap. I will
+    find out and document it here. /Doers/ is the name of someone or something
+    executing things with an intent. My goal is to reveal intent and use that
+    for classification and role definition.
+  - Broad Doer definitions
+    - Interactive vs Non-Interactive Shell
+      - Interactive: requires input from the user
+      - Non-Interactive: doesn't
+      - Unsure how to use this to classify configuration because most scripts
+        are in a =tty= and you /can/ accept input. Should you? Is that the question?
+        What does it mean to configure Bash, and for what? Here is an attempt:
+        - Interactive is for configuring things that you only ever want to do
+          or care about as a human sitting at a terminal. These are things that
+          I will pretend/decide that I will never every do when running a
+          non-interactive script. This whole plan relies on strictly separating
+          implementation of both kinds of scripts
+        - Non-interactive is for things that I as a human will never see. Or
+          perhaps things that I don't care to see immediately because I didn't
+          run them. The overlap is so close here. Perhaps "things that I want
+          to see" and "things that I want to do interactively" is the correct
+          classifier.
+        - This is a design choice
+    - Login and Non-Login Shell
+      - Are you initiating things or is a ~cron~?
+      - This is a system/user choice
+        - You choose to use the system; executing things via a Login shell
+        - You schedule things for the system to do; executing things via a
+          Non-Login shell
+- Classifying things Bash can do
+  - Not using tags to classify because they won't reflect document structure and
+    I'm not sure where to begin
+  - Tried using multiple tags and that confused the whole effort
+  - Switched to one tag
+    - Every time I feel like using multiple tags, I will try to update the
+      Desires to make sense of what I value
+
+** Observations & Questions & Decisions
+:PROPERTIES:
+:ID:       3D8CB422-87BC-47A8-BA42-8D4A0AFEF99E
+:END:
+
+*** Version 01
+:PROPERTIES:
+:ID:       F1878DC4-317A-4743-90D0-DFF6971E58FB
+:END:
+
+- The login interactive shell is for things that you will only do at the
+  start and finish of a logical session
+  - Attached to your ID and a ~tty~ owned by you
+  - Not much work to do here
+- The login non-interactive shell is for things that you will do every time
+  that you begin another shell during a logical session
+  - This includes the login interactive shell, execute this as suggested by
+    the Bash reference manual
+- The non-login non-interactive shell
+  - Is non-interactive because you have no way of interacting with it unless
+    you hack some way to do so
+  - Non-Interactive is somewhat a misnomer here because you can choose to
+    implement non-interactive scripts when a ~tty~ is attached but when you
+    haven't got a ~tty~ attached there is no possibility of running interactive
+    scripts
+  - Is non-login because it is not associated with your ID and at the same
+    time not attached to a ~tty~ attached to you
+  - This document won't address non-login shells
+    - If you develop your scripts in a richly configured Bash environment, you
+      will have to configure non-login shells to use the same environment. I am
+      avoiding this topic because I need to see where this experiment goes.
+    - That was a mistake. After developing a powerful Bash environment you are
+      likely to want to use that same environment for non-login shells. Of
+      course you are!
+
+*** Version 02
+:PROPERTIES:
+:ID:       E1339F20-FAF2-4E46-AFF1-DCB5811F80BE
+:END:
+
+- Configure Bash for every user?
+  - Login Interactive and Non-Login Interactive are easy and obvious
+  - Non-Login Non-Interactive seems valuable but is less obvious
+- Bash vs Dash
+  - Performance reasons?
+  - [[https://www.wikivs.com/wiki/Bash_vs_dash][Via]]
+    #+BEGIN_QUOTE
+     Dash (Debian Almquist SHell) is a shell that has poor usability by modern standards when used as an interactive log-in shell, but is faster in executing POSIX-compliant scripts than Bash.
+     Bash (Bourne Again SHell) has many more features and is especially preferable when used interactively (although it does contain more programming features too).
+     Bash is typically provided as the default interactive shell, while Debian and Debian-derivatives like Ubuntu provide Dash as the /bin/sh implementation, thereby causing scripts with #!/bin/sh shebangs to be interpreted by Dash rather than Bash by default. For scripts that require Bash for execution, Bash will still be used as the interpreter if the shebang is #!/bin/bash.
+     Bash is designed for human beings and provides a superset of POSIX functionality
+     Supports the same scripting commands as Dash as well as its own additional commands (sometimes called "Bashisms")
+     Supports tab completion
+     Supports a command history
+     Dash is for non-interactive script execution
+     Only supports POSIX compliant features
+     Small binary size (Dash is only 100K compared to Bash's 900K)
+     Faster start-up and script execution
+     #+END_QUOTE
+    - This provokes more questions
+      - Why have programming expressivity for DevOps and System Administration
+        if you can't or shouldn't use it for startup scripts?
+- [[http://lkhill.com/binsh-checking-for-bash-vs-dash-incompatibilities/][Just call Bash explicitly; it is not an issue]]
+- [[http://shebang.brandonmintern.com/bourne-is-not-bash-or-read-echo-and-backslash/][Important differences between Bourne and POSIX compliant shells]]
+  - POSIX for speed
+  - Bash better for scripting
+  - Call it for the user with =#!/usr/bin/env bash=
+- Bash is for interactive tasks; Dash is for non-interactive tasks
+- You don't need Readline in non-interactive mode
+
+*** Version 03
+:PROPERTIES:
+:ID:       DDB77782-98C3-4F45-9CCA-3D17CBAC327F
+:END:
+
+- Desires read like
+  - Things that you would do as a software engineer
+  - Things that you would do as a devops engineer
+- Desire don't read like
+  - Things that you would do as scheduled task
+  - Things that you would do as a remotely executed task
+- This looks like a Bash system that
+  - Configures Bash for login shells and nothing more
+- Because
+  - Any further scope has no desires or experience to guide it
+    - Attempting to do anything more would result in aimless fruitless wandering
+
+*** Version 04
+:PROPERTIES:
+:ID:       F12494B4-C1D7-40D1-81CC-D19632D0E7B9
+:END:
+
+#+NAME: F8503035-BB08-4E0A-9B72-4A473C1C4038
+#+BEGIN_SRC dot :file "./image/version04.png" :wrap "RESULTS"
+digraph version5 {
+  fontname = "DejaVu Sans Mono";
+  fontsize = 12;
+  node [shape = "record" fontname = "DejaVu Sans Mono" fontsize = 12];
+  compound = true;
+  subgraph cluster_A {
+    label = "Literate Programming\nEntities\n\n(configuration of Bash)";
+    BashCore[label = "{BashCore|Warn if inadequate version\lStandard language features\l|For human & computer execution\l}"];
+    BashNonInteractiveCore[label = "{BashNonInteractiveCore|Exit if interactive\nUnset interactive functions|Only for computer execution\l}"];
+    BashInteractiveCore[label = "{BashInteractiveCore|Exit if non-interactive\nInterface\lDebugging\lHistory\lReadline\lPrompts\l|Only for human execution\l}"];
+  }
+  subgraph cluster_B {
+    label = "Global Shell Configuration Files\n\n(/usr/local/etc)";
+    BashGlobalNonInteractiveFile[shape = "note" label = ".bash_global_non_interactive\n\n«BashCore»\n«BashNonInteractiveCore»"];
+    BashGlobalInteractiveFile[shape = "note" label = ".bash_global_interactive\n\n«BashCore»\n«BashInteractiveCore»"];
+  }
+  subgraph cluster_C {
+    label = "Interactive [Non-]Login Shell\n\nLogin Shell Configuration Files\n\n(~/)";
+    BashProfile[shape = "note" label = ".bash_profile\n\nYour session start commands, once"];
+    BashRc[shape = "note" label = ".bashrc\n\nsource #BASH_GLOBAL_INTERACTIVE_ENV\nYour once for every\nshell created commands"];
+    BashLogout[shape = "note" label = ".bash_logout\n\nYour session end commands, once"];
+    BashGlobalInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_INTERACTIVE_ENV"];
+  }
+  subgraph cluster_D {
+    label = "Non-Interactive [Non-]Login Shell";
+    BashEnv [shape = "rarrow" label = "BASH_ENV"];
+    BashGlobalNonInteractiveProp [shape = "rarrow" label = "BASH_GLOBAL_NON_INTERACTIVE_ENV"];
+    BashNonInteractiveLoginInit [shape = "rarrow" label="--login"];
+  }
+  BashProfile -> BashRc;
+  BashRc -> BashLogout;
+  BashEnv -> BashGlobalNonInteractiveProp -> BashGlobalNonInteractiveFile;
+  BashGlobalInteractiveProp -> BashGlobalInteractiveFile;
+  BashNonInteractiveLoginInit -> BashRc [lhead=cluster_C];
+  BashGlobalInteractiveFile -> BashCore [arrowhead=diamond];
+  BashGlobalInteractiveFile -> BashInteractiveCore [arrowhead=diamond];
+  BashGlobalNonInteractiveFile -> BashCore [arrowhead=diamond];
+  BashGlobalNonInteractiveFile -> BashNonInteractiveCore [arrowhead=diamond];
+}
+#+END_SRC
+
+#+RESULTS: F8503035-BB08-4E0A-9B72-4A473C1C4038
+#+BEGIN_RESULTS
+[[file:./image/version04.png]]
+#+END_RESULTS
+

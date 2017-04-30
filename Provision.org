@@ -1,0 +1,865 @@
+* Provision
+:PROPERTIES:
+:ID:       A1DF7D9E-5B52-46D6-90CB-FC43C50D5E41
+:END:
+** Global
+:PROPERTIES:
+:ID:       E5068275-CDEC-4A3F-B33E-875B505133D9
+:END:
+
+*** BashCore
+:PROPERTIES:
+:header-args: :noweb-ref BashCore
+:ID:       742113EF-114F-4FF9-B543-06C748E9153C
+:END:
+
+Define this system using Bash 4.3.* features. Warn if not at least.
+
+#+NAME: 86B3EC22-B47D-4E40-AFDD-B68AC6F77110
+#+BEGIN_SRC sh
+emaj=4
+emin=3
+amaj=${BASH_VERSINFO[0]}
+amin=${BASH_VERSINFO[1]}
+if [[ $amaj -lt $emaj || $amin -lt $emin ]]; then
+    printf "\e[31mFYI: Using Bash v$amaj.$amin.x but expecting Bash >= v$emaj.$emin.x\e[0m\n" 1>&2
+fi
+unset emaj
+unset emin
+unset amaj
+unset amin
+#+END_SRC
+
+**** Options
+:PROPERTIES:
+:ID:       D2F74D27-DADE-4396-B332-64FA0C9EEE52
+:END:
+***** Expressivity
+:PROPERTIES:
+:ID:       DAA8B5AA-D4F0-4D48-BDF7-91D82C750A7A
+:END:
+
+Programatically generate expressions (Brace Expansion) using
+- Sequence of comma separated names
+- Pattern matching to create a list of names of files
+- Sequence expression
+
+#+NAME: 57652CC2-A592-4EDB-AB4F-5668BDE2A9AB
+#+BEGIN_SRC sh
+set -o braceexpand
+#+END_SRC
+
+
+Define key-pair values for command's dynamic extent before calling the command
+and nowhere else. Doing otherwise breaks ~alias~ for example in a surprising way.
+
+#+NAME: 2CB26DFF-1F5A-4781-A460-7B6975FBBCC8
+#+BEGIN_SRC sh
+set +o keyword
+#+END_SRC
+
+***** Fail Fast
+:PROPERTIES:
+:ID:       8B249641-2851-4AC0-BEE0-F720ED92AB4B
+:END:
+
+Exit immediately when a command in a pipeline fails. Assume the worst. If the
+result of calling the failed command is not an emergency, then find the
+parameter for that command which prevents it from reporting a failure. This
+looks like an extreme configuration decision, but it isn't. The behavior is
+disabled for the following expected situations where the command is
+
+- Exceptions
+  - in ~while~ or ~until~ block
+  - is part of an ~if~ test
+  - short-circuit evaluation
+    - surprised at this behavior!
+    - but for the last command
+  - any command in a pipeline but the last
+    - surprised at this behavior!
+  - having it's return status inverted by ~!~
+- This seems strange; I read this as we won't get the desired behavior during a
+  sequence of express and that is the exact place where we want that behavior.
+  Perform research on this.
+
+When an error occurs remain in the shell so that the system operator can
+research wha happened in that context. Don't exit the shell because there was
+an error. Enabling this causes the shell to exit immediately.
+
+#+NAME: 1A58BFA3-F5E2-421B-8D68-BFAFAC165D82
+#+BEGIN_SRC sh
+set +o errexit
+#+END_SRC
+
+The result of a pipeline is the result of the last expression to exit on error
+or zero if they all completed successfully. This reads like "short circuit"
+evaluation but I'm not sure it is. Perform research on this.
+
+#+NAME: 8E509A55-4F09-49DF-9402-3FBAF130CBD1
+#+BEGIN_SRC sh
+set -o pipefail
+#+END_SRC
+
+When there are no file matches found report an error.
+
+#+NAME: 55B5A68B-59AF-4CED-B159-7E72D87C8B04
+#+BEGIN_SRC sh
+shopt -s failglob
+#+END_SRC
+
+Report an error when you ~shift~ more parameters than you received.
+
+#+NAME: B6228402-AF52-48C9-8B65-493DAC37E850
+#+BEGIN_SRC sh
+shopt -s shift_verbose
+#+END_SRC
+
+***** Inheritance
+:PROPERTIES:
+:ID:       A8018763-74CF-414F-BB18-BC772A92EB77
+:END:
+
+Every change (creation and modification) made to the parent shell
+environment (functions and variables) should be automatically exported to every
+child shell environment.
+
+#+NAME: CFACD6C3-617A-42E7-A672-DE55C1F6C9E9
+#+BEGIN_SRC sh
+set -o allexport
+#+END_SRC
+
+Do the same thing for the ~ERR~ trap.
+
+#+NAME: AF6CF6F6-29EB-4A4D-8C56-BB4239DCB50C
+#+BEGIN_SRC sh
+set -o errtrace
+#+END_SRC
+
+Do the same thing for the ~DEBUG~ and ~RETURN~ traps.
+
+#+NAME: 0A61B3AC-32CB-4189-852F-0D9956BB1D1F
+#+BEGIN_SRC sh
+set -o functrace
+#+END_SRC
+
+Pass a non-directory arguments to =cd= and change to the value of that variable.
+
+#+NAME: 26B4365A-1F13-4ECD-99EB-964C276533EE
+#+BEGIN_SRC sh
+shopt -s cdable_vars
+#+END_SRC
+
+***** Job Control
+:PROPERTIES:
+:ID:       84F714C4-0A65-4FBD-8465-762D336FC366
+:END:
+
+Enable it.
+
+#+NAME: 58D8B849-7FD3-430A-9914-49DEF15EB886
+#+BEGIN_SRC sh
+set -o monitor
+#+END_SRC
+
+Immediately report terminated job status. This might appear to be a Interactive
+feature, but it isn't. It appears hear reporting errors in the log file
+immediately realizing this Bash configurations "Fail Fast" goal.
+
+#+NAME: F0055BD6-96CF-4B81-B11C-F9B99F5085F8
+#+BEGIN_SRC sh
+set -o notify
+#+END_SRC
+
+***** No Surprises
+:PROPERTIES:
+:ID:       226DA083-4784-4899-BC5F-4B36C8366C41
+:END:
+
+Provide but disable interactive debugging by default.
+
+Instead force children to change their configuration script,
+run with ~bash --debugger~ or set ~shopt -s extdebug~.
+
+#+NAME: FAB2F5D9-E5D3-4252-A0F9-853375344CFF
+#+BEGIN_SRC sh
+shopt -u extdebug
+#+END_SRC
+
+Log files are often identified as important only after accidentally clobbering
+them. Make stomping visible  by first deleting them and then writing them
+out again. Doing so is easy to automate and searchable.
+
+#+BEGIN_QUOTE
+Prevent output redirection using ‘>’, ‘>&’, and ‘<>’ from overwriting existing
+files.
+#+END_QUOTE
+
+#+NAME: 9086FA3B-EC85-486F-87AB-35F72D57602B
+#+BEGIN_SRC sh
+set -o noclobber
+#+END_SRC
+
+Referencing an undefined variable or parameter should generate an error because
+the program can not run as intended. The system should fail-fast. Only use this
+in individual shell scripts; not the global configuration because doing so
+prevents Bash system initialization by preventing you to define any new
+variables and dying!
+
+#+NAME: A83FCBAD-BD08-46EF-B8DC-08F834CD0774
+#+BEGIN_SRC sh
+# set -o nounset
+#+END_SRC
+
+Assume that the user (computer or human) provided the correct directory-name
+arguments to a command and do not modify them. Auto-correction of directory
+names can *at best* cause *complete disaster* for a distracted operator.
+
+#+NAME: 69CDCB52-A45C-4D5C-97C1-6754620B922A
+#+BEGIN_SRC sh
+shopt -u cdspell
+#+END_SRC
+
+For directories, too.
+
+#+NAME: 3332E975-30FF-4B12-B7FB-3904DEA0312B
+#+BEGIN_SRC sh
+shopt -u dirspell
+#+END_SRC
+
+Put temporary files in one place.
+
+#+NAME: 68DC48E0-D643-46CF-8C84-DE3AC3B8C2EF
+#+BEGIN_SRC sh
+TMPDIR='/tmp'
+#+END_SRC
+
+***** Performance
+:PROPERTIES:
+:ID:       43064DA1-6F0A-4C53-91DE-0F0526492FAB
+:END:
+
+Cache recently executed command source locations in a lookup table and search
+that before searching the lookup path to find a command.
+
+#+NAME: DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9
+#+BEGIN_SRC sh
+set -o hashall
+shopt -s checkhash
+#+END_SRC
+
+**** Variables
+:PROPERTIES:
+:ID:       509E97BE-28FB-4BA4-B448-B8A6C3E3E914
+:END:
+
+***** Encoding
+:PROPERTIES:
+:ID:       DB5B6660-BC3D-4E08-AF4C-7AD1E9FD1452
+:END:
+
+Use UTF-8 for everything. EMACS already does.
+
+Read more about how locale variables work in its man page. Only =LC_ALL= is
+required if all of your settings are the same.
+
+Set anything un-set.
+
+#+NAME: 994AE13B-C9B5-47FE-AB65-DF38706F81AA
+#+BEGIN_SRC sh
+LANG='en_US.UTF-8'
+#+END_SRC
+
+Override everything
+
+#+NAME: 8F44EAF1-D966-4D57-97A2-3A7014C76276
+#+BEGIN_SRC sh
+LC_ALL='en_US.UTF-8'
+#+END_SRC
+
+Sor how you expect it.
+
+#+NAME: orgmode:gcr:vela:37AF37AD-8F9B-4124-90A5-66125566748B
+#+BEGIN_SRC sh
+LC_COLLATE='POSIX'
+#+END_SRC
+
+Verify encoding.
+
+#+NAME: orgmode:gcr:vela:AC6175F5-5146-4C44-A8FA-67915D9CFB53
+#+BEGIN_SRC sh
+if [ "$(locale charmap)" == "UTF-8" ]; then
+    echo "Character encoding configured: CORRECTLY."
+else
+    echo "Character encoding configured: INCORRECTLY!"
+fi
+#+END_SRC
+
+***** Fontconfig
+:PROPERTIES:
+:ID:       53C6E25A-2AA7-48E7-AB66-D6BB51892EAA
+:END:
+
+[[https://www.freedesktop.org/software/fontconfig/fontconfig-devel/fcconfigfilename.html][Configure Fontconfig]].
+
+#+NAME: 48AEFF38-FFD3-4BB9-ABEF-3F5B1BADDFE2
+#+BEGIN_SRC sh
+FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+#+END_SRC
+
+*** BashNonInteractiveCore
+:PROPERTIES:
+:header-args: :noweb-ref BashNonInteractiveCore
+:ID:       BAB8CE45-5D95-47E9-903B-79856C3BA8B8
+:END:
+
+Only use this functionality in a non-interactive session.
+
+#+NAME: 2A2108E3-231A-4491-81F0-58B93BF2EA2C
+#+BEGIN_SRC sh
+if [ "$PS1" ]; then
+    printf "\e[31mExpected a non-interactive shell.\e[0m]\n" 1>&2
+    sleep 5
+    exit 1
+fi
+#+END_SRC
+
+Never take input from the user interactively and disable the use of those
+commands.
+
+#+NAME: E03E703D-809F-4536-996D-B96AE3DCD8C7
+#+BEGIN_SRC sh
+unset -f read select
+#+END_SRC
+
+Aliases are only for interactive users.
+
+#+NAME: CABCFC8A-89AB-41AE-9A46-514F1D6C8240
+#+BEGIN_SRC sh
+shopt -u expand_aliases
+#+END_SRC
+
+*** BashInteractiveCore
+:PROPERTIES:
+:header-args: :noweb-ref BashInteractiveCore
+:ID:       1AB9EF9D-8F1D-43C6-B557-7800B7A4AA2F
+:END:
+
+Only use this functionality in an interactive session.
+
+#+NAME: D029A4D7-6890-4196-850A-AAA07B96337F
+#+BEGIN_SRC sh
+if [ -z "$PS1" ]; then
+    printf "\e[31mExpected an interactive shell.\e[0m]\n" 1>&2
+    sleep 5
+    exit 1
+fi
+#+END_SRC
+
+**** Options
+:PROPERTIES:
+:ID:       F9663A3E-2D84-4A5C-82AB-7A2C4C92B2A5
+:END:
+***** Expressivity
+:PROPERTIES:
+:ID:       61322BCD-6B87-43C1-8BB2-A27C18519AF3
+:END:
+
+Programatically complete command options.
+
+#+NAME: ABCE11CE-B9DB-4060-BA30-F65C48353321
+#+BEGIN_SRC sh
+shopt -s progcomp
+#+END_SRC
+
+Aliases are only for interactive users.
+
+#+NAME: 72630356-4AFB-4ACA-9B80-07B9F0D3E17D
+#+BEGIN_SRC sh
+shopt -s expand_aliases
+#+END_SRC
+
+***** History
+:PROPERTIES:
+:ID:       C084E7AC-39D8-4FD9-BCFA-44B9BA34BFDC
+:END:
+
+Enable command history.
+
+#+NAME: 53C74C4A-D580-4DC3-8053-7D0268A63A5F
+#+BEGIN_SRC sh
+set -o history
+#+END_SRC
+
+Enable ~!~ substitution.
+
+#+NAME: 9BE45C01-2156-4A19-83CB-9759A66E5749
+#+BEGIN_SRC sh
+set -o histexpand
+#+END_SRC
+
+Easily re-edit historical multi-line commands.
+
+#+NAME: 3E938C0F-6DEF-4458-9D30-8986ADB49F92
+#+BEGIN_SRC sh
+shopt -s cmdhist
+#+END_SRC
+
+Separate lines with newline characters
+
+#+NAME: C8EF2109-AFD6-4D45-9C6E-484BD3617CD3
+#+BEGIN_SRC sh
+shopt -s lithist
+#+END_SRC
+
+***** Interface
+:PROPERTIES:
+:ID:       ADA57C58-C529-4C1C-9C90-EB641215A4FA
+:END:
+
+Use EMACS keybindings for ~Readline~ and ~read~.
+
+#+NAME: 6016B0DA-855B-4DE0-9416-D043C1180246
+#+BEGIN_SRC sh
+set -o emacs
+#+END_SRC
+
+When the command name is a directory in the =$PWD= pass it to =cd=.
+
+#+NAME: 9118B957-42C5-401B-9ED0-939D54BC549A
+#+BEGIN_SRC sh
+shopt -s autocd
+#+END_SRC
+
+Refresh ~LINES~ and ~COLUMNS~ after every command.
+
+#+NAME: D52A5F44-E7ED-4C61-A786-701EA73DBFF1
+#+BEGIN_SRC sh
+shopt -s checkwinsize
+#+END_SRC
+
+Automatically complete directory-names and replace the original name value.
+
+#+NAME: 25EA0545-D4A1-4809-B69A-8FAB2FE52E70
+#+BEGIN_SRC sh
+shopt -s complete_fullquote
+#+END_SRC
+
+Enable comments.
+
+#+NAME: B881A6A3-C116-45DD-87E7-D0EE788DE07D
+#+BEGIN_SRC sh
+shopt -s interactive_comments
+#+END_SRC
+
+Provide just enough information at the prompt to be useful without cluttering
+up the terminal.
+
+#+NAME: F81D2132-6006-439F-B281-F031B2C931E1
+#+BEGIN_SRC sh
+PS1='\u@\h:\w⮞ '
+#+END_SRC
+
+Make the continued prompt obvious. It is easily forgotten.
+
+#+NAME: EC1C20AF-9756-48CB-AE10-4262D8AE53BD
+#+BEGIN_SRC sh
+PS2='⏎⮞ '
+#+END_SRC
+
+Obviously prompt you to make a selection.
+
+#+NAME: 50C0C13E-59FB-4A03-8AF6-8FF694C264B5
+#+BEGIN_SRC sh
+PS3='�⮞ '
+#+END_SRC
+
+Enable the Bash Debugger.
+
+#+NAME: 6CAA9DCC-D799-469E-BFF6-1D2064AE4305
+#+BEGIN_SRC sh
+PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?]
+'
+#+END_SRC
+
+***** Job Control
+:PROPERTIES:
+:ID:       31ED5B89-34FC-4C9B-A5F9-3F9E3D4DD907
+:END:
+
+Never exit a shell when there are still running or stopped jobs.
+
+#+NAME: BDAB873F-BCAD-4B60-8C22-C67E6094229E
+#+BEGIN_SRC sh
+shopt -s checkjobs
+#+END_SRC
+
+Send =HUP= to all child processes when the interactive parent shell exits.
+
+#+NAME: 0A829512-17A5-4C99-AEB8-C56610E319DC
+#+BEGIN_SRC sh
+shopt -s huponexit
+#+END_SRC
+
+***** No Surprises
+:PROPERTIES:
+:ID:       1A962AE3-6CFA-47F0-B56C-029C03D5B10B
+:END:
+
+It is too easy to accidentally leave a shell by typing Control-D. Prevent it.
+
+#+NAME: D1E49BDB-3D0B-4DFD-9817-0322C560B378
+#+BEGIN_SRC sh
+set -o ignoreeof
+#+END_SRC
+
+Never attempt to complete a command in the contents of =PATH= when nothing is
+typed in.
+
+#+NAME: 9C862A09-726B-47E0-B2CD-E376146405AA
+#+BEGIN_SRC sh
+shopt -s no_empty_cmd_completion
+#+END_SRC
+
+**** Variables
+:PROPERTIES:
+:ID:       66E5F9F5-A58A-41A2-B86C-DCC645AC847E
+:END:
+
+***** History
+:PROPERTIES:
+:ID:       74AD211B-7575-43A7-B2F4-F6250EC6883B
+:END:
+
+Exclude history of commands starting with a space. Commands entered multiple
+times are important; keep their history (don't erase them).
+
+Ignore every command that
+- Starts with any number of spaces
+- Starts with any number of tabs
+
+#+NAME: FD3B6FDA-BC63-4DA0-B730-68CE46C04B9C
+#+BEGIN_SRC sh
+HISTIGNORE='[ \t]*'
+#+END_SRC
+
+Keep a rich and expansive history.
+
+#+NAME: 0674188D-A8F8-48D5-ABC9-2264772956B6
+#+BEGIN_SRC sh
+HISTSIZE=31102
+#+END_SRC
+
+Track history with basically a ISO-8601 timestamp.
+
+#+NAME: D510B310-1DA6-4D72-837A-54D8DB28C789
+#+BEGIN_SRC sh
+HISTTIMEFORMAT='%Y-%m-%d_%H-%M-%S '
+#+END_SRC
+
+***** Interface
+:PROPERTIES:
+:ID:       2F959536-B5F9-42F4-91B3-FB5497622E61
+:END:
+
+Only list the last 3 directories in the path; for everything deeper run ~pwd~.
+
+#+NAME: 2CDAF29A-605C-4D5D-AF0C-5DE7B5164C53
+#+BEGIN_SRC sh
+PROMPT_DIRTRIM=3
+#+END_SRC
+
+** Global Shell Configuration Files
+:PROPERTIES:
+:ID:       7D227BB5-1E04-40A3-B8EE-4F5913C0264C
+:END:
+
+*** Non-Interactive
+:PROPERTIES:
+:ID:       39DE0571-4D9F-473B-9D23-A02CD0950DBE
+:header-args: :tangle ./.bash_global_non_interactive
+:END:
+
+#+NAME: C59D63FC-0C8F-4740-B021-40D8BEB849E9
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
+
+Every Bash session requires the same configuration.
+
+#+NAME: AB646FCB-6048-4B21-B231-71DB5F64E465
+#+BEGIN_SRC sh
+«BashCore»
+#+END_SRC
+
+Only non-interactive sessions requires this configuration.
+
+#+NAME: 0B3FC004-95FC-45D0-B5C6-D38641391FC4
+#+BEGIN_SRC sh
+«BashNonInteractiveCore»
+#+END_SRC
+
+*** Interactive
+:PROPERTIES:
+:ID:       5D6FBE76-E349-43B2-9EC2-C18189139B53
+:header-args: :tangle ./.bash_global_interactive
+:END:
+
+#+NAME: 2933302D-687F-4A9E-881E-091F3AD5FED3
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
+
+Every Bash session requires the same configuration.
+
+#+NAME: 861890CF-0E4B-48FF-83C6-514C3CC395DC
+#+BEGIN_SRC sh
+«BashCore»
+#+END_SRC
+
+Only interactive sessions requires this configuration.
+
+#+NAME: 8E91E17C-6139-4A27-846B-E863D29CFDC0
+#+BEGIN_SRC sh
+«BashInteractiveCore»
+#+END_SRC
+
+** Login Shell Configuration Files
+:PROPERTIES:
+:ID:       B6560BA2-9AF6-42DA-BF9C-1B31D2157DE2
+:END:
+
+*** BashProfile
+:PROPERTIES:
+:ID:       71EDEF3E-56E7-43FE-A483-19419629472D
+:header-args: :tangle ./.bash_profile
+:END:
+
+#+NAME: 7A00F7A1-68EF-4D2B-83B3-465F76F10226
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
+
+Execute the same configuration as every non-login interactive shell.
+
+#+NAME: D8D66A14-3B1C-4537-963E-45DBC3D286B2
+#+BEGIN_SRC sh
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+#+END_SRC
+
+Have fun.
+
+#+NAME: 0DE550E8-DABB-45E0-A8CC-11CDC0A2279A
+#+BEGIN_SRC sh
+fortune
+#+END_SRC
+
+*** BashRc
+:PROPERTIES:
+:ID:       6EC5CFD7-9EF9-42DC-B695-3202F2A303C0
+:header-args: :tangle ./.bashrc
+:END:
+
+#+NAME: 51728B92-235E-4CE8-98D7-AB9E4783CB64
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
+
+#+NAME: A4502549-BA36-4C40-A12A-E42A72B6384C
+#+BEGIN_SRC sh
+source ~/.bash_global_interactive
+#+END_SRC
+
+VIM is the best system editor.
+
+#+NAME: 08792628-161D-4530-B789-7CE1CE308189
+#+BEGIN_SRC sh
+VISUAL=vim
+#+END_SRC
+
+Use VIM for visual non-EMACS environments.
+
+#+NAME: AD54A868-318C-4033-A593-93ED0184A1B4
+#+BEGIN_SRC sh
+EDITOR="$VISUAL"
+#+END_SRC
+
+Keep the system provisioning professional.
+
+#+NAME: 5A8DA41A-6F75-410A-9DD4-21A348CAC9BD
+#+BEGIN_SRC sh
+HOMEBREW_NO_EMOJI=1
+#+END_SRC
+
+Easily use Java.
+
+#+NAME: 6697345C-43E6-4EC0-8171-1FA226253803
+#+BEGIN_SRC sh
+JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home'
+#+END_SRC
+
+Easily use EMACS info files.
+
+#+NAME: 2A2C25BE-DF7E-46A2-8378-0163D0A5DB17
+#+BEGIN_SRC sh
+INFOPATH='/usr/local/share/info:/usr/share/info'
+#+END_SRC
+
+Easily use =ccrypt= from EMACS.
+
+#+NAME: 96DF1A6D-FDEE-41D2-B8B0-17F7A9E98B16
+#+BEGIN_SRC sh
+CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp"
+#+END_SRC
+
+Easily load Emacs libraries.
+
+#+NAME: orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B
+#+BEGIN_SRC sh
+LANGTOOL="$(brew --prefix languagetool)/libexec/languagetool-commandline.jar"
+DITAA="$(brew --prefix ditaa)/libexec/ditaa0_10.jar"
+PLANTUML="$(brew --prefix plantuml)/libexec/plantuml.jar"
+#+END_SRC
+
+Easily use =proselint= from EMACS.
+
+#+NAME: orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2
+#+BEGIN_SRC sh
+PROSELINT='/Users/gcr/util/proselint/env/bin/proselint'
+#+END_SRC
+
+Easily use TeX.
+
+#+NAME: E81EDC5A-549B-47FF-AD9C-41C73F40740A
+#+BEGIN_SRC sh
+MACTEX_BIN='/usr/local/texlive/2016/bin/x86_64-darwin'
+#+END_SRC
+
+Easily access everything.
+
+#+NAME: 305DB52D-DB00-40D8-BA3C-19C16A44D6B4
+#+BEGIN_SRC sh
+PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$PATH"
+#+END_SRC
+
+Use VMWare with Vagrant.
+
+#+NAME: F1278DB7-509B-4BDD-93FD-96461BD6EC8B
+#+BEGIN_SRC sh
+VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+#+END_SRC
+
+Only allow ~pip~ to install packages with a ~venv~.
+
+#+NAME: orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9
+#+BEGIN_SRC sh
+PIP_REQUIRE_VIRTUALENV=true
+#+END_SRC
+
+~gpip~ can install globally though.
+
+#+NAME: orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2
+#+BEGIN_SRC sh
+globalpip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+#+END_SRC
+
+**** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
+:PROPERTIES:
+:ID:       2B765276-2BEE-45F3-8AFE-6D81160D6035
+:END:
+
+Easily start EMACS.
+
+#+NAME: 10224F22-A50D-4B6F-9D25-604E423128FA
+#+BEGIN_SRC sh
+alias e='emacs --debug-init&'
+alias eno='emacs&'
+alias eni='emacs --no-init-file&'
+alias econ='emacs -nw --debug-init'
+#+END_SRC
+
+Easily start =r=.
+
+#+NAME: 1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E
+#+BEGIN_SRC sh
+alias r='r --no-save'
+alias R='r --no-save'
+#+END_SRC
+
+Easily activate and deactivate =virtualenv=.
+
+#+NAME: orgmode:gcr:vela:D69007EA-0CEE-43F2-AAEA-E55ABDA9DE3E
+#+BEGIN_SRC sh
+alias vens='virtualenv env'
+alias veon='source ./env/bin/activate'
+alias veof='deactivate'
+#+END_SRC
+
+Good defaults.
+
+#+NAME: 20B20120-4482-4572-B3D3-3A1DD1DAE792
+#+BEGIN_SRC sh
+alias mkdir='mkdir -pv'
+alias mount='mount | column -t'
+alias df='df -h'
+alias du="du -ach"
+#+END_SRC
+
+Shortcuts.
+
+#+NAME: A74F8DFE-A2A5-41E3-9D12-319766E42A30
+#+BEGIN_SRC sh
+alias h='history'
+alias j='jobs -l'
+#+END_SRC
+
+No surprises.
+
+#+NAME: A25A3E8F-4674-474A-BD45-1553C6EF0B3A
+#+BEGIN_SRC sh
+alias cd..='cd ..'
+#+END_SRC
+
+Get download speed [fn:167e637e4fea0629:https://www.gulshansingh.com/posts/useful-bash-aliases/].
+
+#+NAME: D579A295-6383-4E18-B033-5EF0057085C0
+#+BEGIN_SRC sh
+alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
+#+END_SRC
+
+I accidentally type =cd= instead of =cd ..=. I want to return to my original
+working directory and I'm irritated because I'm lazy and I don't want to type
+=cd $OLDPWD=. Don't get rid of =cd= though because I do use it and it is faster
+than =cd ~/=.
+
+#+NAME: orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683
+#+BEGIN_SRC sh
+alias bk="cd $OLDPWD"
+#+END_SRC
+
+Always use ~Bash~ *never* use the default shell.
+
+#+NAME: orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603
+#+BEGIN_SRC sh
+alias sh='/usr/local/bin/bash'
+#+END_SRC
+
+*** BashLogout
+:PROPERTIES:
+:ID:       05FCD6B3-FF57-4C10-9552-8F41686F1019
+:header-args: :tangle ./.bash_logout
+:END:
+
+#+NAME: 5890E216-F5C8-4F03-981C-71A91AE0890A
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
+
+Have fun.
+
+#+NAME: 891ED468-F802-4378-BA5C-0BF874CAB4F1
+#+BEGIN_SRC sh
+printf 'Sayonara!\n' && sleep 1
+#+END_SRC
+

@@ -1,0 +1,29 @@
+* Deploy
+:PROPERTIES:
+:header-args: :tangle ./deploy :tangle-mode (identity #o755)
+:ID:       0F3EA345-BB8F-4300-BF94-CD5FCBA7B43F
+:END:
+:LOGBOOK:
+- Refiled on [2017-04-30 Sun 18:46] \\
+  Refactored.
+:END:
+
+#+NAME: 5B7D85CF-404B-4B9C-BACA-5390B5E340F8
+#+BEGIN_SRC sh :comments no
+# -*- mode: sh; -*-
+#+END_SRC
+
+#+NAME: F7D52399-F20C-466D-B59B-93F89D4CF985
+#+BEGIN_SRC sh
+function bash_deploy() {
+    ln -s -f ${PWD}/.bash_profile ~/.bash_profile
+    ln -s -f ${PWD}/.bash_logout ~/.bash_logout
+    ln -s -f ${PWD}/.bashrc ~/.bashrc
+    ln -s -f ${PWD}/.bash_global_non_interactive ~/.bash_global_non_interactive
+    ln -s -f ${PWD}/.bash_global_interactive ~/.bash_global_interactive
+}
+
+bash_deploy
+#+END_SRC
+
+#  LocalWords:  expressivity
