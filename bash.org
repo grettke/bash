@@ -112,7 +112,7 @@
   - Provides another perspective, and voice
   - Balance speed with detail
 
-* Notes
+* Research
 :PROPERTIES:
 :ID:       036298FF-E47B-463B-8BD0-4E17E84BE525
 :END:
