@@ -2124,7 +2124,7 @@ initializations.
 
 - Everything in this heading is for use by reference so no notes to follow
 
-** HELD-BLOCKED Bash Debugger
+** WAIT Bash Debugger
 :PROPERTIES:
 :ID:       4DF379DD-3A65-4802-9725-B184A64787DB
 :END:
@@ -2138,7 +2138,7 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 '
 #+END_SRC
 
-** HELD-BLOCKED Bash FAQ
+** WAIT Bash FAQ
 :PROPERTIES:
 :ID:       42D2E376-FD07-41EF-91F7-673072BC412A
 :END:
