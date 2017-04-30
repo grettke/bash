@@ -61,10 +61,10 @@ globalpip() {
 # orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2 ends here
 
 # [[file:~/git/github/bash/bash.org::10224F22-A50D-4B6F-9D25-604E423128FA][10224F22-A50D-4B6F-9D25-604E423128FA]]
-alias e="$(brew --prefix emacs-plus)/bin/emacs --debug-init&"
-alias enodbg="$(brew --prefix emacs-plus)/bin/emacs&"
-alias eninit="$(brew --prefix emacs-plus)/bin/emacs --no-init-file&"
-alias econs="$(brew --prefix emacs-plus)/bin/emacs -nw --debug-init"
+alias e='emacs --debug-init&'
+alias eno='emacs&'
+alias eni='emacs --no-init-file&'
+alias econ='emacs -nw --debug-init'
 # 10224F22-A50D-4B6F-9D25-604E423128FA ends here
 
 # [[file:~/git/github/bash/bash.org::1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E][1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E]]
