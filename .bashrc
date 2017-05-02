@@ -63,6 +63,7 @@ globalpip() {
 # [[file:~/git/github/bash/Provision.org::10224F22-A50D-4B6F-9D25-604E423128FA][10224F22-A50D-4B6F-9D25-604E423128FA]]
 alias e='emacs --debug-init&'
 alias eno='emacs&'
+alias enu='emacs --debug-init -no-desktop -no-init-file --load ~/.emacs.el&'
 alias eni='emacs --no-init-file&'
 alias econ='emacs -nw --debug-init'
 # 10224F22-A50D-4B6F-9D25-604E423128FA ends here

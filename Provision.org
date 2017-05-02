@@ -775,6 +775,7 @@ Easily start EMACS.
 #+BEGIN_SRC sh
 alias e='emacs --debug-init&'
 alias eno='emacs&'
+alias enu='emacs --debug-init -no-desktop -no-init-file --load ~/.emacs.el&'
 alias eni='emacs --no-init-file&'
 alias econ='emacs -nw --debug-init'
 #+END_SRC
