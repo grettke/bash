@@ -217,8 +217,8 @@ digraph version5 {
   }
   subgraph cluster_B {
     label = "Global Shell Configuration Files\n\n(/usr/local/etc)";
-    BashGlobalNonInteractiveFile[shape = "note" label = ".bash_global_non_interactive\n\n«BashCore»\n«BashNonInteractiveCore»"];
-    BashGlobalInteractiveFile[shape = "note" label = ".bash_global_interactive\n\n«BashCore»\n«BashInteractiveCore»"];
+    BashGlobalNonInteractiveFile[shape = "note" label = ".bash_global_non_interactive\n\n<<BashCore>>\n<<BashNonInteractiveCore>>"];
+    BashGlobalInteractiveFile[shape = "note" label = ".bash_global_interactive\n\n<<BashCore>>\n<<BashInteractiveCore>>"];
   }
   subgraph cluster_C {
     label = "Interactive [Non-]Login Shell\n\nLogin Shell Configuration Files\n\n(~/)";
