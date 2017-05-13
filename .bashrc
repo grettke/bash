@@ -1,109 +1,109 @@
 # -*- mode: sh; -*-
 
-# [[file:~/git/github/bash/Provision.org::A4502549-BA36-4C40-A12A-E42A72B6384C][A4502549-BA36-4C40-A12A-E42A72B6384C]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_F255F97F-5EED-4DCF-AAAF-2AC396CEBB4A][org_gcr_2017-05-12_mara_F255F97F-5EED-4DCF-AAAF-2AC396CEBB4A]]
 source ~/.bash_global_interactive
-# A4502549-BA36-4C40-A12A-E42A72B6384C ends here
+# org_gcr_2017-05-12_mara_F255F97F-5EED-4DCF-AAAF-2AC396CEBB4A ends here
 
-# [[file:~/git/github/bash/Provision.org::08792628-161D-4530-B789-7CE1CE308189][08792628-161D-4530-B789-7CE1CE308189]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_3C6E3108-B304-4892-B8A2-21FA6E0F0DAA][org_gcr_2017-05-12_mara_3C6E3108-B304-4892-B8A2-21FA6E0F0DAA]]
 VISUAL=vim
-# 08792628-161D-4530-B789-7CE1CE308189 ends here
+# org_gcr_2017-05-12_mara_3C6E3108-B304-4892-B8A2-21FA6E0F0DAA ends here
 
-# [[file:~/git/github/bash/Provision.org::AD54A868-318C-4033-A593-93ED0184A1B4][AD54A868-318C-4033-A593-93ED0184A1B4]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_7F5D8B99-5A33-44C1-949A-435B3326F053][org_gcr_2017-05-12_mara_7F5D8B99-5A33-44C1-949A-435B3326F053]]
 EDITOR="$VISUAL"
-# AD54A868-318C-4033-A593-93ED0184A1B4 ends here
+# org_gcr_2017-05-12_mara_7F5D8B99-5A33-44C1-949A-435B3326F053 ends here
 
-# [[file:~/git/github/bash/Provision.org::5A8DA41A-6F75-410A-9DD4-21A348CAC9BD][5A8DA41A-6F75-410A-9DD4-21A348CAC9BD]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_ADECF9AF-F8CC-49EB-BFF8-79C5BCC8C052][org_gcr_2017-05-12_mara_ADECF9AF-F8CC-49EB-BFF8-79C5BCC8C052]]
 HOMEBREW_NO_EMOJI=1
-# 5A8DA41A-6F75-410A-9DD4-21A348CAC9BD ends here
+# org_gcr_2017-05-12_mara_ADECF9AF-F8CC-49EB-BFF8-79C5BCC8C052 ends here
 
-# [[file:~/git/github/bash/Provision.org::6697345C-43E6-4EC0-8171-1FA226253803][6697345C-43E6-4EC0-8171-1FA226253803]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_3A2D3A90-92BB-4E00-AF68-757B5F8EAB58][org_gcr_2017-05-12_mara_3A2D3A90-92BB-4E00-AF68-757B5F8EAB58]]
 JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home'
-# 6697345C-43E6-4EC0-8171-1FA226253803 ends here
+# org_gcr_2017-05-12_mara_3A2D3A90-92BB-4E00-AF68-757B5F8EAB58 ends here
 
-# [[file:~/git/github/bash/Provision.org::2A2C25BE-DF7E-46A2-8378-0163D0A5DB17][2A2C25BE-DF7E-46A2-8378-0163D0A5DB17]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_33C886C8-3042-462B-A950-56C47183FF5A][org_gcr_2017-05-12_mara_33C886C8-3042-462B-A950-56C47183FF5A]]
 INFOPATH='/usr/local/share/info:/usr/share/info'
-# 2A2C25BE-DF7E-46A2-8378-0163D0A5DB17 ends here
+# org_gcr_2017-05-12_mara_33C886C8-3042-462B-A950-56C47183FF5A ends here
 
-# [[file:~/git/github/bash/Provision.org::96DF1A6D-FDEE-41D2-B8B0-17F7A9E98B16][96DF1A6D-FDEE-41D2-B8B0-17F7A9E98B16]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E][org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E]]
 CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp"
-# 96DF1A6D-FDEE-41D2-B8B0-17F7A9E98B16 ends here
+# org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E ends here
 
-# [[file:~/git/github/bash/Provision.org::orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B][orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_90CE9C25-BFAB-4442-9FCB-8A6D330D90F1][org_gcr_2017-05-12_mara_90CE9C25-BFAB-4442-9FCB-8A6D330D90F1]]
 LANGTOOL="$(brew --prefix languagetool)/libexec/languagetool-commandline.jar"
 DITAA="$(brew --prefix ditaa)/libexec/ditaa0_10.jar"
 PLANTUML="$(brew --prefix plantuml)/libexec/plantuml.jar"
-# orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B ends here
+# org_gcr_2017-05-12_mara_90CE9C25-BFAB-4442-9FCB-8A6D330D90F1 ends here
 
-# [[file:~/git/github/bash/Provision.org::orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2][orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_0774E3DC-02F0-48F8-AB62-5AF40D0FDB9B][org_gcr_2017-05-12_mara_0774E3DC-02F0-48F8-AB62-5AF40D0FDB9B]]
 PROSELINT='/Users/gcr/util/proselint/env/bin/proselint'
-# orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2 ends here
+# org_gcr_2017-05-12_mara_0774E3DC-02F0-48F8-AB62-5AF40D0FDB9B ends here
 
-# [[file:~/git/github/bash/Provision.org::E81EDC5A-549B-47FF-AD9C-41C73F40740A][E81EDC5A-549B-47FF-AD9C-41C73F40740A]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E][org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E]]
 MACTEX_BIN='/usr/local/texlive/2016/bin/x86_64-darwin'
-# E81EDC5A-549B-47FF-AD9C-41C73F40740A ends here
+# org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E ends here
 
-# [[file:~/git/github/bash/Provision.org::305DB52D-DB00-40D8-BA3C-19C16A44D6B4][305DB52D-DB00-40D8-BA3C-19C16A44D6B4]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176][org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176]]
 PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$PATH"
-# 305DB52D-DB00-40D8-BA3C-19C16A44D6B4 ends here
+# org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176 ends here
 
-# [[file:~/git/github/bash/Provision.org::F1278DB7-509B-4BDD-93FD-96461BD6EC8B][F1278DB7-509B-4BDD-93FD-96461BD6EC8B]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C][org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C]]
 VAGRANT_DEFAULT_PROVIDER=vmware_fusion
-# F1278DB7-509B-4BDD-93FD-96461BD6EC8B ends here
+# org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C ends here
 
-# [[file:~/git/github/bash/Provision.org::orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9][orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_B66F9D4D-9536-4A53-8AED-F338D79F0A3B][org_gcr_2017-05-12_mara_B66F9D4D-9536-4A53-8AED-F338D79F0A3B]]
 PIP_REQUIRE_VIRTUALENV=true
-# orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9 ends here
+# org_gcr_2017-05-12_mara_B66F9D4D-9536-4A53-8AED-F338D79F0A3B ends here
 
-# [[file:~/git/github/bash/Provision.org::orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2][orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_82E4FD7F-D78B-415B-91F4-20B092A63263][org_gcr_2017-05-12_mara_82E4FD7F-D78B-415B-91F4-20B092A63263]]
 globalpip() {
     PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
-# orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2 ends here
+# org_gcr_2017-05-12_mara_82E4FD7F-D78B-415B-91F4-20B092A63263 ends here
 
-# [[file:~/git/github/bash/Provision.org::10224F22-A50D-4B6F-9D25-604E423128FA][10224F22-A50D-4B6F-9D25-604E423128FA]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
 alias e='emacs --debug-init&'
 alias eno='emacs&'
 alias enu='emacs --debug-init -no-desktop -no-init-file --load ~/.emacs.el&'
 alias ets="emacs --debug-init --no-init-file --no-splash --background-color white --foreground-color black --vertical-scroll-bars --eval '(switch-to-buffer \"*Messages*\")' --name TEST --title TEST --load ~/src/help/.emacs.el &"
 alias eni='emacs --no-init-file&'
 alias econ='emacs -nw --debug-init'
-# 10224F22-A50D-4B6F-9D25-604E423128FA ends here
+# org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790 ends here
 
-# [[file:~/git/github/bash/Provision.org::1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E][1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_69C0605C-90AA-43E9-9084-CF7E725F21F8][org_gcr_2017-05-12_mara_69C0605C-90AA-43E9-9084-CF7E725F21F8]]
 alias r='r --no-save'
 alias R='r --no-save'
-# 1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E ends here
+# org_gcr_2017-05-12_mara_69C0605C-90AA-43E9-9084-CF7E725F21F8 ends here
 
-# [[file:~/git/github/bash/Provision.org::orgmode:gcr:vela:D69007EA-0CEE-43F2-AAEA-E55ABDA9DE3E][orgmode:gcr:vela:D69007EA-0CEE-43F2-AAEA-E55ABDA9DE3E]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_8BF4303D-351C-4197-A96A-AD5E6B81344D][org_gcr_2017-05-12_mara_8BF4303D-351C-4197-A96A-AD5E6B81344D]]
 alias vens='virtualenv env'
 alias veon='source ./env/bin/activate'
 alias veof='deactivate'
-# orgmode:gcr:vela:D69007EA-0CEE-43F2-AAEA-E55ABDA9DE3E ends here
+# org_gcr_2017-05-12_mara_8BF4303D-351C-4197-A96A-AD5E6B81344D ends here
 
-# [[file:~/git/github/bash/Provision.org::20B20120-4482-4572-B3D3-3A1DD1DAE792][20B20120-4482-4572-B3D3-3A1DD1DAE792]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_20EA8DAB-53C6-4170-9417-8BCC8A628AEB][org_gcr_2017-05-12_mara_20EA8DAB-53C6-4170-9417-8BCC8A628AEB]]
 alias mkdir='mkdir -pv'
 alias mount='mount | column -t'
 alias df='df -h'
 alias du="du -ach"
-# 20B20120-4482-4572-B3D3-3A1DD1DAE792 ends here
+# org_gcr_2017-05-12_mara_20EA8DAB-53C6-4170-9417-8BCC8A628AEB ends here
 
-# [[file:~/git/github/bash/Provision.org::A74F8DFE-A2A5-41E3-9D12-319766E42A30][A74F8DFE-A2A5-41E3-9D12-319766E42A30]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_A68EF2AE-850B-4A51-82F8-A6017D6E9F93][org_gcr_2017-05-12_mara_A68EF2AE-850B-4A51-82F8-A6017D6E9F93]]
 alias h='history'
 alias j='jobs -l'
-# A74F8DFE-A2A5-41E3-9D12-319766E42A30 ends here
+# org_gcr_2017-05-12_mara_A68EF2AE-850B-4A51-82F8-A6017D6E9F93 ends here
 
-# [[file:~/git/github/bash/Provision.org::A25A3E8F-4674-474A-BD45-1553C6EF0B3A][A25A3E8F-4674-474A-BD45-1553C6EF0B3A]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_76E0132B-936A-4492-AE87-D77E96B4EFAD][org_gcr_2017-05-12_mara_76E0132B-936A-4492-AE87-D77E96B4EFAD]]
 alias cd..='cd ..'
-# A25A3E8F-4674-474A-BD45-1553C6EF0B3A ends here
+# org_gcr_2017-05-12_mara_76E0132B-936A-4492-AE87-D77E96B4EFAD ends here
 
-# [[file:~/git/github/bash/Provision.org::D579A295-6383-4E18-B033-5EF0057085C0][D579A295-6383-4E18-B033-5EF0057085C0]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_C59D7D22-E7E2-48EE-BE47-0DDB237D6A9C][org_gcr_2017-05-12_mara_C59D7D22-E7E2-48EE-BE47-0DDB237D6A9C]]
 alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
-# D579A295-6383-4E18-B033-5EF0057085C0 ends here
+# org_gcr_2017-05-12_mara_C59D7D22-E7E2-48EE-BE47-0DDB237D6A9C ends here
 
-# [[file:~/git/github/bash/Provision.org::orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683][orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_CC3E03CE-A882-4AB1-9BBF-A2C49F4F3A0A][org_gcr_2017-05-12_mara_CC3E03CE-A882-4AB1-9BBF-A2C49F4F3A0A]]
 alias bk="cd $OLDPWD"
-# orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683 ends here
+# org_gcr_2017-05-12_mara_CC3E03CE-A882-4AB1-9BBF-A2C49F4F3A0A ends here
 
-# [[file:~/git/github/bash/Provision.org::orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603][orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C][org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C]]
 alias sh='/usr/local/bin/bash'
-# orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603 ends here
+# org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C ends here

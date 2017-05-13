@@ -1,5 +1,5 @@
 # -*- mode: sh; -*-
 
-# [[file:~/git/github/bash/Provision.org::891ED468-F802-4378-BA5C-0BF874CAB4F1][891ED468-F802-4378-BA5C-0BF874CAB4F1]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_16299394-BEC8-40E0-946C-AF75251006C0][org_gcr_2017-05-12_mara_16299394-BEC8-40E0-946C-AF75251006C0]]
 printf 'Sayonara!\n' && sleep 1
-# 891ED468-F802-4378-BA5C-0BF874CAB4F1 ends here
+# org_gcr_2017-05-12_mara_16299394-BEC8-40E0-946C-AF75251006C0 ends here

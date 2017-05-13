@@ -1,21 +1,21 @@
 * Provision
 :PROPERTIES:
-:ID:       A1DF7D9E-5B52-46D6-90CB-FC43C50D5E41
+:ID:       org_gcr_2017-05-12_mara:8A1F73F9-332A-46CD-A339-AFCD19EE466C
 :END:
 ** Global
 :PROPERTIES:
-:ID:       E5068275-CDEC-4A3F-B33E-875B505133D9
+:ID:       org_gcr_2017-05-12_mara:A9BD0A2F-5066-4349-8DB3-20E58925B2E5
 :END:
 
 *** BashCore
 :PROPERTIES:
 :header-args: :noweb-ref BashCore
-:ID:       742113EF-114F-4FF9-B543-06C748E9153C
+:ID:       org_gcr_2017-05-12_mara:F5ED8B16-23A9-4FB2-88A8-A340984AF656
 :END:
 
 Define this system using Bash 4.3.* features. Warn if not at least.
 
-#+NAME: 86B3EC22-B47D-4E40-AFDD-B68AC6F77110
+#+NAME: org_gcr_2017-05-12_mara_347A5539-7A7D-4802-8147-B3AE55F068F5
 #+BEGIN_SRC sh
 emaj=4
 emin=3
@@ -32,11 +32,11 @@ unset amin
 
 **** Options
 :PROPERTIES:
-:ID:       D2F74D27-DADE-4396-B332-64FA0C9EEE52
+:ID:       org_gcr_2017-05-12_mara:17314013-60AE-48F8-BF54-CAF94D285E32
 :END:
 ***** Expressivity
 :PROPERTIES:
-:ID:       DAA8B5AA-D4F0-4D48-BDF7-91D82C750A7A
+:ID:       org_gcr_2017-05-12_mara:BAED844A-0444-40DE-9052-F5DCFD0BF1C9
 :END:
 
 Programatically generate expressions (Brace Expansion) using
@@ -44,7 +44,7 @@ Programatically generate expressions (Brace Expansion) using
 - Pattern matching to create a list of names of files
 - Sequence expression
 
-#+NAME: 57652CC2-A592-4EDB-AB4F-5668BDE2A9AB
+#+NAME: org_gcr_2017-05-12_mara_0E6696C1-1C98-4DDE-92E7-8939C9EE9AD7
 #+BEGIN_SRC sh
 set -o braceexpand
 #+END_SRC
@@ -53,14 +53,14 @@ set -o braceexpand
 Define key-pair values for command's dynamic extent before calling the command
 and nowhere else. Doing otherwise breaks ~alias~ for example in a surprising way.
 
-#+NAME: 2CB26DFF-1F5A-4781-A460-7B6975FBBCC8
+#+NAME: org_gcr_2017-05-12_mara_926D405F-5873-4A24-8FC4-7EBA0461B931
 #+BEGIN_SRC sh
 set +o keyword
 #+END_SRC
 
 ***** Fail Fast
 :PROPERTIES:
-:ID:       8B249641-2851-4AC0-BEE0-F720ED92AB4B
+:ID:       org_gcr_2017-05-12_mara:EE650225-E984-4C7D-8D73-B027A50000BD
 :END:
 
 Exit immediately when a command in a pipeline fails. Assume the worst. If the
@@ -86,7 +86,7 @@ When an error occurs remain in the shell so that the system operator can
 research wha happened in that context. Don't exit the shell because there was
 an error. Enabling this causes the shell to exit immediately.
 
-#+NAME: 1A58BFA3-F5E2-421B-8D68-BFAFAC165D82
+#+NAME: org_gcr_2017-05-12_mara_79BFD638-FE36-4CFF-A0E5-853A1DC3232C
 #+BEGIN_SRC sh
 set +o errexit
 #+END_SRC
@@ -95,68 +95,68 @@ The result of a pipeline is the result of the last expression to exit on error
 or zero if they all completed successfully. This reads like "short circuit"
 evaluation but I'm not sure it is. Perform research on this.
 
-#+NAME: 8E509A55-4F09-49DF-9402-3FBAF130CBD1
+#+NAME: org_gcr_2017-05-12_mara_860A07FB-3B57-46CA-A611-279FFEC2E648
 #+BEGIN_SRC sh
 set -o pipefail
 #+END_SRC
 
 When there are no file matches found report an error.
 
-#+NAME: 55B5A68B-59AF-4CED-B159-7E72D87C8B04
+#+NAME: org_gcr_2017-05-12_mara_6C8B18D4-BCA4-4567-A837-F8026C4BD773
 #+BEGIN_SRC sh
 shopt -s failglob
 #+END_SRC
 
 Report an error when you ~shift~ more parameters than you received.
 
-#+NAME: B6228402-AF52-48C9-8B65-493DAC37E850
+#+NAME: org_gcr_2017-05-12_mara_041DA23E-092A-4105-ACDF-DC4B6DE3395C
 #+BEGIN_SRC sh
 shopt -s shift_verbose
 #+END_SRC
 
 ***** Inheritance
 :PROPERTIES:
-:ID:       A8018763-74CF-414F-BB18-BC772A92EB77
+:ID:       org_gcr_2017-05-12_mara:468DE01C-7493-4307-8CF2-1C736E06F38A
 :END:
 
 Every change (creation and modification) made to the parent shell
 environment (functions and variables) should be automatically exported to every
 child shell environment.
 
-#+NAME: CFACD6C3-617A-42E7-A672-DE55C1F6C9E9
+#+NAME: org_gcr_2017-05-12_mara_049B118A-2116-433B-A615-7562BB6EA96A
 #+BEGIN_SRC sh
 set -o allexport
 #+END_SRC
 
 Do the same thing for the ~ERR~ trap.
 
-#+NAME: AF6CF6F6-29EB-4A4D-8C56-BB4239DCB50C
+#+NAME: org_gcr_2017-05-12_mara_24CEAF97-19A1-4A8B-B117-5947FFCE0205
 #+BEGIN_SRC sh
 set -o errtrace
 #+END_SRC
 
 Do the same thing for the ~DEBUG~ and ~RETURN~ traps.
 
-#+NAME: 0A61B3AC-32CB-4189-852F-0D9956BB1D1F
+#+NAME: org_gcr_2017-05-12_mara_46496694-A8A2-4FDC-8DBF-904D2428F4A3
 #+BEGIN_SRC sh
 set -o functrace
 #+END_SRC
 
 Pass a non-directory arguments to =cd= and change to the value of that variable.
 
-#+NAME: 26B4365A-1F13-4ECD-99EB-964C276533EE
+#+NAME: org_gcr_2017-05-12_mara_3B144B8C-033E-4774-9C05-E10A41AD5FCD
 #+BEGIN_SRC sh
 shopt -s cdable_vars
 #+END_SRC
 
 ***** Job Control
 :PROPERTIES:
-:ID:       84F714C4-0A65-4FBD-8465-762D336FC366
+:ID:       org_gcr_2017-05-12_mara:7532ECDF-3E4A-4A4E-B522-6507E1636AB2
 :END:
 
 Enable it.
 
-#+NAME: 58D8B849-7FD3-430A-9914-49DEF15EB886
+#+NAME: org_gcr_2017-05-12_mara_F84A7422-909B-4535-AD90-A88859A3FDE4
 #+BEGIN_SRC sh
 set -o monitor
 #+END_SRC
@@ -165,14 +165,14 @@ Immediately report terminated job status. This might appear to be a Interactive
 feature, but it isn't. It appears hear reporting errors in the log file
 immediately realizing this Bash configurations "Fail Fast" goal.
 
-#+NAME: F0055BD6-96CF-4B81-B11C-F9B99F5085F8
+#+NAME: org_gcr_2017-05-12_mara_8CA20790-92D6-48E9-8842-725DB3340C3E
 #+BEGIN_SRC sh
 set -o notify
 #+END_SRC
 
 ***** No Surprises
 :PROPERTIES:
-:ID:       226DA083-4784-4899-BC5F-4B36C8366C41
+:ID:       org_gcr_2017-05-12_mara:A8FF6C86-EFD8-46E3-AB92-9D19ECB235A8
 :END:
 
 Provide but disable interactive debugging by default.
@@ -180,7 +180,7 @@ Provide but disable interactive debugging by default.
 Instead force children to change their configuration script,
 run with ~bash --debugger~ or set ~shopt -s extdebug~.
 
-#+NAME: FAB2F5D9-E5D3-4252-A0F9-853375344CFF
+#+NAME: org_gcr_2017-05-12_mara_3E52EBAC-15FB-4E4D-A62B-F12B389E3548
 #+BEGIN_SRC sh
 shopt -u extdebug
 #+END_SRC
@@ -194,7 +194,7 @@ Prevent output redirection using ‘>’, ‘>&’, and ‘<>’ from overwritin
 files.
 #+END_QUOTE
 
-#+NAME: 9086FA3B-EC85-486F-87AB-35F72D57602B
+#+NAME: org_gcr_2017-05-12_mara_CECC73AC-BD9D-4F6B-BA3C-23C5E0A3DAF5
 #+BEGIN_SRC sh
 set -o noclobber
 #+END_SRC
@@ -205,7 +205,7 @@ in individual shell scripts; not the global configuration because doing so
 prevents Bash system initialization by preventing you to define any new
 variables and dying!
 
-#+NAME: A83FCBAD-BD08-46EF-B8DC-08F834CD0774
+#+NAME: org_gcr_2017-05-12_mara_BDEC9D0A-D1B0-4488-8EE0-E0E665EA1641
 #+BEGIN_SRC sh
 # set -o nounset
 #+END_SRC
@@ -214,34 +214,34 @@ Assume that the user (computer or human) provided the correct directory-name
 arguments to a command and do not modify them. Auto-correction of directory
 names can *at best* cause *complete disaster* for a distracted operator.
 
-#+NAME: 69CDCB52-A45C-4D5C-97C1-6754620B922A
+#+NAME: org_gcr_2017-05-12_mara_3C1B99B3-CCE4-4C50-ABC2-FCED3C882B9A
 #+BEGIN_SRC sh
 shopt -u cdspell
 #+END_SRC
 
 For directories, too.
 
-#+NAME: 3332E975-30FF-4B12-B7FB-3904DEA0312B
+#+NAME: org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A
 #+BEGIN_SRC sh
 shopt -u dirspell
 #+END_SRC
 
 Put temporary files in one place.
 
-#+NAME: 68DC48E0-D643-46CF-8C84-DE3AC3B8C2EF
+#+NAME: org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88
 #+BEGIN_SRC sh
 TMPDIR='/tmp'
 #+END_SRC
 
 ***** Performance
 :PROPERTIES:
-:ID:       43064DA1-6F0A-4C53-91DE-0F0526492FAB
+:ID:       org_gcr_2017-05-12_mara:AFB6A8B2-AFB2-4850-BF4D-87040E93222C
 :END:
 
 Cache recently executed command source locations in a lookup table and search
 that before searching the lookup path to find a command.
 
-#+NAME: DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9
+#+NAME: org_gcr_2017-05-12_mara_753ED6DC-B506-4619-939C-0172E6F2C263
 #+BEGIN_SRC sh
 set -o hashall
 shopt -s checkhash
@@ -249,12 +249,12 @@ shopt -s checkhash
 
 **** Variables
 :PROPERTIES:
-:ID:       509E97BE-28FB-4BA4-B448-B8A6C3E3E914
+:ID:       org_gcr_2017-05-12_mara:9F0DDF78-01AB-4C68-9027-1852624E3851
 :END:
 
 ***** Encoding
 :PROPERTIES:
-:ID:       DB5B6660-BC3D-4E08-AF4C-7AD1E9FD1452
+:ID:       org_gcr_2017-05-12_mara:8DABD7BF-387E-4CCB-8242-AD3B3A8D0368
 :END:
 
 Use UTF-8 for everything. EMACS already does.
@@ -264,28 +264,28 @@ required if all of your settings are the same.
 
 Set anything un-set.
 
-#+NAME: 994AE13B-C9B5-47FE-AB65-DF38706F81AA
+#+NAME: org_gcr_2017-05-12_mara_E4AF0A48-8164-47D4-8250-1C8D94440751
 #+BEGIN_SRC sh
 LANG='en_US.UTF-8'
 #+END_SRC
 
 Override everything
 
-#+NAME: 8F44EAF1-D966-4D57-97A2-3A7014C76276
+#+NAME: org_gcr_2017-05-12_mara_28B1D8B4-4298-4DA4-AB9D-0BFA13F5DAEB
 #+BEGIN_SRC sh
 LC_ALL='en_US.UTF-8'
 #+END_SRC
 
 Sor how you expect it.
 
-#+NAME: orgmode:gcr:vela:37AF37AD-8F9B-4124-90A5-66125566748B
+#+NAME: org_gcr_2017-05-12_mara_DADA4A0B-F5B1-4DAA-A31A-1D45EE775A9E
 #+BEGIN_SRC sh
 LC_COLLATE='POSIX'
 #+END_SRC
 
 Verify encoding.
 
-#+NAME: orgmode:gcr:vela:AC6175F5-5146-4C44-A8FA-67915D9CFB53
+#+NAME: org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738
 #+BEGIN_SRC sh
 if [ "$(locale charmap)" == "UTF-8" ]; then
     echo "Character encoding configured: CORRECTLY."
@@ -296,12 +296,12 @@ fi
 
 ***** Fontconfig
 :PROPERTIES:
-:ID:       53C6E25A-2AA7-48E7-AB66-D6BB51892EAA
+:ID:       org_gcr_2017-05-12_mara:CA259BBD-7D76-4C57-BA3F-B8E1437C773E
 :END:
 
 [[https://www.freedesktop.org/software/fontconfig/fontconfig-devel/fcconfigfilename.html][Configure Fontconfig]].
 
-#+NAME: 48AEFF38-FFD3-4BB9-ABEF-3F5B1BADDFE2
+#+NAME: org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2
 #+BEGIN_SRC sh
 FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 #+END_SRC
@@ -309,12 +309,12 @@ FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 *** BashNonInteractiveCore
 :PROPERTIES:
 :header-args: :noweb-ref BashNonInteractiveCore
-:ID:       BAB8CE45-5D95-47E9-903B-79856C3BA8B8
+:ID:       org_gcr_2017-05-12_mara:C8D58FA9-17C0-4474-AB1E-540F715C4970
 :END:
 
 Only use this functionality in a non-interactive session.
 
-#+NAME: 2A2108E3-231A-4491-81F0-58B93BF2EA2C
+#+NAME: org_gcr_2017-05-12_mara_E102B51D-9068-41F6-8731-760FD49FFB95
 #+BEGIN_SRC sh
 if [ "$PS1" ]; then
     printf "\e[31mExpected a non-interactive shell.\e[0m]\n" 1>&2
@@ -326,14 +326,14 @@ fi
 Never take input from the user interactively and disable the use of those
 commands.
 
-#+NAME: E03E703D-809F-4536-996D-B96AE3DCD8C7
+#+NAME: org_gcr_2017-05-12_mara_6E441F28-E8CC-44D8-B01B-CF548D36A502
 #+BEGIN_SRC sh
 unset -f read select
 #+END_SRC
 
 Aliases are only for interactive users.
 
-#+NAME: CABCFC8A-89AB-41AE-9A46-514F1D6C8240
+#+NAME: org_gcr_2017-05-12_mara_2573D577-8D1B-41AB-A384-E148098FF9DC
 #+BEGIN_SRC sh
 shopt -u expand_aliases
 #+END_SRC
@@ -341,12 +341,12 @@ shopt -u expand_aliases
 *** BashInteractiveCore
 :PROPERTIES:
 :header-args: :noweb-ref BashInteractiveCore
-:ID:       1AB9EF9D-8F1D-43C6-B557-7800B7A4AA2F
+:ID:       org_gcr_2017-05-12_mara:4825F69D-14A3-43DB-A7FE-A49C3C038F95
 :END:
 
 Only use this functionality in an interactive session.
 
-#+NAME: D029A4D7-6890-4196-850A-AAA07B96337F
+#+NAME: org_gcr_2017-05-12_mara_7AA5536F-EF97-4CE9-94DB-CB3438CBA65F
 #+BEGIN_SRC sh
 if [ -z "$PS1" ]; then
     printf "\e[31mExpected an interactive shell.\e[0m]\n" 1>&2
@@ -357,96 +357,96 @@ fi
 
 **** Options
 :PROPERTIES:
-:ID:       F9663A3E-2D84-4A5C-82AB-7A2C4C92B2A5
+:ID:       org_gcr_2017-05-12_mara:ADA5B8DA-2E4D-45F5-84E9-F71F51B37195
 :END:
 ***** Expressivity
 :PROPERTIES:
-:ID:       61322BCD-6B87-43C1-8BB2-A27C18519AF3
+:ID:       org_gcr_2017-05-12_mara:D707713A-4856-48D5-A32E-FF51DFE23E39
 :END:
 
 Programatically complete command options.
 
-#+NAME: ABCE11CE-B9DB-4060-BA30-F65C48353321
+#+NAME: org_gcr_2017-05-12_mara_7ED1D23A-73A8-4053-AE6E-D002E9A955A8
 #+BEGIN_SRC sh
 shopt -s progcomp
 #+END_SRC
 
 Aliases are only for interactive users.
 
-#+NAME: 72630356-4AFB-4ACA-9B80-07B9F0D3E17D
+#+NAME: org_gcr_2017-05-12_mara_EC6DAFA7-D87A-4612-BB16-D7B881FC2345
 #+BEGIN_SRC sh
 shopt -s expand_aliases
 #+END_SRC
 
 ***** History
 :PROPERTIES:
-:ID:       C084E7AC-39D8-4FD9-BCFA-44B9BA34BFDC
+:ID:       org_gcr_2017-05-12_mara:171CCA0F-7C83-44F5-8A67-76976D7923C4
 :END:
 
 Enable command history.
 
-#+NAME: 53C74C4A-D580-4DC3-8053-7D0268A63A5F
+#+NAME: org_gcr_2017-05-12_mara_FEFE92C2-FA92-4E2B-A04A-D52E5F22F9AE
 #+BEGIN_SRC sh
 set -o history
 #+END_SRC
 
 Enable ~!~ substitution.
 
-#+NAME: 9BE45C01-2156-4A19-83CB-9759A66E5749
+#+NAME: org_gcr_2017-05-12_mara_3254D394-D9E8-424F-A731-DD6CC0E260F4
 #+BEGIN_SRC sh
 set -o histexpand
 #+END_SRC
 
 Easily re-edit historical multi-line commands.
 
-#+NAME: 3E938C0F-6DEF-4458-9D30-8986ADB49F92
+#+NAME: org_gcr_2017-05-12_mara_BFC4B457-8C68-41EF-80FD-75AB86823392
 #+BEGIN_SRC sh
 shopt -s cmdhist
 #+END_SRC
 
 Separate lines with newline characters
 
-#+NAME: C8EF2109-AFD6-4D45-9C6E-484BD3617CD3
+#+NAME: org_gcr_2017-05-12_mara_194963F2-30A3-46F2-818F-62230144A793
 #+BEGIN_SRC sh
 shopt -s lithist
 #+END_SRC
 
 ***** Interface
 :PROPERTIES:
-:ID:       ADA57C58-C529-4C1C-9C90-EB641215A4FA
+:ID:       org_gcr_2017-05-12_mara:A090CEA5-4D16-4527-865A-2DBED7424266
 :END:
 
 Use EMACS keybindings for ~Readline~ and ~read~.
 
-#+NAME: 6016B0DA-855B-4DE0-9416-D043C1180246
+#+NAME: org_gcr_2017-05-12_mara_1E0347AC-0211-4347-8022-E1F48CBD4E82
 #+BEGIN_SRC sh
 set -o emacs
 #+END_SRC
 
 When the command name is a directory in the =$PWD= pass it to =cd=.
 
-#+NAME: 9118B957-42C5-401B-9ED0-939D54BC549A
+#+NAME: org_gcr_2017-05-12_mara_A0DF3FF8-7752-4343-AC5A-3EDC967D7A72
 #+BEGIN_SRC sh
 shopt -s autocd
 #+END_SRC
 
 Refresh ~LINES~ and ~COLUMNS~ after every command.
 
-#+NAME: D52A5F44-E7ED-4C61-A786-701EA73DBFF1
+#+NAME: org_gcr_2017-05-12_mara_FA8774A1-F091-4079-A388-9B421AC8D60D
 #+BEGIN_SRC sh
 shopt -s checkwinsize
 #+END_SRC
 
 Automatically complete directory-names and replace the original name value.
 
-#+NAME: 25EA0545-D4A1-4809-B69A-8FAB2FE52E70
+#+NAME: org_gcr_2017-05-12_mara_BA4FF735-8A1F-4F21-A210-17EAF843906F
 #+BEGIN_SRC sh
 shopt -s complete_fullquote
 #+END_SRC
 
 Enable comments.
 
-#+NAME: B881A6A3-C116-45DD-87E7-D0EE788DE07D
+#+NAME: org_gcr_2017-05-12_mara_D180576A-276D-4DE5-9D29-7564F2475A96
 #+BEGIN_SRC sh
 shopt -s interactive_comments
 #+END_SRC
@@ -454,28 +454,28 @@ shopt -s interactive_comments
 Provide just enough information at the prompt to be useful without cluttering
 up the terminal.
 
-#+NAME: F81D2132-6006-439F-B281-F031B2C931E1
+#+NAME: org_gcr_2017-05-12_mara_CCFF46E0-5F46-4B41-A7F3-E6FCF6729895
 #+BEGIN_SRC sh
 PS1='\u@\h:\w⮞ '
 #+END_SRC
 
 Make the continued prompt obvious. It is easily forgotten.
 
-#+NAME: EC1C20AF-9756-48CB-AE10-4262D8AE53BD
+#+NAME: org_gcr_2017-05-12_mara_FB232A77-A71E-42AD-B676-4B075ECA02B8
 #+BEGIN_SRC sh
 PS2='⏎⮞ '
 #+END_SRC
 
 Obviously prompt you to make a selection.
 
-#+NAME: 50C0C13E-59FB-4A03-8AF6-8FF694C264B5
+#+NAME: org_gcr_2017-05-12_mara_E1274B85-D3B6-467B-AF20-1C88338478CC
 #+BEGIN_SRC sh
 PS3='�⮞ '
 #+END_SRC
 
 Enable the Bash Debugger.
 
-#+NAME: 6CAA9DCC-D799-469E-BFF6-1D2064AE4305
+#+NAME: org_gcr_2017-05-12_mara_3E7AA843-749F-48B1-B433-467C0848C9AF
 #+BEGIN_SRC sh
 PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?]
 '
@@ -483,31 +483,31 @@ PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 
 ***** Job Control
 :PROPERTIES:
-:ID:       31ED5B89-34FC-4C9B-A5F9-3F9E3D4DD907
+:ID:       org_gcr_2017-05-12_mara:EEDDBEB4-0052-45DF-A0BE-88BE230308C9
 :END:
 
 Never exit a shell when there are still running or stopped jobs.
 
-#+NAME: BDAB873F-BCAD-4B60-8C22-C67E6094229E
+#+NAME: org_gcr_2017-05-12_mara_02C16377-D022-4394-BC8D-C24ADFDE4E0D
 #+BEGIN_SRC sh
 shopt -s checkjobs
 #+END_SRC
 
 Send =HUP= to all child processes when the interactive parent shell exits.
 
-#+NAME: 0A829512-17A5-4C99-AEB8-C56610E319DC
+#+NAME: org_gcr_2017-05-12_mara_1E64FD25-CB5D-4B05-87DE-E36F6B342332
 #+BEGIN_SRC sh
 shopt -s huponexit
 #+END_SRC
 
 ***** No Surprises
 :PROPERTIES:
-:ID:       1A962AE3-6CFA-47F0-B56C-029C03D5B10B
+:ID:       org_gcr_2017-05-12_mara:BF8365A6-5F55-4A16-9D0D-F4F7C7321779
 :END:
 
 It is too easy to accidentally leave a shell by typing Control-D. Prevent it.
 
-#+NAME: D1E49BDB-3D0B-4DFD-9817-0322C560B378
+#+NAME: org_gcr_2017-05-12_mara_507EB29B-354F-4391-941C-9674B1706C4E
 #+BEGIN_SRC sh
 set -o ignoreeof
 #+END_SRC
@@ -515,19 +515,19 @@ set -o ignoreeof
 Never attempt to complete a command in the contents of =PATH= when nothing is
 typed in.
 
-#+NAME: 9C862A09-726B-47E0-B2CD-E376146405AA
+#+NAME: org_gcr_2017-05-12_mara_843EB944-DB5E-4CAC-9EA5-F2901D7B74B4
 #+BEGIN_SRC sh
 shopt -s no_empty_cmd_completion
 #+END_SRC
 
 **** Variables
 :PROPERTIES:
-:ID:       66E5F9F5-A58A-41A2-B86C-DCC645AC847E
+:ID:       org_gcr_2017-05-12_mara:679E2DA0-0A15-4A85-A034-8631D8F0594A
 :END:
 
 ***** History
 :PROPERTIES:
-:ID:       74AD211B-7575-43A7-B2F4-F6250EC6883B
+:ID:       org_gcr_2017-05-12_mara:1819D813-3D7D-4F5D-99ED-D49932E5A265
 :END:
 
 Exclude history of commands starting with a space. Commands entered multiple
@@ -537,183 +537,183 @@ Ignore every command that
 - Starts with any number of spaces
 - Starts with any number of tabs
 
-#+NAME: FD3B6FDA-BC63-4DA0-B730-68CE46C04B9C
+#+NAME: org_gcr_2017-05-12_mara_E452AE63-E6F8-484E-B7F6-84E6546F5359
 #+BEGIN_SRC sh
 HISTIGNORE='[ \t]*'
 #+END_SRC
 
 Keep a rich and expansive history.
 
-#+NAME: 0674188D-A8F8-48D5-ABC9-2264772956B6
+#+NAME: org_gcr_2017-05-12_mara_8359BDC0-45BD-47FB-95D6-C0E6C769D5F7
 #+BEGIN_SRC sh
 HISTSIZE=31102
 #+END_SRC
 
 Track history with basically a ISO-8601 timestamp.
 
-#+NAME: D510B310-1DA6-4D72-837A-54D8DB28C789
+#+NAME: org_gcr_2017-05-12_mara_6F77C1D2-0666-4DC1-A12D-3DF4763FAA8C
 #+BEGIN_SRC sh
 HISTTIMEFORMAT='%Y-%m-%d_%H-%M-%S '
 #+END_SRC
 
 ***** Interface
 :PROPERTIES:
-:ID:       2F959536-B5F9-42F4-91B3-FB5497622E61
+:ID:       org_gcr_2017-05-12_mara:FD057DE3-4E73-402A-8D37-F0B4413F17CC
 :END:
 
 Only list the last 3 directories in the path; for everything deeper run ~pwd~.
 
-#+NAME: 2CDAF29A-605C-4D5D-AF0C-5DE7B5164C53
+#+NAME: org_gcr_2017-05-12_mara_5F5E4AA5-A0FF-460B-BBE8-1AB700BCA964
 #+BEGIN_SRC sh
 PROMPT_DIRTRIM=3
 #+END_SRC
 
 ** Global Shell Configuration Files
 :PROPERTIES:
-:ID:       7D227BB5-1E04-40A3-B8EE-4F5913C0264C
+:ID:       org_gcr_2017-05-12_mara:0D578995-CDE4-4247-9FE3-EDDBDFB6FB22
 :END:
 
 *** Non-Interactive
 :PROPERTIES:
-:ID:       39DE0571-4D9F-473B-9D23-A02CD0950DBE
 :header-args: :tangle ./.bash_global_non_interactive
+:ID:       org_gcr_2017-05-12_mara:DB3A9415-85FC-46FD-BF39-F723E5235C3C
 :END:
 
-#+NAME: C59D63FC-0C8F-4740-B021-40D8BEB849E9
+#+NAME: org_gcr_2017-05-12_mara_67873436-0189-42A6-ADB2-B6471031D04B
 #+BEGIN_SRC sh :comments no
 # -*- mode: sh; -*-
 #+END_SRC
 
 Every Bash session requires the same configuration.
 
-#+NAME: AB646FCB-6048-4B21-B231-71DB5F64E465
+#+NAME: org_gcr_2017-05-12_mara_0E1CBFBF-952B-45E4-8874-3B5A33EC821E
 #+BEGIN_SRC sh
 <<BashCore>>
 #+END_SRC
 
 Only non-interactive sessions requires this configuration.
 
-#+NAME: 0B3FC004-95FC-45D0-B5C6-D38641391FC4
+#+NAME: org_gcr_2017-05-12_mara_4351B96D-D0E6-4132-B80A-0385F6367429
 #+BEGIN_SRC sh
 <<BashNonInteractiveCore>>
 #+END_SRC
 
 *** Interactive
 :PROPERTIES:
-:ID:       5D6FBE76-E349-43B2-9EC2-C18189139B53
 :header-args: :tangle ./.bash_global_interactive
+:ID:       org_gcr_2017-05-12_mara:1E8A5E47-9189-40EB-A9B9-8D4835775A7A
 :END:
 
-#+NAME: 2933302D-687F-4A9E-881E-091F3AD5FED3
+#+NAME: org_gcr_2017-05-12_mara_06661C55-0548-444F-B1F5-6C8B4CD0B2EE
 #+BEGIN_SRC sh :comments no
 # -*- mode: sh; -*-
 #+END_SRC
 
 Every Bash session requires the same configuration.
 
-#+NAME: 861890CF-0E4B-48FF-83C6-514C3CC395DC
+#+NAME: org_gcr_2017-05-12_mara_D2BF3725-6200-4F81-A5C0-F84290C166E7
 #+BEGIN_SRC sh
 <<BashCore>>
 #+END_SRC
 
 Only interactive sessions requires this configuration.
 
-#+NAME: 8E91E17C-6139-4A27-846B-E863D29CFDC0
+#+NAME: org_gcr_2017-05-12_mara_F379D438-E41D-4E79-A05F-75D394D7D626
 #+BEGIN_SRC sh
 <<BashInteractiveCore>>
 #+END_SRC
 
 ** Login Shell Configuration Files
 :PROPERTIES:
-:ID:       B6560BA2-9AF6-42DA-BF9C-1B31D2157DE2
+:ID:       org_gcr_2017-05-12_mara:BCD75F93-7AD8-49D6-A5CF-EF2AC6769098
 :END:
 
 *** BashProfile
 :PROPERTIES:
-:ID:       71EDEF3E-56E7-43FE-A483-19419629472D
 :header-args: :tangle ./.bash_profile
+:ID:       org_gcr_2017-05-12_mara:93967906-378F-4A5B-B53F-1068F93DF8BB
 :END:
 
-#+NAME: 7A00F7A1-68EF-4D2B-83B3-465F76F10226
+#+NAME: org_gcr_2017-05-12_mara_924FD018-EFEB-41F8-9F87-C37C2DE7D115
 #+BEGIN_SRC sh :comments no
 # -*- mode: sh; -*-
 #+END_SRC
 
 Execute the same configuration as every non-login interactive shell.
 
-#+NAME: D8D66A14-3B1C-4537-963E-45DBC3D286B2
+#+NAME: org_gcr_2017-05-12_mara_B768B118-68AB-4224-AD9C-C8FA64B7579B
 #+BEGIN_SRC sh
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 #+END_SRC
 
 Have fun.
 
-#+NAME: 0DE550E8-DABB-45E0-A8CC-11CDC0A2279A
+#+NAME: org_gcr_2017-05-12_mara_546F0300-CB15-4B7B-A206-20F557201534
 #+BEGIN_SRC sh
 fortune
 #+END_SRC
 
 *** BashRc
 :PROPERTIES:
-:ID:       6EC5CFD7-9EF9-42DC-B695-3202F2A303C0
 :header-args: :tangle ./.bashrc
+:ID:       org_gcr_2017-05-12_mara:93E59E15-9E26-4FEE-800A-4DB748AB395F
 :END:
 
-#+NAME: 51728B92-235E-4CE8-98D7-AB9E4783CB64
+#+NAME: org_gcr_2017-05-12_mara_DC49A9A0-404B-4F1A-8B2E-18391BB70B07
 #+BEGIN_SRC sh :comments no
 # -*- mode: sh; -*-
 #+END_SRC
 
-#+NAME: A4502549-BA36-4C40-A12A-E42A72B6384C
+#+NAME: org_gcr_2017-05-12_mara_F255F97F-5EED-4DCF-AAAF-2AC396CEBB4A
 #+BEGIN_SRC sh
 source ~/.bash_global_interactive
 #+END_SRC
 
 VIM is the best system editor.
 
-#+NAME: 08792628-161D-4530-B789-7CE1CE308189
+#+NAME: org_gcr_2017-05-12_mara_3C6E3108-B304-4892-B8A2-21FA6E0F0DAA
 #+BEGIN_SRC sh
 VISUAL=vim
 #+END_SRC
 
 Use VIM for visual non-EMACS environments.
 
-#+NAME: AD54A868-318C-4033-A593-93ED0184A1B4
+#+NAME: org_gcr_2017-05-12_mara_7F5D8B99-5A33-44C1-949A-435B3326F053
 #+BEGIN_SRC sh
 EDITOR="$VISUAL"
 #+END_SRC
 
 Keep the system provisioning professional.
 
-#+NAME: 5A8DA41A-6F75-410A-9DD4-21A348CAC9BD
+#+NAME: org_gcr_2017-05-12_mara_ADECF9AF-F8CC-49EB-BFF8-79C5BCC8C052
 #+BEGIN_SRC sh
 HOMEBREW_NO_EMOJI=1
 #+END_SRC
 
 Easily use Java.
 
-#+NAME: 6697345C-43E6-4EC0-8171-1FA226253803
+#+NAME: org_gcr_2017-05-12_mara_3A2D3A90-92BB-4E00-AF68-757B5F8EAB58
 #+BEGIN_SRC sh
 JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home'
 #+END_SRC
 
 Easily use EMACS info files.
 
-#+NAME: 2A2C25BE-DF7E-46A2-8378-0163D0A5DB17
+#+NAME: org_gcr_2017-05-12_mara_33C886C8-3042-462B-A950-56C47183FF5A
 #+BEGIN_SRC sh
 INFOPATH='/usr/local/share/info:/usr/share/info'
 #+END_SRC
 
 Easily use =ccrypt= from EMACS.
 
-#+NAME: 96DF1A6D-FDEE-41D2-B8B0-17F7A9E98B16
+#+NAME: org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E
 #+BEGIN_SRC sh
 CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp"
 #+END_SRC
 
 Easily load Emacs libraries.
 
-#+NAME: orgmode:gcr:vela:FB54DE7D-3B07-47B3-94F6-9F983C44904B
+#+NAME: org_gcr_2017-05-12_mara_90CE9C25-BFAB-4442-9FCB-8A6D330D90F1
 #+BEGIN_SRC sh
 LANGTOOL="$(brew --prefix languagetool)/libexec/languagetool-commandline.jar"
 DITAA="$(brew --prefix ditaa)/libexec/ditaa0_10.jar"
@@ -722,42 +722,42 @@ PLANTUML="$(brew --prefix plantuml)/libexec/plantuml.jar"
 
 Easily use =proselint= from EMACS.
 
-#+NAME: orgmode:gcr:vela:D05B2F23-1724-4B1C-9E6D-A8150BFCEDF2
+#+NAME: org_gcr_2017-05-12_mara_0774E3DC-02F0-48F8-AB62-5AF40D0FDB9B
 #+BEGIN_SRC sh
 PROSELINT='/Users/gcr/util/proselint/env/bin/proselint'
 #+END_SRC
 
 Easily use TeX.
 
-#+NAME: E81EDC5A-549B-47FF-AD9C-41C73F40740A
+#+NAME: org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E
 #+BEGIN_SRC sh
 MACTEX_BIN='/usr/local/texlive/2016/bin/x86_64-darwin'
 #+END_SRC
 
 Easily access everything.
 
-#+NAME: 305DB52D-DB00-40D8-BA3C-19C16A44D6B4
+#+NAME: org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176
 #+BEGIN_SRC sh
 PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$PATH"
 #+END_SRC
 
 Use VMWare with Vagrant.
 
-#+NAME: F1278DB7-509B-4BDD-93FD-96461BD6EC8B
+#+NAME: org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C
 #+BEGIN_SRC sh
 VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 #+END_SRC
 
 Only allow ~pip~ to install packages with a ~venv~.
 
-#+NAME: orgmode:gcr:vela:B25DC99C-3C7C-440C-9AD0-0835189D34E9
+#+NAME: org_gcr_2017-05-12_mara_B66F9D4D-9536-4A53-8AED-F338D79F0A3B
 #+BEGIN_SRC sh
 PIP_REQUIRE_VIRTUALENV=true
 #+END_SRC
 
 ~gpip~ can install globally though.
 
-#+NAME: orgmode:gcr:vela:00356C92-33DF-4D8D-8EE8-29456E3D8AC2
+#+NAME: org_gcr_2017-05-12_mara_82E4FD7F-D78B-415B-91F4-20B092A63263
 #+BEGIN_SRC sh
 globalpip() {
     PIP_REQUIRE_VIRTUALENV="" pip "$@"
@@ -766,12 +766,12 @@ globalpip() {
 
 **** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
 :PROPERTIES:
-:ID:       2B765276-2BEE-45F3-8AFE-6D81160D6035
+:ID:       org_gcr_2017-05-12_mara:160278CE-DE40-44A7-9509-F17B3AD5A43A
 :END:
 
 Easily start EMACS.
 
-#+NAME: 10224F22-A50D-4B6F-9D25-604E423128FA
+#+NAME: org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790
 #+BEGIN_SRC sh
 alias e='emacs --debug-init&'
 alias eno='emacs&'
@@ -783,7 +783,7 @@ alias econ='emacs -nw --debug-init'
 
 Easily start =r=.
 
-#+NAME: 1B20E362-CCE8-4CDB-AA79-5D1FB37F9F2E
+#+NAME: org_gcr_2017-05-12_mara_69C0605C-90AA-43E9-9084-CF7E725F21F8
 #+BEGIN_SRC sh
 alias r='r --no-save'
 alias R='r --no-save'
@@ -791,7 +791,7 @@ alias R='r --no-save'
 
 Easily activate and deactivate =virtualenv=.
 
-#+NAME: orgmode:gcr:vela:D69007EA-0CEE-43F2-AAEA-E55ABDA9DE3E
+#+NAME: org_gcr_2017-05-12_mara_8BF4303D-351C-4197-A96A-AD5E6B81344D
 #+BEGIN_SRC sh
 alias vens='virtualenv env'
 alias veon='source ./env/bin/activate'
@@ -800,7 +800,7 @@ alias veof='deactivate'
 
 Good defaults.
 
-#+NAME: 20B20120-4482-4572-B3D3-3A1DD1DAE792
+#+NAME: org_gcr_2017-05-12_mara_20EA8DAB-53C6-4170-9417-8BCC8A628AEB
 #+BEGIN_SRC sh
 alias mkdir='mkdir -pv'
 alias mount='mount | column -t'
@@ -810,7 +810,7 @@ alias du="du -ach"
 
 Shortcuts.
 
-#+NAME: A74F8DFE-A2A5-41E3-9D12-319766E42A30
+#+NAME: org_gcr_2017-05-12_mara_A68EF2AE-850B-4A51-82F8-A6017D6E9F93
 #+BEGIN_SRC sh
 alias h='history'
 alias j='jobs -l'
@@ -818,14 +818,14 @@ alias j='jobs -l'
 
 No surprises.
 
-#+NAME: A25A3E8F-4674-474A-BD45-1553C6EF0B3A
+#+NAME: org_gcr_2017-05-12_mara_76E0132B-936A-4492-AE87-D77E96B4EFAD
 #+BEGIN_SRC sh
 alias cd..='cd ..'
 #+END_SRC
 
 Get download speed [fn:167e637e4fea0629:https://www.gulshansingh.com/posts/useful-bash-aliases/].
 
-#+NAME: D579A295-6383-4E18-B033-5EF0057085C0
+#+NAME: org_gcr_2017-05-12_mara_C59D7D22-E7E2-48EE-BE47-0DDB237D6A9C
 #+BEGIN_SRC sh
 alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 #+END_SRC
@@ -835,32 +835,32 @@ working directory and I'm irritated because I'm lazy and I don't want to type
 =cd $OLDPWD=. Don't get rid of =cd= though because I do use it and it is faster
 than =cd ~/=.
 
-#+NAME: orgmode:gcr:vela:5622EA36-9969-4244-99BD-6F8C8F210683
+#+NAME: org_gcr_2017-05-12_mara_CC3E03CE-A882-4AB1-9BBF-A2C49F4F3A0A
 #+BEGIN_SRC sh
 alias bk="cd $OLDPWD"
 #+END_SRC
 
 Always use ~Bash~ *never* use the default shell.
 
-#+NAME: orgmode:gcr:vela:B5E85F2C-F10E-4449-92EC-5B0D76BAA603
+#+NAME: org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C
 #+BEGIN_SRC sh
 alias sh='/usr/local/bin/bash'
 #+END_SRC
 
 *** BashLogout
 :PROPERTIES:
-:ID:       05FCD6B3-FF57-4C10-9552-8F41686F1019
 :header-args: :tangle ./.bash_logout
+:ID:       org_gcr_2017-05-12_mara:04FEFF46-AAC6-4AB8-9876-199B271DA565
 :END:
 
-#+NAME: 5890E216-F5C8-4F03-981C-71A91AE0890A
+#+NAME: org_gcr_2017-05-12_mara_D13E029E-8D74-48EB-965E-74828C36B68A
 #+BEGIN_SRC sh :comments no
 # -*- mode: sh; -*-
 #+END_SRC
 
 Have fun.
 
-#+NAME: 891ED468-F802-4378-BA5C-0BF874CAB4F1
+#+NAME: org_gcr_2017-05-12_mara_16299394-BEC8-40E0-946C-AF75251006C0
 #+BEGIN_SRC sh
 printf 'Sayonara!\n' && sleep 1
 #+END_SRC

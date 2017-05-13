@@ -1,9 +1,9 @@
 # -*- mode: sh; -*-
 
-# [[file:~/git/github/bash/Provision.org::D8D66A14-3B1C-4537-963E-45DBC3D286B2][D8D66A14-3B1C-4537-963E-45DBC3D286B2]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_B768B118-68AB-4224-AD9C-C8FA64B7579B][org_gcr_2017-05-12_mara_B768B118-68AB-4224-AD9C-C8FA64B7579B]]
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
-# D8D66A14-3B1C-4537-963E-45DBC3D286B2 ends here
+# org_gcr_2017-05-12_mara_B768B118-68AB-4224-AD9C-C8FA64B7579B ends here
 
-# [[file:~/git/github/bash/Provision.org::0DE550E8-DABB-45E0-A8CC-11CDC0A2279A][0DE550E8-DABB-45E0-A8CC-11CDC0A2279A]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_546F0300-CB15-4B7B-A206-20F557201534][org_gcr_2017-05-12_mara_546F0300-CB15-4B7B-A206-20F557201534]]
 fortune
-# 0DE550E8-DABB-45E0-A8CC-11CDC0A2279A ends here
+# org_gcr_2017-05-12_mara_546F0300-CB15-4B7B-A206-20F557201534 ends here

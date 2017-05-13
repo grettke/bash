@@ -1,7 +1,7 @@
 # -*- mode: sh; -*-
 
-# [[file:~/git/github/bash/Provision.org::AB646FCB-6048-4B21-B231-71DB5F64E465][AB646FCB-6048-4B21-B231-71DB5F64E465]]
-# [[file:~/git/github/bash/Provision.org::86B3EC22-B47D-4E40-AFDD-B68AC6F77110][86B3EC22-B47D-4E40-AFDD-B68AC6F77110]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_0E1CBFBF-952B-45E4-8874-3B5A33EC821E][org_gcr_2017-05-12_mara_0E1CBFBF-952B-45E4-8874-3B5A33EC821E]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_347A5539-7A7D-4802-8147-B3AE55F068F5][org_gcr_2017-05-12_mara_347A5539-7A7D-4802-8147-B3AE55F068F5]]
 emaj=4
 emin=3
 amaj=${BASH_VERSINFO[0]}
@@ -13,98 +13,98 @@ unset emaj
 unset emin
 unset amaj
 unset amin
-# 86B3EC22-B47D-4E40-AFDD-B68AC6F77110 ends here
-# [[file:~/git/github/bash/Provision.org::57652CC2-A592-4EDB-AB4F-5668BDE2A9AB][57652CC2-A592-4EDB-AB4F-5668BDE2A9AB]]
+# org_gcr_2017-05-12_mara_347A5539-7A7D-4802-8147-B3AE55F068F5 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_0E6696C1-1C98-4DDE-92E7-8939C9EE9AD7][org_gcr_2017-05-12_mara_0E6696C1-1C98-4DDE-92E7-8939C9EE9AD7]]
 set -o braceexpand
-# 57652CC2-A592-4EDB-AB4F-5668BDE2A9AB ends here
-# [[file:~/git/github/bash/Provision.org::2CB26DFF-1F5A-4781-A460-7B6975FBBCC8][2CB26DFF-1F5A-4781-A460-7B6975FBBCC8]]
+# org_gcr_2017-05-12_mara_0E6696C1-1C98-4DDE-92E7-8939C9EE9AD7 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_926D405F-5873-4A24-8FC4-7EBA0461B931][org_gcr_2017-05-12_mara_926D405F-5873-4A24-8FC4-7EBA0461B931]]
 set +o keyword
-# 2CB26DFF-1F5A-4781-A460-7B6975FBBCC8 ends here
-# [[file:~/git/github/bash/Provision.org::1A58BFA3-F5E2-421B-8D68-BFAFAC165D82][1A58BFA3-F5E2-421B-8D68-BFAFAC165D82]]
+# org_gcr_2017-05-12_mara_926D405F-5873-4A24-8FC4-7EBA0461B931 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_79BFD638-FE36-4CFF-A0E5-853A1DC3232C][org_gcr_2017-05-12_mara_79BFD638-FE36-4CFF-A0E5-853A1DC3232C]]
 set +o errexit
-# 1A58BFA3-F5E2-421B-8D68-BFAFAC165D82 ends here
-# [[file:~/git/github/bash/Provision.org::8E509A55-4F09-49DF-9402-3FBAF130CBD1][8E509A55-4F09-49DF-9402-3FBAF130CBD1]]
+# org_gcr_2017-05-12_mara_79BFD638-FE36-4CFF-A0E5-853A1DC3232C ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_860A07FB-3B57-46CA-A611-279FFEC2E648][org_gcr_2017-05-12_mara_860A07FB-3B57-46CA-A611-279FFEC2E648]]
 set -o pipefail
-# 8E509A55-4F09-49DF-9402-3FBAF130CBD1 ends here
-# [[file:~/git/github/bash/Provision.org::55B5A68B-59AF-4CED-B159-7E72D87C8B04][55B5A68B-59AF-4CED-B159-7E72D87C8B04]]
+# org_gcr_2017-05-12_mara_860A07FB-3B57-46CA-A611-279FFEC2E648 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_6C8B18D4-BCA4-4567-A837-F8026C4BD773][org_gcr_2017-05-12_mara_6C8B18D4-BCA4-4567-A837-F8026C4BD773]]
 shopt -s failglob
-# 55B5A68B-59AF-4CED-B159-7E72D87C8B04 ends here
-# [[file:~/git/github/bash/Provision.org::B6228402-AF52-48C9-8B65-493DAC37E850][B6228402-AF52-48C9-8B65-493DAC37E850]]
+# org_gcr_2017-05-12_mara_6C8B18D4-BCA4-4567-A837-F8026C4BD773 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_041DA23E-092A-4105-ACDF-DC4B6DE3395C][org_gcr_2017-05-12_mara_041DA23E-092A-4105-ACDF-DC4B6DE3395C]]
 shopt -s shift_verbose
-# B6228402-AF52-48C9-8B65-493DAC37E850 ends here
-# [[file:~/git/github/bash/Provision.org::CFACD6C3-617A-42E7-A672-DE55C1F6C9E9][CFACD6C3-617A-42E7-A672-DE55C1F6C9E9]]
+# org_gcr_2017-05-12_mara_041DA23E-092A-4105-ACDF-DC4B6DE3395C ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_049B118A-2116-433B-A615-7562BB6EA96A][org_gcr_2017-05-12_mara_049B118A-2116-433B-A615-7562BB6EA96A]]
 set -o allexport
-# CFACD6C3-617A-42E7-A672-DE55C1F6C9E9 ends here
-# [[file:~/git/github/bash/Provision.org::AF6CF6F6-29EB-4A4D-8C56-BB4239DCB50C][AF6CF6F6-29EB-4A4D-8C56-BB4239DCB50C]]
+# org_gcr_2017-05-12_mara_049B118A-2116-433B-A615-7562BB6EA96A ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_24CEAF97-19A1-4A8B-B117-5947FFCE0205][org_gcr_2017-05-12_mara_24CEAF97-19A1-4A8B-B117-5947FFCE0205]]
 set -o errtrace
-# AF6CF6F6-29EB-4A4D-8C56-BB4239DCB50C ends here
-# [[file:~/git/github/bash/Provision.org::0A61B3AC-32CB-4189-852F-0D9956BB1D1F][0A61B3AC-32CB-4189-852F-0D9956BB1D1F]]
+# org_gcr_2017-05-12_mara_24CEAF97-19A1-4A8B-B117-5947FFCE0205 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_46496694-A8A2-4FDC-8DBF-904D2428F4A3][org_gcr_2017-05-12_mara_46496694-A8A2-4FDC-8DBF-904D2428F4A3]]
 set -o functrace
-# 0A61B3AC-32CB-4189-852F-0D9956BB1D1F ends here
-# [[file:~/git/github/bash/Provision.org::26B4365A-1F13-4ECD-99EB-964C276533EE][26B4365A-1F13-4ECD-99EB-964C276533EE]]
+# org_gcr_2017-05-12_mara_46496694-A8A2-4FDC-8DBF-904D2428F4A3 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_3B144B8C-033E-4774-9C05-E10A41AD5FCD][org_gcr_2017-05-12_mara_3B144B8C-033E-4774-9C05-E10A41AD5FCD]]
 shopt -s cdable_vars
-# 26B4365A-1F13-4ECD-99EB-964C276533EE ends here
-# [[file:~/git/github/bash/Provision.org::58D8B849-7FD3-430A-9914-49DEF15EB886][58D8B849-7FD3-430A-9914-49DEF15EB886]]
+# org_gcr_2017-05-12_mara_3B144B8C-033E-4774-9C05-E10A41AD5FCD ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_F84A7422-909B-4535-AD90-A88859A3FDE4][org_gcr_2017-05-12_mara_F84A7422-909B-4535-AD90-A88859A3FDE4]]
 set -o monitor
-# 58D8B849-7FD3-430A-9914-49DEF15EB886 ends here
-# [[file:~/git/github/bash/Provision.org::F0055BD6-96CF-4B81-B11C-F9B99F5085F8][F0055BD6-96CF-4B81-B11C-F9B99F5085F8]]
+# org_gcr_2017-05-12_mara_F84A7422-909B-4535-AD90-A88859A3FDE4 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_8CA20790-92D6-48E9-8842-725DB3340C3E][org_gcr_2017-05-12_mara_8CA20790-92D6-48E9-8842-725DB3340C3E]]
 set -o notify
-# F0055BD6-96CF-4B81-B11C-F9B99F5085F8 ends here
-# [[file:~/git/github/bash/Provision.org::FAB2F5D9-E5D3-4252-A0F9-853375344CFF][FAB2F5D9-E5D3-4252-A0F9-853375344CFF]]
+# org_gcr_2017-05-12_mara_8CA20790-92D6-48E9-8842-725DB3340C3E ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_3E52EBAC-15FB-4E4D-A62B-F12B389E3548][org_gcr_2017-05-12_mara_3E52EBAC-15FB-4E4D-A62B-F12B389E3548]]
 shopt -u extdebug
-# FAB2F5D9-E5D3-4252-A0F9-853375344CFF ends here
-# [[file:~/git/github/bash/Provision.org::9086FA3B-EC85-486F-87AB-35F72D57602B][9086FA3B-EC85-486F-87AB-35F72D57602B]]
+# org_gcr_2017-05-12_mara_3E52EBAC-15FB-4E4D-A62B-F12B389E3548 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_CECC73AC-BD9D-4F6B-BA3C-23C5E0A3DAF5][org_gcr_2017-05-12_mara_CECC73AC-BD9D-4F6B-BA3C-23C5E0A3DAF5]]
 set -o noclobber
-# 9086FA3B-EC85-486F-87AB-35F72D57602B ends here
-# [[file:~/git/github/bash/Provision.org::A83FCBAD-BD08-46EF-B8DC-08F834CD0774][A83FCBAD-BD08-46EF-B8DC-08F834CD0774]]
+# org_gcr_2017-05-12_mara_CECC73AC-BD9D-4F6B-BA3C-23C5E0A3DAF5 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_BDEC9D0A-D1B0-4488-8EE0-E0E665EA1641][org_gcr_2017-05-12_mara_BDEC9D0A-D1B0-4488-8EE0-E0E665EA1641]]
 # set -o nounset
-# A83FCBAD-BD08-46EF-B8DC-08F834CD0774 ends here
-# [[file:~/git/github/bash/Provision.org::69CDCB52-A45C-4D5C-97C1-6754620B922A][69CDCB52-A45C-4D5C-97C1-6754620B922A]]
+# org_gcr_2017-05-12_mara_BDEC9D0A-D1B0-4488-8EE0-E0E665EA1641 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_3C1B99B3-CCE4-4C50-ABC2-FCED3C882B9A][org_gcr_2017-05-12_mara_3C1B99B3-CCE4-4C50-ABC2-FCED3C882B9A]]
 shopt -u cdspell
-# 69CDCB52-A45C-4D5C-97C1-6754620B922A ends here
-# [[file:~/git/github/bash/Provision.org::3332E975-30FF-4B12-B7FB-3904DEA0312B][3332E975-30FF-4B12-B7FB-3904DEA0312B]]
+# org_gcr_2017-05-12_mara_3C1B99B3-CCE4-4C50-ABC2-FCED3C882B9A ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A][org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A]]
 shopt -u dirspell
-# 3332E975-30FF-4B12-B7FB-3904DEA0312B ends here
-# [[file:~/git/github/bash/Provision.org::68DC48E0-D643-46CF-8C84-DE3AC3B8C2EF][68DC48E0-D643-46CF-8C84-DE3AC3B8C2EF]]
+# org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88][org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88]]
 TMPDIR='/tmp'
-# 68DC48E0-D643-46CF-8C84-DE3AC3B8C2EF ends here
-# [[file:~/git/github/bash/Provision.org::DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9][DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9]]
+# org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_753ED6DC-B506-4619-939C-0172E6F2C263][org_gcr_2017-05-12_mara_753ED6DC-B506-4619-939C-0172E6F2C263]]
 set -o hashall
 shopt -s checkhash
-# DC13E976-AE69-4D3C-8D28-F8BD9E1D9DB9 ends here
-# [[file:~/git/github/bash/Provision.org::994AE13B-C9B5-47FE-AB65-DF38706F81AA][994AE13B-C9B5-47FE-AB65-DF38706F81AA]]
+# org_gcr_2017-05-12_mara_753ED6DC-B506-4619-939C-0172E6F2C263 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_E4AF0A48-8164-47D4-8250-1C8D94440751][org_gcr_2017-05-12_mara_E4AF0A48-8164-47D4-8250-1C8D94440751]]
 LANG='en_US.UTF-8'
-# 994AE13B-C9B5-47FE-AB65-DF38706F81AA ends here
-# [[file:~/git/github/bash/Provision.org::8F44EAF1-D966-4D57-97A2-3A7014C76276][8F44EAF1-D966-4D57-97A2-3A7014C76276]]
+# org_gcr_2017-05-12_mara_E4AF0A48-8164-47D4-8250-1C8D94440751 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_28B1D8B4-4298-4DA4-AB9D-0BFA13F5DAEB][org_gcr_2017-05-12_mara_28B1D8B4-4298-4DA4-AB9D-0BFA13F5DAEB]]
 LC_ALL='en_US.UTF-8'
-# 8F44EAF1-D966-4D57-97A2-3A7014C76276 ends here
-# [[file:~/git/github/bash/Provision.org::orgmode:gcr:vela:37AF37AD-8F9B-4124-90A5-66125566748B][orgmode:gcr:vela:37AF37AD-8F9B-4124-90A5-66125566748B]]
+# org_gcr_2017-05-12_mara_28B1D8B4-4298-4DA4-AB9D-0BFA13F5DAEB ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_DADA4A0B-F5B1-4DAA-A31A-1D45EE775A9E][org_gcr_2017-05-12_mara_DADA4A0B-F5B1-4DAA-A31A-1D45EE775A9E]]
 LC_COLLATE='POSIX'
-# orgmode:gcr:vela:37AF37AD-8F9B-4124-90A5-66125566748B ends here
-# [[file:~/git/github/bash/Provision.org::orgmode:gcr:vela:AC6175F5-5146-4C44-A8FA-67915D9CFB53][orgmode:gcr:vela:AC6175F5-5146-4C44-A8FA-67915D9CFB53]]
+# org_gcr_2017-05-12_mara_DADA4A0B-F5B1-4DAA-A31A-1D45EE775A9E ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738][org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738]]
 if [ "$(locale charmap)" == "UTF-8" ]; then
     echo "Character encoding configured: CORRECTLY."
 else
     echo "Character encoding configured: INCORRECTLY!"
 fi
-# orgmode:gcr:vela:AC6175F5-5146-4C44-A8FA-67915D9CFB53 ends here
-# [[file:~/git/github/bash/Provision.org::48AEFF38-FFD3-4BB9-ABEF-3F5B1BADDFE2][48AEFF38-FFD3-4BB9-ABEF-3F5B1BADDFE2]]
+# org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2][org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2]]
 FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
-# 48AEFF38-FFD3-4BB9-ABEF-3F5B1BADDFE2 ends here
-# AB646FCB-6048-4B21-B231-71DB5F64E465 ends here
+# org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2 ends here
+# org_gcr_2017-05-12_mara_0E1CBFBF-952B-45E4-8874-3B5A33EC821E ends here
 
-# [[file:~/git/github/bash/Provision.org::0B3FC004-95FC-45D0-B5C6-D38641391FC4][0B3FC004-95FC-45D0-B5C6-D38641391FC4]]
-# [[file:~/git/github/bash/Provision.org::2A2108E3-231A-4491-81F0-58B93BF2EA2C][2A2108E3-231A-4491-81F0-58B93BF2EA2C]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_4351B96D-D0E6-4132-B80A-0385F6367429][org_gcr_2017-05-12_mara_4351B96D-D0E6-4132-B80A-0385F6367429]]
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_E102B51D-9068-41F6-8731-760FD49FFB95][org_gcr_2017-05-12_mara_E102B51D-9068-41F6-8731-760FD49FFB95]]
 if [ "$PS1" ]; then
     printf "\e[31mExpected a non-interactive shell.\e[0m]\n" 1>&2
     sleep 5
     exit 1
 fi
-# 2A2108E3-231A-4491-81F0-58B93BF2EA2C ends here
-# [[file:~/git/github/bash/Provision.org::E03E703D-809F-4536-996D-B96AE3DCD8C7][E03E703D-809F-4536-996D-B96AE3DCD8C7]]
+# org_gcr_2017-05-12_mara_E102B51D-9068-41F6-8731-760FD49FFB95 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_6E441F28-E8CC-44D8-B01B-CF548D36A502][org_gcr_2017-05-12_mara_6E441F28-E8CC-44D8-B01B-CF548D36A502]]
 unset -f read select
-# E03E703D-809F-4536-996D-B96AE3DCD8C7 ends here
-# [[file:~/git/github/bash/Provision.org::CABCFC8A-89AB-41AE-9A46-514F1D6C8240][CABCFC8A-89AB-41AE-9A46-514F1D6C8240]]
+# org_gcr_2017-05-12_mara_6E441F28-E8CC-44D8-B01B-CF548D36A502 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2573D577-8D1B-41AB-A384-E148098FF9DC][org_gcr_2017-05-12_mara_2573D577-8D1B-41AB-A384-E148098FF9DC]]
 shopt -u expand_aliases
-# CABCFC8A-89AB-41AE-9A46-514F1D6C8240 ends here
-# 0B3FC004-95FC-45D0-B5C6-D38641391FC4 ends here
+# org_gcr_2017-05-12_mara_2573D577-8D1B-41AB-A384-E148098FF9DC ends here
+# org_gcr_2017-05-12_mara_4351B96D-D0E6-4132-B80A-0385F6367429 ends here
