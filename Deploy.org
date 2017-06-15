@@ -16,7 +16,7 @@
 #+NAME: F7D52399-F20C-466D-B59B-93F89D4CF985
 #+BEGIN_SRC sh
 function bash_deploy() {
-    ln -s -f ${PWD}/.bash_profile ~/.bash_profile
+    ln -s -f ${PWD}/.bash_login ~/.bash_login
     ln -s -f ${PWD}/.bash_logout ~/.bash_logout
     ln -s -f ${PWD}/.bashrc ~/.bashrc
     ln -s -f ${PWD}/.bash_global_non_interactive ~/.bash_global_non_interactive

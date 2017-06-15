@@ -1275,7 +1275,7 @@ done
   - On exit, read and run =~/.bash_logout= if it exists.
 - Invoked as an interactive non-login shell
   - Read and execute =~/.bashrc=, if that file exists
-    - "So, typically, your ~/.bash_profile contains the line"
+    - "So, typically, your ~.bash_login~ contains the line"
       #+NAME: E1AC5166-83AC-41DC-8F96-26A18400E670
       #+BEGIN_SRC shell
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi after (or before) any login-specific
@@ -1773,7 +1773,7 @@ initializations.
 - Emacs bindings
 
 **** 8.4.5 Specifying Numeric Arguments
-:PROPERTIES:
+q:PROPERTIES:
 :ID:       AA19B747-C6ED-4F3E-AAF5-C8A787D8B259
 :END:
 

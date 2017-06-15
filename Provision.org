@@ -630,7 +630,7 @@ Only interactive sessions requires this configuration.
 
 *** BashProfile
 :PROPERTIES:
-:header-args: :tangle ./.bash_profile
+:header-args: :tangle ./.bash_login
 :ID:       org_gcr_2017-05-12_mara:93967906-378F-4A5B-B53F-1068F93DF8BB
 :END:
 
