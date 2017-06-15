@@ -250,3 +250,31 @@ digraph version5 {
 [[file:./image/version04.png]]
 #+END_RESULTS
 
+**** Do I Really Understand How This Work?
+
+- Pulled together notes from
+  - [[https://www.gnu.org/software/bash/manual/html_node/Invoking-Bash.html][Invoking Bash]]
+  - [[https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html#Bash-Startup-Files][Bash Startup Files]]
+  - [[https://unix.stackexchange.com/a/46856][Difference between Login Shell and Non-Login Shell?]]
+  - [[https://askubuntu.com/questions/879364/differentiate-interactive-login-and-non-interactive-non-login-shell][Differentiate Interactive login and non-interactive non-login shell]]
+  - [[http://tldp.org/LDP/abs/html/intandnonint.html][Interactive and non-interactive shells and scripts]]
+  - [[https://askubuntu.com/questions/247738/why-is-etc-profile-not-invoked-for-non-login-shells][Why is /etc/profile not invoked for non-login shells?]]
+  - [[https://english.stackexchange.com/questions/100814/what-is-a-good-word-for-best-example][What is a good word for “best example”?]]
+
+- Legend
+  - Interactive Shell: Reads commands from user input on a ~tty~
+    - Reads startup files on start
+    - Displays prompt
+    - Enables job control
+    - User *interacts* with it
+      - Requires it
+  - Login Shell: Authentication Required
+
+Summing It Up:
+
+| Quintessential                                                                                         | Interactive | Login | On Login ~.bash_login~ | On Entry ~.bashrc~ | On Logout ~.bash_logout~ |   |
+|--------------------------------------------------------------------------------------------------------+-------------+-------+----------------------+------------------+------------------------+---|
+| Humn /logs-in/ via ~stdin terminal~ UI (Either textUI or GUI) mking the frst shll. Yr own PC. ~ssh hst~.     | TRUE        | TRUE  | TRUE                 | FALSE            | TRUE                   |   |
+| Humn strts a nw shll via te crrnt intrctv shll. Eg nw trmnl.                                           | TRUE        | FALSE | FALSE                | TRUE             | FALSE                  |   |
+| Humn lgs in whn stdin != trmnl. Remot logn: ~xdm~. ~ssh hst lcl-scrpt~. ~echo cmd PIPE ssh server. --login~. | FALSE       | TRUE  | TRUE                 | FALSE            | TRUE                   |   |
+| Evry scrpt evr. Whn stdin!=tty. All cmds rn in sbshl. Also ~cron~, ~init.d~.  On Entry: ~BASH_ENV~.          | FALSE       | FALSE | FALSE                | FALSE            | FALSE                  |   |
