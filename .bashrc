@@ -35,7 +35,7 @@ PLANTUML="$(brew --prefix plantuml)/libexec/plantuml.jar"
 # org_gcr_2017-05-12_mara_90CE9C25-BFAB-4442-9FCB-8A6D330D90F1 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_0774E3DC-02F0-48F8-AB62-5AF40D0FDB9B][org_gcr_2017-05-12_mara_0774E3DC-02F0-48F8-AB62-5AF40D0FDB9B]]
-PROSELINT='/Users/gcr/util/proselint/env/bin/proselint'
+PROSELINT_HOME='/Users/gcr/proselint'
 # org_gcr_2017-05-12_mara_0774E3DC-02F0-48F8-AB62-5AF40D0FDB9B ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E][org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E]]

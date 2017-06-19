@@ -720,11 +720,11 @@ DITAA="$(brew --prefix ditaa)/libexec/ditaa0_10.jar"
 PLANTUML="$(brew --prefix plantuml)/libexec/plantuml.jar"
 #+END_SRC
 
-Easily use =proselint= from EMACS.
+Use Proselint.
 
 #+NAME: org_gcr_2017-05-12_mara_0774E3DC-02F0-48F8-AB62-5AF40D0FDB9B
 #+BEGIN_SRC sh
-PROSELINT='/Users/gcr/util/proselint/env/bin/proselint'
+PROSELINT_HOME='/Users/gcr/proselint'
 #+END_SRC
 
 Easily use TeX.
