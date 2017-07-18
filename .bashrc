@@ -61,7 +61,6 @@ globalpip() {
 # org_gcr_2017-05-12_mara_82E4FD7F-D78B-415B-91F4-20B092A63263 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
-alias emacs="open /usr/local/opt/emacs-mac/Emacs.app --new --args $1"
 alias e='emacs --debug-init&'
 alias eno='emacs&'
 alias enu='emacs --debug-init -no-desktop -no-init-file --load ~/.emacs.el&'
