@@ -588,14 +588,14 @@ Every Bash session requires the same configuration.
 
 #+NAME: org_gcr_2017-05-12_mara_0E1CBFBF-952B-45E4-8874-3B5A33EC821E
 #+BEGIN_SRC sh
-<<BashCore>>
+«BashCore»
 #+END_SRC
 
 Only non-interactive sessions requires this configuration.
 
 #+NAME: org_gcr_2017-05-12_mara_4351B96D-D0E6-4132-B80A-0385F6367429
 #+BEGIN_SRC sh
-<<BashNonInteractiveCore>>
+«BashNonInteractiveCore»
 #+END_SRC
 
 *** Interactive
@@ -613,14 +613,14 @@ Every Bash session requires the same configuration.
 
 #+NAME: org_gcr_2017-05-12_mara_D2BF3725-6200-4F81-A5C0-F84290C166E7
 #+BEGIN_SRC sh
-<<BashCore>>
+«BashCore»
 #+END_SRC
 
 Only interactive sessions requires this configuration.
 
 #+NAME: org_gcr_2017-05-12_mara_F379D438-E41D-4E79-A05F-75D394D7D626
 #+BEGIN_SRC sh
-<<BashInteractiveCore>>
+«BashInteractiveCore»
 #+END_SRC
 
 ** Login Shell Configuration Files
