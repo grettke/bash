@@ -764,6 +764,15 @@ globalpip() {
 }
 #+END_SRC
 
+Git.
+
+#+NAME: org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7
+#+BEGIN_SRC sh
+source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
+alias g='git'
+complete -o default -o nospace -F _git g
+#+END_SRC
+
 **** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:160278CE-DE40-44A7-9509-F17B3AD5A43A

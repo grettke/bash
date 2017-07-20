@@ -60,6 +60,12 @@ globalpip() {
 }
 # org_gcr_2017-05-12_mara_82E4FD7F-D78B-415B-91F4-20B092A63263 ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7][org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7]]
+source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
+alias g='git'
+complete -o default -o nospace -F _git g
+# org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7 ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
 alias e='emacs --debug-init&'
 alias eno='emacs&'
