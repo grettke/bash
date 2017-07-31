@@ -20,6 +20,10 @@ HOMEBREW_NO_EMOJI=1
 JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home'
 # org_gcr_2017-05-12_mara_3A2D3A90-92BB-4E00-AF68-757B5F8EAB58 ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-07-30_mara_89829A40-9CE4-4B35-8D02-581265F85223][org_gcr_2017-07-30_mara_89829A40-9CE4-4B35-8D02-581265F85223]]
+GOPATH=$HOME/gipeto
+# org_gcr_2017-07-30_mara_89829A40-9CE4-4B35-8D02-581265F85223 ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_33C886C8-3042-462B-A950-56C47183FF5A][org_gcr_2017-05-12_mara_33C886C8-3042-462B-A950-56C47183FF5A]]
 INFOPATH='/usr/local/share/info:/usr/share/info'
 # org_gcr_2017-05-12_mara_33C886C8-3042-462B-A950-56C47183FF5A ends here
@@ -43,7 +47,7 @@ MACTEX_BIN='/usr/local/texlive/2016/bin/x86_64-darwin'
 # org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176][org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176]]
-PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$PATH"
+PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$(go env GOPATH)/bin:$PATH"
 # org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C][org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C]]
