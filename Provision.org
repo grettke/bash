@@ -785,6 +785,13 @@ complete -o default -o nospace -F _git g
 :ID:       org_gcr_2017-05-12_mara:160278CE-DE40-44A7-9509-F17B3AD5A43A
 :END:
 
+Set up this alias for Emacs for macOS and the rest of the aliases will work.
+
+#+NAME: org_gcr_2017-08-02_mara_4D8D6A24-BB4F-4758-B228-BF52F95D40AE
+#+BEGIN_SRC sh
+alias emacs="open /usr/local/opt/emacs-mac/Emacs.app --new --args $1"
+#+END_SRC
+
 Easily start EMACS.
 
 #+NAME: org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790
