@@ -64,6 +64,10 @@ globalpip() {
 }
 # org_gcr_2017-05-12_mara_82E4FD7F-D78B-415B-91F4-20B092A63263 ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-08-10_mara_D5452DB9-7EB2-4AA3-8C06-645D7D20EA43][org_gcr_2017-08-10_mara_D5452DB9-7EB2-4AA3-8C06-645D7D20EA43]]
+MONO_GAC_PREFIX="/usr/local"
+# org_gcr_2017-08-10_mara_D5452DB9-7EB2-4AA3-8C06-645D7D20EA43 ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7][org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7]]
 source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
 alias g='git'
