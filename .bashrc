@@ -73,6 +73,7 @@ source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
 alias g='git'
 complete -o default -o nospace -F _git g
 alias gitunpull='git reset --keep HEAD@{1}'
+alias gituncommit='git reset --mixed HEAD^'
 # org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-08-02_mara_4D8D6A24-BB4F-4758-B228-BF52F95D40AE][org_gcr_2017-08-02_mara_4D8D6A24-BB4F-4758-B228-BF52F95D40AE]]
