@@ -748,11 +748,11 @@ Easily access everything.
 PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$(go env GOPATH)/bin:$PATH"
 #+END_SRC
 
-Use VMWare with Vagrant.
+Use VirtualBox with Vagrant.
 
 #+NAME: org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C
 #+BEGIN_SRC sh
-VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+VAGRANT_DEFAULT_PROVIDER=virtualbox
 #+END_SRC
 
 Only allow ~pip~ to install packages with a ~venv~.

@@ -51,7 +51,7 @@ PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$(go env GOPATH)/bin:$PATH"
 # org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C][org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C]]
-VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+VAGRANT_DEFAULT_PROVIDER=virtualbox
 # org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_B66F9D4D-9536-4A53-8AED-F338D79F0A3B][org_gcr_2017-05-12_mara_B66F9D4D-9536-4A53-8AED-F338D79F0A3B]]
