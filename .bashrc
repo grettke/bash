@@ -22,6 +22,7 @@ JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home'
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-07-30_mara_89829A40-9CE4-4B35-8D02-581265F85223][org_gcr_2017-07-30_mara_89829A40-9CE4-4B35-8D02-581265F85223]]
 GOPATH=$HOME/gipeto
+alias gck='gometalinter ./...'
 # org_gcr_2017-07-30_mara_89829A40-9CE4-4B35-8D02-581265F85223 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_33C886C8-3042-462B-A950-56C47183FF5A][org_gcr_2017-05-12_mara_33C886C8-3042-462B-A950-56C47183FF5A]]

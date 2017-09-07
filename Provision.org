@@ -697,11 +697,12 @@ Easily use Java.
 JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home'
 #+END_SRC
 
-~go~ path.
+~go~ stuff.
 
 #+NAME: org_gcr_2017-07-30_mara_89829A40-9CE4-4B35-8D02-581265F85223
 #+BEGIN_SRC sh
 GOPATH=$HOME/gipeto
+alias gck='gometalinter ./...'
 #+END_SRC
 
 Easily use EMACS info files.
