@@ -760,6 +760,7 @@ Docker.
 
 #+NAME: org_gcr_2017-09-07_mara_1F774B7D-A381-4F70-B33A-D6F7B897AC7E
 #+BEGIN_SRC sh
+alias dm='docker-machine'
 alias dsd='docker-machine start default'
 #+END_SRC
 
