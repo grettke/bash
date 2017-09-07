@@ -58,6 +58,7 @@ VAGRANT_DEFAULT_PROVIDER=virtualbox
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-09-07_mara_1F774B7D-A381-4F70-B33A-D6F7B897AC7E][org_gcr_2017-09-07_mara_1F774B7D-A381-4F70-B33A-D6F7B897AC7E]]
 alias dm='docker-machine'
 alias dsd='docker-machine start default'
+eval "$(docker-machine env default 2>/dev/null)"
 # org_gcr_2017-09-07_mara_1F774B7D-A381-4F70-B33A-D6F7B897AC7E ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_B66F9D4D-9536-4A53-8AED-F338D79F0A3B][org_gcr_2017-05-12_mara_B66F9D4D-9536-4A53-8AED-F338D79F0A3B]]

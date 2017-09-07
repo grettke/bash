@@ -762,6 +762,7 @@ Docker.
 #+BEGIN_SRC sh
 alias dm='docker-machine'
 alias dsd='docker-machine start default'
+eval "$(docker-machine env default 2>/dev/null)"
 #+END_SRC
 
 Only allow ~pip~ to install packages with a ~venv~.
