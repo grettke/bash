@@ -890,6 +890,14 @@ Always use ~Bash~ *never* use the default shell.
 alias sh='/usr/local/bin/bash'
 #+END_SRC
 
+Listing by modification forward and backward.
+
+#+NAME: org_gcr_2017-09-16_mara_02B42BEB-94A4-451C-AFDF-7110D2AB6A15
+#+BEGIN_SRC sh
+alias lsmd='ls -haltr'
+alias lsmdm='ls -halt'
+#+END_SRC
+
 *** BashLogout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout

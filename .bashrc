@@ -135,3 +135,8 @@ alias bk="cd $OLDPWD"
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C][org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C]]
 alias sh='/usr/local/bin/bash'
 # org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C ends here
+
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-09-16_mara_02B42BEB-94A4-451C-AFDF-7110D2AB6A15][org_gcr_2017-09-16_mara_02B42BEB-94A4-451C-AFDF-7110D2AB6A15]]
+alias lsmd='ls -haltr'
+alias lsmdm='ls -halt'
+# org_gcr_2017-09-16_mara_02B42BEB-94A4-451C-AFDF-7110D2AB6A15 ends here
