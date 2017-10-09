@@ -899,11 +899,21 @@ alias lsmdm='ls -halt'
 #+END_SRC
 
 **** Make Functions
+:PROPERTIES:
+:ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
+:END:
 Get the NTH line of a FILE via https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-file
 
 #+NAME: org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31
 #+BEGIN_SRC sh
-tail -n+NUM file | head -n1
+function nthlineof {
+  if (( $# < 2 )); then
+      echo 'Print the NTH line of FILE'
+      echo "Usage: ${FUNCNAME[0]} NTH FILE"
+      return 1
+  fi
+  tail -n+"$1" "$2" | head -n1
+}
 #+END_SRC
 *** BashLogout
 :PROPERTIES:
