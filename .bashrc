@@ -143,7 +143,7 @@ alias lsmdm='ls -halt'
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31][org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31]]
 function nthlineof {
-  if (( $# < 2 )); then
+  if (( "$#" < 2 )); then
       echo 'Print the NTH line of FILE'
       echo "Usage: ${FUNCNAME[0]} NTH FILE"
       return 1
