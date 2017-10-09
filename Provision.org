@@ -899,6 +899,12 @@ alias lsmdm='ls -halt'
 #+END_SRC
 
 **** Make Functions
+Get the NTH line of a FILE via https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-file
+
+#+NAME: org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31
+#+BEGIN_SRC sh
+tail -n+NUM file | head -n1
+#+END_SRC
 *** BashLogout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout
