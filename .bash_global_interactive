@@ -96,7 +96,7 @@ FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_F379D438-E41D-4E79-A05F-75D394D7D626][org_gcr_2017-05-12_mara_F379D438-E41D-4E79-A05F-75D394D7D626]]
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_7AA5536F-EF97-4CE9-94DB-CB3438CBA65F][org_gcr_2017-05-12_mara_7AA5536F-EF97-4CE9-94DB-CB3438CBA65F]]
 if [ -z "$PS1" ]; then
-    printf "\e[31mExpected an interactive shell.\e[0m]\n" 1>&2
+    printf "Expected an interactive shell.\n" 1>&2
     sleep 5
     exit 1
 fi
