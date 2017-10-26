@@ -938,4 +938,3 @@ Farewell.
 #+BEGIN_SRC sh
 printf 'Sayonara!\n' && sleep 1
 #+END_SRC
-
