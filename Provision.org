@@ -288,9 +288,9 @@ Verify encoding.
 #+NAME: org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738
 #+BEGIN_SRC sh
 if [ "$(locale charmap)" == "UTF-8" ]; then
-    echo "Character encoding configured: CORRECTLY."
+    echo "Character encoding expected to be 'UTF-8' and found it to be CORRECT."
 else
-    echo "Character encoding configured: INCORRECTLY!"
+  echo "Character encoding expected to be 'UTF-8' and found it to be INCORRECT as $(locale charmap)."
 fi
 #+END_SRC
 

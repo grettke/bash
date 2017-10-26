@@ -83,9 +83,9 @@ LC_COLLATE='POSIX'
 # org_gcr_2017-05-12_mara_DADA4A0B-F5B1-4DAA-A31A-1D45EE775A9E ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738][org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738]]
 if [ "$(locale charmap)" == "UTF-8" ]; then
-    echo "Character encoding configured: CORRECTLY."
+    echo "Character encoding expected to be 'UTF-8' and found it to be CORRECT."
 else
-  echo "Character encoding configured: INCORRECTLY!"
+  echo "Character encoding expected to be 'UTF-8' and found it to be INCORRECT as $(locale charmap)."
 fi
 # org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738 ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2][org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2]]
