@@ -936,5 +936,5 @@ Farewell.
 
 #+NAME: org_gcr_2017-05-12_mara_16299394-BEC8-40E0-946C-AF75251006C0
 #+BEGIN_SRC sh
-printf 'Sayonara!\n' && sleep 1
+printf 'Sayonara.\n' && sleep 1
 #+END_SRC
