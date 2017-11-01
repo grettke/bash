@@ -805,6 +805,7 @@ alias gitunpull='git reset --keep HEAD@{1}'
 alias gituncommit='git reset --mixed HEAD^'
 alias gitforcepush='push origin +master'
 alias gpom='git push origin master'
+alias gp='git status'
 #+END_SRC
 
 **** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
