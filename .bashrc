@@ -87,12 +87,13 @@ alias gp='git status'
 # org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
-alias e='emacs --debug-init&'
-alias eno='emacs&'
-alias enu='emacs --debug-init -no-desktop -no-init-file --load ~/.emacs.el&'
-alias ets="emacs --debug-init --no-init-file --no-splash --background-color white --foreground-color black --vertical-scroll-bars --eval '(switch-to-buffer \"*Messages*\")' --name TEST --title TEST --load ~/src/help/.emacs.el &"
-alias eni='emacs --no-init-file&'
-alias econ='emacs -nw --debug-init'
+alias pie='emacs'
+alias p='emacs --debug-init&'
+alias pno='emacs&'
+alias pnu='emacs --debug-init -no-desktop -no-init-file --load ~/.emacs.el&'
+alias pts="emacs --debug-init --no-init-file --no-splash --background-color white --foreground-color black --vertical-scroll-bars --eval '(switch-to-buffer \"*Messages*\")' --name TEST --title TEST --load ~/src/help/.emacs.el &"
+alias pni='emacs --no-init-file&'
+alias pcon='emacs -nw --debug-init'
 # org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_69C0605C-90AA-43E9-9084-CF7E725F21F8][org_gcr_2017-05-12_mara_69C0605C-90AA-43E9-9084-CF7E725F21F8]]
