@@ -86,10 +86,6 @@ alias gpom='git push origin master'
 alias gp='git status'
 # org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7 ends here
 
-# [[file:~/git/github/bash/Provision.org::org_gcr_2017-08-02_mara_4D8D6A24-BB4F-4758-B228-BF52F95D40AE][org_gcr_2017-08-02_mara_4D8D6A24-BB4F-4758-B228-BF52F95D40AE]]
-alias emacs="open /usr/local/opt/emacs-mac/Emacs.app --new --args $1"
-# org_gcr_2017-08-02_mara_4D8D6A24-BB4F-4758-B228-BF52F95D40AE ends here
-
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
 alias e='emacs --debug-init&'
 alias eno='emacs&'
