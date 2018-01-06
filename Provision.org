@@ -511,7 +511,9 @@ done
 PS3='Please make a selection: '
 #+END_SRC
 
-Enable the Bash Debugger.
+Quaternary prompt is what you see when you enable debugging with ~set -x~.
+
+I copied this from the documentation.
 
 #+NAME: org_gcr_2017-05-12_mara_3E7AA843-749F-48B1-B433-467C0848C9AF
 #+BEGIN_SRC sh
