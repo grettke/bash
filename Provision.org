@@ -352,9 +352,6 @@ if [ -z "$PS1" ] && [ -z "$DISPLAY" ]; then
     printf "Expected an interactive shell.\n" 1>&2
     sleep 5
     exit 1
-else
-    echo -e "PS1='$PS1'"
-    echo -e "DISPLAY='$DISPLAY'"
 fi
 #+END_SRC
 
