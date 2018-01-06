@@ -457,8 +457,9 @@ Enable comments.
 shopt -s interactive_comments
 #+END_SRC
 
-Provide just enough information at the prompt to be useful without cluttering
-up the terminal.
+Primary prompt is the one that you see all the time.
+
+Show enough to stay out of trouble.
 
 #+NAME: org_gcr_2017-05-12_mara_CCFF46E0-5F46-4B41-A7F3-E6FCF6729895
 #+BEGIN_SRC sh
