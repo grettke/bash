@@ -476,11 +476,39 @@ Emphasize what is happening because I usually end up here accidentally.
 PS2='(continued)⮞ '
 #+END_SRC
 
-Obviously prompt you to make a selection.
+Tertiary prompt is the one that you see when you are presented with a menu
+created using the ~select~ function.
+
+You see it when ~select~ makes you to make a selection.
+
+The following [[https://askubuntu.com/questions/1705/how-can-i-create-a-select-menu-in-a-shell-script][example]] demonstrates its use:
+
+#+BEGIN_EXAMPLE
+PS3='Please enter your choice: '
+options=("Option 1" "Option 2" "Option 3" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Option 1")
+            echo "you chose choice 1"
+            ;;
+        "Option 2")
+            echo "you chose choice 2"
+            ;;
+        "Option 3")
+            echo "you chose choice 3"
+            ;;
+        "Quit")
+            break
+            ;;
+        *) echo invalid option;;
+    esac
+done
+#+END_EXAMPLE
 
 #+NAME: org_gcr_2017-05-12_mara_E1274B85-D3B6-467B-AF20-1C88338478CC
 #+BEGIN_SRC sh
-PS3='�⮞ '
+PS3='Please make a selection: '
 #+END_SRC
 
 Enable the Bash Debugger.
