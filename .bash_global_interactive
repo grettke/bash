@@ -141,7 +141,7 @@ shopt -s interactive_comments
 PS1='\u@\h:\w⮞ '
 # org_gcr_2017-05-12_mara_CCFF46E0-5F46-4B41-A7F3-E6FCF6729895 ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_FB232A77-A71E-42AD-B676-4B075ECA02B8][org_gcr_2017-05-12_mara_FB232A77-A71E-42AD-B676-4B075ECA02B8]]
-PS2='⏎⮞ '
+PS2='(continued)⮞ '
 # org_gcr_2017-05-12_mara_FB232A77-A71E-42AD-B676-4B075ECA02B8 ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_E1274B85-D3B6-467B-AF20-1C88338478CC][org_gcr_2017-05-12_mara_E1274B85-D3B6-467B-AF20-1C88338478CC]]
 PS3='�⮞ '

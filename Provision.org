@@ -466,11 +466,14 @@ Show enough to stay out of trouble.
 PS1='\u@\h:\w⮞ '
 #+END_SRC
 
-Make the continued prompt obvious. It is easily forgotten.
+Secondary prompt is the one that you see when you break a command into
+multiple lines.
+
+Emphasize what is happening because I usually end up here accidentally.
 
 #+NAME: org_gcr_2017-05-12_mara_FB232A77-A71E-42AD-B676-4B075ECA02B8
 #+BEGIN_SRC sh
-PS2='⏎⮞ '
+PS2='(continued)⮞ '
 #+END_SRC
 
 Obviously prompt you to make a selection.
