@@ -457,7 +457,7 @@ Enable comments.
 shopt -s interactive_comments
 #+END_SRC
 
-Primary prompt is the one that you see all the time.
+Prompt one is the one that you see all the time.
 
 Show enough to stay out of trouble.
 
@@ -466,7 +466,7 @@ Show enough to stay out of trouble.
 PS1='\u@\h:\w⮞ '
 #+END_SRC
 
-Secondary prompt is the one that you see when you break a command into
+Prompt two is the one that you see when you break a command into
 multiple lines.
 
 Emphasize what is happening because I usually end up here accidentally.
@@ -476,7 +476,7 @@ Emphasize what is happening because I usually end up here accidentally.
 PS2='(continued)⮞ '
 #+END_SRC
 
-Tertiary prompt is the one that you see when you are presented with a menu
+Prompt three is the one that you see when you are presented with a menu
 created using the ~select~ function.
 
 You see it when ~select~ makes you to make a selection.
@@ -511,7 +511,7 @@ done
 PS3='Please make a selection: '
 #+END_SRC
 
-Quaternary prompt is what you see when you enable debugging with ~set -x~.
+Prompt four is what you see when you enable debugging with ~set -x~.
 
 I copied this from the documentation.
 
