@@ -472,7 +472,7 @@ Show enough to stay out of trouble.
 
 #+NAME: org_gcr_2017-05-12_mara_CCFF46E0-5F46-4B41-A7F3-E6FCF6729895
 #+BEGIN_SRC sh
-PS1='\u@\h:\w⮞ '
+PS1='\u@\h:\w$(__git_ps1 "(%s)")⮞ '
 #+END_SRC
 
 Prompt two is the one that you see when you break a command into
@@ -847,7 +847,12 @@ Git.
 
 #+NAME: org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7
 #+BEGIN_SRC sh
-source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
+source "$(brew --prefix git)/etc/bash_completion.d/git-completion.bash"
+source "$(brew --prefix git)/etc/bash_completion.d/git-prompt.sh"
+GIT_PS1_SHOWDIRTYSTATE='1'
+GIT_PS1_SHOWSTASHSTATE='1'
+GIT_PS1_SHOWUNTRACKEDFILES='1'
+GIT_PS1_SHOWUPSTREAM='auto'
 alias g='git'
 complete -o default -o nospace -F _git g
 alias gitunpull='git reset --keep HEAD@{1}'

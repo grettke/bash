@@ -76,7 +76,12 @@ MONO_GAC_PREFIX="/usr/local"
 # org_gcr_2017-08-10_mara_D5452DB9-7EB2-4AA3-8C06-645D7D20EA43 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7][org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7]]
-source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
+source "$(brew --prefix git)/etc/bash_completion.d/git-completion.bash"
+source "$(brew --prefix git)/etc/bash_completion.d/git-prompt.sh"
+GIT_PS1_SHOWDIRTYSTATE='1'
+GIT_PS1_SHOWSTASHSTATE='1'
+GIT_PS1_SHOWUNTRACKEDFILES='1'
+GIT_PS1_SHOWUPSTREAM='auto'
 alias g='git'
 complete -o default -o nospace -F _git g
 alias gitunpull='git reset --keep HEAD@{1}'
