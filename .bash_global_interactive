@@ -135,9 +135,7 @@ shopt -s complete_fullquote
 shopt -s interactive_comments
 # org_gcr_2017-05-12_mara_D180576A-276D-4DE5-9D29-7564F2475A96 ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-01-05_mara_A846E613-BE6C-4EB3-A35B-3CBBB8BBE534][org_gcr_2018-01-05_mara_A846E613-BE6C-4EB3-A35B-3CBBB8BBE534]]
-PS0='OK
-
-'
+PS0='OK...\n\n'
 # org_gcr_2018-01-05_mara_A846E613-BE6C-4EB3-A35B-3CBBB8BBE534 ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_CCFF46E0-5F46-4B41-A7F3-E6FCF6729895][org_gcr_2017-05-12_mara_CCFF46E0-5F46-4B41-A7F3-E6FCF6729895]]
 PS1='\u@\h:\w$(__git_ps1 "(%s)")⮞ '

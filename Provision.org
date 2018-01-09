@@ -461,9 +461,7 @@ Make the session easier to read.
 
 #+NAME: org_gcr_2018-01-05_mara_A846E613-BE6C-4EB3-A35B-3CBBB8BBE534
 #+BEGIN_SRC sh
-PS0='OK
-
-'
+PS0='OK...\n\n'
 #+END_SRC
 
 Prompt one is the one that you see all the time.
