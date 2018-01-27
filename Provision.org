@@ -951,6 +951,13 @@ alias lsmd='ls -haltr'
 alias lsmdm='ls -halt'
 #+END_SRC
 
+Brew
+
+#+NAME: org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D
+#+BEGIN_SRC sh 
+alias brupdate='brew update && brew upgrade --cleanup'
+#+END_SRC
+
 **** Make Functions
 :PROPERTIES:
 :ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
