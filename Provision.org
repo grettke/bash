@@ -954,8 +954,15 @@ alias lsmdm='ls -halt'
 Brew
 
 #+NAME: org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D
-#+BEGIN_SRC sh 
+#+BEGIN_SRC sh
 alias brupdate='brew update && brew upgrade --cleanup'
+#+END_SRC
+
+Words.
+
+#+NAME: org_gcr_2018-01-25_mara_8B0003EB-53D4-44C0-8793-8EDA3FACA8B1
+#+BEGIN_SRC sh
+alias randomword='gshuf -n1 /Users/gcr/git/github-anonymous/english-words/words.txt'
 #+END_SRC
 
 **** Make Functions
