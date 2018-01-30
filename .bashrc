@@ -163,3 +163,26 @@ function nthlineof {
   tail -n+"$1" "$2" | head -n1
 }
 # org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31 ends here
+
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-01-29_mara_4AD96067-259F-46FD-999B-EDD1B388C5BE][org_gcr_2018-01-29_mara_4AD96067-259F-46FD-999B-EDD1B388C5BE]]
+function wtndsyndntfy() {
+  if (($# <= 2)); then
+      printf "Usage: ${FUNCNAME[0]} minutes words...\n"
+      return 1
+  else
+    local minutes="$1"
+    local seconds=$((minutes * 60))
+    local words="${@:2}"
+    local message="$(echo \"${words[*]}\")"
+    printf "Waiting for minute(s): %s\n" $minutes
+    printf "Before saying and notifying: $message\n"
+    printf "Started waiting on: $(date)\n"
+    printf "(Type Control+C to quit)\n"
+    trap 'echo "Saying it immediately."' INT
+    sleep "$seconds"
+    say "$message"
+    terminal-notifier -message "$message"
+    return 0
+  fi
+}
+# org_gcr_2018-01-29_mara_4AD96067-259F-46FD-999B-EDD1B388C5BE ends here

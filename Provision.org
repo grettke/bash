@@ -964,7 +964,6 @@ Words.
 #+BEGIN_SRC sh
 alias randomword='gshuf -n1 /Users/gcr/git/github-anonymous/english-words/words.txt'
 #+END_SRC
-
 **** Make Functions
 :PROPERTIES:
 :ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
@@ -982,6 +981,32 @@ function nthlineof {
   tail -n+"$1" "$2" | head -n1
 }
 #+END_SRC
+
+Wait for Alpha seconds before saying Beta.
+
+#+name: org_gcr_2018-01-29_mara_4AD96067-259F-46FD-999B-EDD1B388C5BE
+#+begin_src sh
+function wtndsyndntfy() {
+  if (($# <= 2)); then
+      printf "Usage: ${FUNCNAME[0]} minutes words...\n"
+      return 1
+  else
+    local minutes="$1"
+    local seconds=$((minutes * 60))
+    local words="${@:2}"
+    local message="$(echo \"${words[*]}\")"
+    printf "Waiting for minute(s): %s\n" $minutes
+    printf "Before saying and notifying: $message\n"
+    printf "Started waiting on: $(date)\n"
+    printf "(Type Control+C to quit)\n"
+    trap 'echo "Saying it immediately."' INT
+    sleep "$seconds"
+    say "$message"
+    terminal-notifier -message "$message"
+    return 0
+  fi
+}
+#+end_src
 *** BashLogout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout
