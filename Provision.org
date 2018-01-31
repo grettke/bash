@@ -958,6 +958,19 @@ Brew
 alias brupdate='brew update && brew upgrade --cleanup'
 #+END_SRC
 
+Elpa.
+
+#+name: org_gcr_2018-01-30_mara_7B5D1FA6-610E-481A-A894-4DC7938C7EF0
+#+begin_src sh
+function mackup() {
+  cd ~/.emacs.d
+  git add .
+  git commit -m "Automated versioning"
+  git push
+  cd
+}
+#+end_src
+
 Words.
 
 #+NAME: org_gcr_2018-01-25_mara_8B0003EB-53D4-44C0-8793-8EDA3FACA8B1

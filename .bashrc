@@ -149,6 +149,16 @@ alias lsmdm='ls -halt'
 alias brupdate='brew update && brew upgrade --cleanup'
 # org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-01-30_mara_7B5D1FA6-610E-481A-A894-4DC7938C7EF0][org_gcr_2018-01-30_mara_7B5D1FA6-610E-481A-A894-4DC7938C7EF0]]
+function mackup() {
+  cd ~/.emacs.d
+  git add .
+  git commit -m "Automated versioning"
+  git push
+  cd
+}
+# org_gcr_2018-01-30_mara_7B5D1FA6-610E-481A-A894-4DC7938C7EF0 ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-01-25_mara_8B0003EB-53D4-44C0-8793-8EDA3FACA8B1][org_gcr_2018-01-25_mara_8B0003EB-53D4-44C0-8793-8EDA3FACA8B1]]
 alias randomword='gshuf -n1 /Users/gcr/git/github-anonymous/english-words/words.txt'
 # org_gcr_2018-01-25_mara_8B0003EB-53D4-44C0-8793-8EDA3FACA8B1 ends here
