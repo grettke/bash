@@ -67,7 +67,7 @@ PIP_REQUIRE_VIRTUALENV=true
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_82E4FD7F-D78B-415B-91F4-20B092A63263][org_gcr_2017-05-12_mara_82E4FD7F-D78B-415B-91F4-20B092A63263]]
 globalpip() {
-  PIP_REQUIRE_VIRTUALENV="" pip "$@"
+  PIP_REQUIRE_VIRTUALENV="" pip2.7 "$@"
 }
 # org_gcr_2017-05-12_mara_82E4FD7F-D78B-415B-91F4-20B092A63263 ends here
 
