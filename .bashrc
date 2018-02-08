@@ -95,6 +95,10 @@ alias gp='git status'
 eval "$(rbenv init -)"
 # org_gcr_2018-02-07_mara_CFFC3D3B-9CEB-4A4D-944D-F479583731EF ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-02-07_mara_4C3C51ED-F6C8-43C8-9C2F-F608FBDD71F6][org_gcr_2018-02-07_mara_4C3C51ED-F6C8-43C8-9C2F-F608FBDD71F6]]
+alias bx='bundle exec'
+# org_gcr_2018-02-07_mara_4C3C51ED-F6C8-43C8-9C2F-F608FBDD71F6 ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
 alias pie='emacs'
 alias p='emacs --debug-init&'
