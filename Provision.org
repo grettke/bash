@@ -860,6 +860,13 @@ alias gpom='git push origin master'
 alias gp='git status'
 #+END_SRC
 
+Rbenv.
+
+#+name: org_gcr_2018-02-07_mara_CFFC3D3B-9CEB-4A4D-944D-F479583731EF
+#+begin_src sh
+eval "$(rbenv init -)"
+#+end_src
+
 **** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:160278CE-DE40-44A7-9509-F17B3AD5A43A
