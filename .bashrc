@@ -86,7 +86,7 @@ alias g='git'
 complete -o default -o nospace -F _git g
 alias gitunpull='git reset --keep HEAD@{1}'
 alias gituncommit='git reset --mixed HEAD^'
-alias gitforcepush='push origin +master'
+alias gitforcepush='git push origin +master'
 alias gpom='git push origin master'
 alias gp='git status'
 # org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7 ends here

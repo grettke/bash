@@ -855,7 +855,7 @@ alias g='git'
 complete -o default -o nospace -F _git g
 alias gitunpull='git reset --keep HEAD@{1}'
 alias gituncommit='git reset --mixed HEAD^'
-alias gitforcepush='push origin +master'
+alias gitforcepush='git push origin +master'
 alias gpom='git push origin master'
 alias gp='git status'
 #+END_SRC
