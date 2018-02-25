@@ -175,6 +175,23 @@ function mackup() {
 alias randomword='gshuf -n1 /Users/gcr/git/github-anonymous/english-words/words.txt'
 # org_gcr_2018-01-25_mara_8B0003EB-53D4-44C0-8793-8EDA3FACA8B1 ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-02-25_mara_0B1A220A-45FA-48A9-8F9E-774D3EDB1E7B][org_gcr_2018-02-25_mara_0B1A220A-45FA-48A9-8F9E-774D3EDB1E7B]]
+alias xwnlst='wmctrl -G -l'
+function xwnhom {
+  local gravity=0;
+  local x=100;
+  local y=100;
+  local w=200;
+  local h=200;
+  if [[ $# -eq 0 || -z "$1" ]] ; then
+      printf "Usage: ${FUNCNAME[0]} <WindowTitle>\n"
+      printf "Moves window to $x,$y and resizes it to $w,$h.\n"
+  fi
+  local window_name=$1;
+  wmctrl -r "$window_name" -e "$gravity","$x","$y","$w","$h"
+}
+# org_gcr_2018-02-25_mara_0B1A220A-45FA-48A9-8F9E-774D3EDB1E7B ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31][org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31]]
 function nthlineof {
   if (( "$#" < 2 )); then
