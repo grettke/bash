@@ -186,6 +186,7 @@ function xwnhom {
   if [[ $# -eq 0 || -z "$1" ]] ; then
       printf "Usage: ${FUNCNAME[0]} <WindowTitle>\n"
       printf "Moves window to $x,$y and resizes it to $w,$h.\n"
+      return 1
   fi
   local window_name=$1;
   wmctrl -r "$window_name" -e "$gravity","$x","$y","$w","$h"
