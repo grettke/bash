@@ -45,6 +45,7 @@ PROSELINT_HOME='/Users/gcr/proselint'
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E][org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E]]
 MACTEX_BIN='/usr/local/texlive/2016/bin/x86_64-darwin'
+TEXMFHOME='/Users/gcr/git/gitlab/texmf'
 # org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176][org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176]]
