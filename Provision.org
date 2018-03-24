@@ -923,6 +923,7 @@ alias mkdir='mkdir -pv'
 alias mount='mount | column -t'
 alias df='df -h'
 alias du="du -ach"
+alias idk='identify *.*'
 #+END_SRC
 
 Shortcuts.
