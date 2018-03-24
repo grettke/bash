@@ -131,6 +131,7 @@ alias mount='mount | column -t'
 alias df='df -h'
 alias du="du -ach"
 alias idk='identify *.*'
+alias kk='cd ..'
 # org_gcr_2017-05-12_mara_20EA8DAB-53C6-4170-9417-8BCC8A628AEB ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_A68EF2AE-850B-4A51-82F8-A6017D6E9F93][org_gcr_2017-05-12_mara_A68EF2AE-850B-4A51-82F8-A6017D6E9F93]]

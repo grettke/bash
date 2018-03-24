@@ -924,6 +924,7 @@ alias mount='mount | column -t'
 alias df='df -h'
 alias du="du -ach"
 alias idk='identify *.*'
+alias kk='cd ..'
 #+END_SRC
 
 Shortcuts.
