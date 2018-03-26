@@ -879,7 +879,9 @@ Jekyll.
 
 #+name: org_gcr_2018-02-07_mara_D59A4039-DCAC-4354-BBD8-2CBECCFDE185
 #+begin_src sh
-alias bxjekyll='bundle exec jekyll'
+function bxjekyll {
+  bundle exec jekyll "$@"
+}
 #+end_src
 **** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
 :PROPERTIES:
