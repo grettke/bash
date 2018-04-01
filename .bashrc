@@ -198,6 +198,10 @@ function xwnhom {
 }
 # org_gcr_2018-02-25_mara_0B1A220A-45FA-48A9-8F9E-774D3EDB1E7B ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13][org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13]]
+alias optalljpg='jpegoptim *.jpg --strip-all'
+# org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13 ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31][org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31]]
 function nthlineof {
   if (( "$#" < 2 )); then

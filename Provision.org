@@ -1023,6 +1023,13 @@ function xwnhom {
   wmctrl -r "$window_name" -e "$gravity","$x","$y","$w","$h"
 }
 #+end_src
+
+Image things.
+
+#+name: org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13
+#+begin_src sh
+alias optalljpg='jpegoptim *.jpg --strip-all'
+#+end_src
 **** Make Functions
 :PROPERTIES:
 :ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
