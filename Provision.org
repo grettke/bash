@@ -1024,6 +1024,13 @@ function xwnhom {
 }
 #+end_src
 
+Toggle grayscale.
+
+#+name: org_gcr_2018-04-16T16-05-56-05-00_mara_406331AB-CB69-485A-8AB8-F6D4EF73A23A
+#+begin_src sh
+alias togglegrayscale='osascript /Users/gcr/util/Toggle-Grayscale.scpt'
+#+end_src
+
 Image things.
 
 #+name: org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13
