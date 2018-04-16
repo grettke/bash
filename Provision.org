@@ -1031,6 +1031,13 @@ Toggle grayscale.
 alias togglegrayscale='osascript /Users/gcr/util/Toggle-Grayscale.scpt'
 #+end_src
 
+Invert colors.
+
+#+name: org_gcr_2018-04-16T16-05-56-05-00_mara_28CFFB4F-74C5-450D-9635-BB7F26BE348D
+#+begin_src sh
+alias invertcolors='osascript /Users/gcr/util/Invert-Colors.scpt'
+#+end_src
+
 Image things.
 
 #+name: org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13
