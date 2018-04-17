@@ -1042,7 +1042,7 @@ Start screensaver.
 
 #+name: org_gcr_2018-04-16T17-08-48-05-00_mara_6503B49F-2198-4799-A802-56A6A3291E5A
 #+begin_src sh
-alias startscreensaver='osascript /Users/gcr/util/Start-Screensaver.scpt'
+alias ssaver='osascript /Users/gcr/util/Start-Screensaver.scpt'
 #+end_src
 Image things.
 

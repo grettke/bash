@@ -207,7 +207,7 @@ alias invertcolors='osascript /Users/gcr/util/Invert-Colors.scpt'
 # org_gcr_2018-04-16T16-05-56-05-00_mara_28CFFB4F-74C5-450D-9635-BB7F26BE348D ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-04-16T17-08-48-05-00_mara_6503B49F-2198-4799-A802-56A6A3291E5A][org_gcr_2018-04-16T17-08-48-05-00_mara_6503B49F-2198-4799-A802-56A6A3291E5A]]
-alias startscreensaver='osascript /Users/gcr/util/Start-Screensaver.scpt'
+alias ssaver='osascript /Users/gcr/util/Start-Screensaver.scpt'
 # org_gcr_2018-04-16T17-08-48-05-00_mara_6503B49F-2198-4799-A802-56A6A3291E5A ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13][org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13]]
