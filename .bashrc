@@ -251,3 +251,16 @@ function wtndsyndntfy() {
   fi
 }
 # org_gcr_2018-01-29_mara_4AD96067-259F-46FD-999B-EDD1B388C5BE ends here
+
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-05-10T15-49-02-05-00_mara_CE25C6C2-27E5-4AC2-93ED-724EC591025C][org_gcr_2018-05-10T15-49-02-05-00_mara_CE25C6C2-27E5-4AC2-93ED-724EC591025C]]
+function sshtmuxattach {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+      printf "Usage: ${FUNCNAME[0]} <Host> <Session>\n"
+      printf "SSH into HOST and attach to Tmux SESSION.\n"
+      return 1
+  fi
+  local host=$1;
+  local session=$2
+  ssh "$host" -t tmux attach -t "$session"
+}
+# org_gcr_2018-05-10T15-49-02-05-00_mara_CE25C6C2-27E5-4AC2-93ED-724EC591025C ends here
