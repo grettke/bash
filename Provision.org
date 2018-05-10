@@ -1051,6 +1051,8 @@ Image things.
 #+name: org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13
 #+begin_src sh
 alias optalljpg='jpegoptim *.jpg --strip-all'
+alias exiflist='exiftool'
+alias exifwipe='exiftool -all='
 #+end_src
 **** Make Functions
 :PROPERTIES:
