@@ -264,3 +264,17 @@ function sshtmuxattach {
   ssh "$host" -t tmux attach -t "$session"
 }
 # org_gcr_2018-05-10T15-49-02-05-00_mara_CE25C6C2-27E5-4AC2-93ED-724EC591025C ends here
+
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-05-10T19-26-44-05-00_mara_42653A75-6426-442C-B443-DFC5F8EF7FF1][org_gcr_2018-05-10T19-26-44-05-00_mara_42653A75-6426-442C-B443-DFC5F8EF7FF1]]
+function convert2mp4 {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+      printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+      printf "Use ffmpeg to convert any SOURCE to a DESTINATION mp4.\n"
+      return 1
+  fi
+  local source=$1;
+  local destination=$2
+  ssh "$host" -t tmux attach -t "$session"
+  ffmpeg -i "$source" -c:a aac -b:a 128k -c:v libx264 -crf 23 "$destination"
+}
+# org_gcr_2018-05-10T19-26-44-05-00_mara_42653A75-6426-442C-B443-DFC5F8EF7FF1 ends here

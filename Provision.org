@@ -1113,6 +1113,23 @@ function sshtmuxattach {
   ssh "$host" -t tmux attach -t "$session"
 }
 #+end_src
+
+Convert to MP4.
+
+#+name: org_gcr_2018-05-10T19-26-44-05-00_mara_42653A75-6426-442C-B443-DFC5F8EF7FF1
+#+begin_src sh
+function convert2mp4 {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+      printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+      printf "Use ffmpeg to convert any SOURCE to a DESTINATION mp4.\n"
+      return 1
+  fi
+  local source=$1;
+  local destination=$2
+  ssh "$host" -t tmux attach -t "$session"
+  ffmpeg -i "$source" -c:a aac -b:a 128k -c:v libx264 -crf 23 "$destination"
+}
+#+end_src
 *** BashLogout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout
