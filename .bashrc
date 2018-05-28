@@ -169,7 +169,7 @@ alias brcleanupr='brew cleanup'
 # org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-01-30_mara_7B5D1FA6-610E-481A-A894-4DC7938C7EF0][org_gcr_2018-01-30_mara_7B5D1FA6-610E-481A-A894-4DC7938C7EF0]]
-function mackup() {
+function emackup() {
   cd ~/.emacs.d
   git add .
   git commit -m "Automated versioning"
