@@ -90,6 +90,15 @@ alias gituncommit='git reset --mixed HEAD^'
 alias gitforcepush='git push origin +master'
 alias gpom='git push origin master'
 alias gp='git status'
+function gitgrep {
+  if [[ $# -eq 0 || -z "$1" ]] ; then
+      printf "Usage: ${FUNCNAME[0]} <search string>\n"
+      printf "Searches Git commit history for TEXT.\n"
+      return 1
+  fi
+  local text=$1;
+  git log --grep="$text"
+}
 # org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-02-07_mara_CFFC3D3B-9CEB-4A4D-944D-F479583731EF][org_gcr_2018-02-07_mara_CFFC3D3B-9CEB-4A4D-944D-F479583731EF]]
