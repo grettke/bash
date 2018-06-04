@@ -1061,7 +1061,7 @@ Image things.
 #+begin_src sh
 alias optalljpg='jpegoptim *.jpg --strip-all'
 alias exiflist='exiftool'
-alias exifwipe='exiftool -all='
+alias exifwipe='exiftool -all= -overwrite_original'
 #+end_src
 **** Make Functions
 :PROPERTIES:

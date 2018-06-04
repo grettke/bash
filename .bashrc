@@ -224,7 +224,7 @@ alias sav='osascript /Users/gcr/util/Start-Screensaver.scpt'
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13][org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13]]
 alias optalljpg='jpegoptim *.jpg --strip-all'
 alias exiflist='exiftool'
-alias exifwipe='exiftool -all='
+alias exifwipe='exiftool -all= -overwrite_original'
 # org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31][org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31]]
