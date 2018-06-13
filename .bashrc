@@ -17,7 +17,7 @@ HOMEBREW_NO_EMOJI=1
 # org_gcr_2017-05-12_mara_ADECF9AF-F8CC-49EB-BFF8-79C5BCC8C052 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_3A2D3A90-92BB-4E00-AF68-757B5F8EAB58][org_gcr_2017-05-12_mara_3A2D3A90-92BB-4E00-AF68-757B5F8EAB58]]
-JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home'
+JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # org_gcr_2017-05-12_mara_3A2D3A90-92BB-4E00-AF68-757B5F8EAB58 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-07-30_mara_89829A40-9CE4-4B35-8D02-581265F85223][org_gcr_2017-07-30_mara_89829A40-9CE4-4B35-8D02-581265F85223]]
