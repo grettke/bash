@@ -743,12 +743,19 @@ Keep the system provisioning professional.
 HOMEBREW_NO_EMOJI=1
 #+END_SRC
 
-Java. 
+Java.
 
 #+NAME: org_gcr_2017-05-12_mara_3A2D3A90-92BB-4E00-AF68-757B5F8EAB58
 #+BEGIN_SRC sh
 JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 #+END_SRC
+
+Maven
+
+#+name: org_gcr_2018-06-12T22-56-37-05-00_mara_584316BD-8213-43CC-AE98-4CA68C449A12
+#+begin_src sh
+MAVEN_OPTS='-Xmx512m'
+#+end_src
 
 ~go~ stuff.
 

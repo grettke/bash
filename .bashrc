@@ -20,6 +20,10 @@ HOMEBREW_NO_EMOJI=1
 JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # org_gcr_2017-05-12_mara_3A2D3A90-92BB-4E00-AF68-757B5F8EAB58 ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-06-12T22-56-37-05-00_mara_584316BD-8213-43CC-AE98-4CA68C449A12][org_gcr_2018-06-12T22-56-37-05-00_mara_584316BD-8213-43CC-AE98-4CA68C449A12]]
+MAVEN_OPTS='-Xmx512m'
+# org_gcr_2018-06-12T22-56-37-05-00_mara_584316BD-8213-43CC-AE98-4CA68C449A12 ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-07-30_mara_89829A40-9CE4-4B35-8D02-581265F85223][org_gcr_2017-07-30_mara_89829A40-9CE4-4B35-8D02-581265F85223]]
 GOPATH=$HOME/gipeto
 alias gck='gometalinter ./...'
