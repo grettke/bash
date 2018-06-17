@@ -257,7 +257,9 @@ shopt -s checkhash
 :ID:       org_gcr_2017-05-12_mara:8DABD7BF-387E-4CCB-8242-AD3B3A8D0368
 :END:
 
-Use UTF-8 for everything. EMACS already does.
+Use UTF-8 for everything.
+
+Emacs will use this but will override it with settings in your init file.
 
 Read more about how locale variables work in its man page. Only =LC_ALL= is
 required if all of your settings are the same.
