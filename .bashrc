@@ -103,6 +103,7 @@ function gitgrep {
   local text=$1;
   git log --grep="$text"
 }
+alias gstatus="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
 # org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-02-07_mara_CFFC3D3B-9CEB-4A4D-944D-F479583731EF][org_gcr_2018-02-07_mara_CFFC3D3B-9CEB-4A4D-944D-F479583731EF]]
