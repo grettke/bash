@@ -96,16 +96,34 @@ alias gpom='git push origin master'
 alias gss='git status'
 function gitgreplog {
   if [[ $# -eq 0 || -z "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} \"<search string(s)>\"\n"
-    printf "Search Git commit message history for TEXT.\n"
+    printf "Search Git commit message history for TEXT case-insensitively.\n"
+    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
+    printf "For example add '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
     return 1
   fi
-  local text=$1;
-  local cmd="git log --grep='$text'"
+  local text=$1
+  shift
+  local cmd="git log --oneline --regexp-ignore-case --grep='$text' $@"
+  echo "$cmd"
+  eval $cmd
+}
+function gitgrepchange {
+  if [[ $# -eq 0 || -z "$1" ]] ; then
+    printf "Search Git commit change history for TEXT case-insensitively.\n"
+    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
+    printf "For example add '--oneline' for a succinct report or '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
+    return 1
+  fi
+  local text=$1
+  shift
+  local cmd="git log --pickaxe-all --pickaxe-regex -S'$text' $@"
   echo "$cmd"
   eval $cmd
 }
 alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
+# namestatus, print all, all
+# --name-status  shows thing that happened to file, like delete
+#
 # org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-02-07_mara_CFFC3D3B-9CEB-4A4D-944D-F479583731EF][org_gcr_2018-02-07_mara_CFFC3D3B-9CEB-4A4D-944D-F479583731EF]]
