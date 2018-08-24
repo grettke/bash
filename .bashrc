@@ -96,9 +96,9 @@ alias gpom='git push origin master'
 alias gp='git status'
 function gitgrep {
   if [[ $# -eq 0 || -z "$1" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <search string>\n"
-      printf "Searches Git commit history for TEXT.\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} <search string>\n"
+    printf "Searches Git commit history for TEXT.\n"
+    return 1
   fi
   local text=$1;
   git log --grep="$text"
@@ -205,9 +205,9 @@ function xwnhom {
   local w=200;
   local h=200;
   if [[ $# -eq 0 || -z "$1" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <WindowTitle>\n"
-      printf "Moves window to $x,$y and resizes it to $w,$h.\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} <WindowTitle>\n"
+    printf "Moves window to $x,$y and resizes it to $w,$h.\n"
+    return 1
   fi
   local window_name=$1;
   wmctrl -r "$window_name" -e "$gravity","$x","$y","$w","$h"
@@ -235,9 +235,9 @@ alias exifwipe='exiftool -all= -overwrite_original'
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31][org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31]]
 function nthlineof {
   if (( "$#" < 2 )); then
-      echo 'Print the NTH line of FILE'
-      echo "Usage: ${FUNCNAME[0]} NTH FILE"
-      return 1
+    echo 'Print the NTH line of FILE'
+    echo "Usage: ${FUNCNAME[0]} NTH FILE"
+    return 1
   fi
   tail -n+"$1" "$2" | head -n1
 }
@@ -246,8 +246,8 @@ function nthlineof {
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-01-29_mara_4AD96067-259F-46FD-999B-EDD1B388C5BE][org_gcr_2018-01-29_mara_4AD96067-259F-46FD-999B-EDD1B388C5BE]]
 function wtndsyndntfy() {
   if (($# <= 2)); then
-      printf "Usage: ${FUNCNAME[0]} minutes words...\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} minutes words...\n"
+    return 1
   else
     local minutes="$1"
     local seconds=$((minutes * 60))
@@ -269,9 +269,9 @@ function wtndsyndntfy() {
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-05-10T15-49-02-05-00_mara_CE25C6C2-27E5-4AC2-93ED-724EC591025C][org_gcr_2018-05-10T15-49-02-05-00_mara_CE25C6C2-27E5-4AC2-93ED-724EC591025C]]
 function sshtmuxattach {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <Host> <Session>\n"
-      printf "SSH into HOST and attach to Tmux SESSION.\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} <Host> <Session>\n"
+    printf "SSH into HOST and attach to Tmux SESSION.\n"
+    return 1
   fi
   local host=$1;
   local session=$2
@@ -282,9 +282,9 @@ function sshtmuxattach {
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-05-10T19-26-44-05-00_mara_42653A75-6426-442C-B443-DFC5F8EF7FF1][org_gcr_2018-05-10T19-26-44-05-00_mara_42653A75-6426-442C-B443-DFC5F8EF7FF1]]
 function convert2mp4 {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
-      printf "Use ffmpeg to convert any SOURCE to a DESTINATION mp4.\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Use ffmpeg to convert any SOURCE to a DESTINATION mp4.\n"
+    return 1
   fi
   local source=$1;
   local destination=$2
