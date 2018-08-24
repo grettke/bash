@@ -868,14 +868,16 @@ alias gituncommit='git reset --mixed HEAD^'
 alias gitforcepush='git push origin +master'
 alias gpom='git push origin master'
 alias gss='git status'
-function gitgrep {
+function gitgreplog {
   if [[ $# -eq 0 || -z "$1" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <search string>\n"
-      printf "Searches Git commit history for TEXT.\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} \"<search string(s)>\"\n"
+    printf "Search Git commit message history for TEXT.\n"
+    return 1
   fi
   local text=$1;
-  git log --grep="$text"
+  local cmd="git log --grep='$text'"
+  echo "$cmd"
+  eval $cmd
 }
 alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
 #+END_SRC
