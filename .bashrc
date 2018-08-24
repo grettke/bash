@@ -94,6 +94,10 @@ alias gituncommit='git reset --mixed HEAD^'
 alias gitforcepush='git push origin +master'
 alias gpom='git push origin master'
 alias gss='git status'
+alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
+# org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7 ends here
+
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-08-22T06-50-28-05-00_globigerina_437CFCCE-565E-4A63-9C46-D13A00DF93FF][org_gcr_2018-08-22T06-50-28-05-00_globigerina_437CFCCE-565E-4A63-9C46-D13A00DF93FF]]
 function gitgreplog {
   if [[ $# -eq 0 || -z "$1" ]] ; then
     printf "Search Git commit message history for TEXT case-insensitively.\n"
@@ -120,11 +124,7 @@ function gitgrepchange {
   echo "$cmd"
   eval $cmd
 }
-alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
-# namestatus, print all, all
-# --name-status  shows thing that happened to file, like delete
-#
-# org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7 ends here
+# org_gcr_2018-08-22T06-50-28-05-00_globigerina_437CFCCE-565E-4A63-9C46-D13A00DF93FF ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-02-07_mara_CFFC3D3B-9CEB-4A4D-944D-F479583731EF][org_gcr_2018-02-07_mara_CFFC3D3B-9CEB-4A4D-944D-F479583731EF]]
 eval "$(rbenv init -)"

@@ -868,6 +868,12 @@ alias gituncommit='git reset --mixed HEAD^'
 alias gitforcepush='git push origin +master'
 alias gpom='git push origin master'
 alias gss='git status'
+alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
+#+END_SRC
+
+Git usability.
+#+name: org_gcr_2018-08-22T06-50-28-05-00_globigerina_437CFCCE-565E-4A63-9C46-D13A00DF93FF
+#+begin_src sh
 function gitgreplog {
   if [[ $# -eq 0 || -z "$1" ]] ; then
     printf "Search Git commit message history for TEXT case-insensitively.\n"
@@ -894,11 +900,8 @@ function gitgrepchange {
   echo "$cmd"
   eval $cmd
 }
-alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
-# namestatus, print all, all
-# --name-status  shows thing that happened to file, like delete
-#
-#+END_SRC
+
+#+end_src
 
 Rbenv.
 
