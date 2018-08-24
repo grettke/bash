@@ -877,7 +877,7 @@ function gitgrep {
   local text=$1;
   git log --grep="$text"
 }
-alias gstatus="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
+alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
 #+END_SRC
 
 Rbenv.
