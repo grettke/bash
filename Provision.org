@@ -867,7 +867,7 @@ alias gitunpull='git reset --keep HEAD@{1}'
 alias gituncommit='git reset --mixed HEAD^'
 alias gitforcepush='git push origin +master'
 alias gpom='git push origin master'
-alias gp='git status'
+alias gss='git status'
 function gitgrep {
   if [[ $# -eq 0 || -z "$1" ]] ; then
       printf "Usage: ${FUNCNAME[0]} <search string>\n"
