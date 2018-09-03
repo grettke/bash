@@ -94,6 +94,7 @@ alias gituncommit='git reset --mixed HEAD^'
 alias gitforcepush='git push origin +master'
 alias gpom='git push origin master'
 alias gss='git status'
+alias gpl="git pull"
 alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
 alias magit="emacs --no-window-system --no-init-file --load \
       ~/src/help/.org-mode-contribute.emacs.el --eval '(progn (magit-status) (delete-other-windows))'"
