@@ -258,6 +258,11 @@ alias exiflist='exiftool'
 alias exifwipe='exiftool -all= -overwrite_original'
 # org_gcr_2018-03-31T20-45-48-05-00_mara_837EEC36-0DC3-4E89-B814-C7B345BF4D13 ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-07T07-00-42-05-00_globigerina_1EED4991-58C8-46D7-9257-3A5A46A6533F][org_gcr_2018-09-07T07-00-42-05-00_globigerina_1EED4991-58C8-46D7-9257-3A5A46A6533F]]
+alias flock='chflags -R uchg'
+alias funlock='chflags -R nouchg'
+# org_gcr_2018-09-07T07-00-42-05-00_globigerina_1EED4991-58C8-46D7-9257-3A5A46A6533F ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31][org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31]]
 function nthlineof {
   if (( "$#" < 2 )); then

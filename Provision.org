@@ -1102,6 +1102,15 @@ alias optalljpg='jpegoptim *.jpg --strip-all'
 alias exiflist='exiftool'
 alias exifwipe='exiftool -all= -overwrite_original'
 #+end_src
+
+macOS Specific Things. I'll slowly move the est in here.
+
+#+name: org_gcr_2018-09-07T07-00-42-05-00_globigerina_1EED4991-58C8-46D7-9257-3A5A46A6533F
+#+begin_src sh
+alias flock='chflags -R uchg'
+alias funlock='chflags -R nouchg'
+#+end_src
+
 **** Make Functions
 :PROPERTIES:
 :ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
