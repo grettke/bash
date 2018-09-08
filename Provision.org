@@ -781,6 +781,13 @@ Easily use =ccrypt= from EMACS.
 CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp"
 #+END_SRC
 
+Checksum.
+
+#+name: org_gcr_2018-09-07T07-00-42-05-00_globigerina_AD266B1B-A2DF-430B-8E6F-178C273634F8
+#+begin_src sh
+alias sha256sum='shasum --algorithm 256 --warn --check'
+#+end_src
+
 Easily load Emacs libraries.
 
 #+NAME: org_gcr_2017-05-12_mara_90CE9C25-BFAB-4442-9FCB-8A6D330D90F1

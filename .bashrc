@@ -37,6 +37,10 @@ INFOPATH='/usr/local/share/info:/usr/share/info'
 CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp"
 # org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-07T07-00-42-05-00_globigerina_AD266B1B-A2DF-430B-8E6F-178C273634F8][org_gcr_2018-09-07T07-00-42-05-00_globigerina_AD266B1B-A2DF-430B-8E6F-178C273634F8]]
+alias sha256sum='shasum --algorithm 256 --warn --check'
+# org_gcr_2018-09-07T07-00-42-05-00_globigerina_AD266B1B-A2DF-430B-8E6F-178C273634F8 ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_90CE9C25-BFAB-4442-9FCB-8A6D330D90F1][org_gcr_2017-05-12_mara_90CE9C25-BFAB-4442-9FCB-8A6D330D90F1]]
 LANGTOOL="$(brew --prefix languagetool)/libexec/languagetool-commandline.jar"
 DITAA="$(brew --prefix ditaa)/libexec/ditaa0_10.jar"
