@@ -785,7 +785,8 @@ Checksum.
 
 #+name: org_gcr_2018-09-07T07-00-42-05-00_globigerina_AD266B1B-A2DF-430B-8E6F-178C273634F8
 #+begin_src sh
-alias sha256sum='shasum --algorithm 256 --warn --check'
+alias sha256summake='shasum --algorithm 256 --portable'
+alias sha256sumcheck='shasum --algorithm 256 --warn --check'
 #+end_src
 
 Easily load Emacs libraries.
