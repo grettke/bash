@@ -328,3 +328,18 @@ function gitgreplog {
         ffmpeg -i "$source" -c:a aac -b:a 128k -c:v libx264 -crf 23 "$destination"
       }
       # org_gcr_2018-05-10T19-26-44-05-00_mara_42653A75-6426-442C-B443-DFC5F8EF7FF1 ends here
+
+      function ls {
+        gls \
+            --almost-all \
+            --author \
+            -C \
+            --group-directories-first \
+            --si \
+            --indicator-style=classify \
+            -l \
+            --quote-name \
+            --quoting-style=c \
+            --time-style=long-iso \
+            "$@"
+      }

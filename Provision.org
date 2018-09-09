@@ -1203,7 +1203,7 @@ July 2018 -- GNU coreutils 8.30
 
 ls - list directory contents
 #+name: org_gcr_2018-09-07T21-25-20-05-00_globigerina_1F948D28-CEF0-4389-AB1B-F8546C7DE36E
-#+begin_src
+#+begin_src sh :comments no
 function ls {
   gls \
       ⟪ls-hide-dotdot-dirs⟫ \
