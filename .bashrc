@@ -343,3 +343,10 @@ function gitgreplog {
             --time-style=long-iso \
             "$@"
       }
+
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-12T08-06-00-05-00_cosmicality_913F19E8-7E97-4C5F-BA7E-1DA8CA6F8F40][org_gcr_2018-09-12T08-06-00-05-00_cosmicality_913F19E8-7E97-4C5F-BA7E-1DA8CA6F8F40]]
+function ref { # Random Element From
+  declare -a array=("$@")
+  r=$((RANDOM % ${#array[@]}))
+  printf "%s\n" "${array[$r]}"
+}

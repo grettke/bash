@@ -1195,6 +1195,17 @@ function convert2mp4 {
   ffmpeg -i "$source" -c:a aac -b:a 128k -c:v libx264 -crf 23 "$destination"
 }
 #+end_src
+
+Random element of array via [[https://unix.stackexchange.com/a/269963/310466][Jeff Schaller]]. 
+
+#+name: org_gcr_2018-09-12T08-06-00-05-00_cosmicality_913F19E8-7E97-4C5F-BA7E-1DA8CA6F8F40
+#+begin_src sh
+function ref { # Random Element From
+  declare -a array=("$@")
+  r=$((RANDOM % ${#array[@]}))
+  printf "%s\n" "${array[$r]}"
+}
+#+end_src
 **** LS
 :PROPERTIES:
 :ID:       org_gcr_2018-09-07T21-25-20-05-00_globigerina:E21383F5-4229-4C1C-B808-0858E6A980D4
