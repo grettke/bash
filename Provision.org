@@ -818,7 +818,7 @@ Easily use TeX.
 
 #+NAME: org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E
 #+BEGIN_SRC sh
-MACTEX_BIN='/usr/local/texlive/2016/bin/x86_64-darwin'
+MACTEX_BIN='/usr/local/texlive/2018/bin/x86_64-darwin/'
 TEXMFHOME='/Users/gcr/git/gitlab/texmf'
 #+END_SRC
 
