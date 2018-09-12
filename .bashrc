@@ -350,3 +350,44 @@ function ref { # Random Element From
   r=$((RANDOM % ${#array[@]}))
   printf "%s\n" "${array[$r]}"
 }
+# org_gcr_2018-09-12T08-06-00-05-00_cosmicality_913F19E8-7E97-4C5F-BA7E-1DA8CA6F8F40 ends here
+
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-12T08-06-00-05-00_cosmicality_BDC5A325-A9AB-4E32-A7E7-A1D93691E585][org_gcr_2018-09-12T08-06-00-05-00_cosmicality_BDC5A325-A9AB-4E32-A7E7-A1D93691E585]]
+function cry {
+  if (("$#" >= 2)); then
+    figlet -f "$1" "${@:2}"
+  elif [ "$#" -eq 1 ]; then
+    figlet "$1"
+  else
+    printf "Announce message to user maybe using a different font.\n"
+    printf "Usage: ${FUNCNAME[0]} \"MESSAGES...\" | ${FUNCNAME[0]} FONT \"MESSAGES...\"\n"
+    printf "For example ${FUNCNAME[0]} \"Be Here Now\" or ${FUNCNAME[0]} starwars \"May The Force Be With You\"\n"
+  fi
+}
+
+function cryrnd {
+  if (("$#" >= 1)); then
+    local font=`gls -b "$(brew --prefix figlet)/share/figlet/fonts"/*.flf | gshuf -n1`
+    figlet -f "$font" "$@"
+  else
+    printf "Announce message to user in a random font.\n"
+    printf "Usage: ${FUNCNAME[0]} \"MESSAGES..\".\n"
+    printf "For example ${FUNCNAME[0]} FONT \"Buffalo buffalo Buffalo\"\n"
+  fi
+}
+# org_gcr_2018-09-12T08-06-00-05-00_cosmicality_BDC5A325-A9AB-4E32-A7E7-A1D93691E585 ends here
+
+function ls {
+  gls \
+    --almost-all \
+    --author \
+    -C \
+    --group-directories-first \
+    --si \
+    --indicator-style=classify \
+    -l \
+    --quote-name \
+    --quoting-style=c \
+    --time-style=long-iso \
+    "$@"
+}
