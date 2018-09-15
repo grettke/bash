@@ -595,14 +595,18 @@ Keep a rich and expansive history.
 
 #+NAME: org_gcr_2017-05-12_mara_8359BDC0-45BD-47FB-95D6-C0E6C769D5F7
 #+BEGIN_SRC sh
-HISTSIZE=31102
+HISTSIZE=10000000
+HISTFILESIZE=10000000
+unset SHELL_SESSION_HISTORY
 #+END_SRC
 
-Track history with basically a ISO-8601 timestamp.
+*Do Not*: Track history with basically a ISO-8601 timestamp. It disabled the
+Resume feature in Terminal.app.
 
 #+NAME: org_gcr_2017-05-12_mara_6F77C1D2-0666-4DC1-A12D-3DF4763FAA8C
-#+BEGIN_SRC sh
-HISTTIMEFORMAT='%Y-%m-%d_%H-%M-%S '
+#+BEGIN_SRC sh :tangle no
+# HISTTIMEFORMAT='%Y-%m-%d_%H-%M-%S '
+unset HISTTIMEFORMAT
 #+END_SRC
 
 ***** Interface
