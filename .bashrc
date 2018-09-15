@@ -161,6 +161,14 @@ alias pni='emacs --no-init-file&'
 alias pcon='emacs -nw --debug-init'
 # org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790 ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF][org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF]]
+if [ -z "$(type -t update_terminal_cwd)" ] || [ "$(type -t update_terminal_cwd)" != "function" ]; then
+  update_terminal_cwd() {
+    true
+  }
+fi
+# org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_69C0605C-90AA-43E9-9084-CF7E725F21F8][org_gcr_2017-05-12_mara_69C0605C-90AA-43E9-9084-CF7E725F21F8]]
 alias r='r --no-save'
 alias R='r --no-save'

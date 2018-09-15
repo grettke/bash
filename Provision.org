@@ -969,6 +969,17 @@ alias pni='emacs --no-init-file&'
 alias pcon='emacs -nw --debug-init'
 #+END_SRC
 
+Enable Bash to run under Emacs in Terminal.app.
+
+#+name: org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF
+#+begin_src sh
+if [ -z "$(type -t update_terminal_cwd)" ] || [ "$(type -t update_terminal_cwd)" != "function" ]; then
+  update_terminal_cwd() {
+    true
+  }
+fi
+#+end_src
+
 Easily start =r=.
 
 #+NAME: org_gcr_2017-05-12_mara_69C0605C-90AA-43E9-9084-CF7E725F21F8
