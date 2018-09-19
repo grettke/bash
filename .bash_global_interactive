@@ -109,6 +109,7 @@ shopt -s expand_aliases
 # org_gcr_2017-05-12_mara_EC6DAFA7-D87A-4612-BB16-D7B881FC2345 ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_FEFE92C2-FA92-4E2B-A04A-D52E5F22F9AE][org_gcr_2017-05-12_mara_FEFE92C2-FA92-4E2B-A04A-D52E5F22F9AE]]
 set -o history
+shopt -s histappend
 # org_gcr_2017-05-12_mara_FEFE92C2-FA92-4E2B-A04A-D52E5F22F9AE ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_3254D394-D9E8-424F-A731-DD6CC0E260F4][org_gcr_2017-05-12_mara_3254D394-D9E8-424F-A731-DD6CC0E260F4]]
 set -o histexpand
@@ -166,13 +167,12 @@ shopt -s no_empty_cmd_completion
 HISTIGNORE='[ \t]*'
 # org_gcr_2017-05-12_mara_E452AE63-E6F8-484E-B7F6-84E6546F5359 ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_8359BDC0-45BD-47FB-95D6-C0E6C769D5F7][org_gcr_2017-05-12_mara_8359BDC0-45BD-47FB-95D6-C0E6C769D5F7]]
-HISTSIZE=10000000
-HISTFILESIZE=10000000
-unset SHELL_SESSION_HISTORY
+HISTSIZE=250
+HISTFILESIZE=250
+SHELL_SESSION_HISTORY=-1
 # org_gcr_2017-05-12_mara_8359BDC0-45BD-47FB-95D6-C0E6C769D5F7 ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_6F77C1D2-0666-4DC1-A12D-3DF4763FAA8C][org_gcr_2017-05-12_mara_6F77C1D2-0666-4DC1-A12D-3DF4763FAA8C]]
-# HISTTIMEFORMAT='%Y-%m-%d_%H-%M-%S '
-unset HISTTIMEFORMAT
+HISTTIMEFORMAT='%Y-%m-%d_%H-%M-%S '
 # org_gcr_2017-05-12_mara_6F77C1D2-0666-4DC1-A12D-3DF4763FAA8C ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_5F5E4AA5-A0FF-460B-BBE8-1AB700BCA964][org_gcr_2017-05-12_mara_5F5E4AA5-A0FF-460B-BBE8-1AB700BCA964]]
 PROMPT_DIRTRIM=1
