@@ -34,7 +34,7 @@ INFOPATH='/usr/local/share/info:/usr/share/info'
 # org_gcr_2017-05-12_mara_33C886C8-3042-462B-A950-56C47183FF5A ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E][org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E]]
-CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp"
+CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp/ccrypt"
 # org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-07T07-00-42-05-00_globigerina_AD266B1B-A2DF-430B-8E6F-178C273634F8][org_gcr_2018-09-07T07-00-42-05-00_globigerina_AD266B1B-A2DF-430B-8E6F-178C273634F8]]

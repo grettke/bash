@@ -791,7 +791,7 @@ Easily use =ccrypt= from EMACS.
 
 #+NAME: org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E
 #+BEGIN_SRC sh
-CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp"
+CCRYPT="$(brew --prefix ccrypt)/share/emacs/site-lisp/ccrypt"
 #+END_SRC
 
 Checksum.
