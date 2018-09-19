@@ -1041,6 +1041,13 @@ than =cd ~/=.
 alias bk="cd $OLDPWD"
 #+END_SRC
 
+Exit.
+
+#+name: org_gcr_2018-09-18T19-49-15-05-00_cosmicality_45B64A5B-E999-454C-AFE7-F70F9DFA0170
+#+begin_src sh
+alias e=exit
+#+end_src
+
 Always use ~Bash~ *never* use the default shell.
 
 #+NAME: org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C

@@ -206,6 +206,10 @@ alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 alias bk="cd $OLDPWD"
 # org_gcr_2017-05-12_mara_CC3E03CE-A882-4AB1-9BBF-A2C49F4F3A0A ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-18T19-49-15-05-00_cosmicality_45B64A5B-E999-454C-AFE7-F70F9DFA0170][org_gcr_2018-09-18T19-49-15-05-00_cosmicality_45B64A5B-E999-454C-AFE7-F70F9DFA0170]]
+alias e=exit
+# org_gcr_2018-09-18T19-49-15-05-00_cosmicality_45B64A5B-E999-454C-AFE7-F70F9DFA0170 ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C][org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C]]
 alias sh='/usr/local/bin/bash'
 # org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C ends here
