@@ -1150,6 +1150,16 @@ alias flock='chflags -R uchg'
 alias funlock='chflags -R nouchg'
 #+end_src
 
+PDF Related.
+
+#+name: org_gcr_2018-09-21T18-57-01-05-00_cosmicality_47395DBE-274C-44C4-A503-FBD50962330B
+#+begin_src sh
+function identify-pdf-summary {
+  identify -verbose  "$@" |
+    grep -E 'Image:|Format:|Geometry|Resolution|Print size:|Colorspace|Colors:|date:create:|date:modify|pdf:Version|Filesize'
+}
+#+end_src
+
 **** Make Functions
 :PROPERTIES:
 :ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
