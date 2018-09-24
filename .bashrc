@@ -61,6 +61,10 @@ TEXMFHOME='/Users/gcr/git/gitlab/texmf'
 PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$(go env GOPATH)/bin:$PATH"
 # org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176 ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-24T09-26-51-05-00_cosmicality_A526C76A-6D25-426A-9673-5DD3A1C7043A][org_gcr_2018-09-24T09-26-51-05-00_cosmicality_A526C76A-6D25-426A-9673-5DD3A1C7043A]]
+PATH="~/.bin:$PATH"
+# org_gcr_2018-09-24T09-26-51-05-00_cosmicality_A526C76A-6D25-426A-9673-5DD3A1C7043A ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C][org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C]]
 VAGRANT_DEFAULT_PROVIDER=virtualbox
 # org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C ends here
