@@ -95,6 +95,7 @@
           run them. The overlap is so close here. Perhaps "things that I want
           to see" and "things that I want to do interactively" is the correct
           classifier.
+        - X is a non-interactive shell
         - This is a design choice
     - Login and Non-Login Shell
       - Are you initiating things or is a ~cron~?
