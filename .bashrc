@@ -249,10 +249,10 @@ function xwnhom {
   local gravity=0;
   local x=100;
   local y=100;
-  local w=200;
-  local h=200;
+  local w=512;
+  local h=512;
   if [[ $# -eq 0 || -z "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <WindowTitle>\n"
+    printf "Usage: ${FUNCNAME[0]} <\"Window Title\">\n"
     printf "Moves window to $x,$y and resizes it to $w,$h.\n"
     return 1
   fi
