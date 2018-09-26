@@ -320,7 +320,6 @@ Only use this functionality in a non-interactive session.
 #+BEGIN_SRC sh
 if [ "$PS1" ]; then
     printf "Expected a non-interactive shell. 0F4DD650-97C5-492A-BCDD-8D74DBD8AAD0\n" 1>&2
-    sleep 5
     exit 1
 fi
 #+END_SRC
@@ -352,7 +351,6 @@ Only use this functionality in an interactive session.
 #+BEGIN_SRC sh
 if [ -z "$PS1" ] && [ -z "$DISPLAY" ]; then
     printf "Expected an interactive shell. E0DEB2B6-DE8B-4B8D-B2AC-2FEA7D5B6B4F\n" 1>&2
-    sleep 5
     exit 1
 fi
 #+END_SRC
@@ -1402,5 +1400,5 @@ Farewell.
 
 #+NAME: org_gcr_2017-05-12_mara_16299394-BEC8-40E0-946C-AF75251006C0
 #+BEGIN_SRC sh
-printf 'Sayonara.\n' && sleep 1
+printf "Sayonara.\n"
 #+END_SRC
