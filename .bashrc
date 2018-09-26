@@ -100,6 +100,7 @@ alias g='git'
 complete -o default -o nospace -F _git g
 alias gitunpull='git reset --keep HEAD@{1}'
 alias gituncommit='git reset --mixed HEAD^'
+alias gitdiscard='git checkout -- .'
 alias gitforcepush='git push origin +master'
 alias gpom='git push origin master'
 alias gss='git status'
