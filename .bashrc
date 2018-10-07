@@ -289,13 +289,6 @@ alias flock='chflags -R uchg'
 alias funlock='chflags -R nouchg'
 # org_gcr_2018-09-07T07-00-42-05-00_globigerina_1EED4991-58C8-46D7-9257-3A5A46A6533F ends here
 
-# [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-21T18-57-01-05-00_cosmicality_47395DBE-274C-44C4-A503-FBD50962330B][org_gcr_2018-09-21T18-57-01-05-00_cosmicality_47395DBE-274C-44C4-A503-FBD50962330B]]
-function identify-pdf-summary {
-  identify -verbose  "$@" |
-    grep -E 'Image:|Format:|Geometry|Resolution|Print size:|Colorspace|Colors:|date:create:|date:modify|pdf:Version|Filesize'
-}
-# org_gcr_2018-09-21T18-57-01-05-00_cosmicality_47395DBE-274C-44C4-A503-FBD50962330B ends here
-
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31][org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31]]
 function nthlineof {
   if (( "$#" < 2 )); then
