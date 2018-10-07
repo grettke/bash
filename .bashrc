@@ -383,7 +383,7 @@ function cryrnd {
 }
 # org_gcr_2018-09-12T08-06-00-05-00_cosmicality_BDC5A325-A9AB-4E32-A7E7-A1D93691E585 ends here
 
-function ls {
+function l {
   gls \
     --almost-all \
     --author \
