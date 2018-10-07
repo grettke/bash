@@ -373,7 +373,7 @@ function cry {
 
 function cryrnd {
   if (("$#" >= 1)); then
-    local font=`gls -b "$(brew --prefix figlet)/share/figlet/fonts"/*.flf | gshuf -n1`
+    local font=`ls -b "$(brew --prefix figlet)/share/figlet/fonts"/*.flf | gshuf -n1`
     figlet -f "$font" "$@"
   else
     printf "Announce message to user in a random font.\n"
