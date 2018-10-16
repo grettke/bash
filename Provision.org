@@ -1276,6 +1276,16 @@ function cryrnd {
   fi
 }
 #+end_src
+
+Make.
+
+#+name: org_gcr_2018-10-15T12-34-46-04-00_cosmicality_B1D8576F-868C-4368-A6E8-5FA7E8813C08
+#+begin_src sh
+function mk {
+  gmake "$@"
+}
+#+end_src
+
 **** LS
 :PROPERTIES:
 :ID:       org_gcr_2018-09-07T21-25-20-05-00_globigerina:E21383F5-4229-4C1C-B808-0858E6A980D4
