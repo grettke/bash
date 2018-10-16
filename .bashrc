@@ -383,6 +383,12 @@ function cryrnd {
 }
 # org_gcr_2018-09-12T08-06-00-05-00_cosmicality_BDC5A325-A9AB-4E32-A7E7-A1D93691E585 ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-10-15T12-34-46-04-00_cosmicality_B1D8576F-868C-4368-A6E8-5FA7E8813C08][org_gcr_2018-10-15T12-34-46-04-00_cosmicality_B1D8576F-868C-4368-A6E8-5FA7E8813C08]]
+function mk {
+  gmake "$@"
+}
+# org_gcr_2018-10-15T12-34-46-04-00_cosmicality_B1D8576F-868C-4368-A6E8-5FA7E8813C08 ends here
+
 function l {
   gls \
     --almost-all \

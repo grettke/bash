@@ -1276,6 +1276,16 @@ function cryrnd {
   fi
 }
 #+end_src
+
+Make.
+
+#+name: org_gcr_2018-10-15T12-34-46-04-00_cosmicality_B1D8576F-868C-4368-A6E8-5FA7E8813C08
+#+begin_src sh
+function mk {
+  gmake "$@"
+}
+#+end_src
+
 **** LS
 :PROPERTIES:
 :ID:       org_gcr_2018-09-07T21-25-20-05-00_globigerina:E21383F5-4229-4C1C-B808-0858E6A980D4
@@ -1382,6 +1392,130 @@ Accept additional arguments to function
 #+begin_src sh :tangle no
 "$@"
 #+end_src
+**** Clean Up File Names With Uni2Ascii
+
+Some file names are less easy to use and some are more easy to use. Usually at
+the end of the day it is never too big of a deal. However when it is too big
+deal then standardizing the filenames to something /easier/ helps a lot! Here is
+what makes life easier for me working with files at the command line using
+utilities you expect to find there, with files between different editors, and
+sharing files with different users on other operating systems. Here is what
+makes my life easier:
+
+- Try to convert it all to ASCII
+- Don't Use Wonky Characters That Need Escaping
+  - Control chars
+  - Space, Comma, Back, or Forward Slash
+- Use the best representation for the user
+  - For example convert '\dots' to '=...=' instead of %20%26% or 0x2026
+- If possible can convert the file name /back/ to Unicode
+
+#+name: org_gcr_2018-10-26T19-19-09-05-00_cosmicality_24EAE4C8-F17A-42ED-87B1-CF508C6C7E6D
+#+begin_src sh :comments no
+function l {
+  u2a ⟪u2a-unenclose-circles-and-parens⟫ \
+      ⟪u2a-strip-diacritics⟫ \
+      ⟪u2a-convert-char-to-approximate-ascii-equivelant⟫
+      }
+
+#+end_src
+
+#+name: u2a-unenclose-circles-and-parens
+#+begin_src sh :tangle no
+-c
+#+end_src
+
+- "Convert circled and parenthesized characters to their unenclosed
+  counterparts."
+- For example
+  - ⮾ →
+  - ⑸ →
+
+#+name: u2a-strip-diacritics
+#+begin_src sh :tangle no
+-d
+#+end_src
+
+- "Strip diacritics. This converts single codepoints representing characters
+  with diacritics to the corresponding ASCII character and deletes
+  separately encoded diacritics."
+- For example
+  - é →
+
+#+name: u2a-convert-char-to-approximate-ascii-equivelant
+#+begin_src sh :tangle no
+-e
+#+end_src
+
+- "Convert characters to their approximate ASCII equivalents"
+- For example
+  | From Name                                  | From "CHAR" | To "CHAR" | To Name                       |
+  |--------------------------------------------+-------------+-----------+-------------------------------|
+  | next line                                  | "\"     | "\n"      | newline                       |
+  | no break space                             | "\ "        | " "       | space                         |
+  | left-pointing double angle quotation mark  | "\«"        | "\""      | double quote                  |
+  | soft hyphen                                | ="\-"=  | "-"       | minus                         |
+  | macron                                     | "\¯"        | "-"       | minus                         |
+  | middle dot                                 | "\·"        | "."       | period                        |
+  | right-pointing double angle quotation mark | "\»"        | "\""      | double quote                  |
+  | ethiopic word space                        | "\፡"        | " "       | space                         |
+  | ogham space                                | "\ "        | " "       | space                         |
+  | en quad                                    | "\ "        | " "       | space                         |
+  | em "                                       | "\ "        | " "       | space                         |
+  | en space                                   | "\ "        | " "       | space                         |
+  | em "                                       | "\ "        | " "       | space                         |
+  | three-per-em "                             | "\ "        | " "       | space                         |
+  | four-per-em "                              | "\ "        | " "       | space                         |
+  | six-per-em "                               | "\ "        | " "       | space                         |
+  | figure "                                   | "\ "        | " "       | space                         |
+  | punctuation "                              | "\ "        | " "       | space                         |
+  | thin "                                     | "\ "        | " "       | space                         |
+  | hair "                                     | "\ "        | " "       | space                         |
+  | zero-width "                               | "\​"         | " "       | space                         |
+  | hyphen                                     | "\‐"        | "-"       | minus                         |
+  | non-breaking "                             | "\‑"        | "-"       | minus                         |
+  | dash figure                                | "\‒"        | "-"       | minus                         |
+  | en "                                       | "\–"        | "-"       | minus                         |
+  | em "                                       | "\—"        | "-"       | minus                         |
+  | left single quotation mark                 | "\‘"        | "`"       | left single quote             |
+  | right single "                             | "\’"        | "'"       | right or neutral single quote |
+  | single low-9 "                             | "\‚"        | "`"       | left single quote             |
+  | single high-reversed-9 "                   | "\‛"        | "`"       | left single quote             |
+  | left double "                              | "\“"        | "\""      | double quote                  |
+  | right double "                             | "\”"        | "\""      | double quote                  |
+  | double low-9 "                             | "\„"        | "\""      | double quote                  |
+  | double high-reversed-9 "                   | "\‟"        | "\""      | double quote                  |
+  | bullet                                     | "\•"        | "o"       | small letter o                |
+  | line separator                             | "\ "        | "\n"      | newline                       |
+  | double prime                               | "\″"        | "\""      | double quote                  |
+  | single left-pointing angle quotation mark  | "\‹"        | "`"       | left single quote             |
+  | single right-pointing angle quotation mark | "\›"        | "'"       | right or neutral single quote |
+  | low asterisk                               | "\⁎"        | "*"       | asterisk                      |
+  | minus sign                                 | "\−"        | "-"       | minus                         |
+  | set minus                                  | "\∖"        | "\\"      | backslash                     |
+  | asterisk operator                          | "\∗"        | "*"       | asterisk                      |
+  | divides                                    | "\∣"        | "\vert"   | vertical line                 |
+  | box drawing light horizontal               | "\─"        | "-"       | minus                         |
+  | box drawing heavy horizontal               | "\━"        | "-"       | minus                         |
+  | box drawing light vertical                 | "\│"        | "\vert"     | vertical line                 |
+  | box drawing heavy vertical                 | "\┃"        | "\vert"   | vertical line                 |
+  | heavy asterisk                             | "\✱"        | "*"       | asterisk                      |
+  | heavy double  turned comma quotation mark  | "\❝"        | "\""      | double quote                  |
+  | heavy comma quotation mark                 | "\❞"        | "\""      | double quote                  |
+  | ideographic space                          | "\　"       | " "       | space                         |
+  | small ampersand                            | "\﹠"       | "&"       | ampersand                     |
+  | small  asterisk                            | "\﹡"       | "*"       | asterisk                      |
+  | small plus sign                            | "\﹢"       | "+"       | plus sign                     |
+
+- f
+- x
+
+- TODO
+  - Since spaces all get converted right, replace spaces with nothing
+  - Replace forward and blackward slashes with the word itself? That is in a
+    subsitute command.
+  - Also maybe handle arrows and ...  Using words instead. (leftarrow)
+  - Add args thingie to end
 *** BashLogout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout
