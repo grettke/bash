@@ -1438,9 +1438,9 @@ makes my life easier:
 function l {
   u2a ⟪u2a-unenclose-circles-and-parens⟫ \
       ⟪u2a-strip-diacritics⟫ \
-      ⟪u2a-convert-char-to-approximate-ascii-equivelant⟫
-      }
-
+      ⟪u2a-convert-char-to-approximate-ascii-equivelant⟫ \
+      ⟪u2a-arguments⟫
+}
 #+end_src
 
 #+name: u2a-unenclose-circles-and-parens
@@ -1532,6 +1532,15 @@ function l {
 
 - f
 - x
+
+- Handle function arguments
+- ~$@~ expands to separate words: ~"$1" "$2" ...~
+  - (see [[https://unix.stackexchange.com/questions/41571/what-is-the-difference-between-and][here]] for more)
+
+#+name: u2a-arguments
+#+begin_src sh :tangle no
+"$@"
+#+end_src
 
 - TODO
   - Since spaces all get converted right, replace spaces with nothing
