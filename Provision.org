@@ -1474,7 +1474,7 @@ been the most helpful thing in making sense of what I can do, trying it, and
 then refining what I want to do. It is the iterative /Lisp style/ develop both
 in code as well as prose. It is /literate programming/ "for real!"
 
-***** What I'm Not Using This For
+***** What I'm Doing And Not Doing
 
 [[https://en.wikipedia.org/wiki/Transliteration][Transliteration]], at least not in a serious way.
 
@@ -1484,7 +1484,9 @@ possible and /after/ that use that package.
 
 Instead I want a program that converts the text in the easiest way to
 understand as possible, and it might not be easy to understand, but in the use
-cases that I'm it will probably work out fine 80% of the time.
+cases that I'm it will probably work out fine 80% of the time. My resulting
+files will have *zero* Unicode. The rest of my work will either use shell
+functions to clean things up for I'll do the work in Emacs.
 
 ***** Implementation
 
