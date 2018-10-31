@@ -1293,6 +1293,7 @@ function mk {
 July 2018 -- GNU coreutils 8.30
 
 ls - list directory contents
+
 #+name: org_gcr_2018-09-07T21-25-20-05-00_globigerina_1F948D28-CEF0-4389-AB1B-F8546C7DE36E
 #+begin_src sh :comments no
 function l {
@@ -1312,18 +1313,21 @@ function l {
 #+end_src
 
 do not list implied . and ..
+
 #+name: ls-hide-dotdot-dirs
 #+begin_src sh :tangle no
 --almost-all
 #+end_src
 
 with -l, print the author of each file
+
 #+name: ls-show-file-author
 #+begin_src sh :tangle no
 --author
 #+end_src
 
 list entries by columns
+
 #+name: ls-list-in-columns
 #+begin_src sh :tangle no
 -C
@@ -1333,6 +1337,7 @@ group directories before files;
 
 can be augmented  with a --sort option, but  any use of
 --sort=\,none\/ (-U) disables grouping
+
 #+name: ls-list-dirs-first
 #+begin_src sh :tangle no
 --group-directories-first
@@ -1345,6 +1350,7 @@ Unbuntu's [[https://wiki.ubuntu.com/UnitsPolicy][Units Policy]]
   - network bandwidth (for example, 6 Mbit/s or 50 kB/s) disk sizes (for example, 500 GB hard drive or 4.7 GB DVD)
 - Use IEC standard base-2 for:
   - RAM sizes (for example, 2 GiB RAM)
+
 #+name: ls-file-size-units-policy
 #+begin_src sh :tangle no
 --si
@@ -1353,18 +1359,21 @@ Unbuntu's [[https://wiki.ubuntu.com/UnitsPolicy][Units Policy]]
 append indicator  with style WORD to  entry names: none
 (default),   slash   (-p),   file-type   (--file-type),
 classify (-F)
+
 #+name: ls-show-file-type-indicator
 #+begin_src sh :tangle no
 --indicator-style=classify
 #+end_src
 
 use a long listing format
+
 #+name: ls-use-long-lines
 #+begin_src sh :tangle no
 -l
 #+end_src
 
 enclose entry names in double quotes
+
 #+name: ls-double-quote-entry-names
 #+begin_src sh :tangle no
 --quote-name
@@ -1374,12 +1383,14 @@ use  quoting  style  WORD  for  entry  names:  literal,
 locale,     shell,      shell-always,     shell-escape,
 shell-escape-always, c, escape (overrides QUOTING_STYLE
 environment variable)
+
 #+name: ls-quoting-style
 #+begin_src sh :tangle no
 --quoting-style=c
 #+end_src
 
 time/date format with -l; see TIME_STYLE below
+
 #+name: ls-timestamp-format
 #+begin_src sh :tangle no
 --time-style=long-iso
@@ -1388,6 +1399,7 @@ time/date format with -l; see TIME_STYLE below
 Accept additional arguments to function
 ~"$@"~ expands to separate words: ~"$1" "$2" ...~
 (see [[https://unix.stackexchange.com/questions/41571/what-is-the-difference-between-and][here]])
+
 #+name: ls-take-additional-arguments
 #+begin_src sh :tangle no
 "$@"
