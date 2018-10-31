@@ -1416,6 +1416,7 @@ Accept additional arguments to function
 "$@"
 #+end_src
 **** Uni2Ascii
+***** What I'm Using This For
 
 Sometimes I want to use ASCII instead of Unicode. Those times are when Unicode
 "is breaking something" that I'm trying to use. Usually "what I'm trying to use"
@@ -1472,6 +1473,22 @@ the documentation and translate it into something meaningful to me. That has
 been the most helpful thing in making sense of what I can do, trying it, and
 then refining what I want to do. It is the iterative /Lisp style/ develop both
 in code as well as prose. It is /literate programming/ "for real!"
+
+***** What I'm Not Using This For
+
+[[https://en.wikipedia.org/wiki/Transliteration][Transliteration]], at least not in a serious way.
+
+For example [[https://metacpan.org/pod/release/SBURKE/Text-Unidecode-1.30/lib/Text/Unidecode.pm][Unidecode]] in Perl explains that you should use /it/ as a last resort
+after you have manually converted everything you wish in the best way
+possible and /after/ that use that package.
+
+Instead I want a program that converts the text in the easiest way to
+understand as possible, and it might not be easy to understand, but in the use
+cases that I'm it will probably work out fine 80% of the time.
+
+***** Implementation
+
+This solution uses [[https://billposer.org/Software/uni2ascii.html][uni2ascii]].
 
 Where I began here was to read the man page. It provides a recipe "-B
 Transform to ASCII if possible. This option is equivalent to the combination
@@ -1570,7 +1587,7 @@ function l {
   | heavy comma quotation mark                 | "\❞"        | "\""      | double quote                  |
   | ideographic space                          | "\　"       | " "       | space                         |
   | small ampersand                            | "\﹠"       | "&"       | ampersand                     |
-  | small  asterisk                            | "\﹡"       | "*"       | asterisk                      |
+  | small asterisk                           | "\﹡"       | "*"       | asterisk                      |
   | small plus sign                            | "\﹢"       | "+"       | plus sign                     |
 
 #+name: u2a-convert-char-to-approximate-ascii-equivelant
