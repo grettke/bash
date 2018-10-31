@@ -1520,7 +1520,7 @@ function l {
   | next line                                  | "\"     | "\n"      | newline                       |
   | no break space                             | "\ "        | " "       | space                         |
   | left-pointing double angle quotation mark  | "\«"        | "\""      | double quote                  |
-  | soft hyphen                                | ="\-"=  | "-"       | minus                         |
+  | soft hyphen                                | ="\-"=        | "-"       | minus                         |
   | macron                                     | "\¯"        | "-"       | minus                         |
   | middle dot                                 | "\·"        | "."       | period                        |
   | right-pointing double angle quotation mark | "\»"        | "\""      | double quote                  |
@@ -1560,11 +1560,11 @@ function l {
   | minus sign                                 | "\−"        | "-"       | minus                         |
   | set minus                                  | "\∖"        | "\\"      | backslash                     |
   | asterisk operator                          | "\∗"        | "*"       | asterisk                      |
-  | divides                                    | "\∣"        | "\vert"   | vertical line                 |
+  | divides                                    | "\∣"        | "\vert"       | vertical line                 |
   | box drawing light horizontal               | "\─"        | "-"       | minus                         |
   | box drawing heavy horizontal               | "\━"        | "-"       | minus                         |
-  | box drawing light vertical                 | "\│"        | "\vert"     | vertical line                 |
-  | box drawing heavy vertical                 | "\┃"        | "\vert"   | vertical line                 |
+  | box drawing light vertical                 | "\│"        | "\vert"       | vertical line                 |
+  | box drawing heavy vertical                 | "\┃"        | "\vert"       | vertical line                 |
   | heavy asterisk                             | "\✱"        | "*"       | asterisk                      |
   | heavy double  turned comma quotation mark  | "\❝"        | "\""      | double quote                  |
   | heavy comma quotation mark                 | "\❞"        | "\""      | double quote                  |
@@ -1599,7 +1599,6 @@ function l {
   - Replace forward and blackward slashes with the word itself? That is in a
     subsitute command.
   - Also maybe handle arrows and ...  Using words instead. (leftarrow)
-  - Add args thingie to end
 *** BashLogout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout
