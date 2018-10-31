@@ -1415,23 +1415,71 @@ Accept additional arguments to function
 #+begin_src sh :tangle no
 "$@"
 #+end_src
-**** Clean Up File Names With Uni2Ascii
+**** Uni2Ascii
+
+Sometimes I want to use ASCII instead of Unicode. Those times are when Unicode
+"is breaking something" that I'm trying to use. Usually "what I'm trying to use"
+are either typical command line tools that use file names or a text editor or
+GUI app. Here are a couple examples.
 
 Some file names are less easy to use and some are more easy to use. Usually at
 the end of the day it is never too big of a deal. However when it is too big
 deal then standardizing the filenames to something /easier/ helps a lot! Here is
 what makes life easier for me working with files at the command line using
 utilities you expect to find there, with files between different editors, and
-sharing files with different users on other operating systems. Here is what
-makes my life easier:
+sharing files with different users on other operating systems. For example,
+forbidding spaces in file names makes life a lot easier. Especially removing
+the narrow-no-break-space too! Another example is in GUI apps.
 
-- Try to convert it all to ASCII
+Sometimes text-to-speech (TTS) engines can't handle Unicode rendering the
+recording painful and nearly unusable. Two obvious options here are to to
+either notify the vendor or convert the confusing characters to ASCII. Both
+options should be taken up but we need an immediate solution and that is to
+convert the text from Unicode to ASCII. Those are my two important use cases.
+There are probably more and they are probably all pretty common. What is
+uncommon here is that the translation from Unicode to ASCII isn't very
+simple.
+
+Nor should it be. Nobody would expect that. Fortunately there are some obvious
+translations like the copyright sign from © to (c). Every kind of space
+characters is also obvious. Others will be unique to your situation. My most
+common one is working with file names.
+
+When I am working with file names I want the following:
+
+- All ASCII
 - Don't Use Wonky Characters That Need Escaping
   - Control chars
   - Space, Comma, Back, or Forward Slash
-- Use the best representation for the user
-  - For example convert '\dots' to '=...=' instead of %20%26% or 0x2026
+  - Single or double quotes: they mean something in your shell like Bash for
+    example and you don't want to screw it up
 - If possible can convert the file name /back/ to Unicode
+- Use the best representation for the user
+  - The replacement should make it easy for the user to understand what has
+    changed, from what, to what
+  - For example convert '\dots' to '=...=' instead of %20%26% or 0x2026
+  - For example convert '\' to 'BACKSLASH'
+
+When I am working with file contents I want all that, but I want spaces to
+remain. That is what you expect. Other than that I don't. At least, I think I
+do.
+
+This process isn't like designing a pacemaker. I'm not sure what I want, but,
+I'll know it when I see it. So the two problems are #1 figuring out what I
+want and #2 figuring out how to do it. This function is how I will take care
+of both of them. The most important part of dealing with it here is to take
+the documentation and translate it into something meaningful to me. That has
+been the most helpful thing in making sense of what I can do, trying it, and
+then refining what I want to do. It is the iterative /Lisp style/ develop both
+in code as well as prose. It is /literate programming/ "for real!"
+
+Where I began here was to read the man page. It provides a recipe "-B
+Transform to ASCII if possible. This option is equivalent to the combination
+cdefx." So that is what I implemented using the individual arguments in order
+to make sense of what was happening. Now I'll apply that to my use cases and
+make adjustments as I go forward.
+
+Here is the function body and components.
 
 #+name: org_gcr_2018-10-26T19-19-09-05-00_cosmicality_24EAE4C8-F17A-42ED-87B1-CF508C6C7E6D
 #+begin_src sh :comments no
@@ -1443,20 +1491,15 @@ function l {
 }
 #+end_src
 
-#+name: u2a-unenclose-circles-and-parens
-#+begin_src sh :tangle no
--c
-#+end_src
-
 - "Convert circled and parenthesized characters to their unenclosed
   counterparts."
 - For example
   - ⮾ →
   - ⑸ →
 
-#+name: u2a-strip-diacritics
+#+name: u2a-unenclose-circles-and-parens
 #+begin_src sh :tangle no
--d
+-c
 #+end_src
 
 - "Strip diacritics. This converts single codepoints representing characters
@@ -1465,9 +1508,9 @@ function l {
 - For example
   - é →
 
-#+name: u2a-convert-char-to-approximate-ascii-equivelant
+#+name: u2a-strip-diacritics
 #+begin_src sh :tangle no
--e
+-d
 #+end_src
 
 - "Convert characters to their approximate ASCII equivalents"
@@ -1530,8 +1573,17 @@ function l {
   | small  asterisk                            | "\﹡"       | "*"       | asterisk                      |
   | small plus sign                            | "\﹢"       | "+"       | plus sign                     |
 
+#+name: u2a-convert-char-to-approximate-ascii-equivelant
+#+begin_src sh :tangle no
+-e
+#+end_src
+
+-----
+
 - f
 - x
+
+-----
 
 - Handle function arguments
 - ~$@~ expands to separate words: ~"$1" "$2" ...~
