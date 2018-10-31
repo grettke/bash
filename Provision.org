@@ -1486,7 +1486,8 @@ Instead I want a program that converts the text in the easiest way to
 understand as possible, and it might not be easy to understand, but in the use
 cases that I'm it will probably work out fine 80% of the time. My resulting
 files will have *zero* Unicode. The rest of my work will either use shell
-functions to clean things up for I'll do the work in Emacs.
+functions to clean things up for I'll do the work in Emacs. I'm still not sure
+exactly how I'll use this, but it will get the tedious parts done easily.
 
 ***** Implementation
 
