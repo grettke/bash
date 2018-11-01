@@ -1526,20 +1526,19 @@ function u2a {
     ⟪u2a-arguments⟫
 }
 #+end_src
-
-- "Generate hexadecimal UTF-8 with each byte's hex preceded by an =-sign (e.g.
-  =C3=A9) . This is the Quoted Printable format defined by RFC 2045."
+ƛ
+- "Generate hexadecimal with prefix U (U00E9)."
 
 #+name: u2a-format
 #+begin_src sh
--a I
+-a E
 #+end_src
 
 - "Convert circled and parenthesized characters to their unenclosed
   counterparts."
 - For example
-  - ⮾ → =E2=AE=BE
-  - ⑸ → =E2=91=B8
+  - ⮾ → U2BBE
+  - ⑸ → U2478
 
 #+name: u2a-unenclose-circles-and-parens
 #+begin_src sh :tangle no

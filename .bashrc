@@ -406,7 +406,7 @@ function l {
 
 function u2a {
   uni2ascii \
-    -a I \
+    -a E \
     -c \
     -d \
     -e \
@@ -416,7 +416,7 @@ function u2a {
 }
 
 # [[file:~/git/github/bash/Provision.org::u2a-format][u2a-format]]
--a I
+-a E
 # u2a-format ends here
 
 # [[file:~/git/github/bash/Provision.org::u2a-convert-stylistic-variants][u2a-convert-stylistic-variants]]
