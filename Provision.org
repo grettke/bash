@@ -1416,7 +1416,13 @@ Accept additional arguments to function
 "$@"
 #+end_src
 **** Uni2Ascii
+:PROPERTIES:
+:ID:       org_gcr_2018-10-30T23-51-23-05-00_cosmicality:885AD55C-18BD-482F-8DCD-B44599B58174
+:END:
 ***** What I'm Using This For
+:PROPERTIES:
+:ID:       org_gcr_2018-10-30T23-51-23-05-00_cosmicality:BC56891D-537C-477F-BB5C-F6BA64B00F4D
+:END:
 
 Sometimes I want to use ASCII instead of Unicode. Those times are when Unicode
 "is breaking something" that I'm trying to use. Usually "what I'm trying to use"
@@ -1475,6 +1481,9 @@ then refining what I want to do. It is the iterative /Lisp style/ develop both
 in code as well as prose. It is /literate programming/ "for real!"
 
 ***** What I'm Doing And Not Doing
+:PROPERTIES:
+:ID:       org_gcr_2018-10-30T23-51-23-05-00_cosmicality:28E1C5A3-0F85-4D0D-8474-2CC0754B2014
+:END:
 
 [[https://en.wikipedia.org/wiki/Transliteration][Transliteration]], at least not in a serious way.
 
@@ -1490,6 +1499,9 @@ functions to clean things up for I'll do the work in Emacs. I'm still not sure
 exactly how I'll use this, but it will get the tedious parts done easily.
 
 ***** Implementation
+:PROPERTIES:
+:ID:       org_gcr_2018-10-30T23-51-23-05-00_cosmicality:5CC26E36-9B37-4110-AF65-04DF7C5304CF
+:END:
 
 This solution uses [[https://billposer.org/Software/uni2ascii.html][uni2ascii]].
 
@@ -1503,19 +1515,31 @@ Here is the function body and components.
 
 #+name: org_gcr_2018-10-26T19-19-09-05-00_cosmicality_24EAE4C8-F17A-42ED-87B1-CF508C6C7E6D
 #+begin_src sh :comments no
-function l {
-  u2a ⟪u2a-unenclose-circles-and-parens⟫ \
-      ⟪u2a-strip-diacritics⟫ \
-      ⟪u2a-convert-char-to-approximate-ascii-equivelant⟫ \
-      ⟪u2a-arguments⟫
+function u2a {
+  uni2ascii \
+    ⟪u2a-format⟫ \
+    ⟪u2a-unenclose-circles-and-parens⟫ \
+    ⟪u2a-strip-diacritics⟫ \
+    ⟪u2a-convert-char-to-approximate-ascii-equivelant⟫ \
+    ⟪u2a-convert-stylistic-variants⟫ \
+    ⟪u2a-expand-to-multichar⟫ \
+    ⟪u2a-arguments⟫
 }
+#+end_src
+
+- "Generate hexadecimal UTF-8 with each byte's hex preceded by an =-sign (e.g.
+  =C3=A9) . This is the Quoted Printable format defined by RFC 2045."
+
+#+name: u2a-format
+#+begin_src sh
+-a I
 #+end_src
 
 - "Convert circled and parenthesized characters to their unenclosed
   counterparts."
 - For example
-  - ⮾ →
-  - ⑸ →
+  - ⮾ → =E2=AE=BE
+  - ⑸ → =E2=91=B8
 
 #+name: u2a-unenclose-circles-and-parens
 #+begin_src sh :tangle no
@@ -1526,7 +1550,7 @@ function l {
   with diacritics to the corresponding ASCII character and deletes
   separately encoded diacritics."
 - For example
-  - é →
+  - é → e
 
 #+name: u2a-strip-diacritics
 #+begin_src sh :tangle no
@@ -1598,10 +1622,67 @@ function l {
 -e
 #+end_src
 
------
+- "Convert stylistic variants to plain ASCII. Stylistic equivalents include:
+  superscript and subscript forms, small capitals (e.g. U+1D04), script forms
+  (e.g. U+212C), black letter forms (e.g. U+212D), fullwidth forms (e.g.
+  U+FF01), halfwidth forms (e.g. U+FF7B), and the mathematical alphanumeric
+  symbols (e.g. U+1D400)."
+- For example
+  - ᴄ → c
+  - ℬ → B
+  - ℭ → C
+  - ！ → !
+  - ｻ → 0xFF7B
+  - 𝐀 → A
 
-- f
-- x
+#+name: u2a-convert-stylistic-variants
+#+begin_src sh
+-f
+#+end_src
+
+- "Expand certain characters to multicharacter sequences. The characters
+  affected are the same as those affected by the -y option."
+- For example
+  | From Name                   | From "CHAR" | To "CHAR" |
+  |-----------------------------+-------------+-----------|
+  | CENT SIGN                   | ¢           | cent      |
+  | POUND SIGN                  | £           | pound     |
+  | YEN SIGN                    | ¥           | yen       |
+  | COPYRIGHT SYMBOL            | ©           | (c)       |
+  | REGISTERED SYMBOL           | ®           | (R)       |
+  | ONE QUARTER                 | ¼           | 1/4       |
+  | ONE HALF                    | ½           | 1/2       |
+  | THREE QUARTERS              | ¾           | 3/4       |
+  | CAPITAL LETTER ASH          | Æ           | AE        |
+  | SMALL LETTER SHARP S        | ß           | ss        |
+  | SMALL LETTER ASH            | æ           | ae        |
+  | LIGATURE IJ                 | Ĳ           | IJ        |
+  | LIGATURE ij                 | ĳ           | ij        |
+  | LIGATURE OE                 | Œ           | OE        |
+  | LIGATURE oe                 | œ           | oe        |
+  | CAPITAL LETTER DZ           | Ǳ           | DZ        |
+  | MIXED LETTER Dz             | ǲ           | Dz        |
+  | SMALL LETTER DZ             | ǳ           | dz        |
+  | SMALL LETTER TS DIGRAPH     | ʦ           | ts        |
+  | HORIZONTAL ELLIPSIS         | …           | ...       |
+  | EURO SIGN                   | €           | euro      |
+  | MIDLINE HORIZONTAL ELLIPSIS | ⋯           | ...       |
+  | LEFTWARDS ARROW             | ←           | <-        |
+  | RIGHTWARDS ARROW            | →           | ->        |
+  | LEFTWARDS DOUBLE ARROW      | ⇐           | <=        |
+  | RIGHTWARDS DOUBLE ARROW     | ⇒           | =>        |
+  | LATIN SMALL LIGATURE FF     | ﬀ           | ff        |
+  | LATIN SMALL LIGATURE FI     | ﬁ           | fi        |
+  | LATIN SMALL LIGATURE FL     | ﬂ           | fl        |
+  | LATIN SMALL LIGATURE FFI    | ﬃ           | ffi       |
+  | LATIN SMALL LIGATURE FFL    | ﬄ           | ffl       |
+  | LATIN SMALL LIGATURE ST     | ﬆ           | st        |
+
+
+#+name: u2a-expand-to-multichar
+#+begin_src sh
+-x
+#+end_src
 
 -----
 
@@ -1613,12 +1694,6 @@ function l {
 #+begin_src sh :tangle no
 "$@"
 #+end_src
-
-- TODO
-  - Since spaces all get converted right, replace spaces with nothing
-  - Replace forward and blackward slashes with the word itself? That is in a
-    subsitute command.
-  - Also maybe handle arrows and ...  Using words instead. (leftarrow)
 *** BashLogout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout
