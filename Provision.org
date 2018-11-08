@@ -1515,7 +1515,7 @@ Here is the function body and components.
 
 #+name: org_gcr_2018-10-26T19-19-09-05-00_cosmicality_24EAE4C8-F17A-42ED-87B1-CF508C6C7E6D
 #+begin_src sh :comments no
-function u2a {
+function u2 {
   uni2ascii \
     ⟪u2a-format⟫ \
     ⟪u2a-unenclose-circles-and-parens⟫ \
@@ -1526,7 +1526,7 @@ function u2a {
     ⟪u2a-arguments⟫
 }
 #+end_src
-ƛ
+
 - "Generate hexadecimal with prefix U (U00E9)."
 
 #+name: u2a-format

@@ -404,7 +404,7 @@ function l {
     "$@"
 }
 
-function u2a {
+function u2 {
   uni2ascii \
     -a E \
     -c \
