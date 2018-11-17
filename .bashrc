@@ -389,6 +389,19 @@ function mk {
 }
 # org_gcr_2018-10-15T12-34-46-04-00_cosmicality_B1D8576F-868C-4368-A6E8-5FA7E8813C08 ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-11-15T23-09-36-06-00_cosmicality_33751E85-2495-4176-BFAE-C5162F6B442C][org_gcr_2018-11-15T23-09-36-06-00_cosmicality_33751E85-2495-4176-BFAE-C5162F6B442C]]
+function rndfile {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <FILENAME> <NBYTES>\n"
+    printf "Pipe NBYTES from /dev/urandom into FILENAME.\n"
+    return 1
+  fi
+  local filename=$1;
+  local nbytes=$2
+  gbase64 /dev/urandom | ghead --bytes=$nbytes > $filename
+}
+# org_gcr_2018-11-15T23-09-36-06-00_cosmicality_33751E85-2495-4176-BFAE-C5162F6B442C ends here
+
 function l {
   gls \
     --almost-all \

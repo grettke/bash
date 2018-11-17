@@ -1331,6 +1331,22 @@ function mk {
 }
 #+end_src
 
+Create file with random text.
+
+#+name: org_gcr_2018-11-15T23-09-36-06-00_cosmicality_33751E85-2495-4176-BFAE-C5162F6B442C
+#+begin_src sh
+function rndfile {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <FILENAME> <NBYTES>\n"
+    printf "Pipe NBYTES from /dev/urandom into FILENAME.\n"
+    return 1
+  fi
+  local filename=$1;
+  local nbytes=$2
+  gbase64 /dev/urandom | ghead --bytes=$nbytes > $filename
+}
+#+end_src
+
 **** LS
 :PROPERTIES:
 :ID:       org_gcr_2018-09-07T21-25-20-05-00_globigerina:E21383F5-4229-4C1C-B808-0858E6A980D4
