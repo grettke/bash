@@ -308,7 +308,52 @@ fi
 FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 #+END_SRC
 
-*** BashNonInteractiveCore
+**** Constants
+:PROPERTIES:
+:ID:       org_gcr_2018-11-15T23-09-36-06-00_cosmicality:80E17869-CF91-446E-B29C-ECA9D6E5D134
+:END:
+
+These are constants but I didn't ~readonly~ them or ~declare -r~ them so that they
+can be used in strings.
+
+***** Binary Prefix
+:PROPERTIES:
+:ID:       org_gcr_2018-11-15T23-09-36-06-00_cosmicality:9AA33A8C-5F8B-4CC7-88A1-CD968E676CA3
+:END:
+
+#+begin_quote
+A [[https://en.wikipedia.org/wiki/Binary_prefix][binary prefix]] is a unit prefix for multiples of units in data processing,
+data transmission, and digital information, notably the bit and the byte, to
+indicate multiplication by a power of 2.
+
+The computer industry has historically used the units kilobyte, megabyte, and
+gigabyte, and the corresponding symbols KB, MB, and GB, in at least two
+slightly different measurement systems. In citations of main memory (RAM)
+capacity, gigabyte customarily means 1073741824 bytes. As this is a power of
+1024, and 1024 is a power of two (210), this usage is referred to as a binary
+measurement.
+
+In most other contexts, the industry uses the multipliers kilo, mega, giga,
+etc., in a manner consistent with their meaning in the International System of
+Units (SI), namely as powers of 1000. For example, a 500 gigabyte hard disk
+holds 500000000000 bytes, and a 1 Gbit/s (gigabit per second) Ethernet
+connection transfers data at 1000000000 bit/s. In contrast with the binary
+prefix usage, this use is described as a decimal prefix, as 1000 is a power of
+10 (103).
+#+end_quote
+
+#+name: org_gcr_2018-11-15T23-09-36-06-00_cosmicality_0F6AF86E-BDE3-4F68-8CA3-E561D1ACE60D
+#+begin_src sh
+KILO=$((1000**1))
+MEGA=$((1000**2))
+GIGA=$((1000**3))
+
+KIBI=$((1024**1))
+MEBI=$((1024**2))
+GIBI=$((1024**3))
+#+end_src
+
+*** Bashnoninteractivecore
 :PROPERTIES:
 :header-args: :noweb-ref BashNonInteractiveCore
 :ID:       org_gcr_2017-05-12_mara:C8D58FA9-17C0-4474-AB1E-540F715C4970
@@ -1597,7 +1642,7 @@ function u2 {
   | heavy comma quotation mark                 | "\❞"        | "\""      | double quote                  |
   | ideographic space                          | "\　"       | " "       | space                         |
   | small ampersand                            | "\﹠"       | "&"       | ampersand                     |
-  | small asterisk                           | "\﹡"       | "*"       | asterisk                      |
+  | small asterisk                             | "\﹡"       | "*"       | asterisk                      |
   | small plus sign                            | "\﹢"       | "+"       | plus sign                     |
 
 #+name: u2a-convert-char-to-approximate-ascii-equivelant

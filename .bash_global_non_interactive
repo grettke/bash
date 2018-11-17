@@ -91,6 +91,15 @@ fi
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2][org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2]]
 FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 # org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2018-11-15T23-09-36-06-00_cosmicality_0F6AF86E-BDE3-4F68-8CA3-E561D1ACE60D][org_gcr_2018-11-15T23-09-36-06-00_cosmicality_0F6AF86E-BDE3-4F68-8CA3-E561D1ACE60D]]
+KILO=$((1000**1))
+MEGA=$((1000**2))
+GIGA=$((1000**3))
+
+KIBI=$((1024**1))
+MEBI=$((1024**2))
+GIBI=$((1024**3))
+# org_gcr_2018-11-15T23-09-36-06-00_cosmicality_0F6AF86E-BDE3-4F68-8CA3-E561D1ACE60D ends here
 # org_gcr_2017-05-12_mara_0E1CBFBF-952B-45E4-8874-3B5A33EC821E ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_4351B96D-D0E6-4132-B80A-0385F6367429][org_gcr_2017-05-12_mara_4351B96D-D0E6-4132-B80A-0385F6367429]]
