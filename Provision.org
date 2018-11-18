@@ -1175,14 +1175,14 @@ Toggle grayscale.
 
 #+name: org_gcr_2018-04-16T16-05-56-05-00_mara_406331AB-CB69-485A-8AB8-F6D4EF73A23A
 #+begin_src sh
-alias togglegrayscale='osascript /Users/gcr/util/Toggle-Grayscale.scpt'
+alias togglegrayscale='osascript /Users/gcr/util/sspadtogglegrayscale.scpt'
 #+end_src
 
 Invert colors.
 
 #+name: org_gcr_2018-04-16T16-05-56-05-00_mara_28CFFB4F-74C5-450D-9635-BB7F26BE348D
 #+begin_src sh
-alias invertcolors='osascript /Users/gcr/util/Invert-Colors.scpt'
+alias invertcolors='osascript /Users/gcr/util/sspadtogglecolors.scpt'
 #+end_src
 
 Start screensaver.
@@ -1739,8 +1739,11 @@ function mu2a {
 "$@"
 #+end_src
 ***** Test
+:PROPERTIES:
+:ID:       org_gcr_2018-11-17T18-06-00-06-00_cosmicality:11DA3E00-0547-47DA-A196-6A187C24677C
+:END:
 
-Try ~mu2a utf8_sequence_0-0xfff_assigned_printable.txt~ on [[https://github.com/bits/UTF-8-Unicode-Test-Documents/blob/master/UTF-8_sequence_separated/utf8_sequence_0-0xfff_assigned_printable.txt][this]]. 
+Try ~mu2a utf8_sequence_0-0xfff_assigned_printable.txt~ on [[https://github.com/bits/UTF-8-Unicode-Test-Documents/blob/master/UTF-8_sequence_separated/utf8_sequence_0-0xfff_assigned_printable.txt][this]].
 
 *** BashLogout
 :PROPERTIES:

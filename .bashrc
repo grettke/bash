@@ -267,11 +267,11 @@ function xwnhom {
 # org_gcr_2018-02-25_mara_0B1A220A-45FA-48A9-8F9E-774D3EDB1E7B ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-04-16T16-05-56-05-00_mara_406331AB-CB69-485A-8AB8-F6D4EF73A23A][org_gcr_2018-04-16T16-05-56-05-00_mara_406331AB-CB69-485A-8AB8-F6D4EF73A23A]]
-alias togglegrayscale='osascript /Users/gcr/util/Toggle-Grayscale.scpt'
+alias togglegrayscale='osascript /Users/gcr/util/sspadtogglegrayscale.scpt'
 # org_gcr_2018-04-16T16-05-56-05-00_mara_406331AB-CB69-485A-8AB8-F6D4EF73A23A ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-04-16T16-05-56-05-00_mara_28CFFB4F-74C5-450D-9635-BB7F26BE348D][org_gcr_2018-04-16T16-05-56-05-00_mara_28CFFB4F-74C5-450D-9635-BB7F26BE348D]]
-alias invertcolors='osascript /Users/gcr/util/Invert-Colors.scpt'
+alias invertcolors='osascript /Users/gcr/util/sspadtogglecolors.scpt'
 # org_gcr_2018-04-16T16-05-56-05-00_mara_28CFFB4F-74C5-450D-9635-BB7F26BE348D ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-04-16T17-08-48-05-00_mara_6503B49F-2198-4799-A802-56A6A3291E5A][org_gcr_2018-04-16T17-08-48-05-00_mara_6503B49F-2198-4799-A802-56A6A3291E5A]]
