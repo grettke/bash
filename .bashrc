@@ -417,7 +417,7 @@ function l {
     "$@"
 }
 
-function u2 {
+function mu2a {
   uni2ascii \
     -a E \
     -c \
@@ -427,15 +427,3 @@ function u2 {
     -x \
     "$@"
 }
-
-# [[file:~/git/github/bash/Provision.org::u2a-format][u2a-format]]
--a E
-# u2a-format ends here
-
-# [[file:~/git/github/bash/Provision.org::u2a-convert-stylistic-variants][u2a-convert-stylistic-variants]]
--f
-# u2a-convert-stylistic-variants ends here
-
-# [[file:~/git/github/bash/Provision.org::u2a-expand-to-multichar][u2a-expand-to-multichar]]
--x
-# u2a-expand-to-multichar ends here

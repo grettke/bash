@@ -1560,22 +1560,22 @@ Here is the function body and components.
 
 #+name: org_gcr_2018-10-26T19-19-09-05-00_cosmicality_24EAE4C8-F17A-42ED-87B1-CF508C6C7E6D
 #+begin_src sh :comments no
-function u2 {
+function mu2a {
   uni2ascii \
-    ⟪u2a-format⟫ \
-    ⟪u2a-unenclose-circles-and-parens⟫ \
-    ⟪u2a-strip-diacritics⟫ \
-    ⟪u2a-convert-char-to-approximate-ascii-equivelant⟫ \
-    ⟪u2a-convert-stylistic-variants⟫ \
-    ⟪u2a-expand-to-multichar⟫ \
-    ⟪u2a-arguments⟫
+    ⟪mu2a-format⟫ \
+    ⟪mu2a-unenclose-circles-and-parens⟫ \
+    ⟪mu2a-strip-diacritics⟫ \
+    ⟪mu2a-convert-char-to-approximate-ascii-equivelant⟫ \
+    ⟪mu2a-convert-stylistic-variants⟫ \
+    ⟪mu2a-expand-to-multichar⟫ \
+    ⟪mu2a-arguments⟫
 }
 #+end_src
 
 - "Generate hexadecimal with prefix U (U00E9)."
 
-#+name: u2a-format
-#+begin_src sh
+#+name: mu2a-format
+#+begin_src sh :tangle no
 -a E
 #+end_src
 
@@ -1585,7 +1585,7 @@ function u2 {
   - ⮾ → U2BBE
   - ⑸ → U2478
 
-#+name: u2a-unenclose-circles-and-parens
+#+name: mu2a-unenclose-circles-and-parens
 #+begin_src sh :tangle no
 -c
 #+end_src
@@ -1596,7 +1596,7 @@ function u2 {
 - For example
   - é → e
 
-#+name: u2a-strip-diacritics
+#+name: mu2a-strip-diacritics
 #+begin_src sh :tangle no
 -d
 #+end_src
@@ -1661,7 +1661,7 @@ function u2 {
   | small asterisk                             | "\﹡"       | "*"       | asterisk                      |
   | small plus sign                            | "\﹢"       | "+"       | plus sign                     |
 
-#+name: u2a-convert-char-to-approximate-ascii-equivelant
+#+name: mu2a-convert-char-to-approximate-ascii-equivelant
 #+begin_src sh :tangle no
 -e
 #+end_src
@@ -1679,8 +1679,8 @@ function u2 {
   - ｻ → 0xFF7B
   - 𝐀 → A
 
-#+name: u2a-convert-stylistic-variants
-#+begin_src sh
+#+name: mu2a-convert-stylistic-variants
+#+begin_src sh :tangle no
 -f
 #+end_src
 
@@ -1702,7 +1702,7 @@ function u2 {
   | SMALL LETTER ASH            | æ           | ae        |
   | LIGATURE IJ                 | Ĳ           | IJ        |
   | LIGATURE ij                 | ĳ           | ij        |
-  | LIGATURE OE                 | Œ           | OE        |
+  | LIGATURE OE                 | Œ           | OE        |:
   | LIGATURE oe                 | œ           | oe        |
   | CAPITAL LETTER DZ           | Ǳ           | DZ        |
   | MIXED LETTER Dz             | ǲ           | Dz        |
@@ -1723,8 +1723,8 @@ function u2 {
   | LATIN SMALL LIGATURE ST     | ﬆ           | st        |
 
 
-#+name: u2a-expand-to-multichar
-#+begin_src sh
+#+name: mu2a-expand-to-multichar
+#+begin_src sh :tangle no
 -x
 #+end_src
 
@@ -1734,10 +1734,14 @@ function u2 {
 - ~$@~ expands to separate words: ~"$1" "$2" ...~
   - (see [[https://unix.stackexchange.com/questions/41571/what-is-the-difference-between-and][here]] for more)
 
-#+name: u2a-arguments
+#+name: mu2a-arguments
 #+begin_src sh :tangle no
 "$@"
 #+end_src
+***** Test
+
+Try ~mu2a utf8_sequence_0-0xfff_assigned_printable.txt~ on [[https://github.com/bits/UTF-8-Unicode-Test-Documents/blob/master/UTF-8_sequence_separated/utf8_sequence_0-0xfff_assigned_printable.txt][this]]. 
+
 *** BashLogout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout
