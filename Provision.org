@@ -1449,7 +1449,7 @@ time/date format with -l; see TIME_STYLE below
 
 #+name: ls-timestamp-format
 #+begin_src sh :tangle no
---time-style=long-iso
+--time-style=llll
 #+end_src
 
 Accept additional arguments to function
@@ -1744,6 +1744,110 @@ function mu2a {
 :END:
 
 Try ~mu2a utf8_sequence_0-0xfff_assigned_printable.txt~ on [[https://github.com/bits/UTF-8-Unicode-Test-Documents/blob/master/UTF-8_sequence_separated/utf8_sequence_0-0xfff_assigned_printable.txt][this]].
+
+**** pwgen
+:PROPERTIES:
+:ID:       org_gcr_2019-01-14T09-58-00-06-00_cosmicality:6EC9610F-AA2E-4A1B-9A2B-77C625D218CD
+:END:
+
+***** Options
+:PROPERTIES:
+:ID:       org_gcr_2019-01-14T09-58-00-06-00_cosmicality:A4A4E3D1-1971-49DC-91DE-ABC7023CEF5C
+:END:
+
+- -0, --no-numerals
+  - Don't include numbers in the generated passwords.
+- -1
+  - Print the generated passwords one per line.
+- -A, --no-capitalize
+   - Don't bother to include any capital letters in the generated passwords.
+- -a, --alt-phonics
+  - This option doesn't do anything special; it is present only for backwards
+    compatibility.
+- -B, --ambiguous
+  - Don't use characters that could be confused by the user when printed, such
+    as 'l' and '1', or '0' or 'O'. This reduces the number of possible
+    passwords significantly, and as such reduces the quality of the passwords.
+    It may be useful for users who have bad vision, but in general use of this
+    option is not recommended.
+- -c, --capitalize
+  - Include at least one capital letter in the password. This is the default
+    if the standard output is a tty device.
+- -C
+  - Print the generated passwords  in columns.  This is the
+  - default if the  standard output is a tty device.
+- -N, --num-passwords=num
+  - Generate num passwords. This defaults to a screenful if passwords are
+    printed by columns, and one password otherwise.
+- -n, --numerals
+  - Include at least one number in the password. This is the default if the
+    standard output is a tty device.
+- -H, --sha1=/path/to/file[#seed]
+  - Will use the sha1's hash of given file and the optional seed to create
+    password. It will allow you to compute the same password later, if you
+    remember the file, seed, and pwgen's options used. ie: pwgen -H
+    ~/your_favorite.mp3#your@email.com gives a list of possibles passwords for
+    your pop3 account, and you can ask this list again and again.
+
+    WARNING: The passwords generated  using this option are
+    not very random.  If you use this option, make sure the
+    attacker can not obtain a copy of the file.  Also, note
+    that the name of the  file may be easily available from
+    the ~/.history or ~/.bash_history file.
+- -h, --help
+  - Print a help message.
+- -r chars, --remove-chars=chars
+  - Don't use the specified characters in password. This option will disable
+    the phomeme-based generator and uses the random password generator.
+- -s, --secure
+  - Generate completely random, hard-to-memorize passwords. These should only
+    be used for machine passwords, since otherwise it's almost guaranteed that
+    users will simply write the password on a piece of paper taped to the
+    monitor...
+- -v, --no-vowels
+  - Generate random passwords that do not contain vowels or numbers that might
+    be mistaken for vowels. It provides less secure passwords to allow system
+    administrators to not have to worry with random passwords accidentally
+    contain offensive substrings.
+- -y, --symbols
+  - Include at least one special character in the password.
+
+***** Human
+:PROPERTIES:
+:ID:       org_gcr_2019-01-14T09-58-00-06-00_cosmicality:D364DA75-2ECD-4914-8C46-1D2DB9E990AE
+:END:
+
+#+name: org_gcr_2019-01-14T09-58-00-06-00_cosmicality_48AAA0E7-14E5-4BE7-9198-12154664D3F9
+#+begin_src sh
+function pwgenhuman {
+  if [[ $# -ne 1 || -z "$1" || "$1" -ne "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <N>\n"
+    printf "Generate a random human-memorable password N characters long.\n"
+    return 1
+  fi
+  local N=$1;
+  pwgen --capitalize --numerals --symbols $N 1
+}
+#+end_src
+
+***** Machine
+:PROPERTIES:
+:ID:       org_gcr_2019-01-14T09-58-00-06-00_cosmicality:A905809F-9A7F-46BE-9F86-CBF3CCAF2759
+:END:
+
+#+name: org_gcr_2019-01-14T09-58-00-06-00_cosmicality_DED3F313-B41C-4EE8-9B15-B0D922B41B0D
+#+begin_src sh
+function pwgenmachine {
+  if [[ $# -ne 1 || -z "$1" || "$1" -ne "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <N>\n"
+    printf "Generate a completely random, hard-to-memorize password that only a machine would ever use because a human could never memorize it and it's almost guaranteed that users will simply write the password on a piece of paper taped to the monitor.\n"
+    return 1
+  fi
+  local N=$1;
+  pwgen --capitalize --numerals --symbols --secure $N 1
+}
+
+#+end_src
 
 *** BashLogout
 :PROPERTIES:

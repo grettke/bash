@@ -413,7 +413,7 @@ function l {
     -l \
     --quote-name \
     --quoting-style=c \
-    --time-style=long-iso \
+    --time-style=llll \
     "$@"
 }
 
@@ -427,3 +427,27 @@ function mu2a {
     -x \
     "$@"
 }
+
+# [[file:~/git/github/bash/Provision.org::org_gcr_2019-01-14T09-58-00-06-00_cosmicality_48AAA0E7-14E5-4BE7-9198-12154664D3F9][org_gcr_2019-01-14T09-58-00-06-00_cosmicality_48AAA0E7-14E5-4BE7-9198-12154664D3F9]]
+function pwgenhuman {
+  if [[ $# -ne 1 || -z "$1" || "$1" -ne "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <N>\n"
+    printf "Generate a random human-memorable password N characters long.\n"
+    return 1
+  fi
+  local N=$1;
+  pwgen --capitalize --numerals --symbols $N 1
+}
+# org_gcr_2019-01-14T09-58-00-06-00_cosmicality_48AAA0E7-14E5-4BE7-9198-12154664D3F9 ends here
+
+# [[file:~/git/github/bash/Provision.org::org_gcr_2019-01-14T09-58-00-06-00_cosmicality_DED3F313-B41C-4EE8-9B15-B0D922B41B0D][org_gcr_2019-01-14T09-58-00-06-00_cosmicality_DED3F313-B41C-4EE8-9B15-B0D922B41B0D]]
+function pwgenmachine {
+  if [[ $# -ne 1 || -z "$1" || "$1" -ne "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <N>\n"
+    printf "Generate a completely random, hard-to-memorize password that only a machine would ever use because a human could never memorize it and it's almost guaranteed that users will simply write the password on a piece of paper taped to the monitor.\n"
+    return 1
+  fi
+  local N=$1;
+  pwgen --capitalize --numerals --symbols --secure $N 1
+}
+# org_gcr_2019-01-14T09-58-00-06-00_cosmicality_DED3F313-B41C-4EE8-9B15-B0D922B41B0D ends here
