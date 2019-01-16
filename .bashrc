@@ -413,7 +413,7 @@ function l {
     -l \
     --quote-name \
     --quoting-style=c \
-    --time-style=llll \
+    --time-style=long-iso \
     "$@"
 }
 

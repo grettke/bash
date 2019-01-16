@@ -1449,7 +1449,7 @@ time/date format with -l; see TIME_STYLE below
 
 #+name: ls-timestamp-format
 #+begin_src sh :tangle no
---time-style=llll
+--time-style=long-iso
 #+end_src
 
 Accept additional arguments to function
