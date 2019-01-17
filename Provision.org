@@ -1118,7 +1118,7 @@ Brew
 
 #+NAME: org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D
 #+BEGIN_SRC sh
-alias brupdate='brew update && brew upgrade --cleanup'
+alias brupdate='brew upgrade && brew update'
 alias brcleanupq='brew cleanup --dry-run'
 alias brcleanupr='brew cleanup'
 #+END_SRC

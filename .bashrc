@@ -225,7 +225,7 @@ alias lsmdm='ls -halt'
 # org_gcr_2017-09-16_mara_02B42BEB-94A4-451C-AFDF-7110D2AB6A15 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D][org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D]]
-alias brupdate='brew update && brew upgrade --cleanup'
+alias brupdate='brew upgrade && brew update'
 alias brcleanupq='brew cleanup --dry-run'
 alias brcleanupr='brew cleanup'
 # org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D ends here
