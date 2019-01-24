@@ -1347,6 +1347,38 @@ function rndfile {
 }
 #+end_src
 
+GMVault.
+
+#+name: org_gcr_2019-01-23T21-56-50-06-00_cosmicality_B00DE464-0C09-4AC0-913E-418729BE50E6
+#+begin_src sh
+function gmvaultsync {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <emailadddress> <directory>\n" "${FUNCNAME[0]}"
+    printf "Perform GMVault Backup of EMAILADDDRESS into DIRECTORY.\n"
+    return 1
+  fi
+  local emailaddress="$1"
+  local directory="$2"
+  printf "G M Vault Backup Of: %s Start: $(/bin/date '+%I:%M %p') To: %s\n" "$emailaddress" "$directory"
+  /usr/local/bin/gmvault sync \
+                         --type full \
+                         --db-dir "$directory" \
+                         --oauth2 \
+                         --check-db yes \
+                         --no-compression \
+                         "$emailaddress"
+  if [ $? -eq 0 ]
+  then
+    msg="G M Vault Backup Of: $emailaddress Succeeded: $(/bin/date '+%I:%M %p')"
+  else
+    msg="G M Vault Backup Of: $emailaddress Failed: $(/bin/date '+%I:%M %p')"
+  fi
+  /usr/bin/say "$msg"
+  /usr/local/bin/terminal-notifier -message "$msg"
+  printf "%s\n" "$msg"
+}
+#+end_src
+
 **** LS
 :PROPERTIES:
 :ID:       org_gcr_2018-09-07T21-25-20-05-00_globigerina:E21383F5-4229-4C1C-B808-0858E6A980D4
@@ -1687,40 +1719,40 @@ function mu2a {
 - "Expand certain characters to multicharacter sequences. The characters
   affected are the same as those affected by the -y option."
 - For example
-  | From Name                   | From "CHAR" | To "CHAR" |
-  |-----------------------------+-------------+-----------|
-  | CENT SIGN                   | ¢           | cent      |
-  | POUND SIGN                  | £           | pound     |
-  | YEN SIGN                    | ¥           | yen       |
-  | COPYRIGHT SYMBOL            | ©           | (c)       |
-  | REGISTERED SYMBOL           | ®           | (R)       |
-  | ONE QUARTER                 | ¼           | 1/4       |
-  | ONE HALF                    | ½           | 1/2       |
-  | THREE QUARTERS              | ¾           | 3/4       |
-  | CAPITAL LETTER ASH          | Æ           | AE        |
-  | SMALL LETTER SHARP S        | ß           | ss        |
-  | SMALL LETTER ASH            | æ           | ae        |
-  | LIGATURE IJ                 | Ĳ           | IJ        |
-  | LIGATURE ij                 | ĳ           | ij        |
-  | LIGATURE OE                 | Œ           | OE        |:
-  | LIGATURE oe                 | œ           | oe        |
-  | CAPITAL LETTER DZ           | Ǳ           | DZ        |
-  | MIXED LETTER Dz             | ǲ           | Dz        |
-  | SMALL LETTER DZ             | ǳ           | dz        |
-  | SMALL LETTER TS DIGRAPH     | ʦ           | ts        |
-  | HORIZONTAL ELLIPSIS         | …           | ...       |
-  | EURO SIGN                   | €           | euro      |
-  | MIDLINE HORIZONTAL ELLIPSIS | ⋯           | ...       |
-  | LEFTWARDS ARROW             | ←           | <-        |
-  | RIGHTWARDS ARROW            | →           | ->        |
-  | LEFTWARDS DOUBLE ARROW      | ⇐           | <=        |
-  | RIGHTWARDS DOUBLE ARROW     | ⇒           | =>        |
-  | LATIN SMALL LIGATURE FF     | ﬀ           | ff        |
-  | LATIN SMALL LIGATURE FI     | ﬁ           | fi        |
-  | LATIN SMALL LIGATURE FL     | ﬂ           | fl        |
-  | LATIN SMALL LIGATURE FFI    | ﬃ           | ffi       |
-  | LATIN SMALL LIGATURE FFL    | ﬄ           | ffl       |
-  | LATIN SMALL LIGATURE ST     | ﬆ           | st        |
+  | From Name                   | From "CHAR" | To "CHAR" |   |
+  |-----------------------------+-------------+-----------+---|
+  | CENT SIGN                   | ¢           | cent      |   |
+  | POUND SIGN                  | £           | pound     |   |
+  | YEN SIGN                    | ¥           | yen       |   |
+  | COPYRIGHT SYMBOL            | ©           | (c)       |   |
+  | REGISTERED SYMBOL           | ®           | (R)       |   |
+  | ONE QUARTER                 | ¼           | 1/4       |   |
+  | ONE HALF                    | ½           | 1/2       |   |
+  | THREE QUARTERS              | ¾           | 3/4       |   |
+  | CAPITAL LETTER ASH          | Æ           | AE        |   |
+  | SMALL LETTER SHARP S        | ß           | ss        |   |
+  | SMALL LETTER ASH            | æ           | ae        |   |
+  | LIGATURE IJ                 | Ĳ           | IJ        |   |
+  | LIGATURE ij                 | ĳ           | ij        |   |
+  | LIGATURE OE                 | Œ           | OE        | : |
+  | LIGATURE oe                 | œ           | oe        |   |
+  | CAPITAL LETTER DZ           | Ǳ           | DZ        |   |
+  | MIXED LETTER Dz             | ǲ           | Dz        |   |
+  | SMALL LETTER DZ             | ǳ           | dz        |   |
+  | SMALL LETTER TS DIGRAPH     | ʦ           | ts        |   |
+  | HORIZONTAL ELLIPSIS         | …           | ...       |   |
+  | EURO SIGN                   | €           | euro      |   |
+  | MIDLINE HORIZONTAL ELLIPSIS | ⋯           | ...       |   |
+  | LEFTWARDS ARROW             | ←           | <-        |   |
+  | RIGHTWARDS ARROW            | →           | ->        |   |
+  | LEFTWARDS DOUBLE ARROW      | ⇐           | <=        |   |
+  | RIGHTWARDS DOUBLE ARROW     | ⇒           | =>        |   |
+  | LATIN SMALL LIGATURE FF     | ﬀ           | ff        |   |
+  | LATIN SMALL LIGATURE FI     | ﬁ           | fi        |   |
+  | LATIN SMALL LIGATURE FL     | ﬂ           | fl        |   |
+  | LATIN SMALL LIGATURE FFI    | ﬃ           | ffi       |   |
+  | LATIN SMALL LIGATURE FFL    | ﬄ           | ffl       |   |
+  | LATIN SMALL LIGATURE ST     | ﬆ           | st        |   |
 
 
 #+name: mu2a-expand-to-multichar

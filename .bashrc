@@ -402,6 +402,35 @@ function rndfile {
 }
 # org_gcr_2018-11-15T23-09-36-06-00_cosmicality_33751E85-2495-4176-BFAE-C5162F6B442C ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2019-01-23T21-56-50-06-00_cosmicality_B00DE464-0C09-4AC0-913E-418729BE50E6][org_gcr_2019-01-23T21-56-50-06-00_cosmicality_B00DE464-0C09-4AC0-913E-418729BE50E6]]
+function gmvaultsync {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <emailadddress> <directory>\n" "${FUNCNAME[0]}"
+    printf "Perform GMVault Backup of EMAILADDDRESS into DIRECTORY.\n"
+    return 1
+  fi
+  local emailaddress="$1"
+  local directory="$2"
+  printf "G M Vault Backup Of: %s Start: $(/bin/date '+%I:%M %p') To: %s\n" "$emailaddress" "$directory"
+  /usr/local/bin/gmvault sync \
+                         --type full \
+                         --db-dir "$directory" \
+                         --oauth2 \
+                         --check-db yes \
+                         --no-compression \
+                         "$emailaddress"
+  if [ $? -eq 0 ]
+  then
+    msg="G M Vault Backup Of: $emailaddress Succeeded: $(/bin/date '+%I:%M %p')"
+  else
+    msg="G M Vault Backup Of: $emailaddress Failed: $(/bin/date '+%I:%M %p')"
+  fi
+  /usr/bin/say "$msg"
+  /usr/local/bin/terminal-notifier -message "$msg"
+  printf "%s\n" "$msg"
+}
+# org_gcr_2019-01-23T21-56-50-06-00_cosmicality_B00DE464-0C09-4AC0-913E-418729BE50E6 ends here
+
 function l {
   gls \
     --almost-all \
