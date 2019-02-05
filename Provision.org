@@ -947,6 +947,7 @@ alias gpdrsd='git fetch && git diff --dirstat origin/master'
 alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
 alias magit="emacs --no-window-system --no-init-file --load \
       ~/src/help/.org-mode-contribute.emacs.el --eval '(progn (magit-status) (delete-other-windows))'"
+alias gitshowreleases='git tag -l'
 #+END_SRC
 
 Git usability.

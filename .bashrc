@@ -111,6 +111,7 @@ alias gpdrsd='git fetch && git diff --dirstat origin/master'
 alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
 alias magit="emacs --no-window-system --no-init-file --load \
       ~/src/help/.org-mode-contribute.emacs.el --eval '(progn (magit-status) (delete-other-windows))'"
+alias gitshowreleases='git tag -l'
 # org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-08-22T06-50-28-05-00_globigerina_437CFCCE-565E-4A63-9C46-D13A00DF93FF][org_gcr_2018-08-22T06-50-28-05-00_globigerina_437CFCCE-565E-4A63-9C46-D13A00DF93FF]]
