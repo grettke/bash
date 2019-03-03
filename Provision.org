@@ -1013,7 +1013,7 @@ Easily start EMACS.
 #+NAME: org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790
 #+BEGIN_SRC sh
 alias p='emacs --debug-init&'
-alias pe='emacs -fg white -bg black --debug-init --help-no-theme&'
+alias pe='emacs -fg white -bg black --debug-init&'
 #+END_SRC
 
 Enable Bash to run under Emacs in Terminal.app.
