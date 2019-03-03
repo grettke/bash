@@ -159,7 +159,9 @@ function bxjekyll {
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
 alias p='emacs --debug-init&'
-alias pe='emacs -fg white -bg black --debug-init --help-no-theme&'
+function pe {
+  EMACSNOTHEME=t emacs -fg white -bg black --debug-init&
+}
 # org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF][org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF]]
