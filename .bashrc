@@ -158,13 +158,8 @@ function bxjekyll {
 # org_gcr_2018-02-07_mara_D59A4039-DCAC-4354-BBD8-2CBECCFDE185 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
-alias pie='emacs'
 alias p='emacs --debug-init&'
-alias pno='emacs&'
-alias pnu='emacs --debug-init -no-desktop -no-init-file --load ~/.emacs.el&'
-alias pts="emacs --debug-init --no-init-file --no-splash --background-color white --foreground-color black --vertical-scroll-bars --eval '(switch-to-buffer \"*Messages*\")' --name TEST --title TEST --load ~/src/help/.emacs.el &"
-alias pni='emacs --no-init-file&'
-alias pcon='emacs -nw --debug-init'
+alias pe='emacs -fg white -bg black --debug-init --help-no-theme&'
 # org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF][org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF]]
