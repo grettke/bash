@@ -1014,7 +1014,7 @@ Easily start EMACS.
 #+BEGIN_SRC sh
 alias p='emacs --debug-init&'
 function pe {
-   EMACSNOTHEME=t emacs -fg white -bg black --debug-init&
+   EMACSNOTHEME=t emacs --reverse-video --debug-init&
 }
 #+END_SRC
 

@@ -160,7 +160,7 @@ function bxjekyll {
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
 alias p='emacs --debug-init&'
 function pe {
-  EMACSNOTHEME=t emacs -fg white -bg black --debug-init&
+  EMACSNOTHEME=t emacs --reverse-video --debug-init&
 }
 # org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790 ends here
 
