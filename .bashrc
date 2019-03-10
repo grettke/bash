@@ -65,6 +65,10 @@ PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$(go env GOPATH)/bin:$PATH"
 PATH="~/.bin:$PATH"
 # org_gcr_2018-09-24T09-26-51-05-00_cosmicality_A526C76A-6D25-426A-9673-5DD3A1C7043A ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2019-03-09T15-54-19-06-00_cosmicality_04473434-FFA6-4214-9D75-E78A0D72DFE0][org_gcr_2019-03-09T15-54-19-06-00_cosmicality_04473434-FFA6-4214-9D75-E78A0D72DFE0]]
+PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+# org_gcr_2019-03-09T15-54-19-06-00_cosmicality_04473434-FFA6-4214-9D75-E78A0D72DFE0 ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C][org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C]]
 VAGRANT_DEFAULT_PROVIDER=virtualbox
 # org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C ends here

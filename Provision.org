@@ -883,6 +883,13 @@ A less visible bin directory.
 PATH="~/.bin:$PATH"
 #+end_src
 
+GNU Tar.
+
+#+name: org_gcr_2019-03-09T15-54-19-06-00_cosmicality_04473434-FFA6-4214-9D75-E78A0D72DFE0
+#+begin_src sh
+PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+#+end_src
+
 Use VirtualBox with Vagrant.
 
 #+NAME: org_gcr_2017-05-12_mara_B970B3B2-BB8B-4143-A9B9-5F5D8E76223C
