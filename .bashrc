@@ -163,11 +163,11 @@ function bxjekyll {
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
 function pie {
-  emacs --debug-init "$@" &
+  open /Applications/Emacs.app --args --debug-init "$@"
 }
 
 function pienthm {
-  EMACSNOTHEME=t emacs --reverse-video --debug-init "$@" &
+  EMACSNOTHEME=t pie --reverse-video "$@"
 }
 # org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790 ends here
 
