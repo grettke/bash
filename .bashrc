@@ -65,6 +65,10 @@ PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$(go env GOPATH)/bin:$PATH"
 PATH="~/.bin:$PATH"
 # org_gcr_2018-09-24T09-26-51-05-00_cosmicality_A526C76A-6D25-426A-9673-5DD3A1C7043A ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2019-03-26T22-50-43-05-00_cosmicality_FCF91723-95CC-4C1C-81A6-D73752A05050][org_gcr_2019-03-26T22-50-43-05-00_cosmicality_FCF91723-95CC-4C1C-81A6-D73752A05050]]
+PATH="/Applications/Emacs.app/Contents/MacOS/:$PATH"
+# org_gcr_2019-03-26T22-50-43-05-00_cosmicality_FCF91723-95CC-4C1C-81A6-D73752A05050 ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2019-03-09T15-54-19-06-00_cosmicality_04473434-FFA6-4214-9D75-E78A0D72DFE0][org_gcr_2019-03-09T15-54-19-06-00_cosmicality_04473434-FFA6-4214-9D75-E78A0D72DFE0]]
 PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 # org_gcr_2019-03-09T15-54-19-06-00_cosmicality_04473434-FFA6-4214-9D75-E78A0D72DFE0 ends here

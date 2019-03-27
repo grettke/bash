@@ -883,6 +883,13 @@ A less visible bin directory.
 PATH="~/.bin:$PATH"
 #+end_src
 
+Emacs
+
+#+name: org_gcr_2019-03-26T22-50-43-05-00_cosmicality_FCF91723-95CC-4C1C-81A6-D73752A05050
+#+begin_src sh
+PATH="/Applications/Emacs.app/Contents/MacOS/:$PATH"
+#+end_src
+
 GNU Tar.
 
 #+name: org_gcr_2019-03-09T15-54-19-06-00_cosmicality_04473434-FFA6-4214-9D75-E78A0D72DFE0
