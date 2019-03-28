@@ -7,7 +7,7 @@ emin=3
 amaj=${BASH_VERSINFO[0]}
 amin=${BASH_VERSINFO[1]}
 if [[ $amaj -lt $emaj || $amin -lt $emin ]]; then
-    printf "\e[31mFYI: Using Bash v$amaj.$amin.x but expecting Bash >= v$emaj.$emin.x\e[0m\n" 1>&2
+  printf "\e[31mFYI: Using Bash v$amaj.$amin.x but expecting Bash >= v$emaj.$emin.x\e[0m\n" 1>&2
 fi
 unset emaj
 unset emin
@@ -83,7 +83,7 @@ LC_COLLATE='POSIX'
 # org_gcr_2017-05-12_mara_DADA4A0B-F5B1-4DAA-A31A-1D45EE775A9E ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738][org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738]]
 if [ "$(locale charmap)" == "UTF-8" ]; then
-    echo "Character encoding expected to be 'UTF-8' and found it to be CORRECT."
+  echo "Character encoding expected to be 'UTF-8' and found it to be CORRECT."
 else
   echo "Character encoding expected to be 'UTF-8' and found it to be INCORRECT as $(locale charmap)."
 fi
@@ -105,8 +105,8 @@ GIBI=$((1024**3))
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_F379D438-E41D-4E79-A05F-75D394D7D626][org_gcr_2017-05-12_mara_F379D438-E41D-4E79-A05F-75D394D7D626]]
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_7AA5536F-EF97-4CE9-94DB-CB3438CBA65F][org_gcr_2017-05-12_mara_7AA5536F-EF97-4CE9-94DB-CB3438CBA65F]]
 if [ -z "$PS1" ] && [ -z "$DISPLAY" ]; then
-    printf "Expected an interactive shell. E0DEB2B6-DE8B-4B8D-B2AC-2FEA7D5B6B4F\n" 1>&2
-    exit 1
+  printf "Expected an interactive shell. E0DEB2B6-DE8B-4B8D-B2AC-2FEA7D5B6B4F\n" 1>&2
+  exit 1
 fi
 # org_gcr_2017-05-12_mara_7AA5536F-EF97-4CE9-94DB-CB3438CBA65F ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_7ED1D23A-73A8-4053-AE6E-D002E9A955A8][org_gcr_2017-05-12_mara_7ED1D23A-73A8-4053-AE6E-D002E9A955A8]]

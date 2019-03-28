@@ -125,10 +125,10 @@ alias gitshowreleases='git tag -l'
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-08-22T06-50-28-05-00_globigerina_437CFCCE-565E-4A63-9C46-D13A00DF93FF][org_gcr_2018-08-22T06-50-28-05-00_globigerina_437CFCCE-565E-4A63-9C46-D13A00DF93FF]]
 function gitgreplog {
   if [[ $# -eq 0 || -z "$1" ]] ; then
-      printf "Search Git commit message history for TEXT case-insensitively.\n"
-      printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
-      printf "For example add '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
-      return 1
+    printf "Search Git commit message history for TEXT case-insensitively.\n"
+    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
+    printf "For example add '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
+    return 1
   fi
   local text=$1
   shift
@@ -138,10 +138,10 @@ function gitgreplog {
 }
 function gitgrepchange {
   if [[ $# -eq 0 || -z "$1" ]] ; then
-      printf "Search Git commit change history for TEXT case-insensitively.\n"
-      printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
-      printf "For example add '--oneline' for a succinct report or '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
-      return 1
+    printf "Search Git commit change history for TEXT case-insensitively.\n"
+    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
+    printf "For example add '--oneline' for a succinct report or '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
+    return 1
   fi
   local text=$1
   shift
@@ -177,9 +177,9 @@ function pienthm {
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF][org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF]]
 if [ -z "$(type -t update_terminal_cwd)" ] || [ "$(type -t update_terminal_cwd)" != "function" ]; then
-    update_terminal_cwd() {
-      true
-    }
+  update_terminal_cwd() {
+    true
+  }
 fi
 # org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF ends here
 
@@ -266,9 +266,9 @@ function xwnhom {
   local w=512;
   local h=512;
   if [[ $# -eq 0 || -z "$1" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <\"Window Title\">\n"
-      printf "Moves window to $x,$y and resizes it to $w,$h.\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} <\"Window Title\">\n"
+    printf "Moves window to $x,$y and resizes it to $w,$h.\n"
+    return 1
   fi
   local window_name=$1;
   wmctrl -r "$window_name" -e "$gravity","$x","$y","$w","$h"
@@ -301,9 +301,9 @@ alias funlock='chflags -R nouchg'
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31][org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31]]
 function nthlineof {
   if (( "$#" < 2 )); then
-      echo 'Print the NTH line of FILE'
-      echo "Usage: ${FUNCNAME[0]} NTH FILE"
-      return 1
+    echo 'Print the NTH line of FILE'
+    echo "Usage: ${FUNCNAME[0]} NTH FILE"
+    return 1
   fi
   tail -n+"$1" "$2" | head -n1
 }
@@ -312,8 +312,8 @@ function nthlineof {
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-01-29_mara_4AD96067-259F-46FD-999B-EDD1B388C5BE][org_gcr_2018-01-29_mara_4AD96067-259F-46FD-999B-EDD1B388C5BE]]
 function wtndsyndntfy() {
   if (($# <= 2)); then
-      printf "Usage: ${FUNCNAME[0]} minutes words...\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} minutes words...\n"
+    return 1
   else
     local minutes="$1"
     local seconds=$((minutes * 60))
@@ -335,9 +335,9 @@ function wtndsyndntfy() {
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-05-10T15-49-02-05-00_mara_CE25C6C2-27E5-4AC2-93ED-724EC591025C][org_gcr_2018-05-10T15-49-02-05-00_mara_CE25C6C2-27E5-4AC2-93ED-724EC591025C]]
 function sshtmuxattach {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <Host> <Session>\n"
-      printf "SSH into HOST and attach to Tmux SESSION.\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} <Host> <Session>\n"
+    printf "SSH into HOST and attach to Tmux SESSION.\n"
+    return 1
   fi
   local host=$1;
   local session=$2
@@ -348,9 +348,9 @@ function sshtmuxattach {
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-05-10T19-26-44-05-00_mara_42653A75-6426-442C-B443-DFC5F8EF7FF1][org_gcr_2018-05-10T19-26-44-05-00_mara_42653A75-6426-442C-B443-DFC5F8EF7FF1]]
 function convert2mp4 {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
-      printf "Use ffmpeg to convert any SOURCE to a DESTINATION mp4.\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Use ffmpeg to convert any SOURCE to a DESTINATION mp4.\n"
+    return 1
   fi
   local source=$1;
   local destination=$2
@@ -370,9 +370,9 @@ function ref { # Random Element From
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-12T08-06-00-05-00_cosmicality_BDC5A325-A9AB-4E32-A7E7-A1D93691E585][org_gcr_2018-09-12T08-06-00-05-00_cosmicality_BDC5A325-A9AB-4E32-A7E7-A1D93691E585]]
 function cry {
   if (("$#" >= 2)); then
-      figlet -f "$1" "${@:2}"
+    figlet -f "$1" "${@:2}"
   elif [ "$#" -eq 1 ]; then
-      figlet "$1"
+    figlet "$1"
   else
     printf "Announce message to user maybe using a different font.\n"
     printf "Usage: ${FUNCNAME[0]} \"MESSAGES...\" | ${FUNCNAME[0]} FONT \"MESSAGES...\"\n"
@@ -382,8 +382,8 @@ function cry {
 
 function cryrnd {
   if (("$#" >= 1)); then
-      local font=`ls -b "$(brew --prefix figlet)/share/figlet/fonts"/*.flf | gshuf -n1`
-      figlet -f "$font" "$@"
+    local font=`ls -b "$(brew --prefix figlet)/share/figlet/fonts"/*.flf | gshuf -n1`
+    figlet -f "$font" "$@"
   else
     printf "Announce message to user in a random font.\n"
     printf "Usage: ${FUNCNAME[0]} \"MESSAGES..\".\n"
@@ -401,9 +401,9 @@ function mk {
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-11-15T23-09-36-06-00_cosmicality_33751E85-2495-4176-BFAE-C5162F6B442C][org_gcr_2018-11-15T23-09-36-06-00_cosmicality_33751E85-2495-4176-BFAE-C5162F6B442C]]
 function rndfile {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <FILENAME> <NBYTES>\n"
-      printf "Pipe NBYTES from /dev/urandom into FILENAME.\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} <FILENAME> <NBYTES>\n"
+    printf "Pipe NBYTES from /dev/urandom into FILENAME.\n"
+    return 1
   fi
   local filename=$1;
   local nbytes=$2
@@ -414,9 +414,9 @@ function rndfile {
 # [[file:~/git/github/bash/Provision.org::org_gcr_2019-01-23T21-56-50-06-00_cosmicality_B00DE464-0C09-4AC0-913E-418729BE50E6][org_gcr_2019-01-23T21-56-50-06-00_cosmicality_B00DE464-0C09-4AC0-913E-418729BE50E6]]
 function gmvaultsync {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-      printf "Usage: %s <emailadddress> <directory>\n" "${FUNCNAME[0]}"
-      printf "Perform GMVault Backup of EMAILADDDRESS into DIRECTORY.\n"
-      return 1
+    printf "Usage: %s <emailadddress> <directory>\n" "${FUNCNAME[0]}"
+    printf "Perform GMVault Backup of EMAILADDDRESS into DIRECTORY.\n"
+    return 1
   fi
   local emailaddress="$1"
   local directory="$2"
@@ -430,7 +430,7 @@ function gmvaultsync {
                          "$emailaddress"
   if [ $? -eq 0 ]
   then
-      msg="G M Vault Backup Of: $emailaddress Succeeded: $(/bin/date '+%I:%M %p')"
+    msg="G M Vault Backup Of: $emailaddress Succeeded: $(/bin/date '+%I:%M %p')"
   else
     msg="G M Vault Backup Of: $emailaddress Failed: $(/bin/date '+%I:%M %p')"
   fi
@@ -442,36 +442,36 @@ function gmvaultsync {
 
 function l {
   gls \
-      --almost-all \
-      --author \
-      -C \
-      --group-directories-first \
-      --si \
-      --indicator-style=classify \
-      -l \
-      --quote-name \
-      --quoting-style=c \
-      --time-style=long-iso \
-      "$@"
+    --almost-all \
+    --author \
+    -C \
+    --group-directories-first \
+    --si \
+    --indicator-style=classify \
+    -l \
+    --quote-name \
+    --quoting-style=c \
+    --time-style=long-iso \
+    "$@"
 }
 
 function mu2a {
   uni2ascii \
-      -a E \
-      -c \
-      -d \
-      -e \
-      -f \
-      -x \
-      "$@"
+    -a E \
+    -c \
+    -d \
+    -e \
+    -f \
+    -x \
+    "$@"
 }
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2019-01-14T09-58-00-06-00_cosmicality_48AAA0E7-14E5-4BE7-9198-12154664D3F9][org_gcr_2019-01-14T09-58-00-06-00_cosmicality_48AAA0E7-14E5-4BE7-9198-12154664D3F9]]
 function pwgenhuman {
   if [[ $# -ne 1 || -z "$1" || "$1" -ne "$1" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <N>\n"
-      printf "Generate a random human-memorable password N characters long.\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} <N>\n"
+    printf "Generate a random human-memorable password N characters long.\n"
+    return 1
   fi
   local N=$1;
   pwgen --capitalize --numerals --symbols $N 1
@@ -481,9 +481,9 @@ function pwgenhuman {
 # [[file:~/git/github/bash/Provision.org::org_gcr_2019-01-14T09-58-00-06-00_cosmicality_DED3F313-B41C-4EE8-9B15-B0D922B41B0D][org_gcr_2019-01-14T09-58-00-06-00_cosmicality_DED3F313-B41C-4EE8-9B15-B0D922B41B0D]]
 function pwgenmachine {
   if [[ $# -ne 1 || -z "$1" || "$1" -ne "$1" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <N>\n"
-      printf "Generate a completely random, hard-to-memorize password that only a machine would ever use because a human could never memorize it and it's almost guaranteed that users will simply write the password on a piece of paper taped to the monitor.\n"
-      return 1
+    printf "Usage: ${FUNCNAME[0]} <N>\n"
+    printf "Generate a completely random, hard-to-memorize password that only a machine would ever use because a human could never memorize it and it's almost guaranteed that users will simply write the password on a piece of paper taped to the monitor.\n"
+    return 1
   fi
   local N=$1;
   pwgen --capitalize --numerals --symbols --secure $N 1
