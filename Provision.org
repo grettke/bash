@@ -1374,6 +1374,7 @@ function gmvaultsync {
   fi
   local emailaddress="$1"
   local directory="$2"
+  local msg="Undefined"
   printf "G M Vault Backup Of: %s Start: $(/bin/date '+%I:%M %p') To: %s\n" "$emailaddress" "$directory"
   /usr/local/bin/gmvault sync \
                          --type full \
