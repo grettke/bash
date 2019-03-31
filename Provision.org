@@ -210,13 +210,6 @@ variables and dying!
 # set -o nounset
 #+END_SRC
 
-For directories, too.
-
-#+NAME: org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A
-#+BEGIN_SRC sh
-shopt -u dirspell
-#+END_SRC
-
 Put temporary files in one place.
 
 #+NAME: org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88
@@ -598,6 +591,13 @@ names can *at best* cause *complete disaster* for a distracted operator.
 #+NAME: org_gcr_2017-05-12_mara_3C1B99B3-CCE4-4C50-ABC2-FCED3C882B9A
 #+BEGIN_SRC sh
 shopt -u cdspell
+#+END_SRC
+
+For directories, too.
+
+#+NAME: org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A
+#+BEGIN_SRC sh
+shopt -u dirspell
 #+END_SRC
 
 It is too easy to accidentally leave a shell by typing Control-D. Prevent it.

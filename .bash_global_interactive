@@ -59,9 +59,6 @@ set -o noclobber
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_BDEC9D0A-D1B0-4488-8EE0-E0E665EA1641][org_gcr_2017-05-12_mara_BDEC9D0A-D1B0-4488-8EE0-E0E665EA1641]]
 # set -o nounset
 # org_gcr_2017-05-12_mara_BDEC9D0A-D1B0-4488-8EE0-E0E665EA1641 ends here
-# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A][org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A]]
-shopt -u dirspell
-# org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88][org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88]]
 TMPDIR='/tmp'
 # org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88 ends here
@@ -165,6 +162,9 @@ shopt -s huponexit
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_3C1B99B3-CCE4-4C50-ABC2-FCED3C882B9A][org_gcr_2017-05-12_mara_3C1B99B3-CCE4-4C50-ABC2-FCED3C882B9A]]
 shopt -u cdspell
 # org_gcr_2017-05-12_mara_3C1B99B3-CCE4-4C50-ABC2-FCED3C882B9A ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A][org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A]]
+shopt -u dirspell
+# org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A ends here
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_507EB29B-354F-4391-941C-9674B1706C4E][org_gcr_2017-05-12_mara_507EB29B-354F-4391-941C-9674B1706C4E]]
 set -o ignoreeof
 # org_gcr_2017-05-12_mara_507EB29B-354F-4391-941C-9674B1706C4E ends here
