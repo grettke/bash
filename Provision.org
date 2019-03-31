@@ -210,15 +210,6 @@ variables and dying!
 # set -o nounset
 #+END_SRC
 
-Assume that the user (computer or human) provided the correct directory-name
-arguments to a command and do not modify them. Auto-correction of directory
-names can *at best* cause *complete disaster* for a distracted operator.
-
-#+NAME: org_gcr_2017-05-12_mara_3C1B99B3-CCE4-4C50-ABC2-FCED3C882B9A
-#+BEGIN_SRC sh
-shopt -u cdspell
-#+END_SRC
-
 For directories, too.
 
 #+NAME: org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A
@@ -597,6 +588,15 @@ shopt -s huponexit
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:BF8365A6-5F55-4A16-9D0D-F4F7C7321779
 :END:
+
+Assume that the user (computer or human) provided the correct directory-name
+arguments to a command and do not modify them. Auto-correction of directory
+names can *at best* cause *complete disaster* for a distracted operator.
+
+#+NAME: org_gcr_2017-05-12_mara_3C1B99B3-CCE4-4C50-ABC2-FCED3C882B9A
+#+BEGIN_SRC sh
+shopt -u cdspell
+#+END_SRC
 
 It is too easy to accidentally leave a shell by typing Control-D. Prevent it.
 
