@@ -579,6 +579,8 @@ shopt -s checkjobs
 
 Send =HUP= to all child processes when the interactive parent shell exits.
 
+Use ~nohup~ for the opposite. 
+
 #+NAME: org_gcr_2017-05-12_mara_1E64FD25-CB5D-4B05-87DE-E36F6B342332
 #+BEGIN_SRC sh
 shopt -s huponexit
