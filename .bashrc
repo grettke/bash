@@ -173,6 +173,10 @@ function pie {
 function piemin {
   EMACSNOTHEME=t open --new /Applications/Emacs.app --args --debug-init --reverse-video --no-desktop "$@"
 }
+
+function gmacs {
+  open --new /Applications/Emacs.app --args --debug-init --reverse-video "$@"
+}
 # org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF][org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF]]

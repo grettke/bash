@@ -1035,6 +1035,10 @@ function pie {
 function piemin {
   EMACSNOTHEME=t open --new /Applications/Emacs.app --args --debug-init --reverse-video --no-desktop "$@"
 }
+
+function gmacs {
+    open --new /Applications/Emacs.app --args --debug-init --reverse-video "$@"
+}
 #+END_SRC
 
 Enable Bash to run under Emacs in Terminal.app.
