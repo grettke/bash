@@ -782,18 +782,18 @@ fi
 source ~/.bash_global_interactive
 #+END_SRC
 
-VIM is the best system editor.
+For a graphical operating system interface.
 
 #+NAME: org_gcr_2017-05-12_mara_3C6E3108-B304-4892-B8A2-21FA6E0F0DAA
 #+BEGIN_SRC sh
-VISUAL=vim
+VISUAL="emacs"
 #+END_SRC
 
-Use VIM for visual non-EMACS environments.
+For a terminal operating system interface.
 
 #+NAME: org_gcr_2017-05-12_mara_7F5D8B99-5A33-44C1-949A-435B3326F053
 #+BEGIN_SRC sh
-EDITOR="$VISUAL"
+EDITOR="emacs -nw"
 #+END_SRC
 
 Keep the system provisioning professional.
