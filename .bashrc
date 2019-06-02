@@ -163,15 +163,15 @@ function bxjekyll {
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
 function pie {
-  open --new /Applications/Emacs.app --args --debug-init "$@"
+  emacs --debug-init "$@"
 }
 
 function piemin {
-  EMACSNOTHEME=t open --new /Applications/Emacs.app --args --debug-init --reverse-video --no-desktop "$@"
+  EMACSNOTHEME=t emacs --debug-init --reverse-video --no-desktop "$@"
 }
 
 function gmacs {
-  open --new /Applications/Emacs.app --args --debug-init --reverse-video "$@"
+  emacs --debug-init --reverse-video "$@"
 }
 # org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790 ends here
 

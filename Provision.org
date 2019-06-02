@@ -572,7 +572,7 @@ shopt -s checkjobs
 
 Send =HUP= to all child processes when the interactive parent shell exits.
 
-Use ~nohup~ for the opposite. 
+Use ~nohup~ for the opposite.
 
 #+NAME: org_gcr_2017-05-12_mara_1E64FD25-CB5D-4B05-87DE-E36F6B342332
 #+BEGIN_SRC sh
@@ -1022,15 +1022,15 @@ Easily start EMACS.
 #+NAME: org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790
 #+BEGIN_SRC sh
 function pie {
-  open --new /Applications/Emacs.app --args --debug-init "$@"
+  emacs --debug-init "$@"
 }
 
 function piemin {
-  EMACSNOTHEME=t open --new /Applications/Emacs.app --args --debug-init --reverse-video --no-desktop "$@"
+  EMACSNOTHEME=t emacs --debug-init --reverse-video --no-desktop "$@"
 }
 
 function gmacs {
-    open --new /Applications/Emacs.app --args --debug-init --reverse-video "$@"
+  emacs --debug-init --reverse-video "$@"
 }
 #+END_SRC
 
