@@ -672,6 +672,21 @@ alias 3dir='PROMPT_DIRTRIM=3'
 alias ndir='PROMPT_DIRTRIM=0'
 #+END_SRC
 
+***** User
+:PROPERTIES:
+:ID:       org_gcr_2019-08-11T16-10-48-05-00_cosmicality:F23F90E4-5B92-490B-A751-51EC89EB1225
+:END:
+
+Get timezones: ~sudo systemsetup -listtimezones~
+
+#+name: org_gcr_2019-08-11T16-10-48-05-00_cosmicality_A8A3B457-E43E-432D-A507-39F3649B7BE1
+#+begin_src sh
+NAME='Grant Rettke'
+EMAIL='grant@wisdomandonder.com'
+ORGANIZATION="Wisdom and Wonder"
+TZ='America/Chicago'
+#+end_src
+
 ** Global Shell Configuration Files
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:0D578995-CDE4-4247-9FE3-EDDBDFB6FB22

@@ -189,4 +189,10 @@ alias 2dir='PROMPT_DIRTRIM=2'
 alias 3dir='PROMPT_DIRTRIM=3'
 alias ndir='PROMPT_DIRTRIM=0'
 # org_gcr_2017-05-12_mara_5F5E4AA5-A0FF-460B-BBE8-1AB700BCA964 ends here
+# [[file:~/git/github/bash/Provision.org::org_gcr_2019-08-11T16-10-48-05-00_cosmicality_A8A3B457-E43E-432D-A507-39F3649B7BE1][org_gcr_2019-08-11T16-10-48-05-00_cosmicality_A8A3B457-E43E-432D-A507-39F3649B7BE1]]
+NAME='Grant Rettke'
+EMAIL='grant@wisdomandonder.com'
+ORGANIZATION="Wisdom and Wonder"
+TZ='America/Chicago'
+# org_gcr_2019-08-11T16-10-48-05-00_cosmicality_A8A3B457-E43E-432D-A507-39F3649B7BE1 ends here
 # org_gcr_2017-05-12_mara_F379D438-E41D-4E79-A05F-75D394D7D626 ends here
