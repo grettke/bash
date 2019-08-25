@@ -162,6 +162,10 @@ function bxjekyll {
 }
 # org_gcr_2018-02-07_mara_D59A4039-DCAC-4354-BBD8-2CBECCFDE185 ends here
 
+# [[file:~/git/github/bash/Provision.org::org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE][org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE]]
+source "~/src/amacs/amacs.sh"
+# org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE ends here
+
 # [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790][org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790]]
 function pie {
   emacs --debug-init "$@"

@@ -1035,6 +1035,11 @@ function bxjekyll {
 :END:
 Easily start EMACS.
 
+#+NAME: org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE
+#+BEGIN_SRC sh
+source "~/src/amacs/amacs.sh"
+#+END_SRC
+
 #+NAME: org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790
 #+BEGIN_SRC sh
 function pie {
@@ -1823,7 +1828,7 @@ Try ~mu2a utf8_sequence_0-0xfff_assigned_printable.txt~ on [[https://github.com/
 - -1
   - Print the generated passwords one per line.
 - -A, --no-capitalize
-   - Don't bother to include any capital letters in the generated passwords.
+  - Don't bother to include any capital letters in the generated passwords.
 - -a, --alt-phonics
   - This option doesn't do anything special; it is present only for backwards
     compatibility.
