@@ -240,7 +240,8 @@ alias lsmdm='ls -halt'
 # org_gcr_2017-09-16_mara_02B42BEB-94A4-451C-AFDF-7110D2AB6A15 ends here
 
 # [[file:~/git/github/bash/Provision.org::org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D][org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D]]
-alias brupdate='brew upgrade && brew update'
+# alias brupdate='brew upgrade && brew update'
+alias brupdate='echo "Brew no longer supports macOS Sierra 10.12 so update packages individually as needed."'
 alias brcleanupdryrun='brew cleanup --dry-run'
 alias brcleanuprealrun='brew cleanup'
 # org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D ends here

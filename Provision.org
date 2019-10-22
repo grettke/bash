@@ -971,7 +971,7 @@ Git.
   alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
   alias gitshowtags='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
   alias magit="emacs --no-window-system --no-init-file --load \
-	~/src/help/.org-mode-contribute.emacs.el --eval '(progn (magit-status) (delete-other-windows))'"
+  ~/src/help/.org-mode-contribute.emacs.el --eval '(progn (magit-status) (delete-other-windows))'"
   alias gitshowreleases='git tag -l'
   alias gitddiff="git diff --name-status"
 #+END_SRC
@@ -1154,7 +1154,8 @@ Brew
 
 #+NAME: org_gcr_2018-01-25_mara_2F096D97-E290-454E-9D05-10E81AA9C21D
 #+BEGIN_SRC sh
-alias brupdate='brew upgrade && brew update'
+# alias brupdate='brew upgrade && brew update'
+alias brupdate='echo "Brew no longer supports macOS Sierra 10.12 so update packages individually as needed."'
 alias brcleanupdryrun='brew cleanup --dry-run'
 alias brcleanuprealrun='brew cleanup'
 #+END_SRC
