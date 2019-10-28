@@ -500,7 +500,7 @@ Show enough to stay out of trouble.
 
 #+NAME: org_gcr_2017-05-12_mara_CCFF46E0-5F46-4B41-A7F3-E6FCF6729895
 #+BEGIN_SRC sh
-PS1='\u@\h:\w$(__git_ps1 "(%s)")⮞ '
+PS1='\u@\h:\w⮞ '
 #+END_SRC
 
 Prompt two is the one that you see when you break a command into
