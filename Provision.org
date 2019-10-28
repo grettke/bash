@@ -1031,6 +1031,13 @@ function bxjekyll {
 }
 #+end_src
 
+Emacs things
+
+#+NAME: org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE
+#+BEGIN_src sh
+source ~/src/auroramacs/amacs
+#+END_SRC
+
 Last thing to do is prioritize the path
 
 #+NAME: org_gcr_2019-10-28T16-15-13-05-00_cosmicality_E5C963B1-B0C6-4FED-85BC-C4251E94C612
@@ -1042,11 +1049,6 @@ PATH="/usr/local/bin:$PATH"
 :ID:       org_gcr_2017-05-12_mara:160278CE-DE40-44A7-9509-F17B3AD5A43A
 :END:
 Easily start EMACS.
-
-#+NAME: org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE
-#+BEGIN_src sh :tangle no
-source "/Users/gcr/src/auroramacs/amacs"
-#+END_SRC
 
 #+NAME: org_gcr_2017-05-12_mara_2AD22688-DC62-4C39-AB04-A6F6F5BF6790
 #+BEGIN_src sh :tangle no
