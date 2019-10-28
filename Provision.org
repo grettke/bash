@@ -890,7 +890,7 @@ Easily access everything.
 
 #+NAME: org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176
 #+BEGIN_SRC sh :tangle no
-PATH="/usr/local/bin:$JAVA_HOME/bin:$MACTEX_BIN:$(go env GOPATH)/bin:$PATH"
+PATH="$JAVA_HOME/bin:$MACTEX_BIN:$(go env GOPATH)/bin:$PATH"
 #+END_SRC
 
 A less visible bin directory.
@@ -1030,6 +1030,13 @@ function bxjekyll {
   bundle exec jekyll "$@"
 }
 #+end_src
+
+Last thing to do is prioritize the path
+
+#+NAME: org_gcr_2019-10-28T16-15-13-05-00_cosmicality_E5C963B1-B0C6-4FED-85BC-C4251E94C612
+#+BEGIN_SRC sh
+PATH="/usr/local/bin:$PATH"
+#+END_SRC
 **** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:160278CE-DE40-44A7-9509-F17B3AD5A43A
