@@ -12,6 +12,10 @@ VISUAL="emacs"
 EDITOR="emacs -nw"
 # org_gcr_2017-05-12_mara_7F5D8B99-5A33-44C1-949A-435B3326F053 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E][org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E]]
+CCRYPT="/usr/local/opt/ccrypt"
+# org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE][org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE]]
 source ~/src/auroramacs/amacs
 # org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE ends here
