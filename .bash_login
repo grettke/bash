@@ -1,5 +1,5 @@
 # -*- mode: sh; -*-
 
-# [[file:~/git/github/bash/Provision.org::org_gcr_2017-05-12_mara_B768B118-68AB-4224-AD9C-C8FA64B7579B][org_gcr_2017-05-12_mara_B768B118-68AB-4224-AD9C-C8FA64B7579B]]
+# [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_B768B118-68AB-4224-AD9C-C8FA64B7579B][org_gcr_2017-05-12_mara_B768B118-68AB-4224-AD9C-C8FA64B7579B]]
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 # org_gcr_2017-05-12_mara_B768B118-68AB-4224-AD9C-C8FA64B7579B ends here
