@@ -16,6 +16,12 @@ EDITOR="emacs -nw"
 CCRYPT="/usr/local/opt/ccrypt"
 # org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E][org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E]]
+MACTEX_BIN="/usr/local/texlive/2019/bin/x86_64-darwin/"
+TEXMFHOME="/Users/gcr/src/texmf"
+PATH="$MACTEX_BIN:$PATH"
+# org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE][org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE]]
 source ~/src/auroramacs/amacs
 # org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE ends here

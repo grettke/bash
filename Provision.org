@@ -881,16 +881,10 @@ PROSELINT_HOME='/Users/gcr/proselint'
 Easily use TeX.
 
 #+NAME: org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E
-#+BEGIN_SRC sh :tangle no
-MACTEX_BIN='/usr/local/texlive/2018/bin/x86_64-darwin/'
-TEXMFHOME='/Users/gcr/git/gitlab/texmf'
-#+END_SRC
-
-Easily access everything.
-
-#+NAME: org_gcr_2017-05-12_mara_FBECC16D-9C81-439D-BEF4-A5414CB6A176
-#+BEGIN_SRC sh :tangle no
-PATH="$JAVA_HOME/bin:$MACTEX_BIN:$(go env GOPATH)/bin:$PATH"
+#+BEGIN_SRC sh
+MACTEX_BIN="/usr/local/texlive/2019/bin/x86_64-darwin/"
+TEXMFHOME="/Users/gcr/src/texmf"
+PATH="$MACTEX_BIN:$PATH"
 #+END_SRC
 
 A less visible bin directory.
