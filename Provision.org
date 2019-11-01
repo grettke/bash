@@ -752,6 +752,7 @@ Only interactive sessions requires this configuration.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4FB15878-C40F-4D80-A73B-B0D9A1561F58
 #+BEGIN_SRC sh :comments no
+#!/usr/local/bin/bash
 # -*- mode: sh; -*-
 #+END_SRC
 
@@ -759,7 +760,9 @@ Execute the same configuration as every non-login interactive shell.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4C32C1AE-EF81-4469-9B77-78D2FEF9CD52
 #+BEGIN_SRC sh
-if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+if [ -f /Users/gcr/.bashrc ]; then
+  source /Users/gcr/.bashrc;
+fi
 #+END_SRC
 
 *** BashRc
