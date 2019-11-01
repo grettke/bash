@@ -1263,6 +1263,7 @@ Accept additional arguments to function
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E467EC86-F272-47CD-B9F9-7655B3ACB0AF
 #+BEGIN_src sh :comments no
+#!/usr/local/bin/bash
 # -*- mode: sh; -*-
 #+END_SRC
 
