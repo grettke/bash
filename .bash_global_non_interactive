@@ -2,17 +2,21 @@
 
 # [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_0E1CBFBF-952B-45E4-8874-3B5A33EC821E][org_gcr_2017-05-12_mara_0E1CBFBF-952B-45E4-8874-3B5A33EC821E]]
 # [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_347A5539-7A7D-4802-8147-B3AE55F068F5][org_gcr_2017-05-12_mara_347A5539-7A7D-4802-8147-B3AE55F068F5]]
-emaj=4
-emin=3
-amaj=${BASH_VERSINFO[0]}
-amin=${BASH_VERSINFO[1]}
-if [[ $amaj -lt $emaj || $amin -lt $emin ]]; then
-  printf "\e[31mFYI: Using Bash v$amaj.$amin.x but expecting Bash >= v$emaj.$emin.x\e[0m\n" 1>&2
-fi
-unset emaj
-unset emin
-unset amaj
-unset amin
+function gcrbashcheck {
+  local expected_major=4
+  local expected_minor=3
+  local actual_major="${BASH_VERSINFO[0]}"
+  local actual_minor="${BASH_VERSINFO[1]}"
+  printf "Using Bash %s\n" "$BASH_VERSION"
+  if [[ $actual_major -gt $expected_major ]]; then
+    return
+  elif [[ $actual_major -eq $expected_major && $actual_minor -ge $expected_minor ]]; then
+    return
+  else
+    printf "\e[31mFYI: Using Bash v$actual_major.$actual_minor but expecting Bash >= v$expected_major.$expected_minor\e[0m\n" 1>&2
+  fi
+}
+gcrbashcheck
 # org_gcr_2017-05-12_mara_347A5539-7A7D-4802-8147-B3AE55F068F5 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_0E6696C1-1C98-4DDE-92E7-8939C9EE9AD7][org_gcr_2017-05-12_mara_0E6696C1-1C98-4DDE-92E7-8939C9EE9AD7]]
 set -o braceexpand
@@ -60,26 +64,26 @@ set -o noclobber
 # set -o nounset
 # org_gcr_2017-05-12_mara_BDEC9D0A-D1B0-4488-8EE0-E0E665EA1641 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88][org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88]]
-TMPDIR='/tmp'
+TMPDIR="/tmp"
 # org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_753ED6DC-B506-4619-939C-0172E6F2C263][org_gcr_2017-05-12_mara_753ED6DC-B506-4619-939C-0172E6F2C263]]
 set -o hashall
 shopt -s checkhash
 # org_gcr_2017-05-12_mara_753ED6DC-B506-4619-939C-0172E6F2C263 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_E4AF0A48-8164-47D4-8250-1C8D94440751][org_gcr_2017-05-12_mara_E4AF0A48-8164-47D4-8250-1C8D94440751]]
-LANG='en_US.UTF-8'
+LANG="en_US.UTF-8"
 # org_gcr_2017-05-12_mara_E4AF0A48-8164-47D4-8250-1C8D94440751 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_28B1D8B4-4298-4DA4-AB9D-0BFA13F5DAEB][org_gcr_2017-05-12_mara_28B1D8B4-4298-4DA4-AB9D-0BFA13F5DAEB]]
-LC_ALL='en_US.UTF-8'
+LC_ALL="en_US.UTF-8"
 # org_gcr_2017-05-12_mara_28B1D8B4-4298-4DA4-AB9D-0BFA13F5DAEB ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_DADA4A0B-F5B1-4DAA-A31A-1D45EE775A9E][org_gcr_2017-05-12_mara_DADA4A0B-F5B1-4DAA-A31A-1D45EE775A9E]]
-LC_COLLATE='POSIX'
+LC_COLLATE="POSIX"
 # org_gcr_2017-05-12_mara_DADA4A0B-F5B1-4DAA-A31A-1D45EE775A9E ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738][org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738]]
 if [ "$(locale charmap)" == "UTF-8" ]; then
-  echo "Character encoding expected to be 'UTF-8' and found it to be CORRECT."
+  printf "Character encoding expected to be 'UTF-8' and found it to be CORRECT.\n"
 else
-  echo "Character encoding expected to be 'UTF-8' and found it to be INCORRECT as $(locale charmap)."
+  printf "Character encoding expected to be 'UTF-8' and found it to be INCORRECT as $(locale charmap).\n"
 fi
 # org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2][org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2]]
