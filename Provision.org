@@ -15,7 +15,7 @@
 
 Define this system using Bash 4.3.* features. Warn if not at least.
 
-#+NAME: org_gcr_2017-05-12_mara_347A5539-7A7D-4802-8147-B3AE55F068F5
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_435FF2EC-213F-4D6A-94B9-613AD6F153DD
 #+BEGIN_SRC sh :tangle
 function gcrbashcheck {
   local expected_major=4
@@ -48,7 +48,7 @@ Programatically generate expressions (Brace Expansion) using
 - Pattern matching to create a list of names of files
 - Sequence expression
 
-#+NAME: org_gcr_2017-05-12_mara_0E6696C1-1C98-4DDE-92E7-8939C9EE9AD7
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E96DA766-2B22-430B-A38C-78E261051396
 #+BEGIN_SRC sh
 set -o braceexpand
 #+END_SRC
@@ -57,7 +57,7 @@ set -o braceexpand
 Define key-pair values for command's dynamic extent before calling the command
 and nowhere else. Doing otherwise breaks ~alias~ for example in a surprising way.
 
-#+NAME: org_gcr_2017-05-12_mara_926D405F-5873-4A24-8FC4-7EBA0461B931
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_66B9DD8E-B586-4738-84CC-28E8874A455D
 #+BEGIN_SRC sh
 set +o keyword
 #+END_SRC
@@ -90,7 +90,7 @@ When an error occurs remain in the shell so that the system operator can
 research wha happened in that context. Don't exit the shell because there was
 an error. Enabling this causes the shell to exit immediately.
 
-#+NAME: org_gcr_2017-05-12_mara_79BFD638-FE36-4CFF-A0E5-853A1DC3232C
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_967CE969-FFC5-472B-AE89-239CE444DC3A
 #+BEGIN_SRC sh
 set +o errexit
 #+END_SRC
@@ -99,21 +99,21 @@ The result of a pipeline is the result of the last expression to exit on error
 or zero if they all completed successfully. This reads like "short circuit"
 evaluation but I'm not sure it is. Perform research on this.
 
-#+NAME: org_gcr_2017-05-12_mara_860A07FB-3B57-46CA-A611-279FFEC2E648
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_20398471-203E-4F93-8D03-0DBB02A274B8
 #+BEGIN_SRC sh
 set -o pipefail
 #+END_SRC
 
 When there are no file matches found report an error.
 
-#+NAME: org_gcr_2017-05-12_mara_6C8B18D4-BCA4-4567-A837-F8026C4BD773
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_8B5E53E8-0EE3-4DF2-A3E9-41FCF1CCD2C7
 #+BEGIN_SRC sh
 shopt -s failglob
 #+END_SRC
 
 Report an error when you ~shift~ more parameters than you received.
 
-#+NAME: org_gcr_2017-05-12_mara_041DA23E-092A-4105-ACDF-DC4B6DE3395C
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_3E25F3E3-E0F6-4D80-A6DB-94C3303F3B4B
 #+BEGIN_SRC sh
 shopt -s shift_verbose
 #+END_SRC
@@ -127,28 +127,28 @@ Every change (creation and modification) made to the parent shell
 environment (functions and variables) should be automatically exported to every
 child shell environment.
 
-#+NAME: org_gcr_2017-05-12_mara_049B118A-2116-433B-A615-7562BB6EA96A
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C1364853-3E34-472B-8004-BF3BC47EEE97
 #+BEGIN_SRC sh
 set -o allexport
 #+END_SRC
 
 Do the same thing for the ~ERR~ trap.
 
-#+NAME: org_gcr_2017-05-12_mara_24CEAF97-19A1-4A8B-B117-5947FFCE0205
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_1F299BFF-21E0-4D50-A713-17C9C8CADE62
 #+BEGIN_SRC sh
 set -o errtrace
 #+END_SRC
 
 Do the same thing for the ~DEBUG~ and ~RETURN~ traps.
 
-#+NAME: org_gcr_2017-05-12_mara_46496694-A8A2-4FDC-8DBF-904D2428F4A3
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_5648762E-59A3-41F3-8380-ADCBA7CA5460
 #+BEGIN_SRC sh
 set -o functrace
 #+END_SRC
 
 Pass a non-directory arguments to =cd= and change to the value of that variable.
 
-#+NAME: org_gcr_2017-05-12_mara_3B144B8C-033E-4774-9C05-E10A41AD5FCD
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_5086373B-8721-4CDD-AA92-B75DA243C6E9
 #+BEGIN_SRC sh
 shopt -s cdable_vars
 #+END_SRC
@@ -160,7 +160,7 @@ shopt -s cdable_vars
 
 Enable it.
 
-#+NAME: org_gcr_2017-05-12_mara_F84A7422-909B-4535-AD90-A88859A3FDE4
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_AF2A0697-02F6-4E62-B57B-A115A7CD7B4B
 #+BEGIN_SRC sh
 set -o monitor
 #+END_SRC
@@ -169,7 +169,7 @@ Immediately report terminated job status. This might appear to be a Interactive
 feature, but it isn't. It appears hear reporting errors in the log file
 immediately realizing this Bash configurations "Fail Fast" goal.
 
-#+NAME: org_gcr_2017-05-12_mara_8CA20790-92D6-48E9-8842-725DB3340C3E
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_AA2CC1E2-A20D-4EEC-9E3D-7B27D5212ACD
 #+BEGIN_SRC sh
 set -o notify
 #+END_SRC
@@ -184,7 +184,7 @@ Provide but disable interactive debugging by default.
 Instead force children to change their configuration script,
 run with ~bash --debugger~ or set ~shopt -s extdebug~.
 
-#+NAME: org_gcr_2017-05-12_mara_3E52EBAC-15FB-4E4D-A62B-F12B389E3548
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_972F36A6-F2C2-4C2A-9026-F9F7E7AAEC06
 #+BEGIN_SRC sh
 shopt -u extdebug
 #+END_SRC
@@ -198,7 +198,7 @@ Prevent output redirection using ‘>’, ‘>&’, and ‘<>’ from overwritin
 files.
 #+END_QUOTE
 
-#+NAME: org_gcr_2017-05-12_mara_CECC73AC-BD9D-4F6B-BA3C-23C5E0A3DAF5
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E5E5E938-D419-475F-9250-8EAEFD5E3CE6
 #+BEGIN_SRC sh
 set -o noclobber
 #+END_SRC
@@ -209,14 +209,14 @@ in individual shell scripts; not the global configuration because doing so
 prevents Bash system initialization by preventing you to define any new
 variables and dying!
 
-#+NAME: org_gcr_2017-05-12_mara_BDEC9D0A-D1B0-4488-8EE0-E0E665EA1641
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A2FA681A-D61B-4E19-B3B2-E22DEE12949B
 #+BEGIN_SRC sh
 # set -o nounset
 #+END_SRC
 
 Put temporary files in one place.
 
-#+NAME: org_gcr_2017-05-12_mara_C00DD046-CF32-412B-BF19-054E49A3CF88
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F66F1637-E3CB-4D66-BC8F-DE64C8F73901
 #+BEGIN_SRC sh
 TMPDIR="/tmp"
 #+END_SRC
@@ -229,7 +229,7 @@ TMPDIR="/tmp"
 Cache recently executed command source locations in a lookup table and search
 that before searching the lookup path to find a command.
 
-#+NAME: org_gcr_2017-05-12_mara_753ED6DC-B506-4619-939C-0172E6F2C263
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_44FDFC0D-611C-41FC-81B0-F67A01DBA87B
 #+BEGIN_SRC sh
 set -o hashall
 shopt -s checkhash
@@ -254,28 +254,28 @@ required if all of your settings are the same.
 
 Set anything un-set.
 
-#+NAME: org_gcr_2017-05-12_mara_E4AF0A48-8164-47D4-8250-1C8D94440751
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4E46C65A-9282-4D52-91CE-E1739DEB4033
 #+BEGIN_SRC sh
 LANG="en_US.UTF-8"
 #+END_SRC
 
 Override everything
 
-#+NAME: org_gcr_2017-05-12_mara_28B1D8B4-4298-4DA4-AB9D-0BFA13F5DAEB
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_35A437FE-A052-4125-8F69-20A929F8E118
 #+BEGIN_SRC sh
 LC_ALL="en_US.UTF-8"
 #+END_SRC
 
 Sor how you expect it.
 
-#+NAME: org_gcr_2017-05-12_mara_DADA4A0B-F5B1-4DAA-A31A-1D45EE775A9E
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_ACFFFBB0-E8E9-4439-BD83-3480AA275A2C
 #+BEGIN_SRC sh
 LC_COLLATE="POSIX"
 #+END_SRC
 
 Verify encoding.
 
-#+NAME: org_gcr_2017-05-12_mara_FD9EBF97-7D75-4F70-B775-097170AD8738
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_54E6F702-5327-41A1-A266-8300363A3466
 #+BEGIN_SRC sh
 if [ "$(locale charmap)" == "UTF-8" ]; then
     printf "Character encoding expected to be 'UTF-8' and found it to be CORRECT.\n"
@@ -291,7 +291,7 @@ fi
 
 [[https://www.freedesktop.org/software/fontconfig/fontconfig-devel/fcconfigfilename.html][Configure Fontconfig]].
 
-#+NAME: org_gcr_2017-05-12_mara_E6EE4FDA-2B48-40E6-B46C-90D52A5F09B2
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_8256A72B-A6AF-4074-8EEC-98FFB829AB19
 #+BEGIN_SRC sh
 FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 #+END_SRC
@@ -330,7 +330,7 @@ prefix usage, this use is described as a decimal prefix, as 1000 is a power of
 10 (103).
 #+end_quote
 
-#+name: org_gcr_2018-11-15T23-09-36-06-00_cosmicality_0F6AF86E-BDE3-4F68-8CA3-E561D1ACE60D
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D3D094C2-C5EE-4250-ACB6-17CE53AAE339
 #+begin_src sh
 KILO=$((1000**1))
 MEGA=$((1000**2))
@@ -349,7 +349,7 @@ GIBI=$((1024**3))
 
 Only use this functionality in a non-interactive session.
 
-#+NAME: org_gcr_2017-05-12_mara_E102B51D-9068-41F6-8731-760FD49FFB95
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_481003BA-6E95-4F32-8FC4-23A919931953
 #+BEGIN_SRC sh
 if [ "$PS1" ]; then
     printf "Expected a non-interactive shell. 0F4DD650-97C5-492A-BCDD-8D74DBD8AAD0\n" 1>&2
@@ -360,14 +360,14 @@ fi
 Never take input from the user interactively and disable the use of those
 commands.
 
-#+NAME: org_gcr_2017-05-12_mara_6E441F28-E8CC-44D8-B01B-CF548D36A502
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_DB35E7B7-3624-4FF2-9ADD-335909BEFB72
 #+BEGIN_SRC sh
 unset -f read select
 #+END_SRC
 
 Aliases are only for interactive users.
 
-#+NAME: org_gcr_2017-05-12_mara_2573D577-8D1B-41AB-A384-E148098FF9DC
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F569D00F-DBAA-460F-BB01-7B4F28476B0E
 #+BEGIN_SRC sh
 shopt -u expand_aliases
 #+END_SRC
@@ -380,7 +380,7 @@ shopt -u expand_aliases
 
 Only use this functionality in an interactive session.
 
-#+NAME: org_gcr_2017-05-12_mara_7AA5536F-EF97-4CE9-94DB-CB3438CBA65F
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_0B6FF317-9B60-4BFA-83F7-D63D917BBDA5
 #+BEGIN_SRC sh
 if [ -z "$PS1" ] && [ -z "$DISPLAY" ]; then
     printf "Expected an interactive shell. E0DEB2B6-DE8B-4B8D-B2AC-2FEA7D5B6B4F\n" 1>&2
@@ -402,14 +402,14 @@ escape sequences.
 
 Programatically complete command options.
 
-#+NAME: org_gcr_2017-05-12_mara_7ED1D23A-73A8-4053-AE6E-D002E9A955A8
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_8793176F-40C6-4AA9-86DD-8E306B4821A2
 #+BEGIN_SRC sh
 shopt -s progcomp
 #+END_SRC
 
 Aliases are only for interactive users.
 
-#+NAME: org_gcr_2017-05-12_mara_EC6DAFA7-D87A-4612-BB16-D7B881FC2345
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D3791EDF-59DE-4935-B804-B81B8350B154
 #+BEGIN_SRC sh
 shopt -s expand_aliases
 #+END_SRC
@@ -421,7 +421,7 @@ shopt -s expand_aliases
 
 Enable command history.
 
-#+NAME: org_gcr_2017-05-12_mara_FEFE92C2-FA92-4E2B-A04A-D52E5F22F9AE
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E3DEA841-A496-48AA-8139-DA234B02E93C
 #+BEGIN_SRC sh
 set -o history
 shopt -s histappend
@@ -429,21 +429,21 @@ shopt -s histappend
 
 Enable ~!~ substitution.
 
-#+NAME: org_gcr_2017-05-12_mara_3254D394-D9E8-424F-A731-DD6CC0E260F4
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A0331EBC-EA7D-4CA2-9290-F27A04E70186
 #+BEGIN_SRC sh
 set -o histexpand
 #+END_SRC
 
 Easily re-edit historical multi-line commands.
 
-#+NAME: org_gcr_2017-05-12_mara_BFC4B457-8C68-41EF-80FD-75AB86823392
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_5FE7E6C7-56CC-48E0-BF30-43E217408179
 #+BEGIN_SRC sh
 shopt -s cmdhist
 #+END_SRC
 
 Separate lines with newline characters
 
-#+NAME: org_gcr_2017-05-12_mara_194963F2-30A3-46F2-818F-62230144A793
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_9CC3AF80-74BE-4E1B-87DD-D5EF3C5EB880
 #+BEGIN_SRC sh
 shopt -s lithist
 #+END_SRC
@@ -455,35 +455,35 @@ shopt -s lithist
 
 Use EMACS keybindings for ~Readline~ and ~read~.
 
-#+NAME: org_gcr_2017-05-12_mara_1E0347AC-0211-4347-8022-E1F48CBD4E82
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_018167EF-6446-4B9C-ADAB-A961069AB738
 #+BEGIN_SRC sh
 set -o emacs
 #+END_SRC
 
 When the command name is a directory in the =$PWD= pass it to =cd=.
 
-#+NAME: org_gcr_2017-05-12_mara_A0DF3FF8-7752-4343-AC5A-3EDC967D7A72
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4F328706-CBAC-4F89-A457-CA35E364FD59
 #+BEGIN_SRC sh
 shopt -s autocd
 #+END_SRC
 
 Refresh ~LINES~ and ~COLUMNS~ after every command.
 
-#+NAME: org_gcr_2017-05-12_mara_FA8774A1-F091-4079-A388-9B421AC8D60D
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B4B0412D-F14E-4D7D-8BA7-9F73784F6056
 #+BEGIN_SRC sh
 shopt -s checkwinsize
 #+END_SRC
 
 Automatically complete directory-names and replace the original name value.
 
-#+NAME: org_gcr_2017-05-12_mara_BA4FF735-8A1F-4F21-A210-17EAF843906F
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_1AE4C37C-DFFC-48B0-9B99-14CE8435AFD2
 #+BEGIN_SRC sh
 shopt -s complete_fullquote
 #+END_SRC
 
 Enable comments.
 
-#+NAME: org_gcr_2017-05-12_mara_D180576A-276D-4DE5-9D29-7564F2475A96
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_73420B99-FD8E-4470-A1E8-490BB9AB62FC
 #+BEGIN_SRC sh
 shopt -s interactive_comments
 #+END_SRC
@@ -493,7 +493,7 @@ executed.
 
 Make the session easier to read.
 
-#+NAME: org_gcr_2018-01-05_mara_A846E613-BE6C-4EB3-A35B-3CBBB8BBE534
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3
 #+BEGIN_SRC sh
 PS0="OK...\n\n"
 #+END_SRC
@@ -502,7 +502,7 @@ Prompt one is the one that you see all the time.
 
 Show enough to stay out of trouble.
 
-#+NAME: org_gcr_2017-05-12_mara_CCFF46E0-5F46-4B41-A7F3-E6FCF6729895
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_2347CD33-4AC1-4523-89CB-8B2B52D6A009
 #+BEGIN_SRC sh
 PS1="\u@\h:\w⮞ "
 #+END_SRC
@@ -512,7 +512,7 @@ multiple lines.
 
 Emphasize what is happening because I usually end up here accidentally.
 
-#+NAME: org_gcr_2017-05-12_mara_FB232A77-A71E-42AD-B676-4B075ECA02B8
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_09530882-ADE9-4970-AB87-8020083BC3D6
 #+BEGIN_SRC sh
 PS2="(continued)⮞ "
 #+END_SRC
@@ -547,7 +547,7 @@ do
 done
 #+END_EXAMPLE
 
-#+NAME: org_gcr_2017-05-12_mara_E1274B85-D3B6-467B-AF20-1C88338478CC
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75C4DEC-3C19-45D4-8E6B-0990ABB665AC
 #+BEGIN_SRC sh
 PS3="Please make a selection: "
 #+END_SRC
@@ -556,7 +556,7 @@ Prompt four is what you see when you enable debugging with ~set -x~.
 
 I copied this from the documentation.
 
-#+NAME: org_gcr_2017-05-12_mara_3E7AA843-749F-48B1-B433-467C0848C9AF
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F
 #+BEGIN_SRC sh
 PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
 #+END_SRC
@@ -568,7 +568,7 @@ PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?
 
 Never exit a shell when there are still running or stopped jobs.
 
-#+NAME: org_gcr_2017-05-12_mara_02C16377-D022-4394-BC8D-C24ADFDE4E0D
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F9A928CA-DFA3-4754-948D-351D6BBFF8DA
 #+BEGIN_SRC sh
 shopt -s checkjobs
 #+END_SRC
@@ -577,7 +577,7 @@ Send =HUP= to all child processes when the interactive parent shell exits.
 
 Use ~nohup~ for the opposite.
 
-#+NAME: org_gcr_2017-05-12_mara_1E64FD25-CB5D-4B05-87DE-E36F6B342332
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_8D6F0E61-9A42-4D76-A323-1812B75F9326
 #+BEGIN_SRC sh
 shopt -s huponexit
 #+END_SRC
@@ -591,21 +591,21 @@ Assume that the user (computer or human) provided the correct directory-name
 arguments to a command and do not modify them. Auto-correction of directory
 names can *at best* cause *complete disaster* for a distracted operator.
 
-#+NAME: org_gcr_2017-05-12_mara_3C1B99B3-CCE4-4C50-ABC2-FCED3C882B9A
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_873A00A3-B906-4F6D-B46D-19D7047F313E
 #+BEGIN_SRC sh
 shopt -u cdspell
 #+END_SRC
 
 For directories, too.
 
-#+NAME: org_gcr_2017-05-12_mara_5B6D47E6-FB08-4398-B788-D1BF2BCBA57A
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F983ACF0-4E03-48AC-A84F-24418C43950D
 #+BEGIN_SRC sh
 shopt -u dirspell
 #+END_SRC
 
 It is too easy to accidentally leave a shell by typing Control-D. Prevent it.
 
-#+NAME: org_gcr_2017-05-12_mara_507EB29B-354F-4391-941C-9674B1706C4E
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B7B60544-EBE1-4F0D-88C8-F1AA182AF39A
 #+BEGIN_SRC sh
 set -o ignoreeof
 #+END_SRC
@@ -613,7 +613,7 @@ set -o ignoreeof
 Never attempt to complete a command in the contents of =PATH= when nothing is
 typed in.
 
-#+NAME: org_gcr_2017-05-12_mara_843EB944-DB5E-4CAC-9EA5-F2901D7B74B4
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D3F8A409-9F7E-4F8D-BBCD-C4A90F32CEF2
 #+BEGIN_SRC sh
 shopt -s no_empty_cmd_completion
 #+END_SRC
@@ -635,14 +635,14 @@ Ignore every command that
 - Starts with any number of spaces
 - Starts with any number of tabs
 
-#+NAME: org_gcr_2017-05-12_mara_E452AE63-E6F8-484E-B7F6-84E6546F5359
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_265E647C-A9FA-446A-8A84-2FFEB5B9F411
 #+BEGIN_SRC sh
 HISTIGNORE="[ \t]*"
 #+END_SRC
 
 Keep a rich and expansive history.
 
-#+NAME: org_gcr_2017-05-12_mara_8359BDC0-45BD-47FB-95D6-C0E6C769D5F7
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_CD8E7DFE-65C9-4139-8254-31B6EE9F2A97
 #+BEGIN_SRC sh
 HISTSIZE=250
 HISTFILESIZE=250
@@ -660,7 +660,7 @@ Usually you know what directory you are sitting in so only show that.
 
 Turn it off or on for 1-3 or all directories.
 
-#+NAME: org_gcr_2017-05-12_mara_5F5E4AA5-A0FF-460B-BBE8-1AB700BCA964
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_3C2800D0-7925-4D49-B877-FD1BFC6FBA55
 #+BEGIN_SRC sh
 PROMPT_DIRTRIM=1
 alias 1dir="PROMPT_DIRTRIM=1"
@@ -676,7 +676,7 @@ alias ndir="PROMPT_DIRTRIM=0"
 
 Get timezones: ~sudo systemsetup -listtimezones~
 
-#+name: org_gcr_2019-08-11T16-10-48-05-00_cosmicality_A8A3B457-E43E-432D-A507-39F3649B7BE1
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_25DFD1E8-1C14-4CE4-B04F-A15E3925BDE8
 #+begin_src sh
 NAME="Grant Rettke"
 EMAIL="grant@wisdomandonder.com"
@@ -695,21 +695,21 @@ TZ="America/Chicago"
 :ID:       org_gcr_2017-05-12_mara:DB3A9415-85FC-46FD-BF39-F723E5235C3C
 :END:
 
-#+NAME: org_gcr_2017-05-12_mara_67873436-0189-42A6-ADB2-B6471031D04B
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F9F1BC81-7520-447B-A109-BF751606EED7
 #+BEGIN_SRC sh :comments no
 # -*- mode: sh; -*-
 #+END_SRC
 
 Every Bash session requires the same configuration.
 
-#+NAME: org_gcr_2017-05-12_mara_0E1CBFBF-952B-45E4-8874-3B5A33EC821E
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_634C0987-EA09-47B9-8470-749A4C554F77
 #+BEGIN_SRC sh
 ⟪BashCore⟫
 #+END_SRC
 
 Only non-interactive sessions requires this configuration.
 
-#+NAME: org_gcr_2017-05-12_mara_4351B96D-D0E6-4132-B80A-0385F6367429
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_7EFCBF3C-69CF-4F80-B7AD-7034E0577A90
 #+BEGIN_SRC sh
 ⟪BashNonInteractiveCore⟫
 #+END_SRC
@@ -720,21 +720,21 @@ Only non-interactive sessions requires this configuration.
 :ID:       org_gcr_2017-05-12_mara:1E8A5E47-9189-40EB-A9B9-8D4835775A7A
 :END:
 
-#+NAME: org_gcr_2017-05-12_mara_06661C55-0548-444F-B1F5-6C8B4CD0B2EE
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F707E96F-A74C-4FA9-9149-B7DDB72B218B
 #+BEGIN_SRC sh :comments no
 # -*- mode: sh; -*-
 #+END_SRC
 
 Every Bash session requires the same configuration.
 
-#+NAME: org_gcr_2017-05-12_mara_D2BF3725-6200-4F81-A5C0-F84290C166E7
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BD3F4F38-92D6-4310-9276-E7DCF825E421
 #+BEGIN_SRC sh
 ⟪BashCore⟫
 #+END_SRC
 
 Only interactive sessions requires this configuration.
 
-#+NAME: org_gcr_2017-05-12_mara_F379D438-E41D-4E79-A05F-75D394D7D626
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F55305F4-02E8-4610-9C08-8AD1FDD9A46B
 #+BEGIN_SRC sh
 ⟪BashInteractiveCore⟫
 #+END_SRC
@@ -750,14 +750,14 @@ Only interactive sessions requires this configuration.
 :ID:       org_gcr_2017-05-12_mara:93967906-378F-4A5B-B53F-1068F93DF8BB
 :END:
 
-#+NAME: org_gcr_2017-05-12_mara_924FD018-EFEB-41F8-9F87-C37C2DE7D115
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4FB15878-C40F-4D80-A73B-B0D9A1561F58
 #+BEGIN_SRC sh :comments no
 # -*- mode: sh; -*-
 #+END_SRC
 
 Execute the same configuration as every non-login interactive shell.
 
-#+NAME: org_gcr_2017-05-12_mara_B768B118-68AB-4224-AD9C-C8FA64B7579B
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4C32C1AE-EF81-4469-9B77-78D2FEF9CD52
 #+BEGIN_SRC sh
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 #+END_SRC
@@ -768,40 +768,40 @@ if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 :ID:       org_gcr_2017-05-12_mara:93E59E15-9E26-4FEE-800A-4DB748AB395F
 :END:
 
-#+NAME: org_gcr_2017-05-12_mara_DC49A9A0-404B-4F1A-8B2E-18391BB70B07
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_321C8889-A026-4FBF-B76A-EE8EF4AB7D9C
 #+BEGIN_SRC sh :comments no
 # -*- mode: sh; -*-
 #+END_SRC
 
-#+NAME: org_gcr_2017-05-12_mara_F255F97F-5EED-4DCF-AAAF-2AC396CEBB4A
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F
 #+BEGIN_SRC sh
 source ~/.bash_global_interactive
 #+END_SRC
 
 For a graphical operating system interface.
 
-#+NAME: org_gcr_2017-05-12_mara_3C6E3108-B304-4892-B8A2-21FA6E0F0DAA
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC
 #+BEGIN_SRC sh
 VISUAL="emacs"
 #+END_SRC
 
 For a terminal operating system interface.
 
-#+NAME: org_gcr_2017-05-12_mara_7F5D8B99-5A33-44C1-949A-435B3326F053
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_3ABFD9E6-3802-4C27-8DCB-6B4E2A2E797A
 #+BEGIN_SRC sh
 EDITOR="emacs -nw"
 #+END_SRC
 
 Add Emacs's info.
 
-#+NAME: org_gcr_2017-05-12_mara_33C886C8-3042-462B-A950-56C47183FF5A
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75AEC7A-88E0-4D11-B950-740FD568F659
 #+BEGIN_SRC sh
 INFOPATH="/Applications/Emacs.app/Contents/Resources/info:$INFOPATH"
 #+END_SRC
 
 Enable Bash to run under Emacs in Terminal.app.
 
-#+name: org_gcr_2018-09-15T00-32-28-05-00_cosmicality_3A46A350-1DD1-49EA-B329-3C21E13EFEDF
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C617F66A-B15C-4E1B-B113-C22C53DC9A8C
 #+begin_src sh
 if [ -z "$(type -t update_terminal_cwd)" ] || [ "$(type -t update_terminal_cwd)" != "function" ]; then
   update_terminal_cwd() {
@@ -812,21 +812,21 @@ fi
 
 Auroramacs.
 
-#+NAME: org_gcr_2019-08-24T20-28-53-05-00_cosmicality_BDA76603-A521-4EE8-92D7-1786056B50BE
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830
 #+BEGIN_src sh
 source ~/src/auroramacs/amacs
 #+END_SRC
 
 ccrypt.
 
-#+NAME: org_gcr_2017-05-12_mara_79922A61-22AD-4752-88FC-2E1D2F2ED72E
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34
 #+BEGIN_SRC sh
 CCRYPT="/usr/local/opt/ccrypt"
 #+END_SRC
 
 Checksum.
 
-#+name: org_gcr_2018-09-07T07-00-42-05-00_globigerina_AD266B1B-A2DF-430B-8E6F-178C273634F8
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A1CD5BCA-9A8B-410C-BE5D-54C51BE32338
 #+begin_src sh
 alias sha256summake="shasum --algorithm 256 --portable"
 alias sha256sumcheck="shasum --algorithm 256 --warn --check"
@@ -834,7 +834,7 @@ alias sha256sumcheck="shasum --algorithm 256 --warn --check"
 
 TeX
 
-#+NAME: org_gcr_2017-05-12_mara_20BA6772-D19D-44F5-BAD0-90FB3C2EEB2E
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084
 #+BEGIN_SRC sh
 MACTEX_BIN="/usr/local/texlive/2019/bin/x86_64-darwin/"
 TEXMFHOME="/Users/gcr/src/texmf"
@@ -843,7 +843,7 @@ PATH="$MACTEX_BIN:$PATH"
 
 Git.
 
-#+NAME: org_gcr_2017-07-19_mara_52FD32BE-0395-4D3E-A23B-5F0930296FB7
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_121CCF66-A7DD-479D-AFCE-658143CCDDC4
 #+BEGIN_SRC sh
 alias g="git"
 alias gitunpull="git reset --keep HEAD@{1}"
@@ -866,7 +866,7 @@ alias gitddiff="git diff --name-status"
 
 Git usability.
 
-#+name: org_gcr_2018-08-22T06-50-28-05-00_globigerina_437CFCCE-565E-4A63-9C46-D13A00DF93FF
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_89EDF172-801F-4804-AE2C-05AA7B4BC4E9
 #+begin_src sh
 function gitgreplog {
   if [[ $# -eq 0 || -z "$1" ]] ; then
@@ -899,7 +899,7 @@ function gitgrepchange {
 
 Last thing to do is prioritize the path
 
-#+NAME: org_gcr_2019-10-28T16-15-13-05-00_cosmicality_E5C963B1-B0C6-4FED-85BC-C4251E94C612
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F
 #+BEGIN_SRC sh
 PATH="/usr/local/bin:$PATH"
 #+END_SRC
@@ -910,7 +910,7 @@ PATH="/usr/local/bin:$PATH"
 
 Good defaults.
 
-#+NAME: org_gcr_2017-05-12_mara_20EA8DAB-53C6-4170-9417-8BCC8A628AEB
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D63C2874-1AA5-45A4-8AF5-7D22086D06D0
 #+BEGIN_src sh
 alias mkdir="mkdir -pv"
 alias mount="mount | column -t"
@@ -922,7 +922,7 @@ alias kk="cd .."
 
 Shortcuts.
 
-#+NAME: org_gcr_2017-05-12_mara_A68EF2AE-850B-4A51-82F8-A6017D6E9F93
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F5D98D7B-1A37-4DAB-A9FE-AB8A7423BC0A
 #+BEGIN_src sh
 alias h="history"
 alias j="jobs -l"
@@ -930,7 +930,7 @@ alias j="jobs -l"
 
 No surprises.
 
-#+NAME: org_gcr_2017-05-12_mara_76E0132B-936A-4492-AE87-D77E96B4EFAD
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D8E39942-AE75-4744-82AB-A674EB7DF401
 #+BEGIN_src sh
 alias cd..="cd .."
 alias ..=cd ..
@@ -938,7 +938,7 @@ alias ..=cd ..
 
 Get download speed [fn:167e637e4fea0629:https://www.gulshansingh.com/posts/useful-bash-aliases/].
 
-#+NAME: org_gcr_2017-05-12_mara_C59D7D22-E7E2-48EE-BE47-0DDB237D6A9C
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5763981-9448-4B4F-A394-88AA19259B64
 #+BEGIN_src sh
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
 #+END_SRC
@@ -948,28 +948,28 @@ working directory and I'm irritated because I'm lazy and I don't want to type
 =cd $OLDPWD=. Don't get rid of =cd= though because I do use it and it is faster
 than =cd ~/=.
 
-#+NAME: org_gcr_2017-05-12_mara_CC3E03CE-A882-4AB1-9BBF-A2C49F4F3A0A
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4AA2E64E-7074-4F68-BC50-E3DE1158A50C
 #+BEGIN_src sh
 alias bk="cd $OLDPWD"
 #+END_SRC
 
 Exit.
 
-#+name: org_gcr_2018-09-18T19-49-15-05-00_cosmicality_45B64A5B-E999-454C-AFE7-F70F9DFA0170
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B8745F35-A481-4EA8-BF7A-72C484C3B0E1
 #+begin_src
 alias e=exit
 #+end_src
 
 Always use ~Bash~ *never* use the default shell.
 
-#+NAME: org_gcr_2017-05-12_mara_9D66A8AA-5E98-4977-86B8-30670147F43C
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5F403E4-38F9-4F02-A6C8-3253F00D3935
 #+BEGIN_src sh
 alias sh="/usr/local/bin/bash"
 #+END_SRC
 
 Listing by modification forward and backward.
 
-#+NAME: org_gcr_2017-09-16_mara_02B42BEB-94A4-451C-AFDF-7110D2AB6A15
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_23D19C9E-1B43-4C25-9BFA-48FE1EA04A90
 #+BEGIN_src sh
 alias lsmd="ls -haltr"
 alias lsmdm="ls -halt"
@@ -977,7 +977,7 @@ alias lsmdm="ls -halt"
 
 Elpa.
 
-#+name: org_gcr_2018-01-30_mara_7B5D1FA6-610E-481A-A894-4DC7938C7EF0
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A0DFBB0D-D86E-44C4-B374-6BA3E9B50060
 #+begin_src
 function emackup() {
   cd ~/.emacs.d
@@ -990,28 +990,28 @@ function emackup() {
 
 Toggle grayscale.
 
-#+name: org_gcr_2018-04-16T16-05-56-05-00_mara_406331AB-CB69-485A-8AB8-F6D4EF73A23A
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F1D33BB7-E1D7-4D87-83BC-F2D6EE2CB318
 #+begin_src sh
 alias togglegrayscale="osascript /Users/gcr/util/sspadtogglegrayscale.scpt"
 #+end_src
 
 Invert colors.
 
-#+name: org_gcr_2018-04-16T16-05-56-05-00_mara_28CFFB4F-74C5-450D-9635-BB7F26BE348D
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B5C1EDD5-6C74-49F7-BBE5-BC3E24CD7B96
 #+begin_src sh
 alias invertcolors="osascript /Users/gcr/util/sspadtogglecolors.scpt"
 #+end_src
 
 Start screensaver.
 
-#+name: org_gcr_2018-04-16T17-08-48-05-00_mara_6503B49F-2198-4799-A802-56A6A3291E5A
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471
 #+begin_src sh
 alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
 #+end_src
 
 File Management.
 
-#+name: org_gcr_2018-09-07T07-00-42-05-00_globigerina_1EED4991-58C8-46D7-9257-3A5A46A6533F
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C088763E-0AB7-40CC-8802-D3A60DCA4B3F
 #+begin_src sh :tangle no
 alias flock="chflags -R uchg"
 alias funlock="chflags -R nouchg"
@@ -1022,7 +1022,7 @@ alias funlock="chflags -R nouchg"
 :END:
 Get the NTH line of a FILE via https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-file
 
-#+NAME: org_gcr_2017-10-07_mara_E5581884-EE63-457F-BE00-C5AAA3A68C31
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD
 #+BEGIN_src sh
 function nthlineof {
   if (( "$#" < 2 )); then
@@ -1036,7 +1036,7 @@ function nthlineof {
 
 Wait for Alpha seconds before saying Beta.
 
-#+name: org_gcr_2018-01-29_mara_4AD96067-259F-46FD-999B-EDD1B388C5BE
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_7EDCDC57-8D76-47EA-BF5B-61EF5D4F4826
 #+begin_src sh
 function wtndsyndntfy() {
   if (($# <= 2)); then
@@ -1062,7 +1062,7 @@ function wtndsyndntfy() {
 
 Tmux
 
-#+name: org_gcr_2018-05-10T15-49-02-05-00_mara_CE25C6C2-27E5-4AC2-93ED-724EC591025C
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_8E51A0F2-11C7-42FA-BC4F-5AE9A4FC0199
 #+begin_src sh
 function sshtmuxattach {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
@@ -1078,7 +1078,7 @@ function sshtmuxattach {
 
 Random element of array via [[https://unix.stackexchange.com/a/269963/310466][Jeff Schaller]].
 
-#+name: org_gcr_2018-09-12T08-06-00-05-00_cosmicality_913F19E8-7E97-4C5F-BA7E-1DA8CA6F8F40
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_5C9BF5DB-DCF6-4BAD-874F-C88C4AFA87E7
 #+begin_src sh
 function ref { # Random Element From
   declare -a array=("$@")
@@ -1088,7 +1088,7 @@ function ref { # Random Element From
 #+end_src
 
 Announce things.
-#+name: org_gcr_2018-09-12T08-06-00-05-00_cosmicality_BDC5A325-A9AB-4E32-A7E7-A1D93691E585
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_576F9B35-6C9B-420A-83AB-7BF1414F2FD2
 #+begin_src sh
 function cry {
   if (("$#" >= 2)); then
@@ -1116,7 +1116,7 @@ function cryrnd {
 
 Make.
 
-#+name: org_gcr_2018-10-15T12-34-46-04-00_cosmicality_B1D8576F-868C-4368-A6E8-5FA7E8813C08
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_18F5C6DD-63FD-4FCD-8CDF-43E0DE7FC782
 #+begin_src sh :tangle no
 function mk {
   make "$@"
@@ -1125,7 +1125,7 @@ function mk {
 
 Create file with random text.
 
-#+name: org_gcr_2018-11-15T23-09-36-06-00_cosmicality_33751E85-2495-4176-BFAE-C5162F6B442C
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_FD0E042D-3752-4211-9E87-428358A966D6
 #+begin_src sh
 function rndfile {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
@@ -1150,7 +1150,7 @@ July 2018 -- GNU coreutils 8.30
 
 ls - list directory contents
 
-#+name: org_gcr_2018-09-07T21-25-20-05-00_globigerina_1F948D28-CEF0-4389-AB1B-F8546C7DE36E
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_9199861D-C57A-4D84-A700-A5EDF590A151
 #+begin_src sh :comments no :tangle no
 function l {
   gls \
@@ -1170,21 +1170,21 @@ function l {
 
 do not list implied . and ..
 
-#+name: ls-hide-dotdot-dirs
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_98C50996-7D46-4441-B630-A1EDC7686CA8
 #+begin_src sh :tangle no :tangle no
 --almost-all
 #+end_src
 
 with -l, print the author of each file
 
-#+name: ls-show-file-author
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_0672D9D2-580E-4AE2-A2EB-10A7161042FE
 #+begin_src sh :tangle no :tangle no
 --author
 #+end_src
 
 list entries by columns
 
-#+name: ls-list-in-columns
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C0FDF610-CDD1-49C1-87CE-8768B8EC469E
 #+begin_src sh :tangle no :tangle no
 -C
 #+end_src
@@ -1194,7 +1194,7 @@ group directories before files;
 can be augmented  with a --sort option, but  any use of
 --sort=\,none\/ (-U) disables grouping
 
-#+name: ls-list-dirs-first
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_670C05E7-9183-4E9F-A6EF-63003C0A9FE5
 #+begin_src sh :tangle no :tangle no
 --group-directories-first
 #+end_src
@@ -1202,7 +1202,7 @@ can be augmented  with a --sort option, but  any use of
 print sizes like 1K 234M 2G etc.
 but use the SI format, powers of 1000 not 1024
 
-#+name: ls-file-size-units-policy
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_93A56B49-0409-40D0-AEA7-0E7E34E90015
 #+begin_src sh :tangle no :tangle no
 --si
 #+end_src
@@ -1211,21 +1211,21 @@ append indicator  with style WORD to  entry names: none
 (default),   slash   (-p),   file-type   (--file-type),
 classify (-F)
 
-#+name: ls-show-file-type-indicator
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_667898EC-568C-493F-BAE8-E6B8EA07E2FE
 #+begin_src sh :tangle no :tangle no
 --indicator-style=classify
 #+end_src
 
 use a long listing format
 
-#+name: ls-use-long-lines
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_0DADBB2F-38FE-435E-A126-FE62E39ABF80
 #+begin_src sh :tangle no :tangle no
 -l
 #+end_src
 
 enclose entry names in double quotes
 
-#+name: ls-double-quote-entry-names
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C051FCDC-132D-445A-97A6-764F70299057
 #+begin_src sh :tangle no :tangle no
 --quote-name
 #+end_src
@@ -1235,14 +1235,14 @@ locale,     shell,      shell-always,     shell-escape,
 shell-escape-always, c, escape (overrides QUOTING_STYLE
 environment variable)
 
-#+name: ls-quoting-style
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_153C7779-AEA2-45DD-B9CF-52B0FB56E6E9
 #+begin_src sh :tangle no :tangle no
 --quoting-style=c
 #+end_src
 
 time/date format with -l; see TIME_STYLE below
 
-#+name: ls-timestamp-format
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_466DC1A2-5D4D-47B2-BE7C-8221186DE8A0
 #+begin_src sh :tangle no :tangle no
 --time-style=long-iso
 #+end_src
@@ -1251,7 +1251,7 @@ Accept additional arguments to function
 ~"$@"~ expands to separate words: ~"$1" "$2" ...~
 (see [[https://unix.stackexchange.com/questions/41571/what-is-the-difference-between-and][here]])
 
-#+name: ls-take-additional-arguments
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_6988CFFC-C51E-4A8D-9EF4-21886A0A3AD8
 #+begin_src sh :tangle no :tangle no
 "$@"
 #+end_src
@@ -1261,12 +1261,12 @@ Accept additional arguments to function
 :ID:       org_gcr_2017-05-12_mara:04FEFF46-AAC6-4AB8-9876-199B271DA565
 :END:
 
-#+NAME: org_gcr_2017-05-12_mara_D13E029E-8D74-48EB-965E-74828C36B68A
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E467EC86-F272-47CD-B9F9-7655B3ACB0AF
 #+BEGIN_src sh :comments no
 # -*- mode: sh; -*-
 #+END_SRC
 
-#+NAME: org_gcr_2017-05-12_mara_16299394-BEC8-40E0-946C-AF75251006C0
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_EE58713E-028B-43CB-875A-6C3BBB6F28EA
 #+BEGIN_src sh
 printf "Logging out of Bash.\n"
 #+END_SRC
