@@ -37,7 +37,7 @@ shopt -s failglob
 shopt -s shift_verbose
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_3E25F3E3-E0F6-4D80-A6DB-94C3303F3B4B ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_C1364853-3E34-472B-8004-BF3BC47EEE97][org_gcr_2019-11-01T00-47-07-05-00_host1.org_C1364853-3E34-472B-8004-BF3BC47EEE97]]
-set -o allexport
+set +o allexport
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_C1364853-3E34-472B-8004-BF3BC47EEE97 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_1F299BFF-21E0-4D50-A713-17C9C8CADE62][org_gcr_2019-11-01T00-47-07-05-00_host1.org_1F299BFF-21E0-4D50-A713-17C9C8CADE62]]
 set -o errtrace

@@ -124,12 +124,12 @@ shopt -s shift_verbose
 :END:
 
 Every change (creation and modification) made to the parent shell
-environment (functions and variables) should be automatically exported to every
-child shell environment.
+environment (functions and variables) should *not* be automatically exported to every
+child shell environment because it is isn't intuitive to virtually every Bash user.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C1364853-3E34-472B-8004-BF3BC47EEE97
 #+BEGIN_SRC sh
-set -o allexport
+set +o allexport
 #+END_SRC
 
 Do the same thing for the ~ERR~ trap.
