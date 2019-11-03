@@ -110,11 +110,6 @@ alias h="history"
 alias j="jobs -l"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_F5D98D7B-1A37-4DAB-A9FE-AB8A7423BC0A ends here
 
-# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_D8E39942-AE75-4744-82AB-A674EB7DF401][org_gcr_2019-11-01T00-47-07-05-00_host1.org_D8E39942-AE75-4744-82AB-A674EB7DF401]]
-alias cd..="cd .."
-alias ..=cd ..
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_D8E39942-AE75-4744-82AB-A674EB7DF401 ends here
-
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5763981-9448-4B4F-A394-88AA19259B64][org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5763981-9448-4B4F-A394-88AA19259B64]]
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5763981-9448-4B4F-A394-88AA19259B64 ends here

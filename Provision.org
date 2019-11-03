@@ -931,14 +931,6 @@ alias h="history"
 alias j="jobs -l"
 #+END_SRC
 
-No surprises.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D8E39942-AE75-4744-82AB-A674EB7DF401
-#+BEGIN_src sh
-alias cd..="cd .."
-alias ..=cd ..
-#+END_SRC
-
 Get download speed [fn:167e637e4fea0629:https://www.gulshansingh.com/posts/useful-bash-aliases/].
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5763981-9448-4B4F-A394-88AA19259B64
