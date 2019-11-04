@@ -904,7 +904,7 @@ Last thing to do is prioritize the path
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F
 #+BEGIN_SRC sh
-PATH="/usr/local/bin:$PATH"
+PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
 #+END_SRC
 **** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
 :PROPERTIES:
