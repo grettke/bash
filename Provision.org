@@ -900,6 +900,34 @@ function gitgrepchange {
 
 #+end_src
 
+Gmail.
+
+#+NAME: org_gcr_2019-11-03T19-37-00-06-00_host1.org_494DCCE3-9592-4B2F-B529-86EEB7C13792
+#+BEGIN_SRC sh
+function gmailsync {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <emailadddress> <directory>\n" "${FUNCNAME[0]}"
+    printf "Perform Got Your Back Backup of EMAILADDDRESS into DIRECTORY.\n"
+    return 1
+  fi
+  local emailaddress="$1"
+  local directory="$2"
+  local msg="Undefined"
+  printf "Got Your Back Backup Of: %s Start: $(/bin/date '+%I:%M %p') To: %s\n" "$emailaddress" "$directory"
+  /Users/gcr/bin/gyb \
+    --email "$emailaddress" \
+    --local-folder "$directory" \
+    --action backup
+  if [ $? -eq 0 ]; then
+    msg="Got Your Back Backup Of: $emailaddress Succeeded: $(/bin/date '+%I:%M %p')"
+  else
+    msg="Got Your Back Backup Of: $emailaddress Failed: $(/bin/date '+%I:%M %p')"
+  fi
+  /usr/bin/say "$msg"
+  printf "%s\n" "$msg"
+}
+
+#+END_SRC
 Last thing to do is prioritize the path
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F
