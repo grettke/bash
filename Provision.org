@@ -218,7 +218,7 @@ Put temporary files in one place.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F66F1637-E3CB-4D66-BC8F-DE64C8F73901
 #+BEGIN_SRC sh
-TMPDIR="/tmp"
+export TMPDIR="/tmp"
 #+END_SRC
 
 ***** Performance
@@ -256,21 +256,21 @@ Set anything un-set.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4E46C65A-9282-4D52-91CE-E1739DEB4033
 #+BEGIN_SRC sh
-LANG="en_US.UTF-8"
+export LANG="en_US.UTF-8"
 #+END_SRC
 
 Override everything
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_35A437FE-A052-4125-8F69-20A929F8E118
 #+BEGIN_SRC sh
-LC_ALL="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 #+END_SRC
 
 Sor how you expect it.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_ACFFFBB0-E8E9-4439-BD83-3480AA275A2C
 #+BEGIN_SRC sh
-LC_COLLATE="POSIX"
+export LC_COLLATE="POSIX"
 #+END_SRC
 
 Verify encoding.
@@ -293,7 +293,7 @@ fi
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_8256A72B-A6AF-4074-8EEC-98FFB829AB19
 #+BEGIN_SRC sh
-FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 #+END_SRC
 
 **** Constants
@@ -332,13 +332,13 @@ prefix usage, this use is described as a decimal prefix, as 1000 is a power of
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D3D094C2-C5EE-4250-ACB6-17CE53AAE339
 #+begin_src sh
-KILO=$((1000**1))
-MEGA=$((1000**2))
-GIGA=$((1000**3))
+export KILO=$((1000**1))
+export MEGA=$((1000**2))
+export GIGA=$((1000**3))
 
-KIBI=$((1024**1))
-MEBI=$((1024**2))
-GIBI=$((1024**3))
+export KIBI=$((1024**1))
+export MEBI=$((1024**2))
+export GIBI=$((1024**3))
 #+end_src
 
 *** Bashnoninteractivecore
@@ -495,7 +495,7 @@ Make the session easier to read.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3
 #+BEGIN_SRC sh
-PS0="OK...\n\n"
+export PS0="OK...\n\n"
 #+END_SRC
 
 Prompt one is the one that you see all the time.
@@ -504,7 +504,7 @@ Show enough to stay out of trouble.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_2347CD33-4AC1-4523-89CB-8B2B52D6A009
 #+BEGIN_SRC sh
-PS1="\u@\h:\w⮞ "
+export PS1="\u@\h:\w⮞ "
 #+END_SRC
 
 Prompt two is the one that you see when you break a command into
@@ -514,7 +514,7 @@ Emphasize what is happening because I usually end up here accidentally.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_09530882-ADE9-4970-AB87-8020083BC3D6
 #+BEGIN_SRC sh
-PS2="(continued)⮞ "
+export PS2="(continued)⮞ "
 #+END_SRC
 
 Prompt three is the one that you see when you are presented with a menu
@@ -525,7 +525,7 @@ You see it when ~select~ makes you to make a selection.
 The following [[https://askubuntu.com/questions/1705/how-can-i-create-a-select-menu-in-a-shell-script][example]] demonstrates its use:
 
 #+BEGIN_EXAMPLE
-PS3="Please enter your choice: "
+export PS3="Please enter your choice: "
 options=("Option 1" "Option 2" "Option 3" "Quit")
 select opt in "${options[@]}"
 do
@@ -549,7 +549,7 @@ done
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75C4DEC-3C19-45D4-8E6B-0990ABB665AC
 #+BEGIN_SRC sh
-PS3="Please make a selection: "
+export PS3="Please make a selection: "
 #+END_SRC
 
 Prompt four is what you see when you enable debugging with ~set -x~.
@@ -558,7 +558,7 @@ I copied this from the documentation.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F
 #+BEGIN_SRC sh
-PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
+export PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
 #+END_SRC
 
 ***** Job Control
@@ -637,7 +637,7 @@ Ignore every command that
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_265E647C-A9FA-446A-8A84-2FFEB5B9F411
 #+BEGIN_SRC sh
-HISTIGNORE="[ \t]*"
+export HISTIGNORE="[ \t]*"
 #+END_SRC
 
 Keep a rich and expansive history.
@@ -678,10 +678,10 @@ Get timezones: ~sudo systemsetup -listtimezones~
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_25DFD1E8-1C14-4CE4-B04F-A15E3925BDE8
 #+begin_src sh
-NAME="Grant Rettke"
-EMAIL="grant@wisdomandonder.com"
-ORGANIZATION="Wisdom and Wonder"
-TZ="America/Chicago"
+export NAME="Grant Rettke"
+export EMAIL="grant@wisdomandonder.com"
+export ORGANIZATION="Wisdom and Wonder"
+export TZ="America/Chicago"
 #+end_src
 
 ** Global Shell Configuration Files
@@ -785,21 +785,21 @@ For a graphical operating system interface.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC
 #+BEGIN_SRC sh
-VISUAL="emacs"
+export VISUAL="emacs"
 #+END_SRC
 
 For a terminal operating system interface.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_3ABFD9E6-3802-4C27-8DCB-6B4E2A2E797A
 #+BEGIN_SRC sh
-EDITOR="emacs -nw"
+export EDITOR="emacs -nw"
 #+END_SRC
 
 Add Emacs's info.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75AEC7A-88E0-4D11-B950-740FD568F659
 #+BEGIN_SRC sh
-INFOPATH="/Applications/Emacs.app/Contents/Resources/info:$INFOPATH"
+export INFOPATH="/Applications/Emacs.app/Contents/Resources/info:$INFOPATH"
 #+END_SRC
 
 Enable Bash to run under Emacs in Terminal.app.
@@ -824,7 +824,7 @@ ccrypt.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34
 #+BEGIN_SRC sh
-CCRYPT="/usr/local/opt/ccrypt"
+export CCRYPT="/usr/local/opt/ccrypt"
 #+END_SRC
 
 Checksum.
@@ -839,9 +839,9 @@ TeX
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084
 #+BEGIN_SRC sh
-MACTEX_BIN="/usr/local/texlive/2019/bin/x86_64-darwin/"
-TEXMFHOME="/Users/gcr/src/texmf"
-PATH="$MACTEX_BIN:$PATH"
+export MACTEX_BIN="/usr/local/texlive/2019/bin/x86_64-darwin/"
+export TEXMFHOME="/Users/gcr/src/texmf"
+export PATH="$MACTEX_BIN:$PATH"
 #+END_SRC
 
 Git.
@@ -932,7 +932,7 @@ Last thing to do is prioritize the path
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F
 #+BEGIN_SRC sh
-PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
+export PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
 #+END_SRC
 **** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
 :PROPERTIES:

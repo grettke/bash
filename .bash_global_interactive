@@ -64,20 +64,20 @@ set -o noclobber
 # set -o nounset
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_A2FA681A-D61B-4E19-B3B2-E22DEE12949B ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_F66F1637-E3CB-4D66-BC8F-DE64C8F73901][org_gcr_2019-11-01T00-47-07-05-00_host1.org_F66F1637-E3CB-4D66-BC8F-DE64C8F73901]]
-TMPDIR="/tmp"
+export TMPDIR="/tmp"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_F66F1637-E3CB-4D66-BC8F-DE64C8F73901 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_44FDFC0D-611C-41FC-81B0-F67A01DBA87B][org_gcr_2019-11-01T00-47-07-05-00_host1.org_44FDFC0D-611C-41FC-81B0-F67A01DBA87B]]
 set -o hashall
 shopt -s checkhash
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_44FDFC0D-611C-41FC-81B0-F67A01DBA87B ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_4E46C65A-9282-4D52-91CE-E1739DEB4033][org_gcr_2019-11-01T00-47-07-05-00_host1.org_4E46C65A-9282-4D52-91CE-E1739DEB4033]]
-LANG="en_US.UTF-8"
+export LANG="en_US.UTF-8"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_4E46C65A-9282-4D52-91CE-E1739DEB4033 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_35A437FE-A052-4125-8F69-20A929F8E118][org_gcr_2019-11-01T00-47-07-05-00_host1.org_35A437FE-A052-4125-8F69-20A929F8E118]]
-LC_ALL="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_35A437FE-A052-4125-8F69-20A929F8E118 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_ACFFFBB0-E8E9-4439-BD83-3480AA275A2C][org_gcr_2019-11-01T00-47-07-05-00_host1.org_ACFFFBB0-E8E9-4439-BD83-3480AA275A2C]]
-LC_COLLATE="POSIX"
+export LC_COLLATE="POSIX"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_ACFFFBB0-E8E9-4439-BD83-3480AA275A2C ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_54E6F702-5327-41A1-A266-8300363A3466][org_gcr_2019-11-01T00-47-07-05-00_host1.org_54E6F702-5327-41A1-A266-8300363A3466]]
 if [ "$(locale charmap)" == "UTF-8" ]; then
@@ -87,16 +87,16 @@ else
 fi
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_54E6F702-5327-41A1-A266-8300363A3466 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_8256A72B-A6AF-4074-8EEC-98FFB829AB19][org_gcr_2019-11-01T00-47-07-05-00_host1.org_8256A72B-A6AF-4074-8EEC-98FFB829AB19]]
-FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_8256A72B-A6AF-4074-8EEC-98FFB829AB19 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_D3D094C2-C5EE-4250-ACB6-17CE53AAE339][org_gcr_2019-11-01T00-47-07-05-00_host1.org_D3D094C2-C5EE-4250-ACB6-17CE53AAE339]]
-KILO=$((1000**1))
-MEGA=$((1000**2))
-GIGA=$((1000**3))
+export KILO=$((1000**1))
+export MEGA=$((1000**2))
+export GIGA=$((1000**3))
 
-KIBI=$((1024**1))
-MEBI=$((1024**2))
-GIBI=$((1024**3))
+export KIBI=$((1024**1))
+export MEBI=$((1024**2))
+export GIBI=$((1024**3))
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_D3D094C2-C5EE-4250-ACB6-17CE53AAE339 ends here
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_BD3F4F38-92D6-4310-9276-E7DCF825E421 ends here
 
@@ -142,19 +142,19 @@ shopt -s complete_fullquote
 shopt -s interactive_comments
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_73420B99-FD8E-4470-A1E8-490BB9AB62FC ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3][org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3]]
-PS0="OK...\n\n"
+export PS0="OK...\n\n"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_2347CD33-4AC1-4523-89CB-8B2B52D6A009][org_gcr_2019-11-01T00-47-07-05-00_host1.org_2347CD33-4AC1-4523-89CB-8B2B52D6A009]]
-PS1="\u@\h:\w⮞ "
+export PS1="\u@\h:\w⮞ "
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_2347CD33-4AC1-4523-89CB-8B2B52D6A009 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_09530882-ADE9-4970-AB87-8020083BC3D6][org_gcr_2019-11-01T00-47-07-05-00_host1.org_09530882-ADE9-4970-AB87-8020083BC3D6]]
-PS2="(continued)⮞ "
+export PS2="(continued)⮞ "
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_09530882-ADE9-4970-AB87-8020083BC3D6 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75C4DEC-3C19-45D4-8E6B-0990ABB665AC][org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75C4DEC-3C19-45D4-8E6B-0990ABB665AC]]
-PS3="Please make a selection: "
+export PS3="Please make a selection: "
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75C4DEC-3C19-45D4-8E6B-0990ABB665AC ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F]]
-PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
+export PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_F9A928CA-DFA3-4754-948D-351D6BBFF8DA][org_gcr_2019-11-01T00-47-07-05-00_host1.org_F9A928CA-DFA3-4754-948D-351D6BBFF8DA]]
 shopt -s checkjobs
@@ -175,7 +175,7 @@ set -o ignoreeof
 shopt -s no_empty_cmd_completion
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_D3F8A409-9F7E-4F8D-BBCD-C4A90F32CEF2 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_265E647C-A9FA-446A-8A84-2FFEB5B9F411][org_gcr_2019-11-01T00-47-07-05-00_host1.org_265E647C-A9FA-446A-8A84-2FFEB5B9F411]]
-HISTIGNORE="[ \t]*"
+export HISTIGNORE="[ \t]*"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_265E647C-A9FA-446A-8A84-2FFEB5B9F411 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_CD8E7DFE-65C9-4139-8254-31B6EE9F2A97][org_gcr_2019-11-01T00-47-07-05-00_host1.org_CD8E7DFE-65C9-4139-8254-31B6EE9F2A97]]
 HISTSIZE=250
@@ -190,9 +190,9 @@ alias 3dir="PROMPT_DIRTRIM=3"
 alias ndir="PROMPT_DIRTRIM=0"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_3C2800D0-7925-4D49-B877-FD1BFC6FBA55 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_25DFD1E8-1C14-4CE4-B04F-A15E3925BDE8][org_gcr_2019-11-01T00-47-07-05-00_host1.org_25DFD1E8-1C14-4CE4-B04F-A15E3925BDE8]]
-NAME="Grant Rettke"
-EMAIL="grant@wisdomandonder.com"
-ORGANIZATION="Wisdom and Wonder"
-TZ="America/Chicago"
+export NAME="Grant Rettke"
+export EMAIL="grant@wisdomandonder.com"
+export ORGANIZATION="Wisdom and Wonder"
+export TZ="America/Chicago"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_25DFD1E8-1C14-4CE4-B04F-A15E3925BDE8 ends here
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_F55305F4-02E8-4610-9C08-8AD1FDD9A46B ends here
