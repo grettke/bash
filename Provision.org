@@ -813,11 +813,11 @@ if [ -z "$(type -t update_terminal_cwd)" ] || [ "$(type -t update_terminal_cwd)"
 fi
 #+end_src
 
-Auroramacs.
+Lolsmacs.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830
 #+BEGIN_src sh
-source ~/src/auroramacs/amacs
+source ~/src/lolsmacs/amacs
 #+END_SRC
 
 ccrypt.
