@@ -817,7 +817,7 @@ Lolsmacs.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830
 #+BEGIN_src sh
-source ~/src/lolsmacs/amacs
+source ~/src/myamacs/amacs
 #+END_SRC
 
 ccrypt.
