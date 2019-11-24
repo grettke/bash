@@ -1164,7 +1164,7 @@ function rndfile {
 }
 #+end_src
 
-**** TODO LS
+**** LS
 :PROPERTIES:
 :ID:       org_gcr_2018-09-07T21-25-20-05-00_globigerina:E21383F5-4229-4C1C-B808-0858E6A980D4
 :END:
@@ -1176,7 +1176,7 @@ July 2018 -- GNU coreutils 8.30
 ls - list directory contents
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_9199861D-C57A-4D84-A700-A5EDF590A151
-#+begin_src sh :comments no :tangle no
+#+begin_src sh :comments no
 function l {
   gls \
       ⟪ls-hide-dotdot-dirs⟫ \
@@ -1195,22 +1195,22 @@ function l {
 
 do not list implied . and ..
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_98C50996-7D46-4441-B630-A1EDC7686CA8
-#+begin_src sh :tangle no :tangle no
+#+NAME: ls-hide-dotdot-dirs
+#+begin_src sh :comments no :tangle no
 --almost-all
 #+end_src
 
 with -l, print the author of each file
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_0672D9D2-580E-4AE2-A2EB-10A7161042FE
-#+begin_src sh :tangle no :tangle no
+#+NAME: ls-show-file-author
+#+begin_src sh :comments no :tangle no
 --author
 #+end_src
 
 list entries by columns
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C0FDF610-CDD1-49C1-87CE-8768B8EC469E
-#+begin_src sh :tangle no :tangle no
+#+NAME: ls-list-in-columns
+#+begin_src sh :comments no :tangle no
 -C
 #+end_src
 
@@ -1219,16 +1219,16 @@ group directories before files;
 can be augmented  with a --sort option, but  any use of
 --sort=\,none\/ (-U) disables grouping
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_670C05E7-9183-4E9F-A6EF-63003C0A9FE5
-#+begin_src sh :tangle no :tangle no
+#+NAME: ls-list-dirs-first
+#+begin_src sh :comments no :tangle no
 --group-directories-first
 #+end_src
 
 print sizes like 1K 234M 2G etc.
 but use the SI format, powers of 1000 not 1024
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_93A56B49-0409-40D0-AEA7-0E7E34E90015
-#+begin_src sh :tangle no :tangle no
+#+NAME: ls-file-size-units-policy
+#+begin_src sh :comments no :tangle no
 --si
 #+end_src
 
@@ -1236,22 +1236,22 @@ append indicator  with style WORD to  entry names: none
 (default),   slash   (-p),   file-type   (--file-type),
 classify (-F)
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_667898EC-568C-493F-BAE8-E6B8EA07E2FE
-#+begin_src sh :tangle no :tangle no
+#+NAME: ls-show-file-type-indicator
+#+begin_src sh :comments no :tangle no
 --indicator-style=classify
 #+end_src
 
 use a long listing format
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_0DADBB2F-38FE-435E-A126-FE62E39ABF80
-#+begin_src sh :tangle no :tangle no
+#+NAME: ls-use-long-lines
+#+begin_src sh :comments no :tangle no
 -l
 #+end_src
 
 enclose entry names in double quotes
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C051FCDC-132D-445A-97A6-764F70299057
-#+begin_src sh :tangle no :tangle no
+#+NAME: ls-double-quote-entry-names
+#+begin_src sh :comments no :tangle no
 --quote-name
 #+end_src
 
@@ -1260,15 +1260,15 @@ locale,     shell,      shell-always,     shell-escape,
 shell-escape-always, c, escape (overrides QUOTING_STYLE
 environment variable)
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_153C7779-AEA2-45DD-B9CF-52B0FB56E6E9
-#+begin_src sh :tangle no :tangle no
+#+NAME: ls-quoting-style
+#+begin_src sh :comments no :tangle no
 --quoting-style=c
 #+end_src
 
 time/date format with -l; see TIME_STYLE below
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_466DC1A2-5D4D-47B2-BE7C-8221186DE8A0
-#+begin_src sh :tangle no :tangle no
+#+NAME: ls-timestamp-format
+#+begin_src sh :comments no :tangle no
 --time-style=long-iso
 #+end_src
 
@@ -1276,8 +1276,8 @@ Accept additional arguments to function
 ~"$@"~ expands to separate words: ~"$1" "$2" ...~
 (see [[https://unix.stackexchange.com/questions/41571/what-is-the-difference-between-and][here]])
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_6988CFFC-C51E-4A8D-9EF4-21886A0A3AD8
-#+begin_src sh :tangle no :tangle no
+#+NAME: ls-take-additional-arguments
+#+begin_src sh :comments no :tangle no
 "$@"
 #+end_src
 *** BashLogout

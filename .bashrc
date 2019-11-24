@@ -263,3 +263,18 @@ function rndfile {
   gbase64 /dev/urandom | ghead --bytes=$nbytes > $filename
 }
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_FD0E042D-3752-4211-9E87-428358A966D6 ends here
+
+function l {
+  gls \
+    --almost-all \
+    --author \
+    -C \
+    --group-directories-first \
+    --si \
+    --indicator-style=classify \
+    -l \
+    --quote-name \
+    --quoting-style=c \
+    --time-style=long-iso \
+    "$@"
+}
