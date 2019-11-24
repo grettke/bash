@@ -164,6 +164,13 @@ alias invertcolors="osascript /Users/gcr/util/sspadtogglecolors.scpt"
 alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_C088763E-0AB7-40CC-8802-D3A60DCA4B3F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_C088763E-0AB7-40CC-8802-D3A60DCA4B3F]]
+alias lk="chflags uchg"
+alias rlk="chflags -R uchg"
+alias ulk="chflags nouchg"
+alias rulk="chflags -R nouchg"
+# org_gcr_2019-11-01T00-47-07-05-00_host1.org_C088763E-0AB7-40CC-8802-D3A60DCA4B3F ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD][org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD]]
 function nthlineof {
   if (( "$#" < 2 )); then

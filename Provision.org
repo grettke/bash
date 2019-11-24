@@ -1035,9 +1035,11 @@ alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
 File Management.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C088763E-0AB7-40CC-8802-D3A60DCA4B3F
-#+begin_src sh :tangle no
-alias flock="chflags -R uchg"
-alias funlock="chflags -R nouchg"
+#+begin_src sh
+alias lk="chflags uchg"
+alias rlk="chflags -R uchg"
+alias ulk="chflags nouchg"
+alias rulk="chflags -R nouchg"
 #+end_src
 **** Make Functions
 :PROPERTIES:
