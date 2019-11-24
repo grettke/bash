@@ -679,7 +679,7 @@ Get timezones: ~sudo systemsetup -listtimezones~
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_25DFD1E8-1C14-4CE4-B04F-A15E3925BDE8
 #+begin_src sh
 export NAME="Grant Rettke"
-export EMAIL="grant@wisdomandonder.com"
+export EMAIL="grant@wisdomandwonder.com"
 export ORGANIZATION="Wisdom and Wonder"
 export TZ="America/Chicago"
 #+end_src

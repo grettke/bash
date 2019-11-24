@@ -191,7 +191,7 @@ alias ndir="PROMPT_DIRTRIM=0"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_3C2800D0-7925-4D49-B877-FD1BFC6FBA55 ends here
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_25DFD1E8-1C14-4CE4-B04F-A15E3925BDE8][org_gcr_2019-11-01T00-47-07-05-00_host1.org_25DFD1E8-1C14-4CE4-B04F-A15E3925BDE8]]
 export NAME="Grant Rettke"
-export EMAIL="grant@wisdomandonder.com"
+export EMAIL="grant@wisdomandwonder.com"
 export ORGANIZATION="Wisdom and Wonder"
 export TZ="America/Chicago"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_25DFD1E8-1C14-4CE4-B04F-A15E3925BDE8 ends here
