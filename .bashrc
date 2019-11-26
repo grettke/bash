@@ -275,6 +275,10 @@ fi
 source ~/src/myamacs/amacs
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-25T19-34-14-06-00_gsmac:98474D2E-17D6-48BC-8C45-0EA8F2F46295][org_gcr_2019-11-25T19-34-14-06-00_gsmac:98474D2E-17D6-48BC-8C45-0EA8F2F46295]]
+export HOMEBREW_NO_EMOJI=1
+# org_gcr_2019-11-25T19-34-14-06-00_gsmac:98474D2E-17D6-48BC-8C45-0EA8F2F46295 ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F]]
 export PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F ends here

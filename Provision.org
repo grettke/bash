@@ -1309,6 +1309,16 @@ Lolsmacs.
 source ~/src/myamacs/amacs
 #+END_SRC
 
+***** Homebrew
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T19-34-14-06-00_gsmac:28F19342-F546-43CD-92CA-3CB37FCD6070
+:END:
+
+#+name: org_gcr_2019-11-25T19-34-14-06-00_gsmac:98474D2E-17D6-48BC-8C45-0EA8F2F46295
+#+BEGIN_SRC sh
+export HOMEBREW_NO_EMOJI=1
+#+END_SRC
+
 **** Footer
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
