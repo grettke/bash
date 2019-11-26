@@ -1330,6 +1330,16 @@ export PATH="$JAVA_HOME:$PATH"
 export HOMEBREW_NO_EMOJI=1
 #+END_SRC
 
+**** Python
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T21-24-14-06-00_gsmac:60819DEB-537D-428E-9734-796C04C516C3
+:END:
+
+#+name: org_gcr_2019-11-25T21-24-14-06-00_gsmac:112F412F-F670-4BD6-A41C-CB22C3CE6C83
+#+BEGIN_SRC sh
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+#+END_SRC
+
 **** Footer
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
