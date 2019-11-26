@@ -1309,6 +1309,17 @@ Lolsmacs.
 source ~/src/myamacs/amacs
 #+END_SRC
 
+***** Java
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T19-34-14-06-00_gsmac:123EC3E3-5C48-4C60-83E9-718B7C3E9103
+:END:
+
+#+NAME: org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213
+#+BEGIN_SRC sh
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home/"
+export PATH="$JAVA_HOME:$PATH"
+#+END_SRC
+
 ***** Homebrew
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T19-34-14-06-00_gsmac:28F19342-F546-43CD-92CA-3CB37FCD6070
