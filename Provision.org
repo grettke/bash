@@ -1201,7 +1201,7 @@ function gmailsync {
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34
 #+BEGIN_SRC sh
-export CCRYPT="/usr/local/opt/ccrypt"
+export CCRYPT="/usr/local/Cellar/ccrypt/1.11/"
 #+END_SRC
 
 ***** TeX

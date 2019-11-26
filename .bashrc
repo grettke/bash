@@ -201,7 +201,7 @@ function gmailsync {
 # org_gcr_2019-11-03T19-37-00-06-00_host1.org_494DCCE3-9592-4B2F-B529-86EEB7C13792 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34][org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34]]
-export CCRYPT="/usr/local/opt/ccrypt"
+export CCRYPT="/usr/local/Cellar/ccrypt/1.11/"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084][org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084]]
