@@ -1319,7 +1319,9 @@ Last thing to do is prioritize the path
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F
 #+BEGIN_SRC sh
 export PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
-#+END_SRC*** BashLogout
+#+END_SRC
+
+*** BashLogout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout
 :ID:       org_gcr_2017-05-12_mara:04FEFF46-AAC6-4AB8-9876-199B271DA565

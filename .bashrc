@@ -277,32 +277,4 @@ source ~/src/myamacs/amacs
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F]]
 export PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
-#+END_SRC*** BashLogout
-:PROPERTIES:
-:header-args: :tangle ./.bash_logout
-:ID:       org_gcr_2017-05-12_mara:04FEFF46-AAC6-4AB8-9876-199B271DA565
-:END:
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E467EC86-F272-47CD-B9F9-7655B3ACB0AF
-#+BEGIN_src sh :comments no
-#!/usr/local/bin/bash
-# -*- mode: sh; -*-
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F ends here
-
-# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F]]
-export PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
-#+END_SRC*** BashLogout
-:PROPERTIES:
-:header-args: :tangle ./.bash_logout
-:ID:       org_gcr_2017-05-12_mara:04FEFF46-AAC6-4AB8-9876-199B271DA565
-:END:
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E467EC86-F272-47CD-B9F9-7655B3ACB0AF
-#+BEGIN_src sh :comments no
-#!/usr/local/bin/bash
-# -*- mode: sh; -*-
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F ends here
-
-# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_EE58713E-028B-43CB-875A-6C3BBB6F28EA][org_gcr_2019-11-01T00-47-07-05-00_host1.org_EE58713E-028B-43CB-875A-6C3BBB6F28EA]]
-printf "Logging out of Bash.\n"
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_EE58713E-028B-43CB-875A-6C3BBB6F28EA ends here
