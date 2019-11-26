@@ -770,6 +770,10 @@ fi
 :header-args: :tangle ./.bashrc
 :ID:       org_gcr_2017-05-12_mara:93E59E15-9E26-4FEE-800A-4DB748AB395F
 :END:
+**** Header
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:98614993-2913-437D-B755-2DD1B1878C6D
+:END:
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_321C8889-A026-4FBF-B76A-EE8EF4AB7D9C
 #+BEGIN_SRC sh :comments no
@@ -780,6 +784,10 @@ fi
 #+BEGIN_SRC sh
 source ~/.bash_global_interactive
 #+END_SRC
+**** Body
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:8A021170-0680-4409-93AC-7CD84CC6625E
+:END:
 
 For a graphical operating system interface.
 
@@ -795,37 +803,10 @@ For a terminal operating system interface.
 export EDITOR="emacs -nw"
 #+END_SRC
 
-Add Emacs's info.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75AEC7A-88E0-4D11-B950-740FD568F659
-#+BEGIN_SRC sh
-export INFOPATH="/Applications/Emacs.app/Contents/Resources/info:$INFOPATH"
-#+END_SRC
-
-Enable Bash to run under Emacs in Terminal.app.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C617F66A-B15C-4E1B-B113-C22C53DC9A8C
-#+begin_src sh
-if [ -z "$(type -t update_terminal_cwd)" ] || [ "$(type -t update_terminal_cwd)" != "function" ]; then
-  update_terminal_cwd() {
-    true
-  }
-fi
-#+end_src
-
-Lolsmacs.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830
-#+BEGIN_src sh
-source ~/src/myamacs/amacs
-#+END_SRC
-
-ccrypt.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34
-#+BEGIN_SRC sh
-export CCRYPT="/usr/local/opt/ccrypt"
-#+END_SRC
+**** Aliases
+:PROPERTIES:
+:ID:       org_gcr_2017-05-12_mara:160278CE-DE40-44A7-9509-F17B3AD5A43A
+:END:
 
 Checksum.
 
@@ -834,110 +815,6 @@ Checksum.
 alias sha256summake="shasum --algorithm 256 --portable"
 alias sha256sumcheck="shasum --algorithm 256 --warn --check"
 #+end_src
-
-TeX
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084
-#+BEGIN_SRC sh
-export MACTEX_BIN="/usr/local/texlive/2019/bin/x86_64-darwin/"
-export TEXMFHOME="/Users/gcr/src/texmf"
-export PATH="$MACTEX_BIN:$PATH"
-#+END_SRC
-
-Git.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_121CCF66-A7DD-479D-AFCE-658143CCDDC4
-#+BEGIN_SRC sh
-alias g="git"
-alias gitunpull="git reset --keep HEAD@{1}"
-alias gituncommit="git reset --mixed HEAD^"
-alias gitdiscard="git checkout -- ."
-alias gitforcepush="git push origin +master"
-alias gpom="git push origin master"
-alias gss="git status"
-alias gpl="git pull"
-alias gpdrd="git fetch && git difftool origin/master"
-alias gpdrsf="git fetch && git diff --stat origin/master"
-alias gpdrsd="git fetch && git diff --dirstat origin/master"
-alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
-alias gitshowtags='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
-alias magit="emacs --no-window-system --no-init-file --load \
-  ~/src/help/.org-mode-contribute.emacs.el --eval '(progn (magit-status) (delete-other-windows))'"
-alias gitshowreleases="git tag -l"
-alias gitddiff="git diff --name-status"
-#+END_SRC
-
-Git usability.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_89EDF172-801F-4804-AE2C-05AA7B4BC4E9
-#+begin_src sh
-function gitgreplog {
-  if [[ $# -eq 0 || -z "$1" ]] ; then
-    printf "Search Git commit message history for TEXT case-insensitively.\n"
-    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
-    printf "For example add '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
-    return 1
-  fi
-  local text=$1
-  shift
-  local cmd="git log --oneline --regexp-ignore-case --grep='$text' $@"
-  printf "%s\n" "$cmd"
-  eval "$cmd"
-}
-function gitgrepchange {
-  if [[ $# -eq 0 || -z "$1" ]] ; then
-    printf "Search Git commit change history for TEXT case-insensitively.\n"
-    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
-    printf "For example add '--oneline' for a succinct report or '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
-    return 1
-  fi
-  local text=$1
-  shift
-  local cmd="git log --pickaxe-all --pickaxe-regex -S'$text' $@"
-  printf "%s\n" "$cmd"
-  eval "$cmd"
-}
-
-#+end_src
-
-Gmail.
-
-#+NAME: org_gcr_2019-11-03T19-37-00-06-00_host1.org_494DCCE3-9592-4B2F-B529-86EEB7C13792
-#+BEGIN_SRC sh
-function gmailsync {
-  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: %s <emailadddress> <directory>\n" "${FUNCNAME[0]}"
-    printf "Perform Got Your Back Backup of EMAILADDDRESS into DIRECTORY.\n"
-    return 1
-  fi
-  local emailaddress="$1"
-  local directory="$2"
-  local msg="Undefined"
-  printf "Got Your Back Backup Of: %s Start: $(/bin/date '+%I:%M %p') To: %s\n" "$emailaddress" "$directory"
-  /Users/gcr/bin/gyb \
-    --email "$emailaddress" \
-    --local-folder "$directory" \
-    --action backup
-  if [ $? -eq 0 ]; then
-    msg="Got Your Back Backup Of: $emailaddress Succeeded: $(/bin/date '+%I:%M %p')"
-  else
-    msg="Got Your Back Backup Of: $emailaddress Failed: $(/bin/date '+%I:%M %p')"
-  fi
-  /usr/bin/say "$msg"
-  printf "%s\n" "$msg"
-}
-
-#+END_SRC
-Last thing to do is prioritize the path
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F
-#+BEGIN_SRC sh
-export PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
-#+END_SRC
-**** Make aliases  [fn:1c2164efcde0346e:http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html] [fn:17380446290dfdc9:https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions]
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:160278CE-DE40-44A7-9509-F17B3AD5A43A
-:END:
 
 Good defaults.
 
@@ -998,19 +875,6 @@ alias lsmd="ls -haltr"
 alias lsmdm="ls -halt"
 #+END_SRC
 
-Elpa.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A0DFBB0D-D86E-44C4-B374-6BA3E9B50060
-#+begin_src
-function emackup() {
-  cd ~/.emacs.d
-  git add .
-  git commit -m "Automated versioning"
-  git push
-  cd
-}
-#+end_src
-
 Toggle grayscale.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F1D33BB7-E1D7-4D87-83BC-F2D6EE2CB318
@@ -1041,10 +905,24 @@ alias rlk="chflags -R uchg"
 alias ulk="chflags nouchg"
 alias rulk="chflags -R nouchg"
 #+end_src
-**** Make Functions
+**** Functions
 :PROPERTIES:
 :ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
 :END:
+
+Elpa.
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A0DFBB0D-D86E-44C4-B374-6BA3E9B50060
+#+begin_src
+function emackup() {
+  cd ~/.emacs.d
+  git add .
+  git commit -m "Automated versioning"
+  git push
+  cd
+}
+#+end_src
+
 Get the NTH line of a FILE via https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-file
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD
@@ -1164,7 +1042,7 @@ function rndfile {
 }
 #+end_src
 
-**** LS
+***** ls - list directory contents
 :PROPERTIES:
 :ID:       org_gcr_2018-09-07T21-25-20-05-00_globigerina:E21383F5-4229-4C1C-B808-0858E6A980D4
 :END:
@@ -1280,7 +1158,168 @@ Accept additional arguments to function
 #+begin_src sh :comments no :tangle no
 "$@"
 #+end_src
-*** BashLogout
+
+**** Applications
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:4A2D731B-B043-4662-9E58-032418959E39
+:END:
+***** Gmail
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:C101A3F3-CDDE-4D41-BA75-F52366708813
+:END:
+
+#+NAME: org_gcr_2019-11-03T19-37-00-06-00_host1.org_494DCCE3-9592-4B2F-B529-86EEB7C13792
+#+BEGIN_SRC sh
+function gmailsync {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <emailadddress> <directory>\n" "${FUNCNAME[0]}"
+    printf "Perform Got Your Back Backup of EMAILADDDRESS into DIRECTORY.\n"
+    return 1
+  fi
+  local emailaddress="$1"
+  local directory="$2"
+  local msg="Undefined"
+  printf "Got Your Back Backup Of: %s Start: $(/bin/date '+%I:%M %p') To: %s\n" "$emailaddress" "$directory"
+  /Users/gcr/bin/gyb \
+    --email "$emailaddress" \
+    --local-folder "$directory" \
+    --action backup
+  if [ $? -eq 0 ]; then
+    msg="Got Your Back Backup Of: $emailaddress Succeeded: $(/bin/date '+%I:%M %p')"
+  else
+    msg="Got Your Back Backup Of: $emailaddress Failed: $(/bin/date '+%I:%M %p')"
+  fi
+  /usr/bin/say "$msg"
+  printf "%s\n" "$msg"
+}
+#+END_SRC
+
+***** ccrypt
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:B718FE1D-4D3D-47E3-B062-F1FDA900A82D
+:END:
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34
+#+BEGIN_SRC sh
+export CCRYPT="/usr/local/opt/ccrypt"
+#+END_SRC
+
+***** TeX
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:0D346D38-1207-48C3-99AE-0AC668DF130B
+:END:
+
+TeX
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084
+#+BEGIN_SRC sh
+export MACTEX_BIN="/usr/local/texlive/2019/bin/x86_64-darwin/"
+export TEXMFHOME="/Users/gcr/src/texmf"
+export PATH="$MACTEX_BIN:$PATH"
+#+END_SRC
+
+***** Git
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9
+:END:
+
+Git.
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_121CCF66-A7DD-479D-AFCE-658143CCDDC4
+#+BEGIN_SRC sh
+alias g="git"
+alias gitunpull="git reset --keep HEAD@{1}"
+alias gituncommit="git reset --mixed HEAD^"
+alias gitdiscard="git checkout -- ."
+alias gitforcepush="git push origin +master"
+alias gpom="git push origin master"
+alias gss="git status"
+alias gpl="git pull"
+alias gpdrd="git fetch && git difftool origin/master"
+alias gpdrsf="git fetch && git diff --stat origin/master"
+alias gpdrsd="git fetch && git diff --dirstat origin/master"
+alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
+alias gitshowtags='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
+alias magit="emacs --no-window-system --no-init-file --load \
+  ~/src/help/.org-mode-contribute.emacs.el --eval '(progn (magit-status) (delete-other-windows))'"
+alias gitshowreleases="git tag -l"
+alias gitddiff="git diff --name-status"
+#+END_SRC
+
+Git usability.
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_89EDF172-801F-4804-AE2C-05AA7B4BC4E9
+#+begin_src sh
+function gitgreplog {
+  if [[ $# -eq 0 || -z "$1" ]] ; then
+    printf "Search Git commit message history for TEXT case-insensitively.\n"
+    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
+    printf "For example add '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
+    return 1
+  fi
+  local text=$1
+  shift
+  local cmd="git log --oneline --regexp-ignore-case --grep='$text' $@"
+  printf "%s\n" "$cmd"
+  eval "$cmd"
+}
+function gitgrepchange {
+  if [[ $# -eq 0 || -z "$1" ]] ; then
+    printf "Search Git commit change history for TEXT case-insensitively.\n"
+    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
+    printf "For example add '--oneline' for a succinct report or '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
+    return 1
+  fi
+  local text=$1
+  shift
+  local cmd="git log --pickaxe-all --pickaxe-regex -S'$text' $@"
+  printf "%s\n" "$cmd"
+  eval "$cmd"
+}
+
+#+end_src
+
+***** Emacs
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:D05FA841-34B3-459F-9C14-283520F1FF1C
+:END:
+
+Add Emacs's info.
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75AEC7A-88E0-4D11-B950-740FD568F659
+#+BEGIN_SRC sh
+export INFOPATH="/Applications/Emacs.app/Contents/Resources/info:$INFOPATH"
+#+END_SRC
+
+Enable Bash to run under Emacs in Terminal.app.
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C617F66A-B15C-4E1B-B113-C22C53DC9A8C
+#+begin_src sh
+if [ -z "$(type -t update_terminal_cwd)" ] || [ "$(type -t update_terminal_cwd)" != "function" ]; then
+  update_terminal_cwd() {
+    true
+  }
+fi
+#+end_src
+
+Lolsmacs.
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830
+#+BEGIN_src sh
+source ~/src/myamacs/amacs
+#+END_SRC
+
+**** Footer
+:PROPERTIES:
+:ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
+:END:
+
+Last thing to do is prioritize the path
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F
+#+BEGIN_SRC sh
+export PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
+#+END_SRC*** BashLogout
 :PROPERTIES:
 :header-args: :tangle ./.bash_logout
 :ID:       org_gcr_2017-05-12_mara:04FEFF46-AAC6-4AB8-9876-199B271DA565
