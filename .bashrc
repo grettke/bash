@@ -300,6 +300,10 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 [[ -r "/usr/local/etc/bash_completion.d/pandoc" ]] && . "/usr/local/etc/bash_completion.d/pandoc"
 # org_gcr_2019-11-29T00-19-24-06-00_gsmac:1B0ECD3D-7C32-42DC-8F34-94006D913D0D ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589][org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589]]
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+# org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589 ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F]]
 export PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F ends here

@@ -1365,6 +1365,16 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 [[ -r "/usr/local/etc/bash_completion.d/pandoc" ]] && . "/usr/local/etc/bash_completion.d/pandoc"
 #+END_SRC
 
+***** Ruby
+:PROPERTIES:
+:ID:       org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589
+:END:
+
+#+name: org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589
+#+BEGIN_SRC sh
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+#+END_SRC
+
 **** Footer
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
