@@ -1,5 +1,9 @@
 # -*- mode: sh; -*-
 
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-25T18-49-26-06-00_gsmac:98614993-2913-437D-B755-2DD1B1878C6D][org_gcr_2019-11-25T18-49-26-06-00_gsmac:98614993-2913-437D-B755-2DD1B1878C6D]]
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+# org_gcr_2019-11-25T18-49-26-06-00_gsmac:98614993-2913-437D-B755-2DD1B1878C6D ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F]]
 source ~/.bash_global_interactive
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F ends here
