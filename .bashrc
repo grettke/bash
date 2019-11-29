@@ -292,6 +292,10 @@ export HOMEBREW_NO_EMOJI=1
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # org_gcr_2019-11-25T21-24-14-06-00_gsmac:112F412F-F670-4BD6-A41C-CB22C3CE6C83 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-29T00-19-24-06-00_gsmac:199C774B-644B-4EB9-90BE-A6CB15465F16][org_gcr_2019-11-29T00-19-24-06-00_gsmac:199C774B-644B-4EB9-90BE-A6CB15465F16]]
+[[ -r "/usr/local/etc/bash_completion.d/ag.bashcomp.sh" ]] && . "/usr/local/etc/bash_completion.d/ag.bashcomp.sh"
+# org_gcr_2019-11-29T00-19-24-06-00_gsmac:199C774B-644B-4EB9-90BE-A6CB15465F16 ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F]]
 export PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F ends here

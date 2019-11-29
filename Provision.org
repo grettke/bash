@@ -1345,6 +1345,16 @@ export HOMEBREW_NO_EMOJI=1
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 #+END_SRC
 
+***** ag - The Silver Searcher
+:PROPERTIES:
+:ID:       org_gcr_2019-11-29T00-19-24-06-00_gsmac:199C774B-644B-4EB9-90BE-A6CB15465F16
+:END:
+
+#+name: org_gcr_2019-11-29T00-19-24-06-00_gsmac:199C774B-644B-4EB9-90BE-A6CB15465F16
+#+BEGIN_SRC sh
+[[ -r "/usr/local/etc/bash_completion.d/ag.bashcomp.sh" ]] && . "/usr/local/etc/bash_completion.d/ag.bashcomp.sh"
+#+END_SRC
+
 **** Footer
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
