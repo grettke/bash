@@ -1323,6 +1323,18 @@ function gitgrepchange {
 
 #+end_src
 
+bash-git-prompt.
+
+#+name: org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9
+#+BEGIN_SRC sh
+export GIT_PROMPT_THEME="Single_line_Dark"
+
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+#+END_SRC
+
 ***** Emacs
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:D05FA841-34B3-459F-9C14-283520F1FF1C

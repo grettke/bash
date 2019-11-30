@@ -314,6 +314,15 @@ function gitgrepchange {
 }
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_89EDF172-801F-4804-AE2C-05AA7B4BC4E9 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9][org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9]]
+export GIT_PROMPT_THEME="Single_line_Dark"
+
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+# org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9 ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75AEC7A-88E0-4D11-B950-740FD568F659][org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75AEC7A-88E0-4D11-B950-740FD568F659]]
 export INFOPATH="/Applications/Emacs.app/Contents/Resources/info:$INFOPATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75AEC7A-88E0-4D11-B950-740FD568F659 ends here
