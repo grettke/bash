@@ -488,79 +488,6 @@ Enable comments.
 shopt -s interactive_comments
 #+END_SRC
 
-Prompt zero is displayed after you enter a command and before the command is
-executed.
-
-Make the session easier to read.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3
-#+BEGIN_SRC sh
-export PS0="OK...\n\n"
-#+END_SRC
-
-Prompt one is the one that you see all the time.
-
-Show enough to stay out of trouble.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_2347CD33-4AC1-4523-89CB-8B2B52D6A009
-#+BEGIN_SRC sh
-export PS1="\u@\h:\w⮞ "
-#+END_SRC
-
-Prompt two is the one that you see when you break a command into
-multiple lines.
-
-Emphasize what is happening because I usually end up here accidentally.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_09530882-ADE9-4970-AB87-8020083BC3D6
-#+BEGIN_SRC sh
-export PS2="(continued)⮞ "
-#+END_SRC
-
-Prompt three is the one that you see when you are presented with a menu
-created using the ~select~ function.
-
-You see it when ~select~ makes you to make a selection.
-
-The following [[https://askubuntu.com/questions/1705/how-can-i-create-a-select-menu-in-a-shell-script][example]] demonstrates its use:
-
-#+BEGIN_EXAMPLE
-export PS3="Please enter your choice: "
-options=("Option 1" "Option 2" "Option 3" "Quit")
-select opt in "${options[@]}"
-do
-    case $opt in
-        "Option 1")
-            echo "you chose choice 1"
-            ;;
-        "Option 2")
-            echo "you chose choice 2"
-            ;;
-        "Option 3")
-            echo "you chose choice 3"
-            ;;
-        "Quit")
-            break
-            ;;
-        *) echo invalid option;;
-    esac
-done
-#+END_EXAMPLE
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75C4DEC-3C19-45D4-8E6B-0990ABB665AC
-#+BEGIN_SRC sh
-export PS3="Please make a selection: "
-#+END_SRC
-
-Prompt four is what you see when you enable debugging with ~set -x~.
-
-I copied this from the documentation.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F
-#+BEGIN_SRC sh
-export PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
-#+END_SRC
-
 ***** Job Control
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:EEDDBEB4-0052-45DF-A0BE-88BE230308C9
@@ -789,6 +716,84 @@ fi
 #+BEGIN_SRC sh
 source ~/.bash_global_interactive
 #+END_SRC
+**** Prompts
+:PROPERTIES:
+:ID:       org_gcr_2019-11-30T12-40-47-06-00_gsmac:BB7109E6-E152-47E0-AEF1-3BDC58540D57
+:END:
+
+Prompt zero is displayed after you enter a command and before the command is
+executed.
+
+Make the session easier to read.
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3
+#+BEGIN_SRC sh
+export PS0="OK...\n\n"
+#+END_SRC
+
+Prompt one is the one that you see all the time.
+
+Show enough to stay out of trouble.
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_2347CD33-4AC1-4523-89CB-8B2B52D6A009
+#+BEGIN_SRC sh
+export PS1="\u@\h:\w⮞ "
+#+END_SRC
+
+Prompt two is the one that you see when you break a command into
+multiple lines.
+
+Emphasize what is happening because I usually end up here accidentally.
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_09530882-ADE9-4970-AB87-8020083BC3D6
+#+BEGIN_SRC sh
+export PS2="(continued)⮞ "
+#+END_SRC
+
+Prompt three is the one that you see when you are presented with a menu
+created using the ~select~ function.
+
+You see it when ~select~ makes you to make a selection.
+
+The following [[https://askubuntu.com/questions/1705/how-can-i-create-a-select-menu-in-a-shell-script][example]] demonstrates its use:
+
+#+BEGIN_EXAMPLE
+export PS3="Please enter your choice: "
+options=("Option 1" "Option 2" "Option 3" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Option 1")
+            echo "you chose choice 1"
+            ;;
+        "Option 2")
+            echo "you chose choice 2"
+            ;;
+        "Option 3")
+            echo "you chose choice 3"
+            ;;
+        "Quit")
+            break
+            ;;
+        *) echo invalid option;;
+    esac
+done
+#+END_EXAMPLE
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75C4DEC-3C19-45D4-8E6B-0990ABB665AC
+#+BEGIN_SRC sh
+export PS3="Please make a selection: "
+#+END_SRC
+
+Prompt four is what you see when you enable debugging with ~set -x~.
+
+I copied this from the documentation.
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F
+#+BEGIN_SRC sh
+export PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
+#+END_SRC
+
 **** Body
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:8A021170-0680-4409-93AC-7CD84CC6625E

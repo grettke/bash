@@ -8,6 +8,26 @@
 source ~/.bash_global_interactive
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3][org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3]]
+export PS0="OK...\n\n"
+# org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3 ends here
+
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_2347CD33-4AC1-4523-89CB-8B2B52D6A009][org_gcr_2019-11-01T00-47-07-05-00_host1.org_2347CD33-4AC1-4523-89CB-8B2B52D6A009]]
+export PS1="\u@\h:\w⮞ "
+# org_gcr_2019-11-01T00-47-07-05-00_host1.org_2347CD33-4AC1-4523-89CB-8B2B52D6A009 ends here
+
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_09530882-ADE9-4970-AB87-8020083BC3D6][org_gcr_2019-11-01T00-47-07-05-00_host1.org_09530882-ADE9-4970-AB87-8020083BC3D6]]
+export PS2="(continued)⮞ "
+# org_gcr_2019-11-01T00-47-07-05-00_host1.org_09530882-ADE9-4970-AB87-8020083BC3D6 ends here
+
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75C4DEC-3C19-45D4-8E6B-0990ABB665AC][org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75C4DEC-3C19-45D4-8E6B-0990ABB665AC]]
+export PS3="Please make a selection: "
+# org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75C4DEC-3C19-45D4-8E6B-0990ABB665AC ends here
+
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F]]
+export PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
+# org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC][org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC]]
 export VISUAL="emacs"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC ends here
