@@ -903,13 +903,6 @@ alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
 
 File Management.
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C088763E-0AB7-40CC-8802-D3A60DCA4B3F
-#+begin_src sh
-alias lk="chflags uchg"
-alias rlk="chflags -R uchg"
-alias ulk="chflags nouchg"
-alias rulk="chflags -R nouchg"
-#+end_src
 **** Functions
 :PROPERTIES:
 :ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
@@ -1046,6 +1039,47 @@ function rndfile {
   gbase64 /dev/urandom | ghead --bytes=$nbytes > $filename
 }
 #+end_src
+
+macOS File Locking.
+
+#+name: org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
+#+BEGIN_SRC sh
+function lk {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <FILEORDIRECTORY>\n" "${FUNCNAME[0]}"
+    printf "In Finder: Lock FILEORDIRECTORY.\n"
+    return 1
+  fi
+  chflags uchg "$1"
+}
+
+function rlk {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <DIRECTORY>\n" "${FUNCNAME[0]}"
+    printf "In Finder: Recursively lock DIRECTORY and its contents.\n"
+    return 1
+  fi
+  chflags -R uchg "$1"
+}
+
+function ulk {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <FILEORDIRECTORY>\n" "${FUNCNAME[0]}"
+    printf "In Finder: Lock FILEORDIRECTORY.\n"
+    return 1
+  fi
+  chflags nouchg "$1"
+}
+
+function rulk {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <FILEORDIRECTORY>\n" "${FUNCNAME[0]}"
+    printf "In Finder: Recursively unlock DIRECTORY and its contents.\n"
+    return 1
+  fi
+  chflags -R nouchg "$1"
+}
+#+END_SRC
 
 ***** ls - list directory contents
 :PROPERTIES:

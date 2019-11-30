@@ -64,13 +64,6 @@ alias invertcolors="osascript /Users/gcr/util/sspadtogglecolors.scpt"
 alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471 ends here
 
-# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_C088763E-0AB7-40CC-8802-D3A60DCA4B3F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_C088763E-0AB7-40CC-8802-D3A60DCA4B3F]]
-alias lk="chflags uchg"
-alias rlk="chflags -R uchg"
-alias ulk="chflags nouchg"
-alias rulk="chflags -R nouchg"
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_C088763E-0AB7-40CC-8802-D3A60DCA4B3F ends here
-
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD][org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD]]
 function nthlineof {
   if (( "$#" < 2 )); then
@@ -163,6 +156,44 @@ function rndfile {
   gbase64 /dev/urandom | ghead --bytes=$nbytes > $filename
 }
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_FD0E042D-3752-4211-9E87-428358A966D6 ends here
+
+# [[file:~/src/bash/Provision.org::org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70][org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70]]
+function lk {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <FILEORDIRECTORY>\n" "${FUNCNAME[0]}"
+    printf "In Finder: Lock FILEORDIRECTORY.\n"
+    return 1
+  fi
+  chflags uchg "$1"
+}
+
+function rlk {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <DIRECTORY>\n" "${FUNCNAME[0]}"
+    printf "In Finder: Recursively lock DIRECTORY and its contents.\n"
+    return 1
+  fi
+  chflags -R uchg "$1"
+}
+
+function ulk {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <FILEORDIRECTORY>\n" "${FUNCNAME[0]}"
+    printf "In Finder: Lock FILEORDIRECTORY.\n"
+    return 1
+  fi
+  chflags nouchg "$1"
+}
+
+function rulk {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <FILEORDIRECTORY>\n" "${FUNCNAME[0]}"
+    printf "In Finder: Recursively unlock DIRECTORY and its contents.\n"
+    return 1
+  fi
+  chflags -R nouchg "$1"
+}
+# org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70 ends here
 
 function l {
   gls \
