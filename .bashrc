@@ -368,6 +368,12 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export LANGTOOL="/usr/local/Cellar/languagetool/4.7/libexec/languagetool-commandline.jar"
 # org_gcr_2019-11-29T00-33-23-06-00_gsmac:BB71CF46-39FE-40D8-8718-30D147492C25 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-30T17-22-54-06-00_gsmac:89317BC7-83D8-4DFB-A09B-4A66E0AE894A][org_gcr_2019-11-30T17-22-54-06-00_gsmac:89317BC7-83D8-4DFB-A09B-4A66E0AE894A]]
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# org_gcr_2019-11-30T17-22-54-06-00_gsmac:89317BC7-83D8-4DFB-A09B-4A66E0AE894A ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F]]
 export PATH="/usr/local/bin:/Users/gcr/bin:$PATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F ends here

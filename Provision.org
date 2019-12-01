@@ -1436,6 +1436,18 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export LANGTOOL="/usr/local/Cellar/languagetool/4.7/libexec/languagetool-commandline.jar"
 #+END_SRC
 
+***** nvm
+:PROPERTIES:
+:ID:       org_gcr_2019-11-30T17-22-54-06-00_gsmac:89317BC7-83D8-4DFB-A09B-4A66E0AE894A
+:END:
+
+#+name: org_gcr_2019-11-30T17-22-54-06-00_gsmac:89317BC7-83D8-4DFB-A09B-4A66E0AE894A
+#+BEGIN_SRC sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#+END_SRC
+
 **** Footer
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
