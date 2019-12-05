@@ -184,6 +184,7 @@ function lk {
     printf "In Finder: Lock FILEORDIRECTORY.\n"
     return 1
   fi
+  printf "Locking: %s\n" "$1"
   chflags uchg "$1"
 }
 
@@ -193,15 +194,17 @@ function rlk {
     printf "In Finder: Recursively lock DIRECTORY and its contents.\n"
     return 1
   fi
+  printf "Recursively Locking: %s\n" "$1"
   chflags -R uchg "$1"
 }
 
 function ulk {
   if [[ $# -ne 1 || -z "$1" ]] ; then
     printf "Usage: %s <FILEORDIRECTORY>\n" "${FUNCNAME[0]}"
-    printf "In Finder: Lock FILEORDIRECTORY.\n"
+    printf "In Finder: Unlock FILEORDIRECTORY.\n"
     return 1
   fi
+  printf "Unlocking: %s\n" "$1"
   chflags nouchg "$1"
 }
 
@@ -211,6 +214,7 @@ function rulk {
     printf "In Finder: Recursively unlock DIRECTORY and its contents.\n"
     return 1
   fi
+  printf "Recursively unlocking: %s\n" "$1"
   chflags -R nouchg "$1"
 }
 # org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70 ends here
