@@ -230,31 +230,6 @@ function l {
     "$@"
 }
 
-# [[file:~/src/bash/Provision.org::org_gcr_2019-11-03T19-37-00-06-00_host1.org_494DCCE3-9592-4B2F-B529-86EEB7C13792][org_gcr_2019-11-03T19-37-00-06-00_host1.org_494DCCE3-9592-4B2F-B529-86EEB7C13792]]
-function gmailsync {
-  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: %s <emailadddress> <directory>\n" "${FUNCNAME[0]}"
-    printf "Perform Got Your Back Backup of EMAILADDDRESS into DIRECTORY.\n"
-    return 1
-  fi
-  local emailaddress="$1"
-  local directory="$2"
-  local msg="Undefined"
-  printf "Got Your Back Backup Of: %s Start: $(/bin/date '+%I:%M %p') To: %s\n" "$emailaddress" "$directory"
-  /Users/gcr/bin/gyb \
-    --email "$emailaddress" \
-    --local-folder "$directory" \
-    --action backup
-  if [ $? -eq 0 ]; then
-    msg="Got Your Back Backup Of: $emailaddress Succeeded: $(/bin/date '+%I:%M %p')"
-  else
-    msg="Got Your Back Backup Of: $emailaddress Failed: $(/bin/date '+%I:%M %p')"
-  fi
-  /usr/bin/say "$msg"
-  printf "%s\n" "$msg"
-}
-# org_gcr_2019-11-03T19-37-00-06-00_host1.org_494DCCE3-9592-4B2F-B529-86EEB7C13792 ends here
-
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34][org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34]]
 export CCRYPT="/usr/local/Cellar/ccrypt/1.11/"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34 ends here
