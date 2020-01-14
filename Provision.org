@@ -903,6 +903,13 @@ alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
 
 File Management.
 
+Words.
+
+#+NAME: org_gcr_2020-01-13T07-21-07-06-00_gsmac_9B9808C4-F60D-4A91-8214-1D1B55484E03
+#+BEGIN_SRC sh
+alias randomword="gshuf -n1 /Users/gcr/src/english-words/words.txt"
+#+END_SRC
+
 **** Functions
 :PROPERTIES:
 :ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70

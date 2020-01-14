@@ -80,6 +80,10 @@ alias invertcolors="osascript /Users/gcr/util/sspadtogglecolors.scpt"
 alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2020-01-13T07-21-07-06-00_gsmac_9B9808C4-F60D-4A91-8214-1D1B55484E03][org_gcr_2020-01-13T07-21-07-06-00_gsmac_9B9808C4-F60D-4A91-8214-1D1B55484E03]]
+alias randomword="gshuf -n1 /Users/gcr/src/english-words/words.txt"
+# org_gcr_2020-01-13T07-21-07-06-00_gsmac_9B9808C4-F60D-4A91-8214-1D1B55484E03 ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD][org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD]]
 function nthlineof {
   if (( "$#" < 2 )); then
