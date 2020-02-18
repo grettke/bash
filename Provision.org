@@ -1263,6 +1263,7 @@ alias magit="emacs --no-window-system --no-init-file --load \
   ~/src/help/.org-mode-contribute.emacs.el --eval '(progn (magit-status) (delete-other-windows))'"
 alias gitshowreleases="git tag -l"
 alias gitddiff="git diff --name-status"
+alias gitlog="git log --graph --oneline --decorate"
 #+END_SRC
 
 Git usability.
