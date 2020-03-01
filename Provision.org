@@ -1264,6 +1264,7 @@ alias magit="emacs --no-window-system --no-init-file --load \
 alias gitshowreleases="git tag -l"
 alias gitddiff="git diff --name-status"
 alias gitlog="git log --graph --oneline --decorate"
+alias gj="git difftool --cached"
 #+END_SRC
 
 Git usability.
