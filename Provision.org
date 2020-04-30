@@ -910,6 +910,16 @@ Words.
 alias randomword="gshuf -n1 /Users/gcr/src/english-words/words.txt"
 #+END_SRC
 
+youtube-dl
+
+- [[https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection-examples][Via]]
+- "Download best mp4 format available or any other best if no mp4 available"
+
+#+NAME: org_gcr_2020-04-30T13-51-04-05-00_gsmac_710AE065-6C2C-464F-97D2-24AF216AA26F
+#+BEGIN_SRC sh
+alias ytdbst="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
+#+END_SRC
+
 **** Functions
 :PROPERTIES:
 :ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
