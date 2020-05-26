@@ -223,6 +223,26 @@ function rulk {
 }
 # org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931][org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931]]
+function aac2mp3 {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "FFmpeg converts SOURCE AAC file to DESTINATION MP3 file.\n"
+    return 1
+  elif [[ ! -f "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "I can't find the SOURCE AAC file '%s' so I'm bailing.\n" "$1"
+    return 1
+  elif [[ -f "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
+    printf "Delete '%s' first then try this command again.\n" "$2"
+    return 1
+  fi
+  ffmpeg -i "$1" -vn -ar 44100 -ac 2 -b:a 192k "$2"
+}
+# org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931 ends here
+
 function l {
   gls \
     --almost-all \
