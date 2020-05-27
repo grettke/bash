@@ -1160,6 +1160,13 @@ list entries by columns
 -C
 #+end_src
 
+colorize the output
+
+#+NAME: ls-colorize-output
+#+BEGIN_SRC sh
+--color=always
+#+END_SRC
+
 group directories before files;
 
 can be augmented  with a --sort option, but  any use of
@@ -1241,6 +1248,7 @@ function ll {
       ⟪ls-hide-dotdot-dirs⟫ \
       ⟪ls-show-file-author⟫ \
       ⟪ls-list-in-columns⟫ \
+      ⟪ls-colorize-output⟫ \
       ⟪ls-list-dirs-first⟫ \
       ⟪ls-file-size-units-policy⟫ \
       ⟪ls-show-file-type-indicator⟫ \
