@@ -1137,30 +1137,7 @@ July 2018 -- GNU coreutils 8.30
 
 ls - list directory contents
 
-****** Rich: ~ll~
-:PROPERTIES:
-:ID:       org_gcr_2020-05-26T16-50-32-05-00_gsmac:7FD233EC-20D7-4A2F-9185-77FDD1A2918C
-:END:
-
-Display as much information as possible in the most user friendly way possible. Name it is clearly going to display more information.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_9199861D-C57A-4D84-A700-A5EDF590A151
-#+begin_src sh :comments no
-function ll {
-  gls \
-      ⟪ls-hide-dotdot-dirs⟫ \
-      ⟪ls-show-file-author⟫ \
-      ⟪ls-list-in-columns⟫ \
-      ⟪ls-list-dirs-first⟫ \
-      ⟪ls-file-size-units-policy⟫ \
-      ⟪ls-show-file-type-indicator⟫ \
-      ⟪ls-use-long-lines⟫ \
-      ⟪ls-double-quote-entry-names⟫ \
-      ⟪ls-quoting-style⟫ \
-      ⟪ls-timestamp-format⟫ \
-      ⟪ls-take-additional-arguments⟫
-      }
-#+end_src
+Define reusable configuration parameters that seem the most useful.
 
 do not list implied . and ..
 
@@ -1248,6 +1225,31 @@ Accept additional arguments to function
 #+NAME: ls-take-additional-arguments
 #+begin_src sh :comments no :tangle no
 "$@"
+#+end_src
+
+****** Rich: ~ll~
+:PROPERTIES:
+:ID:       org_gcr_2020-05-26T16-50-32-05-00_gsmac:7FD233EC-20D7-4A2F-9185-77FDD1A2918C
+:END:
+
+Display as much information as possible in the most user friendly way possible. Name it is clearly going to display more information.
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_9199861D-C57A-4D84-A700-A5EDF590A151
+#+begin_src sh :comments no
+function ll {
+  gls \
+      ⟪ls-hide-dotdot-dirs⟫ \
+      ⟪ls-show-file-author⟫ \
+      ⟪ls-list-in-columns⟫ \
+      ⟪ls-list-dirs-first⟫ \
+      ⟪ls-file-size-units-policy⟫ \
+      ⟪ls-show-file-type-indicator⟫ \
+      ⟪ls-use-long-lines⟫ \
+      ⟪ls-double-quote-entry-names⟫ \
+      ⟪ls-quoting-style⟫ \
+      ⟪ls-timestamp-format⟫ \
+      ⟪ls-take-additional-arguments⟫
+      }
 #+end_src
 
 **** Applications
