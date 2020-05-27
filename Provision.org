@@ -1189,7 +1189,7 @@ append indicator  with style WORD to  entry names: none
 (default),   slash   (-p),   file-type   (--file-type),
 classify (-F)
 
-#+NAME: ls-show-file-type-indicator
+#+NAME: ls-show-file-type-indicator-all
 #+begin_src sh :comments no :tangle no
 --indicator-style=classify
 #+end_src
@@ -1251,7 +1251,7 @@ function ll {
       ⟪ls-colorize-output⟫ \
       ⟪ls-list-dirs-first⟫ \
       ⟪ls-file-size-units-policy⟫ \
-      ⟪ls-show-file-type-indicator⟫ \
+      ⟪ls-show-file-type-indicator-all⟫ \
       ⟪ls-use-long-lines⟫ \
       ⟪ls-double-quote-entry-names⟫ \
       ⟪ls-quoting-style⟫ \
