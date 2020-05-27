@@ -243,7 +243,7 @@ function aac2mp3 {
 }
 # org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931 ends here
 
-function l {
+function ll {
   gls \
     --almost-all \
     --author \
