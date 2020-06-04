@@ -819,6 +819,8 @@ Checksum.
 #+begin_src sh
 alias sha256summake="shasum --algorithm 256 --portable"
 alias sha256sumcheck="shasum --algorithm 256 --warn --check"
+alias sha512summake="shasum --algorithm 512 --portable"
+alias sha512sumcheck="shasum --algorithm 512 --warn --check"
 #+end_src
 
 Good defaults.
