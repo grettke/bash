@@ -245,9 +245,11 @@ function aac2mp3 {
 }
 # org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931 ends here
 
-# [[file:~/src/bash/Provision.org::ls-colorize-output][ls-colorize-output]]
---color=always
-# ls-colorize-output ends here
+function l {
+  gls \
+    --color=always \
+    "$@"
+}
 
 function ll {
   gls \

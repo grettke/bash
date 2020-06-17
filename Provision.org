@@ -1165,7 +1165,7 @@ list entries by columns
 colorize the output
 
 #+NAME: ls-colorize-output
-#+BEGIN_SRC sh
+#+begin_src sh :comments no :tangle no
 --color=always
 #+END_SRC
 
@@ -1235,6 +1235,24 @@ Accept additional arguments to function
 #+begin_src sh :comments no :tangle no
 "$@"
 #+end_src
+
+****** Simple: l
+:PROPERTIES:
+:ID:       org_gcr_2020-06-12T19-06-29-05-00_gsmac:D4CF3AE5-C126-48E4-AF5D-361BA843181F
+:END:
+
+#+NAME: org_gcr_2020-06-12T19-06-29-05-00_gsmac_45C77882-9771-4B9F-9A14-599A5F82EDA2
+#+BEGIN_SRC sh :comments no
+function l {
+  gls \
+    ⟪ls-colorize-output⟫ \
+    ⟪ls-take-additional-arguments⟫
+}
+#+END_SRC
+
+#+RESULTS: org_gcr_2020-06-12T19-06-29-05-00_gsmac_45C77882-9771-4B9F-9A14-599A5F82EDA2
+#+BEGIN_EXAMPLE
+#+END_EXAMPLE
 
 ****** Rich: ~ll~
 :PROPERTIES:
