@@ -245,6 +245,35 @@ function aac2mp3 {
 }
 # org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2020-06-16T19-11-50-05-00_gsmac_39219C20-CBC5-4675-84E4-15343B1334CF][org_gcr_2020-06-16T19-11-50-05-00_gsmac_39219C20-CBC5-4675-84E4-15343B1334CF]]
+function o2w {
+  if [[ $# -lt 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <IN> <OUT>\n" "${FUNCNAME[0]}"
+    printf "Convert an Org mode file IN to MS Word file OUT using Pandoc.\n"
+    return 1
+  fi
+  local inputfile=$1
+  local outputfile=$2
+  printf "Attempting to convert \"%s\" to \"%s\".\n\n" "$inputfile" "$outputfile"
+  pandoc \
+    --standalone \
+    --reference-doc="/Users/gcr/src/pandoc-data-dir/custom-reference.docx" \
+    --fail-if-warnings \
+    --from=org --to=docx \
+    --table-of-contents \
+    "$inputfile" --output="$outputfile"
+  local status="$?"
+  if [ "$status" -eq 0 ]; then
+    printf "Conversion appears to have succeeded.\n\n"
+    printf "Please verify \"%s\" is what you expected.\n" "$outputfile"
+  else
+    printf "Conversion appears to have failed.\n"
+    printf "Please review function usage, error messages, and Pandoc documentation then try again.\n"
+  fi
+  return "$status"
+}
+# org_gcr_2020-06-16T19-11-50-05-00_gsmac_39219C20-CBC5-4675-84E4-15343B1334CF ends here
+
 function l {
   gls \
     --color=always \
