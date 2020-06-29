@@ -349,6 +349,7 @@ alias gitshowreleases="git tag -l"
 alias gitddiff="git diff --name-status"
 alias gitlog="git log --graph --oneline --decorate"
 alias gj="git difftool --cached"
+alias gitlogone='git log --follow --full-history --reverse --date=short --format="%ad %s %b"'
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_121CCF66-A7DD-479D-AFCE-658143CCDDC4 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_89EDF172-801F-4804-AE2C-05AA7B4BC4E9][org_gcr_2019-11-01T00-47-07-05-00_host1.org_89EDF172-801F-4804-AE2C-05AA7B4BC4E9]]
