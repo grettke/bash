@@ -1371,6 +1371,10 @@ export TEXMFHOME="/Users/gcr/src/texmf"
 export PATH="$MACTEX_BIN:$PATH"
 #+END_SRC
 
+#+NAME: org_gcr_2020-07-27T14-15-12-05-00_gsmac_7180DE37-3BD7-4842-819C-87D93DE0B06D
+#+BEGIN_SRC sh
+alias texsh="open /Applications/TeX/TeXShop.app/"
+#+END_SRC
 ***** Git
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9

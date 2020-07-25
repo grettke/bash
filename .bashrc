@@ -329,6 +329,10 @@ export TEXMFHOME="/Users/gcr/src/texmf"
 export PATH="$MACTEX_BIN:$PATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2020-07-27T14-15-12-05-00_gsmac_7180DE37-3BD7-4842-819C-87D93DE0B06D][org_gcr_2020-07-27T14-15-12-05-00_gsmac_7180DE37-3BD7-4842-819C-87D93DE0B06D]]
+alias texsh="open /Applications/TeX/TeXShop.app/"
+# org_gcr_2020-07-27T14-15-12-05-00_gsmac_7180DE37-3BD7-4842-819C-87D93DE0B06D ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_121CCF66-A7DD-479D-AFCE-658143CCDDC4][org_gcr_2019-11-01T00-47-07-05-00_host1.org_121CCF66-A7DD-479D-AFCE-658143CCDDC4]]
 alias g="git"
 alias gitunpull="git reset --keep HEAD@{1}"
