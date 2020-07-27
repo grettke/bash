@@ -905,13 +905,6 @@ alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
 
 File Management.
 
-Words.
-
-#+NAME: org_gcr_2020-01-13T07-21-07-06-00_gsmac_9B9808C4-F60D-4A91-8214-1D1B55484E03
-#+BEGIN_SRC sh
-alias randomword="gshuf -n1 /Users/gcr/src/english-words/words.txt"
-#+END_SRC
-
 youtube-dl
 
 - [[https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection-examples][Via]]
@@ -1127,6 +1120,46 @@ function aac2mp3 {
 }
 #+END_SRC
 
+***** Various
+:PROPERTIES:
+:ID:       org_gcr_2020-07-27T14-15-12-05-00_gsmac:DA267580-1DB0-440E-87AA-DD2C995BBFFF
+:END:
+
+Were Aliases.
+
+#+NAME: org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869
+#+BEGIN_SRC sh
+function randomword {
+  gshuf -n1 /Users/gcr/src/english-words/words.txt
+}
+#+END_SRC
+
+Run a command multiple times.
+
+#+NAME: org_gcr_2020-07-27T14-15-12-05-00_gsmac_297E8D9A-9719-4E08-B3EC-1CD1B2EB130E
+#+BEGIN_SRC sh
+function runn {
+  if [[ -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <REPETITIONS> <COMMAND> <ARGUMENTS...>\n" ".sh${FUNCNAME[0]}"
+    printf "Repeatedly run COMMAND with ARGUMENTS, REPETITONS times.\n"
+    return 1
+  fi
+  local repetitions="$1"
+  local command="$2"
+  shift
+  shift
+  local argarray=("$@")
+  local argstring="${argarray[*]}"
+  printf "Attempting to run %s repetitions of the command \"%s\" with arguments \"%s\":\n" "$repetitions" "$command" "$argstring"
+  for (( repetition=0; repetition<"$repetitions"; repetition++ )); do
+    if [ -z "$argstring" ]; then
+      "$command"
+    else
+      "$command" "$argstring"
+    fi
+  done
+}
+#+END_SRC
 
 ***** Graphviz
 :PROPERTIES:

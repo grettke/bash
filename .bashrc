@@ -82,10 +82,6 @@ alias invertcolors="osascript /Users/gcr/util/sspadtogglecolors.scpt"
 alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471 ends here
 
-# [[file:~/src/bash/Provision.org::org_gcr_2020-01-13T07-21-07-06-00_gsmac_9B9808C4-F60D-4A91-8214-1D1B55484E03][org_gcr_2020-01-13T07-21-07-06-00_gsmac_9B9808C4-F60D-4A91-8214-1D1B55484E03]]
-alias randomword="gshuf -n1 /Users/gcr/src/english-words/words.txt"
-# org_gcr_2020-01-13T07-21-07-06-00_gsmac_9B9808C4-F60D-4A91-8214-1D1B55484E03 ends here
-
 # [[file:~/src/bash/Provision.org::org_gcr_2020-04-30T13-51-04-05-00_gsmac_710AE065-6C2C-464F-97D2-24AF216AA26F][org_gcr_2020-04-30T13-51-04-05-00_gsmac_710AE065-6C2C-464F-97D2-24AF216AA26F]]
 alias ytdbst="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
 # org_gcr_2020-04-30T13-51-04-05-00_gsmac_710AE065-6C2C-464F-97D2-24AF216AA26F ends here
@@ -244,6 +240,36 @@ function aac2mp3 {
   ffmpeg -i "$1" -vn -ar 44100 -ac 2 -b:a 192k "$2"
 }
 # org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931 ends here
+
+# [[file:~/src/bash/Provision.org::org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869][org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869]]
+function randomword {
+  gshuf -n1 /Users/gcr/src/english-words/words.txt
+}
+# org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869 ends here
+
+# [[file:~/src/bash/Provision.org::org_gcr_2020-07-27T14-15-12-05-00_gsmac_297E8D9A-9719-4E08-B3EC-1CD1B2EB130E][org_gcr_2020-07-27T14-15-12-05-00_gsmac_297E8D9A-9719-4E08-B3EC-1CD1B2EB130E]]
+function runn {
+  if [[ -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <REPETITIONS> <COMMAND> <ARGUMENTS...>\n" ".sh${FUNCNAME[0]}"
+    printf "Repeatedly run COMMAND with ARGUMENTS, REPETITONS times.\n"
+    return 1
+  fi
+  local repetitions="$1"
+  local command="$2"
+  shift
+  shift
+  local argarray=("$@")
+  local argstring="${argarray[*]}"
+  printf "Attempting to run %s repetitions of the command \"%s\" with arguments \"%s\":\n" "$repetitions" "$command" "$argstring"
+  for (( repetition=0; repetition<"$repetitions"; repetition++ )); do
+    if [ -z "$argstring" ]; then
+      "$command"
+    else
+      "$command" "$argstring"
+    fi
+  done
+}
+# org_gcr_2020-07-27T14-15-12-05-00_gsmac_297E8D9A-9719-4E08-B3EC-1CD1B2EB130E ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2020-06-26T22-20-01-05-00_gsmac_6C6A92E9-80D4-4688-9F10-DB9650608B68][org_gcr_2020-06-26T22-20-01-05-00_gsmac_6C6A92E9-80D4-4688-9F10-DB9650608B68]]
 function dot2pdf {
