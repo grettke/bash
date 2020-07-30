@@ -295,7 +295,7 @@ function dot2pdf {
 # org_gcr_2020-06-26T22-20-01-05-00_gsmac_6C6A92E9-80D4-4688-9F10-DB9650608B68 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2020-06-16T19-11-50-05-00_gsmac_39219C20-CBC5-4675-84E4-15343B1334CF][org_gcr_2020-06-16T19-11-50-05-00_gsmac_39219C20-CBC5-4675-84E4-15343B1334CF]]
-function o2w {
+function org2word {
   if [[ $# -lt 2 || -z "$1" || -z "$2" ]] ; then
     printf "Usage: %s <IN> <OUT>\n" "${FUNCNAME[0]}"
     printf "Convert an Org mode file IN to MS Word file OUT using Pandoc.\n"
