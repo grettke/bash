@@ -239,6 +239,24 @@ function aac2mp3 {
   fi
   ffmpeg -i "$1" -vn -ar 44100 -ac 2 -b:a 192k "$2"
 }
+
+function mp42m4a {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Copy MP4 SOURCE's unencoded audio stream into the DESTINATION M4A file.\n"
+    printf "Run 'ffprobe SOURCE' to learn more about its contents.\n"
+    return 1
+  elif [[ ! -f "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "I can't find the SOURCE file '%s' so I'm bailing.\n" "$1"
+    return 1
+  elif [[ -f "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
+    printf "Delete '%s' first then try this command again.\n" "$2"
+    return 1
+  fi
+  ffmpeg -i "$1" -vn -acodec copy "$2"
+}
 # org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869][org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869]]
