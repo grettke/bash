@@ -428,6 +428,16 @@ function gitgrepchange {
   printf "%s\n" "$cmd"
   eval "$cmd"
 }
+
+function gitauthorhistory {
+  if [[ $# -eq 0 || -z "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} AUTHOR.\n"
+    printf "Show commit log for AUTHOR name.\n"
+    return 1
+  fi
+  local name=$1
+  git log --author="$name"
+}
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_89EDF172-801F-4804-AE2C-05AA7B4BC4E9 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9][org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9]]

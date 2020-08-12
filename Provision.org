@@ -1489,6 +1489,15 @@ function gitgrepchange {
   eval "$cmd"
 }
 
+function gitauthorhistory {
+  if [[ $# -eq 0 || -z "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} AUTHOR.\n"
+    printf "Show commit log for AUTHOR name.\n"
+    return 1
+  fi
+  local name=$1
+  git log --author="$name"
+}
 #+end_src
 
 bash-git-prompt.
