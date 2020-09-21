@@ -490,7 +490,9 @@ source ~/src/myamacs/amacs
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213][org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213]]
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home/"
-export PATH="$JAVA_HOME:$PATH"
+export ANDROID_SDK="/Users/$USER/Library/Android/sdk"
+export ANDROID_PTOOLS="$ANDROID_SDK/platform-tools"
+export PATH="$JAVA_HOME:$ANDROID_PTOOLS:$PATH"
 # org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-25T19-34-14-06-00_gsmac:98474D2E-17D6-48BC-8C45-0EA8F2F46295][org_gcr_2019-11-25T19-34-14-06-00_gsmac:98474D2E-17D6-48BC-8C45-0EA8F2F46295]]
