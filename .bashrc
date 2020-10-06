@@ -33,10 +33,9 @@ export EDITOR="emacs -nw"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_3ABFD9E6-3802-4C27-8DCB-6B4E2A2E797A ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_A1CD5BCA-9A8B-410C-BE5D-54C51BE32338][org_gcr_2019-11-01T00-47-07-05-00_host1.org_A1CD5BCA-9A8B-410C-BE5D-54C51BE32338]]
-alias sha256summake="shasum --algorithm 256 --portable"
-alias sha256sumcheck="shasum --algorithm 256 --warn --check"
-alias sha512summake="shasum --algorithm 512 --portable"
-alias sha512sumcheck="shasum --algorithm 512 --warn --check"
+alias sha256sumbinmake="sha256sum --binary"
+alias sha256sumtxtmake="sha256sum"
+alias sha256sumcheck="sha256sum --check"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_A1CD5BCA-9A8B-410C-BE5D-54C51BE32338 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_D63C2874-1AA5-45A4-8AF5-7D22086D06D0][org_gcr_2019-11-01T00-47-07-05-00_host1.org_D63C2874-1AA5-45A4-8AF5-7D22086D06D0]]
