@@ -85,6 +85,10 @@ alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
 alias ytdbst="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
 # org_gcr_2020-04-30T13-51-04-05-00_gsmac_710AE065-6C2C-464F-97D2-24AF216AA26F ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2020-10-06T18-35-48-05-00_gsmac_F5463848-9463-4082-8AAF-B21463F05B9D][org_gcr_2020-10-06T18-35-48-05-00_gsmac_F5463848-9463-4082-8AAF-B21463F05B9D]]
+alias showdef='type'
+# org_gcr_2020-10-06T18-35-48-05-00_gsmac_F5463848-9463-4082-8AAF-B21463F05B9D ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD][org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD]]
 function nthlineof {
   if (( "$#" < 2 )); then

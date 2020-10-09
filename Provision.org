@@ -914,6 +914,13 @@ youtube-dl
 alias ytdbst="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
 #+END_SRC
 
+Code.
+
+#+NAME: org_gcr_2020-10-06T18-35-48-05-00_gsmac_F5463848-9463-4082-8AAF-B21463F05B9D
+#+BEGIN_SRC sh
+alias showdef='type'
+#+END_SRC
+
 **** Functions
 :PROPERTIES:
 :ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
