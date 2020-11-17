@@ -540,6 +540,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589][org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589]]
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
 # org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2020-10-30T19-12-40-05-00_gsmac_41C2CC8A-00E4-4431-83E7-437201E621F0][org_gcr_2020-10-30T19-12-40-05-00_gsmac_41C2CC8A-00E4-4431-83E7-437201E621F0]]
