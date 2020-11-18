@@ -1668,6 +1668,12 @@ rbenv Ruby.
 eval "$(rbenv init -)"
 #+END_SRC
 
+Jekyll.
+#+NAME: org_gcr_2020-11-18T14-22-13-06-00_gsmac_F0FB68FF-EEEB-4288-B8C3-708E740241B5
+#+BEGIN_SRC sh
+alias bxj="bundle exec jekyll"
+#+END_SRC
+
 ***** LanguageTool
 :PROPERTIES:
 :ID:       org_gcr_2019-11-29T00-33-23-06-00_gsmac:BB71CF46-39FE-40D8-8718-30D147492C25

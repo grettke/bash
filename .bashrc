@@ -546,6 +546,10 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 eval "$(rbenv init -)"
 # org_gcr_2020-10-30T19-12-40-05-00_gsmac_41C2CC8A-00E4-4431-83E7-437201E621F0 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2020-11-18T14-22-13-06-00_gsmac_F0FB68FF-EEEB-4288-B8C3-708E740241B5][org_gcr_2020-11-18T14-22-13-06-00_gsmac_F0FB68FF-EEEB-4288-B8C3-708E740241B5]]
+alias bxj="bundle exec jekyll"
+# org_gcr_2020-11-18T14-22-13-06-00_gsmac_F0FB68FF-EEEB-4288-B8C3-708E740241B5 ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-29T00-33-23-06-00_gsmac:BB71CF46-39FE-40D8-8718-30D147492C25][org_gcr_2019-11-29T00-33-23-06-00_gsmac:BB71CF46-39FE-40D8-8718-30D147492C25]]
 export LANGTOOL="/usr/local/Cellar/languagetool/4.7/libexec/languagetool-commandline.jar"
 # org_gcr_2019-11-29T00-33-23-06-00_gsmac:BB71CF46-39FE-40D8-8718-30D147492C25 ends here
