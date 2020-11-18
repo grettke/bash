@@ -1653,11 +1653,12 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 :ID:       org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589
 :END:
 
-Brew Ruby. Note that the installer mentions you should add the Gem bin dir to the path. That directory is different from the Ruby version. Being unsure how to automate this it is going to be manual for now.
+Brew Ruby. Only use Gems in the user dir.
+
 #+name: org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589
 #+BEGIN_SRC sh
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
+export PATH="/Users/gcr/.gem/ruby/2.7.0/bin:$PATH"
 #+END_SRC
 
 rbenv Ruby.
