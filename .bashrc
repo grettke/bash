@@ -169,6 +169,12 @@ function cryrnd {
 }
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_576F9B35-6C9B-420A-83AB-7BF1414F2FD2 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_18F5C6DD-63FD-4FCD-8CDF-43E0DE7FC782][org_gcr_2019-11-01T00-47-07-05-00_host1.org_18F5C6DD-63FD-4FCD-8CDF-43E0DE7FC782]]
+function mk {
+  gmake "$@"
+}
+# org_gcr_2019-11-01T00-47-07-05-00_host1.org_18F5C6DD-63FD-4FCD-8CDF-43E0DE7FC782 ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_FD0E042D-3752-4211-9E87-428358A966D6][org_gcr_2019-11-01T00-47-07-05-00_host1.org_FD0E042D-3752-4211-9E87-428358A966D6]]
 function rndfile {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then

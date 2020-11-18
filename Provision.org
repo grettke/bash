@@ -1036,9 +1036,9 @@ function cryrnd {
 Make.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_18F5C6DD-63FD-4FCD-8CDF-43E0DE7FC782
-#+begin_src sh :tangle no
+#+begin_src sh
 function mk {
-  make "$@"
+  gmake "$@"
 }
 #+end_src
 
