@@ -268,6 +268,60 @@ function mp42m4a {
 }
 # org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD][org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD]]
+function exifwipe {
+  # At least one argument?
+  if (( "$#" < 1 )); then
+    gprintf "Wipe *all* EXIF data from a JPEG or TIFF FILE.\n"
+    gprintf "Usage: exifwipe FILE\n"
+    return 1
+  fi
+  local file="$1"
+  # File exists?
+  if [[ ! -f $file ]]; then
+    gprintf "\"%s\" does not exist. Nothing to do.\n" "$file"
+    return 1
+  fi
+  # File extension correct?
+  if [[ ! $file =~ .*\.(jpg|tiff) ]]; then
+    gprintf "The filename \"%s\" must end with either with \".jpg\" or \".tiff\". Nothing to do.\n" "$file"
+    return 1
+  fi
+  # File type correct?
+  if file --brief "$file" | egrep --invert-match '^(JPEG|TIFF)' > /dev/null; then
+    gprintf "\"%s\" appears to be neither a JPEG nor a TIFF.\n" "$file"
+    gprintf "Actual type:\n============\n"
+    file --brief "$file"
+    gprintf "============\n"
+    gprintf "Nothing to do.\n"
+    return 1
+  fi
+  gprintf "========\nexifwipe: STARTING\n========\n"
+  # Initialize temp files for EXIF info.
+  local exifdatapre
+  local exifdatapost
+  exifdatapre=$(gmktemp)
+  exifdatapost=$(gmktemp)
+  exiftool "$file" >> "$exifdatapre"
+  gprintf "Stored current EXIF data for \"%s\" in \"%s\".\n" "$file" "$exifdatapre"
+  # Wipe EXIF data.
+  gprintf "Wiping current EXIF data for \"%s\".\n" "$file"
+  exiftool -all= "$file"
+  gprintf "Completed wipe of current EXIF data for \"%s\".\n" "$file"
+  exiftool "$file" >> "$exifdatapost"
+  gprintf "Stored new EXIF data for \"%s\" in \"%s\".\n" "$file" "$exifdatapost"
+  # Compare old to new EXIF data.
+  gprintf "Diffing PRE and POST EXIF data.\n"
+  /Applications/DeltaWalker.app/Contents/MacOS/DeltaWalker "$exifdatapre" "$exifdatapost"
+  # Delete temp files.
+  gprintf "Removing temp file: \"%s\"\n" "$exifdatapre"
+  grm --verbose "$exifdatapre"
+  gprintf "Removing temp file: \"%s\"\n" "$exifdatapost"
+  grm --verbose "$exifdatapost"
+  gprintf "========\nexifwipe: COMPLETE\n========\n"
+}
+# org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869][org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869]]
 function randomword {
   gshuf -n1 /Users/gcr/src/english-words/words.txt
