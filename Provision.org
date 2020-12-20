@@ -1564,7 +1564,7 @@ alias gitddiff="git diff --name-status"
 alias gitlog="git log --graph --oneline --decorate"
 alias gj="git difftool --cached"
 alias gitlogone='git log --follow --full-history --reverse --date=short --format="%ad %s %b"'
-alias gitlistallcommitters="git shortlog -s -n --all"
+alias gitdid="git shortlog --summary --numbered --all --email"
 #+END_SRC
 
 Git usability.
