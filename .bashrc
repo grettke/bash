@@ -266,6 +266,23 @@ function mp42m4a {
   fi
   ffmpeg -i "$1" -vn -acodec copy "$2"
 }
+
+function mp42x {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Create DESTINATION by doubling both the video and audio speed of the MP4 SOURCE file.\n"
+    return 1
+  elif [[ ! -f "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "I can't find the SOURCE file '%s' so I'm bailing.\n" "$1"
+    return 1
+  elif [[ -f "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
+    printf "Delete '%s' first then try this command again.\n" "$2"
+    return 1
+  fi
+  ffmpeg -i "$1" -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" "$2"
+}
 # org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD][org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD]]
