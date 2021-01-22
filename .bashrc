@@ -392,6 +392,15 @@ function dot2pdf {
 }
 # org_gcr_2020-06-26T22-20-01-05-00_gsmac_6C6A92E9-80D4-4688-9F10-DB9650608B68 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2021-01-15T20-55-24-06-00_gsmac_D0F94EC2-EA35-48C5-B22A-C07BF30FE50B][org_gcr_2021-01-15T20-55-24-06-00_gsmac_D0F94EC2-EA35-48C5-B22A-C07BF30FE50B]]
+function adpdf {
+  pushd "$(pwd)"
+  cd "/Users/gcr/opt/asciidoctorpdf"
+  bundle exec asciidoctor-pdf "$@"
+  popd
+}
+# org_gcr_2021-01-15T20-55-24-06-00_gsmac_D0F94EC2-EA35-48C5-B22A-C07BF30FE50B ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2020-06-16T19-11-50-05-00_gsmac_39219C20-CBC5-4675-84E4-15343B1334CF][org_gcr_2020-06-16T19-11-50-05-00_gsmac_39219C20-CBC5-4675-84E4-15343B1334CF]]
 function word2org {
   if [[ $# -lt 2 || -z "$1" || -z "$2" ]] ; then

@@ -1286,6 +1286,20 @@ function dot2pdf {
   return "$status"
 }
 #+END_SRC
+***** AsciiDoc
+:PROPERTIES:
+:ID:       org_gcr_2021-01-15T20-55-24-06-00_gsmac:1DA7DBB9-8AAA-4121-9B71-E719E72B25D4
+:END:
+
+#+NAME: org_gcr_2021-01-15T20-55-24-06-00_gsmac_D0F94EC2-EA35-48C5-B22A-C07BF30FE50B
+#+BEGIN_SRC sh
+function adpdf {
+  pushd "$(pwd)"
+  cd "/Users/gcr/opt/asciidoctorpdf"
+  bundle exec asciidoctor-pdf "$@"
+  popd
+}
+#+END_SRC
 ***** Pandoc
 :PROPERTIES:
 :ID:       org_gcr_2020-06-16T19-11-50-05-00_gsmac:18688A3B-56D9-46EF-B349-F65826114A36
