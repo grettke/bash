@@ -269,6 +269,7 @@ function mp42m4a {
 
 function mp42x {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <SOURCE> <DESTINATION>\n"
     printf "Create DESTINATION by doubling both the video and audio speed of the MP4 SOURCE file.\n"
     return 1
   elif [[ ! -f "$1" ]] ; then
