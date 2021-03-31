@@ -602,6 +602,10 @@ fi
 source ~/src/myamacs/amacs
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830 ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2021-03-31T12-02-04-05-00_gsmac_FB800D15-7748-40A5-8341-EB9C040C61EB][org_gcr_2021-03-31T12-02-04-05-00_gsmac_FB800D15-7748-40A5-8341-EB9C040C61EB]]
+export EMACSSOCKET="/Users/gcr/server-sockets/emacs.sock"
+# org_gcr_2021-03-31T12-02-04-05-00_gsmac_FB800D15-7748-40A5-8341-EB9C040C61EB ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213][org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213]]
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home/"
 export ANDROID_SDK="/Users/$USER/Library/Android/sdk"
