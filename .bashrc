@@ -606,6 +606,10 @@ source ~/src/myamacs/amacs
 export EMACSSOCKET="/Users/gcr/server-sockets/emacs.sock"
 # org_gcr_2021-03-31T12-02-04-05-00_gsmac_FB800D15-7748-40A5-8341-EB9C040C61EB ends here
 
+# [[file:~/src/bash/Provision.org::org_gcr_2021-03-31T12-58-03-05-00_gsmac_EE73B973-5561-4311-9AF5-44019819CBBA][org_gcr_2021-03-31T12-58-03-05-00_gsmac_EE73B973-5561-4311-9AF5-44019819CBBA]]
+source "/Users/gcr/src/moshemal/moshemal.sh"
+# org_gcr_2021-03-31T12-58-03-05-00_gsmac_EE73B973-5561-4311-9AF5-44019819CBBA ends here
+
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213][org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213]]
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home/"
 export ANDROID_SDK="/Users/$USER/Library/Android/sdk"
