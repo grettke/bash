@@ -608,7 +608,6 @@ export EMACSSOCKET="/Users/gcr/server-sockets/emacs.sock"
 
 # [[file:~/src/bash/Provision.org::org_gcr_2021-03-31T12-58-03-05-00_gsmac_EE73B973-5561-4311-9AF5-44019819CBBA][org_gcr_2021-03-31T12-58-03-05-00_gsmac_EE73B973-5561-4311-9AF5-44019819CBBA]]
 source "/Users/gcr/src/moshemal/moshemal.sh"
-alias embs='moshemal "(corporate-bs-generator-make)"'
 # org_gcr_2021-03-31T12-58-03-05-00_gsmac_EE73B973-5561-4311-9AF5-44019819CBBA ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213][org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213]]

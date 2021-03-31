@@ -1694,7 +1694,6 @@ Moshemal.
 #+NAME: org_gcr_2021-03-31T12-58-03-05-00_gsmac_EE73B973-5561-4311-9AF5-44019819CBBA
 #+BEGIN_SRC sh
 source "/Users/gcr/src/moshemal/moshemal.sh"
-alias embs='moshemal "(corporate-bs-generator-make)"'
 #+END_SRC
 
 ***** Java
