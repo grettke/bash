@@ -1683,13 +1683,6 @@ Lolsmacs.
 source ~/src/myamacs/amacs
 #+END_SRC
 
-
-Server.
-#+NAME: org_gcr_2021-03-31T12-02-04-05-00_gsmac_FB800D15-7748-40A5-8341-EB9C040C61EB
-#+BEGIN_SRC sh
-export EMACSSOCKET="/Users/gcr/server-sockets/emacs.sock"
-#+END_SRC
-
 ***** Java
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T19-34-14-06-00_gsmac:123EC3E3-5C48-4C60-83E9-718B7C3E9103
