@@ -1686,12 +1686,8 @@ source ~/src/myamacs/amacs
 Emacs Server.
 #+NAME: org_gcr_2021-03-31T13-32-43-05-00_gsmac_CC6424CA-B348-4C13-A4FA-092E8CCDFA0D
 #+BEGIN_SRC sh
-export EBSESOCKET="/Users/gcr/server-sockets/emacs.sock"
-export EBSEHOME="/Users/gcr/src/ebse"
-export EBSELIB="$EBSEHOME/ebsefn.sh"
-source "$EBSELIB"
+source "/Users/gcr/src/ebse/ebse" > /dev/null
 #+END_SRC
-
 ***** Java
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T19-34-14-06-00_gsmac:123EC3E3-5C48-4C60-83E9-718B7C3E9103

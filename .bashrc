@@ -603,10 +603,7 @@ source ~/src/myamacs/amacs
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2021-03-31T13-32-43-05-00_gsmac_CC6424CA-B348-4C13-A4FA-092E8CCDFA0D][org_gcr_2021-03-31T13-32-43-05-00_gsmac_CC6424CA-B348-4C13-A4FA-092E8CCDFA0D]]
-export EBSESOCKET="/Users/gcr/server-sockets/emacs.sock"
-export EBSEHOME="/Users/gcr/src/ebse"
-export EBSELIB="$EBSEHOME/ebsefn.sh"
-source "$EBSELIB"
+source "/Users/gcr/src/ebse/ebse" > /dev/null
 # org_gcr_2021-03-31T13-32-43-05-00_gsmac_CC6424CA-B348-4C13-A4FA-092E8CCDFA0D ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213][org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213]]
