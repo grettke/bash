@@ -501,7 +501,7 @@ function ll {
 }
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34][org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34]]
-export CCRYPT="/usr/local/Cellar/ccrypt/1.11/"
+# export CCRYPT="/usr/local/Cellar/ccrypt/1.11/"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084][org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084]]
@@ -603,7 +603,8 @@ source ~/src/myamacs/amacs
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2021-03-31T13-32-43-05-00_gsmac_CC6424CA-B348-4C13-A4FA-092E8CCDFA0D][org_gcr_2021-03-31T13-32-43-05-00_gsmac_CC6424CA-B348-4C13-A4FA-092E8CCDFA0D]]
-source "/Users/gcr/src/ebse/ebse" > /dev/null
+# source "/Users/grant/src/ebse/ebse" > /dev/null
+# source "/Users/grant/src/ebse/ebsefn.sh" > /dev/null
 # org_gcr_2021-03-31T13-32-43-05-00_gsmac_CC6424CA-B348-4C13-A4FA-092E8CCDFA0D ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213][org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213]]
@@ -634,7 +635,7 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 # org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2020-10-30T19-12-40-05-00_gsmac_41C2CC8A-00E4-4431-83E7-437201E621F0][org_gcr_2020-10-30T19-12-40-05-00_gsmac_41C2CC8A-00E4-4431-83E7-437201E621F0]]
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 # org_gcr_2020-10-30T19-12-40-05-00_gsmac_41C2CC8A-00E4-4431-83E7-437201E621F0 ends here
 
 # [[file:~/src/bash/Provision.org::org_gcr_2020-11-18T14-22-13-06-00_gsmac_F0FB68FF-EEEB-4288-B8C3-708E740241B5][org_gcr_2020-11-18T14-22-13-06-00_gsmac_F0FB68FF-EEEB-4288-B8C3-708E740241B5]]
