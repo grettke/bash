@@ -661,3 +661,4 @@ export PATH="/usr/local/bin:/Users/gcr/bin:/Users/gcr/bin/sh:$PATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F ends here
 
 export PATH="$PATH":"/usr/local/go/bin"
+export PATH="$PATH":"~/go/bin"
