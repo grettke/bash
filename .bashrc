@@ -506,7 +506,7 @@ function ll {
 
 # [[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084][org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084]]
 export MACTEX_BIN="/usr/local/texlive/2021/bin/universal-darwin"
-export TEXMFHOME="/Users/gcr/src/texmf"
+# export TEXMFHOME="/Users/gcr/src/texmf"
 export PATH="$MACTEX_BIN:$PATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084 ends here
 
