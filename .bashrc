@@ -662,3 +662,8 @@ export PATH="/usr/local/bin:/Users/gcr/bin:/Users/gcr/bin/sh:$PATH"
 
 export PATH="$PATH":"/usr/local/go/bin"
 export PATH="$PATH":"~/go/bin"
+
+if [ -f "$HOME/src/bash-git-prompt/gitprompt.sh" ]; then
+    GIT_PROMPT_ONLY_IN_REPO=1
+    source $HOME/src/bash-git-prompt/gitprompt.sh
+fi
