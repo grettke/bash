@@ -687,8 +687,8 @@ Execute the same configuration as every non-login interactive shell.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4C32C1AE-EF81-4469-9B77-78D2FEF9CD52
 #+BEGIN_SRC sh
-if [ -f /Users/gcr/.bashrc ]; then
-  source /Users/gcr/.bashrc;
+if [ -f /Users/grant/.bashrc ]; then
+  source /Users/grant/.bashrc;
 fi
 #+END_SRC
 
@@ -885,21 +885,21 @@ Toggle grayscale.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F1D33BB7-E1D7-4D87-83BC-F2D6EE2CB318
 #+begin_src sh
-alias togglegrayscale="osascript /Users/gcr/util/sspadtogglegrayscale.scpt"
+alias togglegrayscale="osascript /Users/grant/util/sspadtogglegrayscale.scpt"
 #+end_src
 
 Invert colors.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B5C1EDD5-6C74-49F7-BBE5-BC3E24CD7B96
 #+begin_src sh
-alias invertcolors="osascript /Users/gcr/util/sspadtogglecolors.scpt"
+alias invertcolors="osascript /Users/grant/util/sspadtogglecolors.scpt"
 #+end_src
 
 Start screensaver.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471
 #+begin_src sh
-alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
+alias sav="osascript /Users/grant/util/Start-Screensaver.scpt"
 #+end_src
 
 File Management.
@@ -1225,13 +1225,6 @@ function exifwipe {
 
 Were Aliases.
 
-#+NAME: org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869
-#+BEGIN_SRC sh
-function randomword {
-  gshuf -n1 /Users/gcr/src/english-words/words.txt
-}
-#+END_SRC
-
 Run a command multiple times.
 
 #+NAME: org_gcr_2020-07-27T14-15-12-05-00_gsmac_297E8D9A-9719-4E08-B3EC-1CD1B2EB130E
@@ -1296,7 +1289,7 @@ function dot2pdf {
 #+BEGIN_SRC sh
 function adpdf {
   pushd "$(pwd)"
-  cd "/Users/gcr/opt/asciidoctorpdf"
+  cd "/Users/grant/opt/asciidoctorpdf"
   bundle exec asciidoctor-pdf "$@"
   popd
 }
@@ -1343,7 +1336,7 @@ function org2word {
   printf "Attempting to convert \"%s\" to \"%s\".\n\n" "$inputfile" "$outputfile"
   pandoc \
     --standalone \
-    --reference-doc="/Users/gcr/src/pandoc-data-dir/custom-reference.docx" \
+    --reference-doc="/Users/grant/src/pandoc-data-dir/custom-reference.docx" \
     --fail-if-warnings \
     --from=org --to=docx \
     --table-of-contents \
@@ -1559,7 +1552,7 @@ TeX
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084
 #+BEGIN_SRC sh
 export MACTEX_BIN="/usr/local/texlive/2019/bin/x86_64-darwin/"
-export TEXMFHOME="/Users/gcr/src/texmf"
+export TEXMFHOME="/Users/grant/src/texmf"
 export PATH="$MACTEX_BIN:$PATH"
 #+END_SRC
 
@@ -1686,7 +1679,7 @@ source ~/src/myamacs/amacs
 Emacs Server.
 #+NAME: org_gcr_2021-03-31T13-32-43-05-00_gsmac_CC6424CA-B348-4C13-A4FA-092E8CCDFA0D
 #+BEGIN_SRC sh
-source "/Users/gcr/src/ebse/ebse" > /dev/null
+source "/Users/grant/src/ebse/ebse" > /dev/null
 #+END_SRC
 ***** Java
 :PROPERTIES:
@@ -1796,7 +1789,7 @@ export NVM_DIR="$HOME/.nvm"
 
 #+name: org_gcr_2019-11-30T17-22-54-06-00_gsmac:B214C66E-7A43-4339-9974-BE7AED3B28E0
 #+BEGIN_SRC sh
-export PATH="/Users/gcr/opt/textlintbin/node_modules/.bin:$PATH"
+export PATH="/Users/grant/opt/textlintbin/node_modules/.bin:$PATH"
 #+END_SRC
 
 **** Footer
@@ -1808,7 +1801,7 @@ Last thing to do is prioritize the path
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F
 #+BEGIN_SRC sh
-export PATH="/usr/local/bin:/Users/gcr/bin:/Users/gcr/bin/sh:$PATH"
+export PATH="/usr/local/bivun:/Users/grant/bin:/Users/grant/bin/sh:$PATH"
 #+END_SRC
 
 *** BashLogout
