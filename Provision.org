@@ -1792,6 +1792,11 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/Users/grant/opt/textlintbin/node_modules/.bin:$PATH"
 #+END_SRC
 
+Util
+
+#+begin_src sh
+export PATH="/Users/grant/util":$PATH
+#+end_src
 **** Footer
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
