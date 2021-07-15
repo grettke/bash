@@ -607,6 +607,10 @@ export PATH="$PATH":"/usr/local/go/bin"
 export PATH="$PATH":"~/go/bin"
 # org_grant_2021-07-12T10-27-24-05-00_Sadie_D53423DD-60DF-4DCB-9BD1-A71B3AB7D4D0 ends here
 
+# [[file:Provision.org::org_grant_2021-07-12T10-27-24-05-00_Sadie_5C494D62-DF3B-4083-A907-5093B58BA856][org_grant_2021-07-12T10-27-24-05-00_Sadie_5C494D62-DF3B-4083-A907-5093B58BA856]]
+export PATH="/Users/grant/util":$PATH
+# org_grant_2021-07-12T10-27-24-05-00_Sadie_5C494D62-DF3B-4083-A907-5093B58BA856 ends here
+
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F]]
 export PATH="/usr/local/bin:/Users/gcr/bin:/Users/gcr/bin/sh:$PATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F ends here
