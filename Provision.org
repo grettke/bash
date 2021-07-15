@@ -606,6 +606,8 @@ Only interactive sessions require this configuration.
 
 Execute the same configuration as every non-login interactive shell.
 
+This path *must be* fully-qualified.
+
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4C32C1AE-EF81-4469-9B77-78D2FEF9CD52
 #+BEGIN_SRC sh
 if [ -f /Users/grant/.bashrc ]; then
