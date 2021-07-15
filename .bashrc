@@ -1,7 +1,7 @@
 # -*- mode: sh; -*-
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F]]
-source "~/.bash_global_interactive"
+source ~/.bash_global_interactive
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F ends here
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3][org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3]]
@@ -26,11 +26,8 @@ export PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHE
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC][org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC]]
 export VISUAL="emacs"
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC ends here
-
-# [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_3ABFD9E6-3802-4C27-8DCB-6B4E2A2E797A][org_gcr_2019-11-01T00-47-07-05-00_host1.org_3ABFD9E6-3802-4C27-8DCB-6B4E2A2E797A]]
 export EDITOR="emacs -nw"
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_3ABFD9E6-3802-4C27-8DCB-6B4E2A2E797A ends here
+# org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC ends here
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_A1CD5BCA-9A8B-410C-BE5D-54C51BE32338][org_gcr_2019-11-01T00-47-07-05-00_host1.org_A1CD5BCA-9A8B-410C-BE5D-54C51BE32338]]
 alias shasum256printbin="shasum --algorithm 256 --binary"
@@ -579,7 +576,7 @@ function gitauthorhistory {
 # [[file:Provision.org::org_grant_2021-07-12T10-27-24-05-00_Sadie_AEA309FA-A780-48D1-AAEA-B4062F915914][org_grant_2021-07-12T10-27-24-05-00_Sadie_AEA309FA-A780-48D1-AAEA-B4062F915914]]
 if [ -f "$HOME/src/bash-git-prompt/gitprompt.sh" ]; then
   GIT_PROMPT_ONLY_IN_REPO=1
-  source "$HOME/src/bash-git-prompt/gitprompt.sh"
+  source $HOME/src/bash-git-prompt/gitprompt.sh
 fi
 # org_grant_2021-07-12T10-27-24-05-00_Sadie_AEA309FA-A780-48D1-AAEA-B4062F915914 ends here
 
@@ -596,7 +593,7 @@ fi
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_C617F66A-B15C-4E1B-B113-C22C53DC9A8C ends here
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830][org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830]]
-source "~/src/myamacs/amacs"
+source ~/src/myamacs/amacs
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830 ends here
 
 # [[file:Provision.org::org_grant_2021-07-12T10-27-24-05-00_Sadie_241AF44A-A4A6-4F18-972B-217C5C0D2731][org_grant_2021-07-12T10-27-24-05-00_Sadie_241AF44A-A4A6-4F18-972B-217C5C0D2731]]
@@ -607,10 +604,6 @@ export PATH="$PATH":"/usr/local/go/bin"
 export PATH="$PATH":"~/go/bin"
 # org_grant_2021-07-12T10-27-24-05-00_Sadie_D53423DD-60DF-4DCB-9BD1-A71B3AB7D4D0 ends here
 
-# [[file:Provision.org::org_grant_2021-07-12T10-27-24-05-00_Sadie_5C494D62-DF3B-4083-A907-5093B58BA856][org_grant_2021-07-12T10-27-24-05-00_Sadie_5C494D62-DF3B-4083-A907-5093B58BA856]]
-export PATH="/Users/grant/util":$PATH
-# org_grant_2021-07-12T10-27-24-05-00_Sadie_5C494D62-DF3B-4083-A907-5093B58BA856 ends here
-
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F]]
-export PATH="/usr/local/bin:/Users/grant/bin:/Users/grant/bin/sh:$PATH"
+export PATH="/usr/local/bin:/Users/grant/util:$PATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F ends here

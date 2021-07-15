@@ -611,7 +611,7 @@ This path *must be* fully-qualified.
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4C32C1AE-EF81-4469-9B77-78D2FEF9CD52
 #+BEGIN_SRC sh
 if [ -f /Users/grant/.bashrc ]; then
-  source /Users/grant/.bashrc;
+  source /Users/grant/.bashrc
 fi
 #+END_SRC
 
@@ -651,7 +651,7 @@ You should probably only be editing this headline.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F
 #+BEGIN_SRC sh
-source "~/.bash_global_interactive"
+source ~/.bash_global_interactive
 #+END_SRC
 ** Interactive Shell Prompt Values
 :PROPERTIES:
@@ -1590,7 +1590,7 @@ bash-git-prompt.
 #+begin_src sh
 if [ -f "$HOME/src/bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
-    source "$HOME/src/bash-git-prompt/gitprompt.sh"
+    source $HOME/src/bash-git-prompt/gitprompt.sh
 fi
 #+end_src
 
@@ -1629,7 +1629,7 @@ Load the Lolsmacs configuration.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830
 #+BEGIN_src sh
-source "~/src/myamacs/amacs"
+source ~/src/myamacs/amacs
 #+END_SRC
 
 *** golang
