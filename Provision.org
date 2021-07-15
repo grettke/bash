@@ -757,9 +757,9 @@ Checksum.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A1CD5BCA-9A8B-410C-BE5D-54C51BE32338
 #+begin_src sh
-alias sha256sumbinmake="sha256sum --binary"
-alias sha256sumtxtmake="sha256sum"
-alias sha256sumcheck="sha256sum --check"
+alias shasum256printbin="shasum --algorithm 256 --binary"
+alias shasum256printtxt="shasum --algorithm 256 --text"
+alias shasum256check="shasum --algorithm 256 --check"
 #+end_src
 
 Good defaults.
