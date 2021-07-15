@@ -26,7 +26,7 @@ This configuration belongs in both the Interactive and Non-Interactive configura
 
 We wrote this document for Bash version 4.3, which is now out of date. We didn't update it for newer versions, though. Lazy-Learning and Lazy-load fixes are in our future!
 
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_435FF2EC-213F-4D6A-94B9-613AD6F153DD
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_435FF2EC-213F-4D6A-94B9-613AD6F153DDS
 #+BEGIN_SRC sh
 function gcrbashcheck {
   local expected_major=5
@@ -539,7 +539,7 @@ export TZ="America/Chicago"
 
 *** Create the Non-Interactive One: .bash_global_non_interactive
 :PROPERTIES:
-:header-args: :tangle ./.bash_global_non_interactive
+:header-args: :tangle ".bash_global_non_interactive"
 :ID:       org_gcr_2017-05-12_mara:DB3A9415-85FC-46FD-BF39-F723E5235C3C
 :END:
 
@@ -564,7 +564,7 @@ Only non-interactive sessions requires this configuration.
 
 *** Create the Interactive One: .bash_global_interactive
 :PROPERTIES:
-:header-args: :tangle ./.bash_global_interactive
+:header-args: :tangle ".bash_global_interactive"
 :ID:       org_gcr_2017-05-12_mara:1E8A5E47-9189-40EB-A9B9-8D4835775A7A
 :END:
 
@@ -594,7 +594,7 @@ Only interactive sessions require this configuration.
 
 ** Use the Same Interactive Configuration for Non-Login Interactive Shells: .bash_login
 :PROPERTIES:
-:header-args: :tangle ./.bash_login
+:header-args: :tangle ".bash_login"
 :ID:       org_gcr_2017-05-12_mara:93967906-378F-4A5B-B53F-1068F93DF8BB
 :END:
 
@@ -615,7 +615,7 @@ fi
 
 ** Run This When You Log Out: .bash_logout
 :PROPERTIES:
-:header-args: :tangle ./.bash_logout
+:header-args: :tangle ".bash_logout"
 :ID:       org_gcr_2017-05-12_mara:04FEFF46-AAC6-4AB8-9876-199B271DA565
 :END:
 
@@ -631,7 +631,7 @@ printf "Logging out of Bash.\n"
 #+END_SRC
 * The Actual Daily Usage Configuration: .bashrc
 :PROPERTIES:
-:header-args: :tangle ./.bashrc
+:header-args: :tangle ".bashrc"
 :ID:       org_gcr_2017-05-12_mara:93E59E15-9E26-4FEE-800A-4DB748AB395F
 :END:
 

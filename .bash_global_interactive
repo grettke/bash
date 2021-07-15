@@ -1,7 +1,7 @@
 # -*- mode: sh; -*-
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BD3F4F38-92D6-4310-9276-E7DCF825E421][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BD3F4F38-92D6-4310-9276-E7DCF825E421]]
-# [[[[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BD3F4F38-92D6-4310-9276-E7DCF825E421][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BD3F4F38-92D6-4310-9276-E7DCF825E421]]][org_gcr_2019-11-01T00-47-07-05-00_host1.org_435FF2EC-213F-4D6A-94B9-613AD6F153DD]]
+# [[[[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BD3F4F38-92D6-4310-9276-E7DCF825E421][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BD3F4F38-92D6-4310-9276-E7DCF825E421]]][org_gcr_2019-11-01T00-47-07-05-00_host1.org_435FF2EC-213F-4D6A-94B9-613AD6F153DDS]]
 function gcrbashcheck {
   local expected_major=5
   local expected_minor=1
@@ -17,7 +17,7 @@ function gcrbashcheck {
   fi
 }
 gcrbashcheck
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_435FF2EC-213F-4D6A-94B9-613AD6F153DD ends here
+# org_gcr_2019-11-01T00-47-07-05-00_host1.org_435FF2EC-213F-4D6A-94B9-613AD6F153DDS ends here
 # [[[[file:~/src/bash/Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BD3F4F38-92D6-4310-9276-E7DCF825E421][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BD3F4F38-92D6-4310-9276-E7DCF825E421]]][org_gcr_2019-11-01T00-47-07-05-00_host1.org_E96DA766-2B22-430B-A38C-78E261051396]]
 set -o braceexpand
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_E96DA766-2B22-430B-A38C-78E261051396 ends here
