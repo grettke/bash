@@ -1,25 +1,38 @@
-* Provision
+* Bash Configuration Document
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:8A1F73F9-332A-46CD-A339-AFCD19EE466C
 :END:
-** Global
+** Fundamental, Common, and Mostly Static Bash Behavior Configuration
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:A9BD0A2F-5066-4349-8DB3-20E58925B2E5
 :END:
 
-*** BashCore
+- Configure
+  - Bash behavior and options here.
+    - For both Interactive and Non-Interactive mode.
+  - Everything else /not/ here.
+
+This configuration has been thoroughly researched and carefully chosen.
+
+It is unlikely to change too much because it is for the most fundamental aspects of Bash behavior and /not/ for day-to-day use.
+
+If you are reading this, then something special is going on!
+
+*** Common Configuration for both Interactive and Non-Interactive Use
 :PROPERTIES:
 :header-args: :noweb-ref BashCore
 :ID:       org_gcr_2017-05-12_mara:F5ED8B16-23A9-4FB2-88A8-A340984AF656
 :END:
 
-Define this system using Bash 4.3.* features. Warn if not at least.
+This configuration belongs in both the Interactive and Non-Interactive configuration.
+
+We wrote this document for Bash version 4.3, which is now out of date. We didn't update it for newer versions, though. Lazy-Learning and Lazy-load fixes are in our future!
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_435FF2EC-213F-4D6A-94B9-613AD6F153DD
 #+BEGIN_SRC sh :tangle
 function gcrbashcheck {
-  local expected_major=4
-  local expected_minor=3
+  local expected_major=5
+  local expected_minor=1
   local actual_major="${BASH_VERSINFO[0]}"
   local actual_minor="${BASH_VERSINFO[1]}"
   printf "Using Bash %s\n" "$BASH_VERSION"
@@ -43,8 +56,8 @@ gcrbashcheck
 :ID:       org_gcr_2017-05-12_mara:BAED844A-0444-40DE-9052-F5DCFD0BF1C9
 :END:
 
-Programatically generate expressions (Brace Expansion) using
-- Sequence of comma separated names
+Programmatically generate expressions (Brace Expansion) using
+- Sequence of comma-separated names
 - Pattern matching to create a list of names of files
 - Sequence expression
 
@@ -53,9 +66,7 @@ Programatically generate expressions (Brace Expansion) using
 set -o braceexpand
 #+END_SRC
 
-
-Define key-pair values for command's dynamic extent before calling the command
-and nowhere else. Doing otherwise breaks ~alias~ for example in a surprising way.
+Define key-pair values for the command's dynamic extent before calling the command and nowhere else. Doing otherwise breaks ~alias~ for example, surprisingly.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_66B9DD8E-B586-4738-84CC-28E8874A455D
 #+BEGIN_SRC sh
@@ -67,11 +78,7 @@ set +o keyword
 :ID:       org_gcr_2017-05-12_mara:EE650225-E984-4C7D-8D73-B027A50000BD
 :END:
 
-Exit immediately when a command in a pipeline fails. Assume the worst. If the
-result of calling the failed command is not an emergency, then find the
-parameter for that command which prevents it from reporting a failure. This
-looks like an extreme configuration decision, but it isn't. The behavior is
-disabled for the following expected situations where the command is
+Exit immediately when a command in a pipeline fails. Assume the worst. If calling the failed command is not an emergency, then find the parameter for that command that prevents it from reporting a failure. Failing immediately looks like an extreme configuration decision, but it isn't. The behavior is disabled for the following expected situations where the command is
 
 - Exceptions
   - in ~while~ or ~until~ block
@@ -81,14 +88,10 @@ disabled for the following expected situations where the command is
     - but for the last command
   - any command in a pipeline but the last
     - surprised at this behavior!
-  - having it's return status inverted by ~!~
-- This seems strange; I read this as we won't get the desired behavior during a
-  sequence of express and that is the exact place where we want that behavior.
-  Perform research on this.
+  - having its return status inverted by ~!~
+- This seems strange; I read this as we won't get the desired behavior during a sequence of express, and that is the exact place where we want that behavior. Perform research on this.
 
-When an error occurs remain in the shell so that the system operator can
-research wha happened in that context. Don't exit the shell because there was
-an error. Enabling this causes the shell to exit immediately.
+When an error occurs, remain in the shell so that the system operator can research what happened in that context. Don't exit the shell because there was an error. Enabling this causes the shell to exit immediately.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_967CE969-FFC5-472B-AE89-239CE444DC3A
 #+BEGIN_SRC sh
@@ -96,15 +99,14 @@ set +o errexit
 #+END_SRC
 
 The result of a pipeline is the result of the last expression to exit on error
-or zero if they all completed successfully. This reads like "short circuit"
-evaluation but I'm not sure it is. Perform research on this.
+or zero if they all completed successfully. In other words, it reads like a "short circuit" evaluation, but I'm not sure it is. TODO: Perform research on this.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_20398471-203E-4F93-8D03-0DBB02A274B8
 #+BEGIN_SRC sh
 set -o pipefail
 #+END_SRC
 
-When there are no file matches found report an error.
+When there are no file matches, found report an error.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_8B5E53E8-0EE3-4DF2-A3E9-41FCF1CCD2C7
 #+BEGIN_SRC sh
@@ -123,9 +125,7 @@ shopt -s shift_verbose
 :ID:       org_gcr_2017-05-12_mara:468DE01C-7493-4307-8CF2-1C736E06F38A
 :END:
 
-Every change (creation and modification) made to the parent shell
-environment (functions and variables) should *not* be automatically exported to every
-child shell environment because it is isn't intuitive to virtually every Bash user.
+Every change (creation and modification) made to the parent shell environment (functions and variables) should *not* be automatically exported to every child shell environment because it isn't intuitive to virtually every Bash user.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C1364853-3E34-472B-8004-BF3BC47EEE97
 #+BEGIN_SRC sh
@@ -146,7 +146,7 @@ Do the same thing for the ~DEBUG~ and ~RETURN~ traps.
 set -o functrace
 #+END_SRC
 
-Pass a non-directory arguments to =cd= and change to the value of that variable.
+Pass non-directory arguments to =cd= and change to the value of that variable.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_5086373B-8721-4CDD-AA92-B75DA243C6E9
 #+BEGIN_SRC sh
@@ -165,9 +165,7 @@ Enable it.
 set -o monitor
 #+END_SRC
 
-Immediately report terminated job status. This might appear to be a Interactive
-feature, but it isn't. It appears hear reporting errors in the log file
-immediately realizing this Bash configurations "Fail Fast" goal.
+Immediately report terminated job status. This might appear to be an Interactive feature, but it isn't. It reports errors in the log file immediately realizing this Bash configuration "Fail Fast" goal.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_AA2CC1E2-A20D-4EEC-9E3D-7B27D5212ACD
 #+BEGIN_SRC sh
@@ -181,7 +179,7 @@ set -o notify
 
 Provide but disable interactive debugging by default.
 
-Instead force children to change their configuration script,
+Instead, force children to change their configuration script,
 run with ~bash --debugger~ or set ~shopt -s extdebug~.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_972F36A6-F2C2-4C2A-9026-F9F7E7AAEC06
@@ -189,9 +187,7 @@ run with ~bash --debugger~ or set ~shopt -s extdebug~.
 shopt -u extdebug
 #+END_SRC
 
-Log files are often identified as important only after accidentally clobbering
-them. Make stomping visible  by first deleting them and then writing them
-out again. Doing so is easy to automate and searchable.
+Log files are only deemed critical after accidentally stomping on them. Make stomping visible by first deleting them and then writing them out again. Doing so is easy to automate and searchable.
 
 #+BEGIN_QUOTE
 Prevent output redirection using ‘>’, ‘>&’, and ‘<>’ from overwriting existing
@@ -203,18 +199,14 @@ files.
 set -o noclobber
 #+END_SRC
 
-Referencing an undefined variable or parameter should generate an error because
-the program can not run as intended. The system should fail-fast. Only use this
-in individual shell scripts; not the global configuration because doing so
-prevents Bash system initialization by preventing you to define any new
-variables and dying!
+Referencing an undefined variable or parameter should generate an error because the program can not run as intended. The system should fail-fast. Only use this in individual shell scripts, not the global configuration, because doing so prevents Bash system initialization by preventing you to define any new variables and dying!
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A2FA681A-D61B-4E19-B3B2-E22DEE12949B
 #+BEGIN_SRC sh
 # set -o nounset
 #+END_SRC
 
-Put temporary files in one place.
+Store temporary files in one place.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F66F1637-E3CB-4D66-BC8F-DE64C8F73901
 #+BEGIN_SRC sh
@@ -226,8 +218,7 @@ export TMPDIR="/tmp"
 :ID:       org_gcr_2017-05-12_mara:AFB6A8B2-AFB2-4850-BF4D-87040E93222C
 :END:
 
-Cache recently executed command source locations in a lookup table and search
-that before searching the lookup path to find a command.
+Cache recently executed command source locations in a lookup table and search that before searching the lookup path to find a command.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_44FDFC0D-611C-41FC-81B0-F67A01DBA87B
 #+BEGIN_SRC sh
@@ -249,8 +240,7 @@ Use UTF-8 for everything.
 
 Emacs will use this but will override it with settings in your init file.
 
-Read more about how locale variables work in its man page. Only =LC_ALL= is
-required if all of your settings are the same.
+Read more about how locale variables work on its man page. Only =LC_ALL= is required if all of your settings are the same.
 
 Set anything un-set.
 
@@ -259,29 +249,32 @@ Set anything un-set.
 export LANG="en_US.UTF-8"
 #+END_SRC
 
-Override everything
+Override every default varible
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_35A437FE-A052-4125-8F69-20A929F8E118
 #+BEGIN_SRC sh
 export LC_ALL="en_US.UTF-8"
 #+END_SRC
 
-Sor how you expect it.
+Sort how you expect it.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_ACFFFBB0-E8E9-4439-BD83-3480AA275A2C
 #+BEGIN_SRC sh
 export LC_COLLATE="POSIX"
 #+END_SRC
 
-Verify encoding.
+Verify encoding for UTF-8 to work correctly.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_54E6F702-5327-41A1-A266-8300363A3466
 #+BEGIN_SRC sh
-if [ "$(locale charmap)" == "UTF-8" ]; then
-    printf "Character encoding expected to be 'UTF-8' and found it to be CORRECT.\n"
-else
-  printf "Character encoding expected to be 'UTF-8' and found it to be INCORRECT as $(locale charmap).\n"
-fi
+function gcrencodingcheck {
+  if [ "$(locale charmap)" == "UTF-8" ]; then
+    printf "Character encoding expected to be 'UTF-8' and found it to be: CORRECT.\n"
+  else
+    printf "Character encoding expected to be 'UTF-8' and found it to be: INCORRECT as $(locale charmap).\n"
+  fi
+}
+gcrencodingcheck
 #+END_SRC
 
 ***** Fontconfig
@@ -289,59 +282,14 @@ fi
 :ID:       org_gcr_2017-05-12_mara:CA259BBD-7D76-4C57-BA3F-B8E1437C773E
 :END:
 
-[[https://www.freedesktop.org/software/fontconfig/fontconfig-devel/fcconfigfilename.html][Configure Fontconfig]].
+Specify the X-Windows system configuration file.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_8256A72B-A6AF-4074-8EEC-98FFB829AB19
 #+BEGIN_SRC sh
 export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 #+END_SRC
 
-**** Constants
-:PROPERTIES:
-:ID:       org_gcr_2018-11-15T23-09-36-06-00_cosmicality:80E17869-CF91-446E-B29C-ECA9D6E5D134
-:END:
-
-These are constants but I didn't ~readonly~ them or ~declare -r~ them so that they
-can be used in strings.
-
-***** Binary Prefix
-:PROPERTIES:
-:ID:       org_gcr_2018-11-15T23-09-36-06-00_cosmicality:9AA33A8C-5F8B-4CC7-88A1-CD968E676CA3
-:END:
-
-#+begin_quote
-A [[https://en.wikipedia.org/wiki/Binary_prefix][binary prefix]] is a unit prefix for multiples of units in data processing,
-data transmission, and digital information, notably the bit and the byte, to
-indicate multiplication by a power of 2.
-
-The computer industry has historically used the units kilobyte, megabyte, and
-gigabyte, and the corresponding symbols KB, MB, and GB, in at least two
-slightly different measurement systems. In citations of main memory (RAM)
-capacity, gigabyte customarily means 1073741824 bytes. As this is a power of
-1024, and 1024 is a power of two (210), this usage is referred to as a binary
-measurement.
-
-In most other contexts, the industry uses the multipliers kilo, mega, giga,
-etc., in a manner consistent with their meaning in the International System of
-Units (SI), namely as powers of 1000. For example, a 500 gigabyte hard disk
-holds 500000000000 bytes, and a 1 Gbit/s (gigabit per second) Ethernet
-connection transfers data at 1000000000 bit/s. In contrast with the binary
-prefix usage, this use is described as a decimal prefix, as 1000 is a power of
-10 (103).
-#+end_quote
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D3D094C2-C5EE-4250-ACB6-17CE53AAE339
-#+begin_src sh
-export KILO=$((1000**1))
-export MEGA=$((1000**2))
-export GIGA=$((1000**3))
-
-export KIBI=$((1024**1))
-export MEBI=$((1024**2))
-export GIBI=$((1024**3))
-#+end_src
-
-*** Bashnoninteractivecore
+*** Common Configuration for Non-Interactive Use
 :PROPERTIES:
 :header-args: :noweb-ref BashNonInteractiveCore
 :ID:       org_gcr_2017-05-12_mara:C8D58FA9-17C0-4474-AB1E-540F715C4970
@@ -372,7 +320,7 @@ Aliases are only for interactive users.
 shopt -u expand_aliases
 #+END_SRC
 
-*** BashInteractiveCore
+*** Common Configuration for Interactive Use
 :PROPERTIES:
 :header-args: :noweb-ref BashInteractiveCore
 :ID:       org_gcr_2017-05-12_mara:4825F69D-14A3-43DB-A7FE-A49C3C038F95
@@ -388,8 +336,7 @@ if [ -z "$PS1" ] && [ -z "$DISPLAY" ]; then
 fi
 #+END_SRC
 
-Use ~echo -e~ instead of ~printf~ to prevent Bash from interpreting the values as
-escape sequences.
+To prevent Bash from interpreting the values as escape sequences use ~echo -e~ instead of ~printf~
 
 **** Options
 :PROPERTIES:
@@ -434,7 +381,7 @@ Enable ~!~ substitution.
 set -o histexpand
 #+END_SRC
 
-Easily re-edit historical multi-line commands.
+Re-edit historical multi-line commands.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_5FE7E6C7-56CC-48E0-BF30-43E217408179
 #+BEGIN_SRC sh
@@ -474,7 +421,7 @@ Refresh ~LINES~ and ~COLUMNS~ after every command.
 shopt -s checkwinsize
 #+END_SRC
 
-Automatically complete directory-names and replace the original name value.
+Automatically complete directory names and replace the original name value.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_1AE4C37C-DFFC-48B0-9B99-14CE8435AFD2
 #+BEGIN_SRC sh
@@ -514,9 +461,7 @@ shopt -s huponexit
 :ID:       org_gcr_2017-05-12_mara:BF8365A6-5F55-4A16-9D0D-F4F7C7321779
 :END:
 
-Assume that the user (computer or human) provided the correct directory-name
-arguments to a command and do not modify them. Auto-correction of directory
-names can *at best* cause *complete disaster* for a distracted operator.
+Assume that the user (computer or human) provided the correct directory-name arguments to a command and do not modify them. Auto-correction of directory names can *at best* cause *complete disaster* for a distracted operator.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_873A00A3-B906-4F6D-B46D-19D7047F313E
 #+BEGIN_SRC sh
@@ -530,21 +475,18 @@ For directories, too.
 shopt -u dirspell
 #+END_SRC
 
-It is too easy to accidentally leave a shell by typing Control-D. Prevent it.
+It is too easy to leave a shell by typing ~Control-D~ accidentally. Prevent it.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B7B60544-EBE1-4F0D-88C8-F1AA182AF39A
 #+BEGIN_SRC sh
 set -o ignoreeof
 #+END_SRC
 
-Never attempt to complete a command in the contents of =PATH= when nothing is
-typed in.
-
+Never attempt to complete a command in the contents of =PATH= without starting text.
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D3F8A409-9F7E-4F8D-BBCD-C4A90F32CEF2
 #+BEGIN_SRC sh
 shopt -s no_empty_cmd_completion
 #+END_SRC
-
 **** Variables
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:679E2DA0-0A15-4A85-A034-8631D8F0594A
@@ -555,8 +497,7 @@ shopt -s no_empty_cmd_completion
 :ID:       org_gcr_2017-05-12_mara:1819D813-3D7D-4F5D-99ED-D49932E5A265
 :END:
 
-Exclude history of commands starting with a space. Commands entered multiple
-times are important; keep their history (don't erase them).
+Exclude the history of commands starting with a space. Commands entered multiple times are essential; keep their history (don't erase them).
 
 Ignore every command that
 - Starts with any number of spaces
@@ -576,25 +517,7 @@ HISTFILESIZE=250
 SHELL_SESSION_HISTORY=-1
 #+END_SRC
 
-*Do Not* Track history by setting ~HISTTIMEFORMAT~: It breaks the resume feature in Terminal.app.
-
-***** Interface
-:PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:FD057DE3-4E73-402A-8D37-F0B4413F17CC
-:END:
-
-Usually you know what directory you are sitting in so only show that.
-
-Turn it off or on for 1-3 or all directories.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_3C2800D0-7925-4D49-B877-FD1BFC6FBA55
-#+BEGIN_SRC sh
-PROMPT_DIRTRIM=1
-alias 1dir="PROMPT_DIRTRIM=1"
-alias 2dir="PROMPT_DIRTRIM=2"
-alias 3dir="PROMPT_DIRTRIM=3"
-alias ndir="PROMPT_DIRTRIM=0"
-#+END_SRC
+*Do Not* Track history by setting ~HISTTIMEFORMAT~: It breaks the resume feature in ~Terminal.app~.
 
 ***** User
 :PROPERTIES:
@@ -611,12 +534,12 @@ export ORGANIZATION="Wisdom and Wonder"
 export TZ="America/Chicago"
 #+end_src
 
-** Global Shell Configuration Files
+*** Create the Global Shell Configuration Files
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:0D578995-CDE4-4247-9FE3-EDDBDFB6FB22
 :END:
 
-*** Non-Interactive
+**** Create the Non-Interactive One: .bash_global_non_interactive
 :PROPERTIES:
 :header-args: :tangle ./.bash_global_non_interactive
 :ID:       org_gcr_2017-05-12_mara:DB3A9415-85FC-46FD-BF39-F723E5235C3C
@@ -641,7 +564,7 @@ Only non-interactive sessions requires this configuration.
 ⟪BashNonInteractiveCore⟫
 #+END_SRC
 
-*** Interactive
+**** Create the Interactive One: .bash_global_interactive
 :PROPERTIES:
 :header-args: :tangle ./.bash_global_interactive
 :ID:       org_gcr_2017-05-12_mara:1E8A5E47-9189-40EB-A9B9-8D4835775A7A
@@ -652,26 +575,26 @@ Only non-interactive sessions requires this configuration.
 # -*- mode: sh; -*-
 #+END_SRC
 
-Every Bash session requires the same configuration.
+Every Bash session requiress the same configuration.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BD3F4F38-92D6-4310-9276-E7DCF825E421
 #+BEGIN_SRC sh
 ⟪BashCore⟫
 #+END_SRC
 
-Only interactive sessions requires this configuration.
+Only interactive sessions require this configuration.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F55305F4-02E8-4610-9C08-8AD1FDD9A46B
 #+BEGIN_SRC sh
 ⟪BashInteractiveCore⟫
 #+END_SRC
 
-** Login Shell Configuration Files
+** Wiring for Loading the Actual Daily Usage Configuration
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:BCD75F93-7AD8-49D6-A5CF-EF2AC6769098
 :END:
 
-*** BashProfile
+*** Use the Same Interactive Configuration for Non-Login Interactive Shells: .bash_login
 :PROPERTIES:
 :header-args: :tangle ./.bash_login
 :ID:       org_gcr_2017-05-12_mara:93967906-378F-4A5B-B53F-1068F93DF8BB
@@ -692,7 +615,23 @@ if [ -f /Users/gcr/.bashrc ]; then
 fi
 #+END_SRC
 
-*** BashRc
+*** Run This When You Log Out: .bash_logout
+:PROPERTIES:
+:header-args: :tangle ./.bash_logout
+:ID:       org_gcr_2017-05-12_mara:04FEFF46-AAC6-4AB8-9876-199B271DA565
+:END:
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E467EC86-F272-47CD-B9F9-7655B3ACB0AF
+#+BEGIN_src sh :comments no
+#!/usr/local/bin/bash
+# -*- mode: sh; -*-
+#+END_SRC
+
+#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_EE58713E-028B-43CB-875A-6C3BBB6F28EA
+#+BEGIN_src sh
+printf "Logging out of Bash.\n"
+#+END_SRC
+*** The Actual Daily Usage Configuration: .bashrc
 :PROPERTIES:
 :header-args: :tangle ./.bashrc
 :ID:       org_gcr_2017-05-12_mara:93E59E15-9E26-4FEE-800A-4DB748AB395F
@@ -1811,19 +1750,3 @@ Last thing to do is prioritize the path
 export PATH="/usr/local/bin:/Users/gcr/bin:/Users/gcr/bin/sh:$PATH"
 #+END_SRC
 
-*** BashLogout
-:PROPERTIES:
-:header-args: :tangle ./.bash_logout
-:ID:       org_gcr_2017-05-12_mara:04FEFF46-AAC6-4AB8-9876-199B271DA565
-:END:
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E467EC86-F272-47CD-B9F9-7655B3ACB0AF
-#+BEGIN_src sh :comments no
-#!/usr/local/bin/bash
-# -*- mode: sh; -*-
-#+END_SRC
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_EE58713E-028B-43CB-875A-6C3BBB6F28EA
-#+BEGIN_src sh
-printf "Logging out of Bash.\n"
-#+END_SRC
