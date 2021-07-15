@@ -1628,10 +1628,20 @@ source ~/src/myamacs/amacs
 :ID:       org_grant_2021-07-12T10-27-24-05-00_Sadie:7019641C-EE41-4A43-B396-293B059991FB
 :END:
 
+Global.
+
 #+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_241AF44A-A4A6-4F18-972B-217C5C0D2731
 #+begin_src sh
 export PATH="$PATH":"/usr/local/go/bin"
 #+end_src
+
+Local.
+
+#+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_D53423DD-60DF-4DCB-9BD1-A71B3AB7D4D0
+#+begin_src sh
+export PATH="$PATH":"~/go/bin"
+#+end_src
+
 ** Footer
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
