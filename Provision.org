@@ -649,7 +649,7 @@ You should probably only be editing this headline.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F
 #+BEGIN_SRC sh
-source ~/.bash_global_interactive
+source "~/.bash_global_interactive"
 #+END_SRC
 ** Prompts
 :PROPERTIES:
@@ -1586,7 +1586,7 @@ bash-git-prompt.
 #+begin_src sh
 if [ -f "$HOME/src/bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
-    source $HOME/src/bash-git-prompt/gitprompt.sh
+    source "$HOME/src/bash-git-prompt/gitprompt.sh"
 fi
 #+end_src
 
@@ -1617,7 +1617,7 @@ Lolsmacs.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830
 #+BEGIN_src sh
-source ~/src/myamacs/amacs
+source "~/src/myamacs/amacs"
 #+END_SRC
 #+END_SRC
 *** golang
