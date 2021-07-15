@@ -631,12 +631,15 @@ fi
 #+BEGIN_src sh
 printf "Logging out of Bash.\n"
 #+END_SRC
-*** The Actual Daily Usage Configuration: .bashrc
+** The Actual Daily Usage Configuration: .bashrc
 :PROPERTIES:
 :header-args: :tangle ./.bashrc
 :ID:       org_gcr_2017-05-12_mara:93E59E15-9E26-4FEE-800A-4DB748AB395F
 :END:
-**** Header
+
+You should probably only be editing this headline.
+
+*** Header
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:98614993-2913-437D-B755-2DD1B1878C6D
 :END:
@@ -650,7 +653,7 @@ printf "Logging out of Bash.\n"
 #+BEGIN_SRC sh
 source ~/.bash_global_interactive
 #+END_SRC
-**** Prompts
+*** Prompts
 :PROPERTIES:
 :ID:       org_gcr_2019-11-30T12-40-47-06-00_gsmac:BB7109E6-E152-47E0-AEF1-3BDC58540D57
 :END:
@@ -728,7 +731,7 @@ I copied this from the documentation.
 export PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
 #+END_SRC
 
-**** Body
+*** Body
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:8A021170-0680-4409-93AC-7CD84CC6625E
 :END:
@@ -747,7 +750,7 @@ For a terminal operating system interface.
 export EDITOR="emacs -nw"
 #+END_SRC
 
-**** Aliases
+*** Aliases
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:160278CE-DE40-44A7-9509-F17B3AD5A43A
 :END:
@@ -860,7 +863,7 @@ Code.
 alias showdef='type'
 #+END_SRC
 
-**** Functions
+*** Functions
 :PROPERTIES:
 :ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
 :END:
@@ -1157,7 +1160,7 @@ function exifwipe {
 }
 #+END_SRC
 
-***** Various
+**** Various
 :PROPERTIES:
 :ID:       org_gcr_2020-07-27T14-15-12-05-00_gsmac:DA267580-1DB0-440E-87AA-DD2C995BBFFF
 :END:
@@ -1198,7 +1201,7 @@ function runn {
 }
 #+END_SRC
 
-***** Graphviz
+**** Graphviz
 :PROPERTIES:
 :ID:       org_gcr_2020-06-26T22-20-01-05-00_gsmac:05E96E54-83A8-4711-9FED-4C47BEA5DE1B
 :END:
@@ -1226,7 +1229,7 @@ function dot2pdf {
   return "$status"
 }
 #+END_SRC
-***** AsciiDoc
+**** AsciiDoc
 :PROPERTIES:
 :ID:       org_gcr_2021-01-15T20-55-24-06-00_gsmac:1DA7DBB9-8AAA-4121-9B71-E719E72B25D4
 :END:
@@ -1240,7 +1243,7 @@ function adpdf {
   popd
 }
 #+END_SRC
-***** Pandoc
+**** Pandoc
 :PROPERTIES:
 :ID:       org_gcr_2020-06-16T19-11-50-05-00_gsmac:18688A3B-56D9-46EF-B349-F65826114A36
 :END:
@@ -1322,7 +1325,7 @@ function org2md {
 }
 #+END_SRC
 
-***** ls - list directory contents
+**** ls - list directory contents
 :PROPERTIES:
 :ID:       org_gcr_2018-09-07T21-25-20-05-00_globigerina:E21383F5-4229-4C1C-B808-0858E6A980D4
 :END:
@@ -1430,7 +1433,7 @@ Accept additional arguments to function
 "$@"
 #+end_src
 
-****** Simple: l
+***** Simple: l
 :PROPERTIES:
 :ID:       org_gcr_2020-06-12T19-06-29-05-00_gsmac:D4CF3AE5-C126-48E4-AF5D-361BA843181F
 :END:
@@ -1448,7 +1451,7 @@ function l {
 #+BEGIN_EXAMPLE
 #+END_EXAMPLE
 
-****** Rich: ~ll~
+***** Rich: ~ll~
 :PROPERTIES:
 :ID:       org_gcr_2020-05-26T16-50-32-05-00_gsmac:7FD233EC-20D7-4A2F-9185-77FDD1A2918C
 :END:
@@ -1474,11 +1477,11 @@ function ll {
       }
 #+end_src
 
-**** Applications
+*** Applications
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:4A2D731B-B043-4662-9E58-032418959E39
 :END:
-***** ccrypt
+**** ccrypt
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:B718FE1D-4D3D-47E3-B062-F1FDA900A82D
 :END:
@@ -1488,7 +1491,7 @@ function ll {
 export CCRYPT="/usr/local/Cellar/ccrypt/1.11/"
 #+END_SRC
 
-***** TeX
+**** TeX
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:0D346D38-1207-48C3-99AE-0AC668DF130B
 :END:
@@ -1506,7 +1509,7 @@ export PATH="$MACTEX_BIN:$PATH"
 #+BEGIN_SRC sh
 alias texshop="open /Applications/TeX/TeXShop.app/"
 #+END_SRC
-***** Git
+**** Git
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9
 :END:
@@ -1592,7 +1595,7 @@ if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
 fi
 #+END_SRC
 
-***** Emacs
+**** Emacs
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:D05FA841-34B3-459F-9C14-283520F1FF1C
 :END:
@@ -1627,7 +1630,7 @@ Emacs Server.
 #+BEGIN_SRC sh
 source "/Users/gcr/src/ebse/ebse" > /dev/null
 #+END_SRC
-***** Java
+**** Java
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T19-34-14-06-00_gsmac:123EC3E3-5C48-4C60-83E9-718B7C3E9103
 :END:
@@ -1640,7 +1643,7 @@ export ANDROID_PTOOLS="$ANDROID_SDK/platform-tools"
 export PATH="$JAVA_HOME:$ANDROID_PTOOLS:$PATH"
 #+END_SRC
 
-***** Homebrew
+**** Homebrew
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T19-34-14-06-00_gsmac:28F19342-F546-43CD-92CA-3CB37FCD6070
 :END:
@@ -1650,7 +1653,7 @@ export PATH="$JAVA_HOME:$ANDROID_PTOOLS:$PATH"
 export HOMEBREW_NO_EMOJI=1
 #+END_SRC
 
-***** Python
+**** Python
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T21-24-14-06-00_gsmac:60819DEB-537D-428E-9734-796C04C516C3
 :END:
@@ -1660,7 +1663,7 @@ export HOMEBREW_NO_EMOJI=1
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 #+END_SRC
 
-***** ag - The Silver Searcher
+**** ag - The Silver Searcher
 :PROPERTIES:
 :ID:       org_gcr_2019-11-29T00-19-24-06-00_gsmac:199C774B-644B-4EB9-90BE-A6CB15465F16
 :END:
@@ -1670,7 +1673,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 [[ -r "/usr/local/etc/bash_completion.d/ag.bashcomp.sh" ]] && . "/usr/local/etc/bash_completion.d/ag.bashcomp.sh"
 #+END_SRC
 
-***** pandoc
+**** pandoc
 :PROPERTIES:
 :ID:       org_gcr_2019-11-29T00-19-24-06-00_gsmac:1B0ECD3D-7C32-42DC-8F34-94006D913D0D
 :END:
@@ -1680,7 +1683,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 [[ -r "/usr/local/etc/bash_completion.d/pandoc" ]] && . "/usr/local/etc/bash_completion.d/pandoc"
 #+END_SRC
 
-***** Ruby
+**** Ruby
 :PROPERTIES:
 :ID:       org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589
 :END:
@@ -1706,7 +1709,7 @@ Jekyll.
 alias bxj="bundle exec jekyll"
 #+END_SRC
 
-***** LanguageTool
+**** LanguageTool
 :PROPERTIES:
 :ID:       org_gcr_2019-11-29T00-33-23-06-00_gsmac:BB71CF46-39FE-40D8-8718-30D147492C25
 :END:
@@ -1716,7 +1719,7 @@ alias bxj="bundle exec jekyll"
 export LANGTOOL="/usr/local/Cellar/languagetool/4.7/libexec/languagetool-commandline.jar"
 #+END_SRC
 
-***** nvm
+**** nvm
 :PROPERTIES:
 :ID:       org_gcr_2019-11-30T17-22-54-06-00_gsmac:89317BC7-83D8-4DFB-A09B-4A66E0AE894A
 :END:
@@ -1728,7 +1731,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #+END_SRC
 
-***** textlint
+**** textlint
 :PROPERTIES:
 :ID:       org_gcr_2019-11-30T17-22-54-06-00_gsmac:B214C66E-7A43-4339-9974-BE7AED3B28E0
 :END:
@@ -1738,7 +1741,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/Users/gcr/opt/textlintbin/node_modules/.bin:$PATH"
 #+END_SRC
 
-**** Footer
+*** Footer
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
 :END:
