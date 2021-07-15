@@ -1470,7 +1470,7 @@ function ll {
       }
 #+end_src
 
-** Applications
+** Configuration for Externally Defined Programs
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:4A2D731B-B043-4662-9E58-032418959E39
 :END:
@@ -1655,18 +1655,6 @@ Define the local path in my home directory.
 export PATH="$PATH":"~/go/bin"
 #+end_src
 
-*** Personal "util" Directory
-:PROPERTIES:
-:ID:       org_grant_2021-07-12T10-27-24-05-00_Sadie:9F39A046-83FD-474C-B7AF-A2DBA2380AE9
-:END:
-
-Add it to the path.
-
-#+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_5C494D62-DF3B-4083-A907-5093B58BA856
-#+begin_src sh
-export PATH="/Users/grant/util":$PATH
-#+end_src
-
 ** These Things Must Occur at the Very END
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
@@ -1676,6 +1664,6 @@ Paths that must appear before /everything/ else
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F
 #+BEGIN_SRC sh
-export PATH="/usr/local/bin:/Users/grant/bin:$PATH"
+export PATH="/usr/local/bin:/Users/grant/util:$PATH"
 #+END_SRC
 
