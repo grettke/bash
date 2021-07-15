@@ -768,6 +768,8 @@ alias shasum256check="shasum --algorithm 256 --check"
 
 Configure common UNIX commands with aliases. The fact that these are aliases will be forgetten evidence has shown.
 
+[[https://apple.stackexchange.com/questions/34054/case-insensitive-ls-sorting-in-mac-osx#81791][Here]] is the post about how to get alphabetical sorting out of Mac OS X's BSD ~ls~.
+
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D63C2874-1AA5-45A4-8AF5-7D22086D06D0
 #+BEGIN_src sh
 alias mkdir="mkdir -pv"
