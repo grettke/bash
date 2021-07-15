@@ -1622,11 +1622,6 @@ Lolsmacs.
 #+BEGIN_src sh
 source ~/src/myamacs/amacs
 #+END_SRC
-
-Emacs Server.
-#+NAME: org_gcr_2021-03-31T13-32-43-05-00_gsmac_CC6424CA-B348-4C13-A4FA-092E8CCDFA0D
-#+BEGIN_SRC sh
-source "/Users/gcr/src/ebse/ebse" > /dev/null
 #+END_SRC
 ** Footer
 :PROPERTIES:
