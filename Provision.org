@@ -27,7 +27,7 @@ This configuration belongs in both the Interactive and Non-Interactive configura
 We wrote this document for Bash version 4.3, which is now out of date. We didn't update it for newer versions, though. Lazy-Learning and Lazy-load fixes are in our future!
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_435FF2EC-213F-4D6A-94B9-613AD6F153DD
-#+BEGIN_SRC sh :tangle
+#+BEGIN_SRC sh
 function gcrbashcheck {
   local expected_major=5
   local expected_minor=1
