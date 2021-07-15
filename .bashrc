@@ -70,15 +70,15 @@ alias lsmdm="ls -halt"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_23D19C9E-1B43-4C25-9BFA-48FE1EA04A90 ends here
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_F1D33BB7-E1D7-4D87-83BC-F2D6EE2CB318][org_gcr_2019-11-01T00-47-07-05-00_host1.org_F1D33BB7-E1D7-4D87-83BC-F2D6EE2CB318]]
-alias togglegrayscale="osascript /Users/gcr/util/sspadtogglegrayscale.scpt"
+alias togglegrayscale="osascript /Users/grant/util/sspadtogglegrayscale.scpt"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_F1D33BB7-E1D7-4D87-83BC-F2D6EE2CB318 ends here
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_B5C1EDD5-6C74-49F7-BBE5-BC3E24CD7B96][org_gcr_2019-11-01T00-47-07-05-00_host1.org_B5C1EDD5-6C74-49F7-BBE5-BC3E24CD7B96]]
-alias invertcolors="osascript /Users/gcr/util/sspadtogglecolors.scpt"
+alias invertcolors="osascript /Users/grant/util/sspadtogglecolors.scpt"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_B5C1EDD5-6C74-49F7-BBE5-BC3E24CD7B96 ends here
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471][org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471]]
-alias sav="osascript /Users/gcr/util/Start-Screensaver.scpt"
+alias sav="osascript /Users/grant/util/Start-Screensaver.scpt"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471 ends here
 
 # [[file:Provision.org::org_gcr_2020-04-30T13-51-04-05-00_gsmac_710AE065-6C2C-464F-97D2-24AF216AA26F][org_gcr_2020-04-30T13-51-04-05-00_gsmac_710AE065-6C2C-464F-97D2-24AF216AA26F]]
@@ -342,7 +342,7 @@ function exifwipe {
 
 # [[file:Provision.org::org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869][org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869]]
 function randomword {
-  gshuf -n1 /Users/gcr/src/english-words/words.txt
+  gshuf -n1 /Users/grant/src/english-words/words.txt
 }
 # org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869 ends here
 
@@ -396,7 +396,7 @@ function dot2pdf {
 # [[file:Provision.org::org_gcr_2021-01-15T20-55-24-06-00_gsmac_D0F94EC2-EA35-48C5-B22A-C07BF30FE50B][org_gcr_2021-01-15T20-55-24-06-00_gsmac_D0F94EC2-EA35-48C5-B22A-C07BF30FE50B]]
 function adpdf {
   pushd "$(pwd)"
-  cd "/Users/gcr/opt/asciidoctorpdf"
+  cd "/Users/grant/opt/asciidoctorpdf"
   bundle exec asciidoctor-pdf "$@"
   popd
 }
@@ -438,7 +438,7 @@ function org2word {
   printf "Attempting to convert \"%s\" to \"%s\".\n\n" "$inputfile" "$outputfile"
   pandoc \
     --standalone \
-    --reference-doc="/Users/gcr/src/pandoc-data-dir/custom-reference.docx" \
+    --reference-doc="/Users/grant/src/pandoc-data-dir/custom-reference.docx" \
     --fail-if-warnings \
     --from=org --to=docx \
     --table-of-contents \
@@ -501,7 +501,7 @@ function ll {
 }
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34][org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34]]
-export CCRYPT="/usr/local/Cellar/ccrypt/1.11/"
+export TODOCCRYPT="/usr/local/Cellar/ccrypt/1.11/"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34 ends here
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084][org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084]]
@@ -612,5 +612,5 @@ export PATH="/Users/grant/util":$PATH
 # org_grant_2021-07-12T10-27-24-05-00_Sadie_5C494D62-DF3B-4083-A907-5093B58BA856 ends here
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F]]
-export PATH="/usr/local/bin:/Users/gcr/bin:/Users/gcr/bin/sh:$PATH"
+export PATH="/usr/local/bin:/Users/grant/bin:/Users/grant/bin/sh:$PATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F ends here
