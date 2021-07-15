@@ -1582,15 +1582,13 @@ function gitauthorhistory {
 
 bash-git-prompt.
 
-#+name: org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9
-#+BEGIN_SRC sh
-export GIT_PROMPT_THEME="Single_line_Dark"
-
-if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
-  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+#+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_AEA309FA-A780-48D1-AAEA-B4062F915914
+#+begin_src sh
+if [ -f "$HOME/src/bash-git-prompt/gitprompt.sh" ]; then
+    GIT_PROMPT_ONLY_IN_REPO=1
+    source $HOME/src/bash-git-prompt/gitprompt.sh
 fi
-#+END_SRC
+#+end_src
 
 *** Emacs
 :PROPERTIES:

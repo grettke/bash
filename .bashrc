@@ -576,14 +576,12 @@ function gitauthorhistory {
 }
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_89EDF172-801F-4804-AE2C-05AA7B4BC4E9 ends here
 
-# [[file:Provision.org::org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9][org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9]]
-export GIT_PROMPT_THEME="Single_line_Dark"
-
-if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
-  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+# [[file:Provision.org::org_grant_2021-07-12T10-27-24-05-00_Sadie_AEA309FA-A780-48D1-AAEA-B4062F915914][org_grant_2021-07-12T10-27-24-05-00_Sadie_AEA309FA-A780-48D1-AAEA-B4062F915914]]
+if [ -f "$HOME/src/bash-git-prompt/gitprompt.sh" ]; then
+  GIT_PROMPT_ONLY_IN_REPO=1
+  source $HOME/src/bash-git-prompt/gitprompt.sh
 fi
-# org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9 ends here
+# org_grant_2021-07-12T10-27-24-05-00_Sadie_AEA309FA-A780-48D1-AAEA-B4062F915914 ends here
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75AEC7A-88E0-4D11-B950-740FD568F659][org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75AEC7A-88E0-4D11-B950-740FD568F659]]
 export INFOPATH="/Applications/Emacs.app/Contents/Resources/info:$INFOPATH"
