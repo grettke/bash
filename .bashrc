@@ -606,55 +606,6 @@ source ~/src/myamacs/amacs
 source "/Users/gcr/src/ebse/ebse" > /dev/null
 # org_gcr_2021-03-31T13-32-43-05-00_gsmac_CC6424CA-B348-4C13-A4FA-092E8CCDFA0D ends here
 
-# [[file:Provision.org::org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213][org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213]]
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home/"
-export ANDROID_SDK="/Users/$USER/Library/Android/sdk"
-export ANDROID_PTOOLS="$ANDROID_SDK/platform-tools"
-export PATH="$JAVA_HOME:$ANDROID_PTOOLS:$PATH"
-# org_gcr_2019-11-25T19-34-14-06-00_gsmac:1FB57621-9C0C-41BC-84C2-B3DFE3F5C213 ends here
-
-# [[file:Provision.org::org_gcr_2019-11-25T19-34-14-06-00_gsmac:98474D2E-17D6-48BC-8C45-0EA8F2F46295][org_gcr_2019-11-25T19-34-14-06-00_gsmac:98474D2E-17D6-48BC-8C45-0EA8F2F46295]]
-export HOMEBREW_NO_EMOJI=1
-# org_gcr_2019-11-25T19-34-14-06-00_gsmac:98474D2E-17D6-48BC-8C45-0EA8F2F46295 ends here
-
-# [[file:Provision.org::org_gcr_2019-11-25T21-24-14-06-00_gsmac:112F412F-F670-4BD6-A41C-CB22C3CE6C83][org_gcr_2019-11-25T21-24-14-06-00_gsmac:112F412F-F670-4BD6-A41C-CB22C3CE6C83]]
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-# org_gcr_2019-11-25T21-24-14-06-00_gsmac:112F412F-F670-4BD6-A41C-CB22C3CE6C83 ends here
-
-# [[file:Provision.org::org_gcr_2019-11-29T00-19-24-06-00_gsmac:199C774B-644B-4EB9-90BE-A6CB15465F16][org_gcr_2019-11-29T00-19-24-06-00_gsmac:199C774B-644B-4EB9-90BE-A6CB15465F16]]
-[[ -r "/usr/local/etc/bash_completion.d/ag.bashcomp.sh" ]] && . "/usr/local/etc/bash_completion.d/ag.bashcomp.sh"
-# org_gcr_2019-11-29T00-19-24-06-00_gsmac:199C774B-644B-4EB9-90BE-A6CB15465F16 ends here
-
-# [[file:Provision.org::org_gcr_2019-11-29T00-19-24-06-00_gsmac:1B0ECD3D-7C32-42DC-8F34-94006D913D0D][org_gcr_2019-11-29T00-19-24-06-00_gsmac:1B0ECD3D-7C32-42DC-8F34-94006D913D0D]]
-[[ -r "/usr/local/etc/bash_completion.d/pandoc" ]] && . "/usr/local/etc/bash_completion.d/pandoc"
-# org_gcr_2019-11-29T00-19-24-06-00_gsmac:1B0ECD3D-7C32-42DC-8F34-94006D913D0D ends here
-
-# [[file:Provision.org::org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589][org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589]]
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-# org_gcr_2019-11-29T00-19-24-06-00_gsmac:373B6D88-CD1B-4BBA-8E4B-06C3DC7EE589 ends here
-
-# [[file:Provision.org::org_gcr_2020-10-30T19-12-40-05-00_gsmac_41C2CC8A-00E4-4431-83E7-437201E621F0][org_gcr_2020-10-30T19-12-40-05-00_gsmac_41C2CC8A-00E4-4431-83E7-437201E621F0]]
-eval "$(rbenv init -)"
-# org_gcr_2020-10-30T19-12-40-05-00_gsmac_41C2CC8A-00E4-4431-83E7-437201E621F0 ends here
-
-# [[file:Provision.org::org_gcr_2020-11-18T14-22-13-06-00_gsmac_F0FB68FF-EEEB-4288-B8C3-708E740241B5][org_gcr_2020-11-18T14-22-13-06-00_gsmac_F0FB68FF-EEEB-4288-B8C3-708E740241B5]]
-alias bxj="bundle exec jekyll"
-# org_gcr_2020-11-18T14-22-13-06-00_gsmac_F0FB68FF-EEEB-4288-B8C3-708E740241B5 ends here
-
-# [[file:Provision.org::org_gcr_2019-11-29T00-33-23-06-00_gsmac:BB71CF46-39FE-40D8-8718-30D147492C25][org_gcr_2019-11-29T00-33-23-06-00_gsmac:BB71CF46-39FE-40D8-8718-30D147492C25]]
-export LANGTOOL="/usr/local/Cellar/languagetool/4.7/libexec/languagetool-commandline.jar"
-# org_gcr_2019-11-29T00-33-23-06-00_gsmac:BB71CF46-39FE-40D8-8718-30D147492C25 ends here
-
-# [[file:Provision.org::org_gcr_2019-11-30T17-22-54-06-00_gsmac:89317BC7-83D8-4DFB-A09B-4A66E0AE894A][org_gcr_2019-11-30T17-22-54-06-00_gsmac:89317BC7-83D8-4DFB-A09B-4A66E0AE894A]]
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# org_gcr_2019-11-30T17-22-54-06-00_gsmac:89317BC7-83D8-4DFB-A09B-4A66E0AE894A ends here
-
-# [[file:Provision.org::org_gcr_2019-11-30T17-22-54-06-00_gsmac:B214C66E-7A43-4339-9974-BE7AED3B28E0][org_gcr_2019-11-30T17-22-54-06-00_gsmac:B214C66E-7A43-4339-9974-BE7AED3B28E0]]
-export PATH="/Users/gcr/opt/textlintbin/node_modules/.bin:$PATH"
-# org_gcr_2019-11-30T17-22-54-06-00_gsmac:B214C66E-7A43-4339-9974-BE7AED3B28E0 ends here
-
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F]]
 export PATH="/usr/local/bin:/Users/gcr/bin:/Users/gcr/bin/sh:$PATH"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F ends here
