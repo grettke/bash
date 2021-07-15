@@ -743,12 +743,21 @@ export VISUAL="emacs"
 export EDITOR="emacs -nw"
 #+END_SRC
 
-** Aliases
+** Configuration for the "Batteries Included" Stuff from Apple
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:160278CE-DE40-44A7-9509-F17B3AD5A43A
 :END:
 
-Checksum.
+*** Comand Line
+:PROPERTIES:
+:ID:       org_grant_2021-07-15T00-19-57-05-00_Sadie:D5AFD427-C17A-4BE2-930F-B56BF3E7407C
+:END:
+
+Aliases and helper functions are likely to be here.
+
+Application configuration will *not* be here.
+
+Checksumming.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A1CD5BCA-9A8B-410C-BE5D-54C51BE32338
 #+begin_src sh
@@ -757,7 +766,7 @@ alias shasum256printtxt="shasum --algorithm 256 --text"
 alias shasum256check="shasum --algorithm 256 --check"
 #+end_src
 
-Good defaults.
+Configure common UNIX commands with aliases. The fact that these are aliases will be forgetten evidence has shown.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D63C2874-1AA5-45A4-8AF5-7D22086D06D0
 #+BEGIN_src sh
@@ -765,56 +774,22 @@ alias mkdir="mkdir -pv"
 alias mount="mount | column -t"
 alias df="df -h"
 alias du="du -ach"
-alias idk="identify *.*"
-alias kk="cd .."
+alias ls="LC_COLLATE=en_GB.UTF-8 ls -aCFGhklpqT"
 #+END_SRC
 
-Shortcuts.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F5D98D7B-1A37-4DAB-A9FE-AB8A7423BC0A
-#+BEGIN_src sh
-alias h="history"
-alias j="jobs -l"
-#+END_SRC
-
-Get download speed [fn:167e637e4fea0629:https://www.gulshansingh.com/posts/useful-bash-aliases/].
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5763981-9448-4B4F-A394-88AA19259B64
-#+BEGIN_src sh
-alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
-#+END_SRC
-
-I accidentally type =cd= instead of =cd ..=. I want to return to my original
-working directory and I'm irritated because I'm lazy and I don't want to type
-=cd $OLDPWD=. Don't get rid of =cd= though because I do use it and it is faster
-than =cd ~/=.
+Alias shortcuts to commands that I like to use but can't remember or are too long.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4AA2E64E-7074-4F68-BC50-E3DE1158A50C
 #+BEGIN_src sh
-alias bk="cd $OLDPWD"
-#+END_SRC
-
-Exit.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B8745F35-A481-4EA8-BF7A-72C484C3B0E1
-#+begin_src
+alias back="cd $OLDPWD"
 alias e=exit
-#+end_src
-
-Always use ~Bash~ *never* use the default shell.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5F403E4-38F9-4F02-A6C8-3253F00D3935
-#+BEGIN_src sh
-alias sh="/usr/local/bin/bash"
+alias j="jobs -l"
 #+END_SRC
 
-Listing by modification forward and backward.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_23D19C9E-1B43-4C25-9BFA-48FE1EA04A90
-#+BEGIN_src sh
-alias lsmd="ls -haltr"
-alias lsmdm="ls -halt"
-#+END_SRC
+*** GUI
+:PROPERTIES:
+:ID:       org_grant_2021-07-15T00-19-57-05-00_Sadie:CF3280A2-88F5-486F-9053-28CC6D519F05
+:END:
 
 Toggle grayscale.
 
@@ -836,25 +811,6 @@ Start screensaver.
 #+begin_src sh
 alias sav="osascript /Users/grant/util/Start-Screensaver.scpt"
 #+end_src
-
-File Management.
-
-youtube-dl
-
-- [[https://github.com/ytdl-org/youtube-dl/blob/master/README.md#format-selection-examples][Via]]
-- "Download best mp4 format available or any other best if no mp4 available"
-
-#+NAME: org_gcr_2020-04-30T13-51-04-05-00_gsmac_710AE065-6C2C-464F-97D2-24AF216AA26F
-#+BEGIN_SRC sh
-alias ytdbst="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
-#+END_SRC
-
-Code.
-
-#+NAME: org_gcr_2020-10-06T18-35-48-05-00_gsmac_F5463848-9463-4082-8AAF-B21463F05B9D
-#+BEGIN_SRC sh
-alias showdef='type'
-#+END_SRC
 
 ** Functions
 :PROPERTIES:
@@ -1470,10 +1426,15 @@ function ll {
       }
 #+end_src
 
-** Configuration for Externally Defined Programs
+** Configuration for Externally Provided Programs
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:4A2D731B-B043-4662-9E58-032418959E39
 :END:
+
+Some programs are installed from an external source example ~ccrypt~.
+
+Other instances of the same program being provided both internally by Apple and externally by installation. For example, Bash, Git, and Emacs.
+
 *** ccrypt
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:B718FE1D-4D3D-47E3-B062-F1FDA900A82D

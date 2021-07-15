@@ -40,31 +40,14 @@ alias mkdir="mkdir -pv"
 alias mount="mount | column -t"
 alias df="df -h"
 alias du="du -ach"
-alias idk="identify *.*"
-alias kk="cd .."
+alias ls="LC_COLLATE=en_GB.UTF-8 ls -aCFGhklpqT"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_D63C2874-1AA5-45A4-8AF5-7D22086D06D0 ends here
 
-# [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_F5D98D7B-1A37-4DAB-A9FE-AB8A7423BC0A][org_gcr_2019-11-01T00-47-07-05-00_host1.org_F5D98D7B-1A37-4DAB-A9FE-AB8A7423BC0A]]
-alias h="history"
-alias j="jobs -l"
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_F5D98D7B-1A37-4DAB-A9FE-AB8A7423BC0A ends here
-
-# [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5763981-9448-4B4F-A394-88AA19259B64][org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5763981-9448-4B4F-A394-88AA19259B64]]
-alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5763981-9448-4B4F-A394-88AA19259B64 ends here
-
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_4AA2E64E-7074-4F68-BC50-E3DE1158A50C][org_gcr_2019-11-01T00-47-07-05-00_host1.org_4AA2E64E-7074-4F68-BC50-E3DE1158A50C]]
-alias bk="cd $OLDPWD"
+alias back="cd $OLDPWD"
+alias e=exit
+alias j="jobs -l"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_4AA2E64E-7074-4F68-BC50-E3DE1158A50C ends here
-
-# [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5F403E4-38F9-4F02-A6C8-3253F00D3935][org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5F403E4-38F9-4F02-A6C8-3253F00D3935]]
-alias sh="/usr/local/bin/bash"
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_A5F403E4-38F9-4F02-A6C8-3253F00D3935 ends here
-
-# [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_23D19C9E-1B43-4C25-9BFA-48FE1EA04A90][org_gcr_2019-11-01T00-47-07-05-00_host1.org_23D19C9E-1B43-4C25-9BFA-48FE1EA04A90]]
-alias lsmd="ls -haltr"
-alias lsmdm="ls -halt"
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_23D19C9E-1B43-4C25-9BFA-48FE1EA04A90 ends here
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_F1D33BB7-E1D7-4D87-83BC-F2D6EE2CB318][org_gcr_2019-11-01T00-47-07-05-00_host1.org_F1D33BB7-E1D7-4D87-83BC-F2D6EE2CB318]]
 alias togglegrayscale="osascript /Users/grant/util/sspadtogglegrayscale.scpt"
@@ -77,14 +60,6 @@ alias invertcolors="osascript /Users/grant/util/sspadtogglecolors.scpt"
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471][org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471]]
 alias sav="osascript /Users/grant/util/Start-Screensaver.scpt"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471 ends here
-
-# [[file:Provision.org::org_gcr_2020-04-30T13-51-04-05-00_gsmac_710AE065-6C2C-464F-97D2-24AF216AA26F][org_gcr_2020-04-30T13-51-04-05-00_gsmac_710AE065-6C2C-464F-97D2-24AF216AA26F]]
-alias ytdbst="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
-# org_gcr_2020-04-30T13-51-04-05-00_gsmac_710AE065-6C2C-464F-97D2-24AF216AA26F ends here
-
-# [[file:Provision.org::org_gcr_2020-10-06T18-35-48-05-00_gsmac_F5463848-9463-4082-8AAF-B21463F05B9D][org_gcr_2020-10-06T18-35-48-05-00_gsmac_F5463848-9463-4082-8AAF-B21463F05B9D]]
-alias showdef='type'
-# org_gcr_2020-10-06T18-35-48-05-00_gsmac_F5463848-9463-4082-8AAF-B21463F05B9D ends here
 
 # [[file:Provision.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD][org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD]]
 function nthlineof {
