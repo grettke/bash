@@ -639,7 +639,7 @@ printf "Logging out of Bash.\n"
 
 You should probably only be editing this headline.
 
-** Header
+** These Things Must Occur at the Very BEGINNING
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:98614993-2913-437D-B755-2DD1B1878C6D
 :END:
@@ -653,13 +653,12 @@ You should probably only be editing this headline.
 #+BEGIN_SRC sh
 source "~/.bash_global_interactive"
 #+END_SRC
-** Prompts
+** Interactive Shell Prompt Values
 :PROPERTIES:
 :ID:       org_gcr_2019-11-30T12-40-47-06-00_gsmac:BB7109E6-E152-47E0-AEF1-3BDC58540D57
 :END:
 
-Prompt zero is displayed after you enter a command and before the command is
-executed.
+Prompt zero is displayed after you enter a command and before the command is executed.
 
 Make the session easier to read.
 
@@ -690,7 +689,7 @@ export PS2="(continued)⮞ "
 Prompt three is the one that you see when you are presented with a menu
 created using the ~select~ function.
 
-You see it when ~select~ makes you to make a selection.
+You see it when ~select~ prompts you to make a selection.
 
 The following [[https://askubuntu.com/questions/1705/how-can-i-create-a-select-menu-in-a-shell-script][example]] demonstrates its use:
 
@@ -731,22 +730,16 @@ I copied this from the documentation.
 export PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
 #+END_SRC
 
-** Body
+** Configure the Default Editor
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:8A021170-0680-4409-93AC-7CD84CC6625E
 :END:
 
-For a graphical operating system interface.
+Use Emacs for both the graphical and command-line operating system interface.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC
 #+BEGIN_SRC sh
 export VISUAL="emacs"
-#+END_SRC
-
-For a terminal operating system interface.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_3ABFD9E6-3802-4C27-8DCB-6B4E2A2E797A
-#+BEGIN_SRC sh
 export EDITOR="emacs -nw"
 #+END_SRC
 
@@ -1486,6 +1479,12 @@ function ll {
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:B718FE1D-4D3D-47E3-B062-F1FDA900A82D
 :END:
 
+#+begin_quote
+ccrypt is a tool for encrypting and decrypting files and streams.
+#+end_quote
+
+Use it from within Emacs.
+
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E7F8D5EE-7E00-4895-A260-21E8A3360C34
 #+BEGIN_SRC sh
 export TODOCCRYPT="/usr/local/Cellar/ccrypt/1.11/"
@@ -1496,7 +1495,9 @@ export TODOCCRYPT="/usr/local/Cellar/ccrypt/1.11/"
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:0D346D38-1207-48C3-99AE-0AC668DF130B
 :END:
 
-TeX
+#+begin_quote TeX (= tau epsilon chi, and pronounced similar to "blecch", not to the state known for `Tex-Mex' chili) is a computer language designed for use in typesetting; in particular, for typesetting math and other technical (from Greek "techne" = art/craft, the stem of `technology') material.#+end_quote
+
+MacTeX is TeX for the Mac.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084
 #+BEGIN_SRC sh
@@ -1513,7 +1514,8 @@ alias texshop="open /Applications/TeX/TeXShop.app/"
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9
 :END:
 
-Git.
+#+begin_quote
+Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals. #+end_quote
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_121CCF66-A7DD-479D-AFCE-658143CCDDC4
 #+BEGIN_SRC sh
@@ -1597,14 +1599,22 @@ fi
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:D05FA841-34B3-459F-9C14-283520F1FF1C
 :END:
 
-Add Emacs's info.
+#+begin_quote
+An extensible, customizable, free/libre text editor — and more.
+
+At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing.
+#+end_quote
+
+Include Emacs's ~INFO~ files.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75AEC7A-88E0-4D11-B950-740FD568F659
 #+BEGIN_SRC sh
 export INFOPATH="/Applications/Emacs.app/Contents/Resources/info:$INFOPATH"
 #+END_SRC
 
-Enable Bash to run under Emacs in Terminal.app.
+Configure Bash to run under Emacs in Terminal.app.
+
+Terminal.app requires the function ~update_terminal_cwd~. It /isn't/ present when you start Bash from within Emacs. In that case, define it.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C617F66A-B15C-4E1B-B113-C22C53DC9A8C
 #+begin_src sh
@@ -1615,26 +1625,30 @@ if [ -z "$(type -t update_terminal_cwd)" ] || [ "$(type -t update_terminal_cwd)"
 fi
 #+end_src
 
-Lolsmacs.
+Load the Lolsmacs configuration.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830
 #+BEGIN_src sh
 source "~/src/myamacs/amacs"
 #+END_SRC
-#+END_SRC
+
 *** golang
 :PROPERTIES:
 :ID:       org_grant_2021-07-12T10-27-24-05-00_Sadie:7019641C-EE41-4A43-B396-293B059991FB
 :END:
 
-Global.
+#+begin_quote
+Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+#+end_quote
+
+Define the Global path.
 
 #+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_241AF44A-A4A6-4F18-972B-217C5C0D2731
 #+begin_src sh
 export PATH="$PATH":"/usr/local/go/bin"
 #+end_src
 
-Local.
+Define the local path in my home directory.
 
 #+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_D53423DD-60DF-4DCB-9BD1-A71B3AB7D4D0
 #+begin_src sh
@@ -1646,20 +1660,22 @@ export PATH="$PATH":"~/go/bin"
 :ID:       org_grant_2021-07-12T10-27-24-05-00_Sadie:9F39A046-83FD-474C-B7AF-A2DBA2380AE9
 :END:
 
+Add it to the path.
+
 #+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_5C494D62-DF3B-4083-A907-5093B58BA856
 #+begin_src sh
 export PATH="/Users/grant/util":$PATH
 #+end_src
 
-** Footer
+** These Things Must Occur at the Very END
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
 :END:
 
-Last thing to do is prioritize the path
+Paths that must appear before /everything/ else
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F
 #+BEGIN_SRC sh
-export PATH="/usr/local/bin:/Users/grant/bin:/Users/grant/bin/sh:$PATH"
+export PATH="/usr/local/bin:/Users/grant/bin:$PATH"
 #+END_SRC
 
