@@ -748,7 +748,7 @@ export EDITOR="emacs -nw"
 :ID:       org_gcr_2017-05-12_mara:160278CE-DE40-44A7-9509-F17B3AD5A43A
 :END:
 
-*** Comand Line
+*** Command Line
 :PROPERTIES:
 :ID:       org_grant_2021-07-15T00-19-57-05-00_Sadie:D5AFD427-C17A-4BE2-930F-B56BF3E7407C
 :END:
@@ -788,6 +788,33 @@ alias e=exit
 alias j="jobs -l"
 #+END_SRC
 
+Run a command multiple times.
+
+#+NAME: org_gcr_2020-07-27T14-15-12-05-00_gsmac_297E8D9A-9719-4E08-B3EC-1CD1B2EB130E
+#+BEGIN_SRC sh
+function runxtimes {
+  if [[ -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <REPETITIONS> <COMMAND> <ARGUMENTS...>\n" ".sh${FUNCNAME[0]}"
+    printf "Repeatedly run COMMAND with ARGUMENTS, REPETITONS times.\n"
+    return 1
+  fi
+  local repetitions="$1"
+  local command="$2"
+  shift
+  shift
+  local argarray=("$@")
+  local argstring="${argarray[*]}"
+  printf "Attempting to run %s repetitions of the command \"%s\" with arguments \"%s\":\n" "$repetitions" "$command" "$argstring"
+  for (( repetition=0; repetition<"$repetitions"; repetition++ )); do
+    if [ -z "$argstring" ]; then
+      "$command"
+    else
+      "$command" "$argstring"
+    fi
+  done
+}
+#+END_SRC
+
 *** GUI
 :PROPERTIES:
 :ID:       org_grant_2021-07-15T00-19-57-05-00_Sadie:CF3280A2-88F5-486F-9053-28CC6D519F05
@@ -812,620 +839,6 @@ Start screensaver.
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_65FC6156-897D-4227-8011-B5AD13E59471
 #+begin_src sh
 alias sav="osascript /Users/grant/util/Start-Screensaver.scpt"
-#+end_src
-
-** Functions
-:PROPERTIES:
-:ID:       org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
-:END:
-
-Elpa.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A0DFBB0D-D86E-44C4-B374-6BA3E9B50060
-#+begin_src
-function emackup() {
-  cd ~/.emacs.d
-  git add .
-  git commit -m "Automated versioning"
-  git push
-  cd
-}
-#+end_src
-
-Get the NTH line of a FILE via https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-file
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD
-#+BEGIN_src sh
-function nthlineof {
-  if (( "$#" < 2 )); then
-      printf "Print the NTH line of FILE\n"
-      printf "Usage: ${FUNCNAME[0]} NTH FILE\n"
-      return 1
-  fi
-  tail -n+"$1" "$2" | head -n1
-}
-#+END_SRC
-
-Wait for Alpha seconds before saying Beta.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_7EDCDC57-8D76-47EA-BF5B-61EF5D4F4826
-#+begin_src sh
-function wtndsyndntfy() {
-  if (($# <= 2)); then
-      printf "Usage: ${FUNCNAME[0]} minutes words...\n"
-      return 1
-  else
-    local minutes="$1"
-    local seconds=$((minutes * 60))
-    local words="${@:2}"
-    local message="$(echo \"${words[*]}\")"
-    printf "Waiting for minute(s): %s\n" $minutes
-    printf "Before saying and notifying: $message\n"
-    printf "Started waiting on: $(date)\n"
-    printf "(Type Control+C to quit)\n"
-    trap 'echo "Saying it immediately."' INT
-    sleep "$seconds"
-    say "$message"
-    terminal-notifier -message "$message"
-    return 0
-  fi
-}
-#+end_src
-
-Tmux
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_8E51A0F2-11C7-42FA-BC4F-5AE9A4FC0199
-#+begin_src sh
-function sshtmuxattach {
-  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-      printf "Usage: ${FUNCNAME[0]} <Host> <Session>\n"
-      printf "SSH into HOST and attach to Tmux SESSION.\n"
-      return 1
-  fi
-  local host=$1;
-  local session=$2
-  ssh "$host" -t tmux attach -t "$session"
-}
-#+end_src
-
-Random element of array via [[https://unix.stackexchange.com/a/269963/310466][Jeff Schaller]].
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_5C9BF5DB-DCF6-4BAD-874F-C88C4AFA87E7
-#+begin_src sh
-function ref { # Random Element From
-  declare -a array=("$@")
-  r=$((RANDOM % ${#array[@]}))
-  printf "%s\n" "${array[$r]}"
-}
-#+end_src
-
-Announce things.
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_576F9B35-6C9B-420A-83AB-7BF1414F2FD2
-#+begin_src sh
-function cry {
-  if (("$#" >= 2)); then
-    figlet -f "$1" "${@:2}"
-  elif [ "$#" -eq 1 ]; then
-    figlet "$1"
-  else
-    printf "Announce message to user maybe using a different font.\n"
-    printf "Usage: ${FUNCNAME[0]} \"MESSAGES...\" | ${FUNCNAME[0]} FONT \"MESSAGES...\"\n"
-    printf "For example ${FUNCNAME[0]} \"Be Here Now\" or ${FUNCNAME[0]} starwars \"May The Force Be With You\"\n"
-  fi
-}
-
-function cryrnd {
-  if (("$#" >= 1)); then
-    local font=`ls -b "$(brew --prefix figlet)/share/figlet/fonts"/*.flf | gshuf -n1`
-    figlet -f "$font" "$@"
-  else
-    printf "Announce message to user in a random font.\n"
-    printf "Usage: ${FUNCNAME[0]} \"MESSAGES..\".\n"
-    printf "For example ${FUNCNAME[0]} FONT \"Buffalo buffalo Buffalo\"\n"
-  fi
-}
-#+end_src
-
-Make.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_18F5C6DD-63FD-4FCD-8CDF-43E0DE7FC782
-#+begin_src sh
-function mk {
-  gmake "$@"
-}
-#+end_src
-
-Create file with random text.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_FD0E042D-3752-4211-9E87-428358A966D6
-#+begin_src sh
-function rndfile {
-  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <FILENAME> <NBYTES>\n"
-    printf "Pipe NBYTES from /dev/urandom into FILENAME.\n"
-    return 1
-  fi
-  local filename=$1;
-  local nbytes=$2
-  gbase64 /dev/urandom | ghead --bytes=$nbytes > $filename
-}
-#+end_src
-
-macOS File Locking.
-
-#+name: org_gcr_2017-10-07_mara:8EA38DF8-28EE-4D10-B1CF-0C5B24BB2F70
-#+BEGIN_SRC sh
-function lk {
-  if [[ $# -ne 1 || -z "$1" ]] ; then
-    printf "Usage: %s <FILEORDIRECTORY>\n" "${FUNCNAME[0]}"
-    printf "In Finder: Lock FILEORDIRECTORY.\n"
-    return 1
-  fi
-  printf "Locking: %s\n" "$1"
-  chflags uchg "$1"
-}
-
-function rlk {
-  if [[ $# -ne 1 || -z "$1" ]] ; then
-    printf "Usage: %s <DIRECTORY>\n" "${FUNCNAME[0]}"
-    printf "In Finder: Recursively lock DIRECTORY and its contents.\n"
-    return 1
-  fi
-  printf "Recursively Locking: %s\n" "$1"
-  chflags -R uchg "$1"
-}
-
-function ulk {
-  if [[ $# -ne 1 || -z "$1" ]] ; then
-    printf "Usage: %s <FILEORDIRECTORY>\n" "${FUNCNAME[0]}"
-    printf "In Finder: Unlock FILEORDIRECTORY.\n"
-    return 1
-  fi
-  printf "Unlocking: %s\n" "$1"
-  chflags nouchg "$1"
-}
-
-function rulk {
-  if [[ $# -ne 1 || -z "$1" ]] ; then
-    printf "Usage: %s <FILEORDIRECTORY>\n" "${FUNCNAME[0]}"
-    printf "In Finder: Recursively unlock DIRECTORY and its contents.\n"
-    return 1
-  fi
-  printf "Recursively unlocking: %s\n" "$1"
-  chflags -R nouchg "$1"
-}
-#+END_SRC
-
-ffmpeg stuff.
-
-#+NAME: org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931
-#+BEGIN_SRC sh
-function aac2mp3 {
-  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
-    printf "FFmpeg converts SOURCE AAC file to DESTINATION MP3 file.\n"
-    return 1
-  elif [[ ! -f "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
-    printf "I can't find the SOURCE AAC file '%s' so I'm bailing.\n" "$1"
-    return 1
-  elif [[ -f "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
-    printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
-    printf "Delete '%s' first then try this command again.\n" "$2"
-    return 1
-  fi
-  ffmpeg -i "$1" -vn -ar 44100 -ac 2 -b:a 192k "$2"
-}
-
-function mp42m4a {
-  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Copy MP4 SOURCE's unencoded audio stream into the DESTINATION M4A file.\n"
-    printf "Run 'ffprobe SOURCE' to learn more about its contents.\n"
-    return 1
-  elif [[ ! -f "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
-    printf "I can't find the SOURCE file '%s' so I'm bailing.\n" "$1"
-    return 1
-  elif [[ -f "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
-    printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
-    printf "Delete '%s' first then try this command again.\n" "$2"
-    return 1
-  fi
-  ffmpeg -i "$1" -vn -acodec copy "$2"
-}
-
-function mp42x {
-  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <SOURCE> <DESTINATION>\n"
-    printf "Create DESTINATION by doubling both the video and audio speed of the MP4 SOURCE file.\n"
-    return 1
-  elif [[ ! -f "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
-    printf "I can't find the SOURCE file '%s' so I'm bailing.\n" "$1"
-    return 1
-  elif [[ -f "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
-    printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
-    printf "Delete '%s' first then try this command again.\n" "$2"
-    return 1
-  fi
-  ffmpeg -i "$1" -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" "$2"
-}
-#+END_SRC
-
-Exif.
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_DD43A5A2-3FF1-4981-95E3-C40F775110AD
-#+BEGIN_src sh
-function exifwipe {
-  # At least one argument?
-  if (( "$#" < 1 )); then
-      gprintf "Wipe *all* EXIF data from a JPEG or TIFF FILE.\n"
-      gprintf "Usage: exifwipe FILE\n"
-      return 1
-  fi
-  local file="$1"
-  # File exists?
-  if [[ ! -f $file ]]; then
-    gprintf "\"%s\" does not exist. Nothing to do.\n" "$file"
-    return 1
-  fi
-  # File extension correct?
-  if [[ ! $file =~ .*\.(jpg|tiff) ]]; then
-    gprintf "The filename \"%s\" must end with either with \".jpg\" or \".tiff\". Nothing to do.\n" "$file"
-    return 1
-  fi
-  # File type correct?
-  if file --brief "$file" | egrep --invert-match '^(JPEG|TIFF)' > /dev/null; then
-    gprintf "\"%s\" appears to be neither a JPEG nor a TIFF.\n" "$file"
-    gprintf "Actual type:\n============\n"
-    file --brief "$file"
-    gprintf "============\n"
-    gprintf "Nothing to do.\n"
-    return 1
-  fi
-  gprintf "========\nexifwipe: STARTING\n========\n"
-  # Initialize temp files for EXIF info.
-  local exifdatapre
-  local exifdatapost
-  exifdatapre=$(gmktemp)
-  exifdatapost=$(gmktemp)
-  exiftool "$file" >> "$exifdatapre"
-  gprintf "Stored current EXIF data for \"%s\" in \"%s\".\n" "$file" "$exifdatapre"
-  # Wipe EXIF data.
-  gprintf "Wiping current EXIF data for \"%s\".\n" "$file"
-  exiftool -all= "$file"
-  gprintf "Completed wipe of current EXIF data for \"%s\".\n" "$file"
-  exiftool "$file" >> "$exifdatapost"
-  gprintf "Stored new EXIF data for \"%s\" in \"%s\".\n" "$file" "$exifdatapost"
-  # Compare old to new EXIF data.
-  gprintf "Diffing PRE and POST EXIF data.\n"
-  /Applications/DeltaWalker.app/Contents/MacOS/DeltaWalker "$exifdatapre" "$exifdatapost"
-  # Delete temp files.
-  gprintf "Removing temp file: \"%s\"\n" "$exifdatapre"
-  grm --verbose "$exifdatapre"
-  gprintf "Removing temp file: \"%s\"\n" "$exifdatapost"
-  grm --verbose "$exifdatapost"
-  gprintf "========\nexifwipe: COMPLETE\n========\n"
-}
-#+END_SRC
-
-*** Various
-:PROPERTIES:
-:ID:       org_gcr_2020-07-27T14-15-12-05-00_gsmac:DA267580-1DB0-440E-87AA-DD2C995BBFFF
-:END:
-
-Were Aliases.
-
-#+NAME: org_gcr_2020-07-27T16-04-55-05-00_gsmac_CACEE2A8-499C-4466-881B-DF378C6DF869
-#+BEGIN_SRC sh
-function randomword {
-  gshuf -n1 /Users/grant/src/english-words/words.txt
-}
-#+END_SRC
-
-Run a command multiple times.
-
-#+NAME: org_gcr_2020-07-27T14-15-12-05-00_gsmac_297E8D9A-9719-4E08-B3EC-1CD1B2EB130E
-#+BEGIN_SRC sh
-function runn {
-  if [[ -z "$1" || -z "$2" ]] ; then
-    printf "Usage: %s <REPETITIONS> <COMMAND> <ARGUMENTS...>\n" ".sh${FUNCNAME[0]}"
-    printf "Repeatedly run COMMAND with ARGUMENTS, REPETITONS times.\n"
-    return 1
-  fi
-  local repetitions="$1"
-  local command="$2"
-  shift
-  shift
-  local argarray=("$@")
-  local argstring="${argarray[*]}"
-  printf "Attempting to run %s repetitions of the command \"%s\" with arguments \"%s\":\n" "$repetitions" "$command" "$argstring"
-  for (( repetition=0; repetition<"$repetitions"; repetition++ )); do
-    if [ -z "$argstring" ]; then
-      "$command"
-    else
-      "$command" "$argstring"
-    fi
-  done
-}
-#+END_SRC
-
-*** Graphviz
-:PROPERTIES:
-:ID:       org_gcr_2020-06-26T22-20-01-05-00_gsmac:05E96E54-83A8-4711-9FED-4C47BEA5DE1B
-:END:
-
-#+NAME: org_gcr_2020-06-26T22-20-01-05-00_gsmac_6C6A92E9-80D4-4688-9F10-DB9650608B68
-#+BEGIN_SRC sh
-function dot2pdf {
-  if [[ $# -lt 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: %s <IN> <OUT>\n" "${FUNCNAME[0]}"
-    printf "Convert a Graphviz DOT INput file to PDF OUTput file.\n"
-    return 1
-  fi
-  local inputfile=$1
-  local outputfile=$2
-  printf "Attempting to convert \"%s\" to \"%s\".\n\n" "$inputfile" "$outputfile"
-  dot -Tpdf "$inputfile" -o "$outputfile"
-  local status="$?"
-  if [ "$status" -eq 0 ]; then
-    printf "Conversion appears to have succeeded.\n\n"
-    printf "Please verify \"%s\" is what you expected.\n" "$outputfile"
-  else
-    printf "Conversion appears to have failed.\n"
-    printf "Please review function usage, error messages, and Pandoc documentation then try again.\n"
-  fi
-  return "$status"
-}
-#+END_SRC
-*** AsciiDoc
-:PROPERTIES:
-:ID:       org_gcr_2021-01-15T20-55-24-06-00_gsmac:1DA7DBB9-8AAA-4121-9B71-E719E72B25D4
-:END:
-
-#+NAME: org_gcr_2021-01-15T20-55-24-06-00_gsmac_D0F94EC2-EA35-48C5-B22A-C07BF30FE50B
-#+BEGIN_SRC sh
-function adpdf {
-  pushd "$(pwd)"
-  cd "/Users/grant/opt/asciidoctorpdf"
-  bundle exec asciidoctor-pdf "$@"
-  popd
-}
-#+END_SRC
-*** Pandoc
-:PROPERTIES:
-:ID:       org_gcr_2020-06-16T19-11-50-05-00_gsmac:18688A3B-56D9-46EF-B349-F65826114A36
-:END:
-
-#+NAME: org_gcr_2020-06-16T19-11-50-05-00_gsmac_39219C20-CBC5-4675-84E4-15343B1334CF
-#+BEGIN_SRC sh
-function word2org {
-  if [[ $# -lt 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: %s <IN> <OUT>\n" "${FUNCNAME[0]}"
-    printf "Convert a MS Word file IN to Org mode file OUT using Pandoc.\n"
-    return 1
-  fi
-  local inputfile=$1
-  local outputfile=$2
-  printf "Attempting to convert \"%s\" to \"%s\".\n\n" "$inputfile" "$outputfile"
-  pandoc \
-    --fail-if-warnings \
-    --from=docx --to=org \
-    "$inputfile" --output="$outputfile"
-  local status="$?"
-  if [ "$status" -eq 0 ]; then
-    printf "Conversion appears to have succeeded.\n\n"
-    printf "Please verify \"%s\" is what you expected.\n" "$outputfile"
-  else
-    printf "Conversion appears to have failed.\n"
-    printf "Please review function usage, error messages, and Pandoc documentation then try again.\n"
-  fi
-  return "$status"
-}
-
-function org2word {
-  if [[ $# -lt 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: %s <IN> <OUT>\n" "${FUNCNAME[0]}"
-    printf "Convert an Org mode file IN to MS Word file OUT using Pandoc.\n"
-    return 1
-  fi
-  local inputfile=$1
-  local outputfile=$2
-  printf "Attempting to convert \"%s\" to \"%s\".\n\n" "$inputfile" "$outputfile"
-  pandoc \
-    --standalone \
-    --reference-doc="/Users/grant/src/pandoc-data-dir/custom-reference.docx" \
-    --fail-if-warnings \
-    --from=org --to=docx \
-    --table-of-contents \
-    "$inputfile" --output="$outputfile"
-  local status="$?"
-  if [ "$status" -eq 0 ]; then
-    printf "Conversion appears to have succeeded.\n\n"
-    printf "Please verify \"%s\" is what you expected.\n" "$outputfile"
-  else
-    printf "Conversion appears to have failed.\n"
-    printf "Please review function usage, error messages, and Pandoc documentation then try again.\n"
-  fi
-  return "$status"
-}
-
-function org2md {
-  if [[ $# -lt 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: %s <IN> <OUT>\n" "${FUNCNAME[0]}"
-    printf "Convert an Org mode file IN to Markdown file OUT using Pandoc.\n"
-    return 1
-  fi
-  local inputfile=$1
-  local outputfile=$2
-  printf "Attempting to convert \"%s\" to \"%s\".\n\n" "$inputfile" "$outputfile"
-  pandoc \
-    --from=org --to=markdown \
-    "$inputfile" --output="$outputfile"
-  local status="$?"
-  if [ "$status" -eq 0 ]; then
-    printf "Conversion appears to have succeeded.\n\n"
-    printf "Please verify \"%s\" is what you expected.\n" "$outputfile"
-  else
-    printf "Conversion appears to have failed.\n"
-    printf "Please review function usage, error messages, and Pandoc documentation then try again.\n"
-  fi
-  return "$status"
-}
-#+END_SRC
-
-*** ls - list directory contents
-:PROPERTIES:
-:ID:       org_gcr_2018-09-07T21-25-20-05-00_globigerina:E21383F5-4229-4C1C-B808-0858E6A980D4
-:END:
-:LOGBOOK:
-- State "TODO"       from              [2019-10-31 Thu 23:27]
-:END:
-July 2018 -- GNU coreutils 8.30
-
-ls - list directory contents
-
-Define reusable configuration parameters that seem the most useful.
-
-do not list implied . and ..
-
-#+NAME: ls-hide-dotdot-dirs
-#+begin_src sh :comments no :tangle no
---almost-all
-#+end_src
-
-with -l, print the author of each file
-
-#+NAME: ls-show-file-author
-#+begin_src sh :comments no :tangle no
---author
-#+end_src
-
-list entries by columns
-
-#+NAME: ls-list-in-columns
-#+begin_src sh :comments no :tangle no
--C
-#+end_src
-
-colorize the output
-
-#+NAME: ls-colorize-output
-#+begin_src sh :comments no :tangle no
---color=always
-#+END_SRC
-
-group directories before files;
-
-can be augmented  with a --sort option, but  any use of
---sort=\,none\/ (-U) disables grouping
-
-#+NAME: ls-list-dirs-first
-#+begin_src sh :comments no :tangle no
---group-directories-first
-#+end_src
-
-print sizes like 1K 234M 2G etc.
-but use the SI format, powers of 1000 not 1024
-
-#+NAME: ls-file-size-units-policy
-#+begin_src sh :comments no :tangle no
---si
-#+end_src
-
-append indicator  with style WORD to  entry names: none
-(default),   slash   (-p),   file-type   (--file-type),
-classify (-F)
-
-#+NAME: ls-show-file-type-indicator-all
-#+begin_src sh :comments no :tangle no
---indicator-style=classify
-#+end_src
-
-use a long listing format
-
-#+NAME: ls-use-long-lines
-#+begin_src sh :comments no :tangle no
--l
-#+end_src
-
-enclose entry names in double quotes
-
-#+NAME: ls-double-quote-entry-names
-#+begin_src sh :comments no :tangle no
---quote-name
-#+end_src
-
-use  quoting  style  WORD  for  entry  names:  literal,
-locale,     shell,      shell-always,     shell-escape,
-shell-escape-always, c, escape (overrides QUOTING_STYLE
-environment variable)
-
-#+NAME: ls-quoting-style
-#+begin_src sh :comments no :tangle no
---quoting-style=c
-#+end_src
-
-time/date format with -l; see TIME_STYLE below
-
-#+NAME: ls-timestamp-format
-#+begin_src sh :comments no :tangle no
---time-style=long-iso
-#+end_src
-
-Accept additional arguments to function
-~"$@"~ expands to separate words: ~"$1" "$2" ...~
-(see [[https://unix.stackexchange.com/questions/41571/what-is-the-difference-between-and][here]])
-
-#+NAME: ls-take-additional-arguments
-#+begin_src sh :comments no :tangle no
-"$@"
-#+end_src
-
-**** Simple: l
-:PROPERTIES:
-:ID:       org_gcr_2020-06-12T19-06-29-05-00_gsmac:D4CF3AE5-C126-48E4-AF5D-361BA843181F
-:END:
-
-#+NAME: org_gcr_2020-06-12T19-06-29-05-00_gsmac_45C77882-9771-4B9F-9A14-599A5F82EDA2
-#+BEGIN_SRC sh :comments no
-function l {
-  gls \
-    ⟪ls-colorize-output⟫ \
-    ⟪ls-take-additional-arguments⟫
-}
-#+END_SRC
-
-#+RESULTS: org_gcr_2020-06-12T19-06-29-05-00_gsmac_45C77882-9771-4B9F-9A14-599A5F82EDA2
-#+BEGIN_EXAMPLE
-#+END_EXAMPLE
-
-**** Rich: ~ll~
-:PROPERTIES:
-:ID:       org_gcr_2020-05-26T16-50-32-05-00_gsmac:7FD233EC-20D7-4A2F-9185-77FDD1A2918C
-:END:
-
-Display as much information as possible in the most user friendly way possible. Name it is clearly going to display more information.
-
-#+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_9199861D-C57A-4D84-A700-A5EDF590A151
-#+begin_src sh :comments no
-function ll {
-  gls \
-      ⟪ls-hide-dotdot-dirs⟫ \
-      ⟪ls-show-file-author⟫ \
-      ⟪ls-list-in-columns⟫ \
-      ⟪ls-colorize-output⟫ \
-      ⟪ls-list-dirs-first⟫ \
-      ⟪ls-file-size-units-policy⟫ \
-      ⟪ls-show-file-type-indicator-all⟫ \
-      ⟪ls-use-long-lines⟫ \
-      ⟪ls-double-quote-entry-names⟫ \
-      ⟪ls-quoting-style⟫ \
-      ⟪ls-timestamp-format⟫ \
-      ⟪ls-take-additional-arguments⟫
-      }
 #+end_src
 
 ** Configuration for Externally Provided Programs
@@ -1500,9 +913,10 @@ alias magit="emacs --no-window-system --no-init-file --load \
 alias gitshowreleases="git tag -l"
 alias gitddiff="git diff --name-status"
 alias gitlog="git log --graph --oneline --decorate"
-alias gj="git difftool --cached"
+alias gf="git difftool --cached"
 alias gitlogone='git log --follow --full-history --reverse --date=short --format="%ad %s %b"'
 alias gitdid="git shortlog --summary --numbered --all --email"
+alias gd="git add ."
 #+END_SRC
 
 Git usability.
@@ -1617,6 +1031,70 @@ Define the local path in my home directory.
 #+begin_src sh
 export PATH="$PATH":"~/go/bin"
 #+end_src
+
+*** ffmpeg
+:PROPERTIES:
+:ID:       org_grant_2021-07-15T00-19-57-05-00_Sadie:262071C3-7E66-4C51-976E-8F57EF8B5359
+:END:
+
+Helper functions.
+
+#+NAME: org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931
+#+BEGIN_SRC sh
+function aac2mp3 {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "FFmpeg converts SOURCE AAC file to DESTINATION MP3 file.\n"
+    return 1
+  elif [[ ! -f "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "I can't find the SOURCE AAC file '%s' so I'm bailing.\n" "$1"
+    return 1
+  elif [[ -f "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
+    printf "Delete '%s' first then try this command again.\n" "$2"
+    return 1
+  fi
+  ffmpeg -i "$1" -vn -ar 44100 -ac 2 -b:a 192k "$2"
+}
+
+function mp42m4a {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Copy MP4 SOURCE's unencoded audio stream into the DESTINATION M4A file.\n"
+    printf "Run 'ffprobe SOURCE' to learn more about its contents.\n"
+    return 1
+  elif [[ ! -f "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "I can't find the SOURCE file '%s' so I'm bailing.\n" "$1"
+    return 1
+  elif [[ -f "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
+    printf "Delete '%s' first then try this command again.\n" "$2"
+    return 1
+  fi
+  ffmpeg -i "$1" -vn -acodec copy "$2"
+}
+
+function mp42x {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <SOURCE> <DESTINATION>\n"
+    printf "Create DESTINATION by doubling both the video and audio speed of the MP4 SOURCE file.\n"
+    return 1
+  elif [[ ! -f "$1" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "I can't find the SOURCE file '%s' so I'm bailing.\n" "$1"
+    return 1
+  elif [[ -f "$2" ]] ; then
+    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
+    printf "Delete '%s' first then try this command again.\n" "$2"
+    return 1
+  fi
+  ffmpeg -i "$1" -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" "$2"
+}
+#+END_SRC
 
 ** These Things Must Occur at the Very END
 :PROPERTIES:
