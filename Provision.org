@@ -1,5 +1,20 @@
 #+title: Bash Configuration Document
 
+This document is my Bash configuration.
+
+It is split into roughly two parts:
+- Things that rarely change: fundamental Bash behavior and configuration options.
+- Things that change frequently: Interactive daily use.
+
+This document attempts to describe sections with titles explaining their intent clearly.
+
+When I wrote this document, Bash was at version 4.3. I slowly read the manual twice and then thoughtfully configured my system. Consequently, I've got a better perspective on the philosophy and culture of my configuration. From here, I will read about new features in each release and figure out if further configuration is required. The following are notes about each release since.
+
+Note: To read the release notes, download a tar file of the source code [[http://git.savannah.gnu.org/cgit/bash.git/][here]] and read the NEWS file.
+
+- Release Notes
+  - Start here.
+
 * Fundamental, Common, and Mostly Static Bash Behavior Configuration
 :PROPERTIES:
 :ID:       org_gcr_2017-05-12_mara:A9BD0A2F-5066-4349-8DB3-20E58925B2E5
@@ -23,8 +38,6 @@ If you are reading this, then something special is going on!
 :END:
 
 This configuration belongs in both the Interactive and Non-Interactive configuration.
-
-We wrote this document for Bash version 4.3, which is now out of date. We didn't update it for newer versions, though. Lazy-Learning and Lazy-load fixes are in our future!
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_435FF2EC-213F-4D6A-94B9-613AD6F153DDS
 #+BEGIN_SRC sh
