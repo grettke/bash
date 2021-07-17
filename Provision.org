@@ -8,16 +8,90 @@ It is split into roughly two parts:
 
 This document attempts to describe sections with titles explaining their intent clearly.
 
+* Release Notes
+:PROPERTIES:
+:ID:       org_grant_2021-07-15T22-45-59-05-00_Sadie:1E64BDF7-7E7A-4989-B0E1-7BDD15B01A89
+:END:
+
 When I wrote this document, Bash was at version 4.3. I slowly read the manual twice and then thoughtfully configured my system. Consequently, I've got a better perspective on the philosophy and culture of my configuration. From here, I will read about new features in each release and figure out if further configuration is required. The following are notes about each release since.
 
 Note: To read the release notes, download a tar file of the source code [[http://git.savannah.gnu.org/cgit/bash.git/][here]] and read the NEWS file.
 
-- Release Notes
-  - Start here.
+** Bash 4.4
+:PROPERTIES:
+:ID:       org_grant_2021-07-15T22-45-59-05-00_Sadie:D74647C0-5F32-461E-A6E0-F99A5C366500
+:END:
+
+- 1. New Features in Bash
+- 1.y. Bash now checks $INSIDE_EMACS as well as $EMACS when deciding whether or not bash is being run in a GNU Emacs shell window.
+- 1.jj. New prompt string: PS0.  Expanded and displayed by interactive shells after
+- 1.nn. Shells running as root no longer inherit PS4 from the environment, closing a security hole involving PS4 expansion performing command substitution.
+- 1.oo. If executing an implicit `cd' when the `autocd' option is set, bash will now invoke a function named `cd' if one exists before executing the `cd' builtin.
+- 2. New Features in Readline
+- 2.c. The editing mode indicators can now be strings and are user-settable (new `emacs-mode-string', `vi-cmd-mode-string' and `vi-ins-mode-string' variables). Mode strings can contain invisible character sequences. Setting mode strings to null strings restores the defaults.
+
+- Changes to my configuration:
+  - Added PS0. Surprisingly satisfying to use it.
+
+- Notes
+  - No impact
+
+** Bash 5.0
+:PROPERTIES:
+:ID:       org_grant_2021-07-15T22-45-59-05-00_Sadie:BA5FA4D0-8736-455E-913B-417449E7934D
+:END:
+
+- 1. New Features in Bash
+- 1a. The `wait' builtin can now wait for the last process substitution created.
+- 1b. There is an EPOCHSECONDS variable, which expands to the time in seconds since the Unix epoch.
+- 1.d. understands negative arguments: negative arguments offset from the end of the history list.
+- 1.i. A nameref name resolution loop in a function now resolves to a variable by that name in the global scope.
+- 1.m. If a non-interactive shell with job control enabled detects that a foreground job died due to SIGINT, it acts as if it received the SIGINT.
+- 1.o. A new shopt option: localvar_inherit; if set, a local variable inherits the value of a variable with the same name at the nearest preceding scope.
+- 1.t. The `history' builtin can now delete ranges of history entries using `-d start-end'.
+- 1.v. The command completion code now matches aliases and shell function names case-insensitively if the readline completion-ignore-case variable is set.
+- 1.y. The `umask' builtin now allows modes and masks greater than octal 777.
+- 1.bb. Bash no longer allows variable assignments preceding a special builtin that changes variable attributes to propagate back to the calling environment unless the compatibility level is 44 or lower.
+- 1.gg. The localvar_inherit option will not attempt to inherit a value from a variable of an incompatible type (indexed vs. associative arrays, for example).
+- 1.kk. The `localvar_unset' shopt option is now visible and documented.
+- 2. New Features in Readline
+- 2.k. The "Insert" keypad key, if available, now puts readline into overwrite
+   mode.
+
+- Changes to my configuration:
+  - completion-ignore-case
+  - localvar_inherit
+  - localvar_unset
+
+- Notes
+  - Inheritance and scope are a topic.
+  - Case insensitive command completion.
+
+** Bash 5.1
+:PROPERTIES:
+:ID:       org_grant_2021-07-15T22-45-59-05-00_Sadie:D5CB8583-5084-4A47-BB4B-0170FB544F18
+:END:
+
+- 1. New Features in Bash
+- 1.i. SRANDOM: a new variable that expands to a 32-bit random number that is not produced by an LCRNG, and uses getrandom/getentropy, falling back to /dev/urandom or arc4random if available. There is a fallback generator if none of these are available.
+- 1.m. If `unset' is executed without option arguments, bash tries to unset a shell function if a name argument cannot be a shell variable name because it's not an identifier.
+- 1.y. `local' now honors the `-p' option to display all local variables at
+  the current context.
+- 1.bb. `declare' and `local' now have a -I option that inherits attributes and value from a variable with the same name at a previous scope.
+- 1.hh. New `K' parameter transformation to display associative arrays as key-value pairs.
+- 1.tt. The `fg' and `bg' builtins now return an error in a command substitution when asked to restart a job inherited from the parent shell.
+- 2. New Features in Readline
+- 2.c. Readline automatically switches to horizontal scrolling if the terminal has only one line.
+
+- Changes to my configuration:
+  - None.
+
+- Note
+  - No impact.
 
 * Fundamental, Common, and Mostly Static Bash Behavior Configuration
 :PROPERTIES:
-:ID:       org_gcr_2017-05-12_mara:A9BD0A2F-5066-4349-8DB3-20E58925B2E5
+:ID: org_gcr_2017-05-12_mara:A9BD0A2F-5066-4349-8DB3-20E58925B2E5
 :END:
 
 - Configure
@@ -163,6 +237,24 @@ Pass non-directory arguments to =cd= and change to the value of that variable.
 #+BEGIN_SRC sh
 shopt -s cdable_vars
 #+END_SRC
+
+"If set, local variables inherit the value and attributes of a variable of the same name that exists at a previous scope before any new value is assigned. The nameref attribute is not inherited."
+
+This is not a scoping feature. This is a convenience feature that is more like "define a variable name and then initialize it to the same global variable" at the same time. That is surprising so disable it.
+
+#+NAME: org_grant_2021-07-15T22-45-59-05-00_Sadie_AE0D00C6-8FDF-4B40-9D65-1E23ED9F80E2
+#+begin_src sh
+shopt -u localvar_inherit
+#+end_src
+
+"If set, calling unset on local variables in previous function scopes marks them so subsequent lookups find them unset until that function returns. This is identical to the behavior of unsetting local variables at the current function scope."
+
+Make the behavior consistent is good enough reason to enable it.
+
+#+NAME: org_grant_2021-07-15T22-45-59-05-00_Sadie_912AD930-FA2B-4008-9A22-6CD54C5DE37D
+#+begin_src sh
+shopt -s localvar_unset
+#+end_src
 
 **** Job Control
 :PROPERTIES:
@@ -364,6 +456,13 @@ Programatically complete command options.
 #+BEGIN_SRC sh
 shopt -s progcomp
 #+END_SRC
+
+Completely things ignoring case. This belongs in the =~/inputrc= but I don't want to deal with that file and this is how to do that.
+
+#+NAME: org_grant_2021-07-15T22-45-59-05-00_Sadie_CDD6D74F-ADB4-45F7-9902-1052D36D26DD
+#+begin_src sh
+bind "set completion-ignore-case on"
+#+end_src
 
 Aliases are only for interactive users.
 
