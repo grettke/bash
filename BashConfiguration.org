@@ -1208,6 +1208,16 @@ function mp42x {
 }
 #+END_SRC
 
+*** ripgrep
+:PROPERTIES:
+:ID:       org_grant_2021-07-17T11-48-12-05-00_Sadie:F2E86256-9A84-4828-ABDD-D3CC016D1BF7
+:END:
+
+#+NAME: org_grant_2021-07-17T11-48-12-05-00_Sadie_F9D58A54-4827-4903-8FFA-E3A85BD6850A
+#+begin_src sh
+export RIPGREP_CONFIG_PATH="~/src/ripgreprc/.ripgreprc"
+#+end_src
+
 ** These Things Must Occur at the Very END
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
