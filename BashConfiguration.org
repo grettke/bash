@@ -1215,7 +1215,7 @@ function mp42x {
 
 #+NAME: org_grant_2021-07-17T11-48-12-05-00_Sadie_F9D58A54-4827-4903-8FFA-E3A85BD6850A
 #+begin_src sh
-export RIPGREP_CONFIG_PATH="~/src/ripgreprc/.ripgreprc"
+export RIPGREP_CONFIG_PATH="/Users/grant/src/ripgreprc/.ripgreprc"
 #+end_src
 
 ** These Things Must Occur at the Very END
