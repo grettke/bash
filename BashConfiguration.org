@@ -763,7 +763,7 @@ You should probably only be editing this headline.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F
 #+BEGIN_SRC sh
-source ~/.bash_global_interactive
+source /Users/grant/src/bash/.bash_global_interactive
 #+END_SRC
 ** Interactive Shell Prompt Values
 :PROPERTIES:
@@ -839,7 +839,7 @@ I copied this from the documentation.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F
 #+BEGIN_SRC sh
-export PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
+export PS4='\nDEBUG level:$SHLVL subshell-level: $BASH_SUBSHELL \nsource-file:${BASH_SOURCE} line#:${LINENO} function:${FUNCNAME[0]:+${FUNCNAME[0]}(): }\nstatement: '
 #+END_SRC
 
 ** Configure the Default Editor
@@ -895,7 +895,6 @@ Alias shortcuts to commands that I like to use but can't remember or are too lon
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4AA2E64E-7074-4F68-BC50-E3DE1158A50C
 #+BEGIN_src sh
-alias back="cd $OLDPWD"
 alias e=exit
 alias j="jobs -l"
 #+END_SRC
@@ -906,7 +905,7 @@ Run a command multiple times.
 #+BEGIN_SRC sh
 function runxtimes {
   if [[ -z "$1" || -z "$2" ]] ; then
-    printf "Usage: %s <REPETITIONS> <COMMAND> <ARGUMENTS...>\n" ".sh${FUNCNAME[0]}"
+    printf "Usage: %s <REPETITIONS> <COMMAND> <ARGUMENTS...>\n" "${FUNCNAME[0]}"
     printf "Repeatedly run COMMAND with ARGUMENTS, REPETITONS times.\n"
     return 1
   fi
@@ -1038,33 +1037,33 @@ Git usability.
 function gitgreplog {
   if [[ $# -eq 0 || -z "$1" ]] ; then
     printf "Search Git commit message history for TEXT case-insensitively.\n"
-    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
+    printf "Usage: %s \"<required search string(s)>\" <optional additional parameters>\n" "${FUNCNAME[0]}"
     printf "For example add '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
     return 1
   fi
   local text=$1
   shift
-  local cmd="git log --oneline --regexp-ignore-case --grep='$text' $@"
+  local cmd="git log --oneline --regexp-ignore-case --grep='$text' $*"
   printf "%s\n" "$cmd"
   eval "$cmd"
 }
 function gitgrepchange {
   if [[ $# -eq 0 || -z "$1" ]] ; then
     printf "Search Git commit change history for TEXT case-insensitively.\n"
-    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
+    printf "Usage: %s \"<required search string(s)>\" <optional additional parameters>\n" "${FUNCNAME[0]}"
     printf "For example add '--oneline' for a succinct report or '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
     return 1
   fi
   local text=$1
   shift
-  local cmd="git log --pickaxe-all --pickaxe-regex -S'$text' $@"
+  local cmd="git log --pickaxe-all --pickaxe-regex -S'$text' $*"
   printf "%s\n" "$cmd"
   eval "$cmd"
 }
 
 function gitauthorhistory {
   if [[ $# -eq 0 || -z "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} AUTHOR.\n"
+    printf "Usage: %s AUTHOR.\n" "${FUNCNAME[0]}"
     printf "Show commit log for AUTHOR name.\n"
     return 1
   fi
@@ -1078,8 +1077,8 @@ bash-git-prompt.
 #+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_AEA309FA-A780-48D1-AAEA-B4062F915914
 #+begin_src sh
 if [ -f "$HOME/src/bash-git-prompt/gitprompt.sh" ]; then
-    GIT_PROMPT_ONLY_IN_REPO=1
-    source $HOME/src/bash-git-prompt/gitprompt.sh
+  export GIT_PROMPT_ONLY_IN_REPO=1
+  source "/Users/grant/src/bash-git-prompt/gitprompt.sh"
 fi
 #+end_src
 
@@ -1118,7 +1117,7 @@ Load the Lolsmacs configuration.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830
 #+BEGIN_src sh
-source ~/src/myamacs/amacs
+source /Users/grant/src/myamacs/amacs
 #+END_SRC
 
 *** golang
@@ -1134,14 +1133,14 @@ Define the Global path.
 
 #+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_241AF44A-A4A6-4F18-972B-217C5C0D2731
 #+begin_src sh
-export PATH="$PATH":"/usr/local/go/bin"
+export PATH="$PATH:/usr/local/go/bin"
 #+end_src
 
 Define the local path in my home directory.
 
 #+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_D53423DD-60DF-4DCB-9BD1-A71B3AB7D4D0
 #+begin_src sh
-export PATH="$PATH":"~/go/bin"
+export PATH="$PATH:~/go/bin"
 #+end_src
 
 *** ffmpeg
@@ -1155,15 +1154,15 @@ Helper functions.
 #+BEGIN_SRC sh
 function aac2mp3 {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "FFmpeg converts SOURCE AAC file to DESTINATION MP3 file.\n"
     return 1
   elif [[ ! -f "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "I can't find the SOURCE AAC file '%s' so I'm bailing.\n" "$1"
     return 1
   elif [[ -f "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
     printf "Delete '%s' first then try this command again.\n" "$2"
     return 1
@@ -1177,11 +1176,11 @@ function mp42m4a {
     printf "Run 'ffprobe SOURCE' to learn more about its contents.\n"
     return 1
   elif [[ ! -f "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "I can't find the SOURCE file '%s' so I'm bailing.\n" "$1"
     return 1
   elif [[ -f "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
     printf "Delete '%s' first then try this command again.\n" "$2"
     return 1
@@ -1191,15 +1190,15 @@ function mp42m4a {
 
 function mp42x {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <SOURCE> <DESTINATION>\n"
+    printf "Usage: %s <SOURCE> <DESTINATION>\n" "${FUNCNAME[0]}"
     printf "Create DESTINATION by doubling both the video and audio speed of the MP4 SOURCE file.\n"
     return 1
   elif [[ ! -f "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "I can't find the SOURCE file '%s' so I'm bailing.\n" "$1"
     return 1
   elif [[ -f "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
     printf "Delete '%s' first then try this command again.\n" "$2"
     return 1

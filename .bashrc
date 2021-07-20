@@ -1,7 +1,7 @@
 # -*- mode: sh; -*-
 
 # [[file:BashConfiguration.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F]]
-source ~/.bash_global_interactive
+source /Users/grant/src/bash/.bash_global_interactive
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F ends here
 
 # [[file:BashConfiguration.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3][org_gcr_2019-11-01T00-47-07-05-00_host1.org_72CEF62C-3586-44DE-B6AA-2237D0CC34E3]]
@@ -21,7 +21,7 @@ export PS3="Please make a selection: "
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_F75C4DEC-3C19-45D4-8E6B-0990ABB665AC ends here
 
 # [[file:BashConfiguration.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F][org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F]]
-export PS4="(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]} - [${SHLVL},${BASH_SUBSHELL}, $?"
+export PS4='\nDEBUG level:$SHLVL subshell-level: $BASH_SUBSHELL \nsource-file:${BASH_SOURCE} line#:${LINENO} function:${FUNCNAME[0]:+${FUNCNAME[0]}(): }\nstatement: '
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_C160B43F-9CDC-4C19-9DD1-EE78E7AAA86F ends here
 
 # [[file:BashConfiguration.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC][org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC]]
@@ -44,7 +44,6 @@ alias ls="LC_COLLATE=en_GB.UTF-8 ls -aCFGhklpqT"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_D63C2874-1AA5-45A4-8AF5-7D22086D06D0 ends here
 
 # [[file:BashConfiguration.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_4AA2E64E-7074-4F68-BC50-E3DE1158A50C][org_gcr_2019-11-01T00-47-07-05-00_host1.org_4AA2E64E-7074-4F68-BC50-E3DE1158A50C]]
-alias back="cd $OLDPWD"
 alias e=exit
 alias j="jobs -l"
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_4AA2E64E-7074-4F68-BC50-E3DE1158A50C ends here
@@ -52,7 +51,7 @@ alias j="jobs -l"
 # [[file:BashConfiguration.org::org_gcr_2020-07-27T14-15-12-05-00_gsmac_297E8D9A-9719-4E08-B3EC-1CD1B2EB130E][org_gcr_2020-07-27T14-15-12-05-00_gsmac_297E8D9A-9719-4E08-B3EC-1CD1B2EB130E]]
 function runxtimes {
   if [[ -z "$1" || -z "$2" ]] ; then
-    printf "Usage: %s <REPETITIONS> <COMMAND> <ARGUMENTS...>\n" ".sh${FUNCNAME[0]}"
+    printf "Usage: %s <REPETITIONS> <COMMAND> <ARGUMENTS...>\n" "${FUNCNAME[0]}"
     printf "Repeatedly run COMMAND with ARGUMENTS, REPETITONS times.\n"
     return 1
   fi
@@ -127,33 +126,33 @@ alias gd="git add ."
 function gitgreplog {
   if [[ $# -eq 0 || -z "$1" ]] ; then
     printf "Search Git commit message history for TEXT case-insensitively.\n"
-    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
+    printf "Usage: %s \"<required search string(s)>\" <optional additional parameters>\n" "${FUNCNAME[0]}"
     printf "For example add '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
     return 1
   fi
   local text=$1
   shift
-  local cmd="git log --oneline --regexp-ignore-case --grep='$text' $@"
+  local cmd="git log --oneline --regexp-ignore-case --grep='$text' $*"
   printf "%s\n" "$cmd"
   eval "$cmd"
 }
 function gitgrepchange {
   if [[ $# -eq 0 || -z "$1" ]] ; then
     printf "Search Git commit change history for TEXT case-insensitively.\n"
-    printf "Usage: ${FUNCNAME[0]} \"<required search string(s)>\" <optional additional parameters>\n"
+    printf "Usage: %s \"<required search string(s)>\" <optional additional parameters>\n" "${FUNCNAME[0]}"
     printf "For example add '--oneline' for a succinct report or '--name-status' to include the changed-file-status before switching to 'git log #' or 'git diff #' to dig deeper."
     return 1
   fi
   local text=$1
   shift
-  local cmd="git log --pickaxe-all --pickaxe-regex -S'$text' $@"
+  local cmd="git log --pickaxe-all --pickaxe-regex -S'$text' $*"
   printf "%s\n" "$cmd"
   eval "$cmd"
 }
 
 function gitauthorhistory {
   if [[ $# -eq 0 || -z "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} AUTHOR.\n"
+    printf "Usage: %s AUTHOR.\n" "${FUNCNAME[0]}"
     printf "Show commit log for AUTHOR name.\n"
     return 1
   fi
@@ -164,8 +163,8 @@ function gitauthorhistory {
 
 # [[file:BashConfiguration.org::org_grant_2021-07-12T10-27-24-05-00_Sadie_AEA309FA-A780-48D1-AAEA-B4062F915914][org_grant_2021-07-12T10-27-24-05-00_Sadie_AEA309FA-A780-48D1-AAEA-B4062F915914]]
 if [ -f "$HOME/src/bash-git-prompt/gitprompt.sh" ]; then
-  GIT_PROMPT_ONLY_IN_REPO=1
-  source $HOME/src/bash-git-prompt/gitprompt.sh
+  export GIT_PROMPT_ONLY_IN_REPO=1
+  source "/Users/grant/src/bash-git-prompt/gitprompt.sh"
 fi
 # org_grant_2021-07-12T10-27-24-05-00_Sadie_AEA309FA-A780-48D1-AAEA-B4062F915914 ends here
 
@@ -182,29 +181,29 @@ fi
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_C617F66A-B15C-4E1B-B113-C22C53DC9A8C ends here
 
 # [[file:BashConfiguration.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830][org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830]]
-source ~/src/myamacs/amacs
+source /Users/grant/src/myamacs/amacs
 # org_gcr_2019-11-01T00-47-07-05-00_host1.org_B22F92F4-FDD8-402B-A801-4BFBE877E830 ends here
 
 # [[file:BashConfiguration.org::org_grant_2021-07-12T10-27-24-05-00_Sadie_241AF44A-A4A6-4F18-972B-217C5C0D2731][org_grant_2021-07-12T10-27-24-05-00_Sadie_241AF44A-A4A6-4F18-972B-217C5C0D2731]]
-export PATH="$PATH":"/usr/local/go/bin"
+export PATH="$PATH:/usr/local/go/bin"
 # org_grant_2021-07-12T10-27-24-05-00_Sadie_241AF44A-A4A6-4F18-972B-217C5C0D2731 ends here
 
 # [[file:BashConfiguration.org::org_grant_2021-07-12T10-27-24-05-00_Sadie_D53423DD-60DF-4DCB-9BD1-A71B3AB7D4D0][org_grant_2021-07-12T10-27-24-05-00_Sadie_D53423DD-60DF-4DCB-9BD1-A71B3AB7D4D0]]
-export PATH="$PATH":"~/go/bin"
+export PATH="$PATH:~/go/bin"
 # org_grant_2021-07-12T10-27-24-05-00_Sadie_D53423DD-60DF-4DCB-9BD1-A71B3AB7D4D0 ends here
 
 # [[file:BashConfiguration.org::org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931][org_gcr_2020-05-25T18-54-59-05-00_gsmac_C10FF5EA-C5EC-4D81-AA6F-C38FF1042931]]
 function aac2mp3 {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "FFmpeg converts SOURCE AAC file to DESTINATION MP3 file.\n"
     return 1
   elif [[ ! -f "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "I can't find the SOURCE AAC file '%s' so I'm bailing.\n" "$1"
     return 1
   elif [[ -f "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
     printf "Delete '%s' first then try this command again.\n" "$2"
     return 1
@@ -218,11 +217,11 @@ function mp42m4a {
     printf "Run 'ffprobe SOURCE' to learn more about its contents.\n"
     return 1
   elif [[ ! -f "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "I can't find the SOURCE file '%s' so I'm bailing.\n" "$1"
     return 1
   elif [[ -f "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
     printf "Delete '%s' first then try this command again.\n" "$2"
     return 1
@@ -232,15 +231,15 @@ function mp42m4a {
 
 function mp42x {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <SOURCE> <DESTINATION>\n"
+    printf "Usage: %s <SOURCE> <DESTINATION>\n" "${FUNCNAME[0]}"
     printf "Create DESTINATION by doubling both the video and audio speed of the MP4 SOURCE file.\n"
     return 1
   elif [[ ! -f "$1" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "I can't find the SOURCE file '%s' so I'm bailing.\n" "$1"
     return 1
   elif [[ -f "$2" ]] ; then
-    printf "Usage: ${FUNCNAME[0]} <Source> <Destination>\n"
+    printf "Usage: %s <Source> <Destination>\n" "${FUNCNAME[0]}"
     printf "The DESTINATION file '%s' already exists so I'm bailing.\n" "$2"
     printf "Delete '%s' first then try this command again.\n" "$2"
     return 1
