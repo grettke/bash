@@ -107,7 +107,7 @@ If you are reading this, then something special is going on!
 
 ** Common Configuration for both Interactive and Non-Interactive Use
 :PROPERTIES:
-:header-args: :noweb-ref BashCore
+:header-args: :noweb-ref BashCore :comments no
 :ID:       org_gcr_2017-05-12_mara:F5ED8B16-23A9-4FB2-88A8-A340984AF656
 :END:
 
@@ -394,7 +394,7 @@ export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 
 ** Common Configuration for Non-Interactive Use
 :PROPERTIES:
-:header-args: :noweb-ref BashNonInteractiveCore
+:header-args: :noweb-ref BashNonInteractiveCore :comments no
 :ID:       org_gcr_2017-05-12_mara:C8D58FA9-17C0-4474-AB1E-540F715C4970
 :END:
 
@@ -425,7 +425,7 @@ shopt -u expand_aliases
 
 ** Common Configuration for Interactive Use
 :PROPERTIES:
-:header-args: :noweb-ref BashInteractiveCore
+:header-args: :noweb-ref BashInteractiveCore :comments no
 :ID:       org_gcr_2017-05-12_mara:4825F69D-14A3-43DB-A7FE-A49C3C038F95
 :END:
 
@@ -651,7 +651,7 @@ export TZ="America/Chicago"
 
 *** Create the Non-Interactive One: .bash_global_non_interactive
 :PROPERTIES:
-:header-args: :tangle ".bash_global_non_interactive"
+:header-args: :tangle ".bash_global_non_interactive" :comments no
 :ID:       org_gcr_2017-05-12_mara:DB3A9415-85FC-46FD-BF39-F723E5235C3C
 :END:
 
@@ -676,7 +676,7 @@ Only non-interactive sessions requires this configuration.
 
 *** Create the Interactive One: .bash_global_interactive
 :PROPERTIES:
-:header-args: :tangle ".bash_global_interactive"
+:header-args: :tangle ".bash_global_interactive" :comments no
 :ID:       org_gcr_2017-05-12_mara:1E8A5E47-9189-40EB-A9B9-8D4835775A7A
 :END:
 
@@ -706,7 +706,7 @@ Only interactive sessions require this configuration.
 
 ** Use the Same Interactive Configuration for Non-Login Interactive Shells: .bash_login
 :PROPERTIES:
-:header-args: :tangle ".bash_login"
+:header-args: :tangle ".bash_login" :comments no
 :ID:       org_gcr_2017-05-12_mara:93967906-378F-4A5B-B53F-1068F93DF8BB
 :END:
 
@@ -729,7 +729,7 @@ fi
 
 ** Run This When You Log Out: .bash_logout
 :PROPERTIES:
-:header-args: :tangle ".bash_logout"
+:header-args: :tangle ".bash_logout" :comments no
 :ID:       org_gcr_2017-05-12_mara:04FEFF46-AAC6-4AB8-9876-199B271DA565
 :END:
 
@@ -745,7 +745,7 @@ printf "Logging out of Bash.\n"
 #+END_SRC
 * The Actual Daily Usage Configuration: .bashrc
 :PROPERTIES:
-:header-args: :tangle ".bashrc"
+:header-args: :tangle ".bashrc" :comments no
 :ID:       org_gcr_2017-05-12_mara:93E59E15-9E26-4FEE-800A-4DB748AB395F
 :END:
 

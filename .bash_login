@@ -1,8 +1,6 @@
 #!/usr/local/bin/bash
 # -*- mode: sh; -*-
 
-# [[file:BashConfiguration.org::org_gcr_2019-11-01T00-47-07-05-00_host1.org_4C32C1AE-EF81-4469-9B77-78D2FEF9CD52][org_gcr_2019-11-01T00-47-07-05-00_host1.org_4C32C1AE-EF81-4469-9B77-78D2FEF9CD52]]
 if [ -f /Users/grant/.bashrc ]; then
   source /Users/grant/.bashrc
 fi
-# org_gcr_2019-11-01T00-47-07-05-00_host1.org_4C32C1AE-EF81-4469-9B77-78D2FEF9CD52 ends here
