@@ -11,7 +11,7 @@ function gcrbashcheck {
   elif [[ $actual_major -eq $expected_major && $actual_minor -ge $expected_minor ]]; then
     return
   else
-    printf "\e[31mFYI: Using Bash v$actual_major.$actual_minor but expecting Bash >= v$expected_major.$expected_minor\e[0m\n" 1>&2
+    printf "\e[31mFYI: Using Bash v%s.%s but expecting Bash >= v%s.%s\e[0m\n" "$actual_major" "$actual_minor" "$expected_major" "$expected_minor" 1>&2
   fi
 }
 gcrbashcheck
@@ -42,7 +42,7 @@ function gcrencodingcheck {
   if [ "$(locale charmap)" == "UTF-8" ]; then
     printf "Character encoding expected to be 'UTF-8' and found it to be: CORRECT.\n"
   else
-    printf "Character encoding expected to be 'UTF-8' and found it to be: INCORRECT as $(locale charmap).\n"
+    printf "Character encoding expected to be 'UTF-8' and found it to be: INCORRECT as %s.\n" "$(locale charmap)"
   fi
 }
 gcrencodingcheck
