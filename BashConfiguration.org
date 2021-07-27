@@ -889,6 +889,7 @@ alias mount="mount | column -t"
 alias df="df -h"
 alias du="du -ach"
 alias ls="LC_COLLATE=en_GB.UTF-8 ls -aCFGhklpqT"
+alias md5sum="md5 -r"
 #+END_SRC
 
 Alias shortcuts to commands that I like to use but can't remember or are too long.
