@@ -51,6 +51,10 @@ function runxtimes {
   done
 }
 
+function rndwrd () {
+  /Users/grant/util/rndwrd
+}
+
 alias togglegrayscale="osascript /Users/grant/util/sspadtogglegrayscale.scpt"
 
 alias invertcolors="osascript /Users/grant/util/sspadtogglecolors.scpt"

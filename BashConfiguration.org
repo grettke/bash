@@ -927,6 +927,15 @@ function runxtimes {
 }
 #+END_SRC
 
+Radom word.
+
+#+NAME: org_grant_2021-08-09T16-29-07-05-00_Sadie_260EFA32-D846-4B09-9FAA-721AA272F279
+#+begin_src sh
+function rndwrd () {
+  /Users/grant/util/rndwrd
+}
+#+end_src
+
 *** GUI
 :PROPERTIES:
 :ID:       org_grant_2021-07-15T00-19-57-05-00_Sadie:CF3280A2-88F5-486F-9053-28CC6D519F05
