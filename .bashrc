@@ -203,4 +203,12 @@ function mp42x {
 
 export RIPGREP_CONFIG_PATH="/Users/grant/src/ripgreprc/.ripgreprc"
 
+function btcmainnet {
+  open /Applications/Bitcoin-Qt.app --args -txindex=1 "$@"
+}
+
+function btctestnet {
+  open /Applications/Bitcoin-Qt.app --args -txindex=1 -testnet "$@"
+}
+
 export PATH="/usr/local/bin:/Users/grant/util:$PATH"

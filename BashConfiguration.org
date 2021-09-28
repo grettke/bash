@@ -1226,6 +1226,21 @@ function mp42x {
 #+begin_src sh
 export RIPGREP_CONFIG_PATH="/Users/grant/src/ripgreprc/.ripgreprc"
 #+end_src
+*** Bitcoin
+:PROPERTIES:
+:ID:       org_grant_2021-09-28T17-39-12-05-00_Sadie:BA7D39C4-863A-4D3E-8C34-8D278211FD9A
+:END:
+
+#+NAME: org_grant_2021-09-28T17-39-12-05-00_Sadie_6FCE01F7-EFA5-4D2F-BBC8-B4C307A90EB6
+#+begin_src sh
+function btcmainnet {
+  open /Applications/Bitcoin-Qt.app --args -txindex=1 "$@"
+}
+
+function btctestnet {
+  open /Applications/Bitcoin-Qt.app --args -txindex=1 -testnet "$@"
+}
+#+end_src
 
 ** These Things Must Occur at the Very END
 :PROPERTIES:
