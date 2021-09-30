@@ -1,5 +1,4 @@
-#!/usr/local/bin/bash
-# -*- mode: sh; -*-
+# shellcheck shell=bash
 
 if [ -f /Users/grant/.bashrc ]; then
   source /Users/grant/.bashrc

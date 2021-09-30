@@ -1,4 +1,5 @@
-# -*- mode: sh; -*-
+# -*- mode: shell-script; sh-shell: bash; -*-
+# shellcheck shell=bash
 
 function gcrbashcheck {
   local expected_major=5

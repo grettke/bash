@@ -655,9 +655,12 @@ export TZ="America/Chicago"
 :ID:       org_gcr_2017-05-12_mara:DB3A9415-85FC-46FD-BF39-F723E5235C3C
 :END:
 
+Neither Shellcheck nor Bash recognizes non-standard Bash configuration files like this. Therefore tell both Shellcheck and Emacs how to handle it: specify a Shellcheck directive and an Emacs file-local mode variable. Although a shebang could have worked for both of them, it shouldn't be present unless the file is a runnable script—which this is not.
+
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F9F1BC81-7520-447B-A109-BF751606EED7
 #+BEGIN_SRC sh :comments no
-# -*- mode: sh; -*-
+# -*- mode: shell-script; sh-shell: bash; -*-
+# shellcheck shell=bash
 #+END_SRC
 
 Every Bash session requires the same configuration.
@@ -680,9 +683,12 @@ Only non-interactive sessions requires this configuration.
 :ID:       org_gcr_2017-05-12_mara:1E8A5E47-9189-40EB-A9B9-8D4835775A7A
 :END:
 
+Neither Shellcheck nor Bash recognizes non-standard Bash configuration files like this. Therefore tell both Shellcheck and Emacs how to handle it: specify a Shellcheck directive and an Emacs file-local mode variable. Although a shebang could have worked for both of them, it shouldn't be present unless the file is a runnable script—which this is not.
+
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_F707E96F-A74C-4FA9-9149-B7DDB72B218B
 #+BEGIN_SRC sh :comments no
-# -*- mode: sh; -*-
+# -*- mode: shell-script; sh-shell: bash; -*-
+# shellcheck shell=bash
 #+END_SRC
 
 Every Bash session requiress the same configuration.
@@ -710,10 +716,11 @@ Only interactive sessions require this configuration.
 :ID:       org_gcr_2017-05-12_mara:93967906-378F-4A5B-B53F-1068F93DF8BB
 :END:
 
+Although this is a standard Bash configuration file and Emacs recognizes it Shellcheck does not. Therefore specify a Shellcheck directive. Although a shebang could have worked, it shouldn't be present unless the file is a runnable script—which this is not.
+
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_4FB15878-C40F-4D80-A73B-B0D9A1561F58
 #+BEGIN_SRC sh :comments no
-#!/usr/local/bin/bash
-# -*- mode: sh; -*-
+# shellcheck shell=bash
 #+END_SRC
 
 Execute the same configuration as every non-login interactive shell.
@@ -732,6 +739,8 @@ fi
 :header-args: :tangle ".bash_logout" :comments no
 :ID:       org_gcr_2017-05-12_mara:04FEFF46-AAC6-4AB8-9876-199B271DA565
 :END:
+
+Although this is a standard Bash configuration file and Emacs recognizes it Shellcheck does not. Therefore specify a Shellcheck directive. Although a shebang could have worked, it shouldn't be present unless the file is a runnable script—which this is not.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_E467EC86-F272-47CD-B9F9-7655B3ACB0AF
 #+BEGIN_src sh :comments no
@@ -756,9 +765,11 @@ You should probably only be editing this headline.
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:98614993-2913-437D-B755-2DD1B1878C6D
 :END:
 
+Although this is a standard Bash configuration file and Emacs recognizes it Shellcheck does not. Therefore specify a Shellcheck directive. Although a shebang could have worked, it shouldn't be present unless the file is a runnable script—which this is not.
+
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_321C8889-A026-4FBF-B76A-EE8EF4AB7D9C
 #+BEGIN_SRC sh :comments no
-# -*- mode: sh; -*-
+# shellcheck shell=bash
 #+END_SRC
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_D5E7EF39-539B-4373-8F42-CAFFBE72C40F

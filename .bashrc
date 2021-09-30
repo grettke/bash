@@ -1,4 +1,4 @@
-# -*- mode: sh; -*-
+# shellcheck shell=bash
 
 source /Users/grant/src/bash/.bash_global_interactive
 
