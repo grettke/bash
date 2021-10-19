@@ -224,3 +224,25 @@ function btctestnet {
 }
 
 export PATH="/usr/local/bin:/Users/grant/util:$PATH"
+
+function sparrowmainnet {
+  if [[ $# -ne 1 || -z "$1" || "$1" != "MAIN-NET-MAIN-NET-MAIN-NET" ]] ; then
+    printf "Usage: %s %s\n" "${FUNCNAME[0]}" "MAIN-NET-MAIN-NET-MAIN-NET"
+    printf "Start Sparrow on the Bitcoin MAIN-NET by providing the excruciatingly verbose reminder argument: \"MAIN-NET-MAIN-NET-MAIN-NET\"\n"
+    return 1
+  else
+    open /Applications/Sparrow.app --args --network mainnet "$@"
+  fi
+}
+
+function sparrowtestnet {
+  if [[ $# -ne 1 || -z "$1" || "$1" != "TEST-NET-TEST-NET-TEST-NET" ]] ; then
+    printf "Usage: %s %s\n" "${FUNCNAME[0]}" "TEST-NET-TEST-NET-TEST-NET"
+    printf "Start Sparrow on the Bitcoin TEST-NET by providing the excruciatingly verbose reminder argument: \"TEST-NET-TEST-NET-TEST-NET\"\n"
+    return 1
+  else
+    open /Applications/Sparrow.app --args --network testnet "$@"
+  fi
+}
+
+export SPARROW_NETWORK=testnet
