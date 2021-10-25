@@ -88,8 +88,11 @@ alias gitddiff="git diff --name-status"
 alias gitlog="git log --graph --oneline --decorate"
 alias gf="git difftool --cached"
 alias gitlogone='git log --follow --full-history --reverse --date=short --format="%ad %s %b"'
-alias gitdid="git shortlog --summary --numbered --all --email"
 alias gd="git add ."
+
+function gitdid {
+  git shortlog --summary --numbered --all --email
+}
 
 function gitgreplog {
   if [[ $# -eq 0 || -z "$1" ]] ; then
