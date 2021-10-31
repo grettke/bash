@@ -131,6 +131,31 @@ function gitauthorhistory {
   git log --author="$name"
 }
 
+function gitfilehistoryfull {
+  if [[ $# -gt 0 && -n "$1" && -e "$1" ]] ; then
+    local file="$1"
+    git log --patch --follow --full-history "$file"
+  else
+    printf "Usage: %s FILE.\n" "${FUNCNAME[0]}"
+    printf "Show commit log for FILE with *Full History*.\n"
+    return 1
+  fi
+}
+
+function gitfilehistorysimple {
+  if [[ $# -gt 0 && -n "$1" && -e "$1" ]] ; then
+    local file="$1"
+    git log --patch --follow -- "$file"
+  else
+    printf "Usage: %s FILE.\n" "${FUNCNAME[0]}"
+    printf "Show fcommit log for FILE with *Simplified History*.\n"
+    return 1
+  fi
+}
+
+alias gfh=gitfilehistorysimple
+alias gfhf=gitfilehistoryfull
+
 if [ -f "$HOME/src/bash-git-prompt/gitprompt.sh" ]; then
   export GIT_PROMPT_ONLY_IN_REPO=1
   source "/Users/grant/src/bash-git-prompt/gitprompt.sh"
