@@ -89,6 +89,8 @@ alias gitlog="git log --graph --oneline --decorate"
 alias gf="git difftool --cached"
 alias gitlogone='git log --follow --full-history --reverse --date=short --format="%ad %s %b"'
 alias gd="git add ."
+alias gsubstat="git submodule status"
+alias gsubstatr="git submodule status --recursive"
 
 function gitdid {
   git shortlog --summary --numbered --all --email
