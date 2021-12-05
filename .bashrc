@@ -255,6 +255,24 @@ function btctestnet {
 
 export PATH="/usr/local/bin:/Users/grant/util:$PATH"
 
+function pdf2epslevel3 {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <SOURCE PDF> <DEST EPS>\n" "${FUNCNAME[0]}"
+    printf "Use pdf2ps to convert SOURCE PDF file to *Level 3* DEST EPS file.\n"
+    return 1
+  elif [[ ! -f "$1" ]] ; then
+    printf "Usage: %s <SOURCE PDF> <DEST EPS>\n" "${FUNCNAME[0]}"
+    printf "I can't find the SOURCE PDF file '%s' so I'm bailing.\n" "$1"
+    return 1
+  elif [[ -f "$2" ]] ; then
+    printf "Usage: %s <SOURCE PDF> <DEST EPS>\n" "${FUNCNAME[0]}"
+    printf "The DEST PDF file '%s' already exists so I'm bailing.\n" "$2"
+    printf "Delete '%s' first then try this command again.\n" "$2"
+    return 1
+  fi
+  pdf2ps -dLanguageLevel=3 "$1" "$2"
+}
+
 function sparrowmainnet {
   if [[ $# -ne 1 || -z "$1" || "$1" != "MAIN-NET-MAIN-NET-MAIN-NET" ]] ; then
     printf "Usage: %s %s\n" "${FUNCNAME[0]}" "MAIN-NET-MAIN-NET-MAIN-NET"

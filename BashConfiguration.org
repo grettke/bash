@@ -1017,6 +1017,27 @@ export PATH="$MACTEX_BIN:$PATH"
 #+BEGIN_SRC sh
 alias texshop="open /Applications/TeX/TeXShop.app/"
 #+END_SRC
+#+NAME: org_grant_2021-12-03T19-35-42-06-00_Sadie_002602D8-1B3B-4C03-9A8A-916EA55E9177
+#+begin_src bash
+function pdf2epslevel3 {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <SOURCE PDF> <DEST EPS>\n" "${FUNCNAME[0]}"
+    printf "Use pdf2ps to convert SOURCE PDF file to *Level 3* DEST EPS file.\n"
+    return 1
+  elif [[ ! -f "$1" ]] ; then
+    printf "Usage: %s <SOURCE PDF> <DEST EPS>\n" "${FUNCNAME[0]}"
+    printf "I can't find the SOURCE PDF file '%s' so I'm bailing.\n" "$1"
+    return 1
+  elif [[ -f "$2" ]] ; then
+    printf "Usage: %s <SOURCE PDF> <DEST EPS>\n" "${FUNCNAME[0]}"
+    printf "The DEST PDF file '%s' already exists so I'm bailing.\n" "$2"
+    printf "Delete '%s' first then try this command again.\n" "$2"
+    return 1
+  fi
+  pdf2ps -dLanguageLevel=3 "$1" "$2"
+}
+#+end_src
+
 *** Git
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9
