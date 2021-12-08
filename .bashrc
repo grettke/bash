@@ -272,7 +272,12 @@ function pdf2epslevel3 {
 }
 
 function gcm {
-  git commit -a -m "$@"
+  if [[ $# -eq 0 ]] ; then
+    printf "Git commit: Arguments as one single-quoted string.\n"
+    printf "Usage: %s arg 1 arg 2 arg ...\n" "${FUNCNAME[0]}"
+  fi
+
+  git commit -a -m "'$*'"
 }
 
 function sparrowmainnet {

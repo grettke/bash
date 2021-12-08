@@ -1076,7 +1076,12 @@ Alias \rarr Function.
 #+NAME: org_grant_2021-12-03T19-35-42-06-00_Sadie_3A72E88F-682E-48D9-A90B-14CD1A57F656
 #+begin_src bash
 function gcm {
-  git commit -a -m "$@"
+  if [[ $# -eq 0 ]] ; then
+    printf "Git commit: Arguments as one single-quoted string.\n"
+    printf "Usage: %s arg 1 arg 2 arg ...\n" "${FUNCNAME[0]}"
+  fi
+
+  git commit -a -m "'$*'"
 }
 #+end_src
 
