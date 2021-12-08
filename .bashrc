@@ -81,8 +81,6 @@ alias gpdrsf="git fetch && git diff --stat origin/master"
 alias gpdrsd="git fetch && git diff --dirstat origin/master"
 alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
 alias gitshowtags='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
-alias magit="emacs --no-window-system --no-init-file --load \
-  ~/src/help/.org-mode-contribute.emacs.el --eval '(progn (magit-status) (delete-other-windows))'"
 alias gitshowreleases="git tag -l"
 alias gitddiff="git diff --name-status"
 alias gitlog="git log --graph --oneline --decorate"
