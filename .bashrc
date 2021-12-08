@@ -279,7 +279,7 @@ function gcm {
     printf "Usage: %s <word1> [word2 word3 ...]\n" "${FUNCNAME[0]}"
     return 1
   fi
-  git commit -a -m "'$*'"
+  git commit -a -m "$@"
 }
 
 function sparrowmainnet {
