@@ -862,8 +862,8 @@ Use Emacs for both the graphical and command-line operating system interface.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_42A51E66-5A0C-4FCE-9788-CD8BA85A6DBC
 #+BEGIN_SRC sh
-export VISUAL="emacs"
-export EDITOR="emacs -nw"
+export VISUAL="emacs --no-desktop -quick"
+export EDITOR="emacs --no-desktop -quick --no-window-system"
 #+END_SRC
 
 ** Configuration for the "Batteries Included" Stuff from Apple
@@ -1050,7 +1050,11 @@ Git is a fast, scalable, distributed revision control system with an unusually r
 #+BEGIN_SRC sh
 alias g="git"
 alias ga="git add ."
-alias gd="git difftool --cached"
+alias gcm="git commit -a"
+alias gdf="git diff"
+alias gdfc="git diff --cached"
+alias gdfg="git difftool"
+alias gdfgc="git difftool --cached"
 alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
 alias gitddiff="git diff --name-status"
 alias gitdiscard="git checkout -- ."
@@ -1070,22 +1074,6 @@ alias gs="git status"
 alias gsubstat="git submodule status"
 alias gsubstatr="git submodule status --recursive"
 #+END_SRC
-
-Alias \rarr Function.
-
-#+NAME: org_grant_2021-12-03T19-35-42-06-00_Sadie_3A72E88F-682E-48D9-A90B-14CD1A57F656
-#+begin_src bash
-function gcm {
-  if [[ $# -eq 0 ]] ; then
-    printf "Git commit helper:\n"
-    printf "Does a: 'commit -a -m'.\n"
-    printf "Minimum one message word required.\n"
-    printf "Usage: %s <word1> [word2 word3 ...]\n" "${FUNCNAME[0]}"
-    return 1
-  fi
-  git commit -a -m "'$*'"
-}
-#+end_src
 
 Git usability.
 

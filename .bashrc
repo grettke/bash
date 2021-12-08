@@ -12,8 +12,8 @@ export PS3="Please make a selection: "
 
 export PS4='\nDEBUG level:$SHLVL subshell-level: $BASH_SUBSHELL \nsource-file:${BASH_SOURCE} line#:${LINENO} function:${FUNCNAME[0]:+${FUNCNAME[0]}(): }\nstatement: '
 
-export VISUAL="emacs"
-export EDITOR="emacs -nw"
+export VISUAL="emacs --no-desktop -quick"
+export EDITOR="emacs --no-desktop -quick --no-window-system"
 
 alias shasum256printbin="shasum --algorithm 256 --binary"
 alias shasum256printtxt="shasum --algorithm 256 --text"
@@ -70,7 +70,11 @@ alias texshop="open /Applications/TeX/TeXShop.app/"
 
 alias g="git"
 alias ga="git add ."
-alias gd="git difftool --cached"
+alias gcm="git commit -a"
+alias gdf="git diff"
+alias gdfc="git diff --cached"
+alias gdfg="git difftool"
+alias gdfgc="git difftool --cached"
 alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
 alias gitddiff="git diff --name-status"
 alias gitdiscard="git checkout -- ."
@@ -269,17 +273,6 @@ function pdf2epslevel3 {
     return 1
   fi
   pdf2ps -dLanguageLevel=3 "$1" "$2"
-}
-
-function gcm {
-  if [[ $# -eq 0 ]] ; then
-    printf "Git commit helper:\n"
-    printf "Does a: 'commit -a -m'.\n"
-    printf "Minimum one message word required.\n"
-    printf "Usage: %s <word1> [word2 word3 ...]\n" "${FUNCNAME[0]}"
-    return 1
-  fi
-  git commit -a -m "$@"
 }
 
 function sparrowmainnet {
