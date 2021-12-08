@@ -69,24 +69,24 @@ export PATH="$MACTEX_BIN:$PATH"
 alias texshop="open /Applications/TeX/TeXShop.app/"
 
 alias g="git"
-alias gitunpull="git reset --keep HEAD@{1}"
-alias gituncommit="git reset --mixed HEAD^"
+alias ga="git add ."
+alias gd="git difftool --cached"
+alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
+alias gitddiff="git diff --name-status"
 alias gitdiscard="git checkout -- ."
 alias gitforcepush="git push origin +master"
+alias gitlog="git log --graph --oneline --decorate"
+alias gitlogone='git log --follow --full-history --reverse --date=short --format="%ad %s %b"'
+alias gitshowreleases="git tag -l"
+alias gitshowtags='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
+alias gituncommit="git reset --mixed HEAD^"
+alias gitunpull="git reset --keep HEAD@{1}"
+alias gpdrd="git fetch && git difftool origin/master"
+alias gpdrsd="git fetch && git diff --dirstat origin/master"
+alias gpdrsf="git fetch && git diff --stat origin/master"
+alias gpl="git pull"
 alias gpom="git push origin master"
 alias gs="git status"
-alias gpl="git pull"
-alias gpdrd="git fetch && git difftool origin/master"
-alias gpdrsf="git fetch && git diff --stat origin/master"
-alias gpdrsd="git fetch && git diff --dirstat origin/master"
-alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
-alias gitshowtags='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
-alias gitshowreleases="git tag -l"
-alias gitddiff="git diff --name-status"
-alias gitlog="git log --graph --oneline --decorate"
-alias gf="git difftool --cached"
-alias gitlogone='git log --follow --full-history --reverse --date=short --format="%ad %s %b"'
-alias gd="git add ."
 alias gsubstat="git submodule status"
 alias gsubstatr="git submodule status --recursive"
 
@@ -269,6 +269,10 @@ function pdf2epslevel3 {
     return 1
   fi
   pdf2ps -dLanguageLevel=3 "$1" "$2"
+}
+
+function gcm {
+  git commit -a -m "$@"
 }
 
 function sparrowmainnet {

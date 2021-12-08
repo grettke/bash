@@ -1049,27 +1049,36 @@ Git is a fast, scalable, distributed revision control system with an unusually r
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_121CCF66-A7DD-479D-AFCE-658143CCDDC4
 #+BEGIN_SRC sh
 alias g="git"
-alias gitunpull="git reset --keep HEAD@{1}"
-alias gituncommit="git reset --mixed HEAD^"
+alias ga="git add ."
+alias gd="git difftool --cached"
+alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
+alias gitddiff="git diff --name-status"
 alias gitdiscard="git checkout -- ."
 alias gitforcepush="git push origin +master"
+alias gitlog="git log --graph --oneline --decorate"
+alias gitlogone='git log --follow --full-history --reverse --date=short --format="%ad %s %b"'
+alias gitshowreleases="git tag -l"
+alias gitshowtags='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
+alias gituncommit="git reset --mixed HEAD^"
+alias gitunpull="git reset --keep HEAD@{1}"
+alias gpdrd="git fetch && git difftool origin/master"
+alias gpdrsd="git fetch && git diff --dirstat origin/master"
+alias gpdrsf="git fetch && git diff --stat origin/master"
+alias gpl="git pull"
 alias gpom="git push origin master"
 alias gs="git status"
-alias gpl="git pull"
-alias gpdrd="git fetch && git difftool origin/master"
-alias gpdrsf="git fetch && git diff --stat origin/master"
-alias gpdrsd="git fetch && git diff --dirstat origin/master"
-alias ggss="~/git/github/recursive-git-status-bash/recursive-git-status.sh"
-alias gitshowtags='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
-alias gitshowreleases="git tag -l"
-alias gitddiff="git diff --name-status"
-alias gitlog="git log --graph --oneline --decorate"
-alias gf="git difftool --cached"
-alias gitlogone='git log --follow --full-history --reverse --date=short --format="%ad %s %b"'
-alias gd="git add ."
 alias gsubstat="git submodule status"
 alias gsubstatr="git submodule status --recursive"
 #+END_SRC
+
+Alias \rarr Function.
+
+#+NAME: org_grant_2021-12-03T19-35-42-06-00_Sadie_3A72E88F-682E-48D9-A90B-14CD1A57F656
+#+begin_src bash
+function gcm {
+  git commit -a -m "$@"
+}
+#+end_src
 
 Git usability.
 
