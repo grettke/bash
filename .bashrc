@@ -273,10 +273,12 @@ function pdf2epslevel3 {
 
 function gcm {
   if [[ $# -eq 0 ]] ; then
-    printf "Git commit: Arguments as one single-quoted string.\n"
-    printf "Usage: %s arg 1 arg 2 arg ...\n" "${FUNCNAME[0]}"
+    printf "Git commit helper:\n"
+    printf "Does a: 'commit -a -m'.\n"
+    printf "Minimum one message word required.\n"
+    printf "Usage: %s <word1> [word2 word3 ...]\n" "${FUNCNAME[0]}"
+    return 1
   fi
-
   git commit -a -m "'$*'"
 }
 
