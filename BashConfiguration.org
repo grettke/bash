@@ -1065,6 +1065,7 @@ alias gitshowreleases="git tag -l"
 alias gitshowtags='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
 alias gituncommit="git reset --mixed HEAD^"
 alias gitunpull="git reset --keep HEAD@{1}"
+alias gitunstage="git reset"
 alias gl="git log"
 alias gp="git push"
 alias gpdrd="git fetch && git difftool origin/master"
