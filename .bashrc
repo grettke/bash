@@ -299,3 +299,7 @@ function sparrowtestnet {
 }
 
 export SPARROW_NETWORK=testnet
+
+# Setting PATH for Python 3.10
+# The original version is saved in .bash_login.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
