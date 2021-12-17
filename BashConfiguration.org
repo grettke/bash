@@ -1370,6 +1370,16 @@ Make sure that Python is linked as python from usrlocalbin.
 export PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
 #+end_src
 
+*** Inkscape
+:PROPERTIES:
+:ID:       org_grant_2021-12-17T13-51-48-06-00_Sadie:7CB5DB1E-E055-4533-9597-228BD3383B88
+:END:
+
+#+NAME: org_grant_2021-12-17T13-51-48-06-00_Sadie_FA8E62B9-0538-41E2-BFD5-E5F50A71F01B
+#+begin_src bash
+alias is="/Applications/Inkscape.app/Contents/MacOS/inkscape &"
+#+end_src
+
 ** These Things Must Occur at the Very END
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
