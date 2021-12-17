@@ -1361,6 +1361,8 @@ export SPARROW_NETWORK=testnet
 :ID:       org_grant_2021-12-13T00-07-24-06-00_Sadie:360919A5-320B-4D07-BD6B-504D48BC032E
 :END:
 
+Make sure that Python is linked as python from usrlocalbin.
+
 #+NAME: org_grant_2021-12-13T00-07-24-06-00_Sadie_7231FE3B-2A4C-47D0-870C-902B134EC862
 #+begin_src bash
 # Setting PATH for Python 3.10
