@@ -1365,7 +1365,7 @@ export SPARROW_NETWORK=testnet
 #+begin_src bash
 # Setting PATH for Python 3.10
 # The original version is saved in .bash_login.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
 #+end_src
 
 ** These Things Must Occur at the Very END
