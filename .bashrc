@@ -55,6 +55,10 @@ function randomword () {
   /Users/grant/util/randomline.perl --filename /Users/grant/src/english-words/words.txt
 }
 
+function randombip39word () {
+  ~/util/randomline.perl --filename ~/src/bitcoin-bip-39-ref-impl/src/mnemonic/wordlist/english.txt
+}
+
 alias togglegrayscale="osascript /Users/grant/util/sspadtogglegrayscale.scpt"
 
 alias invertcolors="osascript /Users/grant/util/sspadtogglecolors.scpt"
