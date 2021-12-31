@@ -941,11 +941,11 @@ Radom word.
 
 #+NAME: org_grant_2021-08-09T16-29-07-05-00_Sadie_260EFA32-D846-4B09-9FAA-721AA272F279
 #+begin_src sh
-function randomword () {
+function randomwordenglishh () {
   /Users/grant/util/randomline.perl --filename /Users/grant/src/english-words/words.txt
 }
 
-function randombip39word () {
+function randomwordbip39 () {
   ~/util/randomline.perl --filename ~/src/bitcoin-bip-39-ref-impl/src/mnemonic/wordlist/english.txt
 }
 #+end_src

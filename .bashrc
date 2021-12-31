@@ -50,11 +50,11 @@ function runxtimes {
   done
 }
 
-function randomword () {
+function randomwordenglishh () {
   /Users/grant/util/randomline.perl --filename /Users/grant/src/english-words/words.txt
 }
 
-function randombip39word () {
+function randomwordbip39 () {
   ~/util/randomline.perl --filename ~/src/bitcoin-bip-39-ref-impl/src/mnemonic/wordlist/english.txt
 }
 
