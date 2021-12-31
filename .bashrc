@@ -51,8 +51,8 @@ function runxtimes {
   done
 }
 
-function rndwrd () {
-  /Users/grant/util/rndwrd
+function randomword () {
+  /Users/grant/util/randomline.perl --filename /Users/grant/src/english-words/words.txt
 }
 
 alias togglegrayscale="osascript /Users/grant/util/sspadtogglegrayscale.scpt"
