@@ -927,7 +927,6 @@ function runxtimes {
   shift
   local argarray=("$@")
   local argstring="${argarray[*]}"
-  printf "Attempting to run %s repetitions of the command \"%s\" with arguments \"%s\":\n" "$repetitions" "$command" "$argstring"
   for (( repetition=0; repetition<"$repetitions"; repetition++ )); do
     if [ -z "$argstring" ]; then
       "$command"
