@@ -50,6 +50,42 @@ function runxtimes {
   done
 }
 
+function randomints () {
+  if [[ $# -ne 3 || -z "$1" || -z "$2" || -z "$3" ]] ; then
+    printf "Usage: %s <COUNT> <MIN> <MAX>\n" "${FUNCNAME[0]}"
+    printf "Create COUNT integers x where: \n"
+    printf "  COUNT > 0\n"
+    printf "  MIN <= x <= MAX\n"
+    printf "  MIN < MAX.\n"
+    printf "  COUNT, MIN, and MAX are integers.\n"
+    printf "Looks like there aren't enough arguments.\n"
+    return 1
+  fi
+  count="$1"
+  min="$2";
+  max="$3"
+  if (( $count < 1 )) ; then
+    printf "Usage: %s <COUNT> <MIN> <MAX>\n" "${FUNCNAME[0]}"
+    printf "Create COUNT integers x where: \n"
+    printf "  COUNT > 0\n"
+    printf "  MIN <= x <= MAX\n"
+    printf "  MIN < MAX.\n"
+    printf "  COUNT, MIN, and MAX are integers.\n"
+    printf "Looks like COUNT is less than 1.\n"
+    return 1
+  elif (( $min >= $max )) ; then
+    printf "Usage: %s <COUNT> <MIN> <MAX>\n" "${FUNCNAME[0]}"
+    printf "Create COUNT integers x where: \n"
+    printf "  COUNT > 0\n"
+    printf "  MIN <= x <= MAX\n"
+    printf "  MIN < MAX.\n"
+    printf "  COUNT, MIN, and MAX are integers.\n"
+    printf "Looks like MIN >= MAX.\n"
+    return 1
+  fi
+  jot -r "$count" "$min" "$max"
+}
+
 function randomwordenglish () {
   /Users/grant/util/randomline.perl --filename /Users/grant/src/english-words/words.txt
 }
