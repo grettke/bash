@@ -955,7 +955,6 @@ function randomints () {
     printf "Create COUNT integers x where: \n"
     printf "  COUNT > 0\n"
     printf "  MIN <= x <= MAX\n"
-    printf "  MIN < MAX.\n"
     printf "  COUNT, MIN, and MAX are integers.\n"
     printf "Looks like there aren't enough arguments.\n"
     return 1
@@ -968,21 +967,20 @@ function randomints () {
     printf "Create COUNT integers x where: \n"
     printf "  COUNT > 0\n"
     printf "  MIN <= x <= MAX\n"
-    printf "  MIN < MAX.\n"
     printf "  COUNT, MIN, and MAX are integers.\n"
     printf "Looks like COUNT is less than 1.\n"
     return 1
-  elif (( $min >= $max )) ; then
+  elif (( $max < $min )) ; then
     printf "Usage: %s <COUNT> <MIN> <MAX>\n" "${FUNCNAME[0]}"
     printf "Create COUNT integers x where: \n"
     printf "  COUNT > 0\n"
     printf "  MIN <= x <= MAX\n"
-    printf "  MIN < MAX.\n"
     printf "  COUNT, MIN, and MAX are integers.\n"
-    printf "Looks like MIN >= MAX.\n"
+    printf "Looks like MAX < MIN.\n"
     return 1
   fi
-  jot -r "$count" "$min" "$max"
+  result=`jot -r "$count" "$min" "$max"`
+  printf "%s\n" "$result"
 }
 
 function randomwordenglish () {
