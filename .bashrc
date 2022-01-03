@@ -50,7 +50,7 @@ function runxtimes {
   done
 }
 
-function randomwordenglishh () {
+function randomwordenglish () {
   /Users/grant/util/randomline.perl --filename /Users/grant/src/english-words/words.txt
 }
 

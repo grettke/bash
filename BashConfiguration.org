@@ -937,11 +937,18 @@ function runxtimes {
 }
 #+END_SRC
 
-Radom word.
+**** Random Related
+:PROPERTIES:
+:ID:       org_grant_2022-01-02T02-46-41-06-00_Sadie:2289D004-9940-4CFD-879F-2517C307C669
+:END:
+
+- Includes:
+  - English Word
+  - BIP-39 seed from the reference list
 
 #+NAME: org_grant_2021-08-09T16-29-07-05-00_Sadie_260EFA32-D846-4B09-9FAA-721AA272F279
 #+begin_src sh
-function randomwordenglishh () {
+function randomwordenglish () {
   /Users/grant/util/randomline.perl --filename /Users/grant/src/english-words/words.txt
 }
 
