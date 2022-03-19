@@ -1027,6 +1027,17 @@ Some programs are installed from an external source example ~ccrypt~.
 
 Other instances of the same program being provided both internally by Apple and externally by installation. For example, Bash, Git, and Emacs.
 
+*** brew
+:PROPERTIES:
+:ID:       org_grant_2022-03-18T20-41-47-05-00_Techs-MBP:C386B35A-4692-404C-AD9F-34DB7697176D
+:END:
+
+#+NAME: org_grant_2022-03-18T20-41-47-05-00_Techs-MBP_C900E31D-97E5-49D2-AA48-27D28587E8B8
+#+begin_src sh
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_INSTALL_BADGE="😺"
+#+end_src
+
 *** ccrypt
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:B718FE1D-4D3D-47E3-B062-F1FDA900A82D

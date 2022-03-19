@@ -98,6 +98,9 @@ alias invertcolors="osascript /Users/grant/util/sspadtogglecolors.scpt"
 
 alias sav="osascript /Users/grant/util/Start-Screensaver.scpt"
 
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_INSTALL_BADGE="😺"
+
 export TODOCCRYPT="/usr/local/Cellar/ccrypt/1.11/"
 
 export MACTEX_BIN="/usr/local/texlive/2021/bin/universal-darwin"
