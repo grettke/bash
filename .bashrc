@@ -103,7 +103,8 @@ export HOMEBREW_INSTALL_BADGE="😺"
 
 export TODOCCRYPT="/usr/local/Cellar/ccrypt/1.11/"
 
-export MACTEX_BIN="/usr/local/texlive/2021/bin/universal-darwin"
+export MACTEX_HOME="/usr/local/texlive/2021"
+export MACTEX_BIN="$MACTEX_HOME/bin/universal-darwin"
 export PATH="$MACTEX_BIN:$PATH"
 
 alias texshop="open /Applications/TeX/TeXShop.app/"

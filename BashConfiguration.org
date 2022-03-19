@@ -1065,7 +1065,8 @@ MacTeX is TeX for the Mac.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_1FC17A94-BCA1-4DE2-AF9A-DE7597E73084
 #+BEGIN_SRC sh
-export MACTEX_BIN="/usr/local/texlive/2021/bin/universal-darwin"
+export MACTEX_HOME="/usr/local/texlive/2021"
+export MACTEX_BIN="$MACTEX_HOME/bin/universal-darwin"
 export PATH="$MACTEX_BIN:$PATH"
 #+END_SRC
 
