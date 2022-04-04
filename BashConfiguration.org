@@ -937,6 +937,37 @@ function runxtimes {
 }
 #+END_SRC
 
+***** date
+:PROPERTIES:
+:ID:       org_grant_2022-04-04T12-55-38-05-00_donutron:8A7A2C41-67CC-404A-BC3D-DE5C037E370A
+:END:
+
+Get a date from the built in macOS tools.
+
+- Goal build an ISO-8601 formatted string
+  - Not going to milliseconds
+  - By default make filename safe, override for colons
+
+- From the ~strftime*~ man page
+  - %Y    is replaced by the year with century as a decimal number
+  - %m    is replaced by the month as a decimal number (01-12)
+  - %d    is replaced by the day of the month as a decimal number (01-31)
+  - %H    is replaced by the hour (24-hour clock) as a decimal number
+  - %M    is replaced by the minute as a decimal number (00-59).
+  - %S    is replaced by the second as a decimal number (00-60)
+  - %Z    is replaced by the time zone name
+
+#+NAME: org_grant_2022-04-04T12-55-38-05-00_donutron_2A9DA401-515D-4B0A-A281-0D9FDB968D21
+#+begin_src sh
+function isodt {
+  local sep="-"
+  if [[ -n "$1" ]] ; then
+    sep=":"
+  fi
+  date "+%Y-%m-%dT%H$sep%M$sep%S%Z"
+}
+#+end_src
+
 **** Random Related
 :PROPERTIES:
 :ID:       org_grant_2022-01-02T02-46-41-06-00_Sadie:2289D004-9940-4CFD-879F-2517C307C669

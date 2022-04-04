@@ -50,6 +50,14 @@ function runxtimes {
   done
 }
 
+function isodt {
+  local sep="-"
+  if [[ -n "$1" ]] ; then
+    sep=":"
+  fi
+  date "+%Y-%m-%dT%H$sep%M$sep%S%Z"
+}
+
 function randomints () {
   if [[ $# -ne 3 || -z "$1" || -z "$2" || -z "$3" ]] ; then
     printf "Usage: %s <COUNT> <MIN> <MAX>\n" "${FUNCNAME[0]}"
