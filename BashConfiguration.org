@@ -923,14 +923,18 @@ function cpdirdt {
   fi
   local srcdir="$1"
   local destroot="$2"
-  if [[ ! -d "$srcdir" || ! -d "$destroot" ]] ; then
-    printf "Please verify that both '%s' and '%s'exist.\n" "$srcdir" "$destroot"
+  if [[ ! -d "$srcdir" ]] ; then
+    printf "Please verify that '%s' exists. \n" "$srcdir"
+    return 1
+  fi
+  if [[ ! -d "$destroot" ]] ; then
+    printf "Please verify that '%s' exists. \n" "$destroot"
     return 1
   fi
   local destname="$3"
   local destdir="$destroot/$destname-$(isodt)"
   mkdir "$destdir"
-  if [[ ! -d "$destdir" ]] ; then
+  if [[ ! -d "$destroot" ]] ; then
     printf "Destination directory '%s' does not exist. Exiting.\n" "$destdir"
     return 1
   fi
