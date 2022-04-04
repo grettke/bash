@@ -29,25 +29,56 @@ alias md5sum="md5 -r"
 alias e=exit
 alias j="jobs -l"
 
-function runxtimes {
-  if [[ -z "$1" || -z "$2" ]] ; then
-    printf "Usage: %s <REPETITIONS> <COMMAND> <ARGUMENTS...>\n" "${FUNCNAME[0]}"
-    printf "Repeatedly run COMMAND with ARGUMENTS, REPETITONS times.\n"
+function cpdirdt {
+  if [[ -z "$1" || -z "$2" || -z "$3" ]] ; then
+    printf "Usage: %s <SRCDIR> <DESTROOT> <DESTNAME>\n" "${FUNCNAME[0]}"
+    printf "Recursively copy SRCDIR to a new folder in DESTROOT. The new folder is DESTNAME with an ISO-8601 timstamp appended.\n"
     return 1
   fi
-  local repetitions="$1"
-  local command="$2"
-  shift
-  shift
-  local argarray=("$@")
-  local argstring="${argarray[*]}"
-  for (( repetition=0; repetition<"$repetitions"; repetition++ )); do
-    if [ -z "$argstring" ]; then
-      "$command"
-    else
-      "$command" "$argstring"
-    fi
-  done
+  local srcdir="$1"
+  local destroot="$2"
+  if [[ ! -d "$srcdir" || ! -d "$destroot" ]] ; then
+    printf "Please verify that both '%s' and '%s'exist.\n" "$srcdir" "$destroot"
+    return 1
+  fi
+  local destname="$3"
+  local destdir="$destroot/$destname-$(isodt)"
+  mkdir "$destdir"
+  if [[ ! -d "$destdir" ]] ; then
+    printf "Destination directory '%s' does not exist. Exiting.\n" "$destdir"
+    return 1
+  fi
+  printf "Created destination: '%s'\n" "$destdir"
+  printf "Copying '%s' to '%s'.\n" "$srcdir" "$destdir"
+  rsync -ah "$srcdir" "$destdir"
+  if [ "$?" -ne 0 ] ; then
+    printf "Rsync failed. Please investigate\n"
+    return 1
+  else
+    printf "Rsync succeeded. Please investigate\n"
+  fi
+}
+
+function tmp {
+  SRCDIR="/Users/grant/.gnupg"
+  if [[ ! -d "$SRCDIR" ]] ; then
+    printf "Source directory '%s' does not exist. Exiting.\n" "$SRCDIR"
+    exit 1
+  fi
+  DESTROOT="/Volumes/GCRCSA/dirs"
+  DESTDIR="$DESTROOT/DOT-GNUPG-$(isodt)"
+  mkdir "$DESTDIR"
+  if [[ ! -d "$DESTDIR" ]] ; then
+    printf "Destination directory '%s' does not exist. Exiting.\n" "$DESTDIR"
+    exit 1
+  fi
+  printf "Created destination: '%s'\n" "$DESTDIR"
+  rsync -ah "$SRCDIR" "$DESTDIR"
+  if [ "$?" -ne 0 ] ; then
+    printf "Rsync failed. Please investigate\n"
+  else
+    printf "Rsync succeeded. Please investigate\n"
+  fi
 }
 
 function isodt {
