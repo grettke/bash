@@ -880,6 +880,13 @@ Aliases and helper functions are likely to be here.
 
 Application configuration will *not* be here.
 
+Disks:
+
+#+NAME: org_grant_2022-04-04T12-55-38-05-00_donutron_8559BDA9-45C6-4F05-AA23-AE569844959A
+#+begin_src sh
+alias dual="diskutil apfs list"
+#+end_src
+
 Checksumming.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_A1CD5BCA-9A8B-410C-BE5D-54C51BE32338

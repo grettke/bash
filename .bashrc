@@ -15,6 +15,8 @@ export PS4='\nDEBUG level:$SHLVL subshell-level: $BASH_SUBSHELL \nsource-file:${
 export VISUAL="emacs --no-desktop -quick"
 export EDITOR="emacs --no-desktop -quick --no-window-system"
 
+alias dual="diskutil apfs list"
+
 alias shasum256printbin="shasum --algorithm 256 --binary"
 alias shasum256printtxt="shasum --algorithm 256 --text"
 alias shasum256check="shasum --algorithm 256 --check"
