@@ -143,8 +143,6 @@ alias invertcolors="osascript /Users/grant/util/sspadtogglecolors.scpt"
 
 alias sav="osascript /Users/grant/util/Start-Screensaver.scpt"
 
-alias ytdl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --embed-subs --embed-thumbnail"
-
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_INSTALL_BADGE="😺"
 
@@ -344,6 +342,20 @@ function btctestnet {
   else
     open /Applications/Bitcoin-Qt.app --args -testnet "$@"
   fi
+}
+
+function ytdl {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <URL>\n" "${FUNCNAME[0]}"
+    printf "Download YouTube URL video with thumbnail and subtitles.\n"
+    return 1
+  fi
+
+  youtube-dl \
+    -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' \
+    --embed-thumbnail \
+    --embed-subs \
+    "$1"
 }
 
 export PATH="/usr/local/bin:/Users/grant/util:$PATH"

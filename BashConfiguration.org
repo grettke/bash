@@ -1100,13 +1100,6 @@ Start screensaver.
 alias sav="osascript /Users/grant/util/Start-Screensaver.scpt"
 #+end_src
 
-YouTube
-
-#+NAME: org_grant_2022-04-06T20-47-07-05-00_donutron_959D0B79-0B0B-4E28-AFF7-D8C2CF04E05C
-#+begin_src sh
-alias ytdl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --embed-subs --embed-thumbnail"
-#+end_src
-
 ** Configuration for Externally Provided Programs
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:4A2D731B-B043-4662-9E58-032418959E39
@@ -1525,6 +1518,50 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
 #+begin_src bash
 alias is="/Applications/Inkscape.app/Contents/MacOS/inkscape &"
 #+end_src
+
+*** youtube-dl
+:PROPERTIES:
+:ID:       org_grant_2022-04-06T20-47-07-05-00_donutron:53866FA7-3C29-4D9D-83A1-CFBD159A9E4C
+:END:
+
+Options Notes:
+-f, --format FORMAT                  Video format code, see the "FORMAT
+                                     SELECTION" for all the info
+- -F, --list-formats                   List all available formats of requested
+- --audio-quality QUALITY              Specify ffmpeg/avconv audio quality,
+                                     insert a value between 0 (better) and 9
+                                     (worse) for VBR or a specific bitrate
+                                     like 128K (default 5)
+- --recode-video FORMAT                Encode the video to another format if
+                                     necessary (currently supported:
+                                     mp4|flv|ogg|webm|mkv|avi)
+- --embed-subs                          Embed subtitles in the video (only for
+- --embed-thumbnail
+- -o, --output TEMPLATE                Output filename template, see the
+                                     "OUTPUT TEMPLATE" for all the info
+
+Config:
+- user wide configuration file at ~/.config/youtube-dl/config
+- --config-location PATH
+
+#+NAME: org_grant_2022-04-06T20-47-07-05-00_donutron_D73367A6-1ABA-4333-A3AD-C03D8DCB3BE4
+#+begin_src sh
+function ytdl {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <URL>\n" "${FUNCNAME[0]}"
+    printf "Download YouTube URL video with thumbnail and subtitles.\n"
+    return 1
+  fi
+
+  youtube-dl \
+    -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' \
+      --embed-thumbnail \
+      --embed-subs \
+      "$1"
+}
+#+end_src
+
+
 
 ** These Things Must Occur at the Very END
 :PROPERTIES:
