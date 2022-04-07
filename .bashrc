@@ -143,6 +143,8 @@ alias invertcolors="osascript /Users/grant/util/sspadtogglecolors.scpt"
 
 alias sav="osascript /Users/grant/util/Start-Screensaver.scpt"
 
+alias ytdl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --embed-subs --embed-thumbnail"
+
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_INSTALL_BADGE="😺"
 

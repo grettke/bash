@@ -1100,6 +1100,13 @@ Start screensaver.
 alias sav="osascript /Users/grant/util/Start-Screensaver.scpt"
 #+end_src
 
+YouTube
+
+#+NAME: org_grant_2022-04-06T20-47-07-05-00_donutron_959D0B79-0B0B-4E28-AFF7-D8C2CF04E05C
+#+begin_src sh
+alias ytdl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --embed-subs --embed-thumbnail"
+#+end_src
+
 ** Configuration for Externally Provided Programs
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:4A2D731B-B043-4662-9E58-032418959E39
