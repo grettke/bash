@@ -25,11 +25,14 @@ alias mkdir="mkdir -pv"
 alias mount="mount | column -t"
 alias df="df -h"
 alias du="du -ach"
-alias ls="LC_COLLATE=en_GB.UTF-8 ls -aCFGhklpqT"
 alias md5sum="md5 -r"
 
 alias e=exit
 alias j="jobs -l"
+
+function f {
+  LC_COLLATE=en_GB.UTF-8 ls -aCFGhklpqT
+}
 
 function cpdirdt {
   if [[ -z "$1" || -z "$2" || -z "$3" ]] ; then

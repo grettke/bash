@@ -906,7 +906,6 @@ alias mkdir="mkdir -pv"
 alias mount="mount | column -t"
 alias df="df -h"
 alias du="du -ach"
-alias ls="LC_COLLATE=en_GB.UTF-8 ls -aCFGhklpqT"
 alias md5sum="md5 -r"
 #+END_SRC
 
@@ -917,6 +916,15 @@ Alias shortcuts to commands that I like to use but can't remember or are too lon
 alias e=exit
 alias j="jobs -l"
 #+END_SRC
+
+ls
+
+#+NAME: org_grant_2022-04-08T12-31-05-05-00_donutron_2BC90DB4-5386-4BEA-AFB8-C8D90E6C9BDE
+#+begin_src sh
+function f {
+  LC_COLLATE=en_GB.UTF-8 ls -aCFGhklpqT
+}
+#+end_src
 
 Run a command multiple times.
 
