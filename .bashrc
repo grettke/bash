@@ -185,6 +185,7 @@ alias gpom="git push origin master"
 alias gs="git status"
 alias gsubstat="git submodule status"
 alias gsubstatr="git submodule status --recursive"
+alias grv="git remote -v"
 
 function gitdid {
   git shortlog --summary --numbered --all --email
