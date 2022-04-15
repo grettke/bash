@@ -1504,20 +1504,6 @@ Fallback to TESTNET:
 export SPARROW_NETWORK=testnet
 #+end_src
 
-*** Python
-:PROPERTIES:
-:ID:       org_grant_2021-12-13T00-07-24-06-00_Sadie:360919A5-320B-4D07-BD6B-504D48BC032E
-:END:
-
-Make sure that Python is linked as python from usrlocalbin.
-
-#+NAME: org_grant_2021-12-13T00-07-24-06-00_Sadie_7231FE3B-2A4C-47D0-870C-902B134EC862
-#+begin_src bash
-# Setting PATH for Python 3.10
-# The original version is saved in .bash_login.pysave
-export PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
-#+end_src
-
 *** Inkscape
 :PROPERTIES:
 :ID:       org_grant_2021-12-17T13-51-48-06-00_Sadie:7CB5DB1E-E055-4533-9597-228BD3383B88
