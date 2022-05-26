@@ -348,6 +348,8 @@ function btctestnet {
   fi
 }
 
+export EXTPATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:$EXTPATH"
+
 function ytdl {
   if [[ $# -ne 1 || -z "$1" ]] ; then
     printf "Usage: %s <URL>\n" "${FUNCNAME[0]}"
