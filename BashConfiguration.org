@@ -1556,8 +1556,6 @@ function ytdl {
 }
 #+end_src
 
-
-
 ** These Things Must Occur at the Very END
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
