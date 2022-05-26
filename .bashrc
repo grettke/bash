@@ -146,6 +146,8 @@ alias invertcolors="osascript /Users/grant/util/sspadtogglecolors.scpt"
 
 alias sav="osascript /Users/grant/util/Start-Screensaver.scpt"
 
+export EXTPATH=""
+
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_INSTALL_BADGE="😺"
 
@@ -153,7 +155,7 @@ export TODOCCRYPT="/usr/local/Cellar/ccrypt/1.11/"
 
 export MACTEX_HOME="/usr/local/texlive/2021"
 export MACTEX_BIN="$MACTEX_HOME/bin/universal-darwin"
-export PATH="$MACTEX_BIN:$PATH"
+export EXTPATH="$MACTEX_BIN:$EXTPATH"
 
 alias texshop="open /Applications/TeX/TeXShop.app/"
 
@@ -268,9 +270,7 @@ fi
 
 source /Users/grant/src/myamacs/amacs
 
-export PATH="$PATH:/usr/local/go/bin"
-
-export PATH="$PATH:~/go/bin"
+export EXTPATH="/usr/local/go/bin:~/go/bin:$EXTPATH"
 
 function aac2mp3 {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
@@ -362,7 +362,7 @@ function ytdl {
     "$1"
 }
 
-export PATH="/usr/local/bin:/Users/grant/util:$PATH"
+export PATH="$EXTPATH:/usr/local/bin:/Users/grant/util:$PATH"
 
 function pdf2epslevel3 {
   if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then

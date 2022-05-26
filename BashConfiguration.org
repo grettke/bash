@@ -1117,6 +1117,13 @@ Some programs are installed from an external source example ~ccrypt~.
 
 Other instances of the same program being provided both internally by Apple and externally by installation. For example, Bash, Git, and Emacs.
 
+Use ~EXTPATH~ to set their directories first.
+
+#+NAME: org_grant_2022-05-25T20-38-13-05-00_donutron_77F63BD2-3438-4AAD-AFA2-B4887748E4D4
+#+begin_src sh
+export EXTPATH=""
+#+end_src
+
 *** brew
 :PROPERTIES:
 :ID:       org_grant_2022-03-18T20-41-47-05-00_Techs-MBP:C386B35A-4692-404C-AD9F-34DB7697176D
@@ -1157,7 +1164,7 @@ MacTeX is TeX for the Mac.
 #+BEGIN_SRC sh
 export MACTEX_HOME="/usr/local/texlive/2021"
 export MACTEX_BIN="$MACTEX_HOME/bin/universal-darwin"
-export PATH="$MACTEX_BIN:$PATH"
+export EXTPATH="$MACTEX_BIN:$EXTPATH"
 #+END_SRC
 
 #+NAME: org_gcr_2020-07-27T14-15-12-05-00_gsmac_7180DE37-3BD7-4842-819C-87D93DE0B06D
@@ -1354,18 +1361,11 @@ source /Users/grant/src/myamacs/amacs
 Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
 #+end_quote
 
-Define the Global path.
+Define the Global and Personal path.
 
 #+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_241AF44A-A4A6-4F18-972B-217C5C0D2731
 #+begin_src sh
-export PATH="$PATH:/usr/local/go/bin"
-#+end_src
-
-Define the local path in my home directory.
-
-#+NAME: org_grant_2021-07-12T10-27-24-05-00_Sadie_D53423DD-60DF-4DCB-9BD1-A71B3AB7D4D0
-#+begin_src sh
-export PATH="$PATH:~/go/bin"
+export EXTPATH="/usr/local/go/bin:~/go/bin:$EXTPATH"
 #+end_src
 
 *** ffmpeg
@@ -1556,15 +1556,18 @@ function ytdl {
 }
 #+end_src
 
-** These Things Must Occur at the Very END
+** Path Assemply
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76
 :END:
 
-Paths that must appear before /everything/ else
-
+- Directories
+  - External
+  - Brew
+  - Personal
+  - System
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_BC48EB6B-F2BA-4C08-B431-07A3C5D3EF1F
 #+BEGIN_SRC sh
-export PATH="/usr/local/bin:/Users/grant/util:$PATH"
+export PATH="$EXTPATH:/usr/local/bin:/Users/grant/util:$PATH"
 #+END_SRC
 
