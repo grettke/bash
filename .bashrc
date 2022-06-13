@@ -445,8 +445,8 @@ function tiemu {
     -prom-env "auto-boot?=true" \
     -prom-env "boot-args=-v" \
     -no-reboot \
-    -drive     file="$2",format=raw \
-    -cdrom     "$3" \
+    -drive     file="$2",format=raw,media=disk \
+    -drive     file="$3",format=raw,media=cdrom \
     -boot      "$4" &
 }
 
