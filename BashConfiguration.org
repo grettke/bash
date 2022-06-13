@@ -1613,6 +1613,7 @@ function tiemu {
     -device    usb-mouse \
     -prom-env "auto-boot?=true" \
     -prom-env "boot-args=-v" \
+    -no-reboot \
     -drive     file="$2",format=raw \
     -cdrom     "$3" \
     -boot      "$4" &
