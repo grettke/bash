@@ -406,4 +406,47 @@ function ytdl {
     "$1"
 }
 
+function tiemu {
+  if [[ $# -ne 4 || -z "$1" || -z "$2" || -z "$3" || -z "$4" ]] ; then
+    printf "Usage: %s <NAME> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+    printf "Invoke TiBook QEMU—Guest Name: NAME. Hard Drive C File: OSDRIVE. CD/DVD File: CDROM. Boot Drive: BOOTDRIVE\n"
+    return 1
+  elif [[ -z "$1" ]] ; then
+    printf "Usage: %s <NAME> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+    printf "Please specify NAME. Then run me again.\n" "$1"
+    return 1
+  elif [[ ! -f "$2" ]] ; then
+    printf "Usage: %s <NAME> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+    printf "You specified \'%s\'. Please specify an existing OSDRIVE file. Then run me again.\n" "$2"
+    return 1
+  elif [[ ! -f "$3" ]] ; then
+    printf "Usage: %s <NAME> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+    printf "You specified \'%s\'. Please specify an existing CDROM file. Then run me again.\n" "$3"
+    return 1
+  elif [[ -z "$4" ]] ; then
+    printf "Usage: %s <NAME> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+    printf "Please specify BOOTDRIVE. Then run me again.\n" "$1"
+    return 1
+  fi
+  qemu-system-ppc \
+    -name      "$1" \
+    -k         en-us \
+    -m         1G \
+    -display   cocoa \
+    -g         1024x768x32 \
+    -device    VGA,edid=on  \
+    -prom-env "vga-ndrv?=true" \
+    -L         pc-bios \
+    -machine   mac99,via=pmu \
+    -cpu       7445 \
+    -smp       cpus=1,sockets=1,threads=1 \
+    -device    usb-kbd \
+    -device    usb-mouse \
+    -prom-env "auto-boot?=true" \
+    -prom-env "boot-args=-v" \
+    -drive     file="$2",format=raw \
+    -cdrom     "$3" \
+    -boot      "$4" &
+}
+
 export PATH="$EXTPATH:/usr/local/bin:/Users/grant/util:$PATH"
