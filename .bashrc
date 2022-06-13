@@ -436,6 +436,7 @@ function tiemu {
     -g         1024x768x32 \
     -device    VGA,edid=on  \
     -prom-env "vga-ndrv?=true" \
+    -rtc       base=localtime,clock=host \
     -L         pc-bios \
     -machine   mac99,via=pmu \
     -cpu       7445 \
