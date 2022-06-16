@@ -1573,6 +1573,11 @@ function ytdl {
 :ID:       org_grant_2022-06-12T22-54-38-05-00_donutron:76D4F630-B6AB-424B-ACDE-520CE7AC49FA
 :END:
 
+**** G4
+:PROPERTIES:
+:ID:       org_grant_2022-06-15T15-47-51-05-00_donutron:3D5B4835-A045-46F8-87CA-A8F24FE74D47
+:END:
+
 #+NAME: org_grant_2022-06-12T22-54-38-05-00_donutron_DFE48EF4-52EE-4263-B7EF-5E35EEB083C9
 #+begin_src sh
 function tiemu {
@@ -1612,7 +1617,7 @@ function tiemu {
     -rtc       base=localtime,clock=host \
     -L         pc-bios \
     -machine   mac99,via=pmu \
-    -cpu       7445 \
+    -cpu       G4 \
     -accel     tcg,thread=single \
     -smp       cpus=1,sockets=1,threads=1 \
     -device    usb-kbd \

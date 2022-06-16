@@ -443,7 +443,7 @@ function tiemu {
     -rtc       base=localtime,clock=host \
     -L         pc-bios \
     -machine   mac99,via=pmu \
-    -cpu       7445 \
+    -cpu       G4 \
     -accel     tcg,thread=single \
     -smp       cpus=1,sockets=1,threads=1 \
     -device    usb-kbd \
