@@ -1607,15 +1607,16 @@ function g4 {
     return 1
   fi
   qemu-system-ppc \
-    -monitor   stdio \
-    -d         unimp,guest_errors \
+    -prom-env  "boot-args=-v serial=3 debug=0x14e" \
+    -serial    stdio \
     -name      "$1" \
     -k         en-us \
     -m         "$2"M \
     -display   cocoa \
-    -g         1024x768x32 \
-    -device    VGA,edid=on  \
-    -prom-env "vga-ndrv?=true" \
+    -g         1440x900x32 \
+    -device    VGA,edid=on,vgamem_mb=64,xres=1440,yres=900 \
+    -full-screen \
+    -prom-env  "vga-ndrv?=true" \
     -rtc       base=localtime,clock=host \
     -L         pc-bios \
     -machine   mac99,via=pmu \
@@ -1624,14 +1625,14 @@ function g4 {
     -smp       cpus=1,sockets=1,threads=1 \
     -device    usb-kbd \
     -device    usb-mouse \
-    -prom-env "auto-boot?=true" \
-    -prom-env "boot-args=-v" \
+    -netdev    user,id=qemunet0 \
+    -device    e1000,netdev=qemunet0 \
+    -prom-env  "auto-boot?=true" \
     -no-reboot \
     -drive     file="$3",format=raw,media=disk \
     -drive     file="$4",format=raw,media=cdrom \
     -boot      "$5" &
 }
-
 #+end_src
 
 ** Path Assemply
