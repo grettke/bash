@@ -455,8 +455,8 @@ function g4 {
     -device    e1000,netdev=qemunet0 \
     -prom-env  "auto-boot?=true" \
     -no-reboot \
-    -drive     file="$3",format=raw,media=disk \
-    -drive     file="$4",format=raw,media=cdrom \
+    -hda       "$3" \
+    -cdrom     "$4" \
     -boot      "$5" &
 }
 
