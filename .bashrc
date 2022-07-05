@@ -406,7 +406,7 @@ function ytdl {
     "$1"
 }
 
-function tiemu {
+function g4 {
   if [[ $# -ne 5 || -z "$1" || -z "$2" || -z "$3" || -z "$4" || -z "$5" ]] ; then
     printf "Usage: %s <NAME> <RAM> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
     printf "Invoke TiBook QEMU—Guest Name: NAME. MB of Memory: RAM. Hard Drive C File: OSDRIVE. CD/DVD File: CDROM. Boot Drive: BOOTDRIVE\n"
