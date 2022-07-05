@@ -1607,6 +1607,8 @@ function tiemu {
     return 1
   fi
   qemu-system-ppc \
+    -monitor   stdio \
+    -d         unimp,guest_errors \
     -name      "$1" \
     -k         en-us \
     -m         "$2"M \
@@ -1618,7 +1620,7 @@ function tiemu {
     -L         pc-bios \
     -machine   mac99,via=pmu \
     -cpu       G4 \
-    -accel     tcg,thread=single \
+    -accel     tcg,tb-size=2048,thread=single \
     -smp       cpus=1,sockets=1,threads=1 \
     -device    usb-kbd \
     -device    usb-mouse \
