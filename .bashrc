@@ -407,29 +407,33 @@ function ytdl {
 }
 
 function g4 {
-  if [[ $# -ne 5 || -z "$1" || -z "$2" || -z "$3" || -z "$4" || -z "$5" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+  if [[ $# -ne 6 || -z "$1" || -z "$2" || -z "$3" || -z "$4" || -z "$5"  || -z "$6" ]] ; then
+    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
     printf "Invoke TiBook QEMU—Guest Name: NAME. MB of Memory: RAM. Hard Drive C File: OSDRIVE. CD/DVD File: CDROM. Boot Drive: BOOTDRIVE\n"
     return 1
   elif [[ -z "$1" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
     printf "Please specify NAME. Then run me again.\n" "$1"
     return 1
   elif [[ -z "$2" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
     printf "Please specify RAM in MB. Then run me again.\n" "$2"
     return 1
   elif [[ ! -f "$3" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
     printf "You specified \'%s\'. Please specify an existing OSDRIVE file. Then run me again.\n" "$3"
     return 1
   elif [[ ! -f "$4" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+    printf "You specified \'%s\'. Please specify an existing STORAGEDRIVE file. Then run me again.\n" "$3"
+    return 1
+  elif [[ ! -f "$5" ]] ; then
+    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
     printf "You specified \'%s\'. Please specify an existing CDROM file. Then run me again.\n" "$4"
     return 1
-  elif [[ -z "$5" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
-    printf "Please specify BOOTDRIVE. Then run me again.\n" "$5"
+  elif [[ -z "$6" ]] ; then
+    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
+    printf "Please specify the BOOTDRIVE letter. Then run me    again.\n" "$5"
     return 1
   fi
   qemu-system-ppc \
@@ -456,8 +460,9 @@ function g4 {
     -prom-env  "auto-boot?=true" \
     -no-reboot \
     -hda       "$3" \
-    -cdrom     "$4" \
-    -boot      "$5" &
+    -hdb       "$4" \
+    -cdrom     "$5" \
+    -boot      "$6" &
 }
 
 export PATH="$EXTPATH:/usr/local/bin:/Users/grant/util:$PATH"
