@@ -406,7 +406,7 @@ function ytdl {
     "$1"
 }
 
-function g4 {
+function g4hd {
   qemu-system-ppc \
     -prom-env  "boot-args=-v serial=3 debug=0x14e" \
     -serial    stdio \
@@ -430,10 +430,37 @@ function g4 {
     -device    e1000,netdev=qemunet0 \
     -prom-env  "auto-boot?=true" \
     -no-reboot \
-    -drive     file="$3",format=raw,media=disk \
-    -drive     file="$4",format=raw,media=disk \
-    -drive     file="$5",index=2,media=cdrom \
-    -boot      "$6" &
+    -boot      "$3" \
+    -drive     file="$4",format="$5",media=disk &
+}
+
+function g4hdcd {
+  qemu-system-ppc \
+    -prom-env  "boot-args=-v serial=3 debug=0x14e" \
+    -serial    stdio \
+    -name      "$1" \
+    -k         en-us \
+    -m         "$2"M \
+    -display   cocoa \
+    -g         1440x900x32 \
+    -device    VGA,edid=on,vgamem_mb=64,xres=1440,yres=900 \
+    -full-screen \
+    -prom-env  "vga-ndrv?=true" \
+    -rtc       base=localtime,clock=host \
+    -L         pc-bios \
+    -machine   mac99,via=pmu \
+    -cpu       G4 \
+    -accel     tcg,tb-size=2048,thread=single \
+    -smp       cpus=1,sockets=1,threads=1 \
+    -device    usb-kbd \
+    -device    usb-mouse \
+    -netdev    user,id=qemunet0 \
+    -device    e1000,netdev=qemunet0 \
+    -prom-env  "auto-boot?=true" \
+    -no-reboot \
+    -boot      "$3" \
+    -drive     file="$4",format="$5",media=disk \
+    -drive     file="$6",index=2,media=cdrom &
 }
 
 export PATH="$EXTPATH:/usr/local/bin:/Users/grant/util:$PATH"

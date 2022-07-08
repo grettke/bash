@@ -1578,9 +1578,8 @@ function ytdl {
 :ID:       org_grant_2022-06-15T15-47-51-05-00_donutron:3D5B4835-A045-46F8-87CA-A8F24FE74D47
 :END:
 
-#+NAME: org_grant_2022-06-12T22-54-38-05-00_donutron_DFE48EF4-52EE-4263-B7EF-5E35EEB083C9
-#+begin_src sh
-function g4 {
+#+NAME: g4base
+#+begin_src sh :tangle no
   qemu-system-ppc \
     -prom-env  "boot-args=-v serial=3 debug=0x14e" \
     -serial    stdio \
@@ -1604,10 +1603,19 @@ function g4 {
     -device    e1000,netdev=qemunet0 \
     -prom-env  "auto-boot?=true" \
     -no-reboot \
-    -drive     file="$3",format=raw,media=disk \
-    -drive     file="$4",format=raw,media=disk \
-    -drive     file="$5",index=2,media=cdrom \
-    -boot      "$6" &
+    -boot      "$3" \
+#+end_src
+
+#+begin_src sh
+function g4hd {
+  ⟪g4base⟫
+  -drive     file="$4",format="$5",media=disk &
+}
+
+function g4hdcd {
+  ⟪g4base⟫
+  -drive     file="$4",format="$5",media=disk \
+  -drive     file="$6",index=2,media=cdrom &
 }
 #+end_src
 
