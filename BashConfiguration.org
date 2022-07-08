@@ -1606,10 +1606,16 @@ function ytdl {
     -boot      "$3" \
 #+end_src
 
+#+NAME: org_grant_2022-07-08T00-12-17-05-00_donutron_A9352273-D58A-4202-BDD1-928A30D344A2
 #+begin_src sh
 function g4hd {
   ⟪g4base⟫
   -drive     file="$4",format="$5",media=disk &
+}
+
+function g4cd {
+  ⟪g4base⟫
+  -drive     file="$4",index=2,media=cdrom &
 }
 
 function g4hdcd {
