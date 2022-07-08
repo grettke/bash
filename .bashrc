@@ -426,6 +426,7 @@ function g4hd {
     -smp       cpus=1,sockets=1,threads=1 \
     -device    usb-kbd \
     -device    usb-mouse \
+    -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
     -netdev    user,id=qemunet0 \
     -device    e1000,netdev=qemunet0 \
     -prom-env  "auto-boot?=true" \
@@ -454,6 +455,7 @@ function g4cd {
     -smp       cpus=1,sockets=1,threads=1 \
     -device    usb-kbd \
     -device    usb-mouse \
+    -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
     -netdev    user,id=qemunet0 \
     -device    e1000,netdev=qemunet0 \
     -prom-env  "auto-boot?=true" \
@@ -482,6 +484,7 @@ function g4hdcd {
     -smp       cpus=1,sockets=1,threads=1 \
     -device    usb-kbd \
     -device    usb-mouse \
+    -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
     -netdev    user,id=qemunet0 \
     -device    e1000,netdev=qemunet0 \
     -prom-env  "auto-boot?=true" \
@@ -511,6 +514,7 @@ function g4hdhdcd {
     -smp       cpus=1,sockets=1,threads=1 \
     -device    usb-kbd \
     -device    usb-mouse \
+    -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
     -netdev    user,id=qemunet0 \
     -device    e1000,netdev=qemunet0 \
     -prom-env  "auto-boot?=true" \
