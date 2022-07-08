@@ -424,6 +424,7 @@ function g4hd {
     -cpu       G4 \
     -accel     tcg,tb-size=2048,thread=single \
     -smp       cpus=1,sockets=1,threads=1 \
+    -uuid      ac70e49e-6408-4c9f-8482-9ee9a0359403 \
     -device    usb-kbd \
     -device    usb-mouse \
     -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
@@ -453,6 +454,7 @@ function g4cd {
     -cpu       G4 \
     -accel     tcg,tb-size=2048,thread=single \
     -smp       cpus=1,sockets=1,threads=1 \
+    -uuid      ac70e49e-6408-4c9f-8482-9ee9a0359403 \
     -device    usb-kbd \
     -device    usb-mouse \
     -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
@@ -482,6 +484,7 @@ function g4hdcd {
     -cpu       G4 \
     -accel     tcg,tb-size=2048,thread=single \
     -smp       cpus=1,sockets=1,threads=1 \
+    -uuid      ac70e49e-6408-4c9f-8482-9ee9a0359403 \
     -device    usb-kbd \
     -device    usb-mouse \
     -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
@@ -512,6 +515,7 @@ function g4hdhdcd {
     -cpu       G4 \
     -accel     tcg,tb-size=2048,thread=single \
     -smp       cpus=1,sockets=1,threads=1 \
+    -uuid      ac70e49e-6408-4c9f-8482-9ee9a0359403 \
     -device    usb-kbd \
     -device    usb-mouse \
     -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
