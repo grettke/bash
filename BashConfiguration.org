@@ -1623,6 +1623,13 @@ function g4hdcd {
   -drive     file="$4",format="$5",media=disk \
   -drive     file="$6",index=2,media=cdrom &
 }
+
+function g4hdhdcd {
+  ⟪g4base⟫
+  -drive     file="$4",format="$5",media=disk \
+  -drive     file="$6",format="$7",media=disk \
+  -drive     file="$8",index=2,media=cdrom &
+}
 #+end_src
 
 ** Path Assemply
