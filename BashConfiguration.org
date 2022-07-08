@@ -1581,35 +1581,6 @@ function ytdl {
 #+NAME: org_grant_2022-06-12T22-54-38-05-00_donutron_DFE48EF4-52EE-4263-B7EF-5E35EEB083C9
 #+begin_src sh
 function g4 {
-  if [[ $# -ne 6 || -z "$1" || -z "$2" || -z "$3" || -z "$4" || -z "$5"  || -z "$6" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
-    printf "Invoke TiBook QEMU—Guest Name: NAME. MB of Memory: RAM. Hard Drive C File: OSDRIVE. CD/DVD File: CDROM. Boot Drive: BOOTDRIVE\n"
-    return 1
-  elif [[ -z "$1" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
-    printf "Please specify NAME. Then run me again.\n" "$1"
-    return 1
-  elif [[ -z "$2" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
-    printf "Please specify RAM in MB. Then run me again.\n" "$2"
-    return 1
-  elif [[ ! -f "$3" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
-    printf "You specified \'%s\'. Please specify an existing OSDRIVE file. Then run me again.\n" "$3"
-    return 1
-  elif [[ ! -f "$4" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
-    printf "You specified \'%s\'. Please specify an existing STORAGEDRIVE file. Then run me again.\n" "$3"
-    return 1
-  elif [[ ! -f "$5" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
-    printf "You specified \'%s\'. Please specify an existing CDROM file. Then run me again.\n" "$4"
-    return 1
-  elif [[ -z "$6" ]] ; then
-    printf "Usage: %s <NAME> <RAM> <OSDRIVE> <STORAGEDRIVE> <CDROM> <BOOTDRIVE>\n" "${FUNCNAME[0]}"
-    printf "Please specify the BOOTDRIVE letter. Then run me    again.\n" "$5"
-    return 1
-  fi
   qemu-system-ppc \
     -prom-env  "boot-args=-v serial=3 debug=0x14e" \
     -serial    stdio \
