@@ -416,7 +416,6 @@ function g4hd {
     -display   cocoa \
     -g         1440x900x32 \
     -device    VGA,edid=on,vgamem_mb=64,xres=1440,yres=900 \
-    -full-screen \
     -prom-env  "vga-ndrv?=true" \
     -rtc       base=localtime,clock=host \
     -L         pc-bios \
@@ -446,7 +445,6 @@ function g4cd {
     -display   cocoa \
     -g         1440x900x32 \
     -device    VGA,edid=on,vgamem_mb=64,xres=1440,yres=900 \
-    -full-screen \
     -prom-env  "vga-ndrv?=true" \
     -rtc       base=localtime,clock=host \
     -L         pc-bios \
@@ -476,7 +474,6 @@ function g4hdcd {
     -display   cocoa \
     -g         1440x900x32 \
     -device    VGA,edid=on,vgamem_mb=64,xres=1440,yres=900 \
-    -full-screen \
     -prom-env  "vga-ndrv?=true" \
     -rtc       base=localtime,clock=host \
     -L         pc-bios \
@@ -507,7 +504,6 @@ function g4hdhdcd {
     -display   cocoa \
     -g         1440x900x32 \
     -device    VGA,edid=on,vgamem_mb=64,xres=1440,yres=900 \
-    -full-screen \
     -prom-env  "vga-ndrv?=true" \
     -rtc       base=localtime,clock=host \
     -L         pc-bios \
