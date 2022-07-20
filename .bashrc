@@ -426,9 +426,7 @@ function g4hd {
     -uuid      ac70e49e-6408-4c9f-8482-9ee9a0359403 \
     -device    usb-kbd \
     -device    usb-mouse \
-    -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
-    -netdev    user,id=qemunet0 \
-    -device    e1000,netdev=qemunet0 \
+    -nic       user,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,mac=e0:22:c1:97:fe:94 \
     -prom-env  "auto-boot?=true" \
     -no-reboot \
     -boot      "$3" \
@@ -455,9 +453,7 @@ function g4cd {
     -uuid      ac70e49e-6408-4c9f-8482-9ee9a0359403 \
     -device    usb-kbd \
     -device    usb-mouse \
-    -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
-    -netdev    user,id=qemunet0 \
-    -device    e1000,netdev=qemunet0 \
+    -nic       user,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,mac=e0:22:c1:97:fe:94 \
     -prom-env  "auto-boot?=true" \
     -no-reboot \
     -boot      "$3" \
@@ -484,9 +480,7 @@ function g4hdcd {
     -uuid      ac70e49e-6408-4c9f-8482-9ee9a0359403 \
     -device    usb-kbd \
     -device    usb-mouse \
-    -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
-    -netdev    user,id=qemunet0 \
-    -device    e1000,netdev=qemunet0 \
+    -nic       user,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,mac=e0:22:c1:97:fe:94 \
     -prom-env  "auto-boot?=true" \
     -no-reboot \
     -boot      "$3" \
@@ -514,9 +508,7 @@ function g4hdhdcd {
     -uuid      ac70e49e-6408-4c9f-8482-9ee9a0359403 \
     -device    usb-kbd \
     -device    usb-mouse \
-    -nic       user,id=g4net,ipv6=off,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,model=e1000,mac=e0:22:c1:97:fe:94 \
-    -netdev    user,id=qemunet0 \
-    -device    e1000,netdev=qemunet0 \
+    -nic       user,net=192.168.94.0/24,host=192.168.94.94,dhcpstart=192.168.94.100,mac=e0:22:c1:97:fe:94 \
     -prom-env  "auto-boot?=true" \
     -no-reboot \
     -boot      "$3" \
