@@ -179,6 +179,8 @@ function pdf2epslevel3 {
 
 alias g="git"
 alias ga="git add ."
+alias gb="git branch"
+alias gbco="git checkout -b "
 alias gcm="git commit -a"
 alias gdf="git diff"
 alias gdfc="git diff --cached"
@@ -202,10 +204,10 @@ alias gpdrsd="git fetch && git diff --dirstat origin/master"
 alias gpdrsf="git fetch && git diff --stat origin/master"
 alias gpl="git pull"
 alias gpom="git push origin master"
+alias grv="git remote -v"
 alias gs="git status"
 alias gsubstat="git submodule status"
 alias gsubstatr="git submodule status --recursive"
-alias grv="git remote -v"
 
 function gitdid {
   git shortlog --summary --numbered --all --email
