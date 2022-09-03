@@ -1633,6 +1633,16 @@ function g4hdhdcd {
 }
 #+end_src
 
+*** hunspell
+:PROPERTIES:
+:ID:       org_grant_2022-09-02T20-25-37-05-00_donutron:46F1F28C-E5B6-49C8-8CCA-ACC282DBDA5A
+:END:
+
+#+NAME: org_grant_2022-09-02T20-25-37-05-00_donutron_AA9F3077-0374-432A-96A1-848EC3FC9E62
+#+begin_src sh
+export DICPATH="/usr/local/share/words/"
+#+end_src
+
 ** Path Assemply
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76

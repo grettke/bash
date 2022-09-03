@@ -519,4 +519,6 @@ function g4hdhdcd {
     -drive     file="$8",index=2,media=cdrom &
 }
 
+export DICPATH="/usr/local/share/words/"
+
 export PATH="$EXTPATH:/usr/local/bin:/Users/grant/util:$PATH"
