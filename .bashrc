@@ -26,6 +26,9 @@ alias mount="mount | column -t"
 alias df="df -h"
 alias du="du -ach"
 alias md5sum="md5 -r"
+function tre {
+  tree -d --noreport -q -Q -F -n --
+}
 
 alias e=exit
 alias j="jobs -l"

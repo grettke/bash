@@ -907,6 +907,9 @@ alias mount="mount | column -t"
 alias df="df -h"
 alias du="du -ach"
 alias md5sum="md5 -r"
+function tre {
+  tree -d --noreport -q -Q -F -n --
+}
 #+END_SRC
 
 Alias shortcuts to commands that I like to use but can't remember or are too long.
