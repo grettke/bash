@@ -524,4 +524,8 @@ function g4hdhdcd {
 
 export DICPATH="/usr/local/share/words/"
 
+function vl {
+  vale --output /Users/grant/src/flycheck-org-vale/flycheck-org-vale.tmpl "$@"
+}
+
 export PATH="$EXTPATH:/usr/local/bin:/Users/grant/util:$PATH"
