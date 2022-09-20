@@ -1657,6 +1657,26 @@ function val {
   vale --output /Users/grant/src/flycheck-org-vale/flycheck-org-vale.tmpl "$@"
 }
 #+end_src
+
+*** pandoc
+:PROPERTIES:
+:ID:       org_grant_2022-09-19T23-11-59-05-00_donutron:9687F369-C31B-4144-8367-BC99C6B1210B
+:END:
+
+#+NAME: org_grant_2022-09-19T23-11-59-05-00_donutron_AF020301-B50D-4BA1-9CE2-6396991ED6A9
+#+begin_src sh
+function pdoc {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <SOURCE> <DESTINATION>\n" "${FUNCNAME[0]}"
+    printf "Convert Org SOURCE to Docx DESTINATION.\n"
+    return 1
+  fi
+  pandoc --defaults="/Users/grant/src/pandoc-data-dir/defaults.yml" \
+         --output="$2" \
+         "$1"
+}
+#+end_src
+
 ** Path Assemply
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:82AF307A-CE58-4E51-98D7-DFC0549CAC76

@@ -528,4 +528,15 @@ function val {
   vale --output /Users/grant/src/flycheck-org-vale/flycheck-org-vale.tmpl "$@"
 }
 
+function pdoc {
+  if [[ $# -ne 2 || -z "$1" || -z "$2" ]] ; then
+    printf "Usage: %s <SOURCE> <DESTINATION>\n" "${FUNCNAME[0]}"
+    printf "Convert Org SOURCE to Docx DESTINATION.\n"
+    return 1
+  fi
+  pandoc --defaults="/Users/grant/src/pandoc-data-dir/defaults.yml" \
+         --output="$2" \
+         "$1"
+}
+
 export PATH="$EXTPATH:/usr/local/bin:/Users/grant/util:$PATH"
