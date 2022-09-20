@@ -524,7 +524,7 @@ function g4hdhdcd {
 
 export DICPATH="/usr/local/share/words/"
 
-function vl {
+function val {
   vale --output /Users/grant/src/flycheck-org-vale/flycheck-org-vale.tmpl "$@"
 }
 

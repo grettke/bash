@@ -1653,7 +1653,7 @@ export DICPATH="/usr/local/share/words/"
 
 #+NAME: org_grant_2022-09-14T22-14-33-05-00_donutron_F2531609-AD15-4A42-B239-64C7C4780EA6
 #+begin_src sh
-function vl {
+function val {
   vale --output /Users/grant/src/flycheck-org-vale/flycheck-org-vale.tmpl "$@"
 }
 #+end_src
