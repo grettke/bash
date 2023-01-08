@@ -1531,6 +1531,17 @@ export EXTPATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:$EXTPATH"
 alias is="/Applications/Inkscape.app/Contents/MacOS/inkscape"
 #+end_src
 
+*** exif
+:PROPERTIES:
+:ID:       org_grant_2023-01-01T13-23-35-06-00_donutron:96FD18BE-2059-4869-B9C2-A49CC782D08B
+:END:
+
+#+NAME: org_grant_2023-01-01T13-23-35-06-00_donutron_E1D3FD58-CE5A-46C9-BCC0-38C84DF03447
+#+begin_src sh
+alias exfinf="exiftool"
+alias exfwip="exiftool -overwrite_original -all="
+#+end_src
+
 *** youtube-dl
 :PROPERTIES:
 :ID:       org_grant_2022-04-06T20-47-07-05-00_donutron:53866FA7-3C29-4D9D-83A1-CFBD159A9E4C
