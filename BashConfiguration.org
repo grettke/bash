@@ -1159,7 +1159,12 @@ export TODOCCRYPT="/usr/local/Cellar/ccrypt/1.11/"
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:0D346D38-1207-48C3-99AE-0AC668DF130B
 :END:
 
-#+begin_quote TeX (= tau epsilon chi, and pronounced similar to "blecch", not to the state known for `Tex-Mex' chili) is a computer language designed for use in typesetting; in particular, for typesetting math and other technical (from Greek "techne" = art/craft, the stem of `technology') material.#+end_quote
+#+begin_quote
+TeX (= tau epsilon chi, and pronounced similar to "blecch", not to the state
+known for `Tex-Mex' chili) is a computer language designed for use in
+typesetting; in particular, for typesetting math and other technical (from Greek
+"techne" = art/craft, the stem of `technology') material.
+#+end_quote
 
 MacTeX is TeX for the Mac.
 
@@ -1201,7 +1206,10 @@ function pdf2epslevel3 {
 :END:
 
 #+begin_quote
-Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals. #+end_quote
+Git is a fast, scalable, distributed revision control system with an unusually
+rich command set that provides both high-level operations and full access to
+internals.
+#+end_quote
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_121CCF66-A7DD-479D-AFCE-658143CCDDC4
 #+BEGIN_SRC sh
