@@ -1528,7 +1528,7 @@ export EXTPATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:$EXTPATH"
 
 #+NAME: org_grant_2021-12-17T13-51-48-06-00_Sadie_FA8E62B9-0538-41E2-BFD5-E5F50A71F01B
 #+begin_src sh
-alias is="/Applications/Inkscape.app/Contents/MacOS/inkscape"
+alias is="/Applications/Inkscape.app/Contents/MacOS/inkscape&"
 #+end_src
 
 *** exif

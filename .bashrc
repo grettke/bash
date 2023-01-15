@@ -395,7 +395,8 @@ export SPARROW_NETWORK=testnet
 
 export EXTPATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:$EXTPATH"
 
-alias is="/Applications/Inkscape.app/Contents/MacOS/inkscape &"
+alias is="/Applications/Inkscape.app/Contents/MacOS/inkscape&"
+
 alias exfinf="exiftool"
 alias exfwip="exiftool -overwrite_original -all="
 
