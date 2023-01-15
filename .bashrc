@@ -189,11 +189,13 @@ function txmk {
     printf "Running latexmk...\n"
   fi
 
+  local infile="$1"
+
   latexmk \
     -xelatex \
     -f -silent \
     -bibtex \
-    socprot.tex
+    "$infile"
 }
 
 alias g="git"

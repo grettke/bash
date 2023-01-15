@@ -1239,7 +1239,9 @@ function pdf2epslevel3 {
 -bibtex
 #+end_src
 
-#+NAME: org_grant_2023-01-14T21-48-23-06-00_donutron_6161ABC4-63F4-4CD5-AF18-69A9D833B76A
+This is function for normal usage
+
+#+NAME: ltxmk-fun
 #+begin_src sh
 function txmk {
   if [[ $# -ne 1 || -z "$1" ]] ; then
@@ -1250,12 +1252,22 @@ function txmk {
     printf "Running latexmk...\n"
   fi
 
+  local infile="$1"
+
   latexmk \
     ⟪ltmk-tex⟫ \
     ⟪ltmk-dont-stop⟫ \
     ⟪ltmk-bib⟫ \
-    socprot.tex
+    "$infile"
 }
+#+end_src
+
+Tangle it into a script so that Org can use it.
+
+#+NAME: org_grant_2023-01-14T22-54-40-06-00_donutron_B6935AEC-F9B9-45F8-8AD5-7627AD47F912
+#+begin_src sh :tangle "~/util/txmk" :shebang "#!/usr/bin/env bash"
+⟪ltxmk-fun⟫
+txmk "$1"
 #+end_src
 
 *** Git
