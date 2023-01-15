@@ -1200,6 +1200,64 @@ function pdf2epslevel3 {
 }
 #+end_src
 
+**** latexmk
+:PROPERTIES:
+:ID:       org_grant_2023-01-14T21-48-23-06-00_donutron:7AF6C4E7-6CB2-45F0-8D32-771CC1DC6ABD
+:END:
+
+- *-xelatex*
+  - "Use xelatex. That is, use xelatex to process the source file(s) to pdf. The
+  generation of dvi and postscript files is turned off."
+
+#+name: ltmk-tex
+#+begin_src sh :tangle no
+-xelatex
+#+end_src
+
+- *-f*
+  - "Force latexmk to continue document processing despite errors. Normally,
+    when latexmk detects that LaTeX or another program has found an error which
+    will not be resolved by further processing, no further processing is carried
+    out."
+- *-silent*
+  - "Run commands silently, i.e., with options that reduce the amount of
+    diagnostics generated. For example, with the default settings, the command
+    "latex -interaction=batchmode" is used for latex, and similarly for its
+    friends."
+
+#+name: ltmk-dont-stop
+#+begin_src sh :tangle no
+-f -silent
+#+end_src
+
+- *-bibtex *
+  - "When the source file uses bbl files for bibliography, run bibtex or biber
+    as needed to regenerate the bbl files."
+
+#+name: ltmk-bib
+#+begin_src sh :tangle no
+-bibtex
+#+end_src
+
+#+NAME: org_grant_2023-01-14T21-48-23-06-00_donutron_6161ABC4-63F4-4CD5-AF18-69A9D833B76A
+#+begin_src sh
+function txmk {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <TEX FILE>\n" "${FUNCNAME[0]}"
+    printf "Use latexmk to convert TEX FILE a pdf file.\n"
+    return 1
+  else
+    printf "Running latexmk...\n"
+  fi
+
+  latexmk \
+    ⟪ltmk-tex⟫ \
+    ⟪ltmk-dont-stop⟫ \
+    ⟪ltmk-bib⟫ \
+    socprot.tex
+}
+#+end_src
+
 *** Git
 :PROPERTIES:
 :ID:       org_gcr_2019-11-25T18-49-26-06-00_gsmac:F467F415-1A7A-451B-99D7-1DCE1804BBA9

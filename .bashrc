@@ -180,6 +180,22 @@ function pdf2epslevel3 {
   pdf2ps -dLanguageLevel=3 "$1" "$2"
 }
 
+function txmk {
+  if [[ $# -ne 1 || -z "$1" ]] ; then
+    printf "Usage: %s <TEX FILE>\n" "${FUNCNAME[0]}"
+    printf "Use latexmk to convert TEX FILE a pdf file.\n"
+    return 1
+  else
+    printf "Running latexmk...\n"
+  fi
+
+  latexmk \
+    -xelatex \
+    -f -silent \
+    -bibtex \
+    socprot.tex
+}
+
 alias g="git"
 alias ga="git add ."
 alias gb="git branch"
