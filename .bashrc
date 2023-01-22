@@ -2,6 +2,9 @@
 
 source /Users/grant/src/bash/.bash_global_interactive
 
+TRMBOLD=$(tput bold)
+TRMNORM=$(tput sgr0)
+
 export PS0="OK...\n\n"
 
 export PS1="\u@\h:\w> "

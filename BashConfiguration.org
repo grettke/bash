@@ -781,6 +781,14 @@ source /Users/grant/src/bash/.bash_global_interactive
 :ID:       org_gcr_2019-11-30T12-40-47-06-00_gsmac:BB7109E6-E152-47E0-AEF1-3BDC58540D57
 :END:
 
+Format output text:
+
+#+NAME: org_grant_2023-01-21T22-30-44-06-00_donutron_87386DA5-1FB8-4E0F-AA7A-489B2485EE4B
+#+begin_src sh
+TRMBOLD=$(tput bold)
+TRMNORM=$(tput sgr0)
+#+end_src
+
 Prompt zero is displayed after you enter a command and before the command is executed.
 
 Make the session easier to read.
