@@ -4,7 +4,7 @@ source /Users/grant/src/bash/.bash_global_interactive
 
 export PS0="OK...\n\n"
 
-export PS1="\u@\h:\w⮞ "
+export PS1="\u@\h:\w> "
 
 export PS2="(continued)⮞ "
 
