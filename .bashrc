@@ -7,7 +7,7 @@ TRMNORM=$(tput sgr0)
 
 export PS0="OK...\n\n"
 
-export PS1="\u@\h:\w> "
+export PS1="${TRMBOLD}\u@\h:\w>${TRMNORM} "
 
 export PS2="(continued)⮞ "
 

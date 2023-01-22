@@ -804,7 +804,7 @@ Show enough to stay out of trouble.
 
 #+NAME: org_gcr_2019-11-01T00-47-07-05-00_host1.org_2347CD33-4AC1-4523-89CB-8B2B52D6A009
 #+BEGIN_SRC sh
-export PS1="\u@\h:\w> "
+export PS1="${TRMBOLD}\u@\h:\w>${TRMNORM} "
 #+END_SRC
 
 Prompt two is the one that you see when you break a command into
